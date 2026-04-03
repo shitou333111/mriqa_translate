@@ -56,11 +56,10 @@ jobs:
       - name: Copy static articles for preview
         if: github.event_name != 'workflow_dispatch'
         run: |
-          mkdir -p frontend/dist/en frontend/dist/zh frontend/dist/baseline frontend/dist/baseling
+          mkdir -p frontend/dist/en frontend/dist/zh frontend/dist/baseline
           cp -a en/. frontend/dist/en/
           cp -a zh/. frontend/dist/zh/
           cp -a baseline/. frontend/dist/baseline/
-          cp -a baseline/. frontend/dist/baseling/
 
       - name: Deploy to preview
         if: github.event_name != 'workflow_dispatch'
@@ -82,11 +81,10 @@ jobs:
       - name: Copy static articles for production
         if: github.event_name == 'workflow_dispatch' || (github.event_name == 'push' && contains(github.event.head_commit.message, '[release]'))
         run: |
-          mkdir -p frontend/dist/en frontend/dist/zh frontend/dist/baseline frontend/dist/baseling
+          mkdir -p frontend/dist/en frontend/dist/zh frontend/dist/baseline
           cp -a en/. frontend/dist/en/
           cp -a zh/. frontend/dist/zh/
           cp -a baseline/. frontend/dist/baseline/
-          cp -a baseline/. frontend/dist/baseling/
 
       - name: Deploy to production
         if: github.event_name == 'workflow_dispatch' || (github.event_name == 'push' && contains(github.event.head_commit.message, '[release]'))

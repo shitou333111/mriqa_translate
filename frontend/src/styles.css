@@ -1465,6 +1465,11 @@ button.primary {
   border-color: color-mix(in srgb, var(--accent) 82%, #ffffff);
 }
 
+.guide-tour-btn:hover {
+  background: linear-gradient(180deg, color-mix(in srgb, var(--accent) 86%, #d6ebff), color-mix(in srgb, var(--accent-strong) 96%, #0056ad));
+  color: #ffffff;
+}
+
 @media (max-width: 1180px) {
   .guide-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));

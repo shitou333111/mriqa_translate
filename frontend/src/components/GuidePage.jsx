@@ -76,13 +76,13 @@ export default function GuidePage({ onStartGuideTour }) {
           <p>
             由于近期没心思优化翻译，所以开发了这套共享翻译系统。任何人都可以参与，并且直接在页面修改提交，希望大家积极参与。我不是专业程序员，选择的也是简便的修改策略，翻译功能并不稳健，大家可以先从 test 页面练手。
           </p>
-          <a href="/test" className="guide-panel-link">打开 test 页面练习</a>
+          <a href="test" className="guide-panel-link">打开 test 页面练习</a>
         </article>
 
         <article className="guide-panel guide-panel-support">
           <h3>支持与打赏</h3>
           <p>欢迎支持翻译维护与服务器运行。以及打赏奶茶鼓励翻译内容，还是花了很多精力和时间的。可直接扫码打赏。</p>
-          <img className="guide-qcode-image" src="/images/Qcode.jpg" alt="支持与打赏二维码" />
+          <img className="guide-qcode-image" src="images/Qcode.jpg" alt="支持与打赏二维码" />
         </article>
       </div>
 

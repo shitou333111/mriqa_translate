@@ -87,13 +87,13 @@ const SelfFooterContent = () => (
                 <div style={{ height: "0px", overflow: "hidden" }}></div>
                 <span className="wsite-social wsite-social-default" style={{ display: "inline-flex", alignItems: "center", gap: "12px" }}>
                   <a href="https://mp.weixin.qq.com" target="_blank" rel="noreferrer" title="WeChat">
-                    <img src="/images/微信.ico" style={{ width: "24px", height: "24px", objectFit: "contain" }} alt="WeChat" />
+                    <img src="images/微信.ico" style={{ width: "24px", height: "24px", objectFit: "contain" }} alt="WeChat" />
                   </a>
                   <a href="https://www.zhihu.com" target="_blank" rel="noreferrer" title="Zhihu">
-                    <img src="/images/知乎.ico" style={{ width: "24px", height: "24px", objectFit: "contain" }} alt="Zhihu" />
+                    <img src="images/知乎.ico" style={{ width: "24px", height: "24px", objectFit: "contain" }} alt="Zhihu" />
                   </a>
                   <a href="https://www.xiaohongshu.com" target="_blank" rel="noreferrer" title="Xiaohongshu">
-                    <img src="/images/小红书.ico" style={{ width: "24px", height: "24px", objectFit: "contain" }} alt="Xiaohongshu" />
+                    <img src="images/小红书.ico" style={{ width: "24px", height: "24px", objectFit: "contain" }} alt="Xiaohongshu" />
                   </a>
                 </span>
                 <div style={{ height: "0px", overflow: "hidden" }}></div>
@@ -108,7 +108,7 @@ const SelfFooterContent = () => (
                         <tr className="wsite-multicol-tr">
                           <td className="wsite-multicol-col" style={{ width: "80%", padding: "0px 0 0 0" }}>
                             <div align="center" style={{ width: "100%", overflowY: "hidden", padding: "0 0 0 0" }}>
-                              <img src="/images/Qcode.jpg" alt="Qcode" style={{ width: "100%", maxWidth: "60px", height: "auto" }} />
+                              <img src="images/Qcode.jpg" alt="Qcode" style={{ width: "100%", maxWidth: "60px", height: "auto" }} />
                             </div>
                             <div className="paragraph" style={{ textAlign: "center", padding: "0 0 5px 0" }}>
                               打赏维持服务器开销

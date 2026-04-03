@@ -28,8 +28,7 @@ export default function GuidePage({ onStartGuideTour }) {
             本站仅做学习用途的翻译与分享，所有知识产权与版权均归原作者及原网站所有。
           </p>
           <a
-            href="/copyright-issues.html"
-            target="_blank"
+            href="copyright-issues.html"
             rel="noreferrer"
             className="guide-panel-link"
           >
@@ -43,8 +42,7 @@ export default function GuidePage({ onStartGuideTour }) {
             本站内容仅用于教育和科普，不构成医学诊疗建议，不能替代医师的临床判断。
           </p>
           <a
-            href="/legal-disclaimers.html"
-            target="_blank"
+            href="legal-disclaimers.html"
             rel="noreferrer"
             className="guide-panel-link"
           >

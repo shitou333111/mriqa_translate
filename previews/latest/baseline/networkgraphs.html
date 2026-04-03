@@ -1,0 +1,153 @@
+<div id="content"><div id="wsite-content" class="wsite-elements wsite-not-footer">
+	<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<h2 class="wsite-content-title" style="text-align:center;">网络/图论</h2>
+
+<div class="paragraph" style="text-align:center;"><strong style="color:rgb(135, 135, 135)"><em><font color="#0376be" size="4">网络理论如何用于分析 fMRI 数据？&nbsp;</font></em></strong><strong style="color:rgb(55, 138, 87)"><em><font size="4">&nbsp;</font></em></strong></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-thin" style="padding-top:0px;padding-bottom:10px;margin-left:0px;margin-right:0px;text-align:center">
+<a href='uploads/3/4/5/7/34572113/screen-shot-2016-09-29-at-7-24-22-am_orig.png' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/screen-shot-2016-09-29-at-7-24-22-am_orig.png" alt="示意图" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;"><em><strong><font color="#24678d">网络/图论</font></strong></em><font color="#2a2a2a"> —— 一种用于分析电信、计算机电路、社会组织及互联网等多种系统的工具 —— 已成为描述大脑功能与解剖连接性日益流行的方法。尽管它距离经典的 MR 物理学还有一步之遥，但网络/图分析似乎有望成为 fMRI 分析的首要方法，因此对其部分概念进行简要介绍可能有所裨益。</font></div>
+
+<div class="paragraph"><font color="#2a2a2a">网络分析的第一步是定义</font><em><strong><font color="#24678d">节点</font></strong></em><font color="#2a2a2a">（或称顶点）：即在给定实验中认为功能均质的可识别脑区。节点可以小至单个体素，但更典型的是稍大的解剖单元（如脑回、神经核团或具有共同细胞构筑的区域）。</font><em><strong><font color="#24678d">连接</font></strong></em><font color="#2a2a2a">（或称边）将两个具有相关活动（通过 fMRI、EEG、MEG 等）或直接物理连接（例如，来自神经解剖学或扩散张量纤维束成像）的节点连接起来。由节点和连接构成的网络可以用图形或数值数组表示。后者被称为</font><em><strong><font color="#24678d">邻接矩阵</font></strong></em><font color="#2a2a2a">，其中每个元素（<em>e<font size="1">ij</font></em>）是一个反映节点 <em>i</em> 和 <em>j</em> 之间连接强度的数字。</font></div>
+
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-none" style="padding-top:10px;padding-bottom:10px;margin-left:0px;margin-right:0px;text-align:center">
+<a href='uploads/3/4/5/7/34572113/brain-network-yellow_1_orig.gif' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/brain-network-yellow_1_orig.gif" alt="脑网络 fMRI" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-none" style="padding-top:10px;padding-bottom:10px;margin-left:0px;margin-right:0px;text-align:center">
+<a href='uploads/3/4/5/7/34572113/network-graph_orig.gif' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/network-graph_orig.gif" alt="网络图 fMRI" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div class="paragraph"><strong> <em><font color="#24678d">路径</font></em></strong> 是连接两个节点的有序连接序列，其<em><strong><font color="#24678d">长度</font></strong></em>定义为连接的数量。某些节点对可能通过多条不同长度的路径连接。网络中所有节点对的最短路径的平均长度称为<em><strong><font color="#24678d">特征路径长度</font></strong></em>，这是一个与通信效率成反比的度量指标。<em><font color="#24678d"><strong>连接</strong></font></em> <em><strong><font color="#24678d">密度</font></strong></em> 是实际连接数与可能连接总数的比值，常被用作网络能量消耗、资源利用或其他物理“成本”的估计量。</div>
+
+<div class="paragraph"><font color="#2a2a2a">在像大脑这样的复杂系统中，一些节点会广泛互连，而另一些则可能相对孤立。一个节点与网络其余部分的连接数量称为其</font><em><strong><font color="#24678d">度</font></strong></em><font color="#2a2a2a">。拥有大量连接的节点被称为</font><em><strong><font color="#24678d">枢纽</font></strong></em><font color="#2a2a2a">，并被认为具有高</font><em><strong><font color="#24678d">中心性</font></strong></em><font color="#2a2a2a">。此类节点通常对网络中的高效通信至关重要。</font></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;"><em><strong><font color="#24678d">簇</font></strong></em> 指的是相互连接的最近邻节点组成的小群体。最小的簇是<em><strong><font color="#24678d">三角形</font></strong></em>（3个节点）。许多网络包含被称为<em><strong><font color="#24678d">模块</font></strong></em>的较小子网络，这些模块可以<em><strong><font color="#24678d">分层</font></strong></em>组织。<strong><em><font color="#24678d">聚类</font></em> <em><font color="#24678d">系数</font></em></strong> 将簇的数量与整个网络的规模联系起来。高效且复杂的网络通常具有高度的聚类性。</div>
+
+<div class="paragraph">许多脑网络也表现出<em><strong><font color="#24678d">“小世界”组织</font></strong></em>。小世界概念起源于社交网络，即地球两端即使互不相识的人也可以通过相对较少的共同熟人联系起来。<br /><br /><font color="#2a2a2a">&#8203;小世界网络的特点是拥有许多枢纽、高度的局部聚类以及全局连接所有网络节点的短路径长度。因此，</font><span><font color="#2a2a2a">即使大多数节点仅在</font><em><strong><font color="#24678d">派系</font></strong></em><font color="#2a2a2a">中维持有限数量的直接连接，系统的所有节点都可以通过相对较少的中间步骤访问。</font></span></div>
+
+<div class="paragraph">目前尚不确定上述众多可能的网络描述符和度量指标中哪些将被证明最有用，但在阿尔茨海默病、自闭症谱系和精神分裂症等疾病中的初步研究已经通过网络测量识别出了大脑组织的变化。&nbsp;</div>
+
+<div><div id="841970409975385838" align="left" style="width: 100%; overflow-y: hidden;" class="wcustomhtml"><html> <head><script src="gdpr/gdprscript6f19.js?buildTime=1774025472"></script> <script type="text/javascript" 
+></script> 
+<script type="text/javascript">
+		$(function() {$('#Q').click(function() {$('.Q').toggle(500); return false;});});</script></head><body>
+<a href="#" id=Q><h3><font color="#378a57">进阶讨论（显示/隐藏）»</font></h3></a><div class=Q style="display:none;">
+
+<!--content goes below here-->
+
+暂无补充材料。请稍后再来查看！
+
+
+<!--content goes above here-->
+</div></body>
+<!-- Mirrored from mriquestions.com/networkgraphs.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 21 Mar 2026 06:44:04 GMT -->
+</html></div>
+
+
+
+</div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div><div class="paragraph" style="text-align:skip_to_justify;"><strong>参考文献</strong><br /><span><font color="#878787">&nbsp; &nbsp; &nbsp;</font></span>Bullmore E, Sporns O. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/review_bullmore_sporns_graph_theory561109.pdf">Complex brain networks: graph theoretical&nbsp;analysis of structural and functional systems</a>. Nat Rev Neurosci&nbsp;2009;10:186&ndash;98.<br />&nbsp;&nbsp; &nbsp;&nbsp;Brain Connectivity Toolbox, available at <a href="http://www.brain-connectivity-toolbox.net/">brain-connectivity-toolbox.net</a>. (Best web site for MATLAB-based processing modules and explanation of terms). Contains the following <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/bct_table_complex_network_measures.pdf">very useful table defining network metrics</a> mathematically (assessed Oct 2016).<br />&nbsp; &nbsp; &nbsp; De Martino F, Valente G, Staeren N, et al. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/vector_machines_561108.pdf">Combining&nbsp;multivariate voxel selection and<br />support vector machines for mapping and&nbsp;classification of fMRI spatial patterns</a>. NeuroImage&nbsp;2008; 43:44&ndash;58.<br /><span style="color:rgb(135, 135, 135)">&nbsp; &nbsp; &nbsp;</span>Milgram S. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/tw_social_networks_milgram_1967_small_world_problem.pdf">The small-world problem</a>. Psychology Today 1967; 1:61-67. (First elucidation of this concept applied to social networks. Some of Milgram's experimental findings have been criticized, but he may be right after all. The concept is more commonly known as "Six degrees of separation", stating that we are all just six links away from everyone else in the world. This phrase was first coined by&nbsp;Hungarian author Frigyes Karinthy in his 1929 short story, <em>Chains</em>, and later popularized in the eponymous 1990 play of John Guare and its 1993 movie adaptation.)<br />&nbsp; &nbsp; &nbsp; Pereira F, Mitchell T, Botvinick M. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/network_review_nihms100405.pdf">Machine learning classifiers and&nbsp;fMRI: a tutorial overview</a>. NeuroImage 2009;&nbsp;45:S199&ndash;209.<br />&nbsp; &nbsp; &nbsp;&nbsp;Smith SM, Miller KL, Salimi-Khorshidi G,&nbsp;et al. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/smith-fmri-2011.pdf">Network modelling methods for FMRI</a>.&nbsp;NeuroImage 2011; 54:875&ndash;891.<br />&nbsp; &nbsp; &nbsp;&nbsp;Smith SM. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/smith_future_of_connectivity561107.pdf">The future of FMRI connectivity</a>. NeuroImage 2012;62(2):1257&ndash;1266.<br />&nbsp; &nbsp; &nbsp;&nbsp;Sporns O, Honey CJ, Kotter R. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/sporns_hubs_journal.pone.0001049.pdf">Identification and classification of&nbsp;hubs in brain networks</a>. PLoS One 2007; 2:e1049.<br />&nbsp; &nbsp; &nbsp;&nbsp;van den Heuvel MP, Hulshoff-Pol HE. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/heuvel_reviewbrainnets1.pdf">Exploring&nbsp;the brain network: a review on resting-state fMRI functional connectivity</a>. Eur&nbsp;Neuropsychopharmacol 2010; 20:519&ndash;534.<br />&nbsp;&nbsp; &nbsp;&nbsp;Watts DJ, Strogatz SH. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/watts_small_world_561806.pdf">Collective dynamics of "small-world" networks</a>. Nature 1998; 393:440-442. (Seminal paper on small-world theory and applications)</div><div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;"><strong>相关问题</strong><br /><strong>&nbsp; &nbsp; &nbsp;</strong><em style="color:rgb(0, 0, 0)"><strong><a href="fmri-statistical-analysis.html">如何对 fMRI 数据进行统计分析？</a></strong></em><br /><em><strong><a href="analyze-rs-fmri.html">&nbsp; &nbsp; &nbsp;如何处理和分析静息态 fMRI 数据？&nbsp;</a><br /></strong></em><em><strong><a href="mind-readinglie-detector.html">&nbsp; &nbsp; &nbsp;fMRI 能读取你的思想吗？&nbsp;&nbsp;</a></strong></em></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div style="text-align:skip_to_justify;"><div style="height: 0px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-normal" href="analyze-rs-fmri.html" >
+<span class="wsite-button-inner">← &nbsp;上一问题</span>
+</a>
+<div style="height: 0px; overflow: hidden;"></div></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div style="text-align:right;"><div style="height: 0px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-normal" href="fmri-at-7t.html" >
+<span class="wsite-button-inner">下一问题 &nbsp;→</span>
+</a>
+<div style="height: 0px; overflow: hidden;"></div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div style="text-align:center;"><div style="height: 0px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-highlight" href="complete-list-of-questions.html" >
+<span class="wsite-button-inner">↑&nbsp;问题完整列表 ↑</span>
+</a>
+<div style="height: 10px; overflow: hidden;"></div></div>
+</div></div>

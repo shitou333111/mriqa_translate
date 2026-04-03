@@ -1,0 +1,147 @@
+<div id="content"><div id="wsite-content" class="wsite-elements wsite-not-footer">
+	<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:51.810584958217%; padding:0 15px;">
+					
+						
+
+<h2 class="wsite-content-title" style="text-align:center;">填充 <em>k</em> 空间</h2>
+
+<div class="paragraph" style="text-align:center;"><strong style="color: rgb(135, 135, 135); line-height: 1.5;"><em><font color="#0376be"><font size="4">填充 k 空间的数据从何而来？</font><font size="4">&nbsp;</font></font></em></strong><strong style="color: rgb(55, 138, 87); font-size: large; line-height: 1.5;"><em>&nbsp;</em></strong><br /></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:48.189415041783%; padding:0 15px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-thin" style="padding-top:0;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
+<a href='uploads/3/4/5/7/34572113/2419962_orig.png' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/2419962_orig.png" alt="K空间数据" style="width:100%;max-width:633px" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;">填充 <em>k</em> 空间的数据直接来源于磁共振信号。由于已施加了用于相位编码和频率编码的梯度，磁共振信号已处于适合填充 <em>k</em> 空间矩阵的类傅里叶格式。</div>
+
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:40.947075208914%; padding:0 15px;">
+					
+						
+
+<div class="paragraph" style="text-align:skip_to_justify;">在<a href="real-v-imaginary.html" title="">之前的问答</a>中，我们解释了磁共振信号是如何以正交方式检测的。磁共振信号的每个数字化数据点都可以表示为一个复数，包含实部和虚部。或者，每个数据点也可以定义为具有幅度和相位，通过简单的三角关系计算得出。&nbsp;</div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:59.052924791086%; padding:0 15px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-none" style="padding-top:15px;padding-bottom:0;margin-left:0;margin-right:0;text-align:center">
+<a href='uploads/3/4/5/7/34572113/_7316167_orig.gif' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/_7316167.gif" alt="磁共振信号的实部和虚部" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%">磁共振信号的实部和虚部表示。</div>
+</div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;">填充 <em>k</em> 空间的数据直接来源于磁共振信号，但可以按任何顺序采集。过去 30 年来，填充 <em>k</em> 空间的主要方法是逐行填充的<strong><em><font color="#24678d">笛卡尔方法</font></em></strong>。如今，螺旋和径向轨迹正变得越来越流行。&nbsp;<br /><br />在笛卡尔方法中，每个数字化的回波信号完全填充 <em>k</em> 空间的一行。回波信号以正交方式记录，因此每个 k 空间点都包含<em>实部</em>和<em>虚部</em>。每行左侧的 <em>k</em> 空间值在回波演化的早期获得，而右侧的值则在稍后获得。回波的中心（因此也是最大值）出现在 <em>k</em> 空间每行的中间附近。&nbsp;</div>
+
+<div><div class="wsite-image wsite-image-border-thin" style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
+<a href='uploads/3/4/5/7/34572113/5154143_orig.gif' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/51541438144.gif?543" alt="k空间数据点" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%"><i>k</i> 空间的笛卡尔（逐行）填充。</div>
+</div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;">在二维傅里叶变换成像中，<em>k</em> 空间中的每一行对应于单次施加相位编码梯度所获得的回波数据。&nbsp; 按照惯例，<em>k</em> 空间网格中心附近的行被定义为对应于低阶相位编码步，而顶部和底部附近的行则对应于高阶相位编码。&nbsp; 由于在低阶相位编码步时回波幅度更大（梯度引起的失相位较少），因此 <em>k</em> 空间的值在网格中心附近会更大。&nbsp;</div>
+
+<div><div id="816955022342071101" align="left" style="width: 100%; overflow-y: hidden;" class="wcustomhtml"><html> <head><script src="gdpr/gdprscript6f19.js?buildTime=1774025472"></script> <script type="text/javascript" 
+></script> 
+<script type="text/javascript">
+		$(function() {$('#Q').click(function() {$('.Q').toggle(500); return false;});});</script></head><body>
+<a href="#" id=Q><h3><font color="#378a57">进阶讨论（显示/隐藏）»</font></h3></a><div class=Q style="display:none;">
+
+<!--content goes below here-->
+
+暂无补充材料。请稍后再来查看！
+
+
+<!--content goes above here-->
+</div></body>
+<!-- Mirrored from mriquestions.com/data-for-k-space.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 21 Mar 2026 06:14:44 GMT -->
+</html></div>
+
+
+
+</div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div><div class="paragraph" style="text-align:skip_to_justify;"><strong>参考文献</strong><br /><span style="line-height: 1.5;"><font color="#878787">&nbsp; &nbsp; </font></span>&nbsp;Mezrich R.&nbsp;<a href="https://mriquestions.com/uploads/3/4/5/7/34572113/fourier.kspace.mezrich.1995.pdf" title="">A perspective on k-space</a>. Radiology 1995; 195: 297-315. [review].<br />&nbsp; &nbsp; &nbsp;Miller K. <a href="uploads/3/4/5/7/34572113/miler-image_formation.ppt" title="">MRI image formation (ppt)</a>. On-line lecture notes available at <a href="http://users.fmrib.ox.ac.uk/~karla/teaching/image_formation.ppt" target="_blank" title="">users.fmrib.ox.ac.uk/~karla/teaching/image_formation.ppt</a><br /><span></span><br /><span></span></div><div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;"><strong>相关问题</strong><br /><strong><em><a href="what-is-k-space.html" title="">&nbsp; &nbsp; &nbsp;什么是 k 空间？</a></em></strong><br /><strong><em>&nbsp; &nbsp; &nbsp;<a href="data-for-k-space.html">我不理解如何能将数字化 MR 信号数据直接填入 k 空间。这些点如何等同于空间频率？</a></em></strong><br /></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div style="text-align:skip_to_justify;"><div style="height: 10px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-normal" href="locations-in-k-space.html" >
+<span class="wsite-button-inner">← &nbsp;上一问题</span>
+</a>
+<div style="height: 10px; overflow: hidden;"></div></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div style="text-align:right;"><div style="height: 10px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-normal" href="why-signal-harr-k-space.html" >
+<span class="wsite-button-inner">下一问题 &nbsp;→</span>
+</a>
+<div style="height: 10px; overflow: hidden;"></div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div style="text-align:center;"><div style="height: 10px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-highlight" href="complete-list-of-questions.html" >
+<span class="wsite-button-inner">↑&nbsp;问题完整列表 ↑</span>
+</a>
+<div style="height: 10px; overflow: hidden;"></div></div>
+</div></div>

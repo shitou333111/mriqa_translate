@@ -1,0 +1,168 @@
+<div id="content"><div id="wsite-content" class="wsite-elements wsite-not-footer">
+	<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<h2 class="wsite-content-title" style="text-align:center;">静息态功能磁共振成像分析</h2>
+
+<div class="paragraph" style="text-align:center;"><strong style="color:rgb(135, 135, 135)"><em><font color="#0376be" size="4">如何处理和分析静息态功能磁共振成像数据？&nbsp;</font></em></strong><strong style="color:rgb(55, 138, 87)"><em><font size="4">&nbsp;</font></em></strong></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-thin" style="padding-top:0px;padding-bottom:0px;margin-left:0px;margin-right:0px;text-align:center">
+<a href='uploads/3/4/5/7/34572113/screen-shot-2016-10-16-at-6-03-16-pm_orig.png' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/screen-shot-2016-10-16-at-6-03-16-pm_orig.png" alt="图片" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div class="paragraph"><strong><font size="4" color="#8d5024">数据预处理</font></strong></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;">静息态功能磁共振成像数据的预处理与标准功能磁共振成像研究类似，如<a href="data-pre-processing.html">先前问答</a>中所述。这些步骤包括层间时间校正、运动补偿、空间滤波和标准化。用于去除噪声的时间滤波必须审慎进行，以免去除相关的低频静息态信号。&nbsp;</div>
+
+<div class="paragraph"><font color="#2a2a2a">静息态功能磁共振成像中来自运动和生理源的噪声水平非常高；总信号中不到 5% 源自神经元活动。呼吸和心脏搏动包含的频率与静息态网络的频率相近，因此对于静息态功能磁共振成像来说，比基于任务的研究问题更大。可以将心率、呼吸频率或呼气末二氧化碳分压等生理数据的同步记录纳入回归模型。也可以对来自脑室、颅骨和白质的信号进行掩蔽。应用于静息态功能磁共振成像的更具争议的技术包括通过自相关方法进行去噪，以及从数据集中移除平均全脑信号（全局信号回归）。后两种技术可能会在实验中引入或掩盖反相关（失活）。&nbsp;</font></div>
+
+<div class="paragraph"><font size="4" color="#8d5024"><strong>相关性分析</strong></font></div>
+
+<div class="paragraph">从两个体素或脑区获得的时间序列数据（<em style="color:rgb(0, 0, 0)">X = x<font size="1">1</font>, x<font size="1">2</font>, x<font size="1">3</font></em><span style="color:rgb(0, 0, 0)">,&nbsp;&hellip; 和&nbsp;</span><em style="color:rgb(0, 0, 0)">Y = y<font size="1">1</font>, y<font size="1">2</font>, y<font size="1">3</font>,</em><span style="color:rgb(0, 0, 0)">&nbsp;&hellip;）之间的时间同步程度可以用</span>&nbsp;<em><font color="#24678d" style="font-weight:bold">相关系数 (r)</font></em>&nbsp;表示</div>
+
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:47.5%; padding:0 15px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-none" style="padding-top:0px;padding-bottom:0px;margin-left:0px;margin-right:0px;text-align:center">
+<a href='uploads/3/4/5/7/34572113/resting-state-fmri-01_3_orig.png' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/resting-state-fmri-01_3_orig.png" alt="静息态功能磁共振成像相关性矩阵" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%">静息态功能磁共振成像实验中 30 个不同脑区对的相关系数矩阵。红色调表示正相关，蓝色表示负的 <i>r</i> 值或反相关。（来自 nipy.org，遵循 CC 许可协议）</div>
+</div></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:52.5%; padding:0 15px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-none" style="padding-top:10px;padding-bottom:10px;margin-left:0px;margin-right:0px;text-align:center">
+<a href='uploads/3/4/5/7/34572113/correlation-coefficient-r_3_orig.png' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/correlation-coefficient-r_3.png" alt="图片" style="width:191;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+<div class="paragraph"><span>.&#65279;</span><span style="color:rgb(0, 0, 0)">其中&nbsp;</span><em style="color:rgb(0, 0, 0)">r = 0</em><span style="color:rgb(0, 0, 0)">&nbsp;表示无相关性，&nbsp;</span><em style="color:rgb(0, 0, 0)">r = 1</em><span style="color:rgb(0, 0, 0)">&nbsp;表示完全正相关，</span><em style="color:rgb(0, 0, 0)">&nbsp;r = &minus;1</em><span style="color:rgb(0, 0, 0)">&nbsp;表示完全反相关。&nbsp;</span>&#8203;<br /><br />&#8203;可以对数据集中的所有体素对执行此计算，结果会产生超过 200,000 次比较。更常见的是选择一个"<em><strong><font color="#24678d">种子点</font></strong></em>"（一个预定的体素、簇或小的解剖区域），并与数据集中的类似种子点进行比较。可以构建一个种子点相关矩阵（如左图所示），其中<span style="color:rgb(0, 0, 0)">&nbsp;较高的&nbsp;</span><em style="color:rgb(0, 0, 0)">r</em><span style="color:rgb(0, 0, 0)">&nbsp;值反映了配对区域之间更强的连接性。高相关区域也可以显示为叠加在共配准解剖图像上的"斑点"。</span></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;"><strong><font size="4" color="#8d5024">独立成分分析</font></strong></div>
+
+<div class="paragraph"><font color="#2a2a2a"><em><strong><font color="#24678d">独立成分分析</font></strong></em>&nbsp;的目标是在没有实验任务或血流动力学响应函数形状的先验知识的情况下，检测功能磁共振成像信号中存在的潜在模式。因此，ICA 被认为是一种用于&nbsp;</font><em><strong><font color="#24678d">盲源信号分离</font></strong></em><font color="#2a2a2a">&nbsp;的"无模型"方法，可以识别未知的、被线性混合在一起的独立源信号。例如，ICA 方法可用于从鸡尾酒会上录制的音频混合中提取个人的声音、音乐和噪声元素，而无需事先知道它们的来源或位置。</font></div>
+
+<span class='imgPusher' style='float:right;height:0px'></span><span style='display: table;width:327px;position:relative;float:right;max-width:100%;;clear:right;margin-top:2px;*margin-top:4px'><a href='uploads/3/4/5/7/34572113/ica_orig.gif' rel='lightbox' onclick='if (!lightboxLoaded) return false'><img src="uploads/3/4/5/7/34572113/icab2eb.gif?306" style="margin-top: 10px; margin-bottom: 10px; margin-left: 0px; margin-right: 20px; border-width:0; max-width:100%" alt="独立成分分析" class="galleryImageBorder wsite-image" /></a><span style="display: table-caption; caption-side: bottom; font-size: 90%; margin-top: -10px; margin-bottom: 10px; text-align: center;" class="wsite-caption">空间独立成分分析将来自视觉皮层的信号分离为三个成分。</span></span>
+<div class="paragraph" style="display:block;"><font color="#2a2a2a">应用于功能磁共振成像数据时，ICA 可以将有意义的相关脑激活区域与随机和半周期性的生理噪声区分开来。虽然 ICA 可以与广义线性模型方法结合用于基于任务的实验，但其最广泛的应用是在静息态功能磁共振成像数据的分析中。&nbsp;</font><br /><br />&#8203;ICA 算法首先构建一个包含所有观测到的功能磁共振成像数据的矩阵 (<strong>Y</strong>)。<strong>Y</strong> 的每一列包含单个体素的连续时间点；<strong>Y</strong> 的每一行是在特定时间点按空间（所有体素）组织的功能磁共振成像信号。经过一些预处理以标准化均值和方差后，&nbsp;<strong>Y</strong>&nbsp;被分解为两个矩阵 (<strong>T</strong>&nbsp;和&nbsp;<strong>S</strong>) 的乘积，<span><strong>&nbsp;</strong></span>其中&nbsp;<strong>T</strong>&nbsp;是时间过程矩阵，&nbsp;<strong>S</strong>&nbsp;是空间成分矩阵。迭代调整 <strong>T</strong> 和 <strong>S</strong> 中的值，以确定一个能最大化统计独立性（通常在 <strong>S</strong> 的行之间）的分解。然后可以对得到的独立成分信号进行颜色编码并叠加在解剖图像上（如上图所示）。</div>
+<hr style="width:100%;clear:both;visibility:hidden;"></hr>
+
+<div class="paragraph"><strong><font size="4" color="#8d5024">其他方法</font></strong></div>
+
+<div class="paragraph"><ul><li><strong><font color="#24678d">区域同质性</font></strong><span style="color:oklch(0.304 0.04 213.681)">&nbsp;测量给定体素的时间序列与其最近邻体素时间序列的相似性，提供关于局部连接性的信息</span></li><li><strong><font color="#24678d">低频波动振幅</font></strong><span style="color:oklch(0.304 0.04 213.681)">&nbsp;量化血氧水平依赖信号中自发低频振荡的强度，这被认为反映了自发的神经活动</span></li><li><strong><font color="#24678d">图论分析</font></strong>&nbsp;<span style="color:oklch(0.304 0.04 213.681)">将大脑建模为一个由节点（脑区）和边（功能连接）组成的网络，允许计算各种网络指标，如中心性、聚类系数和效率</span>&#8203;<span style="color:oklch(0.304 0.04 213.681)"><span>。</span></span></li></ul></div>
+
+<div class="paragraph"><strong><font size="4" color="#8d5024">软件工具</font></strong></div>
+
+<div class="paragraph"><span style="color:rgb(0, 0, 0)">有多个软件包可用于静息态功能磁共振成像分析，包括：</span></div>
+
+<div class="paragraph"><ul><li><strong style="color:rgb(0, 0, 0)"><font color="#24678d"><a href="https://web.conn-toolbox.org/home" target="_blank">CONN（功能连接性工具箱）</a>: </font></strong><font color="#2a2a2a"><span>&nbsp;</span>基于 MATLAB</font><strong style="color:rgb(0, 0, 0)"><font color="#24678d">。&nbsp;</font></strong>可能是使用最广泛的。&nbsp;包含预处理、去噪、功能连接性测量、广义线性模型和簇级推断模块。[<a href="https://web.conn-toolbox.org/" target="_blank">链接</a>]</li><li><strong><font color="#24678d">REST（静息态功能磁共振成像数据分析工具包）: </font></strong>来自中国，最初用于计算区域同质性和低频波动振幅指标；至少 8 年未更新 <a href="https://rfmri.org/REST" target="_blank">[链接]</a><br /></li><li><strong style=""><font color="#24678d">BRANT（脑网络组功能磁共振成像工具包）:</font></strong><font color="#282828"> 基于 MATLAB，同样来自中国，提供广泛的图像分析和功能磁共振成像处理算法。<a href="https://www.frontiersin.org/journals/neuroinformatics/articles/10.3389/fninf.2018.00052/full" target="_blank">[链接]</a></font></li><li><strong style=""><font color="#24678d">SPM、FSL 和 AFNI: </font></strong><font color="oklch(0.304 0.04 213.681)">通用的神经影像软件包，包含用于静息态功能磁共振成像分析以及基于任务的功能磁共振成像分析的工具</font></li></ul></div>
+
+<div><div id="526136911571085223" align="left" style="width: 100%; overflow-y: hidden;" class="wcustomhtml"><html> <head><script src="gdpr/gdprscript6f19.js?buildTime=1774025472"></script> <script type="text/javascript" 
+></script> 
+<script type="text/javascript">
+		$(function() {$('#Q').click(function() {$('.Q').toggle(500); return false;});});</script></head><body>
+<a href="#" id=Q><h3><font color="#378a57">进阶讨论（显示/隐藏）»</font></h3></a><div class=Q style="display:none;">
+
+<!--content goes below here-->
+
+<p>有意义的静息态功能磁共振成像数据位于大约 0.01 − 0.1 Hz 的频率范围内。相比之下，呼吸波动在 0.1 − 0.3 Hz 范围内产生混叠信号，而心脏搏动则在 0.8 − 1.3 Hz 范围内产生信号。因此，对于静息态功能磁共振成像而言，生理噪声比基于任务的研究问题更大。</p>
+
+<!--content goes above here-->
+</div></body>
+<!-- Mirrored from mriquestions.com/analyze-rs-fmri.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 21 Mar 2026 06:43:59 GMT -->
+</html></div>
+
+
+
+</div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div><div class="paragraph" style="text-align:skip_to_justify;"><strong>参考文献</strong><br /><strong>&nbsp;</strong><span>&nbsp; &nbsp;Amenmiya S, Takao H, Abe O. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/magnetic_resonance_imaging_-_2023_-_amemiya_-_resting-state_fmri__emerging_concepts_for_future_clinical_application.pdf">Resting-state fMRI: emerging concepts for future clinical application</a>. J Magn Reson Imaging 2024; 59:1135-1148. [<a href="https://doi.org/10.1002/jmri.28894" target="_blank">DOI LINK</a>]</span><br /><strong>&nbsp; &nbsp; &nbsp;</strong><span>Arabshahi S, Chung S, Alivar A, et al. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/resting_state_fmri.pdf">A comprehensive and broad approach to resting-state functional connectivity in adult patients with mild traumatic brain injury.</a> </span><span>AJNR Am J Neuroradiol 2024; 45:637-646.&nbsp; [<a href="https://doi.org/10.3174/ajnr.A8193" target="_blank">DOI LINK</a>]</span><font color="#878787">&nbsp;&nbsp;</font><br />&nbsp;&nbsp; &nbsp;&nbsp;Beckman CF. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/ica_beckman_1-s2.0-s1053811912001978-main.pdf">Modelling with independent components</a>. NeuroImage 2012; 62: 891-901.<br />&nbsp; &nbsp; &nbsp;Biswal BB, Uddin LQ. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/s41586-025-08953-9.pdf">The history and future of resting-state functional magnetic resonance imaging</a>. Nature 2025; 641:1121-1131.&nbsp; <a href="https://doi.org/10.1038/s41586-025-08953-9" target="_blank">[DOI LINK]</a><br /><span style="color:rgb(135, 135, 135)">&nbsp; &nbsp; &nbsp;</span>Bright MG, Murphy K. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/bright_murphy_noise_removal_bold1-s2.0-s1053811912009536-main.pdf">Removing motion and physiological artifacts from intrinsic BOLD fluctuations using&nbsp;short echo data</a>. NeuroImage 2013; 64:526-537.<br />&nbsp;&nbsp; &nbsp;&nbsp;Calhoun VD, Adali T, Hasen LK, et al. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/ica_2003_ica_overview.pdf">ICA of functional MRI data: an overview</a>. 4th International Symposium on Independent Component Analysis and Blind Signal Separation, Nara, Japan, 2003:281-288.<br />&nbsp; &nbsp; &nbsp;<span style="color:rgb(0, 0, 0)">Chen JE, Glover GH.&nbsp;</span><a href="http://mriquestions.com/uploads/3/4/5/7/34572113/chen_glover_fmri_review_2015art3a10.10072fs11065-015-9294-9.pdf">Functional magnetic imaging methods</a><span style="color:rgb(0, 0, 0)">. Neuropsychol Rev 2015; 25:289-313.&#8203;<br />&nbsp;&nbsp; &nbsp;&nbsp;</span>Hyv&auml;rinen A, Oja E. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/ica_math.pdf">Independent component analysis: algorithms and applications</a>. Neural Networks 2000; 13:411-413. (provides mathematical details of matrix decomposition and optimization for ICA)&nbsp;<br />&#8203;&nbsp; &nbsp; &nbsp;Lee MH, Smyser CD, Shimony JS. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/resting_state_fmri.pdf">Resting-state fMRI: a review of methods and clinical applications</a>. AJNR Am J Neuroradiol 2013; 34:1866-72. (good review)<br />&nbsp; &nbsp; &nbsp;Lv H, Wang Z, Tong E, et al. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/1390.full.pdf">Resting-state functional MRI: everything that non experts have always wanted to know.</a> AJNR Am J Neuroradiol 2018; 39:1390-1399.&nbsp;<a href="https://doi.org/10.3174/ajnr.A5527" target="_blank"> [DOI LINK]</a><br />&nbsp;&nbsp; &nbsp;&nbsp;McKeown MJ, Makeig S, Brown GG, et al. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/ica_mckeown_ica_paper_1998_ada460194.pdf">Analysis of fMRI data by blind separation into independent spatial components</a>. Hum Brain Mapping 1998; 6:160-188 (first use of ICA for fMRI data, actually a task-based experiment, not RS-fMRI)<br />&nbsp; &nbsp; &nbsp;<span style="color:rgb(21, 21, 21)">Nieto-Castanon, A. (2020).&nbsp;</span><a href="https://mriquestions.com/uploads/3/4/5/7/34572113/nieto-castanon_2020_handbookoffcmrimethodsinconn.pdf">Handbook of functional connectivity Magnetic Resonance Imaging methods in CONN. </a><span style="color:rgb(21, 21, 21)">Hilbert Press, 2020. <a href="https://doi.org/10.56441/hilbertpress.2207.6598" target="_blank">[DOI LINK]</a>&nbsp;</span><br />&nbsp; &nbsp; &nbsp;Power JD, Schlaggar BL, Petersen SE. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/resting_state_fmri_2015_review1-s2.0-s0896627314007958-main.pdf">Studying brain organization via spontaneous fMRI signal</a>. Neuron 2014; 84:681-696. (Good recent review)<span style="color:rgb(0, 0, 0)">&nbsp;</span><br />&nbsp; &nbsp; &nbsp;Rosazza C, Minati L, Ghielmetti F, et al. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/rosazza_ajnr.pdf">Functional connectivity&nbsp;during resting-state functional MR imaging: study of the correspondence&nbsp;between independent component analysis and region-of-<br />interest-based methods</a>. AJNR Am J Neuroradiol 2012; 33:180&ndash;87. (little difference between correlation and ICA methods for normal adults RS-fMRI analysis)<br />&nbsp; &nbsp; &nbsp;Van Dijk et al. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/van_dijk_297.full.pdf" target="_blank">Intrinsic functional connectivity as a tool for human connectomics: theory, properties, and optimization</a>. J Neurophysiol. 2010; 103:297-321.&nbsp;&nbsp;<br></div><div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;"><strong>相关问题</strong><br /><em><strong><a href="fmri-statistical-analysis.html">&nbsp; &nbsp; &nbsp;如何对 fMRI 数据进行统计分析？&nbsp;&nbsp;</a></strong></em><br /><em><strong><a href="resting-state-fmri.html">&#8203;</a>&nbsp; &nbsp; &nbsp;<a href="resting-state-fmri.html">什么是静息态 fMRI？它如何应用？</a>&nbsp;</strong></em></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div style="text-align:skip_to_justify;"><div style="height: 0px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-normal" href="resting-state-fmri.html" >
+<span class="wsite-button-inner">← &nbsp;上一问题</span>
+</a>
+<div style="height: 0px; overflow: hidden;"></div></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div style="text-align:right;"><div style="height: 0px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-normal" href="networkgraphs.html" >
+<span class="wsite-button-inner">下一问题 &nbsp;→</span>
+</a>
+<div style="height: 0px; overflow: hidden;"></div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div style="text-align:center;"><div style="height: 0px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-highlight" href="complete-list-of-questions.html" >
+<span class="wsite-button-inner">↑&nbsp;问题完整列表 ↑</span>
+</a>
+<div style="height: 10px; overflow: hidden;"></div></div>
+</div></div>

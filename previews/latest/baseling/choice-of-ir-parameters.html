@@ -1,0 +1,132 @@
+<div id="content"><div id="wsite-content" class="wsite-elements wsite-not-footer">
+	<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -0px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:49.563953488372%; padding:0 0px;">
+					
+						
+
+<h2 class="wsite-content-title" style="text-align:center;">如何选择反转恢复参数<br /></h2>
+
+<div class="paragraph" style="text-align:center;"><strong style="color: rgb(135, 135, 135); font-size: large; line-height: 1.5;"><em><font color="#0376be">如何设置反转恢复参数以获得所需的图像对比度？&nbsp;</font></em></strong><strong style="color: rgb(55, 138, 87); font-size: large; line-height: 1.5;"><em>&nbsp;</em></strong><br /></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:50.436046511628%; padding:0 0px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-thin" style="padding-top:0;padding-bottom:0;margin-left:0;margin-right:0;text-align:center">
+<a href='uploads/3/4/5/7/34572113/356982_orig.png' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/3569820f49.png?283" alt="反转时间 (TI)" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;">反转恢复脉冲序列的近似信号强度 (<em>S</em>) 由以下公式给出：&nbsp;</div>
+
+<div><div class="wsite-image wsite-image-border-thin" style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
+<a href='uploads/3/4/5/7/34572113/4308898_orig.gif' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/4308898d709.gif?370" alt="反转恢复信号公式" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;">其中 <em>K</em> 是一个比例因子，[<em>H</em>] 是自旋密度。<em>S </em>可以是正值或负值，这取决于在 <em>TI </em>间隔结束时，组织的<strong>纵向磁化矢量 M<font size="1">z</font> </strong>是指向 +<em>z</em> 方向还是&nbsp;&minus;<em>z</em> 方向。 &nbsp;当使用<strong><em><font color="#24678d">幅度重建反转恢复</font></em></strong>（最常见的方法）时，应使用绝对值 (|S|)。对于<strong><em><font color="#24678d">相位校正反转恢复</font></em></strong>，保持 <em>S </em>的符号很重要，因为&nbsp;+<em style="">S</em>&nbsp;值会比 &minus;<em style="">S</em>&nbsp;值显示得更亮。<br /></div>
+
+<div><div id="330472998853800398" align="left" style="width: 100%; overflow-y: hidden;" class="wcustomhtml"><p><i>TE</i> 的影响显而易见，它出现在乘数项 <i>e<sup>−TE/T2</sup></i> 中。如果 <i>TE</i> 相对于 T2 较短，则指数项趋近于 1，对 T2 的敏感性最小化。反之，如果 <i>TE</i> 等于或长于 T2，则该项变大，反转恢复序列的 T2 权重效应会增强。</p>
+
+<p><i>TR</i> 和 <i>TI</i> 对图像对比度的影响则不那么直观。你会记得，在自旋回波成像中，<i>TR</i> 值通过 <i>e<sup>−TR/T1</sup></i> 形式的项控制 T1 权重。尽管上面的反转恢复方程中也有类似的指数项，但还有第二个项 (<i>−2e<sup>−TI/T1</sup></i>) 也包含 T1。因此，一般来说，<i>TR</i> 值并不像在自旋回波序列中那样严格地控制反转恢复序列的 T1 权重。T1 权重主要由所选的 <i>TI</i> 值决定。<i>TR</i> 唯一真正需要调整的是确保其足够长，以便能够采集足够的层数，并且足够长以使组织充分恢复以产生可用的信号。</div>
+
+
+
+</div>
+
+<div class="paragraph" style="text-align:skip_to_justify;">我们将在接下来的几个问答中介绍如何为不同的成像场景选择 <em>TI</em>。特别是我们将看到，明智地选择 TI 可以使你能够抑制特定组织（如脂肪、白质、灰质或脑脊液）的信号，如下所示。</div>
+
+<div><div class="wsite-image wsite-image-border-thin" style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
+<a href='uploads/3/4/5/7/34572113/8273331_orig.gif' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/8273331_orig.gif" alt="反转时间 (TI)" style="width:100%;max-width:800px" />
+</a>
+<div style="display:block;font-size:90%">通过明智地选择 TI，可以选择性地抑制脂肪（STIR 序列，TI=180 ms）、白质（TI=400 ms）、灰质（TI=650 ms）或脑脊液（T2-FLAIR，TI=2500 ms）的信号。</div>
+</div></div>
+
+<div><div id="506098410688564725" align="left" style="width: 100%; overflow-y: hidden;" class="wcustomhtml"><html> <head><script src="gdpr/gdprscript6f19.js?buildTime=1774025472"></script> <script type="text/javascript" 
+></script> 
+<script type="text/javascript">
+		$(function() {$('#Q').click(function() {$('.Q').toggle(500); return false;});});</script></head><body>
+<a href="#" id=Q><h3><font color="#378a57">进阶讨论 (显示/隐藏)»</font></h3></a><div class=Q style="display:none;">
+
+<!--content goes below here-->
+
+暂无补充材料。请稍后再来查看！
+
+
+<!--content goes above here-->
+</div></body>
+<!-- Mirrored from mriquestions.com/choice-of-ir-parameters.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 21 Mar 2026 06:06:21 GMT -->
+</html></div>
+
+
+
+</div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div><div class="paragraph" style="text-align:skip_to_justify;"><strong>参考文献</strong><br /><span style="line-height: 1.5;"><font color="#878787">&nbsp; &nbsp; &nbsp;</font></span>Bydder GM, Young IR.&nbsp;<a href="http://mri-q.com/uploads/3/4/5/7/34572113/mr_imaging__clinical_use_of_the_inversion_recovery.2.pdf" title="" style="">MR imaging: clinical use of the inversion recovery sequence</a>. J Comput Assist Tomogr 1985; 9:659-675.<br />&nbsp; &nbsp; &nbsp;Hornak JP. The Basics of MRI (<a href="http://www.cis.rit.edu/htbooks/mri/" target="_blank">www.cis.rit.edu/htbooks/mri/</a>), 2013. (A derivation of the signal intensity equation for IR given above can be found there).</div><div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;"><strong>相关问题</strong><br /><strong><em><a href="what-is-ir.html" title="">&nbsp; &nbsp; &nbsp;什么是反转恢复脉冲序列？</a></em></strong><br /><strong><em><a href="phase-sensitive-ir.html" title="">&nbsp; &nbsp; &nbsp;什么是相位敏感 IR？为何其背景是灰色的？</a></em></strong><br /></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div style="text-align:skip_to_justify;"><div style="height: 10px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-normal" href="why-not-psir-always.html" >
+<span class="wsite-button-inner">← &nbsp;上一问题</span>
+</a>
+<div style="height: 10px; overflow: hidden;"></div></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div style="text-align:right;"><div style="height: 10px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-normal" href="ti-to-null-a-tissue.html" >
+<span class="wsite-button-inner">下一问题 &nbsp;→</span>
+</a>
+<div style="height: 10px; overflow: hidden;"></div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div style="text-align:center;"><div style="height: 10px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-highlight" href="complete-list-of-questions.html" >
+<span class="wsite-button-inner">↑&nbsp;问题完整列表 ↑</span>
+</a>
+<div style="height: 10px; overflow: hidden;"></div></div>
+</div></div>

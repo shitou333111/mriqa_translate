@@ -1,0 +1,3354 @@
+<div id="content"><div id="wsite-content" class="wsite-elements wsite-not-footer">
+	<div><div id="599447266881997902" align="left" style="width: 100%; overflow-y: hidden;" class="wcustomhtml"><!--############NEW MASTER HEADER AND INDEX##############-->
+<!--THIS IS THE MASTER HEADER SECTION FOR QUIZZES ON EACH SUPER TAB-->
+<!-- Each super tab in the regular Q&A part of the website corresponds to  a set of review QUIZZES on a single web page. This single web page must begin with the html script included below (which must be appropriately renamed). -->
+
+<!--After the title there is an index that identifies ~5 subsections each with 10-20 quiz questions. The html script for each section of questions is in a separate document titled 20 EMPTY QUESTIONS.  Instructions for filling these out are provided in that document. -->
+
+<html>
+<head><script src="/gdpr/gdprscript.js?buildTime=1774025472"></script>
+<title>脉冲序列测验题</title>
+<!--All Yellow highlighted items need to be replaced-->
+<meta name="keywords" content="放射学物理, 复习题, 磁共振物理">
+<meta name="description" content="来自MRIquestions.com的复习测验题集">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="/mr_styles.css">
+<style>
+.explan {
+	display: none;
+	font-style: italic;
+	margin-top: 2px;
+	margin-bottom: 6px;
+}
+</style>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-52206512-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+<script>
+function showAnswer(q_string) {
+	var button = document.getElementById('show_'+q_string);
+	var shown = button.value == "Hide Answer";
+	if(!shown) {
+		document.getElementById('a_'+q_string).style.display = "block";
+		
+		document.getElementById('correct_'+q_string).style.fontWeight = "bold";
+		if(document.getElementById('c_'+q_string).checked) {
+			document.getElementById('correct_'+q_string).style.color = "Green";
+		} else {
+			document.getElementById('correct_'+q_string).style.color = "Red";
+		}
+		
+		button.value = "Hide Answer";
+	} else {
+		document.getElementById('a_'+q_string).style.display = "none";
+		button.value = "Show Answer";
+	}
+}
+
+function showAllAnswers(topic) {
+	var button = document.getElementById('show_all_'+topic);
+	var shown = button.value == "Hide All Answers for Section";
+	
+	var i = 0;
+	var correct = 0;
+	var ans_el;
+	while((ans_el=document.getElementById('a_'+topic+'_'+i)) != null) {
+		if(document.getElementById('c_'+topic+'_'+i).checked) {
+			correct++;
+		}
+		if(!shown) {
+			ans_el.style.display = "block";
+			document.getElementById('correct_'+topic+'_'+i).style.fontWeight = "bold";
+			if(document.getElementById('c_'+topic+'_'+i).checked) {
+				document.getElementById('correct_'+topic+'_'+i).style.color = "Green";
+			} else {
+				document.getElementById('correct_'+topic+'_'+i).style.color = "Red";
+			}
+		} else {
+			ans_el.style.display = "none";
+		}
+		i++;
+	}
+	
+	var scoretext = document.getElementById('scoretxt_'+topic);
+	scoretext.innerHTML = '你答对了 '+correct+'/'+i+' 题，得分 '+Math.round(correct/i*100)+'%';
+	
+	if(!shown) {
+		button.value = "Hide All Answers for Section";
+	} else {
+		button.value = "Show All Answers for Section";
+	}
+}
+
+function scoreAnswers(topic) {
+	var button = document.getElementById('score_'+topic);
+	
+	var i = 0;
+	var correct = 0;
+	var ans_el;
+	while((ans_el=document.getElementById('a_'+topic+'_'+i)) != null) {
+		if(document.getElementById('c_'+topic+'_'+i).checked) {
+			correct++;
+		}
+		i++;
+	}
+	
+	var scoretext = document.getElementById('scoretxt_'+topic);
+	scoretext.innerHTML = '你答对了 '+correct+'/'+i+' 题，得分 '+Math.round(correct/i*100)+'%';
+}
+
+function changeMode(button_value) {
+	if(button_value != 0) {
+		window.location = "/review/mri_b.html?mode="+button_value;
+	}
+}
+</script>
+<style type="text/css">
+.button_unchecked {
+	border: 2px outset #3498db;
+	background: #3498db;
+	background-image: -webkit-linear-gradient(top, #3498db, #2980b9);
+	background-image: -moz-linear-gradient(top, #3498db, #2980b9);
+	background-image: -ms-linear-gradient(top, #3498db, #2980b9);
+	background-image: -o-linear-gradient(top, #3498db, #2980b9);
+	background-image: linear-gradient(to bottom, #3498db, #2980b9);
+	padding: 4px;
+	
+	font-size: 120%;
+	font-weight: bold;
+}
+.button_checked {
+	border: 2px inset #3498db;
+	background: #3498db;
+	background-image: -webkit-linear-gradient(top, #3498db, #2980b9);
+	background-image: -moz-linear-gradient(top, #3498db, #2980b9);
+	background-image: -ms-linear-gradient(top, #3498db, #2980b9);
+	background-image: -o-linear-gradient(top, #3498db, #2980b9);
+	background-image: linear-gradient(to bottom, #3498db, #2980b9);
+	padding: 4px;
+	
+	font-size: 120%;
+	font-weight: bold;
+}
+</style>
+</head>
+
+<!-- END OF MASTER HEADER -->
+
+<!--SECOND SECTION: Lists Subsections for Questions below-->
+<body style="background-color:white">
+<div class="main_div">
+<h1 style="color:black";><a name="top"></a>脉冲序列测验</h1>
+<div style="font-size: 140%; font-family: sans-serif">
+<ul>
+	<li><a href="#0">MR信号</a></li>
+	<li><a href="#1">自旋回波与反转恢复</a></li>
+	<li><a href="#2">梯度回波与磁敏感性</a></li>
+	<li><a href="#3">扩散</a></li>
+             <li><a href="#4">脂肪-水</a></li>
+
+</ul>
+
+<!-- Note the numbering of these subsections as they have a href values of #0, #1, #2, etc. These numbers are needed so that clicking on the index file takes you to the proper place in the web page identified on the 20 BLANK QUESTIONS script.-->
+
+
+
+</div>
+
+
+</div>
+
+
+
+</div>
+
+<div><div id="512277411165278663" align="left" style="width: 100%; overflow-y: hidden;" class="wcustomhtml"><!-- ###############NEW QUIZ SUBSECTION ##################-->
+
+<hr style="1px solid black">
+<!-- Creates optional line above new Quiz Subsection Title ---->
+
+<h1 style="color:black";><a name="0"></a>MR信号</h1>
+
+<!-- The Section Name and its corresponding number (here 0) which has an href in the index must be changed/filled in.  Note that the first section is identified as “0” here only;  and the second section is denoted “2”, etc. 
+
+This is confusing because subsequently it is denoted as Section 1 and reference to all questions in this section begin with a 1.  However, the first question of Section 1 is called question 0, presumably to assist in scoring.
+
+Thus, the first question of Section 1 is denoted as q_1_0 and its second question is denoted q_1_1.	
+
+When a second section of Questions is added, this is called Section 2 with first and second questions denoted q_2_0 and q_2_1. 
+
+Each section has counting variables corresponding to each question. So the counting variables  are denoted c_1_0 for the Section 1/first question, while c_2_1 counts for Section 2/second question. -->
+
+<!-- FOR THE PURPOSES OF THIS DOCUMENT WE WILL CONSIDER ALL QUESTIONS TO REFER TO SECTION MRSIGNALS and are numbered consecutively. THE WORD DOCUMENT CAN THEN BE PUT INTO PROPER FORM BY “SEARCH AND REPLACE MRSIGNALS BY THE APPROPRIATE SECTION NUMBER”-->
+
+
+<!-- ################ SECTION M, QUIZ QUESTION  1############## -->
+
+<ol><li style="margin-top: 8px"> 单个射频脉冲产生的MR信号称为
+<ol type="a" id="q_MRSIGNALS_0">
+<li id="correct_MRSIGNALS_0"><input type=radio name="c_MRSIGNALS_0" id="c_MRSIGNALS_0"> 自由感应衰减
+</li>
+
+<li ><input type=radio name="c_MRSIGNALS_0" > 自旋回波
+</li>
+		
+<li ><input type=radio name="c_MRSIGNALS_0" > 梯度回波
+</li>
+
+		
+<li ><input type=radio name="c_MRSIGNALS_0" > 受激回波
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_MRSIGNALS_0" onclick="showAnswer('MRSIGNALS_0')" value="显示答案"></p>
+				
+<p class="explan" id="a_MRSIGNALS_0"> 自由感应衰减由单个射频脉冲产生，此时被倾倒的核磁化矢量围绕<b>B<sub>o</sub></b>进动，并通过感应（法拉第-楞次定律）在接收线圈中产生电流。
+<a href="/free-induction-decay.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+
+<!-- ################ SECTION MRSIGNALS, QUIZ QUESTION  2############## -->
+
+<li style="margin-top: 8px"> 关于自由感应衰减，以下哪项是正确的？
+<ol type="a" id="q_MRSIGNALS_1">
+
+<li ><input type=radio name="c_MRSIGNALS_1" > 它以共振频率无限振荡
+</li>
+		
+
+<li id="correct_MRSIGNALS_1"><input type=radio name="c_MRSIGNALS_1" id="c_MRSIGNALS_1"> 它以时间常数T2*衰减
+</li>
+<li ><input type=radio name="c_MRSIGNALS_1" > 它以时间常数T1增加幅度
+</li>
+		
+<li ><input type=radio name="c_MRSIGNALS_1" >  由完美的180°脉冲产生
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_MRSIGNALS_1" onclick="showAnswer('MRSIGNALS_1')" value="显示答案"></p>
+				
+<p class="explan" id="a_MRSIGNALS_1"> 自由感应衰减是以共振频率进行的阻尼正弦振荡，以时间常数T2*衰减。
+<a href="/free-induction-decay.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION MRSIGNALS, QUIZ QUESTION  3############## -->
+
+<li style="margin-top: 8px"> 如果在射频脉冲之后立即开启磁场梯度，MR信号会发生什么？
+<ol type="a" id="q_MRSIGNALS_2">
+
+<li ><input type=radio name="c_MRSIGNALS_2" > 变成自由感应衰减
+</li>
+		
+<li ><input type=radio name="c_MRSIGNALS_2" > 保持不变
+</li>
+
+<li id="correct_MRSIGNALS_2"><input type=radio name="c_MRSIGNALS_2" id="c_MRSIGNALS_2"> 迅速消失
+</li>
+		
+<li ><input type=radio name="c_MRSIGNALS_2" >  被重聚焦成梯度回波
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_MRSIGNALS_2" onclick="showAnswer('MRSIGNALS_2')" value="显示答案"></p>
+				
+<p class="explan" id="a_MRSIGNALS_2"> 初始的MR信号已经等同于自由感应衰减（选项<i>a</i>是错误的）。在自由感应衰减期间开启梯度会导致其衰减速度比仅由T2*过程引起的更快（选项<i>c</i>是正确的）。需要后续施加一个极性相反的梯度才能产生梯度回波。
+<a href="/ gradient-echo.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION MRSIGNALS, QUIZ QUESTION  4############## -->
+<li style="margin-top: 8px"> 梯度回波的另一个名称是
+<ol type="a" id="q_MRSIGNALS_3">
+<li id="correct_MRSIGNALS_3"><input type=radio name="c_MRSIGNALS_3" id="c_MRSIGNALS_3"> 场回波
+</li>
+
+<li ><input type=radio name="c_MRSIGNALS_3" > 射频回波
+</li>
+		
+<li ><input type=radio name="c_MRSIGNALS_3" > 自旋回波
+</li>
+
+		
+<li ><input type=radio name="c_MRSIGNALS_3" >  受激回波
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_MRSIGNALS_3" onclick="showAnswer('MRSIGNALS_3')" value="显示答案"></p>
+				
+<p class="explan" id="a_MRSIGNALS_3"> 较少使用的术语“场回波”是正确的答案。一些制造商，包括飞利浦和佳能，使用FE或FFE（快速场回波）来命名其梯度回波序列。另一个同义词是梯度召回回波。
+<a href="/gradient-echo.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+
+
+
+<!-- ################ SECTION MRSIGNALS, QUIZ QUESTION  5############## -->
+
+<li style="margin-top: 8px"> 如果在自由感应衰减自发衰减后开启梯度，会发生什么？
+<ol type="a" id="q_MRSIGNALS_4">
+
+<li ><input type=radio name="c_MRSIGNALS_4" > 产生梯度召回回波。
+</li>
+		
+<li ><input type=radio name="c_MRSIGNALS_4" > 产生自旋回波。
+</li>
+<li ><input type=radio name="c_MRSIGNALS_4" >  部分再生自由感应衰减。
+</li>
+
+<li id="correct_MRSIGNALS_4"><input type=radio name="c_MRSIGNALS_4" id="c_MRSIGNALS_4"> 什么也不会发生。</li>
+		
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_MRSIGNALS_4" onclick="showAnswer('MRSIGNALS_4')" value="显示答案"></p>
+				
+<p class="explan" id="a_MRSIGNALS_4"> 一旦自由感应衰减通过T2*过程自发衰减，就无法通过梯度作用恢复任何信号。
+<a href="/gradient-echo.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION MRSIGNALS, QUIZ QUESTION  6############## -->
+
+<li style="margin-top: 8px"> 简单梯度回波成像序列中施加的第一个梯度瓣称为
+<ol type="a" id="q_MRSIGNALS_5">
+
+		
+<li ><input type=radio name="c_MRSIGNALS_5" > 读出梯度。
+</li>
+
+<li id="correct_MRSIGNALS_5"><input type=radio name="c_MRSIGNALS_5" id="c_MRSIGNALS_5"> 散相梯度。
+</li>
+<li ><input type=radio name="c_MRSIGNALS_5" > 重聚焦梯度。
+</li>
+		
+<li ><input type=radio name="c_MRSIGNALS_5" >  双极梯度。
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_MRSIGNALS_5" onclick="showAnswer('MRSIGNALS_5')" value="显示答案"></p>
+				
+<p class="explan" id="a_MRSIGNALS_5"> 梯度回波序列的第一步是使自由感应衰减散相，因此该瓣被称为“散相梯度”。散相梯度导致除正常T2*过程之外的加速散相，使自由感应衰减“压制/混乱”。
+<a href="/gradient-echo.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION MRSIGNALS, QUIZ QUESTION  7############## -->
+
+<li style="margin-top: 8px"> 重聚焦梯度重聚焦由以下因素散相的自旋
+<ol type="a" id="q_MRSIGNALS_6">
+<li id="correct_MRSIGNALS_6"><input type=radio name="c_MRSIGNALS_6" id="c_MRSIGNALS_6"> 仅散相梯度
+</li>
+
+<li ><input type=radio name="c_MRSIGNALS_6" > 仅T2
+</li>
+		
+<li ><input type=radio name="c_MRSIGNALS_6" > 仅T2*
+</li>
+
+		
+<li ><input type=radio name="c_MRSIGNALS_6" >  散相梯度、T2和T2*
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_MRSIGNALS_6" onclick="showAnswer('MRSIGNALS_6')" value="显示答案"></p>
+				
+<p class="explan" id="a_MRSIGNALS_6"> 重聚焦梯度仅重聚焦由散相梯度本身引起的自旋混乱。T2和T2*过程不受影响，并导致持续的信号损失 <a href="/gradient-echo.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+	
+<!-- ################ SECTION MRSIGNALS, QUIZ QUESTION  8############## -->
+
+<li style="margin-top: 8px"> 自旋回波最早由谁描述？
+<ol type="a" id="q_MRSIGNALS_7">
+
+<li ><input type=radio name="c_MRSIGNALS_7" > 费利克斯·布洛赫
+</li>
+		
+<li ><input type=radio name="c_MRSIGNALS_7" > 爱德华·珀塞尔
+</li>
+<li ><input type=radio name="c_MRSIGNALS_7" >  伊西多·拉比
+</li>
+
+<li id="correct_MRSIGNALS_7"><input type=radio name="c_MRSIGNALS_7" id="c_MRSIGNALS_7"> 欧文·哈恩
+</li>
+		
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_MRSIGNALS_7" onclick="showAnswer('MRSIGNALS_7')" value="显示答案"></p>
+				
+<p class="explan" id="a_MRSIGNALS_7"> 欧文·哈恩于1949年在读研究生时发现了自旋回波。
+<a href="/spin-echo1.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION MRSIGNALS, QUIZ QUESTION  9############## -->
+
+<li style="margin-top: 8px"> 单个自旋回波由以下产生
+<ol type="a" id="q_MRSIGNALS_8">
+
+<li ><input type=radio name="c_MRSIGNALS_8" > 单个射频脉冲
+</li>
+		
+<li ><input type=radio name="c_MRSIGNALS_8" > 单个射频脉冲加梯度反转
+</li>
+
+<li id="correct_MRSIGNALS_8"><input type=radio name="c_MRSIGNALS_8" id="c_MRSIGNALS_8"> 两个射频脉冲
+</li>
+		
+<li ><input type=radio name="c_MRSIGNALS_8" >  三个射频脉冲
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_MRSIGNALS_8" onclick="showAnswer('MRSIGNALS_8')" value="显示答案"></p>
+				
+<p class="explan" id="a_MRSIGNALS_8"> 单个射频脉冲产生自由感应衰减，但两个连续的射频脉冲产生自旋回波。  
+
+<a href="/spin-echo1.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+<!-- ################ SECTION MRSIGNALS, QUIZ QUESTION  10############## -->
+
+<li style="margin-top: 8px"> 在自旋回波脉冲序列中，第一个射频脉冲中点与自旋回波峰值之间的时间称为
+<ol type="a" id="q_MRSIGNALS_9">
+
+<li ><input type=radio name="c_MRSIGNALS_9" > TR
+</li>
+		
+
+<li id="correct_MRSIGNALS_9"><input type=radio name="c_MRSIGNALS_9" id="c_MRSIGNALS_9"> TE
+</li>
+<li ><input type=radio name="c_MRSIGNALS_9" > TE/2
+</li>
+		
+<li ><input type=radio name="c_MRSIGNALS_9" >  TI
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_MRSIGNALS_9" onclick="showAnswer('MRSIGNALS_9')" value="显示答案"></p>
+				
+<p class="explan" id="a_MRSIGNALS_9"> 第一个射频脉冲中点与自旋回波峰值之间的时间称为回波时间（TE）。  
+<a href="/spin-echo1.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+<!-- ################ SECTION MRSIGNALS, QUIZ QUESTION  11############## -->
+
+<li style="margin-top: 8px"> 在自旋回波脉冲序列中，第一个和第二个射频脉冲之间的时间是
+<ol type="a" id="q_MRSIGNALS_10">
+
+<li ><input type=radio name="c_MRSIGNALS_10" > TR
+</li>
+		
+<li ><input type=radio name="c_MRSIGNALS_10" > TE
+</li>
+
+<li id="correct_MRSIGNALS_10"><input type=radio name="c_MRSIGNALS_10" id="c_MRSIGNALS_10"> TE/2
+</li>
+		
+<li ><input type=radio name="c_MRSIGNALS_10" >  TI
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_MRSIGNALS_10" onclick="showAnswer('MRSIGNALS_10')" value="显示答案"></p>
+				
+<p class="explan" id="a_MRSIGNALS_10"> 自旋回波出现在时间TE，它是脉冲间隔的两倍。所以正确答案是TE/2<a href="/spin-echo1.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+		
+
+
+
+
+
+<!-- ################ SECTION MRSIGNALS, QUIZ QUESTION  12############## -->
+
+<li style="margin-top: 8px"> 用于成像的自旋回波通常使用90°脉冲后跟180°脉冲产生。如果将第二个脉冲改为90°，会发生什么？
+<ol type="a" id="q_MRSIGNALS_11">
+
+<li ><input type=radio name="c_MRSIGNALS_11" > 不会产生回波。
+</li>
+		
+<li ><input type=radio name="c_MRSIGNALS_11" > 在时间2×TE处产生一个正常大小的回波
+</li>
+
+<li id="correct_MRSIGNALS_11"><input type=radio name="c_MRSIGNALS_11" id="c_MRSIGNALS_11"> 在时间TE处产生一个大小减半的回波
+</li>
+		
+<li ><input type=radio name="c_MRSIGNALS_11" >  在时间2×TE处产生一个大小减半的回波
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_MRSIGNALS_11" onclick="showAnswer('MRSIGNALS_11')" value="显示答案"></p>
+				
+<p class="explan" id="a_MRSIGNALS_11"> 欧文·哈恩最初使用的是90°-90°射频对，由此产生的回波通常称为哈恩回波。任意两个射频脉冲在时间TE处都会形成哈恩回波，其幅度取决于所选择的角度。90°-90°对的最大自旋回波强度仅为90°-180°对产生的一半。
+<a href="/90deg-90deg-hahn-echo.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+<!-- ################ SECTION MRSIGNALS, QUIZ QUESTION  13############## -->
+
+<li style="margin-top: 8px"> 以下哪对自旋回波脉冲预计会产生最大的信号？
+<ol type="a" id="q_MRSIGNALS_12">
+
+<li ><input type=radio name="c_MRSIGNALS_12" > 90°-90°
+</li>
+		
+
+<li id="correct_MRSIGNALS_12"><input type=radio name="c_MRSIGNALS_12" id="c_MRSIGNALS_12"> 90°-180°
+</li>
+		
+<li ><input type=radio name="c_MRSIGNALS_12" >  180°-90°
+</li>
+<li ><input type=radio name="c_MRSIGNALS_12" > 180°-180°
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_MRSIGNALS_12" onclick="showAnswer('MRSIGNALS_12')" value="显示答案"></p>
+				
+<p class="explan" id="a_MRSIGNALS_12"> 90°-180°对最常用的原因是这种组合产生最大可能的回波信号。90°-90°对的最大自旋回波强度仅为90°-180°对产生的一半。一般来说，如果第一个射频脉冲的翻转角为α<sub>1</sub>，第二个为α<sub>2</sub>，则哈恩回波的最大信号强度比常规（90°-180°）回波小一个因子(sin α<sub>1</sub>)•(sin² α<sub>2</sub>/2)。
+<a href="/90deg-90deg-hahn-echo.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION MRSIGNALS, QUIZ QUESTION  14############## -->
+
+<li style="margin-top: 8px"> 一系列3个紧密间隔的连续射频脉冲可以产生多少个回波？
+<ol type="a" id="q_MRSIGNALS_13">
+
+<li ><input type=radio name="c_MRSIGNALS_13" > 3
+</li>
+		
+<li ><input type=radio name="c_MRSIGNALS_13" > 4
+</li>
+
+<li id="correct_MRSIGNALS_13"><input type=radio name="c_MRSIGNALS_13" id="c_MRSIGNALS_13"> 5
+</li>
+		
+<li ><input type=radio name="c_MRSIGNALS_13" >  6
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_MRSIGNALS_13" onclick="showAnswer('MRSIGNALS_13')" value="显示答案"></p>
+				
+<p class="explan" id="a_MRSIGNALS_13"> 三个射频脉冲最多可以产生5个自旋回波：3个主回波，1个次级回波和1个受激回波。
+<a href="/stimulated-echoes.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION MRSIGNALS, QUIZ QUESTION  15############## -->
+
+<li style="margin-top: 8px"> 在这些回波中，有多少被认为是“受激”回波？
+<ol type="a" id="q_MRSIGNALS_14">
+<li id="correct_MRSIGNALS_14"><input type=radio name="c_MRSIGNALS_14" id="c_MRSIGNALS_14"> 1 </li>
+
+<li ><input type=radio name="c_MRSIGNALS_14" > 2</li>
+		
+<li ><input type=radio name="c_MRSIGNALS_14" > 没有
+</li>
+
+		
+<li ><input type=radio name="c_MRSIGNALS_14" >  全部都是
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_MRSIGNALS_14" onclick="showAnswer('MRSIGNALS_14')" value="显示答案"></p>
+				
+<p class="explan" id="a_MRSIGNALS_14"> 3个射频脉冲只产生1个受激回波。
+<a href="/stimulated-echoes.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+<!-- ################ SECTION MRSIGNALS, QUIZ QUESTION 16############## -->
+
+<li style="margin-top: 8px"> 置于静磁场中的样品产生初始纵向磁化强度<i>M<sub>o</sub></i>。然后对其施加一系列等间隔为TR的射频脉冲。如果TR>>T1，关于每个后续射频脉冲<u>之前</u>的纵向磁化强度<i>M<sub>z</sub></i>，以下哪项正确？
+
+<ol type="a" id="q_MRSIGNALS_15">
+
+<li ><input type=radio name="c_MRSIGNALS_15" > 无法预测。
+</li>
+		
+
+<li id="correct_MRSIGNALS_15"><input type=radio name="c_MRSIGNALS_15" id="c_MRSIGNALS_15"> 与<i>M<sub>o</sub></i>相同。
+</li>
+<li ><input type=radio name="c_MRSIGNALS_15" > 大于<i>M<sub>o</sub></i>。
+</li>
+		
+<li ><input type=radio name="c_MRSIGNALS_15" >  小于<i>M<sub>o</sub></i>。
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_MRSIGNALS_15" onclick="showAnswer('MRSIGNALS_15')" value="显示答案"></p>
+				
+<p class="explan" id="a_MRSIGNALS_15"> 如果TR足够长（通常要求TR > 4-5×T1），纵向磁化强度将有时间完全恢复，并在下一个射频脉冲时恢复到其完整的初始磁化强度<i>M<sub>o</sub></i>。 
+<a href="4-or-more-rf-pulses.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION MRSIGNALS, QUIZ QUESTION  17############## -->
+
+<li style="margin-top: 8px"> 置于静磁场中的样品产生初始纵向磁化强度<i>M<sub>o</sub></i>。然后对其施加一系列等间隔为TR的射频脉冲。如果T2* < TR < T1，关于每个后续射频脉冲<u>之前</u>的纵向磁化强度<i>M<sub>z</sub></i>，以下哪项正确？
+<ol type="a" id="q_MRSIGNALS_16">
+
+<li ><input type=radio name="c_MRSIGNALS_16" > 无法预测。
+</li>
+		
+<li ><input type=radio name="c_MRSIGNALS_16" > 与<i>M<sub>o</sub></i>相同。
+</li>
+<li ><input type=radio name="c_MRSIGNALS_16" >  大于<i>M<sub>o</sub></i>。
+</li>
+
+<li id="correct_MRSIGNALS_16"><input type=radio name="c_MRSIGNALS_16" id="c_MRSIGNALS_16"> 小于<i>M<sub>o</sub></i>。
+</li>
+		
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_MRSIGNALS_16" onclick="showAnswer('MRSIGNALS_16')" value="显示答案"></p>
+				
+<p class="explan" id="a_MRSIGNALS_16"> 在这种情况下，TR现在与T1相等或更短。第二个及后续脉冲发生在纵向磁化强度恢复到其初始值（<i>M<sub>o</sub></i>）之前。经过几次脉冲后，将建立一个新的稳态纵向磁化强度（<i>M<sub>ss</sub></i>），其中<i>M<sub>ss</sub></i> < <i>M<sub>o</sub></i>。
+<a href="/4-or-more-rf-pulses.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+<!-- ################ SECTION MRSIGNALS, QUIZ QUESTION  18############## -->
+
+<li style="margin-top: 8px"> 上述情况（问题17）被称为
+<ol type="a" id="q_MRSIGNALS_17">
+<li id="correct_MRSIGNALS_17"><input type=radio name="c_MRSIGNALS_17" id="c_MRSIGNALS_17"> 部分饱和
+</li>
+
+<li ><input type=radio name="c_MRSIGNALS_17" > 完全饱和
+</li>
+		
+<li ><input type=radio name="c_MRSIGNALS_17" > 稳态自由进动
+</li>
+
+		
+<li ><input type=radio name="c_MRSIGNALS_17" >  不完全磁平衡
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_MRSIGNALS_17" onclick="showAnswer('MRSIGNALS_17')" value="显示答案"></p>
+				
+<p class="explan" id="a_MRSIGNALS_17"> 这种现象称为部分饱和，意味着自旋系统尚未完全弛豫回其平衡状态。
+<a href="/4-or-more-rf-pulses.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+		
+
+<!-- ################ SECTION MRSIGNALS, QUIZ QUESTION  19############## -->
+
+<li style="margin-top: 8px"> 置于静磁场中的样品产生初始纵向磁化强度<i>M<sub>o</sub></i>。然后对其施加一系列等间隔为TR的射频脉冲。如果T2* < TR < T1，关于连续射频脉冲之间的中点处的横向磁化强度<i>M<sup>xy</sup></i>，以下哪项正确？
+<ol type="a" id="q_MRSIGNALS_18">
+
+<li ><input type=radio name="c_MRSIGNALS_18" > 无法预测。
+</li>
+<li ><input type=radio name="c_MRSIGNALS_18" >  与<i>M<sub>o</sub></i>相同。
+</li>
+		
+<li ><input type=radio name="c_MRSIGNALS_18" > 小于<i>M<sub>o</sub></i>但不为零。
+</li>
+
+<li id="correct_MRSIGNALS_18"><input type=radio name="c_MRSIGNALS_18" id="c_MRSIGNALS_18"> 为零。
+</li>
+		
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_MRSIGNALS_18" onclick="showAnswer('MRSIGNALS_18')" value="显示答案"></p>
+				
+<p class="explan" id="a_MRSIGNALS_18"> 如问题#17所述，样品部分饱和，达到一个新的非零稳态纵向磁化强度<i>M<sub>ss</sub></i> < <i>M<sub>o</sub></i>。但由于TR > T2*，在每对射频脉冲之间的中点处，横向磁化强度完全衰减，因此答案为0（d）。
+<a href="/4-or-more-rf-pulses.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+<!-- ################ SECTION MRSIGNALS, QUIZ QUESTION  20############## -->
+
+<li style="margin-top: 8px"> 与问题#19相同的情景，但这里TR<T2*。那么关于每对脉冲之间的中点处的横向磁化强度<i>M<sup>xy</sup></i>，以下哪项正确？
+
+<ol type="a" id="q_MRSIGNALS_19">
+
+<li ><input type=radio name="c_MRSIGNALS_19" > 无法预测。
+</li>
+		
+<li ><input type=radio name="c_MRSIGNALS_19" > 与<i>M<sub>o</sub></i>相同。
+</li>
+
+<li id="correct_MRSIGNALS_19"><input type=radio name="c_MRSIGNALS_19" id="c_MRSIGNALS_19"> 小于<i>M<sub>o</sub></i>但不为零。
+</li>
+		
+<li ><input type=radio name="c_MRSIGNALS_19" >  为零。
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_MRSIGNALS_19" onclick="showAnswer('MRSIGNALS_19')" value="显示答案"></p>
+				
+<p class="explan" id="a_MRSIGNALS_19"> 在这种情况下，TR非常短，横向磁化强度<i>M<sup>xy</sup></i>在射频脉冲之间没有完全衰减，达到一个小于<i>M<sub>o</sub></i>的非零值。
+
+<a href="/4-or-more-rf-pulses.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+		
+<!-- ################ SECTION MRSIGNALS, QUIZ QUESTION  21############## -->
+
+<li style="margin-top: 8px"> 上述情况被称为
+<ol type="a" id="q_MRSIGNALS_20">
+
+<li ><input type=radio name="c_MRSIGNALS_20" > 部分饱和
+</li>
+		
+<li ><input type=radio name="c_MRSIGNALS_20" > 完全饱和
+</li>
+
+<li id="correct_MRSIGNALS_20"><input type=radio name="c_MRSIGNALS_20" id="c_MRSIGNALS_20"> 稳态自由进动
+</li>
+		
+<li ><input type=radio name="c_MRSIGNALS_20" >  完全磁平衡
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_MRSIGNALS_20" onclick="showAnswer('MRSIGNALS_20')" value="显示答案"></p>
+				
+<p class="explan" id="a_MRSIGNALS_20"> 如果TR变得甚至更短（≤T2*），每个射频脉冲后的自由感应衰减在自旋回波/受激回波成分开始形成之前不会完全消失。自由感应衰减和自旋回波/受激回波的尾部合并在一起。在这种情况下，横向信号从未完全消失，其结果称为稳态自由进动。
+<a href="/4-or-more-rf-pulses.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+
+
+		
+<!-- ################ SECTION MRSIGNALS, QUIZ QUESTION  22############## -->
+
+<li style="margin-top: 8px"> 如果样品的初始纵向磁化强度为<i>M<sub>o</sub></i>，那么在90°脉冲之后立即的<u>纵向</u>磁化强度是多少？
+
+<ol type="a" id="q_MRSIGNALS_21">
+
+<li ><input type=radio name="c_MRSIGNALS_21" > <i>M<sub>o</sub></i>
+</li>
+		
+<li ><input type=radio name="c_MRSIGNALS_21" > −<i>M<sub>o</sub></i>
+</li>
+<li ><input type=radio name="c_MRSIGNALS_21" >  ½ <i>M<sub>o</sub></i>
+</li>
+
+<li id="correct_MRSIGNALS_21"><input type=radio name="c_MRSIGNALS_21" id="c_MRSIGNALS_21"> 零
+</li>
+		
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_MRSIGNALS_21" onclick="showAnswer('MRSIGNALS_21')" value="显示答案"></p>
+				
+<p class="explan" id="a_MRSIGNALS_21"> 在理想的90°脉冲之后，纵向磁化强度应为零。
+<a href="/partial-flip-angles.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+
+
+
+
+		
+<!-- ################ SECTION MRSIGNALS, QUIZ QUESTION  23############## -->
+
+<li style="margin-top: 8px"> 如果样品的初始纵向磁化强度为<i>M<sub>o</sub></i>，那么在90°脉冲之后立即的<u>横向</u>磁化强度是多少？
+
+<ol type="a" id="q_MRSIGNALS_22">
+<li id="correct_MRSIGNALS_22"><input type=radio name="c_MRSIGNALS_22" id="c_MRSIGNALS_22"> <i>M<sub>o</sub></i>
+</li>
+
+<li ><input type=radio name="c_MRSIGNALS_22" > −<i>M<sub>o</sub></i>
+</li>
+		
+<li ><input type=radio name="c_MRSIGNALS_22" > ½ <i>M<sub>o</sub></i>
+</li>
+
+		
+<li ><input type=radio name="c_MRSIGNALS_22" >  零
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_MRSIGNALS_22" onclick="showAnswer('MRSIGNALS_22')" value="显示答案"></p>
+				
+<p class="explan" id="a_MRSIGNALS_22"> 在理想的90°脉冲之后，所有纵向磁化强度都应转换为横向。
+<a href="/partial-flip-angles.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+
+
+
+		
+<!-- ################ SECTION MRSIGNALS, QUIZ QUESTION  24############## -->
+
+<li style="margin-top: 8px"> 如果样品的初始纵向磁化强度为<i>M<sub>o</sub></i>，那么在<i>45</i>°脉冲之后立即的<u>纵向</u>（<i>M<sub>z</sub></i>）和<u>横向</u>（<i>M<sub>xy</sub></i>）磁化强度分别是多少？
+<ol type="a" id="q_MRSIGNALS_23">
+
+<li ><input type=radio name="c_MRSIGNALS_23" > 约<i>M<sub>o</sub></i>的90%
+</li>
+		
+
+<li id="correct_MRSIGNALS_23"><input type=radio name="c_MRSIGNALS_23" id="c_MRSIGNALS_23"> 约<i>M<sub>o</sub></i>的70%
+</li>
+<li ><input type=radio name="c_MRSIGNALS_23" > 约<i>M<sub>o</sub></i>的50%
+</li>
+		
+<li ><input type=radio name="c_MRSIGNALS_23" >  约<i>M<sub>o</sub></i>的10%
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_MRSIGNALS_23" onclick="showAnswer('MRSIGNALS_23')" value="显示答案"></p>
+				
+<p class="explan" id="a_MRSIGNALS_23"> 从三角恒等式可知，当初始与z轴对齐的磁化矢量翻转角度α时，翻转后的横向和纵向磁化强度分量分别为[<i>M<sub>o</sub></i> sin α]和[<i>M<sub>o</sub></i> cos α]。对于α=45°，sin 45° = cos 45° = 1/√2 ≈ 0.707。因此正确答案是约<i>M<sub>o</sub></i>的70%（b）。
+<a href="/ partial-flip-angles.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+<!-- ################ SECTION MRSIGNALS, QUIZ QUESTION  25############## -->
+
+<li style="margin-top: 8px"> 在没有横向相干性的梯度回波序列中，使组织MR信号最大化的翻转角称为
+<ol type="a" id="q_MRSIGNALS_24">
+
+<li ><input type=radio name="c_MRSIGNALS_24" > 哈恩角
+</li>
+		
+<li ><input type=radio name="c_MRSIGNALS_24" > 布洛赫角
+</li>
+<li ><input type=radio name="c_MRSIGNALS_24" >  珀塞尔角
+</li>
+
+<li id="correct_MRSIGNALS_24"><input type=radio name="c_MRSIGNALS_24" id="c_MRSIGNALS_24"> 恩斯特角
+</li>
+		
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_MRSIGNALS_24" onclick="showAnswer('MRSIGNALS_24')" value="显示答案"></p>
+				
+<p class="explan" id="a_MRSIGNALS_24"> 以理查德·R·恩斯特命名，他因这一发现于1991年获得诺贝尔化学奖。
+<a href="/optimal-flip-angle.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+
+
+
+<!-- ################ SECTION MRSIGNALS, QUIZ QUESTION  26############## -->
+
+<li style="margin-top: 8px"> 恩斯特角（最佳翻转角）何时近似等于90°？
+<ol type="a" id="q_MRSIGNALS_25">
+<li id="correct_MRSIGNALS_25"><input type=radio name="c_MRSIGNALS_25" id="c_MRSIGNALS_25"> 当TR >> T1时
+</li>
+
+<li ><input type=radio name="c_MRSIGNALS_25" > 当TR ≈ T1时
+</li>
+		
+<li ><input type=radio name="c_MRSIGNALS_25" > 当TR << T1时
+</li>
+
+		
+<li ><input type=radio name="c_MRSIGNALS_25" >  从不
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_MRSIGNALS_25" onclick="showAnswer('MRSIGNALS_25')" value="显示答案"></p>
+				
+<p class="explan" id="a_MRSIGNALS_25"> 恩斯特角（<i>α<sub>E</sub></i>）可由公式<i>α<sub>E</sub></i> = arccos (<i>e<sup>−TR/T1</i>)计算。仅在TR >> T1时达到最大值90°。
+<a href="/optimal-flip-angle.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+
+
+				 
+
+
+
+
+
+
+
+<!--##################################################-->
+<!--############SCORING SECTION Needs to go at end of each subsection-->
+
+</ol><p><input type=button id="show_all_MRSIGNALS" onclick="showAllAnswers('MRSIGNALS')" value="显示本节所有答案"><span style="font-weight: bold" id="scoretxt_MRSIGNALS"></span></p>
+<p><a href="#top">返回页首</a></p></div>
+<!--END OF SCORING SECTION-->
+
+
+
+</div>
+
+
+
+</div>
+
+<div><div id="272386788958915706" align="left" style="width: 100%; overflow-y: hidden;" class="wcustomhtml"><!-- ###############NEW QUIZ SUBSECTION ##################-->
+
+<hr style="1px solid black">
+<!-- Creates optional line above new Quiz Subsection Title ---->
+
+<h1 style="color:black";><a name="1"></a>自旋回波与反转恢复</h1>
+
+<!-- The Section Name and its corresponding number (here 0) which has an href in the index must be changed/filled in.  Note that the first section is identified as “0” here only;  and the second section is denoted “2”, etc. 
+
+This is confusing because subsequently it is denoted as Section 1 and reference to all questions in this section begin with a 1.  However, the first question of Section 1 is called question 0, presumably to assist in scoring.
+
+Thus, the first question of Section 1 is denoted as q_1_0 and its second question is denoted q_1_1.	
+
+When a second section of Questions is added, this is called Section 2 with first and second questions denoted q_2_0 and q_2_1. 
+
+Each section has counting variables corresponding to each question. So the counting variables  are denoted c_1_0 for the Section 1/first question, while c_2_1 counts for Section 2/second question. -->
+
+<!-- FOR THE PURPOSES OF THIS DOCUMENT WE WILL CONSIDER ALL QUESTIONS TO REFER TO SECTION SEIR and are numbered consecutively. THE WORD DOCUMENT CAN THEN BE PUT INTO PROPER FORM BY “SEARCH AND REPLACE SEIR BY THE APPROPRIATE SECTION NUMBER”-->
+
+
+<!-- ################ SECTION M, QUIZ QUESTION  1############## -->
+
+<ol><li style="margin-top: 8px"> 在自旋回波脉冲序列中，180°脉冲重聚焦由以下因素散相的自旋 
+<ol type="a" id="q_SEIR_0">
+<li id="correct_SEIR_0"><input type=radio name="c_SEIR_0" id="c_SEIR_0"> 磁场不均匀性
+</li>
+
+<li ><input type=radio name="c_SEIR_0" > 扩散
+</li>
+		
+<li ><input type=radio name="c_SEIR_0" > T2过程
+</li>
+
+		
+<li ><input type=radio name="c_SEIR_0" > 以上所有
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_SEIR_0" onclick="showAnswer('SEIR_0')" value="显示答案"></p>
+				
+<p class="explan" id="a_SEIR_0"> 180°脉冲可以重聚焦因恒定场畸变和不均匀性而导致相位散乱的静止自旋。该脉冲不能纠正由原子/分子水平随机过程引起的T1或真实T2效应。它也不能纠正运动、流动、扩散或发生化学交换的自旋的相位偏移。
+<a href="/se-vs-multi-se-vs-fse.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+
+<!-- ################ SECTION SEIR, QUIZ QUESTION  2############## -->
+
+<li style="margin-top: 8px"> 比较多回波自旋回波和快速（涡轮）自旋回波，以下哪项陈述是错误的？
+<ol type="a" id="q_SEIR_1">
+
+<li ><input type=radio name="c_SEIR_1" > 多回波自旋回波和快速自旋回波在每个TR间隔内都使用多个180°脉冲。
+</li>
+		
+<li ><input type=radio name="c_SEIR_1" > 多回波自旋回波在每个TR间隔内仅使用一个相位编码梯度。
+</li>
+<li ><input type=radio name="c_SEIR_1" >  快速自旋回波在每个TR间隔内多次施加相位编码梯度。
+</li>
+
+<li id="correct_SEIR_1"><input type=radio name="c_SEIR_1" id="c_SEIR_1"> 在多回波自旋回波和快速自旋回波成像中，回波幅度随连续的180°脉冲而递减。
+</li>
+		
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_SEIR_1" onclick="showAnswer('SEIR_1')" value="显示答案"></p>
+				
+<p class="explan" id="a_SEIR_1"> 在快速自旋回波中，每个180°脉冲都施加不同的相位编码梯度，因此回波幅度可能根据相位编码步骤而变化。在多回波自旋回波中，相位编码梯度在每个TR间隔内仅开启一次，因此后续回波的信号强度会降低。
+<a href="/se-vs-multi-se-vs-fse.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION SEIR, QUIZ QUESTION  3############## -->
+
+<li style="margin-top: 8px"> 以下哪组自旋回波参数选择会产生质子密度加权图像？
+<ol type="a" id="q_SEIR_2">
+
+<li ><input type=radio name="c_SEIR_2" > TR = 500, TE = 10
+</li>
+		
+<li ><input type=radio name="c_SEIR_2" > TR = 500, TE = 100
+</li>
+
+<li id="correct_SEIR_2"><input type=radio name="c_SEIR_2" id="c_SEIR_2"> TR = 5000, TE = 10
+</li>
+		
+<li ><input type=radio name="c_SEIR_2" >  TR = 5000, TE = 100
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_SEIR_2" onclick="showAnswer('SEIR_2')" value="显示答案"></p>
+				
+<p class="explan" id="a_SEIR_2"> 答案c)，长TR和短TE用于产生质子密度加权图像。
+<a href="/image-contrast-trte.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION SEIR, QUIZ QUESTION  4############## -->
+<li style="margin-top: 8px"> 使用短TR和长TE的自旋回波序列产生
+<ol type="a" id="q_SEIR_3">
+
+<li ><input type=radio name="c_SEIR_3" > T1加权图像
+</li>
+		
+<li ><input type=radio name="c_SEIR_3" > T2加权图像
+</li>
+<li ><input type=radio name="c_SEIR_3" >  质子密度加权图像
+</li>
+
+<li id="correct_SEIR_3"><input type=radio name="c_SEIR_3" id="c_SEIR_3"> 噪声大的低对比度图像
+</li>
+		
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_SEIR_3" onclick="showAnswer('SEIR_3')" value="显示答案"></p>
+				
+<p class="explan" id="a_SEIR_3"> 正确答案是d)。因此这种组合很少使用。
+<a href="/image-contrast-trte.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+
+
+
+ 
+<!-- ################ SECTION SEIR, QUIZ QUESTION  5############## -->
+
+<li style="margin-top: 8px"> 具有长T1和长T2值的组织或病变通常在
+<ol type="a" id="q_SEIR_4">
+
+<li ><input type=radio name="c_SEIR_4" > T1加权自旋回波图像上呈高信号
+</li>
+		
+
+<li id="correct_SEIR_4"><input type=radio name="c_SEIR_4" id="c_SEIR_4"> T2加权自旋回波图像上呈高信号
+</li>
+<li ><input type=radio name="c_SEIR_4" > T1和T2加权自旋回波图像上均呈高信号
+</li>
+		
+<li ><input type=radio name="c_SEIR_4" >  T1和T2加权自旋回波图像上均呈低信号 
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_SEIR_4" onclick="showAnswer('SEIR_4')" value="显示答案"></p>
+				
+<p class="explan" id="a_SEIR_4"> 此类病变通常在T2加权图像上呈高信号，在T1加权图像上呈低信号。
+<a href="/image-contrast-trte.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION SEIR, QUIZ QUESTION  6############## -->
+
+<li style="margin-top: 8px"> 通过交替180°脉冲传输的相位，CPMG（Carr-Purcell-Meiboom-Gill）对自旋回波脉冲序列的改进
+<ol type="a" id="q_SEIR_5">
+
+
+		
+<li ><input type=radio name="c_SEIR_5" > 减少了由重复的不完美180°脉冲引起的累积相位误差。
+</li>
+
+		
+<li ><input type=radio name="c_SEIR_5" >  减少了由B1不均匀效应引起的伪影。
+</li>
+<li ><input type=radio name="c_SEIR_5" >  改善了T2值的估计
+</li>
+<li ><input type=radio name="c_SEIR_5" > 以上都不是</li>
+	<li id="correct_SEIR_5"><input type=radio name="c_SEIR_5" id="c_SEIR_5"> 以上所有
+</li>
+	
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_SEIR_5" onclick="showAnswer('SEIR_5')" value="显示答案"></p>
+				
+<p class="explan" id="a_SEIR_5"> 该技术于1958年开发，至今仍用于多回波自旋回波序列，原因包括上述所有列举的方面。
+<a href="/direction-of-180deg-pulse.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION SEIR, QUIZ QUESTION  7############## -->
+
+<li style="margin-top: 8px"> 在反转恢复自旋回波脉冲序列中，反转时间被定义为
+<ol type="a" id="q_SEIR_6">
+<li id="correct_SEIR_6"><input type=radio name="c_SEIR_6" id="c_SEIR_6"> 第一个180°脉冲与第一个90°脉冲之间的时间
+</li>
+
+<li ><input type=radio name="c_SEIR_6" > 第一个180°脉冲与回波之间的时间
+</li>
+		
+<li ><input type=radio name="c_SEIR_6" > 每个TR间隔内两个180°脉冲之间的时间
+</li>
+
+		
+<li ><input type=radio name="c_SEIR_6" >  第一个90°脉冲与第二个180°脉冲之间的时间
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_SEIR_6" onclick="showAnswer('SEIR_6')" value="显示答案"></p>
+				
+<p class="explan" id="a_SEIR_6">答案a)是TI的定义。 <a href="/what-is-ir.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+	
+<!-- ################ SECTION SEIR, QUIZ QUESTION  8############## -->
+
+<li style="margin-top: 8px"> 反转恢复技术的优点包括
+<ol type="a" id="q_SEIR_7">
+
+<li ><input type=radio name="c_SEIR_7" > 更短的扫描时间
+</li>
+		
+<li ><input type=radio name="c_SEIR_7" > 减少流动相关伪影
+</li>
+
+<li id="correct_SEIR_7"><input type=radio name="c_SEIR_7" id="c_SEIR_7"> 可叠加的T1和T2对比度
+</li>
+		
+<li ><input type=radio name="c_SEIR_7" >  更低的比吸收率
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_SEIR_7" onclick="showAnswer('SEIR_7')" value="显示答案"></p>
+				
+<p class="explan" id="a_SEIR_7"> 在常规自旋回波成像中，T1和T2效应通常是竞争的，意味着↑T1通常导致信号强度降低，而↑T2导致强度增加。在反转恢复成像中，通过适当选择TR，可以分离T1和T2效应并使其叠加。
+<a href="/why-use-ir.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION SEIR, QUIZ QUESTION  9############## -->
+
+<li style="margin-top: 8px"> 在1.5 T下获得的幅度重建反转恢复图像上，哪个反转时间可用于抑制脂肪？
+<ol type="a" id="q_SEIR_8">
+<li id="correct_SEIR_8"><input type=radio name="c_SEIR_8" id="c_SEIR_8"> TI = 170
+</li>
+
+<li ><input type=radio name="c_SEIR_8" > TI = 450
+</li>
+		
+<li ><input type=radio name="c_SEIR_8" > TI = 980
+</li>
+
+		
+<li ><input type=radio name="c_SEIR_8" >  TI = 2000
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_SEIR_8" onclick="showAnswer('SEIR_8')" value="显示答案"></p>
+				
+<p class="explan" id="a_SEIR_8"> 对于大多数组织，零点通常出现在TI ≈ 0.69 × T1时。对于脂肪，在1.5 T下T1值约为250，对应的TI约为170 ms。
+
+<a href="/why-use-ir.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+<!-- ################ SECTION SEIR, QUIZ QUESTION  10############## -->
+
+<li style="margin-top: 8px"> 关于相位敏感反转恢复，以下哪项陈述是错误的？
+<ol type="a" id="q_SEIR_9">
+
+<li ><input type=radio name="c_SEIR_9" > 无论TI如何，短T1组织总是比长T1组织信号更亮。
+</li>
+		
+
+<li id="correct_SEIR_9"><input type=radio name="c_SEIR_9" id="c_SEIR_9"> 背景空气总是显示为黑色。
+</li>
+<li ><input type=radio name="c_SEIR_9" > 通过调整TI来选择性抑制组织对于相位敏感反转恢复是不可能的，而幅度重建反转恢复则可以。
+</li>
+		
+<li ><input type=radio name="c_SEIR_9" >  它对于评估儿童髓鞘形成和心肌对比增强很有用。
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_SEIR_9" onclick="showAnswer('SEIR_9')" value="显示答案"></p>
+				
+<p class="explan" id="a_SEIR_9"> 相位敏感反转恢复保留了180°（反转）脉冲后纵向磁化强度的极性信息，更负的值显示为更暗。背景空气通常呈现为中灰色，而不是黑色。短T1组织总是比长T1组织亮，但在短TI时两者都可能比空气暗。常见应用在儿科和心脏成像。
+
+<a href="/phase-sensitive-ir.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+<!-- ################ SECTION SEIR, QUIZ QUESTION  11############## -->
+
+<li style="margin-top: 8px"> 关于给定组织在幅度重建反转恢复中的零点值，哪项陈述是错误的？
+<ol type="a" id="q_SEIR_10">
+
+<li ><input type=radio name="c_SEIR_10" > TI<sub>null</sub>随场强增加而增加。
+</li>
+		
+<li ><input type=radio name="c_SEIR_10" > TI<sub>null</sub>随T1值增加而增加
+</li>
+
+<li id="correct_SEIR_10"><input type=radio name="c_SEIR_10" id="c_SEIR_10"> 对于长TR，TI<sub>null</sub> ≈  0.69 × T2。
+</li>
+		
+<li ><input type=radio name="c_SEIR_10" >  TI<sub>null</sub>取决于信号是由常规自旋回波还是快速自旋回波序列产生。
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_SEIR_10" onclick="showAnswer('SEIR_10')" value="显示答案"></p>
+				
+<p class="explan" id="a_SEIR_10"> 对于TR>>T1，TI<sub>null</sub> = T1 • (ln 2) ≈ 0.69 × T1（而非0.69 × T2，因此答案<i>c</i>是错误的）。由于组织T1随场强增加而增加，TI<sub>null</sub>也随之增加。TI<sub>null</sub>取决于快速自旋回波序列中最后一个回波的回波时间。
+<a href="/ti-to-null-a-tissue.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+		
+
+
+
+
+
+<!-- ################ SECTION SEIR, QUIZ QUESTION  12############## -->
+
+<li style="margin-top: 8px"> 关于短TI反转恢复序列，以下哪项陈述是错误的？
+<ol type="a" id="q_SEIR_11">
+
+<li ><input type=radio name="c_SEIR_11" > 它是一种非常有用的脂肪饱和技术。
+</li>
+		
+
+<li id="correct_SEIR_11"><input type=radio name="c_SEIR_11" id="c_SEIR_11"> 它是一种非常有用的检测钆增强的技术。
+</li>
+<li ><input type=radio name="c_SEIR_11" > 它具有叠加的T1和T2效应。
+</li>
+		
+<li ><input type=radio name="c_SEIR_11" >  在均匀性相对较差的低场永磁体中尤其有用。
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_SEIR_11" onclick="showAnswer('SEIR_11')" value="显示答案"></p>
+				
+<p class="explan" id="a_SEIR_11"> STIR不能用作钆增强后的脂肪抑制技术。STIR并非特异性抑制脂肪；它抑制T1值在脂肪范围内的组织（200-300 ms），因此钆增强也会被抑制。
+<a href="/stir.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+<!-- ################ SECTION SEIR, QUIZ QUESTION  13############## -->
+
+<li style="margin-top: 8px"> 以下哪组脉冲序列参数可用于创建T1-FLAIR脑图像？ 
+<ol type="a" id="q_SEIR_12">
+<li id="correct_SEIR_12"><input type=radio name="c_SEIR_12" id="c_SEIR_12"> TR = 2500, TE = 10, TI = 900
+</li>
+
+<li ><input type=radio name="c_SEIR_12" > TR = 2500, TE = 50, TI = 180
+</li>
+		
+<li ><input type=radio name="c_SEIR_12" > TR = 4000, TE = 80, TI = 1800
+</li>
+
+		
+<li ><input type=radio name="c_SEIR_12" >  TR = 8000, TE = 100, TI = 2500
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_SEIR_12" onclick="showAnswer('SEIR_12')" value="显示答案"></p>
+				
+<p class="explan" id="a_SEIR_12"> 答案(a)正确。答案(b)可视为STIR图像，而(c)和(d)则是T2-FLAIR图像。
+<a href="/t1-flair.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION SEIR, QUIZ QUESTION  14############## -->
+
+<li style="margin-top: 8px"> 用于脑成像的双反转恢复序列利用两个不同的TI值，通常用于抑制
+<ol type="a" id="q_SEIR_13">
+
+<li ><input type=radio name="c_SEIR_13" > 脂肪和脑脊液
+</li>
+		
+
+<li id="correct_SEIR_13"><input type=radio name="c_SEIR_13" id="c_SEIR_13"> 脑脊液和白质
+</li>
+<li ><input type=radio name="c_SEIR_13" > 脑脊液和灰质 
+</li>
+		
+<li ><input type=radio name="c_SEIR_13" >  灰质和白质
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_SEIR_13" onclick="showAnswer('SEIR_13')" value="显示答案"></p>
+				
+<p class="explan" id="a_SEIR_13"> 双反转恢复脑成像对于检测白质和皮层病变特别有用。通常第一个180°脉冲抑制脑脊液，第二个抑制白质。 
+<a href="/double-ir.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+
+
+
+
+
+
+
+
+<!--##################################################-->
+<!--############SCORING SECTION Needs to go at end of each subsection-->
+
+</ol><p><input type=button id="show_all_SEIR" onclick="showAllAnswers('SEIR')" value="显示本节所有答案"><span style="font-weight: bold" id="scoretxt_SEIR"></span></p>
+<p><a href="#top">返回页首</a></p></div>
+<!--END OF SCORING SECTION-->
+
+
+
+</div>
+
+
+
+
+<div><div id="294748313588655546" align="left" style="width: 100%; overflow-y: hidden;" class="wcustomhtml"><!-- ###############NEW QUIZ SUBSECTION ##################-->
+
+<hr style="1px solid black">
+<!-- Creates optional line above new Quiz Subsection Title ---->
+
+<h1 style="color:black";><a name="2"></a>梯度回波与磁敏感性</h1>
+
+<!-- The Section Name and its corresponding number (here 0) which has an href in the index must be changed/filled in.  Note that the first section is identified as “0” here only;  and the second section is denoted “2”, etc. 
+
+This is confusing because subsequently it is denoted as Section 1 and reference to all questions in this section begin with a 1.  However, the first question of Section 1 is called question 0, presumably to assist in scoring.
+
+Thus, the first question of Section 1 is denoted as q_1_0 and its second question is denoted q_1_1.	
+
+When a second section of Questions is added, this is called Section 2 with first and second questions denoted q_2_0 and q_2_1. 
+
+Each section has counting variables corresponding to each question. So the counting variables  are denoted c_1_0 for the Section 1/first question, while c_2_1 counts for Section 2/second question. -->
+
+<!-- FOR THE PURPOSES OF THIS DOCUMENT WE WILL CONSIDER ALL QUESTIONS TO REFER TO SECTION GRADSUS and are numbered consecutively. THE WORD DOCUMENT CAN THEN BE PUT INTO PROPER FORM BY “SEARCH AND REPLACE GRADSUS BY THE APPROPRIATE SECTION NUMBER”-->
+
+
+<!-- ################ SECTION M, QUIZ QUESTION  1############## -->
+
+<ol><li style="margin-top: 8px"> 以下哪项不是梯度回波成像相对于自旋回波成像的优点？
+<ol type="a" id="q_GRADSUS_0">
+
+<li ><input type=radio name="c_GRADSUS_0" > 更短的TE
+</li>
+		
+<li ><input type=radio name="c_GRADSUS_0" > 更短的TR
+</li>
+<li ><input type=radio name="c_GRADSUS_0" > 减少流动伪影
+</li>
+
+<li id="correct_GRADSUS_0"><input type=radio name="c_GRADSUS_0" id="c_GRADSUS_0"> 减少磁敏感性伪影
+</li>
+		
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_GRADSUS_0" onclick="showAnswer('GRADSUS_0')" value="显示答案"></p>
+				
+<p class="explan" id="a_GRADSUS_0">由磁场不均匀性、静态组织磁敏感性梯度或化学位移引起的相位偏移在梯度回波中心不会被抵消，而在自旋回波序列中则会被抵消。因此，图像对比度并非由真实的T2弛豫决定，而是由构成T2*的这些其他因素决定。因此，梯度回波序列更容易受到磁敏感性和化学位移伪影的困扰，在磁场均匀性较差的扫描仪上效果不佳。<a href="/gre-vs-se.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+
+<!-- ################ SECTION GRADSUS, QUIZ QUESTION  2############## -->
+
+<li style="margin-top: 8px"> 关于多回波梯度回波，哪项陈述是正确的？
+<ol type="a" id="q_GRADSUS_1">
+
+<li ><input type=radio name="c_GRADSUS_1" > 连续回波的峰值由所成像组织的T2衰减决定。
+</li>
+<li ><input type=radio name="c_GRADSUS_1" > 连续回波的峰值由所成像组织的T1值决定。
+</li>
+		
+
+<li id="correct_GRADSUS_1"><input type=radio name="c_GRADSUS_1" id="c_GRADSUS_1"> 一个常见应用是脂肪-水成像。
+</li>
+		
+<li ><input type=radio name="c_GRADSUS_1" >  每个连续回波之前必须有其自己的射频脉冲。
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_GRADSUS_1" onclick="showAnswer('GRADSUS_1')" value="显示答案"></p>
+				
+<p class="explan" id="a_GRADSUS_1"> 连续回波的峰值由所成像组织的T2*衰减（而非T2衰减）决定（选项<i>a</i>和<i>b</i>错误）。多回波梯度回波的一个常见应用是使用两个不同的TE获取脂肪-水“同相位”和“反相位”图像（选项<i>c</i>正确）。整串回波只使用一个射频脉冲（选项<i>d</i>错误）。
+
+<a href="/multi-echo-gre.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION GRADSUS, QUIZ QUESTION  3############## -->
+
+<li style="margin-top: 8px"> 以下哪项不是梯度回波扰相技术？
+<ol type="a" id="q_GRADSUS_2">
+<li id="correct_GRADSUS_2"><input type=radio name="c_GRADSUS_2" id="c_GRADSUS_2"> 使用非常短的TR
+</li>
+		
+
+<li ><input type=radio name="c_GRADSUS_2" > 使用2D多层模式
+</li>
+		
+<li ><input type=radio name="c_GRADSUS_2" > 使用可变扰相梯度
+</li>
+
+<li ><input type=radio name="c_GRADSUS_2" >  射频载波的半随机相位变化
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_GRADSUS_2" onclick="showAnswer('GRADSUS_2')" value="显示答案"></p>
+				
+<p class="explan" id="a_GRADSUS_2"> 除了选项(a)外，其他都是有效的扰相方法。长TR值产生“自然”扰相，而非短TR。当TR>>T2*时，横向磁化强度会在周期结束时自然衰减为零。因此，任何使用几百毫秒TR值的梯度回波序列将不再具有显著的横向相干性，即为“扰相”。
+
+<a href="/spoiling---what-and-how.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION GRADSUS, QUIZ QUESTION  4############## -->
+<li style="margin-top: 8px"> 参数为TR = 10, TE = 3, α = 50º的扰相梯度回波序列主要被认为是
+<ol type="a" id="q_GRADSUS_3">
+<li id="correct_GRADSUS_3"><input type=radio name="c_GRADSUS_3" id="c_GRADSUS_3"> T1加权
+</li>
+
+<li ><input type=radio name="c_GRADSUS_3" > T2加权
+</li>
+		
+<li ><input type=radio name="c_GRADSUS_3" > T2*加权
+</li>
+
+		
+<li ><input type=radio name="c_GRADSUS_3" >  质子密度加权
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_GRADSUS_3" onclick="showAnswer('GRADSUS_3')" value="显示答案"></p>
+				
+<p class="explan" id="a_GRADSUS_3"> 短TR和大α突出T1加权成像。
+<a href="/spoiled-gre-parameters.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+
+
+
+ 
+<!-- ################ SECTION GRADSUS, QUIZ QUESTION  5############## -->
+
+<li style="margin-top: 8px"> 参数为TR = 1000, TE = 30, α = 5º的扰相梯度回波序列主要被认为是
+<ol type="a" id="q_GRADSUS_4">
+
+<li ><input type=radio name="c_GRADSUS_4" > T1加权
+</li>
+		
+<li ><input type=radio name="c_GRADSUS_4" > T2加权
+</li>
+
+<li id="correct_GRADSUS_4"><input type=radio name="c_GRADSUS_4" id="c_GRADSUS_4"> T2*加权
+</li>
+		
+<li ><input type=radio name="c_GRADSUS_4" >  质子密度加权
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_GRADSUS_4" onclick="showAnswer('GRADSUS_4')" value="显示答案"></p>
+				
+<p class="explan" id="a_GRADSUS_4"> 长TR和小α最小化T1加权，而长TE突出T2*加权。
+
+spoiled-gre-parameters.html
+<a href="/spoiled-gre-parameters.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION GRADSUS, QUIZ QUESTION  6############## -->
+
+<li style="margin-top: 8px"> 参数为TR = 1000, TE = 2, α = 5º的扰相梯度回波序列主要被认为是
+<ol type="a" id="q_GRADSUS_5">
+
+<li ><input type=radio name="c_GRADSUS_5" > T1加权
+</li>
+		
+<li ><input type=radio name="c_GRADSUS_5" > T2加权
+</li>
+<li ><input type=radio name="c_GRADSUS_5" >  T2*加权
+</li>
+
+<li id="correct_GRADSUS_5"><input type=radio name="c_GRADSUS_5" id="c_GRADSUS_5"> 质子密度加权
+</li>
+		
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_GRADSUS_5" onclick="showAnswer('GRADSUS_5')" value="显示答案"></p>
+				
+<p class="explan" id="a_GRADSUS_5"> 长TR和小α最小化T1加权，而短TE最小化T2*加权。这使得图像比其他例子更偏向质子密度加权。 
+<a href="/spoiled-gre-parameters.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION GRADSUS, QUIZ QUESTION  7############## -->
+
+<li style="margin-top: 8px"> 在扰相梯度回波序列中，小翻转角（α）
+<ol type="a" id="q_GRADSUS_6">
+<li id="correct_GRADSUS_6"><input type=radio name="c_GRADSUS_6" id="c_GRADSUS_6"> 最小化T1加权
+</li>
+
+<li ><input type=radio name="c_GRADSUS_6" > 突出T1加权
+</li>
+		
+<li ><input type=radio name="c_GRADSUS_6" > 最小化T2*加权
+</li>
+
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_GRADSUS_6" onclick="showAnswer('GRADSUS_6')" value="显示答案"></p>
+				
+<p class="explan" id="a_GRADSUS_6"> 翻转角（α）控制T1加权。小翻转角最小化T1加权，因为如此小的角度位移不会使不同组织的纵向磁化强度产生太大差异。因此，在小翻转角下，[H]和T2*效应占主导。相反，当α → 90°时，T1加权增加。
+<a href="/spoiled-gre-parameters.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+	
+<!-- ################ SECTION GRADSUS, QUIZ QUESTION  8############## -->
+
+<li style="margin-top: 8px"> 在扰相梯度回波序列中，长TE
+<ol type="a" id="q_GRADSUS_7">
+
+<li ><input type=radio name="c_GRADSUS_7" > 最大化T2加权
+</li>
+		
+
+<li id="correct_GRADSUS_7"><input type=radio name="c_GRADSUS_7" id="c_GRADSUS_7"> 最大化T2*加权
+</li>
+		
+<li ><input type=radio name="c_GRADSUS_7" >  最小化T2加权
+</li>
+<li ><input type=radio name="c_GRADSUS_7" > 最小化T2*加权
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_GRADSUS_7" onclick="showAnswer('GRADSUS_7')" value="显示答案"></p>
+				
+<p class="explan" id="a_GRADSUS_7"> T2*加权随着TE的延长而增加。这是因为更长的TE允许在回波形成前有更多时间进行散相。
+<a href="/spoiled-gre-parameters.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION GRADSUS, QUIZ QUESTION  9############## -->
+
+<li style="margin-top: 8px"> 以下哪项稳态自由进动脉冲序列被认为是“平衡”的？
+<ol type="a" id="q_GRADSUS_8">
+<li id="correct_GRADSUS_8"><input type=radio name="c_GRADSUS_8" id="c_GRADSUS_8"> TrueFISP/FIESTA
+</li>
+
+<li ><input type=radio name="c_GRADSUS_8" > FISP/GRASS/FFE
+</li>
+		
+<li ><input type=radio name="c_GRADSUS_8" > DESS/MENSA
+</li>
+
+		
+<li ><input type=radio name="c_GRADSUS_8" >  PSIF/T2-FFE
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_GRADSUS_8" onclick="showAnswer('GRADSUS_8')" value="显示答案"></p>
+				
+<p class="explan" id="a_GRADSUS_8"> 诸如TrueFISP（西门子）和FIESTA（GE）等序列同时采样类自由感应衰减和类回波的稳态自由进动信号，被认为是“平衡”的。
+<a href="/what-is-ssfp.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+<!-- ################ SECTION GRADSUS, QUIZ QUESTION  10############## -->
+
+<li style="margin-top: 8px"> 以下哪项不是稳态自由进动信号存在的条件？
+<ol type="a" id="q_GRADSUS_9">
+<li id="correct_GRADSUS_9"><input type=radio name="c_GRADSUS_9" id="c_GRADSUS_9"> TR必须长于T2。
+</li>
+
+<li ><input type=radio name="c_GRADSUS_9" > 由梯度引起的相位偏移必须每个周期恒定。
+</li>
+		
+<li ><input type=radio name="c_GRADSUS_9" > 场不均匀性必须是静态的。
+</li>
+
+		
+<li ><input type=radio name="c_GRADSUS_9" >  自旋必须是静止的或经过运动补偿。
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_GRADSUS_9" onclick="showAnswer('GRADSUS_9')" value="显示答案"></p>
+				
+<p class="explan" id="a_GRADSUS_9"> 选项(a)不正确。TR必须显著短于（而非长于）T2，否则自然衰减过程会破坏横向相干性。 
+
+<a href="/what-is-ssfp.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+<!-- ################ SECTION GRADSUS, QUIZ QUESTION  11############## -->
+
+<li style="margin-top: 8px"> 关于“相干”梯度回波序列如GRASS/FISP，哪项陈述是错误的？
+<ol type="a" id="q_GRADSUS_10">
+
+<li ><input type=radio name="c_GRADSUS_10" > 如果TR与T2*相比很长，对比度类似于扰相梯度回波序列。
+</li>
+		
+<li ><input type=radio name="c_GRADSUS_10" > TE控制T2*加权。
+</li>
+
+<li id="correct_GRADSUS_10"><input type=radio name="c_GRADSUS_10" id="c_GRADSUS_10"> 小翻转角（α）产生T1加权图像。
+</li>
+		
+<li ><input type=radio name="c_GRADSUS_10" >  大翻转角产生T2/T1加权的图像。
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_GRADSUS_10" onclick="showAnswer('GRADSUS_10')" value="显示答案"></p>
+				
+<p class="explan" id="a_GRADSUS_10"> 选项(c)不正确。小翻转角最小化T1加权，因为如此小的角度位移不会使不同组织的纵向磁化强度产生太大差异。因此，在小翻转角下，[H]和T2*效应占主导。
+
+<a href="/grassfisp-parameters.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+		
+
+
+
+
+
+<!-- ################ SECTION GRADSUS, QUIZ QUESTION  12############## -->
+
+<li style="margin-top: 8px"> 平衡稳态自由进动序列（如True FISP和FIESTA）中存在的一种重要组织加权是
+<ol type="a" id="q_GRADSUS_11">
+
+<li ><input type=radio name="c_GRADSUS_11" > T1
+</li>
+		
+<li ><input type=radio name="c_GRADSUS_11" > T2*
+</li>
+<li ><input type=radio name="c_GRADSUS_11" >  T1 + T2
+</li>
+
+<li id="correct_GRADSUS_11"><input type=radio name="c_GRADSUS_11" id="c_GRADSUS_11"> T2/T1
+</li>
+		
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_GRADSUS_11" onclick="showAnswer('GRADSUS_11')" value="显示答案"></p>
+				
+<p class="explan" id="a_GRADSUS_11"> True FISP序列的行为更像自旋回波而非梯度回波序列，因为它们没有T2*依赖性。此外，由于TR几乎总是远短于T1或T2，信号强度与比值T2/T1有关。
+<a href="/true-fispfiesta.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+<!-- ################ SECTION GRADSUS, QUIZ QUESTION  13############## -->
+
+<li style="margin-top: 8px"> 排除液体（如尿液、血液和脑脊液），以下哪种组织在平衡稳态自由进动序列（如True FISP和FIESTA）上最亮？
+
+<ol type="a" id="q_GRADSUS_12">
+<li id="correct_GRADSUS_12"><input type=radio name="c_GRADSUS_12" id="c_GRADSUS_12"> 脂肪
+</li>
+
+<li ><input type=radio name="c_GRADSUS_12" > 心肌
+</li>
+		
+<li ><input type=radio name="c_GRADSUS_12" > 肝脏
+</li>
+
+		
+<li ><input type=radio name="c_GRADSUS_12" > 脑 </li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_GRADSUS_12" onclick="showAnswer('GRADSUS_12')" value="显示答案"></p>
+				
+<p class="explan" id="a_GRADSUS_12"> 在平衡稳态自由进动图像上，脂肪是仅次于纯液体的第二亮组织。
+<a href="/true-fispfiesta.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION GRADSUS, QUIZ QUESTION  14############## -->
+
+<li style="margin-top: 8px"> 如何解释液体和前一问题中识别的组织的高信号？
+<ol type="a" id="q_GRADSUS_13">
+
+<li ><input type=radio name="c_GRADSUS_13" > T2值长。
+</li>
+		
+<li ><input type=radio name="c_GRADSUS_13" > T2*值长。
+</li>
+
+<li id="correct_GRADSUS_13"><input type=radio name="c_GRADSUS_13" id="c_GRADSUS_13"> T2/T1比值大。
+</li>
+		
+<li ><input type=radio name="c_GRADSUS_13" >  T1+T2值大。
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_GRADSUS_13" onclick="showAnswer('GRADSUS_13')" value="显示答案"></p>
+				
+<p class="explan" id="a_GRADSUS_13"> 平衡稳态自由进动序列具有特殊性质，其对比度不仅取决于T1或T2，还取决于比值T2/T1。对于大多数固体组织，T1>>T2，因此T2/T1比值较小（< 0.10）。例外是脂肪（T2/T1 ≈ 0.30，因其T1短）和液体（T2/T1 ≈ 0.70，因为T1和T2近似相等）。  
+<a href="/true-fispfiesta.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION GRADSUS, QUIZ QUESTION  15############## -->
+
+<li style="margin-top: 8px"> 关于FIESTA与FIESTA-C（或CISS）之间的区别，以下哪项是正确的？
+<ol type="a" id="q_GRADSUS_14">
+
+<li ><input type=radio name="c_GRADSUS_14" > 没有实质性差异；只是出于营销目的的名称变更。
+</li>
+		
+<li ><input type=radio name="c_GRADSUS_14" > CISS和FIESTA-C中存在更多的相位条带伪影。
+</li>
+<li ><input type=radio name="c_GRADSUS_14" >  CISS/FIESTA-C图像是T1加权的
+</li>
+
+<li id="correct_GRADSUS_14"><input type=radio name="c_GRADSUS_14" id="c_GRADSUS_14"> CISS/FIESTA-C由两个背靠背运行的平衡稳态自由进动序列组成。
+</li>
+		
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_GRADSUS_14" onclick="showAnswer('GRADSUS_14')" value="显示答案"></p>
+				
+<p class="explan" id="a_GRADSUS_14"> FIESTA-C/CISS由一对背靠背运行的TrueFISP采集组成，之前进行自动匀场。第一个使用射频脉冲的相位交替（+α, −α, +α, −α, ...），而第二个不使用（+α, +α, +α, 等）。当配对的数据集在最大强度投影中组合时，相位误差相互抵消，产生的图像基本没有色散条带。
+
+<a href="/fiesta-v-fiesta-c.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+<!-- ################ SECTION GRADSUS, QUIZ QUESTION 16############## -->
+
+<li style="margin-top: 8px"> 关于DESS（双回波稳态）的以下哪项陈述是错误的？
+<ol type="a" id="q_GRADSUS_15">
+
+<li ><input type=radio name="c_GRADSUS_15" > 其主要用途是肌骨成像。
+</li>
+		
+
+<li id="correct_GRADSUS_15"><input type=radio name="c_GRADSUS_15" id="c_GRADSUS_15"> 它对运动不敏感。
+</li>
+<li ><input type=radio name="c_GRADSUS_15" > 在一个TR间隔内分别记录类自由感应衰减和类回波信号成分。 
+</li>
+		
+<li ><input type=radio name="c_GRADSUS_15" >  液体非常亮，而骨小梁非常暗。
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_GRADSUS_15" onclick="showAnswer('GRADSUS_15')" value="显示答案"></p>
+				
+<p class="explan" id="a_GRADSUS_15"> 通过延长和不平衡的读出梯度，DESS分别从稳态自由进动中产生类自由感应衰减和类回波信号。然后逐像素组合信号。DESS对运动非常敏感，因此选项(b)是错误的。
+其主要用途是肌骨成像，其中关节液为亮信号，骨骼为暗信号。
+<a href="/dess.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION GRADSUS, QUIZ QUESTION  17############## -->
+
+<li style="margin-top: 8px"> 关于GRASE（梯度自旋回波）脉冲序列，以下哪项陈述是正确的？
+<ol type="a" id="q_GRADSUS_16">
+
+<li ><input type=radio name="c_GRADSUS_16" > 它是一种广泛用于常规头部成像的序列。
+</li>
+		
+<li ><input type=radio name="c_GRADSUS_16" > 其组织能量沉积（比吸收率）高于常规自旋回波序列。
+</li>
+
+<li id="correct_GRADSUS_16"><input type=radio name="c_GRADSUS_16" id="c_GRADSUS_16"> 在检测钙化和出血方面优于常规自旋回波或快速自旋回波。
+</li>
+		
+<li ><input type=radio name="c_GRADSUS_16" > 主要用于生成T1加权图像。
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_GRADSUS_16" onclick="showAnswer('GRADSUS_16')" value="显示答案"></p>
+				
+<p class="explan" id="a_GRADSUS_16"> GRASE是一种混合技术，据称结合了常规自旋回波和梯度回波成像的最佳特性。梯度回波部分使其在检测血液钙化方面有用（尽管不如纯梯度回波序列）。由于其射频脉冲较少，其比吸收率低于类似的快速自旋回波序列。GRASE作为一种成像方法从未获得广泛普及。
+<a href="/grase.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+<!-- ################ SECTION GRADSUS, QUIZ QUESTION  18############## -->
+
+<li style="margin-top: 8px"> 磁化率（χ）的SI单位是 <ol type="a" id="q_GRADSUS_17">
+
+<li ><input type=radio name="c_GRADSUS_17" > 特斯拉
+</li>
+		
+<li ><input type=radio name="c_GRADSUS_17" > 奥斯特
+</li>
+<li ><input type=radio name="c_GRADSUS_17" >  安培-米
+</li>
+
+<li id="correct_GRADSUS_17"><input type=radio name="c_GRADSUS_17" id="c_GRADSUS_17"> 无量纲
+</li>
+		
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_GRADSUS_17" onclick="showAnswer('GRADSUS_17')" value="显示答案"></p>
+				
+<p class="explan" id="a_GRADSUS_17"> 磁化率用希腊字母χ表示，定义为内部磁化强度（J）除以外部磁场强度（B）。由于它是两个磁场的比值，因此磁化率是一个无量纲数。
+<a href="/what-is-susceptibility-chi.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+		
+
+<!-- ################ SECTION GRADSUS, QUIZ QUESTION  19############## -->
+
+<li style="margin-top: 8px"> 关于抗磁性，哪项陈述是错误的？
+<ol type="a" id="q_GRADSUS_18">
+
+<li ><input type=radio name="c_GRADSUS_18" > 抗磁性物质的内部磁化/极化方向与外加磁场相反。
+</li>
+		
+
+<li id="correct_GRADSUS_18"><input type=radio name="c_GRADSUS_18" id="c_GRADSUS_18"> 抗磁性物质具有正磁化率（χ > 0）。 
+</li>
+<li ><input type=radio name="c_GRADSUS_18" > 水，因此大多数组织，是抗磁性的。
+</li>
+		
+<li ><input type=radio name="c_GRADSUS_18" >  钙化是抗磁性的。
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_GRADSUS_18" onclick="showAnswer('GRADSUS_18')" value="显示答案"></p>
+				
+<p class="explan" id="a_GRADSUS_18"> 抗磁性物质的极化方式与外加磁场相反。它们具有负磁化率，而不是正磁化率（选项<i>b</i>是错误的）。水、钙化和大多数组织是抗磁性的。
+<a href="/what-is-susceptibility-chi.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+<!-- ################ SECTION GRADSUS, QUIZ QUESTION  20############## -->
+
+<li style="margin-top: 8px"> 关于顺磁性，哪项陈述是错误的？
+<ol type="a" id="q_GRADSUS_19">
+
+<li ><input type=radio name="c_GRADSUS_19" > 顺磁性物质的内部磁化/极化方向与外加磁场相同。
+</li>
+		
+<li ><input type=radio name="c_GRADSUS_19" > 空气是顺磁性的。
+</li>
+<li ><input type=radio name="c_GRADSUS_19" >  钆对比剂是顺磁性的。
+</li>
+
+<li id="correct_GRADSUS_19"><input type=radio name="c_GRADSUS_19" id="c_GRADSUS_19"> 大多数钢是顺磁性的。
+</li>
+		
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_GRADSUS_19" onclick="showAnswer('GRADSUS_19')" value="显示答案"></p>
+				
+<p class="explan" id="a_GRADSUS_19"> 顺磁性物质的极化方式增强外加磁场。它们具有正磁化率。令人惊讶的是，分子氧是弱顺磁性的，因此空气也是顺磁性的。钆对比剂是顺磁性的。大多数钢是铁磁性的，这种现象类似于顺磁性，但强多个数量级。
+<a href="/what-is-susceptibility-chi.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+		
+<!-- ################ SECTION GRADSUS, QUIZ QUESTION  21############## -->
+
+<li style="margin-top: 8px"> 以下哪项2D梯度回波序列对于显示脑内小钙化或出血最有用？
+<ol type="a" id="q_GRADSUS_20">
+<li id="correct_GRADSUS_20"><input type=radio name="c_GRADSUS_20" id="c_GRADSUS_20"> TR = 800, TE = 30, α = 20°
+</li>
+
+<li ><input type=radio name="c_GRADSUS_20" > TR = 2000, TE = 10, α = 70°
+</li>
+		
+<li ><input type=radio name="c_GRADSUS_20" > TR = 60, TE = 3, α = 45°
+</li>
+
+		
+<li ><input type=radio name="c_GRADSUS_20" >  TR = 800, TE = 10, α = 45°
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_GRADSUS_20" onclick="showAnswer('GRADSUS_20')" value="显示答案"></p>
+				
+<p class="explan" id="a_GRADSUS_20"> 出血/钙化梯度回波序列通常以2D多层模式运行，使用相对较长的TR和低翻转角（两者均最小化T1效应）以及相对较长的TE（以突出T2*依赖性）。因此选项(a)是最佳答案。
+<a href="/whats-wrong-with-gre.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+
+
+		
+<!-- ################ SECTION GRADSUS, QUIZ QUESTION  22############## -->
+
+<li style="margin-top: 8px"> 关于磁敏感加权成像，以下哪项是错误的？
+<ol type="a" id="q_GRADSUS_21">
+
+<li ><input type=radio name="c_GRADSUS_21" > 磁敏感加权成像通常以3D而非2D模式采集。
+</li>
+		
+<li ><input type=radio name="c_GRADSUS_21" > 幅度和相位信息可以单独查看或组合。
+</li>
+
+<li id="correct_GRADSUS_21"><input type=radio name="c_GRADSUS_21" id="c_GRADSUS_21"> 磁敏感加权成像在检测微出血和钙化方面劣于3D梯度回波研究。
+</li>
+		
+<li ><input type=radio name="c_GRADSUS_21" >  磁敏感加权成像研究通常包括最小强度图像。
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_GRADSUS_21" onclick="showAnswer('GRADSUS_21')" value="显示答案"></p>
+				
+<p class="explan" id="a_GRADSUS_21"> 多项研究表明，磁敏感加权成像在检测微出血和钙化方面<u>优于</u>3D梯度回波研究。
+<a href="/making-an-sw-image.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+
+
+
+
+		
+<!-- ################ SECTION GRADSUS, QUIZ QUESTION  23############## -->
+
+<li style="margin-top: 8px"> 关于磁敏感加权成像相位图图像，哪项陈述不正确？
+<ol type="a" id="q_GRADSUS_22">
+
+<li ><input type=radio name="c_GRADSUS_22" > 在GE扫描仪上明亮的病变在西门子扫描仪上会显示为暗色。
+</li>
+		
+
+<li id="correct_GRADSUS_22"><input type=radio name="c_GRADSUS_22" id="c_GRADSUS_22"> 相位图图像使用最小强度投影算法显示。
+</li>
+<li ><input type=radio name="c_GRADSUS_22" > 如果静脉窦在相位图像上显示为暗色，则顺磁性血液产物也将是暗色。
+</li>
+		
+<li ><input type=radio name="c_GRADSUS_22" >  脉络丛和松果体为抗磁性物质提供了良好的内部参考。
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_GRADSUS_22" onclick="showAnswer('GRADSUS_22')" value="显示答案"></p>
+				
+<p class="explan" id="a_GRADSUS_22"> 相位图图像以简单的幅度模式逐层呈现，因此选项(b)是错误的。抗磁性和顺磁性物质在磁敏感加权成像相位图像上的“颜色”（黑或白）取决于扫描仪，因此需要参考已知组织（静脉为顺磁性，脉络丛钙化为抗磁性）作为内部检查。 
+<a href="/phase-of-blood-v-ca.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--##################################################-->
+<!--############SCORING SECTION Needs to go at end of each subsection-->
+
+</ol><p><input type=button id="show_all_GRADSUS" onclick="showAllAnswers('GRADSUS')" value="显示本节所有答案"><span style="font-weight: bold" id="scoretxt_GRADSUS"></span></p>
+<p><a href="#top">返回页首</a></p></div>
+<!--END OF SCORING SECTION-->
+
+
+
+</div>
+
+
+
+
+<div><div id="302380945926392074" align="left" style="width: 100%; overflow-y: hidden;" class="wcustomhtml"><!-- ###############NEW QUIZ SUBSECTION ##################-->
+
+<hr style="1px solid black">
+<!-- Creates optional line above new Quiz Subsection Title ---->
+
+<h1 style="color:black";><a name="3"></a>扩散</h1>
+
+<!-- The Section Name and its corresponding number (here 0) which has an href in the index must be changed/filled in.  Note that the first section is identified as “0” here only;  and the second section is denoted “2”, etc. 
+
+This is confusing because subsequently it is denoted as Section 1 and reference to all questions in this section begin with a 1.  However, the first question of Section 1 is called question 0, presumably to assist in scoring.
+
+Thus, the first question of Section 1 is denoted as q_1_0 and its second question is denoted q_1_1.	
+
+When a second section of Questions is added, this is called Section 2 with first and second questions denoted q_2_0 and q_2_1. 
+
+Each section has counting variables corresponding to each question. So the counting variables  are denoted c_1_0 for the Section 1/first question, while c_2_1 counts for Section 2/second question. -->
+
+<!-- FOR THE PURPOSES OF THIS DOCUMENT WE WILL CONSIDER ALL QUESTIONS TO REFER TO SECTION DIFFQUIZ and are numbered consecutively. THE WORD DOCUMENT CAN THEN BE PUT INTO PROPER FORM BY “SEARCH AND REPLACE DIFFQUIZ BY THE APPROPRIATE SECTION NUMBER”-->
+
+
+<!-- ################ SECTION M, QUIZ QUESTION  1############## -->
+
+<ol><li style="margin-top: 8px"> 扩散系数(D)的单位是
+<ol type="a" id="q_DIFFQUIZ_0">
+
+<li ><input type=radio name="c_DIFFQUIZ_0" > mm/秒
+</li>
+<li id="correct_DIFFQUIZ_0"><input type=radio name="c_DIFFQUIZ_0" id="c_DIFFQUIZ_0"> mm²/秒
+</li>
+		
+		
+<li ><input type=radio name="c_DIFFQUIZ_0" > mm³/秒
+</li>
+
+<li ><input type=radio name="c_DIFFQUIZ_0" > 无量纲
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_DIFFQUIZ_0" onclick="showAnswer('DIFFQUIZ_0')" value="显示答案"></p>
+				
+<p class="explan" id="a_DIFFQUIZ_0"> D反映了在一定时间内通过表面的粒子通量，因此其单位为面积/时间（例如mm²/秒）。
+
+<a href="/what-is-diffusion.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+
+<!-- ################ SECTION DIFFQUIZ, QUIZ QUESTION  2############## -->
+
+<li style="margin-top: 8px"> 根据斯托克斯-爱因斯坦方程，以下哪种系统变化会增加扩散系数？（即使你忘记了确切方程，也应该能够推理出来）。
+<ol type="a" id="q_DIFFQUIZ_1">
+<li id="correct_DIFFQUIZ_1"><input type=radio name="c_DIFFQUIZ_1" id="c_DIFFQUIZ_1"> 升高温度
+</li>
+
+<li ><input type=radio name="c_DIFFQUIZ_1" > 增加介质的粘度
+</li>
+		
+<li ><input type=radio name="c_DIFFQUIZ_1" > 增加粒子的大小
+</li>
+<li ><input type=radio name="c_DIFFQUIZ_1" >  以上所有
+</li>
+
+		
+<li ><input type=radio name="c_DIFFQUIZ_1" >  以上都不是
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_DIFFQUIZ_1" onclick="showAnswer('DIFFQUIZ_1')" value="显示答案"></p>
+				
+<p class="explan" id="a_DIFFQUIZ_1"> 升高温度会增加粒子的动能，从而增加运动，因此D增加。较大的粒子和处于较高粘度介质中的粒子运动较慢，因此D减小。
+<a href="/what-is-diffusion.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION DIFFQUIZ, QUIZ QUESTION  3############## -->
+
+<li style="margin-top: 8px"> 比较水的扩散系数(D<sub>w</sub>)和生物组织的扩散系数(D<sub>t</sub>)，哪项陈述最准确？
+<ol type="a" id="q_DIFFQUIZ_2">
+
+<li ><input type=radio name="c_DIFFQUIZ_2" > D<sub>w</sub> < D<sub>t</sub>
+</li>
+		
+<li ><input type=radio name="c_DIFFQUIZ_2" > D<sub>w</sub>和D<sub>t</sub>几乎完全相同
+</li>
+
+<li id="correct_DIFFQUIZ_2"><input type=radio name="c_DIFFQUIZ_2" id="c_DIFFQUIZ_2"> D<sub>t</sub>通常仅为D<sub>w</sub>的10-50%
+</li>
+		
+<li ><input type=radio name="c_DIFFQUIZ_2" >  D<sub>t</sub>通常小于D<sub>w</sub>的1%
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_DIFFQUIZ_2" onclick="showAnswer('DIFFQUIZ_2')" value="显示答案"></p>
+				
+<p class="explan" id="a_DIFFQUIZ_2"> 体温下纯水的扩散常数约为3.0 x 10<sup>−3</sup> mm²/秒。生物组织的D值仅为该值的10-50%，平均约为1.0 x 10<sup>−3</sup> mm²/秒。
+<a href="/what-is-diffusion.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION DIFFQUIZ, QUIZ QUESTION  4############## -->
+<li style="margin-top: 8px"> 用于描述各向异性材料的一阶扩散张量中有多少个元素？
+<ol type="a" id="q_DIFFQUIZ_3">
+
+<li ><input type=radio name="c_DIFFQUIZ_3" > 3
+</li>
+		
+<li ><input type=radio name="c_DIFFQUIZ_3" > 6
+</li>
+
+<li id="correct_DIFFQUIZ_3"><input type=radio name="c_DIFFQUIZ_3" id="c_DIFFQUIZ_3"> 9
+</li>
+		
+<li ><input type=radio name="c_DIFFQUIZ_3" >  12
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_DIFFQUIZ_3" onclick="showAnswer('DIFFQUIZ_3')" value="显示答案"></p>
+				
+<p class="explan" id="a_DIFFQUIZ_3"> 在各向异性材料中，扩散不能用单个数字描述，而要用称为扩散张量的[3 x 3]阵列。张量的三个对角元素（<i>D<sub>xx</sub></i>、<i>D<sub>yy</sub></i>和<i>D<sub>zz</sub></i>）表示在实验室参考系中沿每个主方向（x-、y-和z-方向）测量的扩散系数。六个非对角项（<i>D<sub>xy</sub></i>、<i>D<sub>yz</sub></i>等）反映了对应每对主方向的随机运动之间的相关性。 
+<a href="/iso-anisotropic-diffusion.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+
+
+<!-- ################ SECTION DIFFQUIZ, QUIZ QUESTION  5############## -->
+
+<li style="margin-top: 8px"> 现代扩散加权脉冲序列均源于由以下学者开发的脉冲梯度自旋回波技术
+<ol type="a" id="q_DIFFQUIZ_4">
+<li id="correct_DIFFQUIZ_4"><input type=radio name="c_DIFFQUIZ_4" id="c_DIFFQUIZ_4"> Stejskal和Tanner
+</li>
+
+<li ><input type=radio name="c_DIFFQUIZ_4" > Solomon和Blombergen
+</li>
+		
+<li ><input type=radio name="c_DIFFQUIZ_4" > Carr和Purcell
+</li>
+
+<li ><input type=radio name="c_DIFFQUIZ_4" >  Einstein和Stokes
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_DIFFQUIZ_4" onclick="showAnswer('DIFFQUIZ_4')" value="显示答案"></p>
+				
+<p class="explan" id="a_DIFFQUIZ_4"> 脉冲梯度自旋回波技术由化学家Edward Stejskal和John Tanner在20世纪60年代中期开发。它由一对扩散敏感梯度组成，置于180°反转脉冲的两侧。现代变体包括添加化学选择性脂肪抑制脉冲、使用双极梯度以及在图像采集模块之前立即添加第二个180°脉冲。
+<a href="/making-a-dw-image.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION DIFFQUIZ, QUIZ QUESTION  6############## -->
+
+<li style="margin-top: 8px"> 如何通过成对的脉冲扩散梯度实现更大的b值？
+<ol type="a" id="q_DIFFQUIZ_5">
+
+<li ><input type=radio name="c_DIFFQUIZ_5" > 增加梯度的幅度
+</li>
+		
+<li ><input type=radio name="c_DIFFQUIZ_5" > 增加梯度的持续时间
+</li>
+<li ><input type=radio name="c_DIFFQUIZ_5" >  增加两个梯度之间的时间间隔
+</li>
+
+<li id="correct_DIFFQUIZ_5"><input type=radio name="c_DIFFQUIZ_5" id="c_DIFFQUIZ_5"> 以上所有
+</li>
+		
+<li ><input type=radio name="c_DIFFQUIZ_5" >  以上都不是
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_DIFFQUIZ_5" onclick="showAnswer('DIFFQUIZ_5')" value="显示答案"></p>
+				
+<p class="explan" id="a_DIFFQUIZ_5"> b值取决于脉冲扩散梯度的强度、持续时间和间距。增加梯度幅度和持续时间以及加宽梯度脉冲之间的间隔可获得更大的b值。
+
+<a href="/what-is-the-b-value.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION DIFFQUIZ, QUIZ QUESTION  7############## -->
+
+<li style="margin-top: 8px"> 当今临床常规磁共振中用于产生扩散加权图像的b值范围大约是多少？ 
+<ol type="a" id="q_DIFFQUIZ_6">
+
+<li ><input type=radio name="c_DIFFQUIZ_6" > 0 – 10 s/mm²
+</li>
+		
+<li ><input type=radio name="c_DIFFQUIZ_6" > 0 – 100 s/mm²
+</li>
+
+<li id="correct_DIFFQUIZ_6"><input type=radio name="c_DIFFQUIZ_6" id="c_DIFFQUIZ_6"> 0 – 1,000 s/mm²
+</li>
+		
+<li ><input type=radio name="c_DIFFQUIZ_6" >  0 – 10,000 s/mm²
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_DIFFQUIZ_6" onclick="showAnswer('DIFFQUIZ_6')" value="显示答案"></p>
+				
+<p class="explan" id="a_DIFFQUIZ_6"> 大多数常规临床扩散加权成像目前使用的b值在0到1000或0到2000之间，中枢神经系统以外使用的b值略低。
+<a href="/what-is-the-b-value.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+	
+<!-- ################ SECTION DIFFQUIZ, QUIZ QUESTION  8############## -->
+
+<li style="margin-top: 8px"> 获得扩散加权解剖图像所需的最小源图像梯度方向数量是多少？
+<ol type="a" id="q_DIFFQUIZ_7">
+
+<li ><input type=radio name="c_DIFFQUIZ_7" > 1</li>
+<li id="correct_DIFFQUIZ_7"><input type=radio name="c_DIFFQUIZ_7" id="c_DIFFQUIZ_7"> 3 </li>
+		
+<li ><input type=radio name="c_DIFFQUIZ_7" > 9 </li>
+
+		
+<li ><input type=radio name="c_DIFFQUIZ_7" >  27 </li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_DIFFQUIZ_7" onclick="showAnswer('DIFFQUIZ_7')" value="显示答案"></p>
+				
+<p class="explan" id="a_DIFFQUIZ_7"> 必须至少获取三组源图像。这些图像可以沿着实验室的x-、y-和z-轴，或沿着三个任意垂直的方向。更现代的方案通常获取6、20或更多方向的源图像，但三个是最小值。 
+<a href="/trace-vs-adc-map.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION DIFFQUIZ, QUIZ QUESTION  9############## -->
+
+<li style="margin-top: 8px"> 3x3扩散张量矩阵的“迹”的定义是什么？
+<ol type="a" id="q_DIFFQUIZ_8">
+
+<li ><input type=radio name="c_DIFFQUIZ_8" > 最大元素
+</li>
+		
+<li ><input type=radio name="c_DIFFQUIZ_8" > 所有元素之和
+</li>
+
+<li id="correct_DIFFQUIZ_8"><input type=radio name="c_DIFFQUIZ_8" id="c_DIFFQUIZ_8"> 对角元素之和
+</li>
+		
+<li ><input type=radio name="c_DIFFQUIZ_8" >  对角元素的平均值
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_DIFFQUIZ_8" onclick="showAnswer('DIFFQUIZ_8')" value="显示答案"></p>
+				
+<p class="explan" id="a_DIFFQUIZ_8"> “迹”一词来自矩阵代数，指此类阵列对角元素之和。扩散张量的迹等于(<i>D<sub>xx</sub></i> + <i>D<sub>yy</sub></i> + <i>D<sub>zz</sub></i>)。
+<a href="/trace-vs-adc-map.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+<!-- ################ SECTION DIFFQUIZ, QUIZ QUESTION  10############## -->
+
+<li style="margin-top: 8px"> 如果对应于单个像素的3x3扩散张量矩阵的迹计算为1.5 x 10<sup>–3</sup> s/mm²，则相应的表观扩散系数是多少？
+<ol type="a" id="q_DIFFQUIZ_9">
+<li id="correct_DIFFQUIZ_9"><input type=radio name="c_DIFFQUIZ_9" id="c_DIFFQUIZ_9"> 0.5 x 10<sup>–3</sup> s/mm²
+</li>
+
+<li ><input type=radio name="c_DIFFQUIZ_9" > 1.5 x 10<sup>–3</sup> s/mm²
+</li>
+		
+<li ><input type=radio name="c_DIFFQUIZ_9" > 3.0 x 10<sup>–3</sup> s/mm²
+</li>
+
+		
+<li ><input type=radio name="c_DIFFQUIZ_9" >  4.5 x 10<sup>–3</sup> s/mm²
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_DIFFQUIZ_9" onclick="showAnswer('DIFFQUIZ_9')" value="显示答案"></p>
+				
+<p class="explan" id="a_DIFFQUIZ_9"> 表观扩散系数被视为迹的平均值，即ADC = (<i>D<sub>xx</sub></i> + <i>D<sub>yy</sub></i> + <i>D<sub>zz</sub></i>) / 3。
+因此正确答案是(a)。
+
+<a href="/trace-vs-adc-map.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+<!-- ################ SECTION DIFFQUIZ, QUIZ QUESTION  11############## -->
+
+<li style="margin-top: 8px"> 关于ADC图，以下哪项陈述是正确的？
+<ol type="a" id="q_DIFFQUIZ_10">
+
+<li ><input type=radio name="c_DIFFQUIZ_10" > 在迹扩散加权图像上明亮的病变在ADC图上会呈暗色。
+</li>
+		
+<li ><input type=radio name="c_DIFFQUIZ_10" > T2值非常长的病变在ADC图上会呈暗色。
+</li>
+
+<li id="correct_DIFFQUIZ_10"><input type=radio name="c_DIFFQUIZ_10" id="c_DIFFQUIZ_10"> 正常尿液在迹扩散加权图像上呈暗色，在ADC图上呈亮色。
+</li>
+		
+<li ><input type=radio name="c_DIFFQUIZ_10" >  ADC图只是迹扩散加权图像的倒数。
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_DIFFQUIZ_10" onclick="showAnswer('DIFFQUIZ_10')" value="显示答案"></p>
+				
+<p class="explan" id="a_DIFFQUIZ_10"> 迹扩散加权图像不是扩散图；它仅是扩散<u>加权</u>的，其名称已暗示了这一点。迹扩散加权图像具有相当大的T2加权。因此，T2值非常长或非常短的病变可能会“污染”迹扩散加权图像，使其显得“人为地”亮或暗。这些重要现象被称为“T2透射”和“T2黑晕”。可以从扩散加权图像中数学去除T2效应，以创建纯参数图像，即表观扩散系数图（“ADC图”）。ADC图不是迹扩散加权图像的简单倒数。
+<a href="/trace-vs-adc-map.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+		
+
+
+
+
+
+<!-- ################ SECTION DIFFQUIZ, QUIZ QUESTION  12############## -->
+
+<li style="margin-top: 8px"> 关于指数ADC图的以下哪项是不正确的？
+<ol type="a" id="q_DIFFQUIZ_11">
+
+<li ><input type=radio name="c_DIFFQUIZ_11" > eADC图的灰度与迹扩散加权图像中的灰度平行。
+</li>
+		
+<li ><input type=radio name="c_DIFFQUIZ_11" > eADC图简单地是迹扩散加权图像除以b0图像。
+</li>
+<li ><input type=radio name="c_DIFFQUIZ_11" >  eADC图比迹扩散加权图像有更多的噪声。
+</li>
+
+<li id="correct_DIFFQUIZ_11"><input type=radio name="c_DIFFQUIZ_11" id="c_DIFFQUIZ_11"> eADC图仍然存在“T2透射”问题。
+</li>
+		
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_DIFFQUIZ_11" onclick="showAnswer('DIFFQUIZ_11')" value="显示答案"></p>
+				
+<p class="explan" id="a_DIFFQUIZ_11"> eADC图简单来说就是迹扩散加权图像逐点除以b0图像。由于分子和分母中的T2效应相互抵消，eADC图消除了T2透射问题。（选项<i>d</i>是错误的。）信号强度更直观，因为它们遵循迹图像上的表现。然而，由于指数图像是计算出的图，与ADC图一样，其质量通常低于扩散加权图像，且噪声更大。 
+<a href="/exponential-adc.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+<!-- ################ SECTION DIFFQUIZ, QUIZ QUESTION  13############## -->
+
+<li style="margin-top: 8px"> 一个36小时龄的脑血肿在b0和迹扩散加权图像上均呈暗色。这是什么原因？
+<ol type="a" id="q_DIFFQUIZ_12">
+
+<li ><input type=radio name="c_DIFFQUIZ_12" > 血肿中的扩散不受限制。
+</li>
+		
+<li ><input type=radio name="c_DIFFQUIZ_12" > 这是“T2透射”的例子。
+</li>
+
+<li id="correct_DIFFQUIZ_12"><input type=radio name="c_DIFFQUIZ_12" id="c_DIFFQUIZ_12"> 这是“T2黑晕”的例子。
+</li>
+		
+<li ><input type=radio name="c_DIFFQUIZ_12" >  这是扩散各向异性的例子。
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_DIFFQUIZ_12" onclick="showAnswer('DIFFQUIZ_12')" value="显示答案"></p>
+				
+<p class="explan" id="a_DIFFQUIZ_12"> 此案例说明了“T2黑晕”现象，其中严重的T2*缩短（此处由血肿中的顺磁性脱氧血红蛋白引起）溢出并“污染”了迹扩散加权图像。实际上血肿中的扩散是受限的（考虑到所有聚集的红细胞和纤维蛋白），但在扩散加权图像上（错误地）显示为暗色。
+
+<a href="/t2-black-out.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION DIFFQUIZ, QUIZ QUESTION  14############## -->
+
+<li style="margin-top: 8px"> 以下哪种机制<u>不能</u>解释急性脑梗死中的扩散受限？
+<ol type="a" id="q_DIFFQUIZ_13">
+
+<li ><input type=radio name="c_DIFFQUIZ_13" > 细胞内水增加（细胞毒性水肿）
+</li>
+		
+
+<li id="correct_DIFFQUIZ_13"><input type=radio name="c_DIFFQUIZ_13" id="c_DIFFQUIZ_13"> 细胞内和细胞外粘度降低。
+</li>
+<li ><input type=radio name="c_DIFFQUIZ_13" > 细胞外空间减少。
+</li>
+		
+<li ><input type=radio name="c_DIFFQUIZ_13" >  细胞成分碎裂。
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_DIFFQUIZ_13" onclick="showAnswer('DIFFQUIZ_13')" value="显示答案"></p>
+				
+<p class="explan" id="a_DIFFQUIZ_13"> 除(b)外，其他均为正确。随着细胞成分碎裂和蛋白质解折叠，粘度增加（而非降低）。粘度增加限制了扩散，因为它抑制了水分子在病变组织中的运动。
+<a href="/dwi-bright-causes.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION DIFFQUIZ, QUIZ QUESTION  15############## -->
+
+<li style="margin-top: 8px"> 以下哪种肿瘤预计不会表现出扩散受限？
+<ol type="a" id="q_DIFFQUIZ_14">
+
+<li ><input type=radio name="c_DIFFQUIZ_14" > 脾淋巴瘤
+</li>
+		
+<li ><input type=radio name="c_DIFFQUIZ_14" > 小脑髓母细胞瘤
+</li>
+
+<li id="correct_DIFFQUIZ_14"><input type=radio name="c_DIFFQUIZ_14" id="c_DIFFQUIZ_14"> 胰腺浆液性囊腺瘤
+</li>
+		
+<li ><input type=radio name="c_DIFFQUIZ_14" >  骨盆尤文氏肉瘤（PNET）
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_DIFFQUIZ_14" onclick="showAnswer('DIFFQUIZ_14')" value="显示答案"></p>
+				
+<p class="explan" id="a_DIFFQUIZ_14"> 高度细胞性的肿瘤，细胞密集，细胞外空间相对较小，通常表现出扩散受限。例子包括淋巴瘤、髓母细胞瘤、原始神经外胚层肿瘤和高度恶性胶质瘤。囊性肿瘤（如选项<i>c</i>）预计不会限制扩散。
+<a href="/dwi-bright-causes.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+<!-- ################ SECTION DIFFQUIZ, QUIZ QUESTION 16############## -->
+
+<li style="margin-top: 8px"> 假设镜像的非对角元素相等，一阶[3x3]扩散张量包含多少个<u>
+唯一</u>元素？
+<ol type="a" id="q_DIFFQUIZ_15">
+
+<li ><input type=radio name="c_DIFFQUIZ_15" > 3</li>
+		
+
+<li id="correct_DIFFQUIZ_15"><input type=radio name="c_DIFFQUIZ_15" id="c_DIFFQUIZ_15"> 6 </li>
+		
+<li ><input type=radio name="c_DIFFQUIZ_15" >  9 </li>
+<li ><input type=radio name="c_DIFFQUIZ_15" > 12 </li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_DIFFQUIZ_15" onclick="showAnswer('DIFFQUIZ_15')" value="显示答案"></p>
+				
+<p class="explan" id="a_DIFFQUIZ_15"> 非对角元素相等意味着向前和向后方向的扩散率应相同（即x→y和y→x的扩散率相同）。这意味着张量是对称的，9个张量元素中有3个相等（<i>D<sub>xy</sub></i> = <i>D<sub>yx</sub></i>，<i>D<sub>xz</sub></i> = <i>D<sub>zx</sub></i>，<i>D<sub>yz</sub></i> = <i>D<sub>zy</sub></i>）。这样就剩下6个唯一元素需要测量。
+<a href="/diffusion-tensor.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION DIFFQUIZ, QUIZ QUESTION  17############## -->
+
+<li style="margin-top: 8px"> 需要多少次测量才能确定上一问题中的唯一扩散张量元素？
+<ol type="a" id="q_DIFFQUIZ_16">
+
+<li ><input type=radio name="c_DIFFQUIZ_16" > 5</li>
+		
+<li ><input type=radio name="c_DIFFQUIZ_16" > 6 </li>
+
+<li id="correct_DIFFQUIZ_16"><input type=radio name="c_DIFFQUIZ_16" id="c_DIFFQUIZ_16"> 7 </li>
+		
+<li ><input type=radio name="c_DIFFQUIZ_16" >  9 </li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_DIFFQUIZ_16" onclick="showAnswer('DIFFQUIZ_16')" value="显示答案"></p>
+				
+<p class="explan" id="a_DIFFQUIZ_16"> 需要施加扩散敏感梯度进行6次测量，加上一次b0测量，总共7次。
+<a href="/diffusion-tensor.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+<!-- ################ SECTION DIFFQUIZ, QUIZ QUESTION  18############## -->
+
+<li style="margin-top: 8px"> 关于扩散椭球，哪项陈述是错误的？
+<ol type="a" id="q_DIFFQUIZ_17">
+
+<li ><input type=radio name="c_DIFFQUIZ_17" > 其主轴和短轴的方向由特征向量描述。
+</li>
+		
+<li ><input type=radio name="c_DIFFQUIZ_17" > 其主轴和短轴的半径是特征值。
+</li>
+<li ><input type=radio name="c_DIFFQUIZ_17" >  特征值与爱因斯坦均方根扩散位移成正比。
+</li>
+
+<li id="correct_DIFFQUIZ_17"><input type=radio name="c_DIFFQUIZ_17" id="c_DIFFQUIZ_17"> 扩散椭球的扩散张量矩阵有6个唯一元素。
+</li>
+		
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_DIFFQUIZ_17" onclick="showAnswer('DIFFQUIZ_17')" value="显示答案"></p>
+				
+<p class="explan" id="a_DIFFQUIZ_17">使用扩散椭球的一个重要好处是，在此参考系中，扩散张量的非对角元素消失。特征值集定义了一个仅有3个对角元素（λ<sub>1</sub>、λ<sub>2</sub>和λ<sub>3</sub>）的矩阵，非对角元素均为零。<a href="/diffusion-tensor.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+		
+
+<!-- ################ SECTION DIFFQUIZ, QUIZ QUESTION  19############## -->
+
+<li style="margin-top: 8px"> 关于分数各向异性，哪项陈述不正确？
+<ol type="a" id="q_DIFFQUIZ_18">
+<li id="correct_DIFFQUIZ_18"><input type=radio name="c_DIFFQUIZ_18" id="c_DIFFQUIZ_18"> FA的范围从-1到+1。
+</li>
+
+<li ><input type=radio name="c_DIFFQUIZ_18" > FA是体素内扩散不对称性的指标。
+</li>
+		
+<li ><input type=radio name="c_DIFFQUIZ_18" > 对于具有完美各向同性扩散的体素，FA = 0。
+</li>
+
+		
+<li ><input type=radio name="c_DIFFQUIZ_18" >  在FA图上，较亮区域比较暗区域更具各向异性。
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_DIFFQUIZ_18" onclick="showAnswer('DIFFQUIZ_18')" value="显示答案"></p>
+				
+<p class="explan" id="a_DIFFQUIZ_18"> FA的值在0到+1之间变化（选项<i>a</i>不正确）。对于完美的各向同性扩散，λ<sub>1</sub> = λ<sub>2</sub> = λ<sub>3</sub>，扩散椭球为球体，FA = 0。随着扩散各向异性增加，特征值变得更加不相等，椭球变得更加细长，FA → 1。FA图是图像上FA值的灰度显示。较亮区域比较暗区域更具各向异性。
+<a href="/dti-tensor-imaging.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+<!-- ################ SECTION DIFFQUIZ, QUIZ QUESTION  20############## -->
+
+<li style="margin-top: 8px"> 关于全身扩散加权成像，哪项陈述是错误的？
+<ol type="a" id="q_DIFFQUIZ_19">
+
+<li ><input type=radio name="c_DIFFQUIZ_19" > 成像以多个区块或站进行，然后数字拼接在一起。
+</li>
+		
+
+<li id="correct_DIFFQUIZ_19"><input type=radio name="c_DIFFQUIZ_19" id="c_DIFFQUIZ_19"> 胸部和腹部视图必须在屏气期间获得以减少运动伪影。 
+</li>
+<li ><input type=radio name="c_DIFFQUIZ_19" > 标准图像显示为黑背景模式，以类似于PET-CT。
+</li>
+		
+<li ><input type=radio name="c_DIFFQUIZ_19" >  每个扩散加权成像序列之前都有一个类似STIR的反转脉冲用于脂肪抑制。
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_DIFFQUIZ_19" onclick="showAnswer('DIFFQUIZ_19')" value="显示答案"></p>
+				
+<p class="explan" id="a_DIFFQUIZ_19"> 全身扩散加权成像不需要屏气。即使腹部和胸部器官在图像采集期间移动，它们也是“连贯地”移动。它们的物理位移是周期性的，虽然这种运动会引起一些空间模糊，但不会显著影响扩散加权信号的大小。 
+<a href="/whole-body-dwi.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+		
+<!-- ################ SECTION DIFFQUIZ, QUIZ QUESTION  21############## -->
+
+<li style="margin-top: 8px"> 以下所有都是读出分段扩散加权成像相对于单次激发扩散加权成像的优点，除了 
+<ol type="a" id="q_DIFFQUIZ_20">
+
+<li ><input type=radio name="c_DIFFQUIZ_20" > 信噪比增加
+</li>
+		
+
+<li id="correct_DIFFQUIZ_20"><input type=radio name="c_DIFFQUIZ_20" id="c_DIFFQUIZ_20"> 成像时间减少
+</li>
+		
+<li ><input type=radio name="c_DIFFQUIZ_20" >  磁敏感性伪影减少
+</li>
+<li ><input type=radio name="c_DIFFQUIZ_20" > 空间模糊减少
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_DIFFQUIZ_20" onclick="showAnswer('DIFFQUIZ_20')" value="显示答案"></p>
+				
+<p class="explan" id="a_DIFFQUIZ_20"> 根据“激发”次数的多少，读出分段扩散加权成像可能比单次激发扩散加权成像多耗时3-5倍，因此选项(b)是错误的。
+
+<a href="/readout-segmented-dwi.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+
+
+		
+<!-- ################ SECTION DIFFQUIZ, QUIZ QUESTION  22############## -->
+
+<li style="margin-top: 8px"> 现代小视野扩散加权成像方法（如ZOOMit和FOCUS）背后的关键技术发展是
+<ol type="a" id="q_DIFFQUIZ_21">
+<li id="correct_DIFFQUIZ_21"><input type=radio name="c_DIFFQUIZ_21" id="c_DIFFQUIZ_21"> 使用2D空间选择性复合射频脉冲
+</li>
+
+<li ><input type=radio name="c_DIFFQUIZ_21" > 使用外部容积饱和脉冲
+</li>
+		
+<li ><input type=radio name="c_DIFFQUIZ_21" > 使用受激回波内容积脉冲
+</li>
+
+		
+<li ><input type=radio name="c_DIFFQUIZ_21" >  使用极强、连续施加的梯度
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_DIFFQUIZ_21" onclick="showAnswer('DIFFQUIZ_21')" value="显示答案"></p>
+				
+<p class="explan" id="a_DIFFQUIZ_21"> 较新的小视野扩散加权成像序列采用一种特殊的2D射频激发脉冲，该脉冲在层面选择和相位编码方向上都具有空间选择性。2D射频“脉冲”是由大约25个紧密间隔的“子脉冲”组成的复合脉冲，时间跨度约为15 ms。该射频激发与沿相位编码轴的快速（振荡）梯度和沿层面选择的慢速（“梯度脉冲”）梯度同时进行。
+
+<a href="/small-fov-dwi.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+
+
+
+
+		
+<!-- ################ SECTION DIFFQUIZ, QUIZ QUESTION  23############## -->
+
+<li style="margin-top: 8px"> 关于体素内不相干运动的以下哪项陈述是正确的？
+<ol type="a" id="q_DIFFQUIZ_22">
+
+<li ><input type=radio name="c_DIFFQUIZ_22" > 当使用高b值时，体素内不相干运动效应最容易识别。
+</li>
+		
+
+<li id="correct_DIFFQUIZ_22"><input type=radio name="c_DIFFQUIZ_22" id="c_DIFFQUIZ_22"> 体素内不相干运动描述了由扩散和微循环灌注引起的信号损失。
+</li>
+<li ><input type=radio name="c_DIFFQUIZ_22" > 体素内不相干运动灌注效应减轻了仅由扩散引起的信号损失。 
+</li>
+		
+<li ><input type=radio name="c_DIFFQUIZ_22" >  Le Bihan的体素内不相干运动模型允许估计毛细血管血流量。
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_DIFFQUIZ_22" onclick="showAnswer('DIFFQUIZ_22')" value="显示答案"></p>
+				
+<p class="explan" id="a_DIFFQUIZ_22"> 正确的陈述是(b)：体素内不相干运动描述了由扩散和微循环灌注引起的信号损失。如果梯度相对较强，体素内不相干运动引起的信号损失主要是由扩散引起的——即水分子在细胞内外的布朗运动。然而，当使用较弱的梯度时，第二种体素内不相干运动机制也会导致信号损失——毛细血管网络中的血液微循环。Le Bihan的体素内不相干运动模型允许估计灌注分数（体素体积中毛细血管所占的百分比），但不能估计通过它们的血流量。
+<a href="/ivim.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+
+
+
+		
+<!-- ################ SECTION DIFFQUIZ, QUIZ QUESTION  24############## -->
+
+<li style="margin-top: 8px"> 关于扩散峰度的以下哪项陈述是错误的？
+<ol type="a" id="q_DIFFQUIZ_23">
+
+<li ><input type=radio name="c_DIFFQUIZ_23" > 扩散峰度测量水分子的非高斯运动。
+</li>
+		
+<li ><input type=radio name="c_DIFFQUIZ_23" > 当使用长回波时间时，峰度效应更明显。
+</li>
+
+<li id="correct_DIFFQUIZ_23"><input type=radio name="c_DIFFQUIZ_23" id="c_DIFFQUIZ_23"> 当使用低b值时，峰度效应更明显。
+</li>
+		
+<li ><input type=radio name="c_DIFFQUIZ_23" >  纯流体的平均峰度为零。
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_DIFFQUIZ_23" onclick="showAnswer('DIFFQUIZ_23')" value="显示答案"></p>
+				
+<p class="explan" id="a_DIFFQUIZ_23"> 标准扩散加权成像方法采用了爱因斯坦的原始概念，即水分子扩散遵循高斯（正态）分布。非高斯行为在使用更强的梯度（更高的b值）和更长的回波时间时变得更加明显。根据定义，高斯分布具有K=0，对于纯流体就是这种情况。
+<a href="/diffusion-kurtosis.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+
+
+
+
+
+
+
+
+
+
+
+<!--##################################################-->
+<!--############SCORING SECTION Needs to go at end of each subsection-->
+
+</ol><p><input type=button id="show_all_DIFFQUIZ" onclick="showAllAnswers('DIFFQUIZ')" value="显示本节所有答案"><span style="font-weight: bold" id="scoretxt_DIFFQUIZ"></span></p>
+<p><a href="#top">返回页首</a></p></div>
+<!--END OF SCORING SECTION-->
+
+
+
+</div>
+
+
+
+
+<div><div id="791481767781984030" align="left" style="width: 100%; overflow-y: hidden;" class="wcustomhtml"><!-- ###############NEW QUIZ SUBSECTION ##################-->
+
+<hr style="1px solid black">
+<!-- Creates optional line above new Quiz Subsection Title ---->
+
+<h1 style="color:black";><a name="4"></a>脂肪-水</h1>
+
+<!-- The Section Name and its corresponding number (here 0) which has an href in the index must be changed/filled in.  Note that the first section is identified as “0” here only;  and the second section is denoted “2”, etc. 
+
+This is confusing because subsequently it is denoted as Section 1 and reference to all questions in this section begin with a 1.  However, the first question of Section 1 is called question 0, presumably to assist in scoring.
+
+Thus, the first question of Section 1 is denoted as q_1_0 and its second question is denoted q_1_1.	
+
+When a second section of Questions is added, this is called Section 2 with first and second questions denoted q_2_0 and q_2_1. 
+
+Each section has counting variables corresponding to each question. So the counting variables  are denoted c_1_0 for the Section 1/first question, while c_2_1 counts for Section 2/second question. -->
+
+<!-- FOR THE PURPOSES OF THIS DOCUMENT WE WILL CONSIDER ALL QUESTIONS TO REFER TO SECTION FWQUIZ and are numbered consecutively. THE WORD DOCUMENT CAN THEN BE PUT INTO PROPER FORM BY “SEARCH AND REPLACE FWQUIZ BY THE APPROPRIATE SECTION NUMBER”-->
+
+
+<!-- ################ SECTION M, QUIZ QUESTION  1############## -->
+
+<ol><li style="margin-top: 8px"> 体内对磁共振信号贡献最大的主要脂肪类型是
+<ol type="a" id="q_FWQUIZ_0">
+<li id="correct_FWQUIZ_0"><input type=radio name="c_FWQUIZ_0" id="c_FWQUIZ_0"> 甘油三酯
+</li>
+
+<li ><input type=radio name="c_FWQUIZ_0" > 游离脂肪酸
+</li>
+		
+<li ><input type=radio name="c_FWQUIZ_0" > 胆固醇
+</li>
+
+		
+<li ><input type=radio name="c_FWQUIZ_0" > 磷脂
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_FWQUIZ_0" onclick="showAnswer('FWQUIZ_0')" value="显示答案"></p>
+				
+<p class="explan" id="a_FWQUIZ_0"> 人体脂肪组织中MR信号的主要部分来自甘油三酯，游离脂肪酸和胆固醇（当酯化或处于半固态或液态时）贡献较小。
+<a href="/fat--water-properties.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+
+<!-- ################ SECTION FWQUIZ, QUIZ QUESTION  2############## -->
+
+<li style="margin-top: 8px"> 在给定场强下，脂肪和水中¹H质子的核进动频率有何不同？  
+<ol type="a" id="q_FWQUIZ_1">
+
+<li ><input type=radio name="c_FWQUIZ_1" > 脂肪和水质子以相同频率进动
+</li>
+		
+<li ><input type=radio name="c_FWQUIZ_1" > 脂肪质子比水质子进动更快。
+</li>
+
+<li id="correct_FWQUIZ_1"><input type=radio name="c_FWQUIZ_1" id="c_FWQUIZ_1"> 脂肪质子比水质子进动更慢。
+</li>
+		
+<li ><input type=radio name="c_FWQUIZ_1" >  脂肪质子根据其在甘油三酯侧链上的位置可能进动更快或更慢。
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_FWQUIZ_1" onclick="showAnswer('FWQUIZ_1')" value="显示答案"></p>
+				
+<p class="explan" id="a_FWQUIZ_1"> 甘油三酯的H质子位于长碳链中，被电子云屏蔽，免受外加磁场全部作用的影响。相比之下，水中的电负性氧原子将保护性电子云从H原子核上拉开，使其暴露于外加磁场的全部作用。因此，水质子比脂肪质子共振更快。  
+<a href="/fat--water-properties.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION FWQUIZ, QUIZ QUESTION  3############## -->
+
+<li style="margin-top: 8px"> 3.5 ppm的化学位移写成十进制形式是
+<ol type="a" id="q_FWQUIZ_2">
+
+<li ><input type=radio name="c_FWQUIZ_2" > 0.00000035
+</li>
+		
+
+<li id="correct_FWQUIZ_2"><input type=radio name="c_FWQUIZ_2" id="c_FWQUIZ_2"> 0.0000035
+</li>
+<li ><input type=radio name="c_FWQUIZ_2" > 0.000035
+</li>
+		
+<li ><input type=radio name="c_FWQUIZ_2" >  0.00035
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_FWQUIZ_2" onclick="showAnswer('FWQUIZ_2')" value="显示答案"></p>
+				
+<p class="explan" id="a_FWQUIZ_2"> 缩写ppm代表“百万分之几”，相当于将基值乘以10<sup>−6</sup>。所以3.5 ppm = 3.5 x 10<sup>−6</sup> = 0.0000035（答案<i>b</i>）。
+<a href="/f-w-chemical-shift.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION FWQUIZ, QUIZ QUESTION  4############## -->
+<li style="margin-top: 8px"> 如果水-脂肪化学位移为3.5 ppm，计算在200 MHz运行的7T扫描仪上的脂肪-水频率差。  
+<ol type="a" id="q_FWQUIZ_3">
+
+<li ><input type=radio name="c_FWQUIZ_3" > 220 Hz
+</li>
+		
+<li ><input type=radio name="c_FWQUIZ_3" > 440 Hz
+</li>
+
+<li id="correct_FWQUIZ_3"><input type=radio name="c_FWQUIZ_3" id="c_FWQUIZ_3"> 700 Hz
+</li>
+		
+<li ><input type=radio name="c_FWQUIZ_3" >  900 Hz
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_FWQUIZ_3" onclick="showAnswer('FWQUIZ_3')" value="显示答案"></p>
+				
+<p class="explan" id="a_FWQUIZ_3"> Δf = (200 MHz)(3.5 ppm) = (200 x 10<sup>6</sup> Hz)(3.5 x10<sup>−6</sup>) ≈ 700 Hz
+<a href="/f-w-chemical-shift.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+
+
+
+ 
+<!-- ################ SECTION FWQUIZ, QUIZ QUESTION  5############## -->
+
+<li style="margin-top: 8px">如果水-脂肪化学位移为3.5 ppm，计算在150 kHz运行的便携式0.064T扫描仪上的脂肪-水频率差。<ol type="a" id="q_FWQUIZ_4">
+<li id="correct_FWQUIZ_4"><input type=radio name="c_FWQUIZ_4" id="c_FWQUIZ_4"> 0.5 Hz </li>
+<li ><input type=radio name="c_FWQUIZ_4" > 5 Hz</li>
+		
+<li ><input type=radio name="c_FWQUIZ_4" > 50 Hz </li>
+
+
+		
+<li ><input type=radio name="c_FWQUIZ_4" >  500 Hz </li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_FWQUIZ_4" onclick="showAnswer('FWQUIZ_4')" value="显示答案"></p>
+				
+<p class="explan" id="a_FWQUIZ_4">Δf = (150 kHz)(3.5 ppm) = (150 x 10<sup>3</sup> Hz)(3.5 x10<sup>−6</sup>) ≈ 0.5 Hz。这种非常低的频率差意味着在此场强下水-脂肪伪影将最小，并且无法使用频谱脂肪抑制方法。 <a href="/f-w-chemical-shift.html " target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION FWQUIZ, QUIZ QUESTION  6############## -->
+
+<li style="margin-top: 8px"> 在1.5 T下，水和脂肪约每2.2毫秒进出相位一次。在3.0 T下，它们进出相位的速度是多少？
+<ol type="a" id="q_FWQUIZ_5">
+<li id="correct_FWQUIZ_5"><input type=radio name="c_FWQUIZ_5" id="c_FWQUIZ_5"> 每1.1毫秒
+</li>
+
+<li ><input type=radio name="c_FWQUIZ_5" > 每2.2毫秒
+</li>
+		
+<li ><input type=radio name="c_FWQUIZ_5" > 每3.3毫秒
+</li>
+
+		
+<li ><input type=radio name="c_FWQUIZ_5" >  每4.4毫秒
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_FWQUIZ_5" onclick="showAnswer('FWQUIZ_5')" value="显示答案"></p>
+				
+<p class="explan" id="a_FWQUIZ_5"> 该相位循环的周期为1/Δf，其中Δf是自旋之间的频率偏移。因此，如果场强加倍，频率偏移加倍，相位循环周期减半，因此(a) 1.1毫秒是正确的答案。
+<a href="/in-phaseout-of-phase.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION FWQUIZ, QUIZ QUESTION  7############## -->
+
+<li style="margin-top: 8px"> 在同相位图像上信号强度中等，在反相位图像上信号低的肾上腺肿块最有可能是
+<ol type="a" id="q_FWQUIZ_6">
+
+<li ><input type=radio name="c_FWQUIZ_6" > 肾上腺癌
+</li>
+	<li id="correct_FWQUIZ_6"><input type=radio name="c_FWQUIZ_6" id="c_FWQUIZ_6"> 肾上腺腺瘤
+</li>
+	
+<li ><input type=radio name="c_FWQUIZ_6" > 肾上腺转移瘤
+</li>
+
+		
+<li ><input type=radio name="c_FWQUIZ_6" >  肾上腺嗜铬细胞瘤
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_FWQUIZ_6" onclick="showAnswer('FWQUIZ_6')" value="显示答案"></p>
+				
+<p class="explan" id="a_FWQUIZ_6"> 肾上腺腺瘤是最常见的肾上腺肿瘤，通常含有微观脂质滴。同时含有脂质和水的体素导致信号抵消，在反相位梯度回波图像上信号低。
+<a href="/in-phaseout-of-phase.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+	
+<!-- ################ SECTION FWQUIZ, QUIZ QUESTION  8############## -->
+
+<li style="margin-top: 8px"> 以下哪项<u>不是</u>大多数商业Dixon型序列产生的四种标准图像之一？
+<ol type="a" id="q_FWQUIZ_7">
+<li id="correct_FWQUIZ_7"><input type=radio name="c_FWQUIZ_7" id="c_FWQUIZ_7"> 化学位移
+</li>
+
+<li ><input type=radio name="c_FWQUIZ_7" > 水
+</li>
+		
+<li ><input type=radio name="c_FWQUIZ_7" > 脂肪
+</li>
+
+		
+<li ><input type=radio name="c_FWQUIZ_7" >  同相位
+</li>
+<li ><input type=radio name="c_FWQUIZ_7" >  反相位
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_FWQUIZ_7" onclick="showAnswer('FWQUIZ_7')" value="显示答案"></p>
+				
+<p class="explan" id="a_FWQUIZ_7"> 选项(a)化学位移不是Dixon序列生成的标准图像。其他四个是。
+<a href="/dixon-method.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION FWQUIZ, QUIZ QUESTION  9############## -->
+
+<li style="margin-top: 8px"> 关于CHESS/脂肪饱和脉冲，以下哪项陈述不正确？
+<ol type="a" id="q_FWQUIZ_8">
+
+<li ><input type=radio name="c_FWQUIZ_8" > 它们减少了给定TR下可用的层面数。
+</li>
+		
+<li ><input type=radio name="c_FWQUIZ_8" > 它们会引起组织加热。
+</li>
+<li ><input type=radio name="c_FWQUIZ_8" >  它们包括一个频谱调谐的射频脉冲，后跟沿一个或多个轴的扰相梯度。
+</li>
+
+<li id="correct_FWQUIZ_8"><input type=radio name="c_FWQUIZ_8" id="c_FWQUIZ_8"> 它们是0.3T及以下场强下脂肪抑制的首选方法。
+</li>
+		
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_FWQUIZ_8" onclick="showAnswer('FWQUIZ_8')" value="显示答案"></p>
+				
+<p class="explan" id="a_FWQUIZ_8"> 除选项(d)外，其他均正确。脂肪饱和脉冲的有效性主要取决于场强和场均匀性。在0.3T以下的场强中，水和脂肪峰（以Hz计）非常接近，很难用化学选择性脉冲干净地抑制其中一个。因此，在低场下必须使用另一种脂肪抑制方法（通常是STIR或Dixon）。 
+<a href="/fat-sat-pulses.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+<!-- ################ SECTION FWQUIZ, QUIZ QUESTION  10############## -->
+
+<li style="margin-top: 8px"> 以下哪种翻转角模式不能定义为用于水激发的复合二项式脉冲？
+<ol type="a" id="q_FWQUIZ_9">
+
+<li ><input type=radio name="c_FWQUIZ_9" > 1:1
+</li>
+		
+
+<li id="correct_FWQUIZ_9"><input type=radio name="c_FWQUIZ_9" id="c_FWQUIZ_9"> 1:1:1
+</li>
+<li ><input type=radio name="c_FWQUIZ_9" > 1:2:1
+</li>
+		
+<li ><input type=radio name="c_FWQUIZ_9" >  1:3:3:1 
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_FWQUIZ_9" onclick="showAnswer('FWQUIZ_9')" value="显示答案"></p>
+				
+<p class="explan" id="a_FWQUIZ_9"> 二项式脉冲通常用于选择性水激发作为脂肪抑制的一种手段。二项式脉冲的翻转角遵循(a+b)<sup>n</sup>二项式展开的系数模式：1-1、1-2-1、1-3-3-1等。因此，90°脉冲可以构成为[45°-45°]对、[22.5°-45°-22.5°]三联体或[11.25°-33.75°-33.75°-11.25°]四联体。因此选项(b) 1:1:1不是二项式脉冲。
+<a href="/water-excitation.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+<!-- ################ SECTION FWQUIZ, QUIZ QUESTION  11############## -->
+
+<li style="margin-top: 8px"> STIR技术用于脂肪抑制的局限性包括所有，除了
+<ol type="a" id="q_FWQUIZ_10">
+
+<li ><input type=radio name="c_FWQUIZ_10" > 无法用于检测钆增强。
+</li>
+		
+<li ><input type=radio name="c_FWQUIZ_10" > 除了脂肪外，还抑制其他短T1物质（如蛋白质、血液）。
+</li>
+<li ><input type=radio name="c_FWQUIZ_10" >  多个180°脉冲引起的组织加热。
+</li>
+
+<li id="correct_FWQUIZ_10"><input type=radio name="c_FWQUIZ_10" id="c_FWQUIZ_10"> 由于竞争性信号效应，长T1/长T2病变的可视化降低。
+</li>
+		
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_FWQUIZ_10" onclick="showAnswer('FWQUIZ_10')" value="显示答案"></p>
+				
+<p class="explan" id="a_FWQUIZ_10"> 除(d)外，其他均为有效限制。在常规自旋回波成像中，T1和T2延长的病变对信号强度具有竞争效应（↑T1降低信号，而↑T2增加信号）。在STIR成像中，↑T1和↑T2的效应是叠加的，从而可以改善某些病变（如多发性硬化斑块）的可视化。
+<a href="/stir1.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+		
+
+
+
+
+
+<!-- ################ SECTION FWQUIZ, QUIZ QUESTION  12############## -->
+
+<li style="margin-top: 8px"> 频谱预饱和反转恢复技术可以看作是结合了以下哪些脂肪抑制特性的混合技术
+
+<ol type="a" id="q_FWQUIZ_11">
+<li id="correct_FWQUIZ_11"><input type=radio name="c_FWQUIZ_11" id="c_FWQUIZ_11"> 频谱脂肪饱和（CHESS）+ STIR
+</li>
+		
+
+<li ><input type=radio name="c_FWQUIZ_11" > Dixon技术 + STIR
+</li>
+		
+<li ><input type=radio name="c_FWQUIZ_11" > 频谱脂肪饱和（CHESS）+ 选择性水激发
+</li>
+
+<li ><input type=radio name="c_FWQUIZ_11" >  Dixon技术 + 选择性水激发
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_FWQUIZ_11" onclick="showAnswer('FWQUIZ_11')" value="显示答案"></p>
+				
+<p class="explan" id="a_FWQUIZ_11"> SPIR是一种混合技术，结合了脂肪选择性射频脉冲和扰相梯度（类似于CHESS）以及通过反转延迟机制消除残余纵向脂肪磁化（类似于STIR）。这些自旋操作纯粹涉及脂肪；水共振不受影响。在合适的反转时间消除残余脂肪信号后，任何脉冲序列都可用于成像剩余的水。 
+<a href="/spir.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+<!-- ################ SECTION FWQUIZ, QUIZ QUESTION  13############## -->
+
+<li style="margin-top: 8px"> 比较SPAIR和SPIR的以下哪项陈述是不正确的？
+<ol type="a" id="q_FWQUIZ_12">
+
+<li ><input type=radio name="c_FWQUIZ_12" > SPAIR使用绝热脉冲，而SPIR不使用。
+</li>
+		
+<li ><input type=radio name="c_FWQUIZ_12" > SPAIR使用180°反转脉冲，而SPIR使用100°-120°范围内的脉冲。
+</li>
+
+<li id="correct_FWQUIZ_12"><input type=radio name="c_FWQUIZ_12" id="c_FWQUIZ_12"> SPAIR向组织中沉积的射频能量比SPIR少。
+</li>
+		
+<li ><input type=radio name="c_FWQUIZ_12" >  SPAIR的反转时间比SPIR长。
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_FWQUIZ_12" onclick="showAnswer('FWQUIZ_12')" value="显示答案"></p>
+				
+<p class="explan" id="a_FWQUIZ_12"> SPAIR和SPIR都可被视为CHESS-STIR混合体。SPAIR使用180°绝热脉冲，而SPIR使用100°-120°范围内的非绝热脉冲。因此，SPAIR脉冲在组织中沉积的射频能量比小翻转角的SPIR或CHESS脉冲更多。SPAIR的反转时间比SPIR长，因此在给定TR下成像时间和可获得的层面数方面有更大的损失。 
+<a href="/spair-v-spir.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION FWQUIZ, QUIZ QUESTION  14############## -->
+
+<li style="margin-top: 8px"> 关于绝热射频脉冲的以下哪项陈述是错误的？
+<ol type="a" id="q_FWQUIZ_13">
+
+<li ><input type=radio name="c_FWQUIZ_13" > 它们既有幅度调制也有频率调制。
+</li>
+<li ><input type=radio name="c_FWQUIZ_13" >  它们的发射频率随脉冲演化与幅度同时变化。
+</li>
+		
+<li ><input type=radio name="c_FWQUIZ_13" > 它们对<b>B<sub>1</sub></b>不均匀性的敏感性比其他脉冲低。
+</li>
+
+<li id="correct_FWQUIZ_13"><input type=radio name="c_FWQUIZ_13" id="c_FWQUIZ_13"> 它们通常用于低场应用。
+</li>
+		
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_FWQUIZ_13" onclick="showAnswer('FWQUIZ_13')" value="显示答案"></p>
+				
+<p class="explan" id="a_FWQUIZ_13">只有(d)是错误的。与其他非绝热但频谱选择性脉冲（CHESS、STIR）一样，它们只能用于场强较高、均匀性较好、水和脂肪共振能清晰分离的环境中。<a href="/spair-v-spir.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+		
+		
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--##################################################-->
+<!--############SCORING SECTION Needs to go at end of each subsection-->
+
+</ol><p><input type=button id="show_all_FWQUIZ" onclick="showAllAnswers('FWQUIZ')" value="显示本节所有答案"><span style="font-weight: bold" id="scoretxt_FWQUIZ"></span></p>
+<p><a href="#top">返回页首</a></p></div></div></div>
+</div>
+<!--END OF SCORING SECTION-->

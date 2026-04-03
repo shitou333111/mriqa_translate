@@ -1,0 +1,123 @@
+<div id="content"><div id="wsite-content" class="wsite-elements wsite-not-footer">
+	<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<h2 class="wsite-content-title" style="text-align:center;">生成 SW 图像</h2>
+
+<div class="paragraph" style="text-align:center;"><strong style="color:rgb(135, 135, 135)"><em><font color="#0376be" size="4">磁敏感加权图像是如何获取和处理的？&nbsp;</font></em></strong><strong style="color:rgb(55, 138, 87)"><em><font size="4">&nbsp;</font></em></strong></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-thin" style="padding-top:0px;padding-bottom:10px;margin-left:0px;margin-right:0px;text-align:center">
+<a href='uploads/3/4/5/7/34572113/screen-shot-2017-03-28-at-12-22-14-pm_orig.png' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/screen-shot-2017-03-28-at-12-22-14-pm_orig.png" alt="生成磁敏感加权图像 (SWI)" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div class="paragraph"><em><strong><font color="#24678d">磁敏感加权图像 (SWI)</font></strong></em> 是由 <em><strong><font color="#24678d">梯度回波 (GRE)&nbsp;</font></strong></em>脉冲序列生成的。GRE 序列对组织磁敏感性的差异很敏感，因为它们无法重聚因磁场不均匀性而失相的自旋。</div>
+
+<div class="paragraph">虽然传统的简单 T2* 加权 GRE 序列一直用于 <span style="color:rgb(0, 0, 0)">检测铁/血液产物和钙化</span>，但现代 SWI 序列融合了多项特性和增强功能，使其更为优越。SWI 序列通常以 3D（而非 2D）模式采集，从而可以获得更薄的层厚和更小的体素尺寸。采用三个方向的流动补偿以减少伪影，并采用并行成像以缩短成像时间。在给定的 <em>TR</em> 间隔内，可以采集单个或多个回波。SWI 的一个关键特性是，其幅值和相位信息被独立处理/显示，同时也为诊断目的而进行组合。&nbsp;</div>
+
+<div class="paragraph">典型的成像参数包括 <em>TR</em> = 25-50 ms，<em>TE</em> = 20-40 ms，翻转角 = 15-20&ordm;。随着场强增加，会使用更短的时间和更小的翻转角。</div>
+
+<div class="paragraph">各大 MR 厂商采用的具体方法不同且是专有的，但主要基于与 Haacke 等人（2004 年）首次描述并如下所示的策略类似的方法。使用正交检测，幅值和相位数据被分别重建。<em><strong><font color="#24678d">幅值图像</font></strong></em> 被保存用于诊断目的，以类似自旋密度的对比度显示背景组织。&nbsp;<br /><br />然而，相位数据必须经过进一步处理才能在临床上发挥作用。&nbsp;<em><strong><font color="#24678d">原始相位图像</font></strong></em> 主要受广义磁场不均匀性引起的、大而缓慢变化的“宏观”磁敏感梯度以及颅底空气和骨骼引起的畸变所主导。数字高通滤波可用于去除这些低频波动，并且可以采用额外的局部相位校正算法来减少颅底伪影。最终结果是得到一个 <em><strong><font color="#24678d">滤波后的相位图像</font></strong></em>，该图像被保存并用于诊断目的，如 <a href="phase-of-blood-v-ca.html">后续问答中所述</a>。&nbsp;</div>
+
+<div class="paragraph">接下来创建一个 <em><strong><font color="#24678d">相位蒙版</font></strong></em>，该蒙版将滤波后相位图像的数据缩放到 0-1 的范围，以突出具有不同磁敏感性的组织。幅值图像与该相位蒙版进行多次数字相乘，直到获得期望的相位信息混合效果（在下图中用指数“<em>n</em>”表示）。实际上，通常执行 <em>n = 4</em> 次复数乘法。最终结果是生成一个 <em><strong><font color="#24678d">磁敏感加权 (SW) 图像</font></strong></em>，该图像同时包含幅值和相位信息，并用于临床诊断。通常会显示 SW 图像的 <em><strong><font color="#24678d">最小强度投影 (mIPs)</font></strong></em>，其厚度取决于叠加了多少原始 3D 源图像。</div>
+
+<div><div class="wsite-image wsite-image-border-medium" style="padding-top:5px;padding-bottom:10px;margin-left:0px;margin-right:10px;text-align:skip_to_justify">
+<a href='uploads/3/4/5/7/34572113/swi-processing-with-mip_orig.jpg' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/swi-processing-with-mip_orig.jpg" alt="SWI（磁敏感加权成像）处理" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;"><span style="color:rgb(0, 0, 0)">所有主要的 MR 厂商都提供基于磁敏感性的序列，并使用各自的商品名。西门子将其简称为&nbsp;</span><em style="color:rgb(0, 0, 0)"><strong><font color="#24678d">SWI</font></strong></em><span style="color:rgb(0, 0, 0)">&nbsp;，其方法最接近 Haacke 的方法。GE 提供&nbsp;</span><em style="color:rgb(0, 0, 0)"><strong><font color="#24678d">SWAN（磁敏感加权血管成像），&nbsp;</font></strong></em><span style="color:rgb(0, 0, 0)">飞利浦提供&nbsp;</span><em style="color:rgb(0, 0, 0)"><strong><font color="#24678d">SWIp</font></strong></em><span style="color:rgb(0, 0, 0)">&nbsp;（</span><em style="color:rgb(0, 0, 0)"><strong><font color="#24678d">SWI-相位</font></strong></em><span style="color:rgb(0, 0, 0)">，以前称为&nbsp;</span><em style="color:rgb(0, 0, 0)"><strong><font color="#24678d">VenoBOLD</font></strong></em><span style="color:rgb(0, 0, 0)">），</span>Fujifilm<span style="color:rgb(0, 0, 0)"> 有&nbsp;</span><em style="color:rgb(0, 0, 0)"><strong><font color="#24678d">BSI（血液敏感成像）</font></strong></em><span style="color:rgb(0, 0, 0)">，佳能提供&nbsp;</span><em style="color:rgb(0, 0, 0)"><strong><font color="#24678d">FSBB（流动敏感黑血）</font></strong></em><span style="color:rgb(0, 0, 0)">。&nbsp;</span>&#8203;<br></div>
+
+<div><div id="838948472131142313" align="left" style="width: 100%; overflow-y: hidden;" class="wcustomhtml"><html> <head><script src="gdpr/gdprscript6f19.js?buildTime=1774025472"></script> <script type="text/javascript" 
+></script> 
+<script type="text/javascript">
+		$(function() {$('#Q').click(function() {$('.Q').toggle(500); return false;});});</script></head><body>
+<a href="#" id=Q><h3><font color="#378a57">进阶讨论（显示/隐藏）»</font></h3></a><div class=Q style="display:none;">
+
+<!--content goes below here-->
+
+暂无补充材料。请稍后再来查看！
+
+
+<!--content goes above here-->
+</div></body>
+<!-- Mirrored from mriquestions.com/making-an-sw-image.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 21 Mar 2026 06:09:28 GMT -->
+</html></div>
+
+
+
+</div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div><div class="paragraph" style="text-align:skip_to_justify;"><strong>参考文献<br />&nbsp;&nbsp; &nbsp;&nbsp;</strong>Chavhan GB., Babyn PS, Thomas B, Shroff MM, Haacke EM. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/t2__gre_radiographics.pdf">Principles, techniques, and applications of T2*-based MR imaging and its special applications</a>. Radiographics 2009; 29:1433-1449. (good review of traditional GRE T2*-weighted imaging with a lead-in to SWI)<br /><span><font color="#878787">&nbsp; &nbsp; &nbsp;</font></span><span style="color:rgb(0, 0, 0)">Duyn J.&nbsp;</span><a href="https://mriquestions.com/uploads/3/4/5/7/34572113/duyn_susceptibiltity.pdf">MR susceptibility imaging</a><span style="color:rgb(0, 0, 0)">. J Magn Reson 2013; 229:198-207. (good historical review)</span><br /><span style="color:rgb(0, 0, 0)">&nbsp;&nbsp; &nbsp;&nbsp;Haacke EM, Xu Y, Cheng Y-C, Reichenbach JR.&nbsp;</span><a href="https://mriquestions.com/uploads/3/4/5/7/34572113/haacke_et_al-2004-magnetic_resonance_in_medicine.pdf">Susceptibility weighted imaging (SWI)</a><span style="color:rgb(0, 0, 0)">. Magn Reson Med 2004; 52:612-618. (Describes processing method now used for most commercial SWI sequences)</span><br /><span style="color:rgb(0, 0, 0)">&nbsp;&nbsp; &nbsp;&nbsp;Haacke EM, Mittal S, Wu Z, Neelavalli J, Cheng Y-CN.&nbsp;</span><a href="https://mriquestions.com/uploads/3/4/5/7/34572113/haacke_asnr_part_1.pdf">Susceptibility-weighted imaging: technical aspects and clinical applications, part 1</a><span style="color:rgb(0, 0, 0)">. AJNR Am J Neuroradiol 2009; 30:19-30. (technical features)</span><br /><span style="color:rgb(0, 0, 0)">&nbsp;&nbsp; &nbsp;&nbsp;Mittal S, Wu Z, Neelavalli J, Haacke EM.&nbsp;</span><a href="https://mriquestions.com/uploads/3/4/5/7/34572113/haacke_asnr_part_2.pdf">Susceptibility-weighted imaging: technical aspects and clinical applications, part 2</a><span style="color:rgb(0, 0, 0)">. AJNR Am J Neuroradiol 2009; 30:232-252. (clinical applications)<br />&nbsp;&nbsp; &nbsp;&nbsp;</span>Young IR, Khenia S, Thomas DGT, et al. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/clinical_magnetic_susceptibility_mapping_of_the.2.pdf">Clinical magnetic susceptibility mapping of the brain</a>. J Comput Assist Tomogr 1987; 11:2-6. (First demonstration of clinical SWI)</div><div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;"><strong>相关问题</strong><br /><em><strong>&nbsp; &nbsp; &nbsp;<a href="phase-of-blood-v-ca.html">如何在 SWI 相位图上区分血液与钙化？</a></strong></em></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div style="text-align:skip_to_justify;"><div style="height: 0px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-normal" href="whats-wrong-with-gre.html" target="_blank">
+<span class="wsite-button-inner">← &nbsp;上一问题</span>
+</a>
+<div style="height: 0px; overflow: hidden;"></div></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div style="text-align:right;"><div style="height: 0px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-normal" href="phase-of-blood-v-ca.html" >
+<span class="wsite-button-inner">下一问题 &nbsp;→</span>
+</a>
+<div style="height: 0px; overflow: hidden;"></div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div style="text-align:center;"><div style="height: 0px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-highlight" href="complete-list-of-questions.html" >
+<span class="wsite-button-inner">↑&nbsp;问题完整列表 ↑</span>
+</a>
+<div style="height: 10px; overflow: hidden;"></div></div>
+</div></div>

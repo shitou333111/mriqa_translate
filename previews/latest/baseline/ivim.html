@@ -1,0 +1,161 @@
+<div id="content"><div id="wsite-content" class="wsite-elements wsite-not-footer">
+	<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<h2 class="wsite-content-title" style="text-align:center;">IVIM 成像</h2>
+
+<div class="paragraph" style="text-align:center;"><strong style="color:rgb(135, 135, 135)"><em><font color="#0376be" size="4">什么是体素内不相干运动 (IVIM)？这与扩散相同吗？&nbsp;</font></em></strong></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-thin" style="padding-top:0px;padding-bottom:10px;margin-left:0px;margin-right:0px;text-align:center">
+<a href='uploads/3/4/5/7/34572113/screen-shot-2017-04-17-at-3-35-58-pm_orig.png' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/screen-shot-2017-04-17-at-3-35-58-pm_orig.png" alt="IVIM" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;"><span style="color:rgb(0, 0, 0)">现代扩散成像之父 Denis Le Bihan</span>&nbsp;在 20 世纪 80 年代创造了&nbsp;<em><strong><font color="#24678d">体素内不相干运动 (IVIM)</font></strong></em>&nbsp;这一术语，用以指代在 MR 实验过程中水分子在体素内的微观平移。当在 MR 信号演化期间施加梯度时，IVIM 会导致自旋失相和信号丢失。</div>
+
+<div class="paragraph"><span style="color:rgb(0, 0, 0)">如果梯度相对较强</span>，IVIM 引起的信号丢失主要归因于<em><strong><font color="#24678d">扩散</font></strong></em>——即水分子在细胞内及周围的布朗运动。然而，当使用较弱的梯度时，第二种 IVIM 机制也会导致信号丢失——毛细血管网络中的血液微循环。自 Le Bihan 的开创性论文发表后的 25 年里，微观的<em><strong><font color="#24678d">灌注</font></strong></em>效应在很大程度上被忽视了，但最近在如今被称为<em><strong><font color="#24678d">IVIM 成像</font></strong></em>的领域中迎来了复兴。</div>
+
+<div class="paragraph">如之前的问答所述，现代成像系统测量每个体素在有和无扩散敏感梯度情况下的&nbsp;MR 信号强度 (<em><strong>S</strong></em>)。通常只使用两个 <em>b</em> 值：非常<em>低</em>的（例如，b= 0-50&nbsp;<span style="color:rgb(0, 0, 0); font-weight:400">s/mm&sup2;</span>&nbsp;）和<em>高</em>的（例如 800-1000&nbsp;<span style="color:rgb(0, 0, 0); font-weight:400">s/mm&sup2;）。</span>&nbsp;根据这两个测量值，可以计算出<em><strong><font color="#24678d">表观扩散系数 (ADC)</font></strong></em>，这是一个有用但粗略的指标，基于一个单指数模型，该模型将 MR 信号强度 (<em><strong>S</strong></em>) 相对于基线 (<em><strong>S<font size="2">o</font></strong></em>) 表示为&nbsp;&nbsp;<br></div>
+
+<div><div id="356637074807511541" align="center" style="width: 100%; overflow-y: hidden;" class="wcustomhtml"><div><h3><i><b>S</b> = <b>S<sub>o</sub></b>e<sup>−<b>b•ADC</sup></b></i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        <small></b><i>或</i></small>     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;     <i>ln</b><b>(S)</b> = ln(<b>S<sub>o</sub>)</b> − <b>b•ADC</b></i></center></h3> </div></div>
+
+
+
+</div>
+
+<div class="paragraph">在此模型下，信号以&nbsp;<em>ln<strong>&nbsp;(信号)</strong></em>&nbsp;对 <em><strong>b</strong></em> 绘制的半对数图应是一条斜率为 <em><strong>&minus;</strong></em><em><strong>ADC</strong></em> 的直线（下图中的红色实线）。<br></div>
+
+<div><div class="wsite-image wsite-image-border-none" style="padding-top:20px;padding-bottom:10px;margin-left:10px;margin-right:0px;text-align:center">
+<a href='uploads/3/4/5/7/34572113/screenshot-2025-11-09-at-2-28-26-pm_orig.png' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/screenshot-2025-11-09-at-2-28-26-pm_orig.png" alt="IVIM 与 DKI 峰度成像" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%"><br>DWI 中预期的 MR 信号偏离单指数模型的情况。在低 <i>b</i> 值时，必须考虑微观灌注引起的 IVIM 效应（紫色），而在高 <i>b</i> 值时，必须考虑峰度效应（绿色）。</div>
+</div></div>
+
+<div class="paragraph">然而，当使用大量不同的 <em>b</em> 值进行仔细的信号测量时，会观察到与这种简化的单指数模型存在相当大的偏差。在低 <em>b</em> 值下（<span style="color:rgb(0, 0, 0)">即 &le; 300 s/mm&sup2;），信号从 <em>S<font size="2">o</font> </em>下降的速度比预期的要快，这是由于微观灌注导致的 IVIM 损失增加。在较大的 <em>b</em> 值下（</span>&ge;&nbsp;1000&minus;1500 s/mm&sup2;），信号通常比粗略的 ADC 线预期的要大，这种效应是由于扩散概率分布的非高斯形状（<em><strong><font color="#24678d">峰度</font></strong></em>）造成的，将在<a href="diffusion-kurtosis.html">下一篇问答</a>中进一步讨论。<br></div>
+
+<div class="paragraph">为了解释这种在低和中 <em>b</em> 值下的偏差，Le Bihan 提出了一个双指数模型，同时考虑了扩散和灌注效应。&nbsp; 在此，他区分并命名了两个扩散系数：<em><strong><font color="#24678d">D（“纯”扩散）</font></strong></em>和<em><strong><font color="#24678d">D*（“伪”扩散）</font></strong></em>，前者反映血管外间隙的扩散，后者反映由于在半随机排列的毛细血管中灌注引起的失相。血管密度由一个无量纲的<em><strong><font color="#24678d">灌注分数 (f)</font></strong></em>描述，即毛细血管占据的体素体积百分比。相反，<em><strong>(1&minus;f) </strong></em>反映了仅发生纯扩散的血管外间隙。根据曲线初始部分的陡峭程度（这又取决于毛细血管密度和灌注），<em><strong>D*</strong></em> 可能比纯<em><strong>D</strong></em>大 5-10 倍。这些效应使得双指数模型可以简化为：&nbsp;<br></div>
+
+<div><div id="660848178198084209" align="center" style="width: 100%; overflow-y: hidden;" class="wcustomhtml"><h3><b><i>S/S<sub>o</sub> = fe<sup>−bD*</sup> + (1−f)e<sup>−bD</sup></h3></i></b></div>
+
+
+
+</div>
+
+<div class="paragraph">通过在多个 <em>b</em> 值下采集 DWI 图像并将数据拟合到上述方程，可以估计 <em><strong>f</strong></em>、<em><strong>D</strong></em> 和 <em><strong>D*</strong></em>，并为每个参数创建图。通常获取 6 到 10 个数据集，<em>b</em> 值范围在 0 到 1000 <span style="color:rgb(0, 0, 0)">s/mm&sup2;</span> 之间，其中至少一半的测量值在小于 250 <span style="color:rgb(0, 0, 0)">s/mm&sup2;</span> 的条件下进行。</div>
+
+<div class="paragraph">作为此类计算的一个例子及其潜在临床应用价值的提示，下图显示了&nbsp;</div>
+
+<div class="paragraph">IVIM 成像在脑、前列腺、肝脏和软组织肿瘤方面已报道了一些有趣的结果，其中灌注分数已被证明与其他评估血管分布的方法相关。下面展示了两个例子。</div>
+
+<div><div class="wsite-image wsite-image-border-none" style="padding-top:10px;padding-bottom:10px;margin-left:0px;margin-right:0px;text-align:center">
+<a href='uploads/3/4/5/7/34572113/d-d-f-ivim_orig.jpg' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/d-d-f-ivim_orig.jpg" alt="IVIM 成像" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%">黏液样脂肪肉瘤的 IVIM 成像，显示了表观扩散系数 (<i>D</i>)、伪扩散系数 (<i>D*</i>) 和灌注分数 (<i>f</i>) 的图。改编自 Du 等人 (2015)，遵循 CC BY 协议。</div>
+</div></div>
+
+<div><div class="wsite-image wsite-image-border-none" style="padding-top:10px;padding-bottom:10px;margin-left:0px;margin-right:0px;text-align:center">
+<a href='uploads/3/4/5/7/34572113/screenshot-2025-11-12-at-8-12-44-pm_orig.png' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/screenshot-2025-11-12-at-8-12-44-pm_orig.png" alt="图片" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%">顶行：边缘强化的胶质母细胞瘤，在 DSC 图像上显示血流量增加（<i>箭头</i>）。<br>
+
+底行：<i>f</i> 图清晰地突出了肿瘤边缘灌注高的区域（<i>箭头</i>）。<i>D</i> 图显示主要在肿瘤前缘有一个小的扩散受限区域（<i>箭头</i>）。<i>D*</i> 图显示肿瘤组织内快速扩散值增加（<i>箭头</i>）。     
+
+[改编自 Puig 等人，遵循 CC-BY 协议]</div>
+</div></div>
+
+<div class="paragraph">然而，在估计 <em>D</em>* 时存在相当大的误差，我个人认为这些估计不可靠，在不同中心和不同研究之间变化太大。不仅 <em>D</em>*，所有 IVIM 参数估计都受到运动、噪声以及分泌性生理过程（如腺体和肾小管流动）的影响，这些过程很难与毛细血管灌注区分开来。因此，我目前对 IVIM 成像在我们未来的成像技术库中将发挥多大作用仍持一定的怀疑态度。</div>
+
+<div><div id="377066198732583557" align="left" style="width: 100%; overflow-y: hidden;" class="wcustomhtml"><html> <head><script src="gdpr/gdprscript6f19.js?buildTime=1774025472"></script> <script type="text/javascript" 
+></script> 
+<script type="text/javascript">
+		$(function() {$('#Q').click(function() {$('.Q').toggle(500); return false;});});</script></head><body>
+<a href="#" id=Q><h3><font color="#378a57">进阶讨论 (显示/隐藏)»</font></h3></a><div class=Q style="display:none;">
+
+<!--content goes below here-->
+
+暂无补充材料。请稍后再来查看！
+
+
+<!--content goes above here-->
+</div></body>
+<!-- Mirrored from mriquestions.com/ivim.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 21 Mar 2026 06:12:23 GMT -->
+</html></div>
+
+
+
+</div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div><div class="paragraph" style="text-align:skip_to_justify;"><strong>参考文献</strong><br /><span style="color:rgb(0, 0, 0)">&nbsp; &nbsp; &nbsp;Du J, Li K, Zhang W, et al. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/medi-94-e1028_open_i_for_ivim_images.pdf">Intravoxel incoherent motion MR imaging: comparison of diffusion and perfusion characteristics for differential diagnosis of soft tissue tumors</a>. Medicine 2015; 94:1-8. &nbsp; &nbsp;<br />&nbsp;&nbsp; &nbsp; Iima M, Le Bihan D. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/le_bihan_dwi_2015_review_radiol_2e2015150244.pdf">Clinical intravoxel incoherent motion and diffusion MR imaging: past, present and future</a>. Radiology 2016; 278:13-32.<br />&nbsp;&nbsp; &nbsp; Koh D-M, Collins DJ, Orton MR. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/koh_ivim_body_ajr.10.5515.pdf">Intravoxel incoherent motion in body diffusion-weighted MRI: reality and challenges</a>. AJR Am J Roentgenol 2011; 196;1351-1361.&nbsp;</span><br />&nbsp; &nbsp; &nbsp;<font color="#8d2424" size="4">&#10026;&nbsp;</font>Le Bihan D. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/1-s2.0-s1053811917310868-main.pdf">What can we see with IVIM MRI?</a>&nbsp; Neuroimage 2019; 187:56-67.&nbsp; [<a href="https://doi.org/10.1016/j.neuroimage.2017.12.062" target="_blank">DOi LINK</a>]<br /><span style="color:rgb(0, 0, 0)">&nbsp; &nbsp; &nbsp;</span><font color="#8d2424" size="4">&#10026;&nbsp;</font><span style="color:rgb(0, 0, 0)">Le Bihan D, Breton E, Lallemand D, et al.&nbsp;</span><a href="http://mri-q.com/uploads/3/4/5/7/34572113/dlbihanradiology1986.pdf">MR imaging of intravoxel incoherent motions: applications to diffusion and perfusion in neurologic disorders</a><span style="color:rgb(0, 0, 0)">. Radiology 1986; 161:401-407.</span><font color="#878787">&nbsp;</font><span style="color:rgb(0, 0, 0)">(This seminal paper describes IVIM, separating perfusion and diffusion effects.)</span><font color="#878787"> &nbsp; &nbsp;</font><br />&nbsp; &nbsp; &nbsp;Le Bihan D, Breton E, Lallemand D, et al. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/lebihan88_radiology.pdf">Separation of diffusion and perfusion in intravoxel incoherent motion MR imaging</a>. Radiology 1988; 168:497-505.<br />&nbsp; &nbsp; &nbsp;Puig J, S&aacute;nchez-Gonz&aacute;lez J, Blasco G, et al. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/ivim_plos.pdf">Intravoxel incoherent motion metrics as potential biomarkers for survival in glioblastoma</a>. PLoS ONE 2016; 11(7): e0158887. [<a href="https://doi.org/10.1371/journal.pone.0158887" target="_blank">DOI LINK</a>]<br />&nbsp; &nbsp; &nbsp;<font color="#8d2424" size="4">&#10026;&nbsp;</font>Raju J, Shyna A, John A, Pillai MJ.&nbsp; <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/s00723-025-01758-z.pdf">Transforming medical imaging with IVIM MR Imaging:<br />A comprehensive review of advances and challenges in perfusion and diffusion analysis</a>.&nbsp; Applied Magn Reson 2025; 56:803-843.&nbsp; [<a href="https://doi.org/10.1007/s00723-025-01758-z" target="_blank">DOI LINK</a>]<br></div><div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;"><strong>相关问题</strong><br /><em><strong><a href="what-is-the-b-value.html">&nbsp; &nbsp; &nbsp;什么是 b 值？&nbsp;如何选择它？&nbsp;&nbsp;</a></strong></em><br /><em><strong>&nbsp; &nbsp; &nbsp;<a href="diffusion-kurtosis.html">什么是扩散峰度？它与常规“扩散”有何不同？&nbsp;&nbsp;</a></strong></em></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div style="text-align:skip_to_justify;"><div style="height: 0px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-normal" href="whole-body-dwi.html" >
+<span class="wsite-button-inner">← &nbsp;上一问题</span>
+</a>
+<div style="height: 0px; overflow: hidden;"></div></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div style="text-align:right;"><div style="height: 0px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-normal" href="diffusion-kurtosis.html" >
+<span class="wsite-button-inner">下一问题 &nbsp;→</span>
+</a>
+<div style="height: 0px; overflow: hidden;"></div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div style="text-align:center;"><div style="height: 0px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-highlight" href="complete-list-of-questions.html" >
+<span class="wsite-button-inner">↑&nbsp;问题完整列表 ↑</span>
+</a>
+<div style="height: 10px; overflow: hidden;"></div></div>
+</div></div>

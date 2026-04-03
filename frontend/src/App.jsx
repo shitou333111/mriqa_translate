@@ -2880,12 +2880,18 @@ function ReviewPage({ slug, approveSignal, onApproveDone, onRollback }) {
 function EditRoute({ saveSignal, onSaveDone, onSave, onUnsavedChange }) {
   const { slug } = useParams();
   const activeId = normalizeRouteId(slug || "index");
+  if (IS_GITHUB_PAGES) {
+    return <Navigate to={`/${encodeURIComponent(activeId)}`} replace />;
+  }
   return <EditPage slug={activeId} saveSignal={saveSignal} onSaveDone={onSaveDone} onSave={onSave} onUnsavedChange={onUnsavedChange} />;
 }
 
 function ReviewRoute({ approveSignal, onApproveDone, onRollback }) {
   const { slug } = useParams();
   const activeId = normalizeRouteId(slug || "index");
+  if (IS_GITHUB_PAGES) {
+    return <Navigate to={`/${encodeURIComponent(activeId)}`} replace />;
+  }
   return <ReviewPage slug={activeId} approveSignal={approveSignal} onApproveDone={onApproveDone} onRollback={onRollback} />;
 }
 
@@ -3702,8 +3708,18 @@ export default function App() {
         isEditing={isEditing}
         isReviewing={isReviewing}
         activeSlug={activeSlug}
-        onEnterEdit={() => navigate(`/edit/${encodeURIComponent(activeSlug || defaultSlug)}`)}
+        onEnterEdit={() => {
+          if (IS_GITHUB_PAGES) {
+            window.alert("GitHub Pages 为静态预览，不支持编辑页面");
+            return;
+          }
+          navigate(`/edit/${encodeURIComponent(activeSlug || defaultSlug)}`);
+        }}
         onEnterReview={() => {
+          if (IS_GITHUB_PAGES) {
+            window.alert("GitHub Pages 为静态预览，不支持审核页面");
+            return;
+          }
           if (guideTourStage === GUIDE_TOUR_STAGE_REVIEW_ENTRY) {
             navigate(`/review/${encodeURIComponent(activeSlug || defaultSlug)}`);
             return;

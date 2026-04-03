@@ -13,7 +13,6 @@ concurrency:
 
 jobs:
   build-and-deploy:
-
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -58,10 +57,11 @@ jobs:
         env:
           BASE_PATH: ${{ github.event_name == 'pull_request' && format('/mriqa_translate/previews/pr-{0}', github.event.number) || '/mriqa_translate/previews/latest' }}
         run: |
-          mkdir -p frontend/dist/en frontend/dist/zh frontend/dist/baseline
+          mkdir -p frontend/dist/en frontend/dist/zh frontend/dist/baseline frontend/dist/baseling
           cp -a en/. frontend/dist/en/
           cp -a zh/. frontend/dist/zh/
           cp -a baseline/. frontend/dist/baseline/
+          cp -a baseline/. frontend/dist/baseling/
           cat > frontend/dist/404.html <<EOF
           <!doctype html>
           <html>
@@ -115,10 +115,11 @@ jobs:
         env:
           BASE_PATH: /mriqa_translate
         run: |
-          mkdir -p frontend/dist/en frontend/dist/zh frontend/dist/baseline
+          mkdir -p frontend/dist/en frontend/dist/zh frontend/dist/baseline frontend/dist/baseling
           cp -a en/. frontend/dist/en/
           cp -a zh/. frontend/dist/zh/
           cp -a baseline/. frontend/dist/baseline/
+          cp -a baseline/. frontend/dist/baseling/
           cat > frontend/dist/404.html <<EOF
           <!doctype html>
           <html>

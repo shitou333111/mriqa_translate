@@ -1,0 +1,179 @@
+<div id="content"><div id="wsite-content" class="wsite-elements wsite-not-footer">
+	<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<h2 class="wsite-content-title" style="text-align:center;">Nyquist N/2 Ghosts<br /></h2>
+
+<div class="paragraph" style="text-align:center;"><strong style="color: rgb(135, 135, 135); font-size: large; line-height: 1.5;"><em><font color="#0376be">On EPI we commonly see three overlapping images. It looks somewhat like a phase wraparound artifact. What is causing this?&nbsp;</font></em></strong><br /></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div class="paragraph" style="text-align:skip_to_justify;">&nbsp;</div>
+
+<div><div class="wsite-image wsite-image-border-thin" style="padding-top:0;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
+<a href='uploads/3/4/5/7/34572113/2567680_orig.png' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/2567680_orig.png" alt="Nyquist N/2 Ghost artifact MRI" style="width:100%;max-width:1100px" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:54.317548746518%; padding:0 15px;">
+					
+						
+
+<div class="paragraph" style="text-align:skip_to_justify;">The artifact you are describing is called the <strong><em><font color="#24678d">Nyquist N/2 Ghost</font></em></strong>. It occurs with echo-planar imaging sequences that have a zig-zag trajectory through <em>k</em>-space. In head MRI it is sometimes referred to as the "Three Brains Artifact".&nbsp;</div>
+
+<div class="paragraph" style="text-align:skip_to_justify;">EPI pulse sequences are composed of a train of echoes, one echo generated for each line of <em>k</em>-space traversed. In zig-zag acquisition, every second echo is acquired in an alternate direction. For image reconstruction, even numbered echoes must be time-reversed so that match the odd numbered echoes before Fourier transformation. &nbsp;</div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:45.682451253482%; padding:0 15px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-thin" style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
+<a href='uploads/3/4/5/7/34572113/6562_orig.jpg' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/6562.jpg" alt="Nyquist N/2 Ghost artifact MRI" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%">Nyquist N/2 Ghost Artifact</div>
+</div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:52.089136490251%; padding:0 15px;">
+					
+						
+
+<div class="paragraph" style="text-align:skip_to_justify;">If the forward and backward echoes are not perfect mirror images of each other, then artifacts are introduced into the image processing. Even a simple delay of the start of the first echo will be propagated into all later echoes resulting in slight timing differences between the peaks of odd- and even-numbered echoes. When the Fourier transform is performed, this phase error results in signal intensity displaced in the phase-encode direction halfway across the image. If there are N pixels across the FOV, this aliased ghost appears shifted N/2 pixels relative to the main image positioned at the correct location.&nbsp;</div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:47.910863509749%; padding:0 15px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-thin" style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
+<a href='uploads/3/4/5/7/34572113/6214368_orig.gif' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/6214368.gif" alt="Nyquist N/2 Ghost artifact MRI; zig-zag k-space trajectory" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%">Zig-zag <i>k</i>-space trajectory as a cause of Nyquist N/2 ghosts due to slight timing differences between peaks of odd and even echoes.</div>
+</div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;">Nyquist ghosts can result from many possible sources including poor shimming, gradient coil heating, patient motion, receiver filter asymmetry, susceptibility, and reconstruction errors. The most common cause, however, is the induction of&nbsp;<strong><em><font color="#24678d">eddy currents</font></em></strong>&nbsp;in coils and the magnet housing in response to rapidly changing gradient pulses. These eddy currents, in turn, produce local fields that distort <strong>B<font size="1">o</font></strong> and add phase shifts to the data. The even- and odd-numbered lines have oppositely directed readout gradients. This means that alternate lines will have opposite eddy-current-induced phase shifts.&nbsp;</div>
+
+<div class="paragraph" style="text-align:skip_to_justify;">Using oblique slices may also contribute to the production of Nyquist N/2 ghosts. Oblique imaging requires simultaneous application of the three physical gradients (G<font size="1">x</font>, G<font size="1">y</font>, and G<font size="1">z</font>) in various mixtures throughout image acquisition. However, each physical gradient has a unique electrical inductance and responds differently to being switched on and off. If the three gradients do not activate and deactivate at exactly the same time, phase errors may occur. Sometimes simply adjusting slice obliquity (either more or less) will reduce the Nyquist ghosts.</div>
+
+<div class="paragraph" style="text-align:skip_to_justify;">Other methods to reduce Nyquist N/2 ghosts include re-shimming, reducing echo train length, lowering the phase-encoding resolution, avoiding multi-shot (segmented) EPI, and employing parallel imaging acceleration. If these methods do not work and the artifact persists over multiple subjects, then more extensive servicing by an engineer to recalibrate the gradients and eddy current compensation may be required.</div>
+
+<div><div id="144196677397841732" align="left" style="width: 100%; overflow-y: hidden;" class="wcustomhtml"><html> <head><script src="gdpr/gdprscript6f19.js?buildTime=1774025472"></script> <script type="text/javascript" 
+></script> 
+<script type="text/javascript">
+		$(function() {$('#Q').click(function() {$('.Q').toggle(500); return false;});});</script></head><body>
+<a href="#" id=Q><h3><font color="#378a57">Advanced Discussion (show/hide)»</font></h3></a><div class=Q style="display:none;">
+
+<!--content goes below here-->
+
+<p>N/2 ghost correction is now usually automated and invisible to the user. However, options exist on some scanners for large array (32+channel) coils where local instabilities may cause ghost-correction algorithms to fail.</p>
+
+<p>An EPI pulse sequence called <b><i><font color="#24678d">fly-back EPI</font></b></i>fly-back EPI uses all positive or all negative readout gradients, eliminating zig-zag phase errors, and is N/2-ghost free. However, fly-back EPI places much higher demands on gradients and switching rate is limited because of peripheral nerve stimulation.  Additionally, because the time interval between readout periods is increased, increasing spatial distortion is traded for the elimination of N/2 ghosts.</p>
+
+<!--content goes above here-->
+</div></body>
+<!-- Mirrored from mriquestions.com/nyquist-n2-ghosts.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 21 Mar 2026 06:36:25 GMT -->
+</html></div>
+
+
+
+</div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;"><strong>References</strong><br /><font color="#878787">&nbsp; &nbsp; &nbsp;</font>Buonocore MH, Gao L. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/nyquist_ghost_1910380114_ftp.pdf">Ghost artifact reduction for echo planar imaging using image phase correction</a>. Magn Reson Med 1997; 38:89-100.<br />&nbsp; &nbsp; &nbsp;<span style="background-color: transparent;">Reeder SB, Atalar E, Bolster Jr BD, McVeigh ER. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/n_over_2_ghosting_nihms-27248.pdf">Quantification and reduction of ghosting artifacts in interleaved echo-planar imaging.</a> Magn Reson Med 1997; 38:429-439.</span><br />&nbsp; &nbsp; &nbsp;Yang QX, Posse S, Le Bihan D, Smith MB. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/yang_nyquist_ghost_1995.pdf">Double-sampled echo-planar imaging at 3 Tesla</a>. J Magn Reson 1996; 113:145-150.<br /><br /></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;"><strong>Related Questions</strong><br /><strong><em><a href="eddy-current-problems.html">&nbsp; &nbsp; &nbsp;<span style="text-align: center;">I've heard that "eddy currents" cause problems for imaging. &nbsp;What are they?&nbsp;</span><span style="text-align: center;">&nbsp;</span></a></em></strong></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div style="text-align:skip_to_justify;"><div style="height: 10px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-normal" href="gibbs-artifact.html" >
+<span class="wsite-button-inner">← &nbsp;Previous Question</span>
+</a>
+<div style="height: 10px; overflow: hidden;"></div></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div style="text-align:right;"><div style="height: 10px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-normal" href="zipper-artifact.html" >
+<span class="wsite-button-inner">Next Question &nbsp;→</span>
+</a>
+<div style="height: 10px; overflow: hidden;"></div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div style="text-align:center;"><div style="height: 10px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-highlight" href="complete-list-of-questions.html" >
+<span class="wsite-button-inner">↑&nbsp;Complete List of Questions ↑</span>
+</a>
+<div style="height: 10px; overflow: hidden;"></div></div>
+</div></div>

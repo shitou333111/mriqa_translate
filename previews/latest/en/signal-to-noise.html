@@ -1,0 +1,158 @@
+<div id="content"><div id="wsite-content" class="wsite-elements wsite-not-footer">
+	<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<h2 class="wsite-content-title" style="text-align:center;">MR Quality Control: SNR</h2>
+
+<div class="paragraph" style="text-align:center;"><strong style="color: rgb(135, 135, 135); font-size: large; line-height: 1.5;"><em><font color="#0376be">How do you measure signal-to-noise in an image?&nbsp;</font></em></strong><strong style="color: rgb(55, 138, 87); font-size: large; line-height: 1.5;"><em>&nbsp;</em></strong><br /></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-thin" style="padding-top:0px;padding-bottom:0px;margin-left:0px;margin-right:0px;text-align:center">
+<a href='uploads/3/4/5/7/34572113/screen-shot-2020-07-28-at-3-32-12-pm_orig.png' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/published/screen-shot-2020-07-28-at-3-32-12-pm9475.png?1595968375" alt="SNR MRI" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div class="paragraph">Before reading this section you should be aware that there is no universally accepted method to measure the MR <em><strong><font color="#24678d">signal-to-noise ratio (SNR)</font></strong></em> applicable to all situations. &nbsp;Both the "signal" and the "noise" must be measured, but that is not as easy to accomplish as one might imagine!</div>
+
+<div class="paragraph"><u><strong>Nature and Characteristics of Noise</strong></u></div>
+
+<div class="paragraph">For quality control purposes, we are concerned with&nbsp;<em>random (background) noise</em>, primarily thermal in nature, arising from radiofrequency coil resistance, electronic noise in the preamplifier, and dielectric and inductive losses in the imaged object. Random background noise should be distinguished from <em>structured noise, </em>such as that arising from ghosting, motion, filtering, and reconstruction. Structured noise is certainly important, particularly for SNR in living subjects, but is not the focus of this Q&amp;A.&nbsp;</div>
+
+<div class="paragraph">He we will restrict our analysis to measurements of signal and noise in and around a uniform phantom obtained from a 2D spin-echo pulse sequence. Experimental evidence supports the concept that random MR noise can be considered "white" (distributed equally across all frequencies) with an amplitude distribution that is approximately Gaussian.&nbsp;</div>
+
+<span class='imgPusher' style='float:left;height:0px'></span><span style='display: table;width:auto;position:relative;float:left;max-width:100%;;clear:left;margin-top:12px;*margin-top:24px'><a href='uploads/3/4/5/7/34572113/rayleigh-rician-gaussian_orig.png' rel='lightbox' onclick='if (!lightboxLoaded) return false'><img src="uploads/3/4/5/7/34572113/editor/rayleigh-rician-gaussian49d8.png?1595961793" style="margin-top: 5px; margin-bottom: 0px; margin-left: 0px; margin-right: 10px; border-width:0; max-width:100%" alt="Rayleigh, Rician and Gaussian" class="galleryImageBorder wsite-image" /></a><span style="display: table-caption; caption-side: bottom; font-size: 90%; margin-top: -0px; margin-bottom: 0px; text-align: center;" class="wsite-caption">Distribution of noise pixels under various conditions</span></span>
+<div class="paragraph" style="display:block;">Because&nbsp;<em style="color:rgb(0, 0, 0)"><strong><font color="#24678d">region-of-interest (ROI)</font></strong></em> measurements are typically made on magnitude-reconstructed images, some correction to the statistics must take place. Recall that "raw" MR data is a complex number with real and imaginary parts.&nbsp;<span style="color:rgb(0, 0, 0)">When converted to a magnitude only image, the pixel values corresponding to noise are no longer Gaussian, but</span>&nbsp;skewed into a so-called <em><strong><font color="#24678d">Rician distribution</font></strong></em>&#8203;. Fortunately, some simplification of the noise statistics occurs in two locations: a) in the center of the phantom where the SNR is intrinsically high, the noise can again be considered Gaussian; and b) in the air outside the phantom where the the pixel distribution follows the <em><strong><font color="#24678d">Rayleigh distribution</font></strong></em>, whose standard deviation is related to the standard deviation of the original Gaussian by a factor of <em>&radic;</em><span style="color:rgb(34, 34, 34)">(</span><em>2&minus;&pi;/2</em>) &asymp; 0.66.&nbsp;</div>
+<hr style="width:100%;clear:both;visibility:hidden;"></hr>
+
+<div class="paragraph"><u><strong>Methods for Measuring SNR with Phantoms</strong></u></div>
+
+<div class="paragraph"><em style="color:rgb(0, 0, 0)"><strong></strong></em>The<em style="color:rgb(0, 0, 0)"><strong><font color="#24678d"> National Manufacturers Electrical Association (NEMA)</font></strong></em><span style="color:rgb(0, 0, 0)">&nbsp;provides several methods for measuring the SNR in a phantom, two of which are most commonly used.</span><br /></div>
+
+<span class='imgPusher' style='float:right;height:0px'></span><span style='display: table;width:275px;position:relative;float:right;max-width:100%;;clear:right;margin-top:0px;*margin-top:0px'><a href='uploads/3/4/5/7/34572113/snr-measurements_orig.png' rel='lightbox' onclick='if (!lightboxLoaded) return false'><img src="uploads/3/4/5/7/34572113/published/snr-measurements7127.png?1595964717" style="margin-top: 5px; margin-bottom: 10px; margin-left: 0px; margin-right: 10px; border-width:1px;padding:3px; max-width:100%" alt="Picture" class="galleryImageBorder wsite-image" /></a><span style="display: table-caption; caption-side: bottom; font-size: 90%; margin-top: -10px; margin-bottom: 10px; text-align: center;" class="wsite-caption">A uniform phantom with regions of interest identified for measuring signal (S) and noise (N)</span></span>
+<div class="paragraph" style="display:block;">In the first method pictured right, a circular ROI to measure mean signal (<em>S</em>) is chosen that incorporates most of the phantom (but avoiding the edges). Random noise (<em>N</em>) is measured as the average standard deviation of pixel intensity from air from four square ROIs located at the corners of the image. (The location of these ROIs is to avoid structured noise from the phantom propagated along the phase and frequency axes). The measured&nbsp;<em>SNR = S/N</em> must then be multiplied by the 0.66 Rayleigh distribution correction factor to calculate the true SNR. If more than one receive coil is used for data collection, an additional correction factor of up to 8% (depending on number of coils) may also need to be applied.&nbsp;</div>
+<hr style="width:100%;clear:both;visibility:hidden;"></hr>
+
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:57.083333333333%; padding:0 15px;">
+					
+						
+
+<div class="paragraph">A second NEMA method measures noise statistics within the phantom itself. A circular central ROI is defined as before. Two images are then obtained in the same location in rapid succession. Signal (<em>S</em>) is the mean pixel value within the ROI of these first two images. The two images are then subtracted from one another and the difference data analyzed. <span style="color:rgb(0, 0, 0)">Ideally the proton signal from the phantom itself would be eliminated leaving only noise behind.&nbsp;&nbsp;The standard deviation of pixel values within the ROI of the subtracted image is an estimate of the random noise (assumed to be Gaussian). But because this calculation involves a difference operation, the true SNR must be corrected by a factor of <em>1/</em></span><em><em style="color:rgb(0, 0, 0)">&radic;</em></em><em style="color:rgb(0, 0, 0)">2&nbsp;</em><span style="color:rgb(0, 0, 0)">&asymp;&nbsp;</span>0.71. An additional multi-receive coil correction may also be necessary as in the first method.<em style="color:rgb(0, 0, 0)">&nbsp;</em></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:42.916666666667%; padding:0 15px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-none" style="padding-top:20px;padding-bottom:10px;margin-left:10px;margin-right:0px;text-align:center">
+<a href='uploads/3/4/5/7/34572113/screen-shot-2020-07-22-at-12-26-26-pm_orig.png' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/published/screen-shot-2020-07-22-at-12-26-26-pmf7ed.png?1595968759" alt="Picture" style="width:259;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%">Subtraction of two successively obtained magnitude images to estimate noise (N) within the phantom</div>
+</div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div><div id="715697376603220529" align="left" style="width: 100%; overflow-y: hidden;" class="wcustomhtml"><html> <head><script src="gdpr/gdprscript6f19.js?buildTime=1774025472"></script> <script type="text/javascript" 
+></script> 
+<script type="text/javascript">
+		$(function() {$('#Q').click(function() {$('.Q').toggle(500); return false;});});</script></head><body>
+<a href="#" id=Q><h3><font color="#378a57">Advanced Discussion (show/hide)»</font></h3></a><div class=Q style="display:none;">
+
+<!--content goes below here-->
+
+No supplementary material yet.  Check back soon.
+
+
+<!--content goes above here-->
+</div></body>
+<!-- Mirrored from mriquestions.com/signal-to-noise.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 21 Mar 2026 06:04:54 GMT -->
+</html></div>
+
+
+
+</div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;"><strong>References<br />&nbsp; &nbsp; &nbsp;</strong>C<span style="color:rgb(34, 34, 34)">&aacute;</span>rdenas-Blanco A, Tejos, Irarrazaval P, Cameron I. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/noise_cardenas-blanco-conceptsinmagnetic-2008-32a-409.pdf">Noise in magnitude magnetic resonance images</a>. Concepts Magn Reson Part A 2008; 32:409-416.&nbsp;[<a href="https://doi.org/10.1002/cmr.a.20124" target="_blank">DOI Link</a>]<br /><span style="color:rgb(0, 0, 0)">&nbsp; &nbsp; &nbsp;Dietrich O, Raya JG, Reeder SB, et al.&nbsp;<a href="https://mriquestions.com/uploads/3/4/5/7/34572113/jmri_2007_dietrich_snr_measurements_preprint.pdf">Measurement of signal-to-noise ratios in MR images: Influence of&nbsp;</a></span><span style="color:rgb(0, 0, 0)"><a href="https://mriquestions.com/uploads/3/4/5/7/34572113/jmri_2007_dietrich_snr_measurements_preprint.pdf">multi-channel coils, parallel imaging, and reconstruction filters</a>.&nbsp;J Magn Reson Imaging 2007; 26: 375-385.&nbsp;</span>[<a href="https://doi.org/10.1002/jmri.20969" target="_blank">DOI Link</a>]<span style="color:rgb(0, 0, 0)">&nbsp;</span><font color="#878787">&nbsp; &nbsp;<br />&nbsp; &nbsp; &nbsp;</font>Erdogmas D, Larsson EG, Yan R et al.&nbsp;<a href="https://mriquestions.com/uploads/3/4/5/7/34572113/j017_sigpro_snrcaveat.pdf">Measuring the signal-to-noise ratio in magnetic resonance imaging: a caveat</a>.&nbsp;Signal Processing 2004;84:1035&ndash;1040.&nbsp;[<a href="http://dx.doi.org/10.1016/j.sigpro.2004.03.006" target="_blank">DOI Link</a>]<br />&nbsp; &nbsp; &nbsp;Firbank MJ, Coulthard A, Harrison RM, Williams ED.&nbsp;<a href="https://mriquestions.com/uploads/3/4/5/7/34572113/snr_single.pdf">A comparison of two methods for measuring the signal to&nbsp;</a><a href="https://mriquestions.com/uploads/3/4/5/7/34572113/snr_single.pdf">noise ratio on MR images</a>. &nbsp;Phys Med Biol 1999; 44: N261-4.&nbsp;[<a href="https://doi.org/10.1088/0031-9155/44/12/403" target="_blank">DOI Link</a>]<br />&nbsp; &nbsp; &nbsp;Gudbjartsson H, Patz S. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/rician_distribution_of_noisy_mri_datanihms36881.pdf">The Rician distribution of noisy MRI data</a>. Magn Reson Med 1995; 34:910-914.&nbsp;[<a href="https://doi.org/10.1002/mrm.1910340618" target="_blank">DOI Link</a>]<br />&nbsp; &nbsp; &nbsp;<span>McVeigh ER, Henkelman RM, Bronskill MJ. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/snr_mcveighnihms-26746.pdf">Noise and filtration in magnetic resonance imaging</a>. Med Phys 1985; 12:586-591.&nbsp;</span>[<a href="https://doi.org/10.1118/1.595679" target="_blank">DOI Link</a>]<br />&nbsp; &nbsp; &nbsp;National Manufacturers Electrical Association. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/nema_snr_standards_2008.pdf">MS1-2008 Determination&nbsp;</a><a href="https://mriquestions.com/uploads/3/4/5/7/34572113/nema_snr_standards_2008.pdf">of signal-to-noise ratio SNRin diagnostic magnetic resonance images (pdf)</a>,&nbsp;NEMA, Washington, DC.<span style="color:rgb(135, 135, 135)"> <a href="http://www.nema.org/Standards/Pages/Determination-of-Signal-to-Noise-Ratio-in-Diagnostic-Magnetic-Resonance-Imaging.aspx#download" target="_blank">Can be downloaded for free or purchased in book form here.</a></span><br /><span style="color:rgb(0, 0, 0)">&nbsp; &nbsp; &nbsp;National Manufacturers Electrical Association.&nbsp;</span>MS 6-2008 (R2014). <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/nema_single_channel_snr_coil_ms6-2008-r2014-watermarked.pdf">Determination of signal-to-noise ratio and image uniformity for single-channel non-volume coils diagnostic MR imaging (pdf).</a><br /><span style="color:rgb(0, 0, 0)">NEMA, Washington, DC.</span>&nbsp;<a href="http://www.nema.org/Standards/Pages/Determination-of-Signal-to-Noise-Ratio-in-Diagnostic-Magnetic-Resonance-Imaging.aspx#download" target="_blank">Can be downloaded for free or purchased in book form here.</a><br /><span style="color:rgb(0, 0, 0)">&nbsp; &nbsp; &nbsp;National Manufacturers Electrical Association</span> MS 9-2008 (R2014). <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/nema_ms_9-2008_r2014.pdf">Characterization of phased array coils for diagnostic magnetic resonance images (pdf)</a>, N<span style="color:rgb(0, 0, 0)">EMA, Washington, DC.</span>&nbsp;<a href="http://www.nema.org/Standards/Pages/Determination-of-Signal-to-Noise-Ratio-in-Diagnostic-Magnetic-Resonance-Imaging.aspx#download" target="_blank">Can be downloaded for free or purchased in book form here.<br />&#8203;&nbsp; &nbsp; &nbsp;</a>Rice SO. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/rice_originals.pdf">Mathematical analysis of random noise and appendixes.</a> Bell Telephone Labs, 1952. (A technical report which contains Rice&rsquo;s original landmark papers from 1944 and 1945 plus additional materials.)</div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;"><strong>Related Questions</strong><br /><strong>&nbsp; &nbsp; <a href="mr-phantoms.html">&nbsp;</a></strong><a href="mr-phantoms.html"><strong><em><font color="#0376be">What does an MR phantom look like?&nbsp;</font></em></strong><strong style="color:rgb(55, 138, 87)"><em>&nbsp;</em></strong></a><em></em></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div style="text-align:skip_to_justify;"><div style="height: 10px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-normal" href="image-resolution.html" >
+<span class="wsite-button-inner">← &nbsp;Previous Question</span>
+</a>
+<div style="height: 10px; overflow: hidden;"></div></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div style="text-align:right;"><div style="height: 10px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-normal" href="ghosting.html" >
+<span class="wsite-button-inner">Next Question &nbsp;→</span>
+</a>
+<div style="height: 10px; overflow: hidden;"></div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div style="text-align:center;"><div style="height: 10px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-highlight" href="index.html" >
+<span class="wsite-button-inner">↑&nbsp;Complete List of Questions ↑</span>
+</a>
+<div style="height: 10px; overflow: hidden;"></div></div>
+</div></div>

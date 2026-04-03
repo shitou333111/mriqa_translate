@@ -1,0 +1,151 @@
+<div id="content"><div id="wsite-content" class="wsite-elements wsite-not-footer">
+	<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<h2 class="wsite-content-title" style="text-align:center;">Semi-Quantitative Parameters<br /></h2>
+
+<div class="paragraph" style="text-align:center;"><strong style="color: rgb(135, 135, 135); font-size: large; line-height: 1.5;"><em><font color="#0376be">What parameters can be extracted from the DSC intensity curve?&nbsp;</font></em></strong><br /></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-thin" style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
+<a href='uploads/3/4/5/7/34572113/5135509_orig.png' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/5135509_orig.png" alt="TTP, NEI" style="width:100%;max-width:1100px" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;">A number of semi-quantitative perfusion parameters can be obtained by analysis of DSC signal intensity curves for each voxel during passage of the contrast bolus. These parameters are easy to calculate and hence are widely used. However, they lack precision and consistency, being highly dependent on the efficiency/compactness of the contrast bolus. The absolute values of these parameters have little meaning by themselves, but can be helpful in a relative sense (such as comparing corresponding regions on two sides of the brain). The most common of these so-called "summary" parameters are illustrated and defined below.</div>
+
+<div><div class="wsite-image wsite-image-border-none" style="padding-top:0;padding-bottom:0;margin-left:0;margin-right:10px;text-align:center">
+<a href='uploads/3/4/5/7/34572113/5742607_orig.png' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/5742607a532.png?637" alt="DSC parameters" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%">&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Simplified semiquantitative analysis of DSC signal intensity curves</div>
+</div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;"><ol><li><font color="#24678d"><u><strong>Arrival Time (AT, <em>t<font size="1">o</font></em>)</strong></u></font>&nbsp;is the interval between intravenous contrast injection and its first detection in tissue (or in a large feeding artery). Because MR signals vary randomly due to noise and motion, a dozen or more time points must be averaged prior to contrast arrival to establish a <strong><em><font color="#24678d">baseline</font></em></strong>. An arbitrary detection threshold is then set (e.g., 5% below baseline) to define contrast arrival. Alternatively, this threshold may be set manually by visual inspection of the signal intensity curve. However calculated, AT reflects the sum of all processes leading to tissue delivery of contrast (injection rate, cardiac output, region blood flow, etc). Significantly different arrival times of contrast to the two sides of the brain, for example, might reflect unilateral carotid artery stenosis.</li><li><strong><u><font color="#24678d">Time to Peak (TTP)</font></u></strong>&nbsp;is typically defined as the time from initial contrast injection to peak (maximal) signal loss within the organ of interest. TTP has the same uses and limitations as AT but is superior because the peak is easily identified without need to set an arbitrary detection threshold for first arrival. In some software applications, TTP does not include the arrival time, being defined as the interval between first detection of contrast (<em>t<font size="1">o</font></em>) and peak signal loss.&nbsp;</li><li><strong style="color: rgb(135, 135, 135); line-height: 1.5; background-color: initial;"><u><font color="#24678d">Negative Enhancement Integral (NEI)</font></u></strong><span style="color: rgb(135, 135, 135); line-height: 1.5; background-color: initial;">&nbsp;</span><span style="line-height: 1.5; background-color: initial;"><font color="#2a2a2a">is the total area ("integral") under the signal intensity curve during first pass of gadolinium, sometime known by its synonym,&nbsp;</font><strong><em><font color="#24678d">Area Under Curve (AUC)</font></em></strong><font color="#2a2a2a">. NEI reflects the total amount of contrast transiting through the regional vascular system and is roughly proportional to blood volume. Because of recirculation effects explained in the <a href="dsc-recirculation.html">prior Q&amp;A</a></font><font color="#2a2a2a">, the baseline does not return to normal at the end of the first pass. An arbitrary decision must then be to made as to define the right hand limit of integration as well as how to handle the shifting baseline. Often mathematical models of the signal intensity curve (such as the </font><strong><em><font color="#24678d">gamma variate function</font></em></strong><font color="#2a2a2a">) are used to correct for recirculation and baseline shift effects and make NEI calculations more consistent.&nbsp;</font></span><br /></li><li><strong><u><font color="#24678d">Mean Time to Enhance (MTE)</font></u></strong>&nbsp;represents the average time for the <em>entire bolus</em> of injected contrast to pass through a region of tissue.&nbsp;Absolute values of MTE are therefore highly dependent on the shape (compactness) of the arriving contrast bolus and to a lesser degree on tissue perfusion. Although frequently confused, it is important to recognize that MTE is <u>not</u> the same as <strong><em><font color="#24678d">Mean Transit Time (MTT)</font></em></strong>, which reflects the average time for a <em>single</em> contrast molecule (not the entire bolus) to pass through tissue. In simulations, MTE can be up to 3x longer than true <em>MTT</em>. The uncertainty is compounded in that vendors have slightly different names and methods for computing MTE, including calculating the first moment (centroid) of the NEI or using its full width at half maximum (FWHM). Some software applications also provide a simplified estimate of <strong><em><font color="#24678d">relative blood flow (rBF)</font></em></strong> from this data, calculated as NEI/MTE. Although an analog for true blood flow (<em>BF = BV/MTT</em>), the limitations and errors in this approach are readily apparent.&nbsp;</li><li><strong><u><font color="#24678d">Percent Baseline at Peak (PBP) and Percent Signal Recovery (PSR)</font></u></strong>&nbsp;are defined respectively as the ratios of signal intensity at minimum (peak) or during the recirculation phase (recovery) divided by their initial (baseline) values. Easy to calculate but these parameters reflect a mixture of experimental and physiological phenomena, so are infrequently used.&nbsp;</li></ol></div>
+
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:99.022346368715%; padding:0 15px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-thin" style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
+<a href='uploads/3/4/5/7/34572113/274231_orig.gif' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/274231996a.gif?608" alt="Picture" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%">Time-to-peak (TTP, left) and negative enhancement integral (NEI, right) maps generated on a pixel-by-pixel basis directly from first-pass signal intensity curves in a DSC study. Although their absolute values are meaningless, they are easy to calculate and may be useful in a relative sense to compare perfusion in corresponding  brain regions.</div>
+</div></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:0.97765363128492%; padding:0 15px;">
+					
+						
+
+<div class="wsite-spacer" style="height:50px;"></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;">To derive more quantifiable maps such as blood flow and blood volume more sophisticated mathematical processing is required. This is the subject of several additional Q&amp;A's that follow.</div>
+
+<div><div id="750897461769365739" align="left" style="width: 100%; overflow-y: hidden;" class="wcustomhtml"><html> <head><script src="gdpr/gdprscript6f19.js?buildTime=1774025472"></script> <script type="text/javascript" 
+></script> 
+<script type="text/javascript">
+		$(function() {$('#Q').click(function() {$('.Q').toggle(500); return false;});});</script></head><body>
+<a href="#" id=Q><h3><font color="#378a57">Advanced Discussion (show/hide)»</font></h3></a><div class=Q style="display:none;">
+
+<!--content goes below here-->
+
+No supplementary material yet.  Check back soon!
+
+
+<!--content goes above here-->
+</div></body>
+<!-- Mirrored from mriquestions.com/dsc-curve-analysis.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 21 Mar 2026 06:38:16 GMT -->
+</html></div>
+
+
+
+</div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;"><strong>References</strong><br /><span><font color="#878787">&nbsp; &nbsp; </font></span>&nbsp;<font size="4" color="#f80f0f">&#10026; </font>Bammer R, Amukotuwa SA. Dynamic susceptibility contrast perfusion, Part 1: The fundamentals. Magn Reson Imaging Clin N Am 2024; 32:1&ndash;23. [DOI LINK]<br />&nbsp; &nbsp; &nbsp;<font size="4" color="#f80f0f">&#10026; </font>Bammer R, Amukotuwa SA. Dynamic susceptibility contrast perfusion, Part 2: Deployment with and without contrast leakage present. Magn Reson Imaging Clin N Am 2024; 32:25-45. [DOI LINK]<span><font color="#878787">&nbsp;</font></span><br />&nbsp; &nbsp; &nbsp;Jahng G-H, Li K-L, Ostergaard l, Calamante F.&nbsp;<a href="https://mriquestions.com/uploads/3/4/5/7/34572113/perfusion_review_article_kjr-15-554.pdf">Perfusion magnetic resonance imaging: a comprehensive update on principles and techniques</a>. Korean J Radiol 2014; 15:554-577.<br />&nbsp; &nbsp; &nbsp;McGehee BE, Pollock JM, Maldjian JA.&nbsp;<a href="https://mriquestions.com/uploads/3/4/5/7/34572113/mcgehee_whitlow_review.pdf">Brain perfusion imaging: how does it work and what should I use?</a>&nbsp;J Magn Reson Imaging 2012; 36:1257-1272.<br />&nbsp; &nbsp; &nbsp;Perthen JE, Calamante F, Gadian DG, Connelly A. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/perthen_2002_mrm.pdf">Is quantification of bolus tracking MRI reliable without deconvolution?</a> Magn Reson Med 2002; 47:62-67. (The answer is NO).<br />&nbsp; &nbsp; &nbsp;<font size="4" color="#f80f0f">&#10026; </font>Welker K, Boxerman J, Kalnin A, et al.&nbsp;<a href="https://mriquestions.com/uploads/3/4/5/7/34572113/white_paper_asfnr_on_dsc_ajnr.a4341.full.pdf">ASFNR recommendations for clinical performance of MR dynamic susceptibility contrast perfusion imaging of the brain</a>. AJNR Am J Neuroradiol 2015; 36: E41-E51.<br></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;"><strong>Related Questions</strong><br /><strong><em><a href="how-to-perform-dsc.html" title="">&nbsp; &nbsp; &nbsp;<span style="text-align: center;">How do you perform a DSC perfusion study?</span></a></em></strong><br /></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div style="text-align:skip_to_justify;"><div style="height: 0px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-normal" href="dsc-recirculation.html" >
+<span class="wsite-button-inner">← &nbsp;Previous Question</span>
+</a>
+<div style="height: 0px; overflow: hidden;"></div></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div style="text-align:right;"><div style="height: 0px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-normal" href="dsc-signal-v-gd.html" >
+<span class="wsite-button-inner">Next Question &nbsp;→</span>
+</a>
+<div style="height: 0px; overflow: hidden;"></div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div style="text-align:center;"><div style="height: 0px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-highlight" href="complete-list-of-questions.html" >
+<span class="wsite-button-inner">↑&nbsp;Complete List of Questions ↑</span>
+</a>
+<div style="height: 10px; overflow: hidden;"></div></div>
+</div></div>

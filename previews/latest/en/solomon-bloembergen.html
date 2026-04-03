@@ -1,0 +1,139 @@
+<div id="content"><div id="wsite-content" class="wsite-elements wsite-not-footer">
+	<h2 class="wsite-content-title" style="text-align:center;">Advanced Relaxation Theory<br /><br /></h2>
+
+<div class="paragraph" style="text-align:skip_to_justify;">The mathematical theory underlying dipole-dipole interactions was originally developed by Bloembergen, Purcell, and Pound in the 1948, generalized by Solomon in the 1955 and extended by Bloembergen and Morgan to include electron spin relaxation in 1961. &nbsp;Together this body of work is often called the&nbsp;<strong style=""><em style=""><font color="#24678d">Solomon-Bloembergen-Morgan (SBM) Theory</font></em></strong>&nbsp;of relaxation. These classic papers are referenced below and worth a look, although they contain some pretty heavy chemistry and math.&nbsp;<br /><br />This extended section of the Q&amp;A website is intended just to give you a "taste" of how the theory works. &nbsp;I hope you can follow my basic reasoning...<br /><br /><strong><u><font color="#24678d"><font size="4">Description of Molecular Motion: Correlation time (</font><em><font size="4">&tau;</font><font size="2">c</font></em><font size="4">)</font></font></u></strong></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;">Molecules undergo three kinds of motion: translation, rotation, and vibration. Vibrational motions lie in infrared region of the spectrum, a million+ times too fast to affect the NMR signal. And translational motions in a homogenous field will have little or no affect on the MR signal unless two molecules collide or have a "near miss" with one another. Rotational motions, however, occur in a range of frequencies that significantly overlap the MHz region of the spectrum and thus may induce fluctuating magnetic fields suitable for T1 and T2 relaxation.<br /></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;">One way to characterize the motion of a molecule is by its&nbsp;<strong><em><font color="#24678d">correlation time (&tau;<font size="1">c</font>)</font></em></strong>, the time required to rotate by approximately 1 radian (~57&deg;). &nbsp;As expected, smaller molecules rotate faster (and have smaller&nbsp;<em><font size="4">&tau;</font><font size="1">c</font>'s)</em>&nbsp;than larger ones. The correlation time also decreases with increasing temperature (kinetic energy causes them to rotate faster). &nbsp;As a rule of thumb used by chemists, the rotational correlation time (in nanoseconds) of a molecule in aqueous solution at room temperature is about half its molecular weight (in kilodaltons).</div>
+
+<span class='imgPusher' style='float:right;height:0px'></span><span style='display: table;width:auto;position:relative;float:right;max-width:100%;;clear:right;margin-top:0px;*margin-top:0px'><a href='uploads/3/4/5/7/34572113/9235433_orig.gif' rel='lightbox' onclick='if (!lightboxLoaded) return false'><img src="uploads/3/4/5/7/34572113/92354331534.gif?212" style="margin-top: 10px; margin-bottom: 0px; margin-left: 10px; margin-right: 0px; border-width:0; max-width:100%" alt="Solomon-Bloembergen-Morgan equations; spectral density function" class="galleryImageBorder wsite-image" /></a><span style="display: table-caption; caption-side: bottom; font-size: 90%; margin-top: -0px; margin-bottom: 0px; text-align: center;" class="wsite-caption"></span></span>
+<div class="paragraph" style="text-align:skip_to_justify;display:block;">Because of random thermal fluctuations and collisions, otherwise identical molecules with the same correlation times (<em style="">&tau;<font size="1">c</font>)</em>&nbsp;will rotate at different&nbsp;angular velocities (&omega;). The probability of finding a molecule rotating at a given frequency is proportional to the<strong style=""><em style="">&nbsp;<font color="#24678d">spectral density function J(&omega;)</font></em></strong>. For&nbsp;spherical molecules in solution the form of the spectral density is expressed by the equation above.</div>
+<hr style="width:100%;clear:both;visibility:hidden;"></hr>
+
+<div class="paragraph" style="text-align:skip_to_justify;"><strong style=""><u style=""><font color="#24678d" size="4">Solomon-Bloembergen Equations</font></u></strong><br /><br />In 1955, Solomon, building on the work of Bloembergen, Purcell, and Pound, developed a model using correlation times and spectral densities to explain and predict the T1 and T2 values of pure liquids and other simple substances. The famous equations for two hydrogen protons engaging in a dipole-dipole interaction are given in compact and expanded forms below.&nbsp;Several features should be noted:</div>
+
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-none " style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
+<a href='uploads/3/4/5/7/34572113/3826320_orig.gif' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/3826320_orig.gif" alt="Solomon-Bloembergen-Morgan equations" style="width:100%;max-width:886px" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-none " style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
+<a>
+<img src="uploads/3/4/5/7/34572113/7493393_orig.gif" alt="Solomon-Bloembergen-Morgan equations" style="width:100%;max-width:852px" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;">First, there is a powerful direct dependence on the gyromagnetic ratio (<em>&gamma;</em>) to the fourth power.&nbsp;<br /><br />Second, there is a strong <u>inverse</u> dependence on distance (<em>r</em>) between the spins (proportional to the sixth power).&nbsp;<br /><br />Third, the terms in brackets are weighted sums of the spectral density function <strong><em>J</em></strong> at different frequencies. For NMR relaxation the most important frequencies are those near&nbsp;&omega; = 0 (static condition), &nbsp;&omega; =&nbsp;&omega;<font size="1">o</font> (the Larmor frequency), and at&nbsp;&omega; = 2&omega;<font size="1">o</font>&nbsp;(twice the Larmor frequency). &nbsp;The relaxation rates (1/T1 and 1/T2) are strongly dependent on the relationship of the correlation time&nbsp;(<em style=""><font size="4">&tau;</font></em><font size="1">c</font>)&nbsp;to the Larmor frequency.<br /><br />In the expression for 1/T2 (but not for 1/T1) there is a static spectral density term with&nbsp;&omega; = 0. (This is the <strong><em>J</em></strong>(0) term colored red). The physical meaning is that T2, but not T1, depends on the <u>static</u> field generated by each spin.<br /><br />Each equation also contains a term&nbsp;<strong><em>J</em></strong>(2&omega;), colored green, that depends on twice the angular frequency. This term corresponds to the two-particle double spin flip described in a <a href="spin-spin-interactions.html" title="">related Q&amp;A</a>&nbsp;and can be thought of as a sort of molecular Doppler effect. This is an internal/relative phenomenon and one would <u>not</u> see an absorption of energy or change in states by irradiating the the system with RF at frequency 2&omega;<font size="1">o</font>.</div>
+
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:50.416666666667%; padding:0 15px;">
+					
+						
+
+<div class="paragraph">The Solomon-Bloembergen equations go a long way to predicting the frequency-dependence of T1 and T2 seen on the previously presented graph (right). Note that what we have informally called the molecular "tumbling" rate is essentially the reciprocal of the rotational&nbsp;correlation time&nbsp; <br />&#8203;(1/<em><font size="4">&tau;</font><font size="2">c</font>)</em>.&nbsp; T1 is minimized whenever the tumbling rate matches the Larmor frequency.&nbsp;T2 is minimized whenever&nbsp;<em><font size="4">&tau;</font><font size="1">c</font> =&nbsp;</em>&omega; = 0 (static condition). Both T1 and T2 grow increase as&nbsp;<em><font size="4">&tau;</font><font size="2">c</font></em>&nbsp;decreases.&nbsp;</div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:49.583333333333%; padding:0 15px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-thin " style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
+<a href='uploads/3/4/5/7/34572113/molecular-tumbling-rate_2_orig.png' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/published/molecular-tumbling-rate_292f0.png?1542982512" alt="T1 and T2 relaxation times NMR" style="width:282;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;"><font size="4"><strong><u><font color="#24678d">Extension to Electron/Paramagnetic Spins &nbsp;(SBM Theory)</font></u></strong><br /></font><br />The SB equations were extended further by Solomon and Morgan in 1961 to more comprehensively include the effects of electron spin in dipole-dipole interactions between a nucleus and an electron or ion. This situation is important because it is the type of dipole-dipole interaction that occurs between water protons and a paramagnetic ion in solution such as gadolinium.<br /><br />The analysis and equations are analogous to the proton-proton case above with a few important differences.&nbsp;<br /><br />First, in SBM theory the two different spins are typically denoted <em><strong>I</strong></em> and <em><strong>S</strong></em>, typically representing a proton/nucleus (<strong><em>I</em></strong>) and electron/ion (<strong><em>S</em></strong>) respectively. There are now two different gyromagnetic ratios to consider,&nbsp;<em>&gamma;<font size="1">I</font></em> and&nbsp;<em>&gamma;<font size="1">S</font></em>, each of which contributes quadratically to the dipolar interaction as [<em style="">&gamma;<font size="1">I</font></em>]&sup2;[<em>&gamma;</em><font size="1"><em>S</em></font>]&sup2;.&nbsp;Because the gyromagnetic ratio of the electron (<em style="">&gamma;<font size="1">S</font>) </em>is over 600 times larger than the than gyromagnetic ratio of the hydrogen proton (<em style="">&gamma;<font size="1">I</font></em>), and each ratio is squared, the interaction between an electron/ion and a nucleus can be over 360,000 times greater than that between two protons. &nbsp;<br /><br />Secondly, the bracketed terms with <strong><em>J</em></strong>(&omega;)&nbsp;must now reflect two different resonant frequencies (&omega;<font size="1">I</font>&nbsp;and&nbsp;&omega;<font size="1">S</font>), although some simplification is possible since&nbsp;&omega;<font size="1">S</font>&nbsp;&gt;&gt;&omega;<font size="1">I</font>.&nbsp;For completeness, the corresponding SBM equations have the form given below:&nbsp;</div>
+
+<div><div class="wsite-image wsite-image-border-none " style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
+<a>
+<img src="uploads/3/4/5/7/34572113/4664276ccb1.gif?549" alt="Solomon-Bloembergen-Morgan equations" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div style="text-align:skip_to_justify;"><div style="height: 10px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-normal" href="dipole-dipole-relaxation.html" >
+<span class="wsite-button-inner">← &nbsp;Previous Question</span>
+</a>
+<div style="height: 10px; overflow: hidden;"></div></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div style="text-align:right;"><div style="height: 10px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-normal" href="chemical-exchange.html" >
+<span class="wsite-button-inner">Next Question &nbsp;→</span>
+</a>
+<div style="height: 10px; overflow: hidden;"></div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div style="text-align:center;"><div style="height: 10px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-highlight" href="complete-list-of-questions.html" >
+<span class="wsite-button-inner">↑&nbsp;Complete List of Questions ↑</span>
+</a>
+<div style="height: 10px; overflow: hidden;"></div></div>
+</div>
+</div>

@@ -1,0 +1,120 @@
+<div id="content"><div id="wsite-content" class="wsite-elements wsite-not-footer">
+	<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<h2 class="wsite-content-title" style="text-align:center;">DCE 信号 vs [Gd]<br /></h2>
+
+<div class="paragraph" style="text-align:center;"><strong style="color: rgb(135, 135, 135); font-size: large; line-height: 1.5;"><em><font color="#0376be">如何从 DCE 信号确定血液和组织中的钆浓度？&nbsp;</font></em></strong><strong style="color: rgb(55, 138, 87); font-size: large; line-height: 1.5;"><em>&nbsp;</em></strong><br /></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-thin" style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
+<a href='uploads/3/4/5/7/34572113/3440651_orig.png' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/3440651_orig.png" alt="Gd vs signal DCE" style="width:100%;max-width:1100px" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;">对 DCE 研究进行完全量化的第一步，是根据 MR 信号的幅度确定组织中的钆浓度 [Gd]。该过程与用于 DSC 成像的过程类似——即 T1 弛豫率的变化 &Delta;R1 (=1/&Delta;T1) 与 [Gd] 直接成正比。请注意，此假设仅适用于对比剂的稀水溶液，因此可能不严格适用于组织，因为组织中的大分子相互作用会影响弛豫率，且分区化可能改变水的快速交换。<br /></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;">通常的 DCE 脉冲序列是毁损梯度回波 (FLASH/SPGR/T1-FFE)，其信号强度 (<em>S</em>) 由下式给出：<br /><span></span></div>
+
+<div><div class="wsite-image wsite-image-border-none" style="padding-top:0;padding-bottom:0;margin-left:0;margin-right:0;text-align:center">
+<a href='uploads/3/4/5/7/34572113/7502602_orig.png' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/75026020138.png?348" alt="Picture" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;">这里 <em>k</em> 是一个比例常数，[H] 是自旋密度，<em>&alpha; </em>是射频翻转角。信号强度与 T1 之间的关系不像 DSC 中描述的简单对数比那样直接，但仍然可以确定。此计算的精度取决于对无对比剂时背景组织 T1 值的了解。该值可通过单独的对比剂前校准序列获得（首选），或根据人群平均值估算。如果没有此校准，则只能从 MR 信号确定钆的<em>相对</em>浓度。</div>
+
+<div class="paragraph" style="text-align:skip_to_justify;">最后，由于钆基对比剂分布于血浆而非全血中，因此必须考虑其有效血浆浓度。血浆与全血的比率取决于血细胞比容 (<em>Hct</em> = 红细胞百分比)，给出以下关系：[Gd]<font size="1">血液</font> = &nbsp;[Gd]<font size="1">血浆</font>&nbsp;<span style="background-color: initial;">&times;</span>&nbsp;(<em>1</em><em>&minus;Hct</em>)。对于一个典型的正常 <em>Hct</em> = 40%，血浆中的钆浓度因此大约是全血中测量值的 1.7 倍。&nbsp;<br /><br />请注意，同一患者的血细胞比容可能随时间变化，尤其是在接受化疗的癌症患者中。因此，如果不进行调整，变化的 <em>Hct</em> 可能会显著影响系列定量 DCE 测量。大多数 DCE 计算中不常考虑的另一个因素是，毛细血管（钆交换发生处）中的 <em>Hct</em> 比大动脉中低 2 倍或更多（<strong><em><font color="#24678d">F&aring;hraeus 效应</font></em></strong>）。&nbsp;<br /><span></span></div>
+
+<div><div id="206826909767330393" align="left" style="width: 100%; overflow-y: hidden;" class="wcustomhtml"><html> <head><script src="gdpr/gdprscript6f19.js?buildTime=1774025472"></script> <script type="text/javascript" 
+></script> 
+<script type="text/javascript">
+		$(function() {$('#Q').click(function() {$('.Q').toggle(500); return false;});});</script></head><body>
+<a href="#" id=Q><h3><font color="#378a57">进阶讨论 (显示/隐藏)»</font></h3></a><div class=Q style="display:none;">
+
+<!--content goes below here-->
+<p>在心脏成像和其他一些应用中，DCE 可能使用饱和恢复 (SR) 序列代替毁损 GRE。在这种情况下，信号强度方程由下式给出：</p>
+
+<p align=center><i>S = k</i> [H] (1 − <i>e<sup>−TD/T1</sup></i>) <i>e<sup>−TE/T2*</sup></i></p>
+<p>其中 <i>TD</i> 是 90° 脉冲与采集之间的延迟时间。</p>
+
+<!--content goes above here-->
+</div></body>
+<!-- Mirrored from mriquestions.com/dce-signal-v-gd.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 21 Mar 2026 06:39:00 GMT -->
+</html></div>
+
+
+
+</div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div><div class="paragraph" style="text-align:skip_to_justify;"><strong>参考文献</strong><br />&nbsp; &nbsp; &nbsp;F&aring;hraeus R, Lindqvist T. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/farhreus_1931.pdf" title="">The viscosity of the blood in narrow capillary tubes</a>. Am J Physiol 1931; 96:562-568. (Classic paper demonstrating what is now known as the "F&aring;hraeus effect" - that hematocrit decreases strongly with reduced vascular size below about 0.3 mm diameter. This is because blood viscosity decreases and RBCs move more quickly than plasma down the center of capillaries.)<br />&nbsp; &nbsp; &nbsp;Parker GJM, Barker GJ, Tofts PS. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/parker-mrm-2001-45-838pdf.pdf" title="">Accurate multislice gradient echo T<font size="1">1</font> measurement in the presence of non-ideal RF pulse shape and RF filed nonuniformity</a>. Magn Reson Med 2001; 45:838-845.&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;<br />&nbsp; &nbsp; &nbsp;Pries AR, Ley K, Gaehtgens P. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/am_j_physiol_1986_pries.pdf" title="">Generalization of the&nbsp;F&aring;hraeus&nbsp;principle for microvessel networks</a>. Am J Physiol 1986; 251:H1324-H1332.&nbsp;<br /><span style="line-height: 1.5;"><font color="#878787">&nbsp; &nbsp;&nbsp;</font></span>Schabel MC, Parker DL. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/t1_estimation_nihms-59716.pdf" title="">Uncertainty and bias in contrast concentration measurements using spoiled gradient echo pulse sequences</a>. Phys Med Biol 2008; 53:2345-2373.<br />&nbsp; &nbsp; &nbsp;Tofts PS. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/dce-mri_siemens.pdf" title="">T1-weighted DCE imaging concepts: modelling, acquisition and analysis</a>. MAGNETOM Flash 2010; 3:30-35.&nbsp;<br />&nbsp; &nbsp; &nbsp;Zaharchuk G.&nbsp;<a href="https://mriquestions.com/uploads/3/4/5/7/34572113/ajnr_zharchuk_perfusion_review.pdf" title="">Theoretical basis of hemodynamic MR imaging techniques to measure cerebral blood volume, cerebral blood flow, and permeability</a>. AJNR Am J Neuroradiol 2007; 28:1850-8.<br /></div><div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph"><strong>相关问题</strong><br /><strong>&nbsp; &nbsp; &nbsp;</strong><strong><em><a href="dsc-signal-v-gd.html"><span style="text-align: center;">在 DSC 研究中，能否根据其信号量化 Gd 的实际浓度？&nbsp;</span><span style="text-align: center;">&nbsp;</span></a></em></strong><br /><strong><em><a href="spoiled-gre-parameters.html">&nbsp; &nbsp; &nbsp;<span style="text-align: center;">为何要使用扰相梯度回波技术？&nbsp;如何选择参数？&nbsp;</span></a></em></strong></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div style="text-align:skip_to_justify;"><div style="height: 0px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-normal" href="how-is-dce-analyzed.html" >
+<span class="wsite-button-inner">← &nbsp;上一问题</span>
+</a>
+<div style="height: 0px; overflow: hidden;"></div></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div style="text-align:right;"><div style="height: 0px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-normal" href="dce-tissue-parmeters.html" >
+<span class="wsite-button-inner">下一问题 &nbsp;→</span>
+</a>
+<div style="height: 0px; overflow: hidden;"></div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div style="text-align:center;"><div style="height: 0px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-highlight" href="complete-list-of-questions.html" >
+<span class="wsite-button-inner">↑&nbsp;问题完整列表 ↑</span>
+</a>
+<div style="height: 10px; overflow: hidden;"></div></div>
+</div></div>

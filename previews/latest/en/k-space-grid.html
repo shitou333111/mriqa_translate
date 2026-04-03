@@ -1,0 +1,152 @@
+<div id="content"><div id="wsite-content" class="wsite-elements wsite-not-footer">
+	<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<h2 class="wsite-content-title" style="text-align:center;">The <em>k</em>-space "grid"<br /></h2>
+
+<div class="paragraph" style="text-align:center;"><strong style="color: rgb(135, 135, 135); font-size: large; line-height: 1.5;"><em><font color="#0376be">Why is k-space drawn as a grid? What do the axes in k-space mean?&nbsp;</font></em></strong><strong style="color: rgb(55, 138, 87); font-size: large; line-height: 1.5;"><em>&nbsp;</em></strong><br /></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-thin" style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
+<a href='uploads/3/4/5/7/34572113/7985058_orig.png' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/7985058_orig.png" alt="k-space grid" style="width:100%;max-width:882px" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;">Like outer space,&nbsp;<em>k</em>-space has no boundaries and contains an infinite number of possible points. To represent an object perfectly, all spatial frequencies would need to be measured, requiring sampling the MR signal with infinite precision&nbsp;&mdash; a clearly impossible task.</div>
+
+<div class="paragraph" style="text-align:skip_to_justify;">Instead, the set of MR signals used to fill&nbsp;<em>k</em>-space are sampled discretely. These data points are then placed in a finite&nbsp;<em>k</em>-space "grid" (or matrix) containing between several thousand to several hundred thousand cells. Each point (<em>k<font size="1">x</font></em>, <em>k<font size="1">y</font></em>) represents the contribution of a particular spatial frequency. Points lying along the major axes, <em>k<font size="1">x</font></em> and <em>k<font size="1">y</font></em>, represent spatial frequencies in the pure&nbsp;<em>x-</em> and <em>y-</em> directions of the image. Off-axis points represent spatial frequency contributions from various angles.</div>
+
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:54.735376044568%; padding:0 15px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-thin" style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
+<a href='uploads/3/4/5/7/34572113/1014165_orig.jpg' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/10141654918.jpg?295" alt="k-space grid" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:45.264623955432%; padding:0 15px;">
+					
+						
+
+<div class="paragraph" style="text-align:skip_to_justify;">The <em>k</em>-space grid is usually square and evenly spaced, but doesn't have to be. Regular spacing makes data acquisition and processing easier, faster, and more efficient.&nbsp;<br /><br />The distance between adjacent rows or columns is denoted&nbsp;<em>&Delta;k.</em>&nbsp;The distance from the center of k-space to an edge is called <em>k<font size="1">max</font></em>. Both&nbsp;<em>&Delta;k </em>and&nbsp;<em>k<font size="1">max&nbsp;</font></em>determine pixel size and field-of-view in the final image. How and why this occurs is the subject of a <a href="field-of-view-fov.html" title="">later Q&amp;A</a>.<br /></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;">Acquired&nbsp;<em>k</em>-space data contained within the grid is then manipulated using a specially designed computer board (called an&nbsp;<strong><em><font color="#24678d">array processor</font></em></strong>). The array processor performs a&nbsp;<strong><em><font color="#24678d">discrete Fourier transform (DFT)</font>&nbsp;</em></strong>on the data, converting the spatial frequencies into pixel values needed to reconstruct the final image.</div>
+
+<div><div id="143150218892098609" align="left" style="width: 100%; overflow-y: hidden;" class="wcustomhtml"><html> <head><script src="gdpr/gdprscript6f19.js?buildTime=1774025472"></script> <script type="text/javascript" 
+></script> 
+<script type="text/javascript">
+		$(function() {$('#Q').click(function() {$('.Q').toggle(500); return false;});});</script></head><body>
+<a href="#" id=Q><h3><font color="#378a57">Advanced Discussion (show/hide)»</font></h3></a><div class=Q style="display:none;">
+
+<!--content goes below here-->
+
+<p>In theory, regular sampling of the MR signal using constant amplitude phase- and frequency-encoding gradients would allow data to be placed in a uniform square matrix as illustrated above. However, data sampling, especially in fast or echo-planar sequences may be performed during up or down ramps of the gradient. In these cases, uniform sampling in time will not produce uniform sampling of spatial frequencies, causing the <i>k</i>-space data to be bunched up along the edges.</p>
+
+<p>For similar reasons, if the gradients are not constant during data acquisition, the <i>k</i>-space data will be unevenly spaced. Nearly all non-Cartesian methods (spiral, radial, PROPELLER) use sinusoidally varying gradients and suffer from this problem.</p>
+
+<p>To efficiently process such non-uniformly acquired data, methods have been developed to morph this data into a rectangular matrix or "grid". This iterative process is known as "<b><i><font color="#24678d">gridding</font></b></i>".</p>
+
+<p>Although various methods exist, the typical gridding algorithm first involves multiplication of original data with a set of density compensation weights and convolution with a gridding kernel. The resultant data is then interpolated and placed into the uniformly spaced matrix (the "grid") where a discrete Fourier transform is performed. Finally, the field-of-view is trimmed and the transformed data multiplied by an apodization correction function.</p>
+
+<p>Interested readers requiring more detail may wish to review the article by John Pauly in the reference list below.</p>
+
+
+<!--content goes above here-->
+</div></body>
+<!-- Mirrored from mriquestions.com/k-space-grid.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 21 Mar 2026 06:15:40 GMT -->
+</html></div>
+
+
+
+</div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;"><strong>References</strong><br />&nbsp; &nbsp; &nbsp;"<a href="http://en.wikipedia.org/wiki/Discrete_Fourier_transform" target="_blank" title="">Discrete Fourier Transform</a>". Wikipedia, the Free Encyclopedia.<br />&nbsp; &nbsp; &nbsp;Pauly J. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/pauly-non-cartesian_recon.pdf">Non-Cartesian reconstruction</a>. 2005. Available from ee-classes.usc.edu.<br /></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;"><strong>Related Questions</strong><br /><strong>&nbsp; &nbsp; &nbsp;</strong><em><a href="what-is-k-space.html" title="">What is k-space?</a></em></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div style="text-align:skip_to_justify;"><div style="height: 10px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-normal" href="k-space-trajectories.html" >
+<span class="wsite-button-inner">← &nbsp;Previous Question</span>
+</a>
+<div style="height: 10px; overflow: hidden;"></div></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div style="text-align:right;"><div style="height: 10px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-normal" href="negative-frequencies.html" >
+<span class="wsite-button-inner">Next Question &nbsp;→</span>
+</a>
+<div style="height: 10px; overflow: hidden;"></div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div style="text-align:center;"><div style="height: 10px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-highlight" href="complete-list-of-questions.html" >
+<span class="wsite-button-inner">↑&nbsp;Complete List of Questions ↑</span>
+</a>
+<div style="height: 10px; overflow: hidden;"></div></div>
+</div></div>

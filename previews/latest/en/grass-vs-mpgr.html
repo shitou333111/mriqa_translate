@@ -1,0 +1,116 @@
+<div id="content"><div id="wsite-content" class="wsite-elements wsite-not-footer">
+	<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -10px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:55.232558139535%; padding:0 10px;">
+					
+						
+
+<h2 class="wsite-content-title" style="text-align:center;">GRASS v MPGR<br /></h2>
+
+<div class="paragraph" style="text-align:center;"><strong style="color: rgb(135, 135, 135); font-size: large; line-height: 1.5;"><em><font color="#0376be">What is the difference between single-slice GRASS and multi-planar GRASS (MPGR)?&nbsp;</font></em></strong><strong style="color: rgb(55, 138, 87); font-size: large; line-height: 1.5;"><em>&nbsp;</em></strong><br /></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:44.767441860465%; padding:0 10px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-thin" style="padding-top:5px;padding-bottom:0;margin-left:0;margin-right:0;text-align:center">
+<a href='uploads/3/4/5/7/34572113/2246240_orig.png' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/2246240577b.png?302" alt="GRASS/FISP image contrast" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;"><strong><u>Single-slice mode (Simple GRASS or FISP)</u></strong><br /><br />When very short <em>TR</em> values are employed, it is usually possible to obtain only a single GRASS/FISP slice at a time.&nbsp; To cover a large area, therefore, a series of individual GRASS/FISP images must be acquired one by one. This technique is known as&nbsp;<em style=""><strong><font color="#24678d">sequential multi-slice acquisition</font></strong></em>.<br /><br />   In the sequential multi-slice mode, each slice is acquired independently and has signal characteristics as a function of <em>TR</em>, <em>TE,</em> and&nbsp;&alpha;&nbsp;as described for the idealized GRASS/FISP sequence in the <a href="grassfisp-parameters.html" title="">prior Q&amp;A</a>. Furthermore, each slice can be considered an "entry slice" with respect to flow effects.&nbsp; Therefore, time-of-flight enhancement effects of blood or CSF are maximal when this mode of acquisition is used.<br /><span style=""></span></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;"><strong><u>Multi-slice Mode (Multi-section FISP, MPGR)</u></strong><br /><br />When longer&nbsp;<em style="">TR</em>&nbsp;values are employed, it is possible to acquire several slices simultaneously within a single&nbsp;<em style="">TR</em>&nbsp;interval.&nbsp; This method is known as&nbsp;<em style=""><font color="#24678d"><strong style="">slice-interleaved</strong>&nbsp;</font></em>or&nbsp;<em style=""><strong style=""><font color="#24678d">slice-multiplexed acquisition</font></strong></em>.<br /><br />In the slice-multiplexed mode, however, a significantly different contrast behavior occurs.&nbsp; Because multiple slices must be selected during each <em>TR</em> interval, a slice-selection gradient must be turned on for each slice imaged.&nbsp; These slice-select gradients spoil transverse coherences and convert the GRASS/FISP sequence to display spoiled-GRE contrast. Also in this mode, because only the end slices are true "entry slices", inflow enhancement effects are less pronounced.<br /></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;"><strong><u>2D vs 3D Implementations</u></strong></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;">GRASS/FISP, as well as most other pulse sequences, can be operated in either 2D or 3D acquisition modes. A number of aspects of image contrast will differ depending on whether 2D or 3D is chosen.<br />One immediately noticeable effect is the appearance of blood vessels. &nbsp;In the 2D single-slice mode, GRASS/FISP sequences typically demonstrate marked flow-related enhancement of blood and spinal fluid flowing into each slice. This inflow effect, moderately muted in the 2D multi-slice mode, is even further reduced in 3D acquisitions.&nbsp;<br /><br />Overall image contrast may also vary among different parts of a 3D volume. This results from difficulty in obtaining a uniform RF-flip angle throughout the entire volume.&nbsp; As the flip angle varies, so does image contrast.</div>
+
+<div><div id="467321083798380870" align="left" style="width: 100%; overflow-y: hidden;" class="wcustomhtml"><html> <head><script src="gdpr/gdprscript6f19.js?buildTime=1774025472"></script> <script type="text/javascript" 
+></script> 
+<script type="text/javascript">
+		$(function() {$('#Q').click(function() {$('.Q').toggle(500); return false;});});</script></head><body>
+<a href="#" id=Q><h3><font color="#378a57">Advanced Discussion (show/hide)»</font></h3></a><div class=Q style="display:none;">
+
+<!--content goes below here-->
+
+No supplementary material yet.  Check back soon!
+
+
+<!--content goes above here-->
+</div></body>
+<!-- Mirrored from mriquestions.com/grass-vs-mpgr.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 21 Mar 2026 06:08:27 GMT -->
+</html></div>
+
+
+
+</div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;"><strong>References</strong><br /><span style="line-height: 1.5;"><font color="#878787">&nbsp; &nbsp; &nbsp;</font></span>Elster AD.&nbsp;<a href="http://mri-q.com/uploads/3/4/5/7/34572113/elster_gre_acros_radiology.pdf" target="_blank" title="" style="">Gradient echo imaging: techniques and acronyms</a>. Radiology 1993; 186:1-8. (My older review; still accurate, though some vendors have gone out of business. Gives a good history of the development of GRE sequences).<br /></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;"><strong>Related Questions</strong><br /><strong><em><a href="grassfisp-how.html">&nbsp; &nbsp; &nbsp;<span style="text-align: center;">How do GRASS/FISP/FFE sequences work?&nbsp;</span><span style="text-align: center;">&nbsp;</span></a></em></strong></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div style="text-align:skip_to_justify;"><div style="height: 10px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-normal" href="grassfisp-parameters.html" >
+<span class="wsite-button-inner">← &nbsp;Previous Question</span>
+</a>
+<div style="height: 10px; overflow: hidden;"></div></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div style="text-align:right;"><div style="height: 10px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-normal" href="psif-vs-fisp.html" >
+<span class="wsite-button-inner">Next Question &nbsp;→</span>
+</a>
+<div style="height: 10px; overflow: hidden;"></div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div style="text-align:center;"><div style="height: 10px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-highlight" href="complete-list-of-questions.html" >
+<span class="wsite-button-inner">↑&nbsp;Complete List of Questions ↑</span>
+</a>
+<div style="height: 10px; overflow: hidden;"></div></div>
+</div></div>

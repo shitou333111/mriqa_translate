@@ -1,0 +1,183 @@
+<div id="content"><div id="wsite-content" class="wsite-elements wsite-not-footer">
+	<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<h2 class="wsite-content-title" style="text-align:center;">fMRI Statistical Analysis</h2>
+
+<div class="paragraph" style="text-align:center;"><strong style="color:rgb(135, 135, 135)"><em><font color="#0376be" size="4">How do you statistically analyze fMRI data? </font></em></strong><strong style="color:rgb(55, 138, 87)"><em><font size="4">&nbsp;</font></em></strong></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-thin" style="padding-top:0px;padding-bottom:10px;margin-left:0px;margin-right:0px;text-align:center">
+<a>
+<img src="uploads/3/4/5/7/34572113/screen-shot-2016-09-14-at-6-23-09-pm46ba.png?284" alt="Picture" style="width:284;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;">A wide range of statistical methods are available to analyze fMRI data. Some are more appropriate for task-based fMRI while others are more applicable to resting-state studies. The most commonly used ones are briefly described below.&nbsp;</div>
+
+<div class="paragraph"><strong><font size="4" color="#8d5024">Correlation Analysis</font></strong></div>
+
+<div class="paragraph">The degree of temporal synchrony between two time series <span style="color:rgb(0, 0, 0)">&nbsp;</span><em style="color:rgb(0, 0, 0)">X = x<font size="1">1</font>, x<font size="1">2</font>, x<font size="1">3</font></em><span style="color:rgb(0, 0, 0)">,&nbsp;&hellip; and&nbsp;</span><em style="color:rgb(0, 0, 0)">Y = y<font size="1">1</font>, y<font size="1">2</font>, y<font size="1">3</font>,</em><span style="color:rgb(0, 0, 0)">&nbsp;&hellip; can be expressed by the</span>&nbsp;<em><font color="#24678d" style="font-weight:bold">correlation coefficient (r)</font></em>&nbsp;calculated as</div>
+
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:46.111111111111%; padding:0 15px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-none" style="padding-top:0px;padding-bottom:10px;margin-left:0px;margin-right:0px;text-align:center">
+<a href='uploads/3/4/5/7/34572113/resting-state-fmri-01_2_orig.png' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/resting-state-fmri-01_2_orig.png" alt="resting state fmri correlation matrix" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%">Correlation graph for pairs of 30 different brain regions in rs-fMRI experiment. (From nipy.org under CC license)</div>
+</div></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:53.888888888889%; padding:0 15px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-none" style="padding-top:10px;padding-bottom:10px;margin-left:0px;margin-right:0px;text-align:center">
+<a href='uploads/3/4/5/7/34572113/correlation-coefficient-r_2_orig.png' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/correlation-coefficient-r_20aa1.png?191" alt="Picture" style="width:191;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+<div class="paragraph"><span>&#65279;</span><span style="color:rgb(0, 0, 0)">where&nbsp;</span><em style="color:rgb(0, 0, 0)">r = 0</em><span style="color:rgb(0, 0, 0)">&nbsp;implies no correlation,&nbsp;</span><em style="color:rgb(0, 0, 0)">r = 1</em><span style="color:rgb(0, 0, 0)">&nbsp;perfect correlation, and</span><em style="color:rgb(0, 0, 0)">&nbsp;=&nbsp;&minus;1</em><span style="color:rgb(0, 0, 0)">&nbsp;perfect anti-correlation.&nbsp;</span>&#8203;<br /><br />&#8203;<span style="color:rgb(0, 0, 0)">Correlation methodology was one of the earliest techniques applied to task-based fMRI studies in the 1990s. In this setting&nbsp;</span><em style="color:rgb(0, 0, 0)">Y</em><span style="color:rgb(0, 0, 0)">&nbsp;was the time course of the fMRI signal from a single voxel while&nbsp;</span><em style="color:rgb(0, 0, 0)">X</em><span style="color:rgb(0, 0, 0)">&nbsp;was the expected hemodynamic response to a task or stimulus. Voxels with larger&nbsp;<em>r</em>-values had signals</span><span style="color:rgb(0, 0, 0)">&nbsp;more highly correlated to the input and hence were considered relatively activated.</span></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div class="paragraph"><span style="color:rgb(0, 0, 0)">Today correlation analysis is more commonly used for&nbsp;</span><em style="color:rgb(0, 0, 0)"><strong><font color="#24678d">resting-state fMRI (RS-fMRI</font></strong></em><span style="color:rgb(0, 0, 0)">), where </span><em style="color:rgb(0, 0, 0)">X</em><span style="color:rgb(0, 0, 0)">&nbsp;and&nbsp;</span><em style="color:rgb(0, 0, 0)">Y</em><span style="color:rgb(0, 0, 0)">&nbsp;are the MRI signals from two different voxels or brain regions. Here higher&nbsp;</span><em style="color:rgb(0, 0, 0)">r</em><span style="color:rgb(0, 0, 0)">-values&nbsp;reflect greater connectivity between pairs of areas and assist in neural network modeling.</span></div>
+
+<div class="paragraph"><strong><font size="4" color="#8d5024">General Linear Model (GLM)</font></strong></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;">The&nbsp;<strong><em><font color="#24678d">General Linear Model (GLM)</font></em></strong>&nbsp;is an extension of simple correlation and regression that has evolved into the workhorse technique for analysis of task/stimulus-based fMRI experiments over the last 25 years. <span style="color:rgb(0, 0, 0)">GLM is the default method provided by all MR vendors in their clinical fMRI packages and is also widely available in third party software.&nbsp;</span>Often expressed in matrix algebra form, the GLM can be written&nbsp;</div>
+
+<div class="paragraph" style="text-align:center;"><font color="#8d5024"><font size="4"><em><strong>Y</strong></em> =&nbsp;</font> <span style="color:rgb(141, 80, 36)"><em><font size="4">&beta;</font><font size="2">0</font><font size="4"> +&nbsp;&beta;</font><font size="2">1</font></em></span><span style="color:rgb(141, 80, 36)"><em><font size="4"><strong>X</strong></font><font size="2"><strong>1</strong></font><font size="2">&nbsp;</font></em></span><font size="4">+&nbsp;</font></font><font color="#8d5024"><em><font size="4">&beta;</font><font size="2">2</font><font size="4"><strong>X</strong></font><font size="2"><strong>2</strong></font></em> <font size="4">+&nbsp;&hellip; +</font></font><font color="#8d5024"> <em><font size="4"><strong>&epsilon;</strong></font></em></font></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;">This equation states that the <em><strong><font color="#24678d">fMRI signa</font></strong></em><em><strong><font color="#24678d">l (Y)</font></strong></em>&nbsp;for a given voxel can be expressed as the sum of one or more experimental<em><strong><font color="#24678d"> design variables</font></strong></em> <strong><font color="#24678d">(<em>X<font size="1">1</font>, X<font size="1">2</font></em>,&nbsp;&hellip;)</font></strong>, each multiplied by a <em><strong><font color="#24678d">weighting factor (&beta;<font size="1">1</font>,&nbsp;<em>&beta;<font size="1">2</font>,&nbsp;</em>&hellip;)</font></strong></em>, plus a random <em><strong><font color="#24678d">error term (<a><font size="4">&epsilon;</font></a>)</font></strong></em>. There is usually one <em>X<font size="1">i</font></em> for each type of stimulus or event presented to the subject. Most models also contain additional <em>X<font size="1">i</font></em> "nuisance regressors" to account for motion or signal drift.&nbsp;</div>
+
+<span class='imgPusher' style='float:left;height:0px'></span><span style='display: table;width:224px;position:relative;float:left;max-width:100%;;clear:left;margin-top:0px;*margin-top:0px'><a href='uploads/3/4/5/7/34572113/sentence-completion1_orig.jpg' rel='lightbox' onclick='if (!lightboxLoaded) return false'><img src="uploads/3/4/5/7/34572113/sentence-completion1_1274a.jpg?204" style="margin-top: 10px; margin-bottom: 10px; margin-left: 0px; margin-right: 20px; border-width:0; max-width:100%" alt="SPM" class="galleryImageBorder wsite-image" /></a><span style="display: table-caption; caption-side: bottom; font-size: 90%; margin-top: -10px; margin-bottom: 10px; text-align: center;" class="wsite-caption">Statistical Parametic Map (SPM)<br>overlaid on anatomic image</span></span>
+<div class="paragraph" style="text-align:skip_to_justify;display:block;">Once the design variables (<em>X<font size="1">i</font></em>) and recorded signals (Y) have been loaded into the GLM, a least squares optimization procedure calculates values for the weighting factors (<em><font color="#2a2a2a">&beta;<font size="1">1</font>,&nbsp;<em>&beta;<font size="1">2</font>,&nbsp;</em>&hellip;</font></em><font color="#2a2a2a">) corresponding to each design variable. Because the data fit will not be perfect, small errors (</font><em><a><font color="#2a2a2a"><font size="4">&epsilon;</font></font></a></em><em><a><font color="#2a2a2a"><font size="1">i</font></font></a></em><em><a></a></em><font color="#2a2a2a">), also called </font><em><strong><font color="#24678d">residuals</font></strong></em><font color="#2a2a2a">, will be generated for each time point. <span style="color:rgb(0, 0, 0)">Various statistical tools (such as</span><em style="color:rgb(0, 0, 0)"><strong><font color="#24678d">&nbsp;t- and F-tests</font></strong></em><span style="color:rgb(0, 0, 0)">) can then be applied to explore other features of the data, such as the degree of correlation between variables, assessment of linearity, and comparisons between populations.&nbsp;</span>&#8203;&#8203;<span style="color:rgb(0, 0, 0)">The final output is usually a&nbsp;</span><em style="color:rgb(0, 0, 0)"><strong><font color="#24678d">Statistical Parametric Map (SPM)</font></strong></em><span style="color:rgb(0, 0, 0)">&nbsp;</span><span style="color:rgb(0, 0, 0)">overlaid on an anatomic image or template.</span></font></div>
+<hr style="width:100%;clear:both;visibility:hidden;"></hr>
+
+<div class="paragraph"><strong><font size="4" color="#8d5024">Independent Component Analysis (ICA)</font></strong></div>
+
+<span class='imgPusher' style='float:right;height:0px'></span><span style='display: table;width:327px;position:relative;float:right;max-width:100%;;clear:right;margin-top:2px;*margin-top:4px'><a href='uploads/3/4/5/7/34572113/ica_orig.gif' rel='lightbox' onclick='if (!lightboxLoaded) return false'><img src="uploads/3/4/5/7/34572113/ica_1.gif" style="margin-top: 10px; margin-bottom: 10px; margin-left: 0px; margin-right: 20px; border-width:0; max-width:100%" alt="independent component analysis" class="galleryImageBorder wsite-image" /></a><span style="display: table-caption; caption-side: bottom; font-size: 90%; margin-top: -10px; margin-bottom: 10px; text-align: center;" class="wsite-caption">Spatial ICA separates signals from visual cortex into three components.</span></span>
+<div class="paragraph" style="display:block;"><font color="#2a2a2a">The goal of&nbsp;</font><em><strong><font color="#24678d">Independent Component Analysis (ICA)</font></strong></em><font color="#2a2a2a">&nbsp;is to detect underlying patterns present in the fMRI signal without prior knowledge of the experimental task or shape of the hemodynamic response function. ICA is thus considered a &ldquo;model free&rdquo; method for&nbsp;</font><em><strong><font color="#24678d">blind source signal separation</font></strong></em><font color="#2a2a2a">, allowing identification of unknown independent signals that have been linearly mixed together. For example, ICA methods could be used extract individual voices, music, and noise elements from an audio mixture recorded at a cocktail party without prior knowledge of their sources or locations.</font></div>
+<hr style="width:100%;clear:both;visibility:hidden;"></hr>
+
+<div class="paragraph"><font color="#2a2a2a">As applied to fMRI data, ICA may distinguish meaningful areas of correlated brain activation from random and semi-periodic physiological noise. Although ICA can be used in conjunction with GLM methods for task-based experiments, it has found its most widespread application for the analysis of resting-state fMRI data.&nbsp;</font><br /></div>
+
+<div class="paragraph"><strong><font size="4" color="#8d5024">Multi-Voxel Pattern Analysis (MVPA) and Networks</font></strong></div>
+
+<span class='imgPusher' style='float:right;height:0px'></span><span style='display: table;width:257px;position:relative;float:right;max-width:100%;;clear:right;margin-top:0px;*margin-top:0px'><a href='uploads/3/4/5/7/34572113/haxby2001-resting-state-fmri-cropped-pub-domain_orig.jpg' rel='lightbox' onclick='if (!lightboxLoaded) return false'><img src="uploads/3/4/5/7/34572113/haxby2001-resting-state-fmri-cropped-pub-domainf340.jpg?241" style="margin-top: 5px; margin-bottom: 10px; margin-left: 0px; margin-right: 10px; none; max-width:100%" alt="PiMVPActure" class="galleryImageBorder wsite-image" /></a><span style="display: table-caption; caption-side: bottom; font-size: 90%; margin-top: -10px; margin-bottom: 10px; text-align: center;" class="wsite-caption">From Haxby et al (2001)</span></span>
+<div class="paragraph" style="display:block;"><strong><em><font color="#24678d">Multi-Voxel (Multi-Variate) Pattern Analysis (MVPA)</font></em></strong><span style="color:rgb(0, 0, 0)">&nbsp;seeks to discover spatial patterns of fMRI activity corresponding to different experimental conditions. Such knowledge might allow us to decode mental states, such as what a person is thinking or feeling, merely by observing fMRI data.</span><br /><br /><span style="color:rgb(0, 0, 0)">Unlike ICA, MVPA is model-based, and a wide range of MPVA techniques are available depending on the needs of a particular experiment and the psychologic-physiologic questions to be answered. One aspect to be considered is the spatial scope of the analysis. The&nbsp;</span><em style="color:rgb(0, 0, 0)">searchlight</em><span style="color:rgb(0, 0, 0)">&nbsp;</span><em style="color:rgb(0, 0, 0)">approach</em><span style="color:rgb(0, 0, 0)">&nbsp;creates thousands of localized multivariate predictive models; while the&nbsp;</span><em style="color:rgb(0, 0, 0)">whole</em><span style="color:rgb(0, 0, 0)">-</span><em style="color:rgb(0, 0, 0)">brain</em><span style="color:rgb(0, 0, 0)">&nbsp;</span><em style="color:rgb(0, 0, 0)">approach</em><span style="color:rgb(0, 0, 0)">&nbsp;develops a single predictive model across applied diffusely.</span></div>
+<hr style="width:100%;clear:both;visibility:hidden;"></hr>
+
+<span class='imgPusher' style='float:left;height:0px'></span><span style='display: table;width:290px;position:relative;float:left;max-width:100%;;clear:left;margin-top:0px;*margin-top:0px'><a href='uploads/3/4/5/7/34572113/brain-network-yellow_orig.gif' rel='lightbox' onclick='if (!lightboxLoaded) return false'><img src="uploads/3/4/5/7/34572113/brain-network-yellow7f10.gif?271" style="margin-top: 0px; margin-bottom: 0px; margin-left: 0px; margin-right: 20px; border-width:1px;padding:3px; max-width:100%" alt="brain network graph" class="galleryImageBorder wsite-image" /></a><span style="display: table-caption; caption-side: bottom; font-size: 90%; margin-top: -0px; margin-bottom: 0px; text-align: center;" class="wsite-caption">Brain network graph</span></span>
+<div class="paragraph" style="display:block;">Because of the brain's extraordinary complexity, an important role for <font color="#24678d"><strong><em>machine</em></strong> <strong><em>learning</em></strong></font> has emerged -- the use of computer algorithms to discern complex patterns from empirical data for making models and decisions. This, in turn, has led to multiple methods of for expressing connectivity -- through graphs, network maps, and quantitative measures. The NIH-sponsored <em><strong><font color="#24678d">Human Connectome Project</font></strong></em> is an example of the importance of developing a public fMRI data base and processing algorithms for better understanding of brain connectivity.</div>
+<hr style="width:100%;clear:both;visibility:hidden;"></hr>
+
+<div><div id="784756957172286277" align="left" style="width: 100%; overflow-y: hidden;" class="wcustomhtml"><html> <head><script src="gdpr/gdprscript6f19.js?buildTime=1774025472"></script> <script type="text/javascript" 
+></script> 
+<script type="text/javascript">
+		$(function() {$('#Q').click(function() {$('.Q').toggle(500); return false;});});</script></head><body>
+<a href="#" id=Q><h3><font color="#378a57">Advanced Discussion (show/hide)»</font></h3></a><div class=Q style="display:none;">
+
+<!--content goes below here-->
+
+No supplementary material yet.  Check back soon!
+
+
+<!--content goes above here-->
+</div></body>
+<!-- Mirrored from mriquestions.com/fmri-statistical-analysis.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 21 Mar 2026 06:43:14 GMT -->
+</html></div>
+
+
+
+</div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;"><strong>References</strong><br /><span style="color:rgb(135, 135, 135)">&nbsp; &nbsp; &nbsp;</span>Haxby JV, Gobbini MI, Furey ML, et al. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/haxby_etal01.pdf">Distributed and overlapping representations of faces and objects in the ventral temporal cortex</a>. Science 2001; 293:2425-30. (frequently credited as the first MVPA paper). &nbsp;<br /><span style="color:rgb(42, 42, 42)">&nbsp; &nbsp; &nbsp;Mahmoudi A, Takerkart S, Regragui F, et al. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/multivoxel_pattern_analysis961257.pdf">Multivoxel pattern analysis for fMRI data: a review</a>. Comput Math Methods Med 2012: article ID 961257:1-14.</span><span style="color:rgb(42, 42, 42)">&nbsp; &nbsp;&nbsp;</span><br />&nbsp; &nbsp; &nbsp;McKeown MJ, Makeig S, Brown GG, et al. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/mckeown_ica_1998.pdf">Analysis of fMRI data by blind separation into independent spatial components</a>. Hum Brain Mapping 1998; 6:160-188. (First description of ICA applied to fMRI).<br /><span style="color:rgb(42, 42, 42)">&nbsp; &nbsp; &nbsp;Monti MM. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/monti_fnhum-05-00028.pdf">Statistical analysis of fMRI time-series: a critical review of the GLM approach</a>. Front Hum Neurosci 2011; 5(28):1-13, doi: 10.3389/fnhum.2011.00028<br />&nbsp;&nbsp; &nbsp;&nbsp;</span>Poline J-B, Brett M. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/_glm_does_love_last_forever_1-s2.0-s1053811912001607-main.pdf">The general linear model and fMRI: Does love last forever?</a> Neuroimage 2012; 62:871-880.<br />&nbsp; &nbsp; &nbsp;<span style="color: rgb(19, 20, 19); background-color: transparent;">Powell V, Lehe L. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/principal_component_analysis_explained_visually.pdf">Principal component analysis explained visually</a>. Downloaded from <a href="https://setosa.io/ev/principal-component-analysis/" target="_blank">https://setosa.io/ev/principal-component-analysis/</a> 15 Jan 2022. (Excellent educational article explaining PCA/ICA in graphical terms)</span><br />&nbsp;&nbsp; &nbsp;&nbsp;Sporns O, Tononi G, K&ouml;tter R. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/connectome.pdf">The Human Connectome: a structural description of the human brain</a>. PLoS Comput Biol 2005; 1: 245-251.<br />&nbsp; &nbsp; &nbsp;Whitlow CT, Casanova R, Maldjian JA. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/whitlow_maldjian_resting_state_radiol_2e11101708.pdf">Effect of resting-state functional MR imaging duration on stability of graph theory metrics of brain network connectivity</a>. Radiology 2011; 259:516-524.</div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;"><strong>Related Questions</strong><br /><em><strong><a href="general-linear-model.html">&nbsp; &nbsp; &nbsp;I don't really understand how GLM works. Can you explain it more completely? &nbsp;</a></strong></em><em></em></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div style="text-align:skip_to_justify;"><div style="height: 0px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-normal" href="registrationnormalization.html" >
+<span class="wsite-button-inner">← &nbsp;Previous Question</span>
+</a>
+<div style="height: 0px; overflow: hidden;"></div></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div style="text-align:right;"><div style="height: 0px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-normal" href="general-linear-model.html" >
+<span class="wsite-button-inner">Next Question &nbsp;→</span>
+</a>
+<div style="height: 0px; overflow: hidden;"></div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div style="text-align:center;"><div style="height: 0px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-highlight" href="complete-list-of-questions.html" >
+<span class="wsite-button-inner">↑&nbsp;Complete List of Questions ↑</span>
+</a>
+<div style="height: 10px; overflow: hidden;"></div></div>
+</div></div>

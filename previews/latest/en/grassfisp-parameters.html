@@ -1,0 +1,202 @@
+<div id="content"><div id="wsite-content" class="wsite-elements wsite-not-footer">
+	<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -0px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:46.220930232558%; padding:0 0px;">
+					
+						
+
+<h2 class="wsite-content-title" style="text-align:center;">GRASS/FISP Contrast<br /></h2>
+
+<div class="paragraph" style="text-align:center;"><strong style="color: rgb(135, 135, 135); font-size: large; line-height: 1.5;"><em><font color="#0376be">How do you select imaging parameters for GRASS/FISP sequences?&nbsp;</font></em></strong><strong style="color: rgb(55, 138, 87); font-size: large; line-height: 1.5;"><em>&nbsp;</em></strong><br /></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:53.779069767442%; padding:0 0px;">
+					
+						
+
+<div class="paragraph" style="text-align:skip_to_justify;">&nbsp;</div>
+
+<div><div class="wsite-image wsite-image-border-thin" style="padding-top:0;padding-bottom:0;margin-left:0;margin-right:0;text-align:center">
+<a href='uploads/3/4/5/7/34572113/3427731_orig.png' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/3427731cd00.png?328" alt="GRASS/ FISP MR image contrast" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;">Like most other MRI techniques, image contrast in a GRASS/FISP sequence depends on three operator-selectable parameters (<em style="">TR</em>,&nbsp;<em style="">TE</em>, and&nbsp;<em style="">&alpha;</em>) and three tissue-specific parameters (T1, T2*, and [H].&nbsp;Unlike the spoiled-GRE case, however, the effects of each of these on image contrast is not quite so intuitive nor easily predictable. &nbsp;The signal intensity equation for a GRASS/FISP sequence can be derived by a recursive process with the following formidable result:<br /></div>
+
+<div><div class="wsite-image wsite-image-border-none" style="padding-top:0;padding-bottom:0;margin-left:0;margin-right:0;text-align:center">
+<a href='uploads/3/4/5/7/34572113/6967501_orig.png' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/69675010fcb.png?531" alt="GRASS/ FISP MR image contrast" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;">The reason this formula is so complex is that&nbsp;both longitudinal and transverse steady-state components are "mixed" or exchanged with each RF-pulse. The final MR signal is therefore a summation of FIDs, secondary spin echoes and stimulated echoes that accumulate over over many cycles. &nbsp;In spite of this complexity, a few basic statements concerning image contrast in these sequences are possible.</div>
+
+<div class="paragraph" style="text-align:center;"><strong><font size="4"><em>TE</em> controls T2*-weighting</font></strong></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;">Just as with fully spoiled sequences, GRASS/FISP dephases and rephases an FID-like signal into a gradient-recalled echo. This gradient echo exponentially decays with time constant T2*. The longer the echo time (<em>TE</em>), the more time for this decay and lower the overall signal. Just as with spoiled GRE sequences, therefore, lengthening <em>TE</em>&nbsp;in GRASS/FISP increases T2*-weighting.&nbsp;</div>
+
+<div class="paragraph" style="text-align:center;"><strong><font size="4">Long <em>TR</em> or Multi-slice mode: Spoiled-GRE Behavior</font></strong></div>
+
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:56.963788300836%; padding:0 15px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-thin" style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
+<a href='uploads/3/4/5/7/34572113/2295762_orig.jpg' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/2295762_orig.jpg" alt="GRASS/ FISP MR image contrast" style="width:100%;max-width:434px" />
+</a>
+<div style="display:block;font-size:90%"><b>Effect of TR</b>. At long TRs (> 250 ms) T2* decay prevents a transverse steady state from becoming established, converting GRASS/FISP to SPGR/FLASH behavior. Both images have TE=7 and α=60°. Image on left has TR=40; Image on right has TR = 400.</div>
+</div></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:43.036211699164%; padding:0 15px;">
+					
+						
+
+<div class="paragraph" style="text-align:skip_to_justify;">GRASS/FISP contrast is perhaps the easiest to understand in cases where the assumptions of a coherent transverse steady state break down.&nbsp; For example, when <em>TR</em> is much longer than T2* (e.g., <em>TR&nbsp;</em>&gt; 250 ms for most tissues), natural T2*-processes intrinsically result in complete decay of the transverse magnetization between RF-pulses. The GRASS/FISP sequence then behaves as a spoiled-GRE sequence whose contrast behavior has been described in a <a href="spoiled-gre-parameters.html" title="">separate Q&amp;A</a>. &nbsp;<br /></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;">Physiologic motion may also contribute to this intrinsic spoiling of the GRASS/FISP sequence.&nbsp; Thus flowing cerebrospinal fluid and blood may exhibit spoiled contrast behavior, even though stationary tissue remains in a steady-state free precession. &nbsp;<br /><br />Finally, operating the sequence in multi-slice mode (MPGR) also disrupts the development of coherent transverse magnetization and the sequence develops spoiled-GRE behavior. This will be discussed more fully in the <a href="grass-vs-mpgr.html" title="">next Q&amp;A</a>.<br /></div>
+
+<div class="paragraph" style="text-align:center;"><font size="4"><strong>Effect of Flip Angle </strong><strong>(<em>&alpha;</em>)</strong></font></div>
+
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:58.635097493036%; padding:0 15px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-thin" style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
+<a href='uploads/3/4/5/7/34572113/7020493_orig.jpg' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/7020493_orig.jpg" alt="GRASS/ FISP MR image contrast" style="width:100%;max-width:491px" />
+</a>
+<div style="display:block;font-size:90%"><b>Effect of Flip Angle (α)</b>. Both images have TR=50 and TE=15. Left image with α = 15° shows spin-density-weighting. Right image with α = 90° shows T2/T1-weighting.</div>
+</div></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:41.364902506964%; padding:0 15px;">
+					
+						
+
+<div class="paragraph" style="text-align:skip_to_justify;">For shorter values of&nbsp;<em style="">TR</em>, both a longitudinal and a transverse steady state become established with considerable mixing from pulse to pulse. As such, and image contrast is largely independent of TR and will be dictated principally by flip angle (&alpha;). &nbsp;As will be explained below, low flip angles (&alpha;&lt;20&deg;) produce spin-density-weighted images, whereas larger flip angles (&alpha;&gt;45&deg;) result in contrast that is sensitive to the ratio T2/T1.</div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;">In a <a href="partial-flip-angles.html" title="">prior Q&amp;A</a>&nbsp;I described how&nbsp;a low flip-angle pulse creates an appreciable transverse magnetization while disturbing the longitudinal magnetization only slightly.&nbsp; When <em>&alpha;</em> is small, therefore, most of the steady-state magnetization remains in the longitudinal direction, a phenomenon dependent primarily upon the trigonometric fact that cos <em>&alpha;</em>&nbsp;&asymp;&nbsp;1 for small <em>&alpha;</em> (and hence essentially independent of tissue T1 or T2).&nbsp; Stated&nbsp;another way, the longitudinal magnetization will not change much after a small <em>&alpha;</em> pulse, and this is true regardless of what T1 or T2 may be.&nbsp; For low flip angles, therefore, image contrast depends primarily upon the equilibrium magnetization, which reflects the total number of spins in the sample.&nbsp; Hence low flip angles (<em>&alpha;&nbsp;</em>&lt; 20&deg;) produce spin-density [H]-weighted images. <br /><span style=""></span><br /><span style=""></span>  When &alpha; is large, however, considerable interchange between the longitudinal and transverse magnetization components occurs with each RF-pulse.&nbsp; The net signal then depends strongly upon both T1 and T2 (or more explicitly, upon the <em style="">ratio </em>T2/T1).&nbsp; For most solid tissues, T1 is approximately 5-10 times longer than T2, but for fluids T2 and T1 are nearly equal.&nbsp; As flip angle increases, therefore, the signal from CSF and other fluids significantly increases because of this T2/T1 behavior.<br /><br /><span style=""></span>  A summary of these image contrast manipulations appears in the table below. The reader should realize that terms such as "T1-weighting" and "T2*-weighting" are not strictly defined and that in a single image many different tissue contrasts may be present simultaneously.&nbsp; For example, some parts of a GRASS/FISP image may exhibit T1 contrast while other parts show T2/T1 contrast and spin-density weighting.&nbsp; Furthermore, the signal from water/CSF cannot be used as a simple and reliable guide to the type of weighting as it can in SE imaging.&nbsp; Water may be equally bright on spin-density-, T2*-, and T2/T1-weighted steady-state GRE images.<br /><span style=""></span></div>
+
+<div><div class="wsite-image wsite-image-border-thin" style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
+<a href='uploads/3/4/5/7/34572113/5182175_orig.png' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/51821758fec.png?675" alt="GRASS/FISP Image contrast Table" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%">How parameters control image contrast in GRASS/FISP sequences</div>
+</div></div>
+
+<div><div id="772138712169883728" align="left" style="width: 100%; overflow-y: hidden;" class="wcustomhtml"><html> <head><script src="gdpr/gdprscript6f19.js?buildTime=1774025472"></script> <script type="text/javascript" 
+></script> 
+<script type="text/javascript">
+		$(function() {$('#Q').click(function() {$('.Q').toggle(500); return false;});});</script></head><body>
+<a href="#" id=Q><h3><font color="#378a57">Advanced Discussion (show/hide)»</font></h3></a><div class=Q style="display:none;">
+
+<!--content goes below here-->
+
+<h3>Additional Notes on GRASS/FISP Contrast</h3> 
+
+<p>Although the GRASS/FISP signal equation is dominated by its final term (<i>e<sup>−T2*/TE</sup></i>), you may have noticed that the factor "A" is a function of T2, not T2*.  Thus GRASS/FISP also has some true-T2-weighting in addition to weighting of the T2* variety. The reason for this is that the refocused postexcitation signal sampled in GRASS/FISP is more than a simple FID. In fact, it contains spin echo and stimulated echo contributions from several previous cycles which are affected by true T2 decay.</p>
+
+
+<!--content goes above here-->
+</div></body>
+<!-- Mirrored from mriquestions.com/grassfisp-parameters.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 21 Mar 2026 06:08:25 GMT -->
+</html></div>
+
+
+
+</div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;"><strong>References</strong><br /><font color="#878787">&nbsp; &nbsp; &nbsp;</font>Haacke EM, Frahm J. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/haacke_editorial_jmri.1880010602.pdf">A guide to understanding key aspects of fast gradient-echo imaging</a>. J Magn Reson Imaging 1991; 1:621-624.<br />&nbsp; &nbsp; &nbsp;Oppelt A, Graumann R, Barfuss H, et al. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/oppelt_fisp_1986.pdf">FISP: a new fast MRI sequence</a>. Electromedica 1986; 54:15-18.</div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;"><strong>Related Questions</strong><br /><strong><em>&nbsp; &nbsp; &nbsp;<span style="text-align: center;"><a href="grassfisp-how.html">How do GRASS/FISP/FFE sequences work?</a>&nbsp;</span><span style="text-align: center;">&nbsp;</span></em></strong></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div style="text-align:skip_to_justify;"><div style="height: 10px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-normal" href="grassfisp-how.html" >
+<span class="wsite-button-inner">← &nbsp;Previous Question</span>
+</a>
+<div style="height: 10px; overflow: hidden;"></div></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div style="text-align:right;"><div style="height: 10px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-normal" href="grass-vs-mpgr.html" >
+<span class="wsite-button-inner">Next Question &nbsp;→</span>
+</a>
+<div style="height: 10px; overflow: hidden;"></div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div style="text-align:center;"><div style="height: 10px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-highlight" href="complete-list-of-questions.html" >
+<span class="wsite-button-inner">↑&nbsp;Complete List of Questions ↑</span>
+</a>
+<div style="height: 10px; overflow: hidden;"></div></div>
+</div></div>

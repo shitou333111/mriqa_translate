@@ -1,0 +1,134 @@
+<div id="content"><div id="wsite-content" class="wsite-elements wsite-not-footer">
+	<div class="paragraph" style="text-align:center;"><font color="#0376be" size="5"><span style="line-height: 27px;"><strong>Technical Details of the GRASS/FISP Pulse Sequence</strong></span></font></div>
+
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:38.300835654596%; padding:0 15px;">
+					
+						
+
+<div class="paragraph" style="text-align:skip_to_justify;">Three modifications of the "basic" GRE sequence are typically found in a GRASS/FISP sequence: 1) phase-alternating RF-pulses, 2) constant extra gradients in the readout (and usually slice-select) directions, and 3) variable "rewinder gradients" along the phase-encoding axis. The functions of these special features are the subject of this Advanced Topics page.</div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:61.699164345404%; padding:0 15px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-thin " style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
+<a>
+<img src="uploads/3/4/5/7/34572113/_1101823.png" alt="Picture" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;"><strong><u>Alternating RF-pulses</u></strong></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;">The use of alternating phase RF-pulses is not unique to GRASS/FISP but is common with any pulse sequence where very short <em>TR</em> values are used. As described in a <a href="4-or-more-rf-pulses.html" title="">prior Q&amp;A</a>, rapidly applied RF-pulses result in saturation of the longitudinal magnetization. If the RF-pulses were continuously applied in the same (+&alpha;)&nbsp;direction, this steady-state magnetization is lower than if alternating phase (+&alpha;,&nbsp;&minus;&alpha;,&nbsp;+&alpha;,&nbsp;&minus;&alpha;, ...) pulses were used. The opposite phase (&minus;&alpha;) pulse helps to restore the longitudinal magnetization in a manner equivalent to the driven equilibrium technique discussed in a <a href="driven-equilibrium.html">later Q&amp;A</a>.</div>
+
+<div class="paragraph" style="text-align:skip_to_justify;">To understand the purpose of the extra gradients and rewinders, the concept of the resonant offset angle (&beta;) must first be introduced.</div>
+
+<div class="paragraph" style="text-align:skip_to_justify;"><strong><u>Resonant Offset Angle (&beta;)</u></strong><br /><br />When a steady-state free precession becomes established, the magnetization that exists immediately before each RF-pulse in general does not point neatly along the&nbsp;<em style="">z</em>-axis. &nbsp;Instead, it is typically obliquely oriented and possesses a nonzero transverse component in the<em style="">&nbsp;xy</em>-plane.&nbsp; The <strong><em><font color="#24678d">angle</font></em><font color="#24678d"> (<em>&beta;</em>)</font></strong> at which this transverse magnetization makes relative to the rotating frame <em>x'</em>-axis&nbsp;is called the&nbsp;<strong><em><font color="#24678d">resonant offset angle,&nbsp;phase angle</font></em></strong>, or&nbsp;<em style=""><font color="#24678d"><strong>precession angle</strong></font>.</em>&nbsp;&nbsp;<br /><br />The figure below demonstrates how the action of an RF-pulse depends upon the resonant offset.<span style="color: rgb(135, 135, 135); line-height: 1.5;"><br /></span></div>
+
+<div><div class="wsite-image wsite-image-border-thin " style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
+<a>
+<img src="uploads/3/4/5/7/34572113/843578416c2.gif?541" alt="Picture" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%"><b>Resonant offset effects.</b> (Left) Spins A, B, and C have different resonant offset angles (β). (Right) The effect of an RF-pulse (α) depends on the original resonant offsets. A', B', and C' are the final positions of A, B, and C following this pulse.</div>
+</div></div>
+
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:55.087209302326%; padding:0 15px;">
+					
+						
+
+<div class="paragraph" style="text-align:skip_to_justify;">Numerous artifacts and problems may arise in steady-state GRE imaging because of clustering and nonuniformity of resonant offset angles from pixel to pixel across the image.&nbsp; If a position-dependent distribution of resonant offset angles exists across a slice at the end of a cycle, the next RF-pulse will have an effect on this signal that is also position-dependent.&nbsp; As a result, regular bands of varying signal intensity (sometimes called "<strong><em><font color="#24678d">FLASH bands</font></em></strong>") may appear and significantly degrade the MR image.</div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:44.912790697674%; padding:0 15px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-thin " style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
+<a>
+<img src="uploads/3/4/5/7/34572113/6177418_orig.jpg" alt="Picture" style="width:100%;max-width:400px" />
+</a>
+<div style="display:block;font-size:90%">"FLASH bands"</div>
+</div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;">Steady-state GRE sequences control resonant offset effects and maintain steady-state coherence in two principal ways: (1) through extra gradients of constant amplitude in the read and slice-select directions to cause averaging of these resonant-offset effects, and (2) by creating a net zero phase shift along the phase-encode direction through variable "rewinder" gradients. &nbsp;<br /></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;"><strong style=""><u>Function of the Extra Gradients</u></strong><br><span style=""></span><br>As shown in the above diagram, extra gradients are typically applied near the end of the GRASS/FISP pulse sequence along the readout (frequency encoding) and usually slice-select directions. The extra gradient along readout is hard to appreciate in the diagram because it is just a prolongation of the existing readout lobe.&nbsp;<br><br>These extra gradients are commonly referred to as "spoilers". This is confusing nomenclature because it brings to mind "fully spoiled" sequences like SPGR that use a combination of RF-phase incrementation and variable gradient spoilers to <i>completely</i> disrupt the transverse magnetization. In GRASS/FISP there is no RF-spoiling, and the gradient spoilers are of constant (not variable) magnitude. The GRASS/FISP spoilers do not (and cannot) completely disrupt the transverse magnetization; they only average it within a voxel .<br><br>The GRASS/FISP spoilers are left on just long enough to insure that a full range of resonant offset angles (from 0&deg; to 360&deg;) exists across each voxel at the end of a cycle.&nbsp; This uniform redistribution of spin phase angles prior to the next RF-pulse means the contribution to the steady-state magnetization will be smoothed or averaged over all values of &beta;.&nbsp; Accordingly, position-dependent changes in signal intensity and phase will be minimized. The process is known as&nbsp;<strong style=""><em style=""><font color="#24678d">resonant-offset averaging.</font></em></strong><br></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;"><strong><u>Function of the Rewinders</u></strong><br /><br /><em style=""><strong style=""><font color="#24678d">Rewinder gradients</font></strong>&nbsp;</em>are a second set of phase-encoding steps applied with reverse polarity at the end of every cycle.&nbsp; The purpose of these rewinders is to insure stability of the phase of the MR signal in each repetition interval and to aid in the development of coherent transverse magnetization. Without rewinders, resonant offsets would vary from cycle to cycle (because the phase-encode step changes).&nbsp; Phase-encoded information in one cycle could therefore "spill over" into the next cycle, generating unwanted stimulated echoes and FLASH bands in the image.<br /><br />Finally, it should be noted that use of rewinder gradients is not unique to GRASS/FISP or even gradient echo imaging, but may be used in a wide range of pulse sequences including (SE and fast SE) for the same general purpose.</div>
+
+<div style="text-align:center;"><div style="height: 10px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-large wsite-button-highlight" href="grassfisp-how.html" >
+<span class="wsite-button-inner">Return to Main GRASS/FiSP Question</span>
+</a>
+<div style="height: 10px; overflow: hidden;"></div></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div style="text-align:skip_to_justify;"><div style="height: 10px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-normal" href="grassfisp-how.html" >
+<span class="wsite-button-inner">← &nbsp;Previous Question</span>
+</a>
+<div style="height: 10px; overflow: hidden;"></div></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div style="text-align:right;"><div style="height: 10px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-normal" href="grassfisp-parameters.html" >
+<span class="wsite-button-inner">Next Question &nbsp;→</span>
+</a>
+<div style="height: 10px; overflow: hidden;"></div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div style="text-align:center;"><div style="height: 10px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-highlight" href="index.html" >
+<span class="wsite-button-inner">↑&nbsp;Complete List of Questions ↑</span>
+</a>
+<div style="height: 10px; overflow: hidden;"></div></div>
+</div>
+</div>

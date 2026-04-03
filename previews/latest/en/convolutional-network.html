@@ -1,0 +1,304 @@
+<div id="content"><div id="wsite-content" class="wsite-elements wsite-not-footer">
+	<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<h2 class="wsite-content-title" style="text-align:center;">Convolutional Network</h2>
+
+<div class="paragraph" style="text-align:center;"><font color="#0376be" size="4"><strong><em>What is a convolutional neural network (CNN) and how does it work?</em></strong></font></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-thin" style="padding-top:0px;padding-bottom:10px;margin-left:0px;margin-right:0px;text-align:center">
+<a href='uploads/3/4/5/7/34572113/screen-shot-2022-06-29-at-1-43-37-pm_orig.png' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/screen-shot-2022-06-29-at-1-43-37-pm_orig.png" alt="convolutional nerual network CNN" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;">In the last several Q&amp;A's, we have finally developed a background to understand how a convolutional neural network (CNN) is constructed.&nbsp; In this Q&amp;A we will try to put the pieces all together, expanding on the diagram below representative of a <em><strong><font color="#24678d">series-type CNN</font></strong></em> (like <em style="color:rgb(0, 0, 0)"><strong><font color="#24678d">VGGNet</font></strong></em>) whose input might be an MR image and output a disease prediction/classification.</div>
+
+<div><div class="wsite-image wsite-image-border-none" style="padding-top:0px;padding-bottom:10px;margin-left:0px;margin-right:0px;text-align:center">
+<a href='uploads/3/4/5/7/34572113/screenshot-2024-09-04-at-3-36-33-pm_orig.png' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/screenshot-2024-09-04-at-3-36-33-pm_orig.png" alt="Picture" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%"><b>A simple CNN for disease classification</b></div>
+</div></div>
+
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:42.361111111111%; padding:0 15px;">
+					
+						
+
+<div class="paragraph"><strong style="color:rgb(0, 0, 0)"><font color="#8d5024" size="4">&#8203;Convolution</font></strong></div>
+
+<div class="paragraph"><em style="color:rgb(0, 0, 0)"><strong><font color="#24678d">Convolution </font></strong></em><span style="color:rgb(0, 0, 0)">of the input image is the initial step in a CNN. As described <a href="what-is-convolution.html">in the prior Q&amp;A</a>, convolution involves a sliding multiplication and addition of regional data points by</span><span style="color:rgb(0, 0, 0)">&nbsp;a small (typically 3x3 or 5x5) array of numbers called a&nbsp;</span><em style="color:rgb(0, 0, 0)"><strong><font color="#24678d">kernel</font></strong></em><span style="color:rgb(0, 0, 0)">&nbsp;or&nbsp;</span><em style="color:rgb(0, 0, 0)"><strong><font color="#24678d">filter</font></strong></em><span style="color:rgb(0, 0, 0)">. By using sets of different kernels (such as ones that emphasize edges or shapes) a set of regional&nbsp;</span><em style="color:rgb(0, 0, 0)"><strong><font color="#24678d">feature maps</font></strong></em><span style="color:rgb(0, 0, 0)">&nbsp;is produced.&nbsp;</span></div>
+
+<div class="paragraph">Note that during training of the network, the filters at each layer will change gradually until they are optimized for the particular purpose intended (e.g., segmentation, classification).</div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:57.638888888889%; padding:0 15px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-none" style="padding-top:15px;padding-bottom:0px;margin-left:0px;margin-right:20px;text-align:center">
+<a href='uploads/3/4/5/7/34572113/screen-shot-2023-01-17-at-4-12-34-pm_orig.png' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/published/screen-shot-2023-01-17-at-4-12-34-pma051.png?1680967238" alt="First level feature map brain" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%">First-level feature maps of a brain MRI extracted from a convolutional network.  Each small image is the result of convolution with one of 64 different first-level filters that  emphasize various simple properties, including bright vs dark regions, edges, curves, and shadows. </div>
+</div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div class="paragraph"><strong style="color:rgb(0, 0, 0)"><font color="#8d5024" size="4">Activation</font></strong><br /><span style="color:rgb(0, 0, 0)">An&nbsp;</span><em style="color:rgb(0, 0, 0)"><strong><font color="#24678d">activation function</font></strong></em><span style="color:rgb(0, 0, 0)">&nbsp;is also commonly applied during feature map generation to constrain output pixels to a certain range. As described <a href="what-is-a-neural-network.html">in a prior Q&amp;A</a></span><span style="color:rgb(0, 0, 0)">, a common choice is the&nbsp;</span><em style="color:rgb(0, 0, 0)"><strong><font color="#24678d">Rectified Linear Unit (ReLU)&nbsp;</font></strong></em><span style="color:rgb(0, 0, 0)">function that passes through only positive values to the feature map and sets all negative pixels to zero.</span></div>
+
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:46.527777777778%; padding:0 15px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-none" style="padding-top:20px;padding-bottom:0px;margin-left:0px;margin-right:0px;text-align:center">
+<a href='uploads/3/4/5/7/34572113/relu-only-graph_orig.png' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/published/relu-only-graph56dc.png?1674079596" alt="ReLU" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:53.472222222222%; padding:0 15px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-none" style="padding-top:0px;padding-bottom:10px;margin-left:0px;margin-right:0px;text-align:center">
+<a href='uploads/3/4/5/7/34572113/screen-shot-2023-01-17-at-2-42-24-pm_orig.png' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/editor/screen-shot-2023-01-17-at-2-42-24-pmad23.png?1674078753" alt="ReLU" style="width:532;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%">Appearance of one of the above 64 feature maps before and after application of ReLU activation function</div>
+</div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div class="paragraph"><strong style="color:rgb(0, 0, 0)"><font color="#8d5024" size="4">Pooling (Downsampling)<br />&#8203;</font></strong>The next step, <em><strong><font color="#24678d">pooling</font></strong></em>,&nbsp;<span style="color:rgb(0, 0, 0)">shrinks the size of each feature map by 75% or more. This&nbsp;</span><span>allows only the most important features to be retained, thus reducing the number of learnable features of the model. With fewer parameters, pooling helps prevent <em><strong><font color="#24678d">overfitting</font></strong></em> of data. Pooling also reduces spatial invariance, meaning the network is able to recognize features even though they may be distorted or rotated.</span></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-none" style="padding-top:10px;padding-bottom:10px;margin-left:0px;margin-right:0px;text-align:center">
+<a href='uploads/3/4/5/7/34572113/max-avg-pooling_orig.png' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/max-avg-pooling_orig.png" alt="max and avr pooling " style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%">Max vs Average Pooling with a 2x2 matrix</div>
+</div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div class="paragraph"><span style="color:rgb(0, 0, 0)">The most popular method is known as&nbsp;</span><em style="color:rgb(0, 0, 0)"><strong><font color="#24678d">Max Pooling</font></strong></em><span style="color:rgb(0, 0, 0)">&nbsp;and uses a 2x2 filter to operate on each feature map.&nbsp; As shown in the illustration, the Max Pooling filter takes the largest value from each group of 4 pixels, thus shrinking the image substantially. A second common method is&nbsp;</span><em style="color:rgb(0, 0, 0)"><strong><font color="#24678d">Average (Avg) Pooling</font></strong></em><span style="color:rgb(0, 0, 0)">, where the average value from each group of 4 pixels is taken. Other techniques include Min Pooling, Global Pooling, Stochastic Pooling, and 1-2 Norm Pooling.&nbsp;</span>&#8203;</div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-none" style="padding-top:0px;padding-bottom:10px;margin-left:0px;margin-right:0px;text-align:center">
+<a href='uploads/3/4/5/7/34572113/example-max-and-avg-pooling_orig.png' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/example-max-and-avg-pooling_orig.png" alt="Max and average pooling " style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%">Max and average pooling of feature map using a 2x2 matrix</div>
+</div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div class="paragraph"><strong><font color="#8d5024" size="4">Convolution, Activation, and Pooling ..... Repeat</font></strong></div>
+
+<div class="paragraph"><span style="color:rgb(0, 0, 0)">The convolution-pooling process may be repeated several times, producing ever smaller "feature of feature" maps. Pooling is not always performed after each convolution; in some networks several convolutions are performed followed by a pooling step.</span></div>
+
+<div class="paragraph"><span style="color:rgb(0, 0, 0)">A common question that arises is what to these inner networks doing and what do deeper level feature maps look like?</span></div>
+
+<div class="paragraph">Although the results depend upon the particular network under consideration and filters selected, the following statements generally apply:<ol><li>The initial&nbsp;feature maps reflect the presence of lines, edges, and simple regions of light and dark within localized areas of the original image spanned by the convolution kernel.</li><li>Subsequent early layers are sensitive to curved contours and the junction of lines, recognizing loops and corners. Ultimately whole shapes like rectangles and circles may arise.</li><li>Deeper convolutions produce maps sensitive to texture and surfaces.</li><li>With progressive convolutions and pooling, the feature maps become progressively smaller and coarser.&nbsp; They are no longer localized but&nbsp;contain information from all parts of the original image.</li><li>These nested "features of features" maps may become largely unrecognizable to our eyes, reflecting hidden patterns and relationships between&nbsp;objects detected at earlier stages.</li><li>With training the filter weightings&nbsp;are modified to become optimized for the specific task required.</li></ol></div>
+
+<div class="paragraph">The image and Deep Visualization Toolbox video by Jason Yosinki below may help you get a better feeling about what the computer is "seeing" in these deeper layers.</div>
+
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:46.25%; padding:0 15px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-none" style="padding-top:10px;padding-bottom:10px;margin-left:0px;margin-right:0px;text-align:center">
+<a href='uploads/3/4/5/7/34572113/visualization-of-the-each-vgg19-first-feature-map-for-each-convolutional-layer-copy_orig.png' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/visualization-of-the-each-vgg19-first-feature-map-for-each-convolutional-layer-copy_orig.png" alt="Convolutional layers visualizaiton" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%">Original image and feature maps after 1 to 15 convolutions. (Adapted from Yosinski under CC-BY)</div>
+</div></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:53.75%; padding:0 15px;">
+					
+						
+
+<div class="wsite-youtube" style="margin-bottom:10px;margin-top:10px;"><div class="wsite-youtube-wrapper wsite-youtube-size-auto wsite-youtube-align-center">
+<div class="wsite-youtube-container">
+
+<iframe src="http://www.youtube.com/embed/AgkfIQ4IGaM?wmode=opaque" frameborder="0" allowfullscreen></iframe>
+</div>
+</div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div class="paragraph"><strong><font size="4" color="#8d5024">Final Processing Steps</font></strong></div>
+
+<div class="paragraph">Many possibilities exist once the multiple convolution-pooling process is complete. One common final stage<span style="color:rgb(0, 0, 0)">, known as&nbsp;</span><em style="color:rgb(0, 0, 0)"><strong><font color="#24678d">vectorization</font></strong></em><span style="color:rgb(0, 0, 0)">&nbsp;or&nbsp;</span><em style="color:rgb(0, 0, 0)"><strong><font color="#24678d">flattening</font></strong></em><span style="color:rgb(0, 0, 0)">,</span><font color="#292929">&nbsp;converts the last 2-dimensional feature maps&nbsp;into a single long chain of numbers (i.e., a "vector"). The vectorized feature maps then serve as inputs into a fully connected neural network whose output can be used to produce a final "decision"&nbsp;(such as tissue segmentation or disease classification).&nbsp; The fully connected layers allow the system to combine various combinations of information from the vectorized feature maps in making the system's end result. To have statistical meaning, the raw data in the output vector must be transformed into probabilities by use of the </font><em><strong><font color="#24678d">Softmax function </font></strong></em>(described in more detail in the <em><strong><a href="softmax.html">next Q&amp;A</a></strong></em>).<font color="#292929">&nbsp; Alternatively, the fully pooled data may be re-expanded back to its original dimensions, a process known as </font><em><strong><font color="#24678d">up-pooling,</font></strong></em><font color="#292929">&nbsp;outlined in the a subsequent Q&amp;A.</font></div>
+
+<div><div class="wsite-image wsite-image-border-none" style="padding-top:10px;padding-bottom:10px;margin-left:0px;margin-right:0px;text-align:center">
+<a href='uploads/3/4/5/7/34572113/cnn-output-softmax-class_orig.png' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/cnn-output-softmax-class_orig.png" alt="CNN Classification; Softmax" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%">Typical final processing steps in a CNN used for image classification/segmentation. Vectorized feature maps are passed through several fully connected layers to produce a numerical output vector (<b><i>Z<sub></sub></b></i>). The Softmax function converts these raw numbers into probabilities.</div>
+</div></div>
+
+<div><div id="875022626119753913" align="left" style="width: 100%; overflow-y: hidden;" class="wcustomhtml"><html> <head><script src="gdpr/gdprscript6f19.js?buildTime=1774025472"></script> <script type="text/javascript" 
+></script> 
+<script type="text/javascript">
+		$(function() {$('#Q').click(function() {$('.Q').toggle(500); return false;});});</script></head><body>
+<a href="#" id=Q><h3><font color="#378a57">Advanced Discussion (show/hide)»</font></h3></a><div class=Q style="display:none;">
+
+<!--content goes below here-->
+
+No supplementary material yet.  Check back soon!
+
+
+<!--content goes above here-->
+</div></body>
+<!-- Mirrored from mriquestions.com/convolutional-network.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 21 Mar 2026 06:50:36 GMT -->
+</html></div>
+
+
+
+</div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;"><strong>References</strong><br /><font color="#878787">&nbsp; &nbsp; &nbsp;</font>Ajit A, Acharya K, Semanta A. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/icetite049pid6395729.pdf">A review of convolutional neural networks</a>. 2020 International Conference on Emerging Trends in Information Technology and Engineering (ic-ETITE):1-5. <a href="https://doi.org/10.1109/ic-ETITE47903.2020.049" target="_blank">[DOI LINK]</a><br />&nbsp; &nbsp; &nbsp;Amidi A, Amidi S. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/cheatsheet-convolutional-neural-networks.pdf">VIP Cheatsheet for CS 230</a> - Deep Learning: Convolutional Neural Networks. Stanford University; 2019:1-5.&nbsp; [<a href="https://stanford.edu/~shervine/teaching/cs-230/cheatsheet-convolutional-neural-networks" target="_blank">Downloaded from this Link 6-22-22</a>]<br />&nbsp; &nbsp; &nbsp;Brownlee J. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/how_to_visualize_filters_and_feature_maps_in_convolutional_neural_networks.pdf">How to visualize filters and feature maps in convolutional neural networks</a>. In: Deep Learning for Computer Vision. 2019:1-17.&nbsp;&nbsp;<br />&nbsp; &nbsp; &nbsp;<span style="color:rgb(0, 0, 0)">Yosinski J, Clune J, Nguyen A, et al. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/jason_deep_visualization.pdf">Understanding neural networks through deep visualization</a>. ArXiv 2015;1506.06579.&nbsp; <a href="https://arxiv.org/pdf/1506.06579.pdf" target="_blank">[ArXiv Link]</a></span><br />&nbsp; &nbsp; &nbsp;Zeiler MD, Fergus R. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/zeiler.pdf">Visualizing and understanding convolutional networks</a>. ECCV 2014, Arxiv 13.11.2901 (Nov 28,2013) <a href="https://arxiv.org/pdf/1311.2901.pdf" target="_blank">[ArXiv LINK]</a></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;"><strong>Related Questions</strong><br /><strong>&nbsp; &nbsp; &nbsp;</strong><em><strong><font color="#24678d"><a href="back-propagation.html">I still don't understand how machines learn. How do they "reprogram" themselves?</a></font></strong></em><br /><strong><em><font color="#0376be">&nbsp; &nbsp; &nbsp;<a href="what-is-convolution.html">What does the term convolution mean?&nbsp;<br /></a></font></em></strong><strong style="color:rgb(3, 118, 190)"><em>&nbsp; &nbsp; &nbsp;<a href="softmax.html">What is the Softmax function and why is it needed?</a></em></strong><strong><em><font color="#0376be"></font></em></strong>&#8203;<br /></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div style="text-align:skip_to_justify;"><div style="height: 0px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-normal" href="what-is-convolution.html" >
+<span class="wsite-button-inner">← &nbsp;Previous Question</span>
+</a>
+<div style="height: 0px; overflow: hidden;"></div></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div style="text-align:right;"><div style="height: 0px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-normal" href="softmax.html" >
+<span class="wsite-button-inner">Next Question &nbsp;→</span>
+</a>
+<div style="height: 0px; overflow: hidden;"></div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div style="text-align:center;"><div style="height: 0px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-highlight" href="complete-list-of-questions.html" >
+<span class="wsite-button-inner">↑&nbsp;Complete List of Questions ↑</span>
+</a>
+<div style="height: 10px; overflow: hidden;"></div></div>
+</div></div>

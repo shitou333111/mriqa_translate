@@ -1,0 +1,183 @@
+<div id="content"><div id="wsite-content" class="wsite-elements wsite-not-footer">
+	<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<h2 class="wsite-content-title" style="text-align:center;">Phase Encoding Intro II<br /></h2>
+
+<div class="paragraph" style="text-align:center;"><strong style="color: rgb(135, 135, 135); font-size: large; line-height: 1.5;"><em><font color="#0376be">I understand the 2-pixel example, but I still can't put it all together with the whole image and frequency encoding. Can you help?&nbsp;</font></em></strong><strong style="color: rgb(55, 138, 87); font-size: large; line-height: 1.5;"><em>&nbsp;</em></strong><br /></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-thin" style="padding-top:15px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
+<a href='uploads/3/4/5/7/34572113/6361523_orig.png' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/63615238e98.png?307" alt="phase and frequency encoding" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<blockquote style="text-align:skip_to_justify;">Note to reader: Please make sure you understand the 2-pixel phase-encoding example in the <a href="what-is-phase-encoding.html">last Q&amp;A</a> before proceeding on to this more complicated example.</blockquote>
+
+<div class="paragraph" style="text-align:skip_to_justify;">We expand our previous&nbsp;<a href="what-is-phase-encoding.html">2-pixel Q&amp;A example</a> to a 6-pixel one, showing how Fourier transformation is used to sort out overlapping signal contributions in two dimensions. Below is a 2x3 array of pixels (A-F) at the center of a brain image with frequency- and phase-encoding directions as designated.</div>
+
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:44.428969359331%; padding:0 15px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-none" style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
+<a href='uploads/3/4/5/7/34572113/2158441_orig.gif' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/215844137bc.gif?304" alt="phase and frequency encoding" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:55.571030640669%; padding:0 15px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-none" style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
+<a href='uploads/3/4/5/7/34572113/96529_orig.gif' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/96529c5ff.gif?347" alt="phase and frequency encoding" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;">In this simple experiment we again play out only two phase-encoding steps. In Step 0 the PE gradient is off and the signals from all pixels remain in phase. In Step 2 we assume the pixels in the second row (B, D, and F) all acquire a phase shift of 180&deg;&nbsp;relative to row 1.&nbsp;After each phase-encoding step, a single aggregate MR signal is recorded reflecting contributions from each of the six pixels. Hence in this simple example with only two phase-encoding steps, exactly 2 MR signals are recorded from the slice.</div>
+
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:53.342618384401%; padding:0 15px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-none" style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
+<a href='uploads/3/4/5/7/34572113/6501059_orig.gif' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/6501059_orig.gif" alt="phase and frequency encoding" style="width:100%;max-width:331px" />
+</a>
+<div style="display:block;font-size:90%">For a real-life MR image, the process described in the 6-pixel example is repeated using 128-256+ phase-encoding steps. The simultaneous solution of multiple equations is not quite so straightforward but can still be accomplished by advanced mathematical techniques. (Note that here the phase-encoding direction is left-to-right).</div>
+</div></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:46.657381615599%; padding:0 15px;">
+					
+						
+
+<div class="paragraph" style="text-align:skip_to_justify;">The first of these signals is acquired when there is no phase shift between the two rows. Fourier transformation of this MR signal generates a spectrum revealing three frequencies (<em>&omega;<font size="1">1</font></em>, <em>&omega;<font size="1">2</font></em>, and <em>&omega;<font size="1">3</font></em>), whose amplitudes (<em>A+B</em>), (<em>C+D</em>), and (<em>E+F</em>) are the sum of the pixel values in each frequency column.&nbsp; At this stage we only know the sums of the pixel values for each frequency column; we do not know the individual values for any cell.</div>
+
+<div class="paragraph" style="text-align:skip_to_justify;">When we record the MR signal from the whole sample after Step 1 (where the second row has been phase-shifted by 180&deg;, the Fourier spectrum has changed.&nbsp; Again three frequencies can be separated, but this time their magnitudes are (<em>A&minus;B</em>), (<em>C&minus;D</em>), and (<em>E&minus;F</em>).&nbsp; We still are not able to assign unique pixel values with this single measurement, because now only the&nbsp;<em style="">differences&nbsp;</em>in pixel values for each frequency column are known.<br /><br />Because the Fourier Transform has sorted out frequencies into three columns, the corresponding phase change information can now be decoded. As in the 2-pixel example, and algebraic manipulation of the data for each frequency column using data from each phase-shift allows us to determine <em>A, B, C, D, E</em>, and <em>F</em> uniquely.&nbsp;</div>
+
+<div class="paragraph" style="text-align:skip_to_justify;">A real MR image may have hundreds of pixels in each dimension, and hence requires hundreds of phase-encoding steps to decode, but the basic principles are the same.</div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div><div id="724625687879564950" align="left" style="width: 100%; overflow-y: hidden;" class="wcustomhtml"><html> <head><script src="gdpr/gdprscript6f19.js?buildTime=1774025472"></script> <script type="text/javascript" 
+></script> 
+<script type="text/javascript">
+		$(function() {$('#Q').click(function() {$('.Q').toggle(500); return false;});});</script></head><body>
+<a href="#" id=Q><h3><font color="#378a57">Advanced Discussion (show/hide)»</font></h3></a><div class=Q style="display:none;">
+
+<!--content goes below here-->
+
+No supplementary material yet.  Check back soon!
+
+
+<!--content goes above here-->
+</div></body>
+<!-- Mirrored from mriquestions.com/pe-and-fe-together.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 21 Mar 2026 06:02:58 GMT -->
+</html></div>
+
+
+
+</div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;"><strong>References</strong><br /><span style="line-height: 1.5;"><font color="#878787">&nbsp; &nbsp; &nbsp;</font></span>Felmlee JP, Morin RL, Salutz JR, Lund GB. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/femlee_phase_encoding_radiographics_1989.pdf" title="">Magnetic resonance imaging phase encoding: a pictorial essay</a>. Radiographics 1989; 9:717-722.<br />&nbsp; &nbsp; &nbsp;Wald L.<a href="https://mriquestions.com/uploads/3/4/5/7/34572113/imageencoding_mit_courseware_wald.pdf" title=""> MR image encoding</a>. (From MIT OpenCourseWare <a href="http://ocw.mit.edu/" style="" title="">http://ocw.mit.edu</a>)&nbsp;<br /><span style=""></span></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;"><strong>Related Questions</strong><br /><a href="what-is-phase-encoding.html" title=""><strong style=""><em style="">&nbsp; &nbsp; &nbsp;I understand frequency-encoding, but I just don't get phase-encoding. Can you explain?<br /></em></strong></a><strong><em><a href="fourier-transform-ft.html" title=""><span style="text-align: center;">&nbsp; &nbsp; &nbsp;What is a Fourier transform?&nbsp;</span></a></em></strong><br /><strong><em><span style="text-align: center;">&nbsp; &nbsp; &nbsp;<a href="2dft-reconstruction.html">I think I see how to calculate pixel values in your simple examples, but how do you do this in a real image with thousands of pixels?&nbsp;</a></span><span style="text-align: center;">&nbsp;</span><a href="fourier-transform-ft.html" title="" style="text-align: center;"><span style="text-align: center;">&nbsp;</span><span style="text-align: center;">&nbsp;</span><span style="text-align: center;">&nbsp;</span></a></em></strong><br /></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div style="text-align:skip_to_justify;"><div style="height: 10px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-normal" href="what-is-phase-encoding.html" >
+<span class="wsite-button-inner">← &nbsp;Previous Question</span>
+</a>
+<div style="height: 10px; overflow: hidden;"></div></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div style="text-align:right;"><div style="height: 10px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-normal" href="2dft-reconstruction.html" >
+<span class="wsite-button-inner">Next Question &nbsp;→</span>
+</a>
+<div style="height: 10px; overflow: hidden;"></div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div style="text-align:center;"><div style="height: 10px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-highlight" href="complete-list-of-questions.html" >
+<span class="wsite-button-inner">↑&nbsp;Complete List of Questions ↑</span>
+</a>
+<div style="height: 10px; overflow: hidden;"></div></div>
+</div></div>

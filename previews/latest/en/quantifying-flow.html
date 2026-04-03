@@ -1,0 +1,312 @@
+<div id="content"><div id="wsite-content" class="wsite-elements wsite-not-footer">
+	<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<h2 class="wsite-content-title" style="text-align:center;">Quantifying Flow<br /></h2>
+
+<div class="paragraph" style="text-align:center;"><strong style="color: rgb(135, 135, 135); font-size: large; line-height: 1.5;"><em><font color="#0376be">How are ASL methods able to quantify blood flow?&nbsp;</font></em></strong><strong style="color: rgb(55, 138, 87); font-size: large; line-height: 1.5;"><em>&nbsp;</em></strong><br /></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-thin" style="padding-top:0;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
+<a href='uploads/3/4/5/7/34572113/5480047_orig.png' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/5480047bc6d.png?323" alt="Picture" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div class="paragraph">Like perfusion metrics obtained other MR methods, quantification of blood flow by ASL is highly desirable but difficult to achieve. The signal intensity difference data (<em>&Delta;S = S<font size="1">control</font>&nbsp;&minus; S<font size="1"><span style="line-height: 16.6667px;">inversion</span></font></em>) provides perfusion-<em><u>weighted</u></em>&nbsp;images only. Translating this raw data into absolute blood flow measurements requires three steps: 1) image processing and filtering to remove artifacts; 2) acquisition of a separate proton density (PD) or T1 image map for scaling signal intensities; and 3) fitting of data to a mathematical model to calculate blood flow on a pixel-by-pixel basis.&nbsp;</div>
+
+<div class="paragraph" style="text-align:skip_to_justify;"><strong><font color="#8d5024" size="4">Image Processing and Filtering</font></strong></div>
+
+<span class='imgPusher' style='float:left;height:0px'></span><span style='display: table;width:auto;position:relative;float:left;max-width:100%;;clear:left;margin-top:0px;*margin-top:0px'><a href='uploads/3/4/5/7/34572113/screenshot-2025-09-27-at-1-09-58-pm_orig.png' rel='lightbox' onclick='if (!lightboxLoaded) return false'><img src="uploads/3/4/5/7/34572113/published/screenshot-2025-09-27-at-1-09-58-pm720b.png?1758996695" style="margin-top: 5px; margin-bottom: 0px; margin-left: 0px; margin-right: 15px; border-width:1px;padding:3px; max-width:100%" alt="Picture" class="galleryImageBorder wsite-image" /></a><span style="display: table-caption; caption-side: bottom; font-size: 90%; margin-top: -0px; margin-bottom: 0px; text-align: center;" class="wsite-caption">Source ASL data before and after motion correction.</span></span>
+<div class="paragraph" style="display:block;">Before attempting to quantify blood flow, raw data from an ASL study must be "cleaned" up as much as possible.&nbsp;Some degree of patient movement commonly occurs between the tagging and control acquisitions, and so rigid-body motion correction techniques are typically applied with co-registration and "de-noising" using a Gaussian smoothing filter. Segmented gray matter and white matter images may be generated and processed separately to minimize partial volume effects.<br></div>
+<hr style="width:100%;clear:both;visibility:hidden;"></hr>
+
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:54.58586055186%; padding:0 15px;">
+					
+						
+
+<div class="paragraph" style="text-align:skip_to_justify;">More severe and random errors (such as the gradient malfunction shown right) may be identified by outlier analysis, where differences between control and tagged data are discarded when exceeding certain predefined thresholds. Oval "masks" are commonly generated to exclude out-of-brain voxels. Statistical techniques using independent component analysis may be applied to further reduce noise.&nbsp;</div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:22.289148195406%; padding:0 15px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-thin" style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
+<a href='uploads/3/4/5/7/34572113/5269099_orig.png' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/5269099_orig.png" alt="Picture" style="width:100%;max-width:265px" />
+</a>
+<div style="display:block;font-size:90%">Temporary gradient malfunction corrupts ASL raw data image</div>
+</div></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:23.124991252734%; padding:0 15px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-thin" style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
+<a href='uploads/3/4/5/7/34572113/4135157_orig.png' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/4135157e379.png?281" alt="Picture" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%">Corrected by excluding affected data during postprocessing</div>
+</div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;"><strong><font size="4" color="#8d5024">Calibration Images for Scaling</font></strong></div>
+
+<span class='imgPusher' style='float:left;height:0px'></span><span style='display: table;width:auto;position:relative;float:left;max-width:100%;;clear:left;margin-top:0px;*margin-top:0px'><a href='uploads/3/4/5/7/34572113/3207584_orig.jpg' rel='lightbox' onclick='if (!lightboxLoaded) return false'><img src="uploads/3/4/5/7/34572113/32075849b86.jpg?130" style="margin-top: 5px; margin-bottom: 10px; margin-left: 0px; margin-right: 10px; border-width:1px;padding:3px; max-width:100%" alt="Picture" class="galleryImageBorder wsite-image" /></a><span style="display: table-caption; caption-side: bottom; font-size: 90%; margin-top: -10px; margin-bottom: 10px; text-align: center;" class="wsite-caption">PD calibration image </span></span>
+<div class="paragraph" style="text-align:skip_to_justify;display:block;">For quantification of blood flow, arbitrary ASL signal intensities of perfusion-weighted images must be scaled to&nbsp;<em>M<font size="2">0b</font></em>, the equilibrium magnetization of arterial blood. In theory,&nbsp;<em>M</em><em><font size="2">0b</font></em>&nbsp;could be measured from a pure arterial voxel, but this is not practical because of the small size of such vessels and associated partial volume effects. Instead,&nbsp;<em>M</em><em><font size="2">0b</font>&nbsp;</em>is usually calculated indirectly by measuring the equilibrium magnetization of brain or CSF from a separately acquired proton-density (PD) weighted image. The PD data is converted to&nbsp;<em>M</em><em><font size="2">0b</font>&nbsp;</em>using corrections for <em>TR</em>, tissue T1, and the blood-brain partition coefficient (<em>&lambda;</em>). &nbsp; &nbsp;&nbsp;</div>
+<hr style="width:100%;clear:both;visibility:hidden;"></hr>
+
+<div class="paragraph" style="text-align:skip_to_justify;"><strong><font size="4" color="#8d5024">Mathematical Modeling and Data Fitting</font></strong></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;">The final step is to fit the filtered and calibrated ASL data to a mathematical model, computing quantitative blood flow measurements on a voxel-by-voxel basis. The most widely used is Buxton's&nbsp;<strong><em><font color="#24678d">general kinetic model</font></em></strong>, a single-compartment, plug-flow model whose parameters are estimated using a linear systems approach and deconvolution similar to those described for DSC imaging in a<a href="quantitative-dsc.html" title="">&nbsp;prior Q&amp;A</a>.&nbsp;</div>
+
+<div class="paragraph" style="text-align:skip_to_justify;">The final equations for calculating blood flow (<em>F</em>) depend on multiple measured and estimated parameters as well as the precise ASL pulse sequence employed. Just to give the reader a taste of the complexity, here is the equation currently used on GE systems for their 3D pCASL technique based on the work of Alsop et al: &nbsp;</div>
+
+<div><div class="wsite-image wsite-image-border-none" style="padding-top:0;padding-bottom:0;margin-left:0;margin-right:0;text-align:center">
+<a href='uploads/3/4/5/7/34572113/481951_orig.png' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/4819511899.png?427" alt="Picture" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;">The individual terms include: the factor 6000 (to convert units into mL/min/100 g tissue);&nbsp;&lambda;,&nbsp;the blood-tissue partition coefficient (commonly assumed to be 0.9 for brain); <em>TR<font size="1">PD</font></em>, the repetition time of the saturation recovery proton density calibration sequence; T1<font size="1"><em>T</em></font> and T1<font size="1"><em>b</em></font>, the relaxation times of tissue and blood (commonly assumed to be 1.2 sec and 1.6 sec at 3.0T, respectively); <em>SI<font size="1">cont</font></em>, <em>SI<font size="1">inv</font></em>, and <em>SI<font size="1">PD</font></em>, the signal intensities of corresponding control, labeled/inverted, and proton density weighted pixels; <em>PLD</em>, the post labeling delay time between the end of the pCASL inversion component and image acquisition; <em>LT</em>, the labeling time, or duration of the pCASL inversion;&nbsp;<em>&alpha;</em>, the labeling efficiency of the pCASL inversion (typically assumed to be 0.8);&nbsp;<em>&sigma;</em>, the suppression efficiency of the background saturation pulses (typically assumed to be about 0.75);&nbsp;<em>K<font size="1">SF</font></em>, a scaling factor for the perfusion-weighted sequence; and <em>NEX<font size="1">PW</font></em>, the number of excitations (signals averaged) for the ASL sequence.&nbsp;</div>
+
+<div class="paragraph" style="text-align:skip_to_justify;">The purpose of providing this equation is not to bewilder the reader, but to illustrate the multiple parameters that must be either assumed or estimated to calculate true blood flows from ASL data. A small error or variance in any of these parameters could easily alter the final calculation by 30% or more. Scaling factors can be empirically adjusted to keep calculated blood flows within expected physiological ranges, but I caution users to maintain a healthy skepticism about accuracy of values so obtained. Like other MR perfusion methods, ASL blood flow measurements remain most useful in a <em>qualitative</em> sense, comparing corresponding regions of the brain (or other organs) relative to one another.</div>
+
+<div><div id="799285959669708402" align="left" style="width: 100%; overflow-y: hidden;" class="wcustomhtml"><html> <head><script src="gdpr/gdprscript6f19.js?buildTime=1774025472"></script> <script type="text/javascript" 
+></script> 
+<script type="text/javascript">
+		$(function() {$('#Q').click(function() {$('.Q').toggle(500); return false;});});</script></head><body>
+<a href="#" id=Q><h3><font color="#378a57">Advanced Discussion (show/hide)»</font></h3></a><div class=Q style="display:none;">
+
+<!--content goes below here-->
+
+<div class="paragraph" style="text-align:skip_to_justify;">In their original description of CASL in 1992, Williams et al. laid the foundation for quantitative analysis of ASL by modifying the Bloch equations to account for exchange between longitudinal tissue magnetization (<em>M<font size="1">T</font></em>) and the magnetization of labeled blood.</div>
+
+
+
+<div><div class="wsite-image wsite-image-border-none" style="padding-top:0;padding-bottom:0;margin-left:0;margin-right:0;text-align:center"> 
+
+<a href='uploads/3/4/5/7/34572113/3114457_orig18d8.png?400' rel='lightbox' onclick='if (!lightboxLoaded) return false'> 
+
+<img src="uploads/3/4/5/7/34572113/311445718d8.png?400" alt="Picture" style="width:auto;max-width:100%" /> 
+
+</a> 
+
+<div style="display:block;font-size:90%"></div> 
+
+</div></div>
+
+
+
+<div><div id="724001388777554940" align="left" style="width: 100%; overflow-y: hidden;" class="wcustomhtml"><p>Here <i>F</i> is the blood flow rate, T1 is the longitudinal relaxation time of tissue in the absence of flow or exchange, <i>M<sub>T</sub><sup>0</sup></i> is the tissue magnetization under fully relaxed conditions, and <i>M<sub>a</sub></i> and <i>M<sub>v</sub></i> are the time-dependent arterial and venous longitudinal magnetizations respectively.</p>
+
+
+
+<p>Assuming the blood-tissue interaction occurs in a single, well-mixed compartment, the magnetization of venous blood exiting the system <i>M<sub>v</sub></i> = <i>M<sub>T</sub>/λ</i>, where <i>λ</i> is known as the <b><i><font color="#24678d">blood-tissue partition coefficient</font></b></i>, the fraction of labeled arterial water extracted during passage through the tissue. For brain, the value of <i>λ</i> is generally taken to be about 0.9, an average of gray and white matter obtained from [<sup>15</sup>O]water-labeled PET studies.</p>
+
+
+
+<p>With continuous and complete inversion of arterial spins, the subsequent sampling of <i>M<sub>T</sub></i> results in an exponential decrease in <i>M<sub>T</sub></i> with an apparent time constant T1<sub>app</sub>, given by</p> 
+
+</div> 
+
+
+
+
+
+
+
+</div>
+
+
+
+<div><div class="wsite-image wsite-image-border-none" style="padding-top:0;padding-bottom:0;margin-left:10px;margin-right:0;text-align:center"> 
+
+<a href='uploads/3/4/5/7/34572113/1034204_orig82aa.png?162' rel='lightbox' onclick='if (!lightboxLoaded) return false'> 
+
+<img src="uploads/3/4/5/7/34572113/103420482aa.png?162" alt="Picture" style="width:auto;max-width:100%" /> 
+
+</a> 
+
+<div style="display:block;font-size:90%"></div> 
+
+</div></div>
+
+
+
+<div class="paragraph" style="text-align:skip_to_justify;">and an expression for blood flow (<em>F</em>) can be derived from experimentally measurable quantities</div>
+
+
+
+<div><div class="wsite-image wsite-image-border-none" style="padding-top:0;padding-bottom:0;margin-left:0;margin-right:0;text-align:center"> 
+
+<a href='uploads/3/4/5/7/34572113/5703370_origa597.png?194' rel='lightbox' onclick='if (!lightboxLoaded) return false'> 
+
+<img src="uploads/3/4/5/7/34572113/5703370a597.png?194" alt="Picture" style="width:auto;max-width:100%" /> 
+
+</a> 
+
+<div style="display:block;font-size:90%"></div> 
+
+</div></div>
+
+
+
+<div class="paragraph">where <em>M<font size="1">cont</font></em> and <em>M</em><font size="1" style="font-style: italic;">inv &nbsp;</font>are the signal magnitudes of tissue in the control and inverted (tagged) states respectively. Although T1<em><font size="1">app &nbsp;</font></em>is a function of <em>F</em> it can be measured separately/independently, usually by a T1 mapping or estimation procedure.<br /></div>
+
+
+
+<div class="paragraph" style="text-align:skip_to_justify;">In 1998 Buxton et al proposed a more sophisticated method, known as the&nbsp;<strong><em><font color="#24678d">general kinetic model</font></em></strong>, some version of which remains the most widely used model for ASL analysis. The Buxton analysis is uses a linear systems approach similar to that described for DSC imaging. Before proceeding, the reader is advised to quickly review DSC linear systems analysis summarized in <a href="quantitative-dsc.html" title="">this prior Q&amp;A</a>.&nbsp;</div>
+
+
+
+<div class="paragraph" style="text-align:skip_to_justify;">The basic result of the Buxton method, applicable to both continuous and pulsed ASL techniques, is summarized by the following equation:</div>
+
+
+
+<div><div class="wsite-image wsite-image-border-none" style="padding-top:0;padding-bottom:0;margin-left:0;margin-right:0;text-align:center"> 
+
+<a href='uploads/3/4/5/7/34572113/721476_origbeed.png?383' rel='lightbox' onclick='if (!lightboxLoaded) return false'> 
+
+<img src="uploads/3/4/5/7/34572113/721476beed.png?383" alt="Picture" style="width:auto;max-width:100%" /> 
+
+</a> 
+
+<div style="display:block;font-size:90%"></div> 
+
+</div></div>
+
+
+
+<div class="paragraph" style="text-align:skip_to_justify;">Here <strong>&Delta;<em>M(t)</em></strong>&nbsp;represents the difference in tissue magnetization between the control and labeled states and <em><strong>M<font size="1">0b</font></strong></em> is the equilibrium magnetization of blood before labeling. The term&nbsp;<em><strong>&alpha;</strong></em> is called the <em><strong><font color="#24678d">labeling efficiency</font></strong></em> (the fraction of flowing spins inverted, typically 80-95% depending on the ASL method). The factor "<strong>2</strong>" arises because the spins have been inverted so their <em>change</em> in magnetization between control and labeled states is <em>M<font size="1">0b</font></em>&nbsp;&minus; (&minus;<em>M<font size="1">0b</font></em>) = 2<em>M<font size="1">0b</font></em>. The symbol <strong><em>F</em></strong> represents blood flow, the desired parameter to be measured.</div>
+
+
+
+<div class="paragraph" style="text-align:skip_to_justify;">The integral expresses the principle of <strong><em><font color="#24678d">convolution</font></em></strong>, a fundamental mathematical method for analyzing linear systems. The first term in the integral, <strong><em>a(&tau;)</em></strong>, is an <strong><em><font color="#24678d">arterial input function</font></em></strong>, called by Buxton the <strong><em><font color="#24678d">tissue delivery function</font></em></strong>, represents the normalized concentration of labeled magnetization arriving in a voxel of tissue at time (<em>&tau;</em>) during image readout. <strong><em>R(&tau;)</em></strong> is known as the <strong><em><font color="#24678d">residue function</font></em></strong>, a dimensionless variable similar to that used in DSC imaging, representing the fraction of labeled water molecules still remaining in the imaged voxel at time (<em>&tau;</em>).&nbsp;A new term not found in DSC but required for ASL analysis is <strong><em>m(&tau;)</em></strong>, the <strong><em><font color="#24678d">magnetization relaxation function</font></em></strong>, the fraction of the original inverted magnetization that remains at time (<em>&tau;</em>).</div>
+
+
+
+<div><div id="204165058449084036" align="left" style="width: 100%; overflow-y: hidden;" class="wcustomhtml"><p>Several assumptions are implicit in the Buxton model, any of which may be rightfully challenged in part:</p>
+
+<ol>
+
+<li><b><u>Perfect "plug" flow</b></u>. The labeled magnetization enters as a perfect rectangular bolus with sharp leading and trailing edges. The arterial input function, <i>a(t)</i>, is therefore zero except during passage of the bolus, where it takes the form <i>a(t) = αe<sup>−t/T1<sub>b</sub></sup></i>, where <i>T1<sub>b</sub></sup></i> is the relaxation time of blood.  (In real life such a perfect rectangular spin-labeling profile is difficult to achieve, even with techniques like QUIPSS to improve edge definition of the bolus. Having a range of transit times leads to underestimation of blood flow.)</li>
+
+<li><b><u>Single compartment kinetics</b></u>. All labeled water flowing into a voxel instantaneously exchanges into the tissue, a "well-mixed" condition. (However, some labeled spins remain in vessels before being exchanged while others flow out of the imaged slice without exchanging. Both effects lead to an underestimation of perfusion). The true <font color="#0376be"><b><i>extraction fraction (λ)</b></i></font> needs to be measured or estimated, which for human brain tissue at normal flow rates is about 0.9. The usual form of the residue function in the Buxton model is given by <i>R(t) = e<sup>−Ft/λ</sup>.</i></li>
+
+
+
+<li><b><u>Magnetization decay rate reflects tissue T1</b></u>. As a consequence of assumptions 1 & 2 above, the magnetization relaxation function is assumed to have the form <i>m(t) = e<sup>−t/T1<sub>t</sub></sup></i>, where <i>T1<sub>t</sub></i> is the tissue T1. (Because it ignores flow-though, magnetization transfer effects, and imperfect mixing, this assumption leads to in an overestimation of perfusion).</li></ol>
+
+</div> 
+
+
+
+
+
+
+
+</div>
+
+
+
+<div class="paragraph" style="text-align:skip_to_justify;">To overcome these limitations of the Buxton model, more sophisticated analyses have been developed. These include: 1) describing the arterial input as a function with rounder, smoother leading and trailing edges; 2) using a two-compartment model with vascular and tissue components, similar to the Tofts' model for DCE imaging; 3) segmenting gray and white matter data and applying different values for tissue T1 and &lambda;, and 4) changing the magnetization decay function to reflect an initial vascular phase before tissue water exchange occurs. Multi-TI ASL acquisition methods also hold promise to better estimate bolus arrival times and relaxation properties of blood and tissue.<br /><span></span><br /><span></span></div>
+
+
+<!--content goes above here-->
+</div></body>
+<!-- Mirrored from mriquestions.com/quantifying-flow.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 21 Mar 2026 06:41:09 GMT -->
+</html></div>
+
+
+
+</div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;"><strong>References</strong><br />&nbsp; &nbsp; <font size="4" color="#f50c0c">&#10026;&nbsp;</font>Alsop DC, Detre JA, Gola X, et al.&nbsp;<a href="http://mriquestions.com/uploads/3/4/5/7/34572113/recommended_implementation_of_asl.pdf">Recommended implementation of arterial spin-labeled<br />perfusion MRI for clinical applications: A consensus of&nbsp;the ISMRM perfusion study group and the European consortium for ASL in dementia</a>. Magn Reson Med&nbsp;2015; 73:102-116.<br />&nbsp; &nbsp; &nbsp;Buxton RB, Frank LR, Wong EC, et al.&nbsp;<a href="https://mriquestions.com/uploads/3/4/5/7/34572113/buxton_general_kinetic_model.pdf">A general kinetic model for quantitative perfusion imaging with arterial spin labeling</a>. Magn Reson Med 1998; 40:383-396.<br />&nbsp;<font color="#fc1313" size="4">&nbsp; &nbsp;&#10026;&nbsp;</font>Clement P, Petr J, Dijsselhof MBJ, et al. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/fradi-02-929533.pdf">A beginner&rsquo;s guide to arterial spin labeling (ASL) image processing</a>. Front Radiol 2022; 2:929533.&nbsp;<a href="https://doi.org/10.3389/fradi.2022.929533" target="_blank"> [DOI LINK]</a><br /><font color="#fc1313" size="4">&nbsp; &nbsp; &#10026;&nbsp;</font>Hernandez-Garcia L, Aramendia-V&iacute;daurreta, Bolar DS, et al. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/magnetic_resonance_in_med_-_2022_-_hernandez_e2_80_90garcia_-_recent_technical_developments_in_asl__a_review_of_the_state_of_the.pdf">Recent technical developments in ASL: a review of the state of the art</a>. Magn Reson Med 2022;88:2021&ndash;2042.&nbsp; <a href="https://doi.org/10.1002/mrm.29381" target="_blank">[DOI LINK]</a><br />&nbsp;&nbsp; &nbsp;Herscovitch P, Raichle ME. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/partition_coefficient_water_in_brain_jcbfm19859a.pdf">What is the correct value for the brain-blood partition coefficient for water?</a><span style="color:rgb(135, 135, 135)"> </span>J Cereb Blood Flow Metab 1985; 5:65-69. (Answer: probably about 0.90 ml/g)&nbsp; &nbsp; &nbsp;<br /><font color="#fc1313" size="4">&nbsp; &nbsp; &#10026;&nbsp;</font>Lindner T, Bolar DS, Achten E, et al. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/magnetic_resonance_in_med_-_2023_-_lindner_-_current_state_and_guidance_on_arterial_spin_labeling_perfusion_mri_in_clinical.pdf">Current state and guidance on arterial spin labeling perfusion MRI in clinical neuroimaging</a>. Magn Reson Med 2023;89:2024&ndash;2047.&nbsp; <a href="https://doi.org/10.1002/mrm.29572" target="_blank">[DOI LINK]</a><br />&nbsp;&nbsp;&nbsp; Mutsaerts HJMM, Steketee RME, Heijtel DFR, et al.&nbsp;<a href="https://mriquestions.com/uploads/3/4/5/7/34572113/intervendor_asljournal.pone.0104108.pdf">Inter-vendor reproducibility of pseudo-continuous arterial spin labeling at 3 Tesla</a>. PLOS One 2014; 9(8):e104108.&nbsp; &nbsp; &nbsp;<br />&nbsp; &nbsp; &nbsp;Petersen ET, Zimine I, Ho Y-C L, Golay X.&nbsp;<a href="http://mriquestions.com/uploads/3/4/5/7/34572113/bjr_67705974.pdf">Non-invasive measurement of perfusion: a critical review of arterial spin labelling techniques</a>. Br J Radiol 2006; 79:688-701.&nbsp;<br />&nbsp; &nbsp;<span style="color:rgb(0, 0, 0)">&nbsp;&nbsp;Pinto J, Chappell MA, Okell TW, et al. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/magnetic_resonance_in_med_-_2019_-_pinto_-_calibration_of_arterial_spin_labeling_data_potential_pitfalls_in_post-processing.pdf">Calibration of arterial spin labeling data &mdash; potential pitfalls in post-processing</a>. Magn Reson Med 2020; 83:1222-1234. <a href="https://doi.org/10.1002/mrm.28000" target="_blank">[DOI LINK]<br /></a>&nbsp; &nbsp; &nbsp;</span><span style="background-color: transparent;">Qin Q, Alsop DC, Bolar DS, et al. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/magnetic_resonance_in_med_-_2022_-_qin_-_velocity-selective_arterial_spin_labeling_perfusion_mri__a_review_of_the_state_of.pdf">Velocity-selective arterial spin labeling perfusion MRI: A review of the state of the art and recommendations for clinical implementation</a>. Magn Reson Med 2022;88:1528&ndash;47.</span><span style="background-color: transparent;">&nbsp; </span><span style="background-color: transparent;">[<a href="https://doi.org/10.1002/mrm.29371" target="_blank">DOI LINK</a>]</span><br /><br /><span></span><span style="color:rgb(0, 0, 0)"></span><br />&nbsp; &nbsp; &nbsp;Wang Z. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/asltbx_manual.pdf">Arterial spin labeling perfusion MRI signal processing toolbox (ASLtbx)</a>. Version 1, May 2012. (manual for a freely available MATLAB-based toolbox for processing ASL data).<br />&nbsp; &nbsp; &nbsp;Williams DS, Detre JA, Leigh JS, Koretsky AP.&nbsp;<a href="http://mriquestions.com/uploads/3/4/5/7/34572113/pnas-1992-williams-212-6.pdf">Magnetic resonance imaging of perfusion using spin inversion of arterial water</a>. Proc Natl Acad Sci USA 1992; 89:212-216. (derives modified Bloch equations to account for inflow of inverted spins)<br />&nbsp; &nbsp; &nbsp;Wong EC.&nbsp;<a href="https://mriquestions.com/uploads/3/4/5/7/34572113/wong-2005-journal_of_magnetic_resonance_imaging.pdf">Quantifying&nbsp;CBF with pulsed&nbsp;ASL: technical&nbsp;and pulse sequence factors</a>. J Magn Reson Imaging 2005; 22:727-731.</div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;"><strong>Related Questions</strong><br /><strong><em>&nbsp; &nbsp; &nbsp;<a href="arterial-input-aif.html">How is the arterial input function used to extract more quantitative flow information from the DSC data?</a></em></strong><br /><strong><em>&nbsp; &nbsp; &nbsp;<a href="asl-parameters.html">How should imaging parameters be chosen to optimize an ASL acquisition?&nbsp;</a></em></strong><strong><em><a href="asl-parameters.html">&nbsp;</a></em></strong><br /></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div style="text-align:skip_to_justify;"><div style="height: 0px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-normal" href="vascular-color-maps.html" >
+<span class="wsite-button-inner">← &nbsp;Previous Question</span>
+</a>
+<div style="height: 0px; overflow: hidden;"></div></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div style="text-align:right;"><div style="height: 0px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-normal" href="who-invented-fmri.html" >
+<span class="wsite-button-inner">Next Question &nbsp;→</span>
+</a>
+<div style="height: 0px; overflow: hidden;"></div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div style="text-align:center;"><div style="height: 0px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-highlight" href="complete-list-of-questions.html" >
+<span class="wsite-button-inner">↑&nbsp;Complete List of Questions ↑</span>
+</a>
+<div style="height: 10px; overflow: hidden;"></div></div>
+</div></div>

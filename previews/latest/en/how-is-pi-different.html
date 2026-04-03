@@ -1,0 +1,183 @@
+<div id="content"><div id="wsite-content" class="wsite-elements wsite-not-footer">
+	<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<h2 class="wsite-content-title" style="text-align:center;">PI: Further Differences</h2>
+
+<div class="paragraph" style="text-align:center;"><strong style="color: rgb(135, 135, 135); font-size: large; line-height: 1.5;"><em><font color="#0376be">Isn't parallel imaging (PI) just "regular" MRI using multiple receiver coils?&nbsp;</font></em></strong><strong style="color: rgb(55, 138, 87); font-size: large; line-height: 1.5;"><em>&nbsp;</em></strong><br /></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-thin" style="padding-top:0;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
+<a href='uploads/3/4/5/7/34572113/5441047_orig.png' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/54410474734.png?273" alt="Parallel Imaging" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;">Parallel and "regular" MR imaging share the common feature of multiple receiver coils, but process the information completely differently. Consider the simplified receiver array pictured below consisting of two coils (#1 and #2) placed on either side of the head. As expected, the signal received from each surface coil is strongest nearest the coil and drops off with distance.&nbsp;</div>
+
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:30.362116991643%; padding:0 15px;">
+					
+						
+
+<div class="paragraph" style="text-align:skip_to_justify;">In "regular" MR imaging we can combine data from each surface coil to produce a composite image of the brain at full field-of-view (FOV). This arrangement may provide improved signal-to-noise and spatial resolution compared to that obtainable from a single large head coil, but produces no gain in speed.&nbsp;</div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:69.637883008357%; padding:0 15px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-thin" style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
+<a href='uploads/3/4/5/7/34572113/7115208_orig.jpg' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/7115208_orig.jpg" alt="Parallel Imaging" style="width:100%;max-width:900px" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:74.583333333333%; padding:0 15px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-thin" style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
+<a href='uploads/3/4/5/7/34572113/3748180_orig.png' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/3748180e1e3.png?483" alt="Parallel Imaging" style="width:483;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%">Too few phase-encoding (PE) steps in PI results in aliasing, with the left side of the brain (b) wrapping around to the right side (a), and vice-versa.  Here the PE direction is left-to-right.</div>
+</div></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:25.416666666667%; padding:0 15px;">
+					
+						
+
+<div class="paragraph" style="text-align:skip_to_justify;">To shorten imaging time in PI the number of phase-encoding steps are reduced. For speed to be doubled at constant resolution, only half of the lines of <em>k</em>-space are acquired. This strategy, however, results in an insufficient number of spatial frequencies collected to adequately represent the imaged object. A reduced FOV and aliasing ("wrap-around") is seen in the reconstructed image.&nbsp;</div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;">Wrap-around and reduced FOV also occur in data obtained from the individual surface coils (#1 and #2). Routine image reconstruction (as done with "regular" MRI) would result in a mess of overlapping edges and shadows due to uncorrected aliasing. The fundamental problem is PI is how to "unfold" this data using information about the coils themselves.</div>
+
+<div><div class="wsite-image wsite-image-border-none" style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
+<a href='uploads/3/4/5/7/34572113/9488066_orig.jpg' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/9488066_orig.jpg" alt="Parallel Imaging" style="width:100%;max-width:1000px" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;">In the frequency domain, an equivalent problem exists&nbsp;&mdash;&nbsp;how to estimate the missing lines of <em>k</em>-space and avoid aliasing wrap-around.</div>
+
+<div class="paragraph" style="text-align:skip_to_justify;">Two basic strategies have been developed to correct for the aliasing overlap in PI images. In the first method (SENSE, ASSET), images from the individual coils are reconstructed and correction is performed in the spatial/image domain. The second group of methods (GRAPPA, ARC) operate in the frequency domain; data is corrected in <em>k</em>-space <em>before</em> reconstruction.<br /><br />Both techniques are described in detail in subsequent Q&amp;A's.</div>
+
+<div><div id="751497200676435947" align="left" style="width: 100%; overflow-y: hidden;" class="wcustomhtml"><html> <head><script src="gdpr/gdprscript6f19.js?buildTime=1774025472"></script> <script type="text/javascript" 
+></script> 
+<script type="text/javascript">
+		$(function() {$('#Q').click(function() {$('.Q').toggle(500); return false;});});</script></head><body>
+<a href="#" id=Q><h3><font color="#378a57">Advanced Discussion (show/hide)»</font></h3></a><div class=Q style="display:none;">
+
+<!--content goes below here-->
+
+No supplementary material yet.  Check back soon!
+
+
+<!--content goes above here-->
+</div></body>
+<!-- Mirrored from mriquestions.com/how-is-pi-different.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 21 Mar 2026 06:18:05 GMT -->
+</html></div>
+
+
+
+</div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;"><strong>References</strong><br /><span style="line-height: 1.5;"><font color="#878787">&nbsp; &nbsp; &nbsp;</font></span>Deshmane A, Gulani V, Griswold MA, Seiberlich N.&nbsp;<a href="https://mriquestions.com/uploads/3/4/5/7/34572113/deshane_pi_review.pdf" title="">Parallel MR imaging</a>. J Magn Reson Imaging 2012;36:55-72. (review)<br />&nbsp; &nbsp; &nbsp;Glockner JF, Hu HH, Stanley DW, et al.&nbsp;<a href="https://mriquestions.com/uploads/3/4/5/7/34572113/glockner_radiographics_parallel_imaging_users_guide.pdf" title="">Parallel MR imaging: a user's guide</a>. Radiographics 2005;25:1279-1297.<br />&nbsp; &nbsp; &nbsp;Larkman DJ, Nunes RG.&nbsp;<a href="https://mriquestions.com/uploads/3/4/5/7/34572113/parallel_imaging_2007_review.pdf" title="">Parallel magnetic resonance imaging</a>. Phys Med Biol 2007;52:R15-R55 [review]<br /></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;"><strong>Related Questions</strong><br /><strong><em><a href="two-types-of-pi.html">&nbsp; &nbsp; &nbsp;<span style="text-align: center;">Our scanner has two different options for parallel imaging (SENSE and GRAPPA). What are these and how do they differ?&nbsp;</span><span style="text-align: center;">&nbsp;</span></a></em></strong></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div style="text-align:skip_to_justify;"><div style="height: 10px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-normal" href="what-is-pi.html" >
+<span class="wsite-button-inner">← &nbsp;Previous Question</span>
+</a>
+<div style="height: 10px; overflow: hidden;"></div></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div style="text-align:right;"><div style="height: 10px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-normal" href="pi-coils-and-sequences.html" >
+<span class="wsite-button-inner">Next Question &nbsp;→</span>
+</a>
+<div style="height: 10px; overflow: hidden;"></div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div style="text-align:center;"><div style="height: 10px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-highlight" href="complete-list-of-questions.html" >
+<span class="wsite-button-inner">↑&nbsp;Complete List of Questions ↑</span>
+</a>
+<div style="height: 10px; overflow: hidden;"></div></div>
+</div></div>

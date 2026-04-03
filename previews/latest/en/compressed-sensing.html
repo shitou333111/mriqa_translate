@@ -1,0 +1,208 @@
+<div id="content"><div id="wsite-content" class="wsite-elements wsite-not-footer">
+	<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<h2 class="wsite-content-title" style="text-align:center;">Compressed Sensing</h2>
+
+<div class="paragraph" style="text-align:center;"><font size="4"><strong style="color:rgb(135, 135, 135)"><em><font color="#0376be">What is compressed sensing and what is it good for?&nbsp;</font></em></strong><strong style="color:rgb(55, 138, 87)"><em>&nbsp;</em></strong></font></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-thin" style="padding-top:0px;padding-bottom:10px;margin-left:0px;margin-right:0px;text-align:center">
+<a href='uploads/3/4/5/7/34572113/screen-shot-2017-08-13-at-2-34-24-pm_orig.png' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/published/screen-shot-2017-08-13-at-2-34-24-pmdc38.png?1502649325" alt="Picture" style="width:298;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;"><font color="#24678d"><strong>Compressed</strong> <strong>sensing</strong> <strong>(CS)</strong>&#8203;</font> <font color="#2a2a2a">refers to&nbsp;a group of methods for accelerated MR data acquisition based on semi-random, incomplete sampling of <em>k</em>-space. A final image is created through an iterative optimization process using non-Fourier transformation and thresholding of intermediately reconstructed images. Although still relatively early in development, CS methods appear especially promising for MRA</font><span style="color:rgb(42, 42, 42)">, 3D/4D MRI, dynamic contrast enhanced (DCE) studies, and cardiac MR imaging applications. Their utility has been recently expanded by incorporation of deep learning models that improve reconstruction accuracy and reduce computational time.</span></div>
+
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:72.638888888889%; padding:0 15px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-none" style="padding-top:0px;padding-bottom:0px;margin-left:0px;margin-right:0px;text-align:center">
+<a href='uploads/3/4/5/7/34572113/cs-annotated-from-pone_orig.jpg' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/cs-annotated-from-pone_orig.jpg" alt="Picture" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:27.361111111111%; padding:0 15px;">
+					
+						
+
+<div class="paragraph"><font size="2">Cine cardiac study using compressed sensing with acceleration factors up to 15-fold. (Adapted from Abascal et al under CC BY)&nbsp;</font></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;"><font color="#2a2a2a">Most readers will be aware that file size of photos can be reduced as much as 10:1 while maintaining good quality using a format like&nbsp;</font><em><strong><font color="#24678d">jpeg</font></strong></em><font color="#2a2a2a">. Such compression is possible because photographic (as well as MR) images contain many pixels lacking unique information content (e.g., those in the background with zero intensity and those with nearly the same values as their neighbors).&nbsp;</font></div>
+
+<div class="paragraph">This leads directly to the ingenious idea underlying CS MRI: If MR images can be compressed <u>after</u> reconstruction, why&nbsp;<span style="color:rgb(0, 0, 0)">not save time up front and only collect only the "essential" components of the MR signal rather than all&nbsp;<em>k</em>-space data? To successfully accomplish this, three factors are required: incoherent undersampling, sparsifying transformation, and iterative reconstruction.&nbsp;</span></div>
+
+<div class="paragraph"><strong><font color="#8d5024" size="4">Incoherent Undersampling</font></strong></div>
+
+<div class="paragraph"><span style="color:rgb(0, 0, 0)">The term&nbsp;</span><em style="color:rgb(0, 0, 0)"><strong><font color="#24678d">undersampling</font></strong></em><span style="color:rgb(0, 0, 0)">&nbsp;means that only a portion of&nbsp;</span><em style="color:rgb(0, 0, 0)">k</em><span style="color:rgb(0, 0, 0)">-space is measured, thus allowing significant reduction in data acquisition times. &nbsp;However, this undersampling</span>&nbsp;must be performed in an <em><strong><font color="#24678d">incoherent</font></strong></em> (semi-random) manner.&nbsp;Data undersampling in a coherent (predictable) pattern, such as selecting every 3rd line of <em>k</em>-space, creates discrete aliasing "ghost" artifacts that would wrap over the image. By sampling irregularly, these artifacts are instead distributed as diffuse noise across the entire image that can later be removed. At the same time, data sampling cannot be <u>too</u> random, because the center of <em>k</em>-space contains more "essential" image information than its periphery. Accordingly, most current CS approaches (variable density&nbsp;<span style="color:rgb(0, 0, 0)">Poisson disk, Gaussian, and Golden-angle radial)</span>&nbsp;employ <u>semi</u>-random acquisition of data with preferential sampling near the <em>k</em>-space center.&nbsp;</div>
+
+<div class="paragraph"><strong><font color="#8d5024" size="4">Sparsifying Transformation</font></strong></div>
+
+<div class="paragraph"><em><strong><font color="#24678d">Sparsity</font></strong></em> reflects the extent to which an imaging matrix is filled with meaningful data. Some matrices are intrinsically sparse, such as those associated with MRAs, containing mostly zeros (corresponding to black/nonvascular regions). Images of solid organs may not appear sparse in their conventional display, but can be mathematically transformed/decomposed into representations having relatively sparse components. The application of so-called&nbsp;<em><strong><font color="#24678d">sparsifying transforms</font></strong></em>&nbsp;(such as <em><strong><font color="#24678d">wavelets</font></strong></em>) are an essential feature of CS reconstruction methods described below.&nbsp;</div>
+
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:34.305555555556%; padding:0 15px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-none" style="padding-top:10px;padding-bottom:10px;margin-left:0px;margin-right:0px;text-align:center">
+<a href='uploads/3/4/5/7/34572113/mra-sparse-legs_orig.jpg' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/mra-sparse-legs_orig.jpg" alt="mra legs" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%">MRA - an intrinsically sparse image</div>
+</div></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:30%; padding:0 15px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-none" style="padding-top:10px;padding-bottom:10px;margin-left:0px;margin-right:0px;text-align:right">
+<a href='uploads/3/4/5/7/34572113/wavelet-brain-0-cmmm2014-958671_orig.jpg' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/published/wavelet-brain-0-cmmm2014-958671f29e.jpg?1502479125" alt="brain wavelet" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%">Brain MRI - not intrinsically sparse</div>
+</div></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:35.694444444444%; padding:0 15px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-none" style="padding-top:10px;padding-bottom:10px;margin-left:0px;margin-right:0px;text-align:skip_to_justify">
+<a href='uploads/3/4/5/7/34572113/wavelet-three-brightened_orig.jpg' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/published/wavelet-three-brightenedac98.jpg?1502479042" alt="wavelet" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%">Relatively sparse wavelet components<br>(From Zhao et al under CC BY)</div>
+</div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div class="paragraph"><strong><font color="#8d5024" size="4">Iterative Reconstruction</font></strong></div>
+
+<div class="paragraph"><font color="#2a2a2a"><span>Unlike single-step Fourier reconstruction of conventional MR images, Compressed Sensing involves multiple steps and data transformations, mediated by an iterative optimization algorithm repeated dozens of times, following a scheme something like this</span><span>:</span></font><ol><li><font color="#2a2a2a"><u><span>Collect initial k-space data</span></u><span> using limited, incoherent (semi-random) sampling.</span></font></li><li><u><span style="color:rgb(42, 42, 42)">Fourier transform this data</span></u><span style="color:rgb(42, 42, 42)">&nbsp;to create an <em>initial image</em>. The initial image will be very crude, suffering from diffuse&nbsp;aliasing artifacts manifest as "noise".</span></li><li><u><span style="color:rgb(42, 42, 42)">Apply a sparsifying transform</span></u><span style="color:rgb(42, 42, 42)">&nbsp;(such as wavelet decomposition) that will concentrate meaningful imaging characteristics into a smaller number of high-intensity pixels. The aliasing "noise" will&nbsp; now be of lower intensity and distributed over many pixels, most in the background.</span></li><li><u><span style="color:rgb(42, 42, 42)">Remove aliasing ("<em>denoise</em>") the sparsified data</span></u><span style="color:rgb(42, 42, 42)">&nbsp;by zeroing out pixels with values below a minimum threshold, digital filtering, and/or subtraction.&nbsp;</span></li><li><u><span style="color:rgb(42, 42, 42)">Apply inverse sparsifying and Fourier transforms</span></u><span style="color:rgb(42, 42, 42)">&nbsp;to reconvert&nbsp;this "<em>denoised</em>" data back&nbsp;into <em>k</em>-space format.&nbsp;</span></li><li><u><span style="color:rgb(42, 42, 42)">Create a <em>k</em>-space "<em>difference&nbsp;matrix</em></span></u><span style="color:rgb(42, 42, 42)">"&nbsp;<u><span style="color:rgb(42, 42, 42)"></span></u>by subtracting the original&nbsp;from the <em>denoised</em>&nbsp;<em>k</em>-space data and setting all other points to zero. By Fourier transformation, a "<em>difference image</em>" can then be created. Add the initial and difference&nbsp;images together to create an "<em>updated image</em>".</span></li><span style="color:rgb(42, 42, 42)"></span><li><span style="color:rgb(42, 42, 42)"><u>Compare the <em>initial</em> and <em>updated</em> images</u>. If significant disparity is present, repeat Steps 3-7. Otherwise Stop.</span>&#8203;</li></ol></div>
+
+<div class="paragraph"><strong><font size="4" color="#8d5024">Commercial Applications of CS</font></strong></div>
+
+<div class="paragraph">CS methods are now being offered as commercial products: <em><strong><font color="#24678d">Compressed Sensing</font></strong></em> (Siemens), <em><strong><font color="#24678d">Compressed SENSE</font></strong></em> (Philips),&nbsp;<em><strong><font color="#24678d">HyperSense&nbsp;</font></strong></em>(GE), and&nbsp;<em><strong><font color="#24678d">Compressed Speeder </font></strong></em>(Canon)&nbsp; These are now being combined with deep learning based reconstruction methods to shorten exam time and improve image quality.&nbsp;</div>
+
+<div><div id="614061520907097606" align="left" style="width: 100%; overflow-y: hidden;" class="wcustomhtml"><html> <head><script src="gdpr/gdprscript6f19.js?buildTime=1774025472"></script> <script type="text/javascript" 
+></script> 
+<script type="text/javascript">
+		$(function() {$('#Q').click(function() {$('.Q').toggle(500); return false;});});</script></head><body>
+<a href="#" id=Q><h3><font color="#378a57">Advanced Discussion (show/hide)»</font></h3></a><div class=Q style="display:none;">
+
+<!--content goes below here-->
+
+No supplementary material yet.  Check back soon!
+
+
+<!--content goes above here-->
+</div></body>
+<!-- Mirrored from mriquestions.com/compressed-sensing.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 21 Mar 2026 06:18:58 GMT -->
+</html></div>
+
+
+
+</div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;"><strong>References<br />&nbsp;&nbsp; &nbsp;&nbsp;</strong>Abascal JFPJ, Montesinos P, Marinetto E, Pascau J, Desco M. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/pone.0110594.pdf">Comparison of total variation with a motion estimation based compressed sensing approach for self-gated cardiac cine MRI in small animal studies</a>. PLos ONE 2014; 9(10): e110594.<br />&nbsp;&nbsp; &nbsp; Blasche M, Forman C. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/siemens_mri_magnetom-world_compressed-sensing_compressed-sensing-flowchart_blasche-03520147.pdf">Compressed sensing&nbsp;&mdash; the flowchart</a>. MAGNETOM Flash 2016; 66:4-7. (Good review of the Siemens iterative construction algorithm).<br />&nbsp; &nbsp; &nbsp;Donoho DL. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/donoho_it_april06_1st_cs_paper.pdf">Compressed sensing</a>. IEEE Trans Information Theory 2006; 52:1289-1306.&nbsp; <a href="https://doi.org/10.1109/TIT.2006.871582" target="_blank">[DOI LINK]</a><br />(First paper on theory of CS)<br />&nbsp; &nbsp; &nbsp;Geethanath S, Reddy R, Konar AS, et al. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/cs_review_bioengineering.pdf">Compressed sensing MRI: a review</a>. Critical Reviews in Biomedical Engineering 2013; 41:183-204.<br />&nbsp; &nbsp; &nbsp;Jaspan ON, Fleysher R, Lipton ML. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/bjr.20150487_review.pdf">Compressed sensing MRI: a review of the clinical literature</a>. Brit J Radiol 2015; 88:20150487<br />&nbsp; &nbsp; &nbsp;<span style="background-color: transparent;">Liang D, Cheng J, Ke Z, Ying L. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/liang_cs_nihms-1551805.pdf">Deep magnetic resonance image reconstruction: inverse problems meet neural networks</a>.</span><span style="background-color: transparent;">&nbsp; </span><span style="background-color: transparent;">IEEE Signal Process Mag 2020; 37:141-151.</span><span style="background-color: transparent;">&nbsp; </span><span style="background-color: transparent;"><a href="https://doi.org/10.1109/MSP.2019.2950557" target="_blank">[DOI LINK]</a><br /></span>&nbsp; &nbsp; &nbsp;Lustig M, Donoho D, Pauly JM. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/compressed_sensing.pdf">Sparse MRI: the application of compressed sensing for rapid MR imaging</a>. Magn Reson Med 2007; 58:1182-1195.<br /><font color="#2a2a2a">&nbsp; &nbsp; &nbsp;Zhao D, Du H, Han Y, Mei w. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/cmmm2014-958671.pdf">Compressed sensing MR image reconstruction exploiting TGV and wavelet sparsity</a>. Comput Math Methods Med 2014; 958671.</font></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;"><strong>Related Questions</strong><br /><strong>&nbsp; &nbsp; &nbsp;</strong><strong><em><font color="#0376be"><a href="noise-in-pi.html">Why do parallel imaging studies look so noisy?</a>&nbsp;</font></em></strong><em></em></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div style="text-align:skip_to_justify;"><div style="height: 10px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-normal" href="caipirinha.html" >
+<span class="wsite-button-inner">← &nbsp;Previous Question</span>
+</a>
+<div style="height: 10px; overflow: hidden;"></div></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div style="text-align:right;"><div style="height: 10px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-normal" href="noise-in-pi.html" >
+<span class="wsite-button-inner">Next Question &nbsp;→</span>
+</a>
+<div style="height: 10px; overflow: hidden;"></div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div style="text-align:center;"><div style="height: 10px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-highlight" href="complete-list-of-questions.html" >
+<span class="wsite-button-inner">↑&nbsp;Complete List of Questions ↑</span>
+</a>
+<div style="height: 10px; overflow: hidden;"></div></div>
+</div></div>

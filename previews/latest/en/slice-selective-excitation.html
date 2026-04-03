@@ -1,0 +1,236 @@
+<div id="content"><div id="wsite-content" class="wsite-elements wsite-not-footer">
+	<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<h2 class="wsite-content-title" style="text-align:center;">Slice Selection<br /></h2>
+
+<div class="paragraph" style="text-align:center;"><strong style="color: rgb(135, 135, 135); font-size: large; line-height: 1.5;"><em><font color="#0376be">How does frequency-encoding let you stimulate a given slice?&nbsp;</font></em></strong><strong style="color: rgb(55, 138, 87); font-size: large; line-height: 1.5;"><em>&nbsp;</em></strong><br /></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-thin" style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
+<a href='uploads/3/4/5/7/34572113/3923800_orig.png' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/3923800_orig.png" alt="slice-selective excitation" style="width:100%;max-width:676px" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;">Two steps are required to uniquely excite a slice in 2D MR imaging: (1) a <strong><em><font color="#24678d">slice-select gradient</font></em></strong> is imposed along an axis perpendicular to the plane of the desired slice, resulting in a linear variation of potential resonance frequencies in that direction, and (2) a specially tailored RF-pulse is <em><u>simultaneously</u></em> applied, whose frequency components match the narrow range of frequencies contained in the desired slice.&nbsp; The combination of steps (1) and (2) insures that only protons within the chosen slice are excited.</div>
+
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-none" style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
+<a href='uploads/3/4/5/7/34572113/7095950_orig.gif' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/709595092c8.gif?280" alt="slice-selective excitation" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%">Magnetic field gradient causes the center frequency (<i>F<sub>c</sub></i>) of each slice to vary by position. The range of frequencies (<i>ΔF</i>) contained in a slice depends on slice thickness (<i>ΔF</i>) and the strength of the gradient (<i>G<sub>ss</sub></i>).</div>
+</div></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div class="paragraph" style="text-align:skip_to_justify;">Each slice has a different center frequency <em>F<font size="1">c</font></em> determined by its position (<em>z</em>) along the slice-select gradient&nbsp;(<em style="">G<font size="1">ss</font></em>), given by&nbsp;</div>
+
+<div class="paragraph" style="text-align:center;"><em>F<font size="2">c</font></em><em style="">&nbsp;= </em><em style="">&nbsp;&gamma;(B<font size="1">o</font>&nbsp;+&nbsp;</em><em style="">z</em><em style="">&bull;G<font size="1">ss</font>) = f<font size="1">o</font>&nbsp;+&nbsp;</em><em style="">&gamma;</em><em style="">&bull;</em><em>z</em><em>&bull;G<font size="1">ss</font></em></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;">where <em>B<font size="1">o</font></em>&nbsp;is&nbsp;the main magnetic field strength and <em>f<font size="1">o</font></em>&nbsp;is its corresponding Larmor frequency.</div>
+
+<div class="paragraph" style="text-align:skip_to_justify;">Each slice has a finite width (<em>&Delta;z</em>) and so it contains a range of frequencies (<em>&Delta;F</em>) centered around <em>F<font size="1">c</font></em>. These quantities are related by the equation&nbsp;</div>
+
+<div class="paragraph" style="text-align:center;"><em>&Delta;F</em> =&nbsp;<em>&gamma; &bull; G<font size="1">ss</font> &bull; &Delta;z</em></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;">In common practice&nbsp;<em>&Delta;F</em> is held constant (on the order of 1000-2000 Hz) and slice thickness&nbsp;<em>&Delta;z</em> is varied by adjusting <em>G<font size="1">ss</font></em>. Stronger gradients produce thinner slices, and vice versa.</div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;">The frequency-encoding gradient thus uniquely identifies a slice using center frequency (<em>F<font size="1">c</font></em>) to determine slice position and frequency span (<em style="">&Delta;F</em>) to determine slice thickness (<em style="">&Delta;z</em>). The next step is to stimulate the slice with an RF-pulse that will excite uniformly that particular band of frequencies and no others.</div>
+
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:44.568245125348%; padding:0 15px;">
+					
+						
+
+<div class="paragraph" style="text-align:skip_to_justify;">Mathematically it can be shown that the ideal RF-excitation to achieve this frequency profile is a so-called <strong><em><font color="#24678d">sinc pulse</font></em></strong>. The sinc pulse is an amplitude-modulated sine wave with base frequency <em>F<font size="1">c</font></em> whose equation is given below</div>
+
+<div><div class="wsite-image wsite-image-border-none" style="padding-top:0;padding-bottom:0;margin-left:0;margin-right:0;text-align:center">
+<a href='uploads/3/4/5/7/34572113/8689260_orig.png' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/8689260091d.png?208" alt="sinc pulse" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;">Here the range of frequencies&nbsp;(<em style="">&Delta;F</em>) subtending a slice equals the <strong><em><font color="#24678d">transmit bandwidth </font></em></strong>of the pulse. Transmitter bandwidth should be distinguished from&nbsp;<strong><em><font color="#24678d">receiver bandwidth&nbsp;</font></em></strong>(discussed in a&nbsp;<a href="receiver-bandwidth.html" title="" style="">prior Q&amp;A</a>). Receiver BW is function of the digitization rate of the recorded MR signal and has nothing to do with slice selection.</div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:55.431754874652%; padding:0 15px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-none" style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
+<a href='uploads/3/4/5/7/34572113/6183456_orig.gif' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/6183456db8e.gif?276" alt="sinc pulse" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%">Idealized multi-lobe sinc pulse</div>
+</div></div>
+
+<div><div class="wsite-image wsite-image-border-thin" style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
+<a href='uploads/3/4/5/7/34572113/6230176_orig.jpg' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/6230176502e.jpg?258" alt="sinc pulse" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%">Truncated sinc with two side lobes obtained by author from his own scanner. Only the envelope of the pulse is seen as the 64 MHz carrier wave cannot be resolved at this setting of the oscilloscope.</div>
+</div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;">A sinc pulse would require an infinite number of side lobes (and hence infinite transmission time) to uniformly and exclusively excite a discrete band of frequencies. In practice the sinc pulse is modified by a process known as <strong><em><font color="#24678d">apodization</font></em></strong> (literally cutting off the "feet", limiting the number of side lobes and changing their shape by digital filtering). Other pulse shapes, including those with a Gaussian envelope, are also used.</div>
+
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:46.657381615599%; padding:0 15px;">
+					
+						
+
+<div class="paragraph" style="text-align:skip_to_justify;">Today most RF-pulses cannot be described by mathematically simple waveforms, having eclectic shapes based on an computer-based polynomial design process known as the <strong><em><font color="#24678d">Shinnar-Le Roux (SLR) algorithm</font></em></strong>. &nbsp;SLR-generated pulses provide more careful control of RF phase properties, allowing the designer to trade off analytically several parameters describing pulse performance including frequency profile, ripple, duration, and energy deposition.<br /><br /><span style=""></span></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:53.342618384401%; padding:0 15px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-none" style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
+<a href='uploads/3/4/5/7/34572113/9010646_orig.gif' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/9010646d964.gif?257" alt="Shinnar-Le Roux (SLR) pulse" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%">Examples of two 90° SLR pulses. In red, a linear phase SLR pulse resembling the classic sinc pulse. In blue, an SLR pulse that minimizes phase dispersions due to flow. </div>
+</div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div><div id="605509022643877256" align="left" style="width: 100%; overflow-y: hidden;" class="wcustomhtml"><html> <head><script src="gdpr/gdprscript6f19.js?buildTime=1774025472"></script> <script type="text/javascript" 
+></script> 
+<script type="text/javascript">
+		$(function() {$('#Q').click(function() {$('.Q').toggle(500); return false;});});</script></head><body>
+<a href="#" id=Q><h3><font color="#378a57">Advanced Discussion (show/hide)»</font></h3></a><div class=Q style="display:none;">
+
+<!--content goes below here-->
+
+<p>The length of "standard" RF-pulses in is on the order of 2-3 msec, leaving time for no more than one pair of SINC or SLR side lobes. Some scanners offer options for longer or shorter pulses.</p>
+
+<p>Extended length pulses may have durations of 4-5 msec. This allows time for more complex shapes and side lobes with better slice profiles and selectivity. SAR is also lower since the pulses are spread out over a longer period of time and their peak amplitudes are lower. The trade-off is that the minimum allowed TE values are prolonged and hence number of slices for a given TR is reduced.</p>
+
+<p>Conversely, some scanners offer a "fast RF" pulses of lengths 1.5 msec or less. These are typically gaussian-shaped with compromised non-rectangular slice profiles and nonlinear phase shifts. These pulses are typically used for rapid imaging applications, such as HASTE, FIESTA, or TurboFLASH. Pulse amplitudes are higher and so are SAR's. The short pulse duration allows for shorter TE's and shorter echo spacings. Susceptibility artifacts are also reduced.</p>
+
+
+
+
+<!--content goes above here-->
+</div></body>
+<!-- Mirrored from mriquestions.com/slice-selective-excitation.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 21 Mar 2026 06:02:08 GMT -->
+</html></div>
+
+
+
+</div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;"><strong>References</strong><br /><span style="line-height: 1.5;"><font color="#878787">&nbsp; &nbsp; &nbsp;&nbsp;</font></span>Pauly J, Le Roux P, Nishimura D, Macovski A.&nbsp; <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/pauly-slr.pdf" title="">Parameter relations for the Shinnar-Le Roux selective excitation pulse design algorithm.</a>&nbsp; IEEE Transact Med Imaging 1991; 10:53-65.<br />&nbsp; &nbsp; &nbsp;Balchandani P, Pauly J, Spielman D. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/designing_adiabatic_pulses_using_slr.pdf">Designing adiabatic radiofrequency pulses using the Shinnar-Le Roux algorithm</a>. Magn Reson Med 2010; 54:843-851.</div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;"><strong>Related Questions</strong><br /><a href="receiver-bandwidth.html"><strong style=""><em style="">&nbsp; &nbsp; &nbsp;What is bandwidth?</em></strong><strong style=""><em style="">&nbsp;</em></strong></a><br /><strong style=""><em style=""><a href="frequency-encoding.html">&nbsp; &nbsp; &nbsp;How does frequency-encoding work?</a></em></strong><br /></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div style="text-align:skip_to_justify;"><div style="height: 10px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-normal" href="narrow-bandwidth.html" >
+<span class="wsite-button-inner">← &nbsp;Previous Question</span>
+</a>
+<div style="height: 10px; overflow: hidden;"></div></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div style="text-align:right;"><div style="height: 10px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-normal" href="ss-gradient-lobes.html" >
+<span class="wsite-button-inner">Next Question &nbsp;→</span>
+</a>
+<div style="height: 10px; overflow: hidden;"></div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div style="text-align:center;"><div style="height: 10px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-highlight" href="complete-list-of-questions.html" >
+<span class="wsite-button-inner">↑&nbsp;Complete List of Questions ↑</span>
+</a>
+<div style="height: 10px; overflow: hidden;"></div></div>
+</div></div>

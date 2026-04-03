@@ -1,0 +1,185 @@
+<div id="content"><div id="wsite-content" class="wsite-elements wsite-not-footer">
+	<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -0px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:50.436046511628%; padding:0 0px;">
+					
+						
+
+<h2 class="wsite-content-title" style="text-align:center;">Spoiling<br /></h2>
+
+<div class="paragraph" style="text-align:center;"><strong style="color: rgb(135, 135, 135); font-size: large; line-height: 1.5;"><em><font color="#0376be">What is meant by spoiling, and how is it accomplished?&nbsp;</font></em></strong><strong style="color: rgb(55, 138, 87); font-size: large; line-height: 1.5;"><em>&nbsp;</em></strong><br /></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:49.563953488372%; padding:0 0px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-thin" style="padding-top:0;padding-bottom:0;margin-left:0;margin-right:0;text-align:center">
+<a href='uploads/3/4/5/7/34572113/9410617_orig.png' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/9410617.png" alt="MRI spoiling" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div class="paragraph" style="text-align:skip_to_justify;"><em style=""><strong style=""><font color="#24678d">Spoiling</font></strong></em>&nbsp;refers to the disruption of transverse coherences that&nbsp;may persist from cycle to cycle in a GRE sequence. Spoiling ensures that immediately before each RF-pulse, the steady-state magnetization has no transverse components. The longitudinal magnetization (<strong style="">M<font size="1">z</font></strong>) does reach a steady-state (<em style="">M<font size="1">ss</font></em>) in the&nbsp;<em style="">z</em>-direction, but the transverse magnetization (<strong style="">M<font size="1">xy</font></strong>) is obliterated at the end of each cycle and no transverse steady-state (<em style="">M</em><em>'</em><em style=""><font size="1">ss</font></em>) is established. &nbsp;<br /></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-thin" style="padding-top:15px;padding-bottom:0;margin-left:0;margin-right:0;text-align:center">
+<a href='uploads/3/4/5/7/34572113/2832236_orig.jpg' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/28322365737.jpg?322" alt="MRI spoiling GRE images brain" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%">Comparison of spoiled (left) and unspoiled GRE images. Both have identical parameters: TR = 33,  TE = 4, α = 30°.
+
+</div>
+</div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;">Believe it or not, it is actually quite difficult to achieve perfect spoiling, as pesky stimulated echoes and distant coherences have a habit of reappearing! Three methods may be used alone or in combination to spoil transverse magnetization:<br /><br /><strong>1</strong>. &nbsp;<u><strong>Long&nbsp;<em>TR</em> spoiling</strong></u>. &nbsp;When <em>TR</em>&gt;&gt;T2*, the transverse magnetization will naturally decay to zero by the end of the cycle. &nbsp;Thus <em>any</em> gradient echo sequence using <em>TR</em> values of several hundred milliseconds or longer will be "naturally" spoiled. Spoiling can be enhanced by operating the sequence in a 2D multi-slice mode. Here, off-resonant effects from RF-pulses for other slices and their associated imaging gradients will further disrupt transverse coherences. Sequences that take advantage of this method include GE's MPGR and MERGE, Siemens' MEDIC, and Philips' multi-FFE.&nbsp;</div>
+
+<div class="paragraph" style="text-align:skip_to_justify;"><strong>2</strong>. &nbsp;<strong style=""><u style="">Gradient spoiling</u></strong>. &nbsp;In this method spoiling is performed by applying the slice-select (and sometimes readout) gradients with variable amplitudes at the end of each cycle just before the next RF pulse.&nbsp; The strength of the spoiler gradient is varied linearly or semi-randomly from view to view. This method is not entirely adequate by itself, as the spoiling will be spatially nonuniform because gradients produce spatially varying fields. This leads to the third and best method....<br /></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;"><strong>3</strong>. &nbsp;<strong style=""><u style="">RF-spoiling</u></strong>. &nbsp;Here the phase of the RF-carrier is changed according to a predefined formula from view to view. Using a completely randomized pattern of phase changes is not ideal in that unintended spin clustering may occur and the degree of spoiling may change from one interval to the next. A superior method is to increment the phase quadratically using a recursive formula. In both theory and practice, RF-spoiling is superior to gradient spoiling because it does not generate eddy currents and is spatially invariant. &nbsp;RF-spoiling is universally used by all vendors for their dedicated spoiled sequences. &nbsp;These include GE's SPGR and FSPGR, Siemens' FLASH and VIBE, and Philips' T1-FFE.&nbsp;<br /><br />Simplified pulse timing diagrams for a "Basic" (unspoiled) GRE sequence and and one using both gradient and RF-spoiling are shown below. The diagrams have been simplified for clarity (e.g. rewinder gradients and other subtleties have been left out).</div>
+
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -0px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:48.885793871866%; padding:0 0px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-thin" style="padding-top:10px;padding-bottom:15px;margin-left:0;margin-right:0;text-align:center">
+<a href='uploads/3/4/5/7/34572113/1797261_orig.gif' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/1797261_orig.gif" alt="Basic gradient echo pulse sequence MR" style="width:100%;max-width:500px" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:51.114206128134%; padding:0 0px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-thin" style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
+<a href='uploads/3/4/5/7/34572113/7729106_orig.gif' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/7729106cd00.gif?328" alt="Spoiled gradient echo pulse sequence MR" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div><div id="504540015869976814" align="left" style="width: 100%; overflow-y: hidden;" class="wcustomhtml"><html> <head><script src="gdpr/gdprscript6f19.js?buildTime=1774025472"></script> <script type="text/javascript" 
+></script> 
+<script type="text/javascript">
+		$(function() {$('#Q').click(function() {$('.Q').toggle(500); return false;});});</script></head><body>
+<a href="#" id=Q><h3><font color="#378a57">Advanced Discussion (show/hide)»</font></h3></a><div class=Q style="display:none;">
+
+<!--content goes below here-->
+
+<p>Many vendors have adopted an RF phase-cycling pattern based on the work of Zur et al (1991). Here the phase at step <i>j</i> is denoted by Φ<sub><i>j</i></sub> and given by the recursive formula</p>
+<p style="color:#8a3741; text-align:center;text-size:14 pts">
+Φ<sub><i>j</i></sub> =  ½ Φ<sub>o</sub> (<i>j<sup>2</sup> + j + 2</i>)
+</p>
+<p style="color:black, align=left">where Φ<sub>o</sub> is the initial RF phase. This formula leads to the following series of phase angles: Φ<sub>o</sub>, 2Φ<sub>o</sub>, 4Φ<sub>o</sub>, 7Φ<sub>o</sub>, 11Φ<sub>o</sub>, etc. The starting phase angle (Φ<sub>o</sub>) is often selected to be either 117º or 123º. The reason for choosing such an apparently bizarre value for Φ<sub>o</sub> is because no small integer multiple of either 117º or 123º is evenly divisible by 360º.</p>
+
+
+<!--content goes above here-->
+</div></body>
+<!-- Mirrored from mriquestions.com/spoiling---what-and-how.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 21 Mar 2026 06:07:39 GMT -->
+</html></div>
+
+
+
+</div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;"><strong>References</strong><br />&nbsp; &nbsp; &nbsp;Denolin V, Azizieh C, Metens T. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/denolin_signal_formation_in_spgr.pdf">New insights into the mechanisms of signal formation in RF-spoiled gradient echo sequences</a>. Mag Reson Med 2005; 54:937-954.<span><font color="#878787">&nbsp; &nbsp; &nbsp;</font></span><br />&nbsp; &nbsp; &nbsp;Epstein FH, Mugler JP III, Brookeman JR. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/gre_in_approach_to_ss.pdf">Spoiling of transverse magnetization in gradient-echo (GRE) imaging during the approach to steady state</a>. Magn Reson Med 1996;35:237-245.<br />&nbsp; &nbsp; &nbsp;Elster AD.&nbsp;<a href="http://mri-q.com/uploads/3/4/5/7/34572113/elster_gre_acros_radiology.pdf" target="_blank">Gradient echo imaging: techniques and acronyms</a>. Radiology 1993; 186:1-8.<br />&nbsp; &nbsp; &nbsp;Haase A, Frahm J, Matthaei KD.&nbsp;<a href="http://mri-q.com/uploads/3/4/5/7/34572113/flash_haase_1-s2.0-0022236486904336-main.pdf">FLASH imaging: rapid NMR imaging using low flip angle pulses</a>. J Magn Reson 1986: 67: 258-266.<br />&nbsp; &nbsp; &nbsp;Zur Y, Wood ML, Neuringer LJ. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/zur_539246.pdf" target="_blank">Spoiling of transverse magnetization in steady state sequences</a>. Magn Reson Med 1991; 21:251-263.</div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;"><strong>Related Questions</strong><br /><strong style=""><em style="">&nbsp; &nbsp; &nbsp;<a href="spoiled-gre-parameters.html">Why would you want to use a spoiled-GRE technique? &nbsp;How do you pick the parameters?&nbsp;</a></em></strong><br /></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div style="text-align:skip_to_justify;"><div style="height: 10px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-normal" href="commercial-acronyms.html" >
+<span class="wsite-button-inner">← &nbsp;Previous Question</span>
+</a>
+<div style="height: 10px; overflow: hidden;"></div></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div style="text-align:right;"><div style="height: 10px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-normal" href="spoiled-gre-parameters.html" >
+<span class="wsite-button-inner">Next Question &nbsp;→</span>
+</a>
+<div style="height: 10px; overflow: hidden;"></div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div style="text-align:center;"><div style="height: 10px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-highlight" href="complete-list-of-questions.html" >
+<span class="wsite-button-inner">↑&nbsp;Complete List of Questions ↑</span>
+</a>
+<div style="height: 10px; overflow: hidden;"></div></div>
+</div></div>

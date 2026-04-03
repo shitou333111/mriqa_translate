@@ -1,0 +1,274 @@
+<div id="content"><div id="wsite-content" class="wsite-elements wsite-not-footer">
+	<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:50.416666666667%; padding:0 15px;">
+					
+						
+
+<h2 class="wsite-content-title" style="text-align:center;">Shallow Neural Networks&nbsp;</h2>
+
+<div class="paragraph" style="text-align:center;"><font size="4"><strong style="color:rgb(135, 135, 135)"><em><font color="#0376be">Why would one use a shallow neural network? What are the various types?&nbsp;</font></em></strong></font></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:49.583333333333%; padding:0 15px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-thin" style="padding-top:0px;padding-bottom:0px;margin-left:0px;margin-right:0px;text-align:center">
+<a href='uploads/3/4/5/7/34572113/screen-shot-2023-04-02-at-3-31-17-pm_orig.png' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/published/screen-shot-2023-04-02-at-3-31-17-pm5500.png?1680467533" alt="Types of Machine Learning" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<span class='imgPusher' style='float:left;height:0px'></span><span style='display: table;width:auto;position:relative;float:left;max-width:100%;;clear:left;margin-top:0px;*margin-top:0px'><a href='uploads/3/4/5/7/34572113/shallow-neural-network_orig.png' rel='lightbox' onclick='if (!lightboxLoaded) return false'><img src="uploads/3/4/5/7/34572113/published/shallow-neural-network5e59.png?1680448962" style="margin-top: 10px; margin-bottom: 10px; margin-left: 0px; margin-right: 10px; border-width:0; max-width:100%" alt="Shallow Neural Network diagram" class="galleryImageBorder wsite-image" /></a><span style="display: table-caption; caption-side: bottom; font-size: 90%; margin-top: -10px; margin-bottom: 10px; text-align: center;" class="wsite-caption">Shallow Neural Network</span></span>
+<div class="paragraph" style="display:block;">As described <a href="shallow-v-deep-ml.html">in the prior Q&amp;A</a>, a&nbsp;<em><strong><font color="#24678d">shallow neural network</font></strong></em> has only one (or just a few) hidden layers between the input and output layers. The input layer receives the data, the hidden layer(s) process it, and the final layer produces the output. Shallow neural networks are simpler, more easily trained, and have greater computational efficiency than <em><strong><font color="#24678d">deep neural networks</font></strong></em>, which may have thousands of hidden units in dozens of layers. Shallow networks are typically used for simpler tasks such as linear regression, binary classification, or low-dimensional feature extraction.<font color="#2a2a2a">&nbsp;</font></div>
+<hr style="width:100%;clear:both;visibility:hidden;"></hr>
+
+<div class="paragraph">Technically speaking, a neural network with more than one hidden layer is no longer considered a shallow neural network.&nbsp; In some cases, however, a neural network with 2 or 3 hidden layers, each with a small number of hidden units and having simple connectivity between them may produce straightforward outputs and may&nbsp;<span style="color:rgb(0, 0, 0)">still be considered a "shallow" network.&nbsp;</span>&nbsp;</div>
+
+<div class="paragraph">Four common shallow ML techniques are used in image processing applications for MRI, illustrated and discussed below.</div>
+
+<div><div class="wsite-image wsite-image-border-thick wsite-image-border-black" style="padding-top:10px;padding-bottom:10px;margin-left:0px;margin-right:0px;text-align:center">
+<a href='uploads/3/4/5/7/34572113/screen-shot-2023-03-29-at-10-29-16-am_1.png' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/screen-shot-2023-03-29-at-10-29-16-am_1.png" alt="Picture" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%">Various <b>Shallow Neural Networks</b> (modified from Argentiero et al under CC BY)</div>
+</div></div>
+
+<div class="wsite-youtube" style="margin-bottom:10px;margin-top:10px;"><div class="wsite-youtube-wrapper wsite-youtube-size-auto wsite-youtube-align-center">
+<div class="wsite-youtube-container">
+
+<iframe src="http://www.youtube.com/embed/E0Hmnixke2g?wmode=opaque" frameborder="0" allowfullscreen></iframe>
+</div>
+</div></div>
+
+<div class="paragraph"><strong><font size="4" color="#8d5024">Logistic Regression</font></strong></div>
+
+<div><div id="980143726550444765" align="left" style="width: 100%; overflow-y: hidden;" class="wcustomhtml"><p>Logistic regression is a shallow supervised ML technique most commonly used to solve classification problems, especially where the outcome is binary, such as (A or B), (yes or no), and (malignant or benign).   Logistic regression is similar to the more familiar linear regression, except that in the latter the output can take on any value.  In logistic regression the output is constrained to just two (or at most a few) discrete values. At the heart of logistic regression lies the <font color="#0376be"><b><i>logistic function</b></i></font>,<i> f(x) = 1 / (1 + e<sup>−x</sup></i>), which has a sigmoidal shape and returns a value between 0 and 1 for all inputs <i>x</i>.</p></div>
+
+
+
+</div>
+
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:42.361111111111%; padding:0 15px;">
+					
+						
+
+<div class="paragraph">During training, the system is provided with correctly classified cases, each described by one or more inputs.&nbsp; The logistic regression algorithm then calculates linear combinations of the inputs and optimizes parameters via a maximum likelihood method that generates odds ratios close to either 0 or 1, depending to which binary class the inputs correspond. Once the parameters are optimized, the model can be used to classify outcomes when new unknown data are presented.</div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:57.638888888889%; padding:0 15px;">
+					
+						
+
+<div class="wsite-youtube" style="margin-bottom:0px;margin-top:30px;"><div class="wsite-youtube-wrapper wsite-youtube-size-auto wsite-youtube-align-center">
+<div class="wsite-youtube-container">
+
+<iframe src="http://www.youtube.com/embed/XnOAdxOWXWg?wmode=opaque" frameborder="0" allowfullscreen></iframe>
+</div>
+</div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div class="paragraph"><strong><font color="#8d5024" size="4">Support Vector Machine (SVM)</font></strong></div>
+
+<div class="paragraph">In a SVM data is segregated into two classes, each represented by points in space separated by as large a distance as possible. A dividing boundary separates the classes. The choice of the boundary is taken as the one that maximizes the distance (the "margin") between the boundary and the closest point in each group. In other words, the best boundary is the one that cleanly divides the data but doesn't approach either group too closely. The data points lying closest the boundary are called the <em><strong><font color="#24678d">support vectors.</font></strong></em>&nbsp;They represent the points most difficult to classify and have a direct bearing on the optimal position of the boundary.&nbsp;<br /></div>
+
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:58.472222222222%; padding:0 15px;">
+					
+						
+
+<div class="wsite-youtube" style="margin-bottom:10px;margin-top:0px;"><div class="wsite-youtube-wrapper wsite-youtube-size-auto wsite-youtube-align-center">
+<div class="wsite-youtube-container">
+
+<iframe src="http://www.youtube.com/embed/N1vOgolbjSc?wmode=opaque" frameborder="0" allowfullscreen></iframe>
+</div>
+</div></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:41.527777777778%; padding:0 15px;">
+					
+						
+
+<div class="paragraph"><span style="color:rgb(0, 0, 0)">For simple classification problems the boundary is just a straight line or plane. In more complex cases it may be necessary to construct a non-linear boundary such as a parabola, circle, or hyperplane. This is performed by transformation of the data into a higher dimension using a so-called&nbsp;</span><em style="color:rgb(0, 0, 0)"><strong><font color="#24678d">kernel function.</font></strong></em><br />&#8203;</div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div class="paragraph"><span style="color:rgb(0, 0, 0)">Like logistic regression,&nbsp;</span><span style="color:rgb(0, 0, 0)">the optimal boundary in SVM is calculated using a training set whose classifications and inputs are known. New cases are then classified as to which side of the boundary they fall.&nbsp;</span><span style="color:rgb(0, 0, 0)">SVM methods may be extended to more than two classes (albeit with some difficulty).&nbsp;</span>&#8203;</div>
+
+<div class="paragraph" style="text-align:skip_to_justify;"><strong><font size="4" color="#8d5024">Random Forest</font></strong></div>
+
+<div class="paragraph"><span style="color:rgb(0, 0, 0)">The Random Forest is a machine learning technique for classification and prediction of data. The building block of the Random Forest is the&nbsp;</span><em style="color:rgb(0, 0, 0)"><strong><font color="#24678d">Decision Tree</font></strong></em><span style="color:rgb(0, 0, 0)">.&nbsp;&nbsp;</span>&#8203;</div>
+
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:42.361111111111%; padding:0 15px;">
+					
+						
+
+<div class="paragraph">Decision trees are relatively straightforward and simple to construct. For example, a decision tree for classifying a ball as football, golf ball, or tennis ball might include two initial branches dealing with shape (round or oblong), with two additional branches along the round into and size (larger or smaller than 4 cm). The major problem with simple decision trees is their high variance -- they commonly overfit the data and do not generalize well to samples beyond the training set.</div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:57.638888888889%; padding:0 15px;">
+					
+						
+
+<div class="wsite-youtube" style="margin-bottom:10px;margin-top:20px;"><div class="wsite-youtube-wrapper wsite-youtube-size-auto wsite-youtube-align-center">
+<div class="wsite-youtube-container">
+
+<iframe src="http://www.youtube.com/embed/J4Wdy0Wc_xQ?wmode=opaque" frameborder="0" allowfullscreen></iframe>
+</div>
+</div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div class="paragraph">Random Forests were developed to overcome these problems.&nbsp; Instead of a single tree, Random Forests consist of a large ensemble of individual trees constructed using a randomly selected data from subsets of the original variables. Once the trees are constructed they are tested with known data and the various trees in the forest are scored for their accuracy in prediction.&nbsp; They can thus be used to rank the most important variables in the data. Additional advantages include insensitivity to outliers, ability to handle new data without changing dramatically, and ability to handle missing data.</div>
+
+<div class="paragraph"><strong><font size="4" color="#8d5024">Cluster Analysis</font></strong></div>
+
+<div class="paragraph">Unlike the three supervised machine learning techniques above, Cluster Analysis is <em>unsupervised</em>. Its goal is to subdivide large data sets into <em><strong><font color="#24678d">clusters</font></strong></em>, groups of objects that have similar properties or features compared to other groups.</div>
+
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:58.472222222222%; padding:0 15px;">
+					
+						
+
+<div class="wsite-youtube" style="margin-bottom:10px;margin-top:10px;"><div class="wsite-youtube-wrapper wsite-youtube-size-auto wsite-youtube-align-center">
+<div class="wsite-youtube-container">
+
+<iframe src="http://www.youtube.com/embed/4cxVDUybHrI?wmode=opaque" frameborder="0" allowfullscreen></iframe>
+</div>
+</div></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:41.527777777778%; padding:0 15px;">
+					
+						
+
+<div class="paragraph"><br />&#8203;Popular clustering methods used imaging applications include:<ul><li>K-means Clustering</li><li><span>Connectivity-Based Clustering</span></li><li><span>Gaussian-Mixture Clustering</span></li><li><span>&#8203;Density-Based Clustering</span></li></ul> <span>These are introduced in the YouTube video (left) and explained in further detail in the References.</span></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div><div id="445845269783320486" align="left" style="width: 100%; overflow-y: hidden;" class="wcustomhtml"><html> <head><script src="gdpr/gdprscript6f19.js?buildTime=1774025472"></script> <script type="text/javascript" 
+></script> 
+<script type="text/javascript">
+		$(function() {$('#Q').click(function() {$('.Q').toggle(500); return false;});});</script></head><body>
+<a href="#" id=Q><h3><font color="#378a57">Advanced Discussion (show/hide)»</font></h3></a><div class=Q style="display:none;">
+
+<!--content goes below here-->
+
+No supplementary material yet.  Check back soon!
+
+
+<!--content goes above here-->
+</div></body>
+<!-- Mirrored from mriquestions.com/shallow-networks.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 21 Mar 2026 06:49:38 GMT -->
+</html></div>
+
+
+
+</div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;"><strong>References</strong><br /><font color="#878787">&nbsp; &nbsp; &nbsp;</font>Argentiero A, Muscogiuri G, Rabbat MG, et al. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/jcm-11-02866.pdf">The applications of artificial intelligence in cardiovascular magnetic resonance &mdash; a comprehensive review.</a> J Clin Med 2022; 111:2866.&nbsp; <a href="https://doi.org/10.3390/jcm11102866" target="_blank">[DOI LINK]</a><br />&nbsp; &nbsp; &nbsp;Breiman L. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/breiman2001_article_randomforests.pdf">Random forests</a>. Machine Learning 2001; 45:5-32.&nbsp; (original description of the technique).<br />&nbsp; &nbsp; &nbsp;<a href="https://en.wikipedia.org/wiki/Cluster_analysis" target="_blank">Cluster Analysis</a>.&nbsp; Wikipedia, The Free Encyclopedia. (accessed 7-16-22)<br />&#8203;&nbsp; &nbsp; &nbsp;Levy JJ, O&rsquo;Malley AJ. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/s12874-020-01046-3.pdf">Don&rsquo;t dismiss logistic regression: the case for sensible extraction of interactions in the&nbsp;era of machine learning</a><span style="color:rgb(19, 20, 19)">. </span><span style="color:rgb(19, 20, 19)">BMC Medical Research Methodology (2020) 20:171.</span><span style="color:rgb(19, 20, 19)">&nbsp;</span> <a href="https://doi.org/10.1186/s12874-020-01046-3" target="_blank">[DOI LINK]</a><br />&nbsp; &nbsp; &nbsp;Noble WS.&nbsp; <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/what_is_a_support_vector_machine.pdf">What is a support vector machine?</a> Nature Biotechnology 2006; 24:1565-7. <a href="https://doi.org/10.1038/nbt1206-1565" target="_blank">[DOI LINK]</a><br />&nbsp; &nbsp; &nbsp;Seif G. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/the_5_clustering_algorithms_data_scientists_need_to_know___by_george_seif___towards_data_science.pdf">The 5 clustering algorithms data scientists need to know</a>. Toward Data Science, 2018;1-10.<br />Downloaded 7-16-22 <a href="https://towardsdatascience.com/the-5-clustering-algorithms-data-scientists-need-to-know-a36d136ef68" target="_blank">from this link</a>.&nbsp; (Recommend viewing online as it contains multiple animated gifs).<br /></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;"><strong>Related Questions</strong><br /><a href="index.html"><font size="3"><strong style="">&nbsp; &nbsp; &nbsp;</strong><em style="color: rgb(0, 0, 0);"><strong style=""><font color="#24678d" style="">Is artificial intelligence the same as machine learning?</font></strong></em></font></a></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div style="text-align:skip_to_justify;"><div style="height: 0px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-normal" href="shallow-v-deep-ml.html" >
+<span class="wsite-button-inner">← &nbsp;Previous Question</span>
+</a>
+<div style="height: 0px; overflow: hidden;"></div></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div style="text-align:right;"><div style="height: 0px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-normal" href="deep-network-types.html" >
+<span class="wsite-button-inner">Next Question &nbsp;→</span>
+</a>
+<div style="height: 0px; overflow: hidden;"></div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div style="text-align:center;"><div style="height: 0px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-highlight" href="complete-list-of-questions.html" >
+<span class="wsite-button-inner">↑&nbsp;Complete List of Questions ↑</span>
+</a>
+<div style="height: 10px; overflow: hidden;"></div></div>
+</div></div>

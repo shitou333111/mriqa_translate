@@ -1,0 +1,164 @@
+<div id="content"><div id="wsite-content" class="wsite-elements wsite-not-footer">
+	<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<h2 class="wsite-content-title" style="text-align:center;">径向采样</h2>
+
+<div class="paragraph" style="text-align:center;"><font size="4"><strong style="color:rgb(135, 135, 135)"><em><font color="#0376be">为何要使用径向 k 空间采样方法？</font></em></strong><strong style="color:rgb(55, 138, 87)"><em>&nbsp;</em></strong></font></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-thin" style="padding-top:0px;padding-bottom:0px;margin-left:0px;margin-right:0px;text-align:center">
+<a href='uploads/3/4/5/7/34572113/screen-shot-2017-08-04-at-3-05-25-pm_orig.png' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/published/screen-shot-2017-08-04-at-3-05-25-pmd09e.png?1501873572" alt="径向采样 MRI 示意图" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:34.305555555556%; padding:0 15px;">
+					
+						
+
+<div class="paragraph" style="text-align:skip_to_justify;"><font color="#2a2a2a">k 空间数据的径向采样是最早的图像重建方法之一，但在 20 世纪 80 年代，它基本上被采用直线（笛卡尔）数据采集的“自旋扭曲”技术所取代。时至今日，笛卡尔方法仍占主导地位，但径向（以及螺旋）方法正在迅速崛起。</font></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:33.333333333333%; padding:0 15px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-none" style="padding-top:10px;padding-bottom:10px;margin-left:0px;margin-right:0px;text-align:center">
+<a href='uploads/3/4/5/7/34572113/kspace-cartesian_orig.gif' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/editor/kspace-cartesian935c.gif?1501763922" alt="k 空间的笛卡尔采样" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%">k 空间的直线（笛卡尔）采样</div>
+</div></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:32.361111111111%; padding:0 15px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-none" style="padding-top:10px;padding-bottom:10px;margin-left:0px;margin-right:0px;text-align:center">
+<a href='uploads/3/4/5/7/34572113/kspace-radial-filling_orig.gif' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/kspace-radial-filling_orig.gif" alt="k 空间的径向采样" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%">k 空间的径向采样</div>
+</div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;">笛卡尔采样的主要优势在于其数据点规则排列，可以直接放入为高效<em><strong><font color="#24678d">快速傅里叶变换 (FFT) </font></strong></em>计算而设计的标准阵列处理器中。径向方法生成的数据点则不落入矩形矩阵中。<span style="color:rgb(0, 0, 0)">为了高效处理这种非均匀采集的数据，这些点必须被转换为笛卡尔格式，这一迭代过程通常被称为“</span><strong style="color:rgb(0, 0, 0)"><em><font color="#24678d">网格化</font></em></strong><span style="color:rgb(0, 0, 0)">”。</span></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;">径向采样的主要优点（也是其如今被广泛采用的原因）是对运动伪影的相对不敏感性。与笛卡尔方法不同，径向采样没有唯一的频率编码和相位编码方向。因此，来自运动解剖结构的噪声不会沿着单一的相位编码方向传播为离散的鬼影，而是更弥散地分布在整个图像上。</div>
+
+<div class="paragraph">在径向采集中，由于重复穿过该区域的“辐条”相互重叠，k 空间中心被过采样并持续更新。如果 k 空间中心的信号在不同视角间发生变化，可以利用这种冗余来检测和校正运动。<span style="color:rgb(0, 0, 0)">此外，所有径向辐条对图像的贡献是均等的（不像笛卡尔采样，仅靠穿过 k 空间中心的少数几条线就决定了整体图像的对比度和噪声水平）。因此，仅在一个或少数几个径向视角上的运动不太可能严重降低图像质量。</span></div>
+
+<span class='imgPusher' style='float:left;height:0px'></span><span style='display: table;width:auto;position:relative;float:left;max-width:100%;;clear:left;margin-top:0px;*margin-top:0px'><a href='uploads/3/4/5/7/34572113/edited/propeller-dirctions.png' rel='lightbox' onclick='if (!lightboxLoaded) return false'><img src="uploads/3/4/5/7/34572113/published/propeller-dirctions174e.png?1501781799" style="margin-top: 10px; margin-bottom: 0px; margin-left: 0px; margin-right: 20px; border-width:1px;padding:3px; max-width:100%" alt="螺旋桨/叶片 MRI" class="galleryImageBorder wsite-image" /></a><span style="display: table-caption; caption-side: bottom; font-size: 90%; margin-top: -0px; margin-bottom: 0px; text-align: center;" class="wsite-caption">PROPELLER 序列以旋转方式围绕 k 空间中心采集数据“叶片”</span></span>
+<div class="paragraph" style="display:block;">&#8203;当今应用最广泛的径向采样方法是 GE 的<em><strong><font color="#24678d">PROPELLER</font></strong></em>（<strong>P</strong>eriodically <strong>R</strong>otated <strong>O</strong>verlapping <strong>P</strong>aral<strong>EL</strong> <strong>L</strong>ines with <strong>E</strong>nhanced <strong>R</strong>econstruction，周期性旋转重叠平行线增强重建）或其变体之一：<span style="color:rgb(0, 0, 0)">西门子的 (</span><strong style="color:rgb(0, 0, 0)"><em><font color="#24678d">BLADE</font></em></strong><span style="color:rgb(0, 0, 0)">)、飞利浦的 (</span><strong style="color:rgb(0, 0, 0)"><em><font color="#24678d">MulitVane</font></em></strong><span style="color:rgb(0, 0, 0)">)、日立的 (</span><strong style="color:rgb(0, 0, 0)"><em><font color="#24678d">RADAR</font></em></strong><span style="color:rgb(0, 0, 0)">) 和佳能的 (</span><strong style="color:rgb(0, 0, 0)"><em><font color="#24678d">JET</font></em></strong><span style="color:rgb(0, 0, 0)">)。</span>&nbsp; 该方法不是采集单条径向线，而是在多回波采集中采集一组（通常为 8-32 条）平行线（称为“叶片”）。在临床实践中，这最常用的是 2D 快速/涡轮自旋回波 (FSE/TSE) 序列。然后，叶片旋转约 10°–20°，此时采集第二组数据。此过程持续进行，直到采集到整个 k 空间圆圈的成像数据。关于 PROPELLER 的更多信息和示例，请参阅<a href="propellerblade.html">此相关问答</a>。</div>
+<hr style="width:100%;clear:both;visibility:hidden;"></hr>
+
+<span class='imgPusher' style='float:right;height:0px'></span><span style='display: table;width:139px;position:relative;float:right;max-width:100%;;clear:right;margin-top:0px;*margin-top:0px'><a href='uploads/3/4/5/7/34572113/stack-of-stars_orig.gif' rel='lightbox' onclick='if (!lightboxLoaded) return false'><img src="uploads/3/4/5/7/34572113/published/stack-of-starsb6df.gif?1501792182" style="margin-top: 0px; margin-bottom: 10px; margin-left: 0px; margin-right: 10px; border-width:1px;padding:3px; max-width:100%" alt="图片" class="galleryImageBorder wsite-image" /></a><span style="display: table-caption; caption-side: bottom; font-size: 90%; margin-top: -10px; margin-bottom: 10px; text-align: center;" class="wsite-caption">“星堆”</span></span>
+<div class="paragraph" style="display:block;">通过采集单条线（而非组/叶片）的初级径向采集方法，目前至少有一家主要供应商提供。西门子的<em><strong><font color="#24678d">StarVIBE</font></strong></em>&nbsp;产品结合了使用脂肪抑制的扰相梯度回波核心序列进行平面内径向采样。&nbsp;该过程可以扩展到 3D，在 <em>z</em> 方向使用直线（笛卡尔）采样，同时在 <em>xy</em> 平面保持径向采样。这种 3D 实现被称为<em><strong><font color="#24678d">星堆 (Stack of Stars)</font></strong></em>。&nbsp;</div>
+<hr style="width:100%;clear:both;visibility:hidden;"></hr>
+
+<div><div id="363052671687685718" align="left" style="width: 100%; overflow-y: hidden;" class="wcustomhtml"><html> <head><script src="gdpr/gdprscript6f19.js?buildTime=1774025472"></script> <script type="text/javascript" 
+></script> 
+<script type="text/javascript">
+		$(function() {$('#Q').click(function() {$('.Q').toggle(500); return false;});});</script></head><body>
+<a href="#" id=Q><h3><font color="#378a57">进阶讨论（显示/隐藏）»</font></h3></a><div class=Q style="display:none;">
+
+<!--content goes below here-->
+
+<p>径向采集的另一个优势是，它允许在所有方向上进行过采样（512 或更高）而无需时间惩罚。在传统（笛卡尔）成像中，过采样仅限于单一方向（频率编码或读出方向）。由于径向采集发生在所有方向，过采样不局限于单一轴。因此，在径向采样方案中，视野 (FOV) 可以小于被成像物体，而不会产生混叠/卷折伪影。</p>
+
+<p>除了网格化问题，径向采集的另一个缺点是由于梯度延迟和失真导致采样点确切位置的不确定性。这些梯度效应可能使物体在不同方向上的表观位置发生偏移。为了克服这一点，通常在执行径向序列之前会运行一个简短的校准扫描。</p>
+
+<p>一个有趣的数学问题是如何选择径向辐条的最佳角度以及以何种顺序采集它们。一个优雅的解决方案是将每条辐条递增约 111.25º，这是 180º 除以经典几何中的黄金比例 (Φ =  ½(√5+1) ≈ 1.62)。<font color="#0376be"><b><i>黄金比例</b></i></font>具有多种有趣的特性，这解释了它在自然界中的存在，包括决定海螺的形状和植物茎上叶子的分布。当为径向采集选择黄金角时，每条后续辐条都将剩余的最大角度间隙一分为二。随着过程的继续，k 空间的均匀采样在极限下得以实现。当辐条数量与斐波那契数列（5, 8, 13, 21, 34, 55 等）之一匹配时，辐条呈对称分布。这种方法一个有前景的应用被称为<font color="#0376be"><b><i>GRASP (Golden-angle RAdial Sparse Parallel，黄金角径向稀疏并行)</b></i></font> MRI。</p> 
+
+<!--content goes above here-->
+</div></body>
+<!-- Mirrored from mriquestions.com/radial-sampling.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 21 Mar 2026 06:15:35 GMT -->
+</html></div>
+
+
+
+</div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div><div class="paragraph" style="text-align:skip_to_justify;"><strong>参考文献<br />&nbsp; &nbsp; &nbsp;</strong>Block KT, Chandarana H, Milla S, et al. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/stack_of_stars_open_jksmrm-18-87.pdf">Toward routine clinical use of radial stack-of-stars 3D gradient-echo sequences for reducing motion sensitivity</a>. J Korean Soc Magn Reson Med 2014; 18:87-106.&nbsp; <a href="http://dx.doi.org/10.13104/jksmrm.2014.18.2.87" target="_blank">[DOI LINK]</a><br />&nbsp; &nbsp; &nbsp;Chandarana H, Block TK, Rosenkrantz AB, et al. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/star_vibe.pdf">Free-breathing radial 3D fat-suppressed T1-weighted gradient echo sequence: a viable alternative for contrast-enhanced liver imaging in patients unable to suspend respiration</a>. Invest Radiol. 2011;46:648&ndash;653. (StarVIBE and Stack of Stars implementation for liver imaging).<br />&nbsp; &nbsp; &nbsp;<span style="background-color: transparent;">Coggins BE, Venters RA, Zhou P. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/1-s2.0-s0079656510000877-main.pdf">Radial sampling for fast NMR: Concepts and practices over three decades</a>. Prog NMR Spectroscopy 2010; 57:381-419.</span><span style="background-color: transparent;">&nbsp; </span><span style="background-color: transparent;">[<a href="https://doi.org/10.1016/j.pnmrs.2010.07.001" target="_blank">DOI LINK</a>]<br /></span><strong>&nbsp;&nbsp; &nbsp;</strong><span style="color:rgb(135, 135, 135)">&nbsp;</span><font color="#2a2a2a">Feng L, Grimm R, Block KT, et al. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/grasp_feng_et_al-2014-magnetic_resonance_in_medicine.pdf">Golden-angle radial sparse parallel MRI: combination of compressed sensing, parallel imaging, and golden-angle radial sampling for fast and flexible dynamic volumetric MRI</a>. Magn Reson Med 2014; 72:707-717. (The "GRASP" technique)</font><br /><span style="color:rgb(0, 0, 0)">&nbsp; &nbsp; &nbsp;Lauterbur PC.</span><a href="http://mriquestions.com/uploads/3/4/5/7/34572113/lauterbur_nature_1973.pdf">&nbsp;Image formation by induced local interactions: examples employing nuclear magnetic resonance</a><span style="color:rgb(0, 0, 0)">. Nature 1973; 242:190-1. (Historic paper where radial reconstruction was used to produce the world's first MR image).<br />&nbsp; &nbsp; &nbsp;Pipe JG.&nbsp;</span><a href="http://mriquestions.com/uploads/3/4/5/7/34572113/pipej_mrm_1999_42_953_959_propeller.pdf">Motion correction with PROPELLER MRI: application to head motion and free-breathing cardiac imaging</a><span style="color:rgb(0, 0, 0)">. Magn Reson Med 1999; 42:963-969.</span></div><div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;"><strong>相关问题</strong><br /><em><strong><a href="spiralradial-artifacts.html">&nbsp; &nbsp; &nbsp;径向或螺旋成像中的卷叠伪影是怎么回事？因为相位编码是各个方向都有的，看起来它们应该总是存在。&nbsp;<br /></a></strong></em><em><strong>&nbsp; &nbsp; &nbsp;<a href="propellerblade.html">PROPELLER 如何减少运动伪影？&nbsp;</a></strong></em><em><strong></strong></em><br /></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div style="text-align:skip_to_justify;"><div style="height: 0px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-normal" href="k-space-trajectories.html" >
+<span class="wsite-button-inner">← &nbsp;上一问题</span>
+</a>
+<div style="height: 0px; overflow: hidden;"></div></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div style="text-align:right;"><div style="height: 0px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-normal" href="k-space-grid.html" >
+<span class="wsite-button-inner">下一问题 &nbsp;→</span>
+</a>
+<div style="height: 0px; overflow: hidden;"></div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div style="text-align:center;"><div style="height: 0px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-highlight" href="complete-list-of-questions.html" >
+<span class="wsite-button-inner">↑&nbsp;问题完整列表 ↑</span>
+</a>
+<div style="height: 10px; overflow: hidden;"></div></div>
+</div></div>

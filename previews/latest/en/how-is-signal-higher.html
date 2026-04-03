@@ -1,0 +1,168 @@
+<div id="content"><div id="wsite-content" class="wsite-elements wsite-not-footer">
+	<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -0px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:51.453488372093%; padding:0 0px;">
+					
+						
+
+<h2 class="wsite-content-title" style="text-align:center;">Steady-State Magnetization<br /></h2>
+
+<div class="paragraph" style="text-align:center;"><strong style="color: rgb(135, 135, 135); font-size: large; line-height: 1.5;"><em><font color="#0376be">Wait a minute! If a partial flip angle pulse tips less magnetization into the transverse plane than a 90</font></em></strong><font size="4" color="#24678d"><em>&deg;</em></font><strong style="color: rgb(135, 135, 135); font-size: large; line-height: 1.5;"><em><font color="#0376be">&nbsp;pulse does, how can the signal be higher?&nbsp;</font></em></strong><strong style="color: rgb(55, 138, 87); font-size: large; line-height: 1.5;"><em>&nbsp;</em></strong><br /></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:48.546511627907%; padding:0 0px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-thin" style="padding-top:10px;padding-bottom:0;margin-left:0;margin-right:0;text-align:center">
+<a href='uploads/3/4/5/7/34572113/8602447_orig.png' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/86024470e01.png?285" alt="Steady-state magnetization" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;">At first it seems paradoxical that reducing the flip angle (and hence the fraction of longitudinal magnetization deflected into the transverse plane) could ever produce a stronger signal than is produced by using 90&deg;-pulses.&nbsp; Indeed, if only a single RF pulse were applied, then a 90&deg;-flip angle would always be optimal. But an&nbsp;an MR imaging sequence involves the application of&nbsp;<em>repetitive&nbsp;</em>RF pulses, and for reasons described below, a series of 90&deg;-pulses may not produce the highest signal.<br /><br />Recall that before any RF-pulses are applied, the spin system reaches a state of thermal equilibrium with its environment. As described in a <a href="index.html">prior Q&amp;A</a>, the system develops a net longitudinal magnetization (<strong>M<font size="1">z</font></strong>) whose initial maximum value is denoted&nbsp;<em>M<font size="1">o</font></em>. The <u>first RF-pulse</u> rotates some (or all) of <strong>M<font size="1">z</font></strong>&nbsp;into the transverse plane to generate a signal. The transverse component created is [<em>M<font size="1">o</font> sin&nbsp;&alpha;</em>] where&nbsp;<em><font color="#24678d"><strong>&alpha;</strong></font></em> is the <strong><em><font color="#24678d">flip angle</font></em></strong>. &nbsp;When&nbsp;<em>&alpha; =&nbsp;</em><font color="#2a2a2a"><span><span>90&deg;, all of </span><strong><span>M</span><font size="1">z</font></strong><span> is converted into transverse magnetization with maximal value&nbsp;</span></span><em>M<font size="1">o</font>.</em></font><br /><br />But we must now consider the effects of the&nbsp;<u>second&nbsp;and subsequent RF-pulses</u>&nbsp;applied&nbsp;after the first RF-pulse. The spacing of between successive RF-pulses is called the <strong><em><font color="#24678d">repetition time (TR)</font></em></strong>.<br /><br />Immediately after RF-excitation, the longitudinal magnetization (<strong>M<font size="1">z</font></strong>) has been partially or completely obliterated, having been converted into transverse magnetization. During the <em>TR</em> interval, <strong>M<font size="1">z</font></strong> will regrow in an exponential fashion with time constant T1. If <em>TR</em> is sufficiently long (the usual requirement is <em>TR</em> &gt; 4-5x T1), <strong>M<font size="1">z</font></strong> will have time to completely recover and be restored to its full initial magnetization <em>M<font size="1">o</font></em>.&nbsp;<br /><br />But what happens if&nbsp;<em>TR</em> is not long compared to T1? In this case the second and subsequent pulses occur before <strong>M<font size="1">z</font></strong> has returned to its initial maximum value (<em>M<font size="1">o</font></em>). After a few pulses a new <strong><em><font color="#24678d">steady-state longitudinal magnetization (M<font size="1">ss</font>)</font></em></strong> will be established, where <em>M<font size="1">ss</font></em> &lt; <em>M<font size="1">o</font></em>. This phenomenon is called <strong><em><font color="#24678d">partial saturation</font></em></strong>, meaning that the spin system has not fully relaxed back to its equilibrium condition.</div>
+
+<div><div class="wsite-image wsite-image-border-thick" style="padding-top:10px;padding-bottom:10px;margin-left:0px;margin-right:0px;text-align:center">
+<a href='uploads/3/4/5/7/34572113/3476833_orig.gif' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/3476833.gif" alt="Steady-state magnetization" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%"><b>Partial saturation and development of steady-state magnetization (M<sub>o</sub>)</b><br>
+[left] <i>TR</i> >> T1 so there is complete recovery of <b>M<sub>z</sub></b> back to <i>M<sub>o</sub></i> before the 2nd RF-pulse.<br>
+[right] <i>TR</i> is shorter and <b>M<sub>z</sub></b> does not fully recover before next RF-pulse is applied. After a few pulses a new steady-state longitudinal magnetization (<i>M<sub>ss</sub></i>) is reached, with <i>M<sub>ss</sub></i> < <i>M<sub>o</sub></i>. Note that in this second figure part we have assumed that TR>>T2, so that there is no build-up of transverse coherences from cycle to cycle.</div>
+</div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;">With this concept of partial saturation and the development of steady-state longitudinal magnetization (<em>M<font size="1">ss</font></em>) in place, we can now see why a series of partial flip angle pulses may produce a higher overall signal than a series of 90&deg;-pulses.&nbsp;</div>
+
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:13.50950604899%; padding:0 15px;">
+					
+						
+
+<div class="wsite-spacer" style="height:50px;"></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:72.839914057955%; padding:0 15px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-thin" style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
+<a href='uploads/3/4/5/7/34572113/7492608_orig.gif' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/7492608a86c.gif?570" alt="Steady-state magnetization" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%">Each 90°-pulse tips 100% of <b>M<sub>z</sub></b> into the transverse plane, driving the steady-state magnetization (<i>M<sub>ss</sub></i>) and MR signal to a low level.</div>
+</div></div>
+
+<div><div class="wsite-image wsite-image-border-thin" style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
+<a href='uploads/3/4/5/7/34572113/8311988_orig.gif' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/8311988c989.gif?571" alt="Steady-state magnetization" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%">Each low-flip angle pulse tips less of  <b>M<sub>z</sub></b> into the transverse plane, leaving residual longitudinal magnetization for the next RF-pulse. The steady-state magnetization (<i>M<sub>ss</sub></i>) and MR signal are therefore higher.</div>
+</div></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:13.650579893056%; padding:0 15px;">
+					
+						
+
+<div class="wsite-spacer" style="height:50px;"></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;">In summary, the amplitude of the MR signal represents a "balancing act" between two factors:&nbsp; (1) the value of the steady-state longitudinal magnetization (<em style="">M<font size="1">ss</font></em>) and (2) the fraction of&nbsp;<strong>M<font size="1">z</font></strong>&nbsp;tipped into the transverse plane by each RF-pulse.&nbsp; Although 90&deg;-pulses tip the largest fraction of magnetization into the transverse plane, they also reduce the magnitude of&nbsp;<strong>M<font size="1">z</font></strong>, and overall MR signal is not necessarily maximized.&nbsp; Conversely, partial flip angle pulses tip a smaller fraction of magnetization into the transverse plane but reduce&nbsp;<strong>M<font size="1">z</font></strong>&nbsp;less.&nbsp; Overall, therefore, a series of partial flip angle pulses may generate a stronger signal than is generated by a series of 90&deg; pulses.</div>
+
+<div><div id="675384802506092405" align="left" style="width: 100%; overflow-y: hidden;" class="wcustomhtml"><html> <head><script src="gdpr/gdprscript6f19.js?buildTime=1774025472"></script> <script type="text/javascript" 
+></script> 
+<script type="text/javascript">
+		$(function() {$('#Q').click(function() {$('.Q').toggle(500); return false;});});</script></head><body>
+<a href="#" id=Q><h3><font color="#378a57">Advanced Discussion (show/hide)»</font></h3></a><div class=Q style="display:none;">
+
+<!--content goes below here-->
+
+No supplementary material yet.  Check back soon.
+
+
+<!--content goes above here-->
+</div></body>
+<!-- Mirrored from mriquestions.com/how-is-signal-higher.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 21 Mar 2026 05:56:32 GMT -->
+</html></div>
+
+
+
+</div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;"><strong>References</strong><br /><span style="line-height: 1.5;"><font color="#878787">&nbsp; &nbsp; &nbsp;</font></span>Haase A, Frahm J, Matthaei KD.&nbsp;<a href="https://mriquestions.com/uploads/3/4/5/7/34572113/flash_haase_1-s2.0-0022236486904336-main.pdf" title="" style="">FLASH imaging: rapid NMR imaging using low flip angle pulses</a>. J Magn Reson 1986: 67: 258-266.<br /></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;"><strong>Related Questions</strong><br /><strong><em><a href="partial-flip-angles.html">&nbsp; &nbsp; &nbsp;What is a partial flip angle pulse, and why would you want to use one?&nbsp;&nbsp;</a></em></strong></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div style="text-align:skip_to_justify;"><div style="height: 10px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-normal" href="partial-flip-angles.html" >
+<span class="wsite-button-inner">← &nbsp;Previous Question</span>
+</a>
+<div style="height: 10px; overflow: hidden;"></div></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div style="text-align:right;"><div style="height: 10px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-normal" href="optimal-flip-angle.html" >
+<span class="wsite-button-inner">Next Question &nbsp;→</span>
+</a>
+<div style="height: 10px; overflow: hidden;"></div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div style="text-align:center;"><div style="height: 10px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-highlight" href="complete-list-of-questions.html" >
+<span class="wsite-button-inner">↑&nbsp;Complete List of Questions ↑</span>
+</a>
+<div style="height: 10px; overflow: hidden;"></div></div>
+</div></div>

@@ -1,0 +1,131 @@
+<div id="content"><div id="wsite-content" class="wsite-elements wsite-not-footer">
+	<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<h2 class="wsite-content-title" style="text-align:center;">SPM Maps: "Blobs"</h2>
+
+<div class="paragraph" style="text-align:center;"><font color="#0376be" size="4"><span><strong><em>How are those activation "blobs" on an fMRI image created, and what exactly do they represent?</em></strong></span></font></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-thin" style="padding-top:0px;padding-bottom:10px;margin-left:0px;margin-right:0px;text-align:center">
+<a href='uploads/3/4/5/7/34572113/screen-shot-2016-09-18-at-11-16-41-am_orig.png' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/screen-shot-2016-09-18-at-11-16-41-amedde.png?309" alt="Picture" style="width:309;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div class="paragraph"><font color="#2a2a2a">Brightly colored "</font><em><strong><font color="#24678d">blobs</font></strong></em><font color="#2a2a2a">" on fMRI maps represent brain regions or voxels where "statistically significant" levels of activation or correlation are thought to have occurred. The size and number of these blobs are somewhat arbitrarily chosen, however, involving </font><span style="color:rgb(0, 0, 0)">tradeoffs between excluding&nbsp;</span><em style="color:rgb(0, 0, 0)"><strong><font color="#24678d">false positives</font></strong></em><span style="color:rgb(0, 0, 0)">&nbsp;(saying an area activates when it does not) and accepting&nbsp;</span><em style="color:rgb(0, 0, 0)"><strong><font color="#24678d">false negatives</font></strong></em><span style="color:rgb(0, 0, 0)">&nbsp;(considering an area to be silent when it really does activate).&nbsp;</span><br /><br />The first level coloring decision is typically based on calculation of a so-called <em><strong><font color="#24678d">test statistic </font></strong></em><span style="color:rgb(0, 0, 0)">(e.g., a&nbsp;</span><em style="color:rgb(0, 0, 0)">T-</em><span style="color:rgb(0, 0, 0)">,&nbsp;</span><em style="color:rgb(0, 0, 0)">F</em><span style="color:rgb(0, 0, 0)">- or&nbsp;</span><em style="color:rgb(0, 0, 0)">Z</em><span style="color:rgb(0, 0, 0)">-score)</span>&nbsp;for each voxel or brain region from the fMRI data<span style="color:rgb(0, 0, 0)">. Under the&nbsp;</span><em style="color:rgb(0, 0, 0)"><font color="#24678d"><strong>null hypothesis</strong></font></em>&nbsp;that no true activation has occurred, a <em><strong><font color="#24678d">p-value</font></strong></em> can be determined, representing the&nbsp;<span>probability that the calculated test statistic score or larger has occurred by chance.</span><span style="color:rgb(0, 0, 0)">&nbsp;</span>Whenever the&nbsp;<em>p-</em>value is less than an arbitrary preselected level of significance, we conclude the measurement is unlikely to have occurred by chance and classify the voxel as "activated/correlated".</div>
+
+<div class="paragraph">Most fMRI analysis programs include "slider bars" allowing interactive display of blobs at various&nbsp;<em>p</em>-value thresholds. As seen below, moving this slider bar toward more restrictive&nbsp;<em>p</em>-values&nbsp;reveals successively smaller areas of activation. But which level is the <em>correct</em> one?</div>
+
+<div><div class="wsite-image wsite-image-border-none" style="padding-top:10px;padding-bottom:0px;margin-left:0px;margin-right:0px;text-align:skip_to_justify">
+<a href='uploads/3/4/5/7/34572113/t-0-0to2-5-mrn1895485_1_orig.jpg' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/t-0-0to2-5-mrn1895485_1c06d.jpg?690" alt="Picture" style="width:690;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+<div><div class="wsite-image wsite-image-border-none" style="padding-top:0px;padding-bottom:10px;margin-left:0px;margin-right:0px;text-align:center">
+<a href='uploads/3/4/5/7/34572113/t-2-5to4-5-word-generation-mrn1895485_1_orig.jpg' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/t-2-5to4-5-word-generation-mrn1895485_1c06d.jpg?690" alt="Picture" style="width:690;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%">BOLD word generation study. The same image has been processed using <i>T</i>-scores ranging from 0 (upper left) to 4.5 (lower right), corresponding to two-sided <i>p</i>-values between 1.000000 and 0.000007. Which one is correct? For simple eloquent cortex mapping an arbitrary selection in the intermediate range is often made by selecting a "visually pleasing" and/or "modest" amount of activity.</div>
+</div></div>
+
+<div class="paragraph"><span style="color:rgb(0, 0, 0)">There is no simple answer. Although&nbsp;<em>p</em>-values of 0.05 are commonly used in "standard" scientific experiments, this threshold is inappropriate for fMRI studies </span><span style="color:rgb(0, 0, 0)">where&nbsp;</span><span style="color:rgb(0, 0, 0)">simultaneous statistical testing must be performed on 100,000 or more voxels. Setting a&nbsp;</span><em style="color:rgb(0, 0, 0)">p</em><span style="color:rgb(0, 0, 0)">-value of 0.05 for a single voxel means that 5000 (100,000 x 0.05) of these voxels could appear falsely activated.&nbsp;&#8203;This is an example of the so-called </span><em style="color:rgb(0, 0, 0)"><strong><font color="#24678d">multiple comparisons problem</font></strong></em><span style="color:rgb(0, 0, 0)">, a major issue that affects genetics testing as well.</span><span style="color:rgb(0, 0, 0)">&nbsp;Methods for handling this including the&nbsp;</span><em style="color:rgb(0, 0, 0)"><strong><font color="#24678d">Bonferroni correction</font></strong></em>&nbsp;are described in the <font color="#508d24"><strong>Advanced Discussion</strong></font>.</div>
+
+<div class="paragraph">In addition to selecting a <em>p</em>-value threshold, several other arbitrary decisions about blobs must be made. These include: 1) choosing the actual color palette including the range of <em>p</em>-values for corresponding to different shades or hues; 2) whether to employ additional spatial smoothing (makes the map less noisy but smears data anatomically); 3) whether and how to perform <em><strong><font color="#24678d">clustering</font></strong></em> (e.g., deciding to color a voxel only when a certain small number of immediate neighbors also appear to be activated to reduce false positives). Each of these decisions can significantly affect the appearance of the map.</div>
+
+<div class="paragraph">Because of the problems in defining the limits and meanings of "blobs", some neuroscientists have disparagingly called the field of fMRI "blobology". The next two Q&amp;A's will address issues concerning false activation and problems with various statistical methods.</div>
+
+<div><div id="811165836782300221" align="left" style="width: 100%; overflow-y: hidden;" class="wcustomhtml"><html> <head><script src="gdpr/gdprscript6f19.js?buildTime=1774025472"></script> <script type="text/javascript" 
+></script> 
+<script type="text/javascript">
+		$(function() {$('#Q').click(function() {$('.Q').toggle(500); return false;});});</script></head><body>
+<a href="#" id=Q><h3><font color="#378a57">Advanced Discussion (show/hide)»</font></h3></a><div class=Q style="display:none;">
+
+<!--content goes below here-->
+
+<p>Perhaps the most widely known procedure to account for multiple comparison errors in standard statistics is the <b><i><font color="#24678d">Bonferroni correction</font></b></i>. In its simplest form, the Bonferroni method merely divides the required Type I error level (<i>α</i>) by the number of independent tests (<i>N</i>) performed. Thus, one wishes to maintain an <i>α</i> = 0.05 error level for 10 tests, the <i>p</i>-value used would need to be set at 0.05/10 = 0.005. You can see that for an fMRI data set with <i>N</i>=~100,000 voxels being tested, the required p-value would be on the order of 5 x 10<sup>−7</sup>, an extremely stringent requirement. Using such a strict criterion to avoid Type I errors would severely impact the power of the fMRI data analysis leading to an increasing number of false negative results (Type II errors). Accordingly, several Bonferroni variants (Holm, Hochberg, Simes) including step-wise sequential testing have been devised. An alternative and increasingly popular approach is to control the<b><i><font color="#24678d"> false discovery rate (FDR)</font></b></i>, the expected proportion of falsely rejected voxels.</p>
+
+<!--content goes above here-->
+</div></body>
+<!-- Mirrored from mriquestions.com/activation-blobs.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 21 Mar 2026 06:43:41 GMT -->
+</html></div>
+
+
+
+</div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;"><strong>References</strong><br />&nbsp; &nbsp; &nbsp;Colquhoun D. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/fdr_and_p140216.full.pdf">An investigation of the false discovery rate and the misinterpretation of <em>p</em>-values</a>. R Soc Open Sci 2014; 1:140216.<br />&nbsp; &nbsp; &nbsp;Cohen J. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/pp279_cohen1.pdf">The earth is round (p &lt; .05)</a>. Am Psychologist 1994; 49:997-1003.<br /><span style="color:rgb(0, 0, 0)">&nbsp; &nbsp; &nbsp;Engel SA, Burton PC.&nbsp;</span><a href="https://mriquestions.com/uploads/3/4/5/7/34572113/engel_journal.pone.0082419.pdf">Confidence intervals for fMRI activation maps</a><span style="color:rgb(0, 0, 0)">. PLOS ONE 2013; 8:e82419. (Paper demonstrating some of the errors made by naive viewers in their interpretation of activation maps, including the false idea that it is possible to compare brain areas based on their map colors</span><font color="#878787">.)</font><br />&nbsp; &nbsp; &nbsp;Goodman S. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/twelvepvaluemisconceptions.pdf">A dirty dozen: twelve <em>p</em>-value misconceptions</a>. Semin Hematol 2008; 45:135-140.<br />&nbsp; &nbsp; &nbsp;Nichols TE. &nbsp;<a href="https://mriquestions.com/uploads/3/4/5/7/34572113/nichols_rft_1-s2.0-s1053811912003953-main.pdf">Multiple testing corrections, nonparametric methods, and random field theory</a>. NeuroImage 2012; 62:811-815.<br />&nbsp; &nbsp; &nbsp;Nichols T, Hayasaka S. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/nicholshayasaka.pdf">Controlling the familywise error rate in functional neuroimaging: a comparative review</a>. Stat Methods Med Res 2003; 12:419-446.</div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;"><strong>Related Questions</strong><br /><em><a href="fmri-statistical-analysis.html"><strong>&nbsp; &nbsp; &nbsp;I don't really understand how GLM works. Can you explain it more completely?&nbsp;&nbsp;</strong></a></em><em><br /></em></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div style="text-align:skip_to_justify;"><div style="height: 0px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-normal" href="general-linear-model.html" >
+<span class="wsite-button-inner">← &nbsp;Previous Question</span>
+</a>
+<div style="height: 0px; overflow: hidden;"></div></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div style="text-align:right;"><div style="height: 0px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-normal" href="false-activation.html" >
+<span class="wsite-button-inner">Next Question &nbsp;→</span>
+</a>
+<div style="height: 0px; overflow: hidden;"></div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div style="text-align:center;"><div style="height: 0px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-highlight" href="complete-list-of-questions.html" >
+<span class="wsite-button-inner">↑&nbsp;Complete List of Questions ↑</span>
+</a>
+<div style="height: 10px; overflow: hidden;"></div></div>
+</div></div>

@@ -1,0 +1,2415 @@
+<div id="content"><div id="wsite-content" class="wsite-elements wsite-not-footer">
+	<div><div id="351442447487020364" align="left" style="width: 100%; overflow-y: hidden;" class="wcustomhtml"><!--############NEW MASTER HEADER AND INDEX##############-->
+<!--THIS IS THE MASTER HEADER SECTION FOR QUIZZES ON EACH SUPER TAB-->
+<!-- Each super tab in the regular Q&A part of the website corresponds to  a set of review QUIZZES on a single web page. This single web page must begin with the html script included below (which must be appropriately renamed). -->
+
+<!--After the title there is an index that identifies ~5 subsections each with 10-20 quiz questions. The html script for each section of questions is in a separate document titled 20 EMPTY QUESTIONS.  Instructions for filling these out are provided in that document. -->
+
+<html>
+<head><script src="/gdpr/gdprscript.js?buildTime=1774025472"></script>
+<title>Cardiovascular and MRA Quiz</title>
+<!--All Yellow highlighted items need to be replaced-->
+<meta name="keywords" content="radiology physics, review questions, MRI physics">
+<meta name="description" content="Collection of review quiz questions from MRIquestions.com">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="/mr_styles.css">
+<style>
+.explan {
+	display: none;
+	font-style: italic;
+	margin-top: 2px;
+	margin-bottom: 6px;
+}
+</style>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-52206512-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+<script>
+function showAnswer(q_string) {
+	var button = document.getElementById('show_'+q_string);
+	var shown = button.value == "Hide Answer";
+	if(!shown) {
+		document.getElementById('a_'+q_string).style.display = "block";
+		
+		document.getElementById('correct_'+q_string).style.fontWeight = "bold";
+		if(document.getElementById('c_'+q_string).checked) {
+			document.getElementById('correct_'+q_string).style.color = "Green";
+		} else {
+			document.getElementById('correct_'+q_string).style.color = "Red";
+		}
+		
+		button.value = "Hide Answer";
+	} else {
+		document.getElementById('a_'+q_string).style.display = "none";
+		button.value = "Show Answer";
+	}
+}
+
+function showAllAnswers(topic) {
+	var button = document.getElementById('show_all_'+topic);
+	var shown = button.value == "Hide All Answers for Section";
+	
+	var i = 0;
+	var correct = 0;
+	var ans_el;
+	while((ans_el=document.getElementById('a_'+topic+'_'+i)) != null) {
+		if(document.getElementById('c_'+topic+'_'+i).checked) {
+			correct++;
+		}
+		if(!shown) {
+			ans_el.style.display = "block";
+			document.getElementById('correct_'+topic+'_'+i).style.fontWeight = "bold";
+			if(document.getElementById('c_'+topic+'_'+i).checked) {
+				document.getElementById('correct_'+topic+'_'+i).style.color = "Green";
+			} else {
+				document.getElementById('correct_'+topic+'_'+i).style.color = "Red";
+			}
+		} else {
+			ans_el.style.display = "none";
+		}
+		i++;
+	}
+	
+	var scoretext = document.getElementById('scoretxt_'+topic);
+	scoretext.innerHTML = 'You answered '+correct+'/'+i+' correct, for a score of '+Math.round(correct/i*100)+'%';
+	
+	if(!shown) {
+		button.value = "Hide All Answers for Section";
+	} else {
+		button.value = "Show All Answers for Section";
+	}
+}
+
+function scoreAnswers(topic) {
+	var button = document.getElementById('score_'+topic);
+	
+	var i = 0;
+	var correct = 0;
+	var ans_el;
+	while((ans_el=document.getElementById('a_'+topic+'_'+i)) != null) {
+		if(document.getElementById('c_'+topic+'_'+i).checked) {
+			correct++;
+		}
+		i++;
+	}
+	
+	var scoretext = document.getElementById('scoretxt_'+topic);
+	scoretext.innerHTML = 'You answered '+correct+'/'+i+' correct, for a score of '+Math.round(correct/i*100)+'%';
+}
+
+function changeMode(button_value) {
+	if(button_value != 0) {
+		window.location = "/review/mri_b.html?mode="+button_value;
+	}
+}
+</script>
+<style type="text/css">
+.button_unchecked {
+	border: 2px outset #3498db;
+	background: #3498db;
+	background-image: -webkit-linear-gradient(top, #3498db, #2980b9);
+	background-image: -moz-linear-gradient(top, #3498db, #2980b9);
+	background-image: -ms-linear-gradient(top, #3498db, #2980b9);
+	background-image: -o-linear-gradient(top, #3498db, #2980b9);
+	background-image: linear-gradient(to bottom, #3498db, #2980b9);
+	padding: 4px;
+	
+	font-size: 120%;
+	font-weight: bold;
+}
+.button_checked {
+	border: 2px inset #3498db;
+	background: #3498db;
+	background-image: -webkit-linear-gradient(top, #3498db, #2980b9);
+	background-image: -moz-linear-gradient(top, #3498db, #2980b9);
+	background-image: -ms-linear-gradient(top, #3498db, #2980b9);
+	background-image: -o-linear-gradient(top, #3498db, #2980b9);
+	background-image: linear-gradient(to bottom, #3498db, #2980b9);
+	padding: 4px;
+	
+	font-size: 120%;
+	font-weight: bold;
+}
+</style>
+</head>
+
+<!-- END OF MASTER HEADER -->
+
+<!--SECOND SECTION: Lists Subsections for Questions below-->
+<body style="background-color:white">
+<div class="main_div">
+<h1 style="color:black";><a name="top"></a>Cardiovascular and MRA Quiz</h1>
+<div style="font-size: 140%; font-family: sans-serif">
+<ul>
+	<li><a href="#0">Flow Effects in MRI</a></li>
+	<li><a href="#1">MR Angiography - I</a></li>
+<li><a href="#2">MR Angiography - II</a></li>
+              <li><a href="#3">Cardiac MRI - Anatomy</a></li>
+	<li><a href="#4">Cardiac MRI - Function</a></li>
+<li><a href="#5">Cardiac MRI - Viability</a></li>
+</ul>
+
+<!-- Note the numbering of these subsections as they have a href values of #0, #1, #2, etc. These numbers are needed so that clicking on the index file takes you to the proper place in the web page identified on the 20 BLANK QUESTIONS script.-->
+
+
+
+</div>
+
+
+
+</div>
+
+
+
+</div>
+
+<div><div id="579319306605379439" align="left" style="width: 100%; overflow-y: hidden;" class="wcustomhtml"><!-- ###############NEW QUIZ SUBSECTION ##################-->
+
+<hr style="1px solid black">
+<!-- Creates optional line above new Quiz Subsection Title ---->
+
+<h1 style="color:black";><a name="0"></a>Flow Effects in MRI</h1>
+
+<!-- The Section Name and its corresponding number (here 0) which has an href in the index must be changed/filled in.  Note that the first section is identified as “0” here only;  and the second section is denoted “2”, etc. 
+
+This is confusing because subsequently it is denoted as Section 1 and reference to all questions in this section begin with a 1.  However, the first question of Section 1 is called question 0, presumably to assist in scoring.
+
+Thus, the first question of Section 1 is denoted as q_1_0 and its second question is denoted q_1_1.	
+
+When a second section of Questions is added, this is called Section 2 with first and second questions denoted q_2_0 and q_2_1. 
+
+Each section has counting variables corresponding to each question. So the counting variables  are denoted c_1_0 for the Section 1/first question, while c_2_1 counts for Section 2/second question. -->
+
+<!-- FOR THE PURPOSES OF THIS DOCUMENT WE WILL CONSIDER ALL QUESTIONS TO REFER TO SECTION MRFLOW and are numbered consecutively. THE WORD DOCUMENT CAN THEN BE PUT INTO PROPER FORM BY “SEARCH AND REPLACE MRFLOW BY THE APPROPRIATE SECTION NUMBER”-->
+
+
+<!-- ################ SECTION M, QUIZ QUESTION  1############## -->
+
+<ol><li style="margin-top: 8px"> Bulk blood flow (Q) through a certain point in the vascular tree within a given period of time is measured in what units?
+<ol type="a" id="q_MRFLOW_0">
+
+<li ><input type=radio name="c_MRFLOW_0" > cm/s
+</li>
+		
+<li ><input type=radio name="c_MRFLOW_0" > cm/s²
+</li>
+<li ><input type=radio name="c_MRFLOW_0" > cm²/s
+</li>
+
+<li id="correct_MRFLOW_0"><input type=radio name="c_MRFLOW_0" id="c_MRFLOW_0"> cm³/s
+</li>
+		
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_MRFLOW_0" onclick="showAnswer('MRFLOW_0')" value="Show Answer"></p>
+				
+<p class="explan" id="a_MRFLOW_0"> Bulk flow is a volume per unit time and is expressed in units of cm³/s.
+
+<a href="/defining-flow.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+
+<!-- ################ SECTION MRFLOW, QUIZ QUESTION  2############## -->
+
+<li style="margin-top: 8px"> What is the approximate bulk blood flow (Q) passing through a 2 cm diameter artery where the average velocity is 50 cm/s?
+<ol type="a" id="q_MRFLOW_1">
+
+<li ><input type=radio name="c_MRFLOW_1" > 25 cm³/s
+</li>
+		
+<li ><input type=radio name="c_MRFLOW_1" > 50 cm³/s
+</li>
+<li ><input type=radio name="c_MRFLOW_1" >  100 cm³/s
+</li>
+
+<li id="correct_MRFLOW_1"><input type=radio name="c_MRFLOW_1" id="c_MRFLOW_1"> 160 cm³/s
+</li>
+		
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_MRFLOW_1" onclick="showAnswer('MRFLOW_1')" value="Show Answer"></p>
+				
+<p class="explan" id="a_MRFLOW_1"> The cross-sectional area (A) of the vessel is πr² = π (1 cm)² = 3.14 cm². So the bulk blood flow (Q) = V x A = 50 cm/sec x 3.14 cm² = 157 cm³/s.
+<a href="/ defining-flow.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION MRFLOW, QUIZ QUESTION  3############## -->
+
+<li style="margin-top: 8px"> In what part of a vessel is the blood flow the slowest?
+<ol type="a" id="q_MRFLOW_2">
+<li id="correct_MRFLOW_2"><input type=radio name="c_MRFLOW_2" id="c_MRFLOW_2"> Adjacent to the wall of the vessel
+</li>
+
+<li ><input type=radio name="c_MRFLOW_2" > In the center of the vessel
+</li>
+		
+<li ><input type=radio name="c_MRFLOW_2" > Half-way between the wall and center
+</li>
+
+		
+<li ><input type=radio name="c_MRFLOW_2" >  The blood flow is the same across the entire vessel.
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_MRFLOW_2" onclick="showAnswer('MRFLOW_2')" value="Show Answer"></p>
+				
+<p class="explan" id="a_MRFLOW_2"> Near the vessel wall where fluidic shearing and frictional forces are greatest, the blood flow will be nearly zero. Centrally within the lumen, blood flow will be most rapid.
+
+<a href="/defining-flow.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION MRFLOW, QUIZ QUESTION  4############## -->
+<li style="margin-top: 8px"> Which blood vessel normally demonstrates a prominent reversal of flow during the cardiac cycle?
+<ol type="a" id="q_MRFLOW_3">
+
+<li ><input type=radio name="c_MRFLOW_3" > Vertebral artery
+</li>
+		
+
+<li id="correct_MRFLOW_3"><input type=radio name="c_MRFLOW_3" id="c_MRFLOW_3"> Ascending thoracic aorta
+</li>
+<li ><input type=radio name="c_MRFLOW_3" > Middle cerebral artery
+</li>
+		
+<li ><input type=radio name="c_MRFLOW_3" >  Renal artery
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_MRFLOW_3" onclick="showAnswer('MRFLOW_3')" value="Show Answer"></p>
+				
+<p class="explan" id="a_MRFLOW_3"> The thoracic aorta has prominent reversal of flow during diastole as the coronary circulation is filled. The brain and kidneys have low vascular resistance; thus, carotid and renal arterial vessels demonstrate high forward flows even during diastole.
+<a href="/defining-flow.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+
+
+
+ 
+<!-- ################ SECTION MRFLOW, QUIZ QUESTION  5############## -->
+
+<li style="margin-top: 8px"> Which blood vessel has the greatest peak velocity?
+<ol type="a" id="q_MRFLOW_4">
+<li id="correct_MRFLOW_4"><input type=radio name="c_MRFLOW_4" id="c_MRFLOW_4"> Thoracic aorta </li>
+
+<li ><input type=radio name="c_MRFLOW_4" > Abdominal aorta
+</li>
+		
+<li ><input type=radio name="c_MRFLOW_4" > Carotid artery
+</li>
+
+		
+<li ><input type=radio name="c_MRFLOW_4" >  Renal artery
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_MRFLOW_4" onclick="showAnswer('MRFLOW_4')" value="Show Answer"></p>
+				
+<p class="explan" id="a_MRFLOW_4"> The ascending aorta has the highest average peak velocities of the major vessels; typical values are 150-175 cm/sec. Flow in the distal aorta and iliac vessels slows to the 100-150 range, whereas peak velocities in the proximal carotid, brachial, and superficial femoral arteries are about 80-110 cm/sec. 
+<a href="/expected-velocities.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION MRFLOW, QUIZ QUESTION  6############## -->
+
+<li style="margin-top: 8px"> What happens to peak velocities as a vessel goes becomes increasingly stenotic?
+<ol type="a" id="q_MRFLOW_5">
+
+<li ><input type=radio name="c_MRFLOW_5" > They decrease.
+</li>
+<li ><input type=radio name="c_MRFLOW_5" >  They increase.
+</li>
+		
+<li ><input type=radio name="c_MRFLOW_5" > They remain the same.
+</li>
+
+<li id="correct_MRFLOW_5"><input type=radio name="c_MRFLOW_5" id="c_MRFLOW_5"> They increase initially then decrease.
+</li>
+		
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_MRFLOW_5" onclick="showAnswer('MRFLOW_5')" value="Show Answer"></p>
+				
+<p class="explan" id="a_MRFLOW_5"> As vessels become increasingly stenotic their peak velocities initially increase (due to the Bernoulli effect). In extremely high-grade stenosis, however, vascular resistance becomes so high that the flow rates and velocities fall just before total occlusion is reached.
+<a href="/expected-velocities.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION MRFLOW, QUIZ QUESTION  7############## -->
+
+<li style="margin-top: 8px"> In ideal laminar flow the distribution of velocities in cross-section across a vessel should be
+<ol type="a" id="q_MRFLOW_6">
+
+<li ><input type=radio name="c_MRFLOW_6" > Linear
+</li>
+		
+<li ><input type=radio name="c_MRFLOW_6" > Constant
+</li>
+
+<li id="correct_MRFLOW_6"><input type=radio name="c_MRFLOW_6" id="c_MRFLOW_6"> Parabolic
+</li>
+		
+<li ><input type=radio name="c_MRFLOW_6" >  Hyperbolic
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_MRFLOW_6" onclick="showAnswer('MRFLOW_6')" value="Show Answer"></p>
+				
+<p class="explan" id="a_MRFLOW_6"> Laminar flow refers to a predictable distribution of flow velocities in layers (lamina) that parallel the vessel wall.  Theoretically, the distribution of velocities in a perfectly straight, nonbranching vessel with nonpulsatile flow should be parabolic in cross-section.
+<a href="/laminar-v-turbulent.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+	
+<!-- ################ SECTION MRFLOW, QUIZ QUESTION  8############## -->
+
+<li style="margin-top: 8px"> In which anatomic situation would you <u>not</u> expect to find vortex flow?
+<ol type="a" id="q_MRFLOW_7">
+
+<li ><input type=radio name="c_MRFLOW_7" > Distal to a carotid artery stenosis
+</li>
+		
+<li ><input type=radio name="c_MRFLOW_7" > In the proximal (ascending) aorta
+</li>
+
+<li id="correct_MRFLOW_7"><input type=radio name="c_MRFLOW_7" id="c_MRFLOW_7"> In the distal thoracic aorta
+</li>
+		
+<li ><input type=radio name="c_MRFLOW_7" >  In an abdominal aortic aneurysm
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_MRFLOW_7" onclick="showAnswer('MRFLOW_7')" value="Show Answer"></p>
+				
+<p class="explan" id="a_MRFLOW_7"> Vortex flow refers to localized swirling or stagnant blood flow that has separated from the central streamlines within a vessel. Such vortices, also called flow eddies, frequently occur at vascular bifurcations and distal to areas of stenosis. Vortex flow is prominent in the ascending aorta, as jets of blood are expelled and swirl around during each cardiac contraction. They are less likely in the distal thoracic aorta, so the correct answer is (c).
+<a href="/laminar-v-turbulent.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION MRFLOW, QUIZ QUESTION  9############## -->
+
+<li style="margin-top: 8px"> Which statement about the Reynolds number (Re) in ideal fluids is true?
+<ol type="a" id="q_MRFLOW_8">
+
+<li ><input type=radio name="c_MRFLOW_8" > Values of Re < 2000 predict turbulent flow.
+</li>
+		
+<li ><input type=radio name="c_MRFLOW_8" > Values of Re > 2500 predict laminar flow.
+</li>
+<li ><input type=radio name="c_MRFLOW_8" >  Re is a velocity with units of cm/sec.
+</li>
+
+<li id="correct_MRFLOW_8"><input type=radio name="c_MRFLOW_8" id="c_MRFLOW_8"> Re is a dimensionless parameter.
+</li>
+		
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_MRFLOW_8" onclick="showAnswer('MRFLOW_8')" value="Show Answer"></p>
+				
+<p class="explan" id="a_MRFLOW_8"> The Reynolds number (Re) is a dimensionless parameter used to predict flow characteristics in ideal fluids. (Answer d is correct). Values of Re less than 2000 predict that flow will be laminar, whereas values greater than 2500 usually indicate that flow will be turbulent.  
+
+<a href="/laminar-v-turbulent.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+<!-- ################ SECTION MRFLOW, QUIZ QUESTION  10############## -->
+
+<li style="margin-top: 8px"> In which situation would you be more likely to see turbulent flow?
+<ol type="a" id="q_MRFLOW_9">
+
+<li ><input type=radio name="c_MRFLOW_9" > In a vessel with a small diameter
+</li>
+		
+
+<li id="correct_MRFLOW_9"><input type=radio name="c_MRFLOW_9" id="c_MRFLOW_9"> In a vessel with rapid blood velocities
+</li>
+<li ><input type=radio name="c_MRFLOW_9" > In a vessel with elevated blood viscosity
+</li>
+		
+<li ><input type=radio name="c_MRFLOW_9" >  In the stump of a newly occluded vessel
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_MRFLOW_9" onclick="showAnswer('MRFLOW_9')" value="Show Answer"></p>
+				
+<p class="explan" id="a_MRFLOW_9"> The probability of turbulent flow is proportional to the Reynolds number (Re), being directly proportional to blood velocity and vessel diameter, and inversely proportional to blood viscosity. So choice (b) is correct.
+<a href="/laminar-v-turbulent.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+<!-- ################ SECTION MRFLOW, QUIZ QUESTION  11############## -->
+
+<li style="margin-top: 8px"> Which one of the following flow-related phenomena is considered a time-of-flight (TOF) effect?
+<ol type="a" id="q_MRFLOW_10">
+<li id="correct_MRFLOW_10"><input type=radio name="c_MRFLOW_10" id="c_MRFLOW_10"> High intravascular signal in an entry slice.
+</li>
+
+<li ><input type=radio name="c_MRFLOW_10" > Signal loss due to in-plane flow within an imaging gradient.
+</li>
+		
+<li ><input type=radio name="c_MRFLOW_10" > Signal loss due to turbulent flow in an aneurysm.
+</li>
+
+		
+<li ><input type=radio name="c_MRFLOW_10" >  High signal in a vessel due to gradient moment nulling.
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_MRFLOW_10" onclick="showAnswer('MRFLOW_10')" value="Show Answer"></p>
+				
+<p class="explan" id="a_MRFLOW_10"> Time-of-flight (TOF) effects refer to signal variations resulting from the motion of protons flowing into or out of an imaging volume during a given pulse sequence. High intravascular signal in an entry slice (choice a) is a type of TOF known as flow-related enhancement. The other choices are all spin-phase effects.
+<a href="/time-of-flight-effects.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+		
+
+
+
+
+
+<!-- ################ SECTION MRFLOW, QUIZ QUESTION  12############## -->
+
+<li style="margin-top: 8px">TEXTFORquestion12<ol type="a" id="q_MRFLOW_11">
+
+<li ><input type=radio name="c_MRFLOW_11" > Increase in flowing spin phases as they pass into an imaged slab.
+</li>
+		
+
+<li id="correct_MRFLOW_11"><input type=radio name="c_MRFLOW_11" id="c_MRFLOW_11"> Partial saturation of the imaged slab by repetitive short TR pulses.
+</li>
+		
+<li ><input type=radio name="c_MRFLOW_11" >  Hyperpolarization of inflowing spins.
+</li>
+<li ><input type=radio name="c_MRFLOW_11" > Combined effect of 90° and 180° pulses on the flowing spins
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_MRFLOW_11" onclick="showAnswer('MRFLOW_11')" value="Show Answer"></p>
+				
+<p class="explan" id="a_MRFLOW_11"> The correct answer is (b). "Fresh" blood flowing into the imaged slab has not been subjected to these RF-pulses and is therefore fully magnetized (unsaturated, but not hyperpolarized).  When a bolus of this fresh blood enters a slice and is subjected to its first set of RF-pulses, its signal is significantly stronger than that of the tissues (and other blood) within the slab.
+
+<a href="/time-of-flight-effects.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+<!-- ################ SECTION MRFLOW, QUIZ QUESTION  13############## -->
+
+<li style="margin-top: 8px"> Which statement concerning high-velocity signal loss (“washout”) is incorrect?
+<ol type="a" id="q_MRFLOW_12">
+
+<li ><input type=radio name="c_MRFLOW_12" > High-velocity signal loss is considered a time-of-flight effect.
+</li>
+		
+<li ><input type=radio name="c_MRFLOW_12" > It is typically seen in arteries and larger veins flowing perpendicular to the plane of imaging.
+</li>
+
+<li id="correct_MRFLOW_12"><input type=radio name="c_MRFLOW_12" id="c_MRFLOW_12"> It is seen primarily in gradient echo imaging sequences.
+</li>
+		
+<li ><input type=radio name="c_MRFLOW_12" >  It can occur anywhere in the imaging slab and is not confined to the end slices.
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_MRFLOW_12" onclick="showAnswer('MRFLOW_12')" value="Show Answer"></p>
+				
+<p class="explan" id="a_MRFLOW_12"> Answer (c) is incorrect. High-velocity signal loss is typically seen on spin-echo sequences where flowing blood must receive both 90° and 180° pulses to generate a signal.  Gradient echo sequences use single RF-pulses with gradient refocusing. 
+<a href="/time-of-flight-effects.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION MRFLOW, QUIZ QUESTION  14############## -->
+
+<li style="margin-top: 8px"> The total phase gained by a proton moving for time (t) at constant velocity (v) through a constant gradient of strength (G) is proportional to <ol type="a" id="q_MRFLOW_13">
+
+<li ><input type=radio name="c_MRFLOW_13" > t
+</li>
+		
+
+<li id="correct_MRFLOW_13"><input type=radio name="c_MRFLOW_13" id="c_MRFLOW_13"> t²</li>
+<li ><input type=radio name="c_MRFLOW_13" > v²</li>
+		
+<li ><input type=radio name="c_MRFLOW_13" >  G²
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_MRFLOW_13" onclick="showAnswer('MRFLOW_13')" value="Show Answer"></p>
+				
+<p class="explan" id="a_MRFLOW_13"> The phase shift experienced by a moving spin will be proportional to its velocity, the strength of the applied gradient, and the <u>square</u> of the length of time it moves within that gradient.
+<a href="/spin-phase-effects.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION MRFLOW, QUIZ QUESTION  15############## -->
+
+<li style="margin-top: 8px"> A radiologist interpreting a head MRI in a patient with suspected stroke dictates: “A flow-void is noted in the basilar artery.” What does this mean?
+<ol type="a" id="q_MRFLOW_14">
+
+<li ><input type=radio name="c_MRFLOW_14" > No blood flow is present in the basilar artery.
+</li>
+		
+<li ><input type=radio name="c_MRFLOW_14" > Some flow in the basilar artery may be present, but it is very weak.
+</li>
+
+<li id="correct_MRFLOW_14"><input type=radio name="c_MRFLOW_14" id="c_MRFLOW_14"> The basilar artery contains flowing blood.
+</li>
+		
+<li ><input type=radio name="c_MRFLOW_14" >  A thrombus is present in the basilar artery.
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_MRFLOW_14" onclick="showAnswer('MRFLOW_14')" value="Show Answer"></p>
+				
+<p class="explan" id="a_MRFLOW_14">“Flow void” is a widely used term referring to low signal in vessels that contain vigorously flowing blood, and is due to a combination of time-of-flight and spin-phase effects. Although most specialists are familiar with this term, it has the potential for confusion among less sophisticated members of the health care team, who may falsely interpret it to mean absence of flow.
+
+<a href="/flow-void.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+<!-- ################ SECTION MRFLOW, QUIZ QUESTION 16############## -->
+
+<li style="margin-top: 8px"> Which of the following statements is <u>not</u> a reason gradient echo sequences can be used to preserve or accentuate signal from flowing blood?
+
+<ol type="a" id="q_MRFLOW_15">
+<li id="correct_MRFLOW_15"><input type=radio name="c_MRFLOW_15" id="c_MRFLOW_15"> Gradient refocusing of spins is slice-selective.
+</li>
+
+<li ><input type=radio name="c_MRFLOW_15" > Relatively short echo times possible with GRE minimize T2* dephasing.
+</li>
+		
+<li ><input type=radio name="c_MRFLOW_15" > Sequential mode acquisition with GRE  makes every slice an “entry slice” with flow-related enhancement.
+</li>
+
+		
+<li ><input type=radio name="c_MRFLOW_15" >  Moderate-to-large flip angles with GRE saturate stationary tissue and accentuate T2/T1 contrast of blood.
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_MRFLOW_15" onclick="showAnswer('MRFLOW_15')" value="Show Answer"></p>
+				
+<p class="explan" id="a_MRFLOW_15"> All are true except (a). In routine SE imaging, at least part of the reason for flow-related signal loss is that spins move out of the section between the 90°- and 180°-(refocusing)-pulses.  In GRE imaging the refocusing is done by means of a gradient reversal that is <u>not</u> slice-selective.  This nonselective refocusing does not result in hyperintensity of incoming spins, however; it merely prevents them from experiencing TOF signal losses.
+<a href="/why-gre-uarr-flow-signal.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION MRFLOW, QUIZ QUESTION  17############## -->
+
+<li style="margin-top: 8px"> Which of the following is <u>not</u> a limitation of the flow compensation (gradient-moment nulling) technique?
+<ol type="a" id="q_MRFLOW_16">
+
+<li ><input type=radio name="c_MRFLOW_16" > Increased minimum TE
+</li>
+		
+
+<li id="correct_MRFLOW_16"><input type=radio name="c_MRFLOW_16" id="c_MRFLOW_16"> Increased energy deposition (SAR)
+
+</li>
+<li ><input type=radio name="c_MRFLOW_16" > Inability to correct for nonconstant velocities or acceleration
+</li>
+		
+<li ><input type=radio name="c_MRFLOW_16" >  Increased stress on gradients
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_MRFLOW_16" onclick="showAnswer('MRFLOW_16')" value="Show Answer"></p>
+				
+<p class="explan" id="a_MRFLOW_16"> All are true except (b). No extra RF pulses are used, just additional gradient lobes, so no additional energy is deposited by GMN.
+<a href="/flow-compensation.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+<!-- ################ SECTION MRFLOW, QUIZ QUESTION  18############## -->
+
+<li style="margin-top: 8px"> In which situation would refocused misregistered flow signal most likely to be observed?
+<ol type="a" id="q_MRFLOW_17">
+
+<li ><input type=radio name="c_MRFLOW_17" > In a vessel running parallel to the phase-encode axis.
+</li>
+		
+<li ><input type=radio name="c_MRFLOW_17" > In a vessel running perpendicular to the phase-encode axis.
+</li>
+<li ><input type=radio name="c_MRFLOW_17" >  In sequences with very short TE values.
+</li>
+
+<li id="correct_MRFLOW_17"><input type=radio name="c_MRFLOW_17" id="c_MRFLOW_17"> In sequences where flow compensation (gradient-moment nulling) is used.
+</li>
+		
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_MRFLOW_17" onclick="showAnswer('MRFLOW_17')" value="Show Answer"></p>
+				
+<p class="explan" id="a_MRFLOW_17"> Flow misregistration is most commonly seen for in-plane vessels running obliquely to the frequency and phase-encoding axes with long TE’s and the use of gradient-moment nulling.
+So (d) is the correct answer.
+<a href="/flow-misregistration.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+		
+
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--##################################################-->
+<!--############SCORING SECTION Needs to go at end of each subsection-->
+
+</ol><p><input type=button id="show_all_MRFLOW" onclick="showAllAnswers('MRFLOW')" value="Show All Answers for Section"><span style="font-weight: bold" id="scoretxt_MRFLOW"></span></p>
+<p><a href="#top">Back to top of page</a></p></div>
+<!--END OF SCORING SECTION-->
+
+
+
+</div>
+
+
+
+</div>
+
+<div><div id="214798419980735220" align="left" style="width: 100%; overflow-y: hidden;" class="wcustomhtml"><!-- ###############NEW QUIZ SUBSECTION ##################-->
+
+<hr style="1px solid black">
+<!-- Creates optional line above new Quiz Subsection Title ---->
+
+<h1 style="color:black";><a name="1"></a>MR Angiography - I</h1>
+
+<!-- The Section Name and its corresponding number (here 0) which has an href in the index must be changed/filled in.  Note that the first section is identified as “0” here only;  and the second section is denoted “2”, etc. 
+
+This is confusing because subsequently it is denoted as Section 1 and reference to all questions in this section begin with a 1.  However, the first question of Section 1 is called question 0, presumably to assist in scoring.
+
+Thus, the first question of Section 1 is denoted as q_1_0 and its second question is denoted q_1_1.	
+
+When a second section of Questions is added, this is called Section 2 with first and second questions denoted q_2_0 and q_2_1. 
+
+Each section has counting variables corresponding to each question. So the counting variables  are denoted c_1_0 for the Section 1/first question, while c_2_1 counts for Section 2/second question. -->
+
+<!-- FOR THE PURPOSES OF THIS DOCUMENT WE WILL CONSIDER ALL QUESTIONS TO REFER TO SECTION MRA-I and are numbered consecutively. THE WORD DOCUMENT CAN THEN BE PUT INTO PROPER FORM BY “SEARCH AND REPLACE MRA-I BY THE APPROPRIATE SECTION NUMBER”-->
+
+
+<!-- ################ SECTION M, QUIZ QUESTION  1############## -->
+
+<ol><li style="margin-top: 8px"> Which of the following methods is considered a “dark blood” MRA technique?
+
+<ol type="a" id="q_MRA-I_0">
+
+<li ><input type=radio name="c_MRA-I_0" > Time-of-flight MRA
+</li>
+		
+<li ><input type=radio name="c_MRA-I_0" > Gadolinium-enhanced MRA
+</li>
+<li ><input type=radio name="c_MRA-I_0" > SSFP MRA
+</li>
+
+<li id="correct_MRA-I_0"><input type=radio name="c_MRA-I_0" id="c_MRA-I_0"> Susceptibility-weighted MRA
+</li>
+		
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_MRA-I_0" onclick="showAnswer('MRA-I_0')" value="Show Answer"></p>
+				
+<p class="explan" id="a_MRA-I_0"> Dark ("black") blood MRA techniques suppress signal from flowing blood while maintaining high signal in the surrounding stationary tissues, thus rendering the vessels black. Of those listed, only susceptibility-weighted MRA is a black blood technique.
+
+<a href="/mra-methods.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+
+<!-- ################ SECTION MRA-I, QUIZ QUESTION  2############## -->
+
+<li style="margin-top: 8px"> Which of the following methods is <u>not</u> a “bright blood” MRA technique?
+<ol type="a" id="q_MRA-I_1">
+
+<li ><input type=radio name="c_MRA-I_1" > Phase-contrast MRA
+</li>
+		
+
+<li id="correct_MRA-I_1"><input type=radio name="c_MRA-I_1" id="c_MRA-I_1"> Double inversion recovery MRA
+</li>
+<li ><input type=radio name="c_MRA-I_1" > Arterial spin-labeled MRA
+</li>
+		
+<li ><input type=radio name="c_MRA-I_1" >  Ferumoxytol-enhanced MRA
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_MRA-I_1" onclick="showAnswer('MRA-I_1')" value="Show Answer"></p>
+				
+<p class="explan" id="a_MRA-I_1"> Single, double, or even triple 180°-inversion pulses may be used to suppress the signal from blood and other tissues (such as fat or myocardium) based on their respective T1 values. Black blood IR methods are most commonly used for cardiac and vessel wall imaging.
+<a href="/mra-methods.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION MRA-I, QUIZ QUESTION  3############## -->
+
+<li style="margin-top: 8px"> Which of the following is <u>not</u> an advantage of dark-blood compared to bright-blood MRA techniques?
+<ol type="a" id="q_MRA-I_2">
+
+<li ><input type=radio name="c_MRA-I_2" > Less overestimation of stenosis
+</li>
+		
+<li ><input type=radio name="c_MRA-I_2" > Better delineation of vessel walls
+</li>
+
+<li id="correct_MRA-I_2"><input type=radio name="c_MRA-I_2" id="c_MRA-I_2"> Better sensitivity to low-flow states
+</li>
+		
+<li ><input type=radio name="c_MRA-I_2" >  Fewer pulsation artifacts
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_MRA-I_2" onclick="showAnswer('MRA-I_2')" value="Show Answer"></p>
+				
+<p class="explan" id="a_MRA-I_2"> Dark-blood MRA has some unique advantages compared to bright-blood techniques. Flow separation and turbulence, which cause unwanted signal losses and overestimation of stenoses on bright-blood MRA, paradoxically improve image quality on dark-blood MRA. Because intraluminal signal is suppressed, vessels containing "black blood" do not generate pulsation (ghosting) artifacts. Additionally, the lack of intraluminal signal allows the walls of vessels (or cardiac chambers) to be clearly delineated. For these reasons, dark-blood techniques are predominantly used in cardiac imaging and for evaluation of diseases of the vessel wall (atherosclerotic plaque and dissection). Although an excellent method for imaging high-flow vessels, dark-blood techniques are less sensitive to slower flow states. "Black" blood is difficult to separate from adjacent low-signal non-vascular structures, such as calcifications, cortical bone, and air.  
+<a href="/dark-vs-bright-blood.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION MRA-I, QUIZ QUESTION  4############## -->
+<li style="margin-top: 8px"> What is the purpose of the so-called “traveling sat” pulses in 2D-TOF MRA?
+<ol type="a" id="q_MRA-I_3">
+<li id="correct_MRA-I_3"><input type=radio name="c_MRA-I_3" id="c_MRA-I_3"> To reduce venous contamination
+</li>
+
+<li ><input type=radio name="c_MRA-I_3" > To maximize contrast between stationary tissues and blood
+</li>
+		
+<li ><input type=radio name="c_MRA-I_3" > To minimize signal losses from phase dispersion
+</li>
+
+		
+<li ><input type=radio name="c_MRA-I_3" >  To increase signal from inflowing spins
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_MRA-I_3" onclick="showAnswer('MRA-I_3')" value="Show Answer"></p>
+				
+<p class="explan" id="a_MRA-I_3"> These sat pulses are used to suppress venous signal that would normally flow into each slice.
+<a href="/2d-vs-3d-mra.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+
+
+
+ 
+<!-- ################ SECTION MRA-I, QUIZ QUESTION  5############## -->
+
+<li style="margin-top: 8px"> What is the purpose of using moderate-to-large flip angles (30°−60°) in 2D-TOF-MRA sequences?
+<ol type="a" id="q_MRA-I_4">
+
+<li ><input type=radio name="c_MRA-I_4" > To reduce venous contamination
+</li>
+		
+
+<li id="correct_MRA-I_4"><input type=radio name="c_MRA-I_4" id="c_MRA-I_4"> To maximize contrast between stationary tissues and blood
+</li>
+<li ><input type=radio name="c_MRA-I_4" > To minimize signal losses from phase dispersion
+</li>
+		
+<li ><input type=radio name="c_MRA-I_4" >  To increase signal from inflowing spins
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_MRA-I_4" onclick="showAnswer('MRA-I_4')" value="Show Answer"></p>
+				
+<p class="explan" id="a_MRA-I_4"> Larger flip angles produce more magnetic saturation of stationary tissues within the imaged volume, and thus maximize contrast with inflowing blood.
+<a href="/XXXhtml " target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION MRA-I, QUIZ QUESTION  6############## -->
+
+<li style="margin-top: 8px"> Concerning optimal parameter selection for TOF MRA sequences, which of the following statements is true?
+<ol type="a" id="q_MRA-I_5">
+
+<li ><input type=radio name="c_MRA-I_5" > TR should be very long to insure the greatest degree of inflow enhancement.
+</li>
+		
+<li ><input type=radio name="c_MRA-I_5" > TE should be very long to increase vascular signal from T2 effects.
+</li>
+
+<li id="correct_MRA-I_5"><input type=radio name="c_MRA-I_5" id="c_MRA-I_5"> Slice orientation should be perpendicular to the direction of flow.
+</li>
+		
+<li ><input type=radio name="c_MRA-I_5" >  Flip angle (α) should be very small to increase tissue saturation.
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_MRA-I_5" onclick="showAnswer('MRA-I_5')" value="Show Answer"></p>
+				
+<p class="explan" id="a_MRA-I_5"> Only (c) is true. The benefits of very long TR to improve inflow enhancement is offset by increased signal from background tissue.  TE should be short to reduce spin-phase losses. Flip angles should be moderate to large to decrease tissue from static tissues.
+
+<a href="/mra-parameters.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION MRA-I, QUIZ QUESTION  7############## -->
+
+<li style="margin-top: 8px"> Blood in an artery with mean velocity of 50 cm/s flows perpendicularly into a 2-cm-thick slice.  At what value of TR is flow-related enhancement maximized?
+<ol type="a" id="q_MRA-I_6">
+
+<li ><input type=radio name="c_MRA-I_6" > 10 ms
+</li>
+		
+<li ><input type=radio name="c_MRA-I_6" > 20 ms
+</li>
+<li ><input type=radio name="c_MRA-I_6" >  30 ms
+</li>
+
+<li id="correct_MRA-I_6"><input type=radio name="c_MRA-I_6" id="c_MRA-I_6"> 40 ms
+</li>
+		
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_MRA-I_6" onclick="showAnswer('MRA-I_6')" value="Show Answer"></p>
+				
+<p class="explan" id="a_MRA-I_6"> Maximum flow-related enhancement occurs when inflowing blood completely replaces that present in a given slice.  When flow is perpendicular to the slice, maximum enhancement occurs when V  ≥  d / TR, or equivalently, when TR  ≥  d /V.  For d = 2 cm and V = 50 cm/s, this means a TR  ≥ 2/50 s = 0.04 s = 40 ms
+<a href="/mra-parameters.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+	
+<!-- ################ SECTION MRA-I, QUIZ QUESTION  8############## -->
+
+<li style="margin-top: 8px"> Concerning magnetization-transfer enhanced MRA, which statement is false?
+<ol type="a" id="q_MRA-I_7">
+<li id="correct_MRA-I_7"><input type=radio name="c_MRA-I_7" id="c_MRA-I_7"> It is effective for both time-of-flight and phase-contrast MRA
+</li>
+
+<li ><input type=radio name="c_MRA-I_7" > It is effective for both non-contrast and contrast-enhanced MRA
+</li>
+		
+<li ><input type=radio name="c_MRA-I_7" > Small vessel detail is improved
+</li>
+
+		
+<li ><input type=radio name="c_MRA-I_7" >  Image acquisition time is slightly prolonged.
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_MRA-I_7" onclick="showAnswer('MRA-I_7')" value="Show Answer"></p>
+				
+<p class="explan" id="a_MRA-I_7"> MT-MRA is used only for TOF and contrast-enhanced MRA. It offers no benefit for PC-MRA.
+<a href="/magnetization-transfer.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION MRA-I, QUIZ QUESTION  9############## -->
+
+<li style="margin-top: 8px"> Concerning variable (ramped) pulses, which statement is true?
+<ol type="a" id="q_MRA-I_8">
+
+<li ><input type=radio name="c_MRA-I_8" > They are useful in both 2D and 3D TOF MRA.
+</li>
+		
+<li ><input type=radio name="c_MRA-I_8" > Their flip angles are designed to decrease linearly along the direction of flow.
+</li>
+
+<li id="correct_MRA-I_8"><input type=radio name="c_MRA-I_8" id="c_MRA-I_8"> They are designed to produce greater saturation of stationary tissues deep in the slab.
+</li>
+		
+<li ><input type=radio name="c_MRA-I_8" >  They are designed to increase the absolute signal of flowing blood deep in the slab.
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_MRA-I_8" onclick="showAnswer('MRA-I_8')" value="Show Answer"></p>
+				
+<p class="explan" id="a_MRA-I_8"> Variable (ramped) RF pulses address the progressive loss of MRA signal from vessels extending deep into a 3D-TOF slab. (They are not used for 2D TOF). The flip angle is designed to increase along the direction of flow, producing greater saturation of stationary tissues deep in the slab. (Answer c is correct).  They also suppress blood slightly, but not as much as stationary tissues.
+<a href="/ramped-flip-angle.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+<!-- ################ SECTION MRA-I, QUIZ QUESTION  10############## -->
+
+<li style="margin-top: 8px"> A common artifact seen with MOTSA MRA is called
+<ol type="a" id="q_MRA-I_9">
+<li id="correct_MRA-I_9"><input type=radio name="c_MRA-I_9" id="c_MRA-I_9"> The venetian blind artifact
+</li>
+		
+
+<li ><input type=radio name="c_MRA-I_9" > The stair-step artifact
+</li>
+		
+<li ><input type=radio name="c_MRA-I_9" > The velocity aliasing artifact
+</li>
+
+<li ><input type=radio name="c_MRA-I_9" >  The ringing (Maki) artifact
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_MRA-I_9" onclick="showAnswer('MRA-I_9')" value="Show Answer"></p>
+				
+<p class="explan" id="a_MRA-I_9"> Because each MOTSA slab is acquired at separate times, exact registration of position and signal intensity of adjacent slabs may not be possible. This gives rise to the so-called venetian blind artifacts characteristic of this technique.
+<a href="/motsa.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+<!-- ################ SECTION MRA-I, QUIZ QUESTION  11############## -->
+
+<li style="margin-top: 8px"> A common artifact seen with 2D-TOF MRA is called
+<ol type="a" id="q_MRA-I_10">
+
+<li ><input type=radio name="c_MRA-I_10" > The venetian blind artifact
+</li>
+<li id="correct_MRA-I_10"><input type=radio name="c_MRA-I_10" id="c_MRA-I_10"> The stair-step artifact
+</li>
+		
+<li ><input type=radio name="c_MRA-I_10" > The velocity aliasing artifact
+</li>
+
+		
+<li ><input type=radio name="c_MRA-I_10" >  The ringing (Maki) artifact
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_MRA-I_10" onclick="showAnswer('MRA-I_10')" value="Show Answer"></p>
+				
+<p class="explan" id="a_MRA-I_10"> The stair-step artifact is common on 2D-TOF MRA because patient motion between slices.
+<a href="/tof-mra-artifacts.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+		
+
+
+
+
+
+<!-- ################ SECTION MRA-I, QUIZ QUESTION  12############## -->
+
+<li style="margin-top: 8px"> In subclavian steal syndrome, the blood flow in one of the two vertebral arteries becomes reversed.  What will be the appearance of this reversed flow vertebral artery on a 2D-TOF MRA of the neck?
+<ol type="a" id="q_MRA-I_11">
+
+<li ><input type=radio name="c_MRA-I_11" > Its appearance will be identical to the contralateral (normally flowing) vertebral artery.
+</li>
+		
+<li ><input type=radio name="c_MRA-I_11" > It will appear paradoxically brighter than contralateral vertebral artery.
+</li>
+<li ><input type=radio name="c_MRA-I_11" >  It will appear slightly less bright than the contralateral vertebral artery.
+</li>
+
+
+<li id="correct_MRA-I_11"><input type=radio name="c_MRA-I_11" id="c_MRA-I_11"> It will be non-visualized, suggesting an occlusion.
+</li>
+		
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_MRA-I_11" onclick="showAnswer('MRA-I_11')" value="Show Answer"></p>
+				
+<p class="explan" id="a_MRA-I_11">2D-TOF sequences utilize traveling saturation pulses upstream from the imaged slice to eliminate venous contamination.  In the neck, these pulses effectively eliminate signal in the jugular and other deep veins, but will also eliminate signals from arterial flows whose directions have been reversed. So (d) is the correct answer.
+
+<a href="/tof-mra-artifacts.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+<!-- ################ SECTION MRA-I, QUIZ QUESTION  13############## -->
+
+<li style="margin-top: 8px"> Why might a phase-contrast (PC) MRA of the head be preferred over a TOF MRA in a patient with cerebral hemorrhage?
+<ol type="a" id="q_MRA-I_12">
+
+<li ><input type=radio name="c_MRA-I_12" > The spatial resolution of PC MRA is much higher.
+</li>
+		
+<li ><input type=radio name="c_MRA-I_12" > PC MRA has been shown to be more accurate in the detection of aneurysms.
+</li>
+
+<li id="correct_MRA-I_12"><input type=radio name="c_MRA-I_12" id="c_MRA-I_12"> T1-shine through of a hematoma does not affect PC MRA but may obscure TOF MRA.
+</li>
+		
+<li ><input type=radio name="c_MRA-I_12" >  The acquisition time of PC MRA is much shorter than equivalent TOF techniques.
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_MRA-I_12" onclick="showAnswer('MRA-I_12')" value="Show Answer"></p>
+				
+<p class="explan" id="a_MRA-I_12"> TOF MR angiographic images are displayed using a maximum intensity projection (MIP) algorithm. In addition to bright blood vessels, any other material with high signal intensity will "shine through" and "contaminate" the MIP image. Since underlying TOF MRA pulse sequences are T1-weighted, short T1 materials (hematoma, gadolinium, and fat) are primarily responsible for this phenomenon.  PC MRA, however, relies on phase shift differences due to motion, and does not suffer from shine-though. 
+<a href="/phase-contrast-mra.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION MRA-I, QUIZ QUESTION  14############## -->
+
+<li style="margin-top: 8px"> The underlying mechanism of phase-contrast MRA is based on
+<ol type="a" id="q_MRA-I_13">
+<li id="correct_MRA-I_13"><input type=radio name="c_MRA-I_13" id="c_MRA-I_13"> Bipolar flow-encoding gradients
+</li>
+
+<li ><input type=radio name="c_MRA-I_13" > Unipolar flow-encoding gradients
+</li>
+		
+<li ><input type=radio name="c_MRA-I_13" > RF-phase cycling between excitations
+</li>
+
+		
+<li ><input type=radio name="c_MRA-I_13" >  Use of a linear gradient with constant slope along the phase-encoding axis
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_MRA-I_13" onclick="showAnswer('MRA-I_13')" value="Show Answer"></p>
+				
+<p class="explan" id="a_MRA-I_13"> PC MRA utilizes bipolar gradients, applied along one or more directions along which flow information is desired.  A stationary spin subjected to such a gradient pair will experience no net phase shift, but a moving spin will have a net phase shift proportional to its velocity. 
+<a href="/phase-contrast-mra.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION MRA-I, QUIZ QUESTION  15############## -->
+
+<li style="margin-top: 8px"> The units of the VENC (velocity-encoding) parameter for PC MRA are
+<ol type="a" id="q_MRA-I_14">
+
+<li ><input type=radio name="c_MRA-I_14" > dimensionless
+</li>
+		
+
+<li id="correct_MRA-I_14"><input type=radio name="c_MRA-I_14" id="c_MRA-I_14"> cm/s
+</li>
+<li ><input type=radio name="c_MRA-I_14" > cm²/s
+</li>
+		
+<li ><input type=radio name="c_MRA-I_14" >  cm/s²
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_MRA-I_14" onclick="showAnswer('MRA-I_14')" value="Show Answer"></p>
+				
+<p class="explan" id="a_MRA-I_14"> VENC is a velocity, so the correct answer is (b), cm/s.
+<a href="/what-is-venc.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+<!-- ################ SECTION MRA-I, QUIZ QUESTION 16############## -->
+
+<li style="margin-top: 8px"> If the VENC in a PC MRA is set at 60 cm/s, the strength and duration of the bipolar gradients are adjusted so that blood flowing at 60 cm/s has a phase shift of
+
+<ol type="a" id="q_MRA-I_15">
+
+<li ><input type=radio name="c_MRA-I_15" > +60º
+</li>
+		
+<li ><input type=radio name="c_MRA-I_15" > +90º
+</li>
+
+<li id="correct_MRA-I_15"><input type=radio name="c_MRA-I_15" id="c_MRA-I_15"> +180º
+</li>
+		
+<li ><input type=radio name="c_MRA-I_15" >  +360º
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_MRA-I_15" onclick="showAnswer('MRA-I_15')" value="Show Answer"></p>
+				
+<p class="explan" id="a_MRA-I_15"> For a given VENC, the bipolar gradients are adjusted so blood velocities at this level are assigned a +180º phase shift.
+<a href="/what-is-venc.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION MRA-I, QUIZ QUESTION  17############## -->
+
+<li style="margin-top: 8px"> If the VENC is set to 50 cm/s, and the actual forward flow blood velocity is 75 cm/s, what velocity will be displayed on the PC MRA?
+<ol type="a" id="q_MRA-I_16">
+
+<li ><input type=radio name="c_MRA-I_16" > +50 cm/s
+</li>
+		
+<li ><input type=radio name="c_MRA-I_16" > +75 cm/s
+</li>
+<li ><input type=radio name="c_MRA-I_16" >  +25 cm/s
+</li>
+
+<li id="correct_MRA-I_16"><input type=radio name="c_MRA-I_16" id="c_MRA-I_16"> −25 cm/s
+</li>
+		
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_MRA-I_16" onclick="showAnswer('MRA-I_16')" value="Show Answer"></p>
+				
+<p class="explan" id="a_MRA-I_16"> If the chosen value of VENC is 50 cm/sec, the bipolar gradient is adjusted so that flows of +25 and +50 cm/sec are assigned a phases of +90° and +180° respectively. If the actual velocity is +75 cm/sec, this flow will be mapped to +270°, a value that cannot be distinguished from a phase shift of −90°. Instead of representing the +75-cm/sec flow as its actual velocity, the computer will assign it a flow of 25 cm/sec in the opposite direction! 
+
+<a href="/what-is-venc.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+<!-- ################ SECTION MRA-I, QUIZ QUESTION  18############## -->
+
+<li style="margin-top: 8px"> A PC MRA using bipolar gradients whose VENCs are properly set determines that velocities in the three cardinal directions are <i>v<sub>x</sub></i> = −52 cm/s,  <i>v<sub>y</sub></i> = +24 cm/s, and <i>v<sub>z</sub></i> = +72 cm/s.  When displayed as a magnitude (speed) image, the brightness of each voxel is proportional to
+
+<ol type="a" id="q_MRA-I_17">
+
+<li ><input type=radio name="c_MRA-I_17" > 148 cm/s
+</li>
+		
+
+<li id="correct_MRA-I_17"><input type=radio name="c_MRA-I_17" id="c_MRA-I_17"> 92 cm/s
+</li>
+<li ><input type=radio name="c_MRA-I_17" > 72 cm/s
+</li>
+		
+<li ><input type=radio name="c_MRA-I_17" >  44 cm/s
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_MRA-I_17" onclick="showAnswer('MRA-I_17')" value="Show Answer"></p>
+				
+<p class="explan" id="a_MRA-I_17"> By definition, speed = √{<i>v²<sub>x</sub></i> + <i>v²<sub>y</sub></i> + <i>v²<sub>z</sub></i>} = √{(−52)² + (+24)² + (+72)²} = √{8464} = 92 cm/s.
+
+<a href="/measuring-flow.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+		
+
+<!-- ################ SECTION MRA-I, QUIZ QUESTION  19############## -->
+
+<li style="margin-top: 8px"> Concerning the accuracy of PC-MRA velocity measurements compared to Doppler in medium to large vessels, the two measurements generally lie within what percentage of each other?
+
+<ol type="a" id="q_MRA-I_18">
+
+<li ><input type=radio name="c_MRA-I_18" > Less than 1%</li>
+		
+
+<li id="correct_MRA-I_18"><input type=radio name="c_MRA-I_18" id="c_MRA-I_18"> About 5% </li>
+<li ><input type=radio name="c_MRA-I_18" > 15% - 25%
+</li>
+		
+<li ><input type=radio name="c_MRA-I_18" >  More than 25%
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_MRA-I_18" onclick="showAnswer('MRA-I_18')" value="Show Answer"></p>
+				
+<p class="explan" id="a_MRA-I_18"> The two measurements are generally within about 5% of each other.
+<a href="/how-accurate.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+<!-- ################ SECTION MRA-I, QUIZ QUESTION  20############## -->
+
+<li style="margin-top: 8px"> Which of the following situations would velocity measurements by PC MRA be the most accurate?
+<ol type="a" id="q_MRA-I_19">
+<li id="correct_MRA-I_19"><input type=radio name="c_MRA-I_19" id="c_MRA-I_19"> Imaging plane perpendicular to the direction of flow
+</li>
+
+<li ><input type=radio name="c_MRA-I_19" > Pixel size close to the vessel diameter
+</li>
+		
+<li ><input type=radio name="c_MRA-I_19" > Turbulent flow
+</li>
+
+		
+<li ><input type=radio name="c_MRA-I_19" >  Sampling of great vessel flows using 8 frames per cardiac cycle.
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_MRA-I_19" onclick="showAnswer('MRA-I_19')" value="Show Answer"></p>
+				
+<p class="explan" id="a_MRA-I_19"> Measurement of flow velocities is most accurate when the vessel is perpendicular to the plane of imaging. When the pixel size exceeds one-third of the vessel diameter, significant partial volume effects may occur with underestimation of flow and peak velocities.  When velocities change suddenly in magnitude, direction, or both, as they do in turbulence, accuracy of flow measurements declines. If the data sampling rate throughout the cardiac cycle is too low, flow may not be measured at its peak value. For imaging the great vessels at least 16 frames per cardiac cycle should be sampled
+<a href="/how-accurate.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--##################################################-->
+<!--############SCORING SECTION Needs to go at end of each subsection-->
+
+</ol><p><input type=button id="show_all_MRA-I" onclick="showAllAnswers('MRA-I')" value="Show All Answers for Section"><span style="font-weight: bold" id="scoretxt_MRA-I"></span></p>
+<p><a href="#top">Back to top of page</a></p></div>
+<!--END OF SCORING SECTION-->
+
+
+
+</div>
+
+
+
+</div>
+
+<div><div id="581941841572872489" align="left" style="width: 100%; overflow-y: hidden;" class="wcustomhtml"><!-- ###############NEW QUIZ SUBSECTION ##################-->
+
+<hr style="1px solid black">
+<!-- Creates optional line above new Quiz Subsection Title ---->
+
+<h1 style="color:black";><a name="2"></a>MR Angiography - II</h1>
+
+<!-- The Section Name and its corresponding number (here 0) which has an href in the index must be changed/filled in.  Note that the first section is identified as “0” here only;  and the second section is denoted “2”, etc. 
+
+This is confusing because subsequently it is denoted as Section 1 and reference to all questions in this section begin with a 1.  However, the first question of Section 1 is called question 0, presumably to assist in scoring.
+
+Thus, the first question of Section 1 is denoted as q_1_0 and its second question is denoted q_1_1.	
+
+When a second section of Questions is added, this is called Section 2 with first and second questions denoted q_2_0 and q_2_1. 
+
+Each section has counting variables corresponding to each question. So the counting variables  are denoted c_1_0 for the Section 1/first question, while c_2_1 counts for Section 2/second question. -->
+
+<!-- FOR THE PURPOSES OF THIS DOCUMENT WE WILL CONSIDER ALL QUESTIONS TO REFER TO SECTION MRAIIQUIZ and are numbered consecutively. THE WORD DOCUMENT CAN THEN BE PUT INTO PROPER FORM BY “SEARCH AND REPLACE MRAIIQUIZ BY THE APPROPRIATE SECTION NUMBER”-->
+
+
+<!-- ################ SECTION M, QUIZ QUESTION  1############## -->
+
+<ol><li style="margin-top: 8px"> Which statement about Gated 3D-FSE MRA techniques is incorrect?
+
+<ol type="a" id="q_MRAIIQUIZ_0">
+
+<li ><input type=radio name="c_MRAIIQUIZ_0" > They can be gated either to the EKG or peripheral pulse.
+</li>
+		
+<li ><input type=radio name="c_MRAIIQUIZ_0" > Co-registered images are obtained in diastole and systole.
+</li>
+
+<li id="correct_MRAIIQUIZ_0"><input type=radio name="c_MRAIIQUIZ_0" id="c_MRAIIQUIZ_0"> Diastolic and systolic images are added together to produce the angiogram.
+</li>
+		
+<li ><input type=radio name="c_MRAIIQUIZ_0" > Image contrast is based on the long T2 of blood.
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_MRAIIQUIZ_0" onclick="showAnswer('MRAIIQUIZ_0')" value="Show Answer"></p>
+				
+<p class="explan" id="a_MRAIIQUIZ_0"> The sequence is cardiac gated either to the EKG or peripheral pulse. Co-registered images are obtained in diastole and systole.  During diastole, the signal in both arteries and veins is high reflecting the long T2 of blood. During systole, venous signal remains high but arterial signal drops due to flow-related signal loss. <u>Subtraction</u> (not addition) of the systolic from the diastolic images results in a pure arterial image.
+
+<a href="/gated-3d-fse-mra.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+
+<!-- ################ SECTION MRAIIQUIZ, QUIZ QUESTION  2############## -->
+
+<li style="margin-top: 8px"> Which of the following is <u>not</u> a disadvantage of 3D-FSE MRA?
+<ol type="a" id="q_MRAIIQUIZ_1">
+<li id="correct_MRAIIQUIZ_1"><input type=radio name="c_MRAIIQUIZ_1" id="c_MRAIIQUIZ_1"> Required use of gadolinium contrast.
+</li>
+
+<li ><input type=radio name="c_MRAIIQUIZ_1" > Overestimation of stenoses
+</li>
+		
+<li ><input type=radio name="c_MRAIIQUIZ_1" > Vascular pulsation artifacts
+</li>
+
+		
+<li ><input type=radio name="c_MRAIIQUIZ_1" >  Sensitivity to cardiac arrythmias
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_MRAIIQUIZ_1" onclick="showAnswer('MRAIIQUIZ_1')" value="Show Answer"></p>
+				
+<p class="explan" id="a_MRAIIQUIZ_1"> Option (a) is false. The main advantage of 3D-FSE MRA is that it does not require contrast, a property that may be important in patients with renal insufficiency (where receiving gadolinium might place them at risk for nerphogenic systemic fibrosis).
+<a href="/gated-3d-fse-mra.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION MRAIIQUIZ, QUIZ QUESTION  3############## -->
+
+<li style="margin-top: 8px"> Intravascular contrast in balanced steady-state free precssion (b-SSFP) MRA is primarily related to which property of blood?
+<ol type="a" id="q_MRAIIQUIZ_2">
+
+<li ><input type=radio name="c_MRAIIQUIZ_2" > High spin-density
+</li>
+		
+<li ><input type=radio name="c_MRAIIQUIZ_2" > Long T1
+</li>
+<li ><input type=radio name="c_MRAIIQUIZ_2" >  Long T2
+</li>
+
+<li id="correct_MRAIIQUIZ_2"><input type=radio name="c_MRAIIQUIZ_2" id="c_MRAIIQUIZ_2"> High T2/T1 ratio
+</li>
+		
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_MRAIIQUIZ_2" onclick="showAnswer('MRAIIQUIZ_2')" value="Show Answer"></p>
+				
+<p class="explan" id="a_MRAIIQUIZ_2"> b-SSFP MRA exploits the differences between the relatively high T2/T1 ratio of blood compared to most other tissues.
+<a href="/ssfp-mra.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION MRAIIQUIZ, QUIZ QUESTION  4############## -->
+<li style="margin-top: 8px"> What is the main reason b-SSFP MRA sequences are not routinely used in intracranial imaging?
+<ol type="a" id="q_MRAIIQUIZ_3">
+
+<li ><input type=radio name="c_MRAIIQUIZ_3" > Its spatial resolution is insufficient to resolve the major intracranial vessels.
+</li>
+		
+
+<li id="correct_MRAIIQUIZ_3"><input type=radio name="c_MRAIIQUIZ_3" id="c_MRAIIQUIZ_3"> The signal from intracranial vessels is obscured by high signal from nearby CSF.
+</li>
+<li ><input type=radio name="c_MRAIIQUIZ_3" > Intracranial vessels typically demonstrate turbulent flow which disrupts the SSFP.
+</li>
+		
+<li ><input type=radio name="c_MRAIIQUIZ_3" >  Susceptibility artifacts from the skull base produce troublesome zebra-stripe artifacts over most of the brain.
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_MRAIIQUIZ_3" onclick="showAnswer('MRAIIQUIZ_3')" value="Show Answer"></p>
+				
+<p class="explan" id="a_MRAIIQUIZ_3"> Like blood, CSF has a high T2/T1 ratio and so will appear bright on SSFP MRA sequences.  Since the arteries at the base of the brain are literally “bathed” in CSF, this is the main reason the sequences are not commonly used intracranially.
+<a href="/ssfp-mra.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+
+
+
+ 
+<!-- ################ SECTION MRAIIQUIZ, QUIZ QUESTION  5############## -->
+
+<li style="margin-top: 8px"> The purposes of the inversion pulse(s) used in inflow-enhanced, IR-prepped 3D-SSFP MRA include all of the following except
+<ol type="a" id="q_MRAIIQUIZ_4">
+
+<li ><input type=radio name="c_MRAIIQUIZ_4" > Nulling of signal from water-containing background tissue.
+</li>
+		
+<li ><input type=radio name="c_MRAIIQUIZ_4" > Nulling of signal from fat
+</li>
+<li ><input type=radio name="c_MRAIIQUIZ_4" >  Nulling of signal from venous blood
+</li>
+
+<li id="correct_MRAIIQUIZ_4"><input type=radio name="c_MRAIIQUIZ_4" id="c_MRAIIQUIZ_4"> Hyperpolarization of incoming arterial spins.
+</li>
+		
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_MRAIIQUIZ_4" onclick="showAnswer('MRAIIQUIZ_4')" value="Show Answer"></p>
+				
+<p class="explan" id="a_MRAIIQUIZ_4"> The inversion pulses allow arterial inflow to be <u>relatively</u> accentuated due to background and venous suppression, not because of hyperpolarization.
+<a href="/inflow-enhanced-ssfp.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION MRAIIQUIZ, QUIZ QUESTION  6############## -->
+
+<li style="margin-top: 8px">  
+What functions do the two inversion pulses perform in an arterial spin labeling (ASL)-prepped MRA?
+<ol type="a" id="q_MRAIIQUIZ_5">
+
+<li ><input type=radio name="c_MRAIIQUIZ_5" > The first suppresses water in the background and the second suppresses fat in the background.
+</li>
+		
+<li ><input type=radio name="c_MRAIIQUIZ_5" > The first nonselectively suppresses background and the second nulls venous signal. 
+</li>
+<li ><input type=radio name="c_MRAIIQUIZ_5" >  The first nonselectively tags inflowing spins and the second selectively suppresses background.
+</li>
+
+<li id="correct_MRAIIQUIZ_5"><input type=radio name="c_MRAIIQUIZ_5" id="c_MRAIIQUIZ_5"> The first nonselectively suppresses background and the second selectively tags inflowing spins.
+</li>
+		
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_MRAIIQUIZ_5" onclick="showAnswer('MRAIIQUIZ_5')" value="Show Answer"></p>
+				
+<p class="explan" id="a_MRAIIQUIZ_5"> The simplest form of MRA with ASL is called the Outflow Method. The sequence begins with two 180°-RF pulses applied in close succession. The first 180°-pulse is non-selective, meaning it inverts the entire background regardless of location. The second 180°-pulse is spatially-selective, applied to restore magnetization in the region from which the "fresh" blood will flow. During the inversion time (TI) interval, this fully magnetized ("fresh") blood will enter the anatomic area of interest. Signal generation is then initiated using either a 3D balanced-SSFP or FSE sequence to produce the MRA.
+
+<a href="/mra-with-asl.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION MRAIIQUIZ, QUIZ QUESTION  7############## -->
+
+<li style="margin-top: 8px"> Which of the following statements about the Quiescent-Interval Single-Shot (QISS) MRA is incorrect?
+<ol type="a" id="q_MRAIIQUIZ_6">
+<li id="correct_MRAIIQUIZ_6"><input type=radio name="c_MRAIIQUIZ_6" id="c_MRAIIQUIZ_6"> It does not require cardiac gating.
+</li>
+
+<li ><input type=radio name="c_MRAIIQUIZ_6" > It does not utilize gadolinium contrast.
+</li>
+		
+<li ><input type=radio name="c_MRAIIQUIZ_6" > It is primarily used for extremity MRA
+</li>
+
+		
+<li ><input type=radio name="c_MRAIIQUIZ_6" >  Unsaturated blood enters the imaged slice during the quiescent interval (QI)
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_MRAIIQUIZ_6" onclick="showAnswer('MRAIIQUIZ_6')" value="Show Answer"></p>
+				
+<p class="explan" id="a_MRAIIQUIZ_6"> QISS is a cardiac-gated, non-contrast inflow technique bearing some similarities to 2D time-of-flight (TOF) and inflow-enhanced SSFP MRA. It is especially designed for peripheral MRA. Fresh (fully magnetized/unsaturated) enters the slice during the quiescent interval, with arterial signal generated by a balanced-SSFP sequence.
+
+<a href="/other-mra-methods.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+	
+<!-- ################ SECTION MRAIIQUIZ, QUIZ QUESTION  8############## -->
+
+<li style="margin-top: 8px"> Which of the following statements about contrast-enhanced (CE)-MRA is false?
+<ol type="a" id="q_MRAIIQUIZ_7">
+
+<li ><input type=radio name="c_MRAIIQUIZ_7" > If scanning is performed too early after injection, inadequate vascular visualization may result.
+</li>
+		
+<li ><input type=radio name="c_MRAIIQUIZ_7" > Scanning performed too late after injection may result in venous contamination.
+</li>
+
+<li id="correct_MRAIIQUIZ_7"><input type=radio name="c_MRAIIQUIZ_7" id="c_MRAIIQUIZ_7"> If you incorrectly time the bolus on the first acquisition, you can wait 10 minutes and repeat the injection.
+</li>
+		
+<li ><input type=radio name="c_MRAIIQUIZ_7" >  Signal generation is typically performed using a 3D T1-weighted spoiled gradient echo sequence with short TR and TE.
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_MRAIIQUIZ_7" onclick="showAnswer('MRAIIQUIZ_7')" value="Show Answer"></p>
+				
+<p class="explan" id="a_MRAIIQUIZ_7"> Ideally, CE-MRA should be performed when the contrast agent arrives in the vessel at or near its peak concentration. To early and you don’t see the vessel; too late and you may get venous contamination.  You only get one chance to get it right and cannot repeat the sequence until the next day or two when the gadolinium clears out of the system.
+<a href="/contrast-enhanced-mra.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION MRAIIQUIZ, QUIZ QUESTION  9############## -->
+
+<li style="margin-top: 8px"> What is fluoroscopic triggering for MRA?
+<ol type="a" id="q_MRAIIQUIZ_8">
+
+<li ><input type=radio name="c_MRAIIQUIZ_8" > A method that uses information from an x-ray fluoroscope to assist in timing of the gadolinium bolus.
+</li>
+		
+<li ><input type=radio name="c_MRAIIQUIZ_8" > A method to estimate timing of arrival of a small (1-2 ml) test bolus of gadolinium.
+</li>
+<li ><input type=radio name="c_MRAIIQUIZ_8" >  A 3D-phase contrast method to estimate the distribution of contrast throughout the entire imaging volume.
+</li>
+
+<li id="correct_MRAIIQUIZ_8"><input type=radio name="c_MRAIIQUIZ_8" id="c_MRAIIQUIZ_8"> A method providing a “fluoroscopic-like” MR image during transit of a full contrast bolus at which time the MRA acquisition can begin.
+</li>
+		
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_MRAIIQUIZ_8" onclick="showAnswer('MRAIIQUIZ_8')" value="Show Answer"></p>
+				
+<p class="explan" id="a_MRAIIQUIZ_8"> In fluoroscopic triggering the full bolus of contrast (~20 mL) is administered while a fluoroscopic-like picture of the artery of interest is acquired using a rapid 2D gradient-echo technique. The technologist can then initiate MRA acquisition or the triggering can be done automatically.
+<a href="/timing-the-bolus.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+<!-- ################ SECTION MRAIIQUIZ, QUIZ QUESTION  10############## -->
+
+<li style="margin-top: 8px"> The preferred k-space sampling method used for most 3D-CE-MRA sequences is called
+<ol type="a" id="q_MRAIIQUIZ_9">
+<li id="correct_MRAIIQUIZ_9"><input type=radio name="c_MRAIIQUIZ_9" id="c_MRAIIQUIZ_9"> Elliptical-centric ordering
+</li>
+
+<li ><input type=radio name="c_MRAIIQUIZ_9" > Linear ordering
+</li>
+		
+<li ><input type=radio name="c_MRAIIQUIZ_9" > Sequential ordering
+</li>
+
+		
+<li ><input type=radio name="c_MRAIIQUIZ_9" >  Stochastic ordering
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_MRAIIQUIZ_9" onclick="showAnswer('MRAIIQUIZ_9')" value="Show Answer"></p>
+				
+<p class="explan" id="a_MRAIIQUIZ_9"> Elliptical-centric ordering is now the preferred k-space sampling method used for most CE-MRA examinations. Linear methods may still be used on older equipment and for MRA of the distal extremities where arrival of the contrast bolus may be prolonged or its exact timing difficult to predict.
+<a href="/view-ordering-in-mra.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+<!-- ################ SECTION MRAIIQUIZ, QUIZ QUESTION  11############## -->
+
+<li style="margin-top: 8px"> What type of k-space sampling is used in modern time-resolved MRA sequences like TRICKS and TWIST?
+<ol type="a" id="q_MRAIIQUIZ_10">
+
+<li ><input type=radio name="c_MRAIIQUIZ_10" > Zig-zag
+</li>
+		
+<li ><input type=radio name="c_MRAIIQUIZ_10" > Cartesian
+</li>
+
+<li id="correct_MRAIIQUIZ_10"><input type=radio name="c_MRAIIQUIZ_10" id="c_MRAIIQUIZ_10"> Radial
+</li>
+		
+<li ><input type=radio name="c_MRAIIQUIZ_10" >  Spiral
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_MRAIIQUIZ_10" onclick="showAnswer('MRAIIQUIZ_10')" value="Show Answer"></p>
+				
+<p class="explan" id="a_MRAIIQUIZ_10"> Modern time-resolved MRA techniques typically use radial sampling schemes, acquiring 3D k-space in segmented round or oval "cylinders". 
+
+<a href="/tricks-or-twist.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+		
+
+
+
+
+
+<!-- ################ SECTION MRAIIQUIZ, QUIZ QUESTION  12############## -->
+
+<li style="margin-top: 8px"> Which technical component is <u>not</u> a feature used in modern time-resolved MRA sequences like TRICKS and TWIST?
+<ol type="a" id="q_MRAIIQUIZ_11">
+<li id="correct_MRAIIQUIZ_11"><input type=radio name="c_MRAIIQUIZ_11" id="c_MRAIIQUIZ_11"> 3D-SSFP acquisition
+</li>
+
+<li ><input type=radio name="c_MRAIIQUIZ_11" > Both phase- and read-conjugate symmetry
+</li>
+		
+<li ><input type=radio name="c_MRAIIQUIZ_11" > Elliptical-centric ordering 
+</li>
+
+		
+<li ><input type=radio name="c_MRAIIQUIZ_11" >  Parallel imaging 
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_MRAIIQUIZ_11" onclick="showAnswer('MRAIIQUIZ_11')" value="Show Answer"></p>
+				
+<p class="explan" id="a_MRAIIQUIZ_11"> Option (a) is incorrect. Time-resolved MRA methods have at their core a <i>3D-spoiled GRE sequence</i> with thin slices, very short TRs and TEs, low flip angles, use of both read- and phase-conjugate symmetry, parallel imaging acquisition, and zero-interpolation filling in the slice direction.
+<a href="/tricks-or-twist.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+<!-- ################ SECTION MRAIIQUIZ, QUIZ QUESTION  13############## -->
+
+<li style="margin-top: 8px"> What causes the subclavian artery “pseudo-stenosis” artifact on CE-MRA?
+<ol type="a" id="q_MRAIIQUIZ_12">
+
+<li ><input type=radio name="c_MRAIIQUIZ_12" > Compression of the subclavian artery by the subclavian vein
+</li>
+		
+
+<li id="correct_MRAIIQUIZ_12"><input type=radio name="c_MRAIIQUIZ_12" id="c_MRAIIQUIZ_12"> Susceptibility effects due to residual gadolinium in the subclavian vein
+</li>
+<li ><input type=radio name="c_MRAIIQUIZ_12" > Turbulence at its junction with the axillary artery
+</li>
+		
+<li ><input type=radio name="c_MRAIIQUIZ_12" >  Reflux due to retrograde flow from the vertebral artery into the subclavian artery
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_MRAIIQUIZ_12" onclick="showAnswer('MRAIIQUIZ_12')" value="Show Answer"></p>
+				
+<p class="explan" id="a_MRAIIQUIZ_12"> A focal irregularity in the subclavian artery mimicking stenosis may occur ipsilateral to the side of contrast injection. This is a susceptibility (T2*) effect due to residual gadolinium in the adjacent subclavian vein, more commonly seen on the left side than right.
+<a href="/ce-mra-artifacts.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION MRAIIQUIZ, QUIZ QUESTION  14############## -->
+
+<li style="margin-top: 8px">What is the cause of the ringing (Maki) artifact on CE-MRA?<ol type="a" id="q_MRAIIQUIZ_13">
+
+<li ><input type=radio name="c_MRAIIQUIZ_13" > Gibbs (truncation) phenomenon
+</li>
+		
+
+<li id="correct_MRAIIQUIZ_13"><input type=radio name="c_MRAIIQUIZ_13" id="c_MRAIIQUIZ_13"> Central region of k-space scanned before arrival of the contrast bolus
+</li>
+<li ><input type=radio name="c_MRAIIQUIZ_13" > Central region of k-space scanned too long after arrival of contrast bolus
+</li>
+		
+<li ><input type=radio name="c_MRAIIQUIZ_13" >  Vascular pulsation
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_MRAIIQUIZ_13" onclick="showAnswer('MRAIIQUIZ_13')" value="Show Answer"></p>
+				
+<p class="explan" id="a_MRAIIQUIZ_13"> If the central region of k-space is scanned before arrival of the contrast bolus, the vessel will appear dark in the middle, with only its edges demonstrating enhancement.  Scanning too early produces this artifact originally described by Maki et al.
+<a href="/ce-mra-artifacts.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--##################################################-->
+<!--############SCORING SECTION Needs to go at end of each subsection-->
+
+</ol><p><input type=button id="show_all_MRAIIQUIZ" onclick="showAllAnswers('MRAIIQUIZ')" value="Show All Answers for Section"><span style="font-weight: bold" id="scoretxt_MRAIIQUIZ"></span></p>
+<p><a href="#top">Back to top of page</a></p></div>
+<!--END OF SCORING SECTION-->
+
+
+
+</div>
+
+
+
+
+<div><div id="625166095781768274" align="left" style="width: 100%; overflow-y: hidden;" class="wcustomhtml"><!-- ###############NEW QUIZ SUBSECTION ##################-->
+
+<hr style="1px solid black">
+<!-- Creates optional line above new Quiz Subsection Title ---->
+
+<h1 style="color:black";><a name="3"></a>Cardiac MRI - Anatomy</h1>
+
+<!-- The Section Name and its corresponding number (here 0) which has an href in the index must be changed/filled in.  Note that the first section is identified as “0” here only;  and the second section is denoted “2”, etc. 
+
+This is confusing because subsequently it is denoted as Section 1 and reference to all questions in this section begin with a 1.  However, the first question of Section 1 is called question 0, presumably to assist in scoring.
+
+Thus, the first question of Section 1 is denoted as q_1_0 and its second question is denoted q_1_1.	
+
+When a second section of Questions is added, this is called Section 2 with first and second questions denoted q_2_0 and q_2_1. 
+
+Each section has counting variables corresponding to each question. So the counting variables  are denoted c_1_0 for the Section 1/first question, while c_2_1 counts for Section 2/second question. -->
+
+<!-- FOR THE PURPOSES OF THIS DOCUMENT WE WILL CONSIDER ALL QUESTIONS TO REFER TO SECTION CARDIAC1 and are numbered consecutively. THE WORD DOCUMENT CAN THEN BE PUT INTO PROPER FORM BY “SEARCH AND REPLACE CARDIAC1 BY THE APPROPRIATE SECTION NUMBER”-->
+
+
+<!-- ################ SECTION M, QUIZ QUESTION  1############## -->
+
+<ol><li style="margin-top: 8px"> Which cardiac chambers are typically imaged on the short-axis view?
+<ol type="a" id="q_CARDIAC1_0">
+
+<li ><input type=radio name="c_CARDIAC1_0" > RA and RV
+</li>
+		
+<li ><input type=radio name="c_CARDIAC1_0" > RA and LA
+</li>
+<li ><input type=radio name="c_CARDIAC1_0" > LA and LV
+</li>
+
+<li id="correct_CARDIAC1_0"><input type=radio name="c_CARDIAC1_0" id="c_CARDIAC1_0"> RV and LV
+</li>
+		
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_CARDIAC1_0" onclick="showAnswer('CARDIAC1_0')" value="Show Answer"></p>
+				
+<p class="explan" id="a_CARDIAC1_0"> The short axis view is typically used to show the left and right ventricles.
+<a href="/cardiac-protocols.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+
+<!-- ################ SECTION CARDIAC1, QUIZ QUESTION  2############## -->
+
+<li style="margin-top: 8px"> What structure is optimally displayed on the so-called “candy-cane” view?
+<ol type="a" id="q_CARDIAC1_1">
+<li id="correct_CARDIAC1_1"><input type=radio name="c_CARDIAC1_1" id="c_CARDIAC1_1"> Thoracic aorta
+</li>
+
+<li ><input type=radio name="c_CARDIAC1_1" > Circumflex artery
+</li>
+		
+<li ><input type=radio name="c_CARDIAC1_1" > Left main coronary artery
+</li>
+
+		
+<li ><input type=radio name="c_CARDIAC1_1" >  Right coronary artery
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_CARDIAC1_1" onclick="showAnswer('CARDIAC1_1')" value="Show Answer"></p>
+				
+<p class="explan" id="a_CARDIAC1_1"> The candy-cane view is an oblique sagittal section that lays out the ascending, transverse, and descending thoracic aorta and its proximal branches.
+
+<a href="/cardiac-protocols.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION CARDIAC1, QUIZ QUESTION  3############## -->
+
+<li style="margin-top: 8px"> Why might one wish to start two IV’s prior to MRI if stress testing is being performed?
+<ol type="a" id="q_CARDIAC1_2">
+
+<li ><input type=radio name="c_CARDIAC1_2" > The second serves as backup in case the first IV fails.
+</li>
+		
+<li ><input type=radio name="c_CARDIAC1_2" > The total amount of fluid and medications required during the exam exceed the capacity of a single average-bore IV.
+</li>
+
+<li id="correct_CARDIAC1_2"><input type=radio name="c_CARDIAC1_2" id="c_CARDIAC1_2"> Gadolinium contrast and adenosine cannot be given through the same line.
+</li>
+		
+<li ><input type=radio name="c_CARDIAC1_2" >  The second IV is needed for blood sampling during the exam.
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_CARDIAC1_2" onclick="showAnswer('CARDIAC1_2')" value="Show Answer"></p>
+				
+<p class="explan" id="a_CARDIAC1_2"> Gadolinium and adenosine cannot be given through the same line, so two separate IVs are required. Separate lines are optional if regadenoson or dobutamine are used.
+
+
+<a href="/patient-prep.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION CARDIAC1, QUIZ QUESTION  4############## -->
+<li style="margin-top: 8px"> Which of the following foods and medications should be discontinued at least 12-24 hours before a stress MRI?
+<ol type="a" id="q_CARDIAC1_3">
+
+<li ><input type=radio name="c_CARDIAC1_3" > Nitroglycerin
+</li>
+		
+<li ><input type=radio name="c_CARDIAC1_3" > Calcium-channel blockers
+</li>
+
+<li id="correct_CARDIAC1_3"><input type=radio name="c_CARDIAC1_3" id="c_CARDIAC1_3"> Caffeinated beverages 
+</li>
+		
+<li ><input type=radio name="c_CARDIAC1_3" >  Quinidine
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_CARDIAC1_3" onclick="showAnswer('CARDIAC1_3')" value="Show Answer"></p>
+				
+<p class="explan" id="a_CARDIAC1_3"> Patients should be advised not to consume stimulants such as coffee, tea, caffeinated sodas, energy drinks, and chocolate within 12-24 hours of the scan.  These can interfere with the efficacy of the pharmacological stress testing and interpretation of the examination. 
+<a href="/patient-prep.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+
+
+
+ 
+<!-- ################ SECTION CARDIAC1, QUIZ QUESTION  5############## -->
+
+<li style="margin-top: 8px"> What is the most common EKG change noted when a patient is placed in an MRI?
+<ol type="a" id="q_CARDIAC1_4">
+
+<li ><input type=radio name="c_CARDIAC1_4" > Reduction of the R-wave
+</li>
+		
+<li ><input type=radio name="c_CARDIAC1_4" > Inversion of the R-wave
+</li>
+
+<li id="correct_CARDIAC1_4"><input type=radio name="c_CARDIAC1_4" id="c_CARDIAC1_4"> Elevation of the T-wave
+</li>
+		
+<li ><input type=radio name="c_CARDIAC1_4" >  ST-segment elevation
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_CARDIAC1_4" onclick="showAnswer('CARDIAC1_4')" value="Show Answer"></p>
+				
+<p class="explan" id="a_CARDIAC1_4"> Although all the above phenomena can occur, elevation of the T-wave is most frequently observed. This elevation may be so marked that the T-wave actually becomes larger than the QRS-complex. 
+<a href="/magnet-changes-ekg.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION CARDIAC1, QUIZ QUESTION  6############## -->
+
+<li style="margin-top: 8px"> What is the cause of the EKG changes described above?
+<ol type="a" id="q_CARDIAC1_5">
+<li id="correct_CARDIAC1_5"><input type=radio name="c_CARDIAC1_5" id="c_CARDIAC1_5"> Ionic currents induced by thoracic blood flow
+</li>
+
+<li ><input type=radio name="c_CARDIAC1_5" > Susceptibility effects
+</li>
+		
+<li ><input type=radio name="c_CARDIAC1_5" > Stimulation of accessory cardiac conduction pathways
+</li>
+
+		
+<li ><input type=radio name="c_CARDIAC1_5" >  Induced currents in the EKG leads
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_CARDIAC1_5" onclick="showAnswer('CARDIAC1_5')" value="Show Answer"></p>
+				
+<p class="explan" id="a_CARDIAC1_5"> This magnetic field effect on the EKG does not originate in the heart itself, but represents a superimposed voltage within blood in the descending thoracic aorta which has been induced by its flow in the magnetic field.  The induction of a voltage in a conductive fluid flowing through a magnetic field is called the magnetohydrodynamic (MHD) effect.
+<a href="/magnet-changes-ekg.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION CARDIAC1, QUIZ QUESTION  7############## -->
+
+<li style="margin-top: 8px"> Which EKG wave is primarily used for cardiac triggering?
+<ol type="a" id="q_CARDIAC1_6">
+
+<li ><input type=radio name="c_CARDIAC1_6" > P-wave
+</li>
+		
+<li ><input type=radio name="c_CARDIAC1_6" > Q-wave
+</li>
+
+<li id="correct_CARDIAC1_6"><input type=radio name="c_CARDIAC1_6" id="c_CARDIAC1_6"> R-wave
+</li>
+		
+<li ><input type=radio name="c_CARDIAC1_6" >  T-wave
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_CARDIAC1_6" onclick="showAnswer('CARDIAC1_6')" value="Show Answer"></p>
+				
+<p class="explan" id="a_CARDIAC1_6"> Cardiac gating is typically performed using detection of the R-wave since this is usually the most prominent feature of the EKG. The R-wave coincides with the beginning of ventricular systole.
+<a href="/gating-v-triggering.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+	
+<!-- ################ SECTION CARDIAC1, QUIZ QUESTION  8############## -->
+
+<li style="margin-top: 8px"> The R-wave corresponds to what cardiac event?
+<ol type="a" id="q_CARDIAC1_7">
+
+<li ><input type=radio name="c_CARDIAC1_7" > Beginning of atrial contraction
+</li>
+		
+
+<li id="correct_CARDIAC1_7"><input type=radio name="c_CARDIAC1_7" id="c_CARDIAC1_7"> Beginning of ventricular systole
+</li>
+<li ><input type=radio name="c_CARDIAC1_7" > Peak contraction of the ventricle
+</li>
+		
+<li ><input type=radio name="c_CARDIAC1_7" >  Beginning of ventricular diastole
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_CARDIAC1_7" onclick="showAnswer('CARDIAC1_7')" value="Show Answer"></p>
+				
+<p class="explan" id="a_CARDIAC1_7"> The R-wave coincides with the beginning of ventricular systole.
+<a href="/gating-parameters.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION CARDIAC1, QUIZ QUESTION  9############## -->
+
+<li style="margin-top: 8px"> If the heart rate is 100 bpm, what is the length of the R-R interval in milliseconds?
+<ol type="a" id="q_CARDIAC1_8">
+
+<li ><input type=radio name="c_CARDIAC1_8" > 60 ms</li>
+		
+<li ><input type=radio name="c_CARDIAC1_8" > 100 ms </li>
+
+<li id="correct_CARDIAC1_8"><input type=radio name="c_CARDIAC1_8" id="c_CARDIAC1_8"> 600 ms </li>
+		
+<li ><input type=radio name="c_CARDIAC1_8" >  1000 ms </li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_CARDIAC1_8" onclick="showAnswer('CARDIAC1_8')" value="Show Answer"></p>
+				
+<p class="explan" id="a_CARDIAC1_8"> Over 1 minute = 60 seconds, there are 100 beats marked by R waves.  The R-R interval is therefore 60s /100 = 0.6 s or 600 ms.
+<a href="/gating-parameters.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+<!-- ################ SECTION CARDIAC1, QUIZ QUESTION  10############## -->
+
+<li style="margin-top: 8px"> In the patient above with a heart rate of 100 bpm, which of the following TR values would <u>not</u> be available for a prospectively gated sequence?
+<ol type="a" id="q_CARDIAC1_9">
+
+<li ><input type=radio name="c_CARDIAC1_9" > 600 ms
+</li>
+		
+
+<li id="correct_CARDIAC1_9"><input type=radio name="c_CARDIAC1_9" id="c_CARDIAC1_9"> 900 ms
+</li>
+<li ><input type=radio name="c_CARDIAC1_9" > 1200 ms
+</li>
+		
+<li ><input type=radio name="c_CARDIAC1_9" >  1800 ms
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_CARDIAC1_9" onclick="showAnswer('CARDIAC1_9')" value="Show Answer"></p>
+				
+<p class="explan" id="a_CARDIAC1_9"> The repetition time (TR) in a prospectively gated sequence cannot be freely set but must be a multiple of the average R-R interval. Thus for a patient with heart rate = 100, the only choices for TR would be 600 ms, 1200 ms, 1800 ms, etc. 
+<a href="/gating-parameters.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+<!-- ################ SECTION CARDIAC1, QUIZ QUESTION  11############## -->
+
+<li style="margin-top: 8px"> Continuing the above example in the patient with HR = 100 bpm, what would be the TR if a gating factor of 4 were chosen?
+<ol type="a" id="q_CARDIAC1_10">
+
+<li ><input type=radio name="c_CARDIAC1_10" > 125 ms
+</li>
+		
+<li ><input type=radio name="c_CARDIAC1_10" > 600 ms
+</li>
+<li ><input type=radio name="c_CARDIAC1_10" >  1200 ms
+</li>
+
+<li id="correct_CARDIAC1_10"><input type=radio name="c_CARDIAC1_10" id="c_CARDIAC1_10"> 2400 ms
+</li>
+		
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_CARDIAC1_10" onclick="showAnswer('CARDIAC1_10')" value="Show Answer"></p>
+				
+<p class="explan" id="a_CARDIAC1_10"> The R-R multiple chosen is called the gating factor. So, if the average R-R interval were 600 ms, the corresponding TR value would be 600 x 4 = 2400 ms.
+
+<a href="/gating-parameters.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+		
+
+
+
+
+
+<!-- ################ SECTION CARDIAC1, QUIZ QUESTION  12############## -->
+
+<li style="margin-top: 8px"> In a gated study, the time between the first R-wave and the beginning of data acquisition is known as the
+<ol type="a" id="q_CARDIAC1_11">
+
+<li ><input type=radio name="c_CARDIAC1_11" > Trigger window
+</li>
+		
+<li ><input type=radio name="c_CARDIAC1_11" > Acquisition window
+</li>
+
+<li id="correct_CARDIAC1_11"><input type=radio name="c_CARDIAC1_11" id="c_CARDIAC1_11"> Trigger delay
+</li>
+		
+<li ><input type=radio name="c_CARDIAC1_11" >  Quiescent interval
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_CARDIAC1_11" onclick="showAnswer('CARDIAC1_11')" value="Show Answer"></p>
+				
+<p class="explan" id="a_CARDIAC1_11"> Trigger delay is the time interval between the first R-wave and the beginning of data acquisition. 
+<a href="/gating-parameters.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+<!-- ################ SECTION CARDIAC1, QUIZ QUESTION  13############## -->
+
+<li style="margin-top: 8px"> Which of the following is <u>not</u> an advantage of retrospective gating compared to prospective gating?
+<ol type="a" id="q_CARDIAC1_12">
+
+<li ><input type=radio name="c_CARDIAC1_12" > TR is not restricted to be a multiple of the R-R interval
+</li>
+		
+<li ><input type=radio name="c_CARDIAC1_12" > Data acquired during arrythmias can be rejected.
+</li>
+<li ><input type=radio name="c_CARDIAC1_12" >  Data acquired during patient motion can be rejected.
+</li>
+
+<li id="correct_CARDIAC1_12"><input type=radio name="c_CARDIAC1_12" id="c_CARDIAC1_12"> Magnetohydrodynamic distortions in the EKG can be corrected.
+</li>
+		
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_CARDIAC1_12" onclick="showAnswer('CARDIAC1_12')" value="Show Answer"></p>
+				
+<p class="explan" id="a_CARDIAC1_12"> All are true advantages except (d). 
+<a href="/gating-parameters.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION CARDIAC1, QUIZ QUESTION  14############## -->
+
+<li style="margin-top: 8px"> For cardiac imaging navigator pulses are most commonly placed
+<ol type="a" id="q_CARDIAC1_13">
+
+		
+
+<li id="correct_CARDIAC1_13"><input type=radio name="c_CARDIAC1_13" id="c_CARDIAC1_13"> On the dome of the right hemidiaphragm
+</li>
+
+<li ><input type=radio name="c_CARDIAC1_13" > On the dome of the left hemidiaphragm
+</li>
+
+
+<li ><input type=radio name="c_CARDIAC1_13" > On the left ventricle
+</li>
+
+		
+<li ><input type=radio name="c_CARDIAC1_13" >  On the chest wall
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_CARDIAC1_13" onclick="showAnswer('CARDIAC1_13')" value="Show Answer"></p>
+				
+<p class="explan" id="a_CARDIAC1_13"> Navigator pulses are typically applied so as to excite 1-dimensional beams or 2-dimensional planes of tissue. Although navigators may be placed over the heart directly, more commonly they are placed to intersect the right hemidiaphragm at its dome.
+
+<a href="/heart-navigators.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION CARDIAC1, QUIZ QUESTION  15############## -->
+
+<li style="margin-top: 8px"> Which one of the following statements about double IR sequences for cardiac imaging is true?
+<ol type="a" id="q_CARDIAC1_14">
+
+<li ><input type=radio name="c_CARDIAC1_14" > The first 180°-pulse is spatially selective, while the second 180°-pulse is non-selective.
+</li>
+		
+
+<li id="correct_CARDIAC1_14"><input type=radio name="c_CARDIAC1_14" id="c_CARDIAC1_14"> Blood suppression requires outside blood flowing in and displacing blood initially within the slice. 
+</li>
+<li ><input type=radio name="c_CARDIAC1_14" > Both blood and fat signals are suppressed.
+</li>
+		
+<li ><input type=radio name="c_CARDIAC1_14" >  Short TI values are required when the heart rate is slow.
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_CARDIAC1_14" onclick="showAnswer('CARDIAC1_14')" value="Show Answer"></p>
+				
+<p class="explan" id="a_CARDIAC1_14"> The first inverting pulse is spatially non-selective, while the second pulse is spatially selective, so (a) is false. Inflow of outside blood is a critical requirement for DIR to function properly, so (b) is true. DIR does not suppress fat, so (c) is false. Finally, long (not short) TI values are required when the heart rate is slow.
+<a href="/dark-blooddouble-ir.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+<!-- ################ SECTION CARDIAC1, QUIZ QUESTION 16############## -->
+
+<li style="margin-top: 8px"> An advantage of triple IR over double IR for cardiac imaging is
+<ol type="a" id="q_CARDIAC1_15">
+<li id="correct_CARDIAC1_15"><input type=radio name="c_CARDIAC1_15" id="c_CARDIAC1_15"> Suppression of pericardial and mediastinal fat
+</li>
+
+<li ><input type=radio name="c_CARDIAC1_15" > Shorter imaging times
+</li>
+		
+<li ><input type=radio name="c_CARDIAC1_15" > More freedom on choice of TI values
+</li>
+
+		
+<li ><input type=radio name="c_CARDIAC1_15" >  Improved T1 contrast
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_CARDIAC1_15" onclick="showAnswer('CARDIAC1_15')" value="Show Answer"></p>
+				
+<p class="explan" id="a_CARDIAC1_15"> Suppression of fat using a third inverting pulse is the primary advantage for triple IR. It comes with limitations, including longer imaging times, less choice on TI values, and replacement of T1 contrast by T2 contrast.
+<a href="/triple-ir.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION CARDIAC1, QUIZ QUESTION  17############## -->
+
+<li style="margin-top: 8px"> How many distinct segments are enumerated in the American Heart Association (AHA) standard model for left ventricular anatomy that are displayed on polar/target/bull’s eye plots?
+
+<ol type="a" id="q_CARDIAC1_16">
+
+<li ><input type=radio name="c_CARDIAC1_16" > 15</li>
+		
+
+<li id="correct_CARDIAC1_16"><input type=radio name="c_CARDIAC1_16" id="c_CARDIAC1_16"> 17 </li>
+		<li ><input type=radio name="c_CARDIAC1_16" > 19 </li>
+
+<li ><input type=radio name="c_CARDIAC1_16" >  21 </li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_CARDIAC1_16" onclick="showAnswer('CARDIAC1_16')" value="Show Answer"></p>
+				
+<p class="explan" id="a_CARDIAC1_16"> There are 6 basal, 6 middle and 5 apical segments adding to a total of 17.
+<a href="/polar-plots.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--##################################################-->
+<!--############SCORING SECTION Needs to go at end of each subsection-->
+
+</ol><p><input type=button id="show_all_CARDIAC1" onclick="showAllAnswers('CARDIAC1')" value="Show All Answers for Section"><span style="font-weight: bold" id="scoretxt_CARDIAC1"></span></p>
+<p><a href="#top">Back to top of page</a></p></div></div>
+</div>
+<!--END OF SCORING SECTION-->

@@ -1,0 +1,1408 @@
+<div id="content"><div id="wsite-content" class="wsite-elements wsite-not-footer">
+	<div><div id="310479812409844413" align="left" style="width: 100%; overflow-y: hidden;" class="wcustomhtml"><!--############NEW MASTER HEADER AND INDEX##############-->
+<!--THIS IS THE MASTER HEADER SECTION FOR QUIZZES ON EACH SUPER TAB-->
+<!-- Each super tab in the regular Q&A part of the website corresponds to  a set of review QUIZZES on a single web page. This single web page must begin with the html script included below (which must be appropriately renamed). -->
+
+<!--After the title there is an index that identifies ~5 subsections each with 10-20 quiz questions. The html script for each section of questions is in a separate document titled 20 EMPTY QUESTIONS.  Instructions for filling these out are provided in that document. -->
+
+<html>
+<head><script src="gdpr/gdprscript6f19.js?buildTime=1774025472"></script>
+<title>磁共振安全与筛查测验</title>
+<!--All Yellow highlighted items need to be replaced-->
+<meta name="keywords" content="放射学物理, 复习题, 磁共振物理">
+<meta name="description" content="来自MRIquestions.com的复习测验题集">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="mr_styles.html">
+<style>
+.explan {
+	display: none;
+	font-style: italic;
+	margin-top: 2px;
+	margin-bottom: 6px;
+}
+</style>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','../www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-52206512-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+<script>
+function showAnswer(q_string) {
+	var button = document.getElementById('show_'+q_string);
+	var shown = button.value == "Hide Answer";
+	if(!shown) {
+		document.getElementById('a_'+q_string).style.display = "block";
+		
+		document.getElementById('correct_'+q_string).style.fontWeight = "bold";
+		if(document.getElementById('c_'+q_string).checked) {
+			document.getElementById('correct_'+q_string).style.color = "Green";
+		} else {
+			document.getElementById('correct_'+q_string).style.color = "Red";
+		}
+		
+		button.value = "Hide Answer";
+	} else {
+		document.getElementById('a_'+q_string).style.display = "none";
+		button.value = "Show Answer";
+	}
+}
+
+function showAllAnswers(topic) {
+	var button = document.getElementById('show_all_'+topic);
+	var shown = button.value == "Hide All Answers for Section";
+	
+	var i = 0;
+	var correct = 0;
+	var ans_el;
+	while((ans_el=document.getElementById('a_'+topic+'_'+i)) != null) {
+		if(document.getElementById('c_'+topic+'_'+i).checked) {
+			correct++;
+		}
+		if(!shown) {
+			ans_el.style.display = "block";
+			document.getElementById('correct_'+topic+'_'+i).style.fontWeight = "bold";
+			if(document.getElementById('c_'+topic+'_'+i).checked) {
+				document.getElementById('correct_'+topic+'_'+i).style.color = "Green";
+			} else {
+				document.getElementById('correct_'+topic+'_'+i).style.color = "Red";
+			}
+		} else {
+			ans_el.style.display = "none";
+		}
+		i++;
+	}
+	
+	var scoretext = document.getElementById('scoretxt_'+topic);
+	scoretext.innerHTML = '你答对了 '+correct+'/'+i+' 题，得分 '+Math.round(correct/i*100)+'%';
+	
+	if(!shown) {
+		button.value = "Hide All Answers for Section";
+	} else {
+		button.value = "Show All Answers for Section";
+	}
+}
+
+function scoreAnswers(topic) {
+	var button = document.getElementById('score_'+topic);
+	
+	var i = 0;
+	var correct = 0;
+	var ans_el;
+	while((ans_el=document.getElementById('a_'+topic+'_'+i)) != null) {
+		if(document.getElementById('c_'+topic+'_'+i).checked) {
+			correct++;
+		}
+		i++;
+	}
+	
+	var scoretext = document.getElementById('scoretxt_'+topic);
+	scoretext.innerHTML = '你答对了 '+correct+'/'+i+' 题，得分 '+Math.round(correct/i*100)+'%';
+}
+
+function changeMode(button_value) {
+	if(button_value != 0) {
+		window.location = "review/mri_b3526.html?mode="+button_value;
+	}
+}
+</script>
+<style type="text/css">
+.button_unchecked {
+	border: 2px outset #3498db;
+	background: #3498db;
+	background-image: -webkit-linear-gradient(top, #3498db, #2980b9);
+	background-image: -moz-linear-gradient(top, #3498db, #2980b9);
+	background-image: -ms-linear-gradient(top, #3498db, #2980b9);
+	background-image: -o-linear-gradient(top, #3498db, #2980b9);
+	background-image: linear-gradient(to bottom, #3498db, #2980b9);
+	padding: 4px;
+	
+	font-size: 120%;
+	font-weight: bold;
+}
+.button_checked {
+	border: 2px inset #3498db;
+	background: #3498db;
+	background-image: -webkit-linear-gradient(top, #3498db, #2980b9);
+	background-image: -moz-linear-gradient(top, #3498db, #2980b9);
+	background-image: -ms-linear-gradient(top, #3498db, #2980b9);
+	background-image: -o-linear-gradient(top, #3498db, #2980b9);
+	background-image: linear-gradient(to bottom, #3498db, #2980b9);
+	padding: 4px;
+	
+	font-size: 120%;
+	font-weight: bold;
+}
+</style>
+</head>
+
+<!-- END OF MASTER HEADER -->
+
+<!--SECOND SECTION: Lists Subsections for Questions below-->
+<body style="background-color:white">
+<div class="main_div">
+<h1 style="color:black";><a name="top"></a>磁共振安全与筛查测验</h1>
+<div style="font-size: 140%; font-family: sans-serif">
+<ul>
+	<li><a href="#0">概述</a></li>
+	<li><a href="#1">静态磁场</a></li>
+	<li><a href="#2">射频场</a></li>
+        <li><a href="#3">梯度场</a></li>
+	<li><a href="#4">植入装置的磁共振安全性</a></li>
+	
+</ul>
+
+<!-- Note the numbering of these subsections as they have a href values of #0, #1, #2, etc. These numbers are needed so that clicking on the index file takes you to the proper place in the web page identified on the 20 BLANK QUESTIONS script.-->
+
+
+
+</div>
+
+
+</div>
+
+
+
+</div>
+
+<div><div id="853973046755119166" align="left" style="width: 100%; overflow-y: hidden;" class="wcustomhtml"><!-- ###############NEW QUIZ SUBSECTION ##################-->
+
+<hr style="1px solid black">
+<!-- Creates optional line above new Quiz Subsection Title ---->
+
+<h1 style="color:black";><a name="0"></a>概述</h1>
+
+<!-- The Section Name and its corresponding number (here 0) which has an href in the index must be changed/filled in.  Note that the first section is identified as “0” here only;  and the second section is denoted “2”, etc. 
+
+This is confusing because subsequently it is denoted as Section 1 and reference to all questions in this section begin with a 1.  However, the first question of Section 1 is called question 0, presumably to assist in scoring.
+
+Thus, the first question of Section 1 is denoted as q_1_0 and its second question is denoted q_1_1.	
+
+When a second section of Questions is added, this is called Section 2 with first and second questions denoted q_2_0 and q_2_1. 
+
+Each section has counting variables corresponding to each question. So the counting variables  are denoted c_1_0 for the Section 1/first question, while c_2_1 counts for Section 2/second question. -->
+
+<!-- FOR THE PURPOSES OF THIS DOCUMENT WE WILL CONSIDER ALL QUESTIONS TO REFER TO SECTION SSOV and are numbered consecutively. THE WORD DOCUMENT CAN THEN BE PUT INTO PROPER FORM BY “SEARCH AND REPLACE SSOV BY THE APPROPRIATE SECTION NUMBER”-->
+
+
+<!-- ################ SECTION M, QUIZ QUESTION  1############## -->
+
+<ol><li style="margin-top: 8px"> 一名精神状态改变的患者从急诊室送来接受急诊磁共振检查，但没有家属、既往影像学资料或病史可用。为确保检查的合理安全性，你应该怎么做？
+<ol type="a" id="q_SSOV_0">
+
+<li ><input type=radio name="c_SSOV_0" > 致电急诊科医生，询问在缺乏病史的情况下是否有合理的替代磁共振检查方案，如果没有，则按医嘱进行扫描。
+</li>
+		
+<li ><input type=radio name="c_SSOV_0" > 使用手持式铁磁性金属探测器排除危险的植入物或异物
+</li>
+
+<li id="correct_SSOV_0"><input type=radio name="c_SSOV_0" id="c_SSOV_0"> 进行头颈部、胸部及腹部/盆腔X线检查作为筛查程序
+</li>
+		
+<li ><input type=radio name="c_SSOV_0" > 拒绝进行磁共振检查，直到能够获得完整的病史。
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_SSOV_0" onclick="showAnswer('SSOV_0')" value="Show Answer"></p>
+				
+<p class="explan" id="a_SSOV_0"> 在完全缺乏病史的情况下，磁共振检查前的最低筛查应包括头颈部、胸部及腹部/盆腔X线检查，这将识别出绝大多数潜在危险的植入物和异物。因此c)是正确的。虽然询问急诊科医生是否可以进行替代影像学检查是合理的，但仅执行磁共振检查医嘱而未进行进一步安全核查是不够的，因此a)是错误的。手持式金属探测器不一定能识别深部体内的物体或由非铁磁性金属构成的物体，因此b)是错误的。拒绝检查可能会使患者失去重要且紧急的诊断机会，从而危及健康，因此d)也是错误的。
+<a href="incomplete-screening.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+
+<!-- ################ SECTION SSOV, QUIZ QUESTION  2############## -->
+
+<li style="margin-top: 8px"> 以下哪项被认为是“有源”植入物？
+<ol type="a" id="q_SSOV_1">
+<li id="correct_SSOV_1"><input type=radio name="c_SSOV_1" id="c_SSOV_1"> 植入式输液泵
+</li>
+
+
+<li ><input type=radio name="c_SSOV_1" > 磁性义齿
+</li>
+		
+<li ><input type=radio name="c_SSOV_1" > 带可编程阀门的脑脊液分流管
+</li>
+
+		
+<li ><input type=radio name="c_SSOV_1" >  肺动脉导管
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_SSOV_1" onclick="showAnswer('SSOV_1')" value="Show Answer"></p>
+				
+<p class="explan" id="a_SSOV_1"> 有源植入物包含其自身的电源，因此a)植入式输液泵是唯一正确的答案，因为它有电池。磁性义齿和可编程脑脊液分流阀含有永磁体，但没有内在电源。肺动脉导管可能包含导线和电子传感器，但由外部供电，因此被认为是“无源”装置。
+<a href="passive-v-active-implants.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION SSOV, QUIZ QUESTION  3############## -->
+
+<li style="margin-top: 8px"> 以下哪项是目前不被接受的用于描述装置在磁共振环境中安全性的术语？
+<ol type="a" id="q_SSOV_2">
+
+<li ><input type=radio name="c_SSOV_2" > MR 不安全
+</li>
+		
+<li ><input type=radio name="c_SSOV_2" > MR 条件性安全
+</li>
+
+<li id="correct_SSOV_2"><input type=radio name="c_SSOV_2" id="c_SSOV_2"> MR 兼容
+</li>
+		
+<li ><input type=radio name="c_SSOV_2" >  MR 安全
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_SSOV_2" onclick="showAnswer('SSOV_2')" value="Show Answer"></p>
+				
+<p class="explan" id="a_SSOV_2"> 尽管在2005年之前使用过，但根据ASTM标准F2503-20，MR兼容(c)已不再是可接受的术语。然而，许多在2005年之前制造和测试的装置可能仍带有旧标签。
+<a href="conditional-implants.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION SSOV, QUIZ QUESTION  4############## -->
+<li style="margin-top: 8px"> 关于装置的安全性标签，以下哪项陈述是正确的？
+<ol type="a" id="q_SSOV_3">
+<li id="correct_SSOV_3"><input type=radio name="c_SSOV_3" id="c_SSOV_3"> 如果大型硅胶植入物内部深处含有一个微小的非铁磁性夹子，则不能评定为MR安全。
+</li>
+
+<li ><input type=radio name="c_SSOV_3" > 一个MR条件性安全的装置，只要遵循大部分指定条件即可安全扫描。
+</li>
+		
+<li ><input type=radio name="c_SSOV_3" > 任何含有永磁体的植入物都是MR不安全的。
+</li>
+
+		
+<li ><input type=radio name="c_SSOV_3" >  如果植入物在严格的ASTM测试下没有发生移动或加热，则可评定为MR安全。
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_SSOV_3" onclick="showAnswer('SSOV_3')" value="Show Answer"></p>
+				
+<p class="explan" id="a_SSOV_3"> 要被认为是MR安全的，装置不得含有任何金属成分。硅胶植入物中的微小螺丝使其成为MR条件性安全，因此a)是正确的。MR条件性安全的装置必须满足所有指定的条件，因此b)是错误的。内部含有永磁体并不一定使装置成为MR不安全（尽管可能是）。最后，如果植入物含有少量金属，即使在实验室测试下没有移动或加热，也不能被认为是MR安全的，只能是MR条件性安全。因此d)也是错误的。
+<a href="conditional-implants.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+
+
+
+ 
+<!-- ################ SECTION SSOV, QUIZ QUESTION  5############## -->
+
+<li style="margin-top: 8px"> 关于磁共振中的抛射物事件，以下哪项是正确的？<ol type="a" id="q_SSOV_4">
+
+<li ><input type=radio name="c_SSOV_4" > 自磁共振诞生以来，全球至少有十几人死于抛射物事故。
+</li>
+<li id="correct_SSOV_4"><input type=radio name="c_SSOV_4" id="c_SSOV_4"> 所有报告的死亡案例均涉及铁磁性氧气罐。
+</li>
+		
+<li ><input type=radio name="c_SSOV_4" > 大多数报告的抛射物事件涉及小物体。
+</li>
+
+		
+<li ><input type=radio name="c_SSOV_4" >  由非铁磁性材料制成的物体仍可能成为危险的抛射物。
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_SSOV_4" onclick="showAnswer('SSOV_4')" value="Show Answer"></p>
+				
+<p class="explan" id="a_SSOV_4"> 磁共振中仅有两例有记录的抛射物致伤死亡报告——2001年纽约一名儿童和2018年孟买一名男子。两人均被铁磁性氧气罐击中。因此a)是错误的，b)是正确的。大多数报告的抛射物事件涉及大型物体（例如轮椅、推车、输液架）被无意带入磁共振室，因此c)是错误的。完全由非铁磁性材料制成的物体只会被磁场微弱吸引，不会构成危险，因此d)是错误的。
+<a href="projectiles.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION SSOV, QUIZ QUESTION  6############## -->
+
+<li style="margin-top: 8px"> 关于磁共振环境中金属探测器的以下哪项陈述是错误的？
+<ol type="a" id="q_SSOV_5">
+<li id="correct_SSOV_5"><input type=radio name="c_SSOV_5" id="c_SSOV_5"> 磁共振中的金属探测器与用于机场安检的探测器非常相似。
+</li>
+
+<li ><input type=radio name="c_SSOV_5" > 联合委员会现在要求所有新建和翻新的磁共振室配备铁磁性金属探测器。
+</li>
+		
+<li ><input type=radio name="c_SSOV_5" > 磁共振金属探测器无法可靠地检测深部植入的铁磁性材料。
+</li>
+
+		
+<li ><input type=radio name="c_SSOV_5" >  在使用磁共振金属探测器的场所，报警疲劳可能是一个问题。
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_SSOV_5" onclick="showAnswer('SSOV_5')" value="Show Answer"></p>
+				
+<p class="explan" id="a_SSOV_5"> 答案a)是错误的，而其他陈述是正确的。机场探测器设计用于检测任何金属的存在，而磁共振探测器则设计为仅在存在铁磁性金属时报警。<a href="metal-detectors.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION SSOV, QUIZ QUESTION  7############## -->
+
+<li style="margin-top: 8px"> 关于孕妇的磁共振成像，哪项陈述是错误的？
+<ol type="a" id="q_SSOV_6">
+<li id="correct_SSOV_6"><input type=radio name="c_SSOV_6" id="c_SSOV_6"> 由于对胎儿存在未知风险，只有在母亲或胎儿的生命受到直接威胁时才应进行磁共振检查。
+</li>
+
+<li ><input type=radio name="c_SSOV_6" > 应尽可能避免使用钆对比剂。
+</li>
+		
+<li ><input type=radio name="c_SSOV_6" > 首选低比吸收率序列，以避免加热胎儿组织。
+</li>
+
+		
+<li ><input type=radio name="c_SSOV_6" >  首选静音梯度序列，以避免在孕早期后使胎儿暴露于高声噪音。
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_SSOV_6" onclick="showAnswer('SSOV_6')" value="Show Answer"></p>
+				
+<p class="explan" id="a_SSOV_6"> 尽管磁共振对发育中胎儿的风险极低，但可能并非为零，因此建议在与患者讨论后审慎使用磁共振。大多数有效的磁共振检查指征是严重的，但并非直接危及生命（例如母体中风、胎儿异常），因此选项a)是错误的。其他选项是正确的。
+<a href="pregnant-patients.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+	
+<!-- ################ SECTION SSOV, QUIZ QUESTION  8############## -->
+
+<li style="margin-top: 8px"> 以下哪项常见的术后物品应作为潜在的磁共振安全危害进行进一步审查：
+<ol type="a" id="q_SSOV_7">
+
+<li ><input type=radio name="c_SSOV_7" > 皮肤缝合钉
+</li>
+		
+<li ><input type=radio name="c_SSOV_7" > 静脉导管和管路
+</li>
+
+<li id="correct_SSOV_7"><input type=radio name="c_SSOV_7" id="c_SSOV_7"> 心电图电极片
+</li>
+		
+<li ><input type=radio name="c_SSOV_7" >  扁条引流管
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_SSOV_7" onclick="showAnswer('SSOV_7')" value="Show Answer"></p>
+				
+<p class="explan" id="a_SSOV_7"> 心电图电极片，答案c)，最应引起关注，因为那些未认证可用于磁共振的电极片含有金属，可能导致皮肤烧伤。皮肤缝合钉由非铁磁性金属制成，没有造成损伤或移位的风险。静脉导管和管路是安全的（前提是没有连接金属夹）。最后，扁条引流管不含金属，也是MR安全的。
+<a href="postop-er--icu-patients.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION SSOV, QUIZ QUESTION  9############## -->
+
+<li style="margin-top: 8px"> 对于哪些患者，磁共振检查期间不需要进行体温监测？<ol type="a" id="q_SSOV_8">
+<li id="correct_SSOV_8"><input type=radio name="c_SSOV_8" id="c_SSOV_8"> 健康青少年 
+</li>
+
+<li ><input type=radio name="c_SSOV_8" > 健康婴儿
+</li>
+		
+<li ><input type=radio name="c_SSOV_8" > 麻醉患者
+</li>
+
+		
+<li ><input type=radio name="c_SSOV_8" >  老年患者
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_SSOV_8" onclick="showAnswer('SSOV_8')" value="Show Answer"></p>
+				
+<p class="explan" id="a_SSOV_8"> 其他方面健康的青少年和非老年成人接受常规磁共振检查不太可能出现热力学不稳定性，不需要进行体温监测。因此答案a)是正确的。其他列出的患者类型存在风险，应进行监测。
+<a href="temperature-monitoring.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+<!-- ################ SECTION SSOV, QUIZ QUESTION  10############## -->
+
+<li style="margin-top: 8px"> 磁共振检查期间测量体温最可靠的装置是
+<ol type="a" id="q_SSOV_9">
+
+<li ><input type=radio name="c_SSOV_9" > 直肠光纤探头
+</li>
+
+<li id="correct_SSOV_9"><input type=radio name="c_SSOV_9" id="c_SSOV_9"> 食管光纤探头
+</li>
+	
+<li ><input type=radio name="c_SSOV_9" >  Foley导尿管热敏电阻 
+</li>
+
+		
+<li ><input type=radio name="c_SSOV_9" >  置于腋窝的液晶皮肤探测器
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_SSOV_9" onclick="showAnswer('SSOV_9')" value="Show Answer"></p>
+				
+<p class="explan" id="a_SSOV_9"> 最佳答案是b)，一种带有荧光或砷化镓探测器及光纤电缆的探头，置于食管远端三分之一处。
+<a href="%20temperature-monitoring.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+<!-- ################ SECTION SSOV, QUIZ QUESTION  11############## -->
+
+<li style="margin-top: 8px"> 在以下哪个眼眶位置存在小块金属不作为磁共振检查的禁忌证？
+<ol type="a" id="q_SSOV_10">
+
+<li ><input type=radio name="c_SSOV_10" > 漂浮在玻璃体液中
+</li>
+		
+<li ><input type=radio name="c_SSOV_10" > 在肌锥内间隙
+</li>
+
+<li id="correct_SSOV_10"><input type=radio name="c_SSOV_10" id="c_SSOV_10"> 在泪腺中
+</li>
+		
+<li ><input type=radio name="c_SSOV_10" >  在结膜上
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_SSOV_10" onclick="showAnswer('SSOV_10')" value="Show Answer"></p>
+				
+<p class="explan" id="a_SSOV_10"> 泪腺，答案c)，距离重要视觉结构足够远，即使发生磁场诱导位移也不会造成损伤。 
+<a href="orbital-foreign-bodies.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+		
+
+
+
+
+
+<!-- ################ SECTION SSOV, QUIZ QUESTION  12############## -->
+
+<li style="margin-top: 8px"> 考虑到在磁共振检查前使用眼眶CT筛查金属异物，以下哪项是错误的？
+<ol type="a" id="q_SSOV_11">
+<li id="correct_SSOV_11"><input type=radio name="c_SSOV_11" id="c_SSOV_11"> 应对所有机械师、管道工、铸造厂工人或任何有类似职业性金属碎片暴露史的人常规进行眼眶CT筛查。 
+</li>
+
+<li ><input type=radio name="c_SSOV_11" > 眼眶平片是CT可接受的替代方法。
+</li>
+		
+<li ><input type=radio name="c_SSOV_11" > 应采用低剂量CT技术。
+</li>
+
+		
+<li ><input type=radio name="c_SSOV_11" >  CT可能检测到小到在磁共振中无临床意义的金属碎片。
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_SSOV_11" onclick="showAnswer('SSOV_11')" value="Show Answer"></p>
+				
+<p class="explan" id="a_SSOV_11"> 在我看来，仅仅因为工作性质而可能接触金属，如果没有已知的损伤史，不足以证明进行昂贵的CT筛查是合理的。严重眼损伤的实际风险极为罕见，40年来报告的病例不到半打。因此答案a)是错误的。其他陈述都是正确的。
+<a href="%20orbital-foreign-bodies.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+<!-- ################ SECTION SSOV, QUIZ QUESTION  13############## -->
+
+<li style="margin-top: 8px"> 关于子弹和弹片，哪项陈述是正确的？
+<ol type="a" id="q_SSOV_12">
+
+<li ><input type=radio name="c_SSOV_12" > 手持式铁磁性金属探测器可以可靠地确定子弹是由铅还是钢制成。
+</li>
+		
+<li ><input type=radio name="c_SSOV_12" > 双能CT可以可靠地确定子弹是由铅还是钢制成。 
+</li>
+<li ><input type=radio name="c_SSOV_12" >  过去25年在美国，钢被步枪子弹的销售或持有是非法的。 
+</li>
+
+<li id="correct_SSOV_12"><input type=radio name="c_SSOV_12" id="c_SSOV_12"> X光片上看到的子弹碎片变形或碎片轨迹提示抛射物不是由钢制成的。
+</li>
+		
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_SSOV_12" onclick="showAnswer('SSOV_12')" value="Show Answer"></p>
+				
+<p class="explan" id="a_SSOV_12"> 只有答案d)是正确的，但此类发现并非决定性，只是对成分有强烈提示作用。其他选项都是错误的。如果子弹触发手持式探测器的警报，则它是铁磁性的，但阴性结果不确定。同样，尽管双能CT和其他技术有希望，但技术问题仍然存在。最后，钢被子弹在美国对于手枪是非法的，但对于步枪则不然。  
+<a href="bullets-and-shrapnel.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION SSOV, QUIZ QUESTION  14############## -->
+
+<li style="margin-top: 8px"> 在评估一名带有假定铁磁性子弹或弹片的患者时，哪项因素是评估进行磁共振检查风险最重要的因素？<ol type="a" id="q_SSOV_13">
+
+<li id="correct_SSOV_13"><input type=radio name="c_SSOV_13" id="c_SSOV_13"> 碎片的位置
+</li>
+
+<li ><input type=radio name="c_SSOV_13" > 碎片的形状
+</li>
+		
+<li ><input type=radio name="c_SSOV_13" > 植入后的时间长度
+</li>
+
+		
+<li ><input type=radio name="c_SSOV_13" >  是否是在军事环境中获得的
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_SSOV_13" onclick="showAnswer('SSOV_13')" value="Show Answer"></p>
+				
+<p class="explan" id="a_SSOV_13"> 就像房地产一样，一切都是关于位置、位置、位置。选项a)是最佳选择。如果异物嵌入如大脑这样的软组织中，即使有瘢痕形成，当置于磁场中时仍可能发生明显移动并造成显著的局部组织损伤。相反，嵌入肌肉、骨骼或肌腱等致密组织中的碎片则不太可能移动。形状很重要，因为长而参差不齐的碎片比小而圆的碎片更危险。并且损伤后时间越长，就有越多时间形成限制其在磁场中移动的瘢痕/纤维化。但位置在相对重要性上超过形状和时间。在军事环境中获得会增加碎片为铁磁性的可能性，但问题已假定你已确定其为此种成分。
+<a href="bullets-and-shrapnel.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+		
+
+
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--##################################################-->
+<!--############SCORING SECTION Needs to go at end of each subsection-->
+
+</ol><p><input type=button id="show_all_SSOV" onclick="showAllAnswers('SSOV')" value="显示本节所有答案"><span style="font-weight: bold" id="scoretxt_SSOV"></span></p>
+<p><a href="#top">返回页首</a></p></div>
+<!--END OF SCORING SECTION-->
+
+</div>
+
+</div>
+
+
+
+</div>
+
+<div><div id="473405631977254799" align="left" style="width: 100%; overflow-y: hidden;" class="wcustomhtml"><!-- ###############NEW QUIZ SUBSECTION ##################-->
+
+<hr style="1px solid black">
+<!-- Creates optional line above new Quiz Subsection Title ---->
+
+<h1 style="color:black";><a name="1"></a>静态磁场</h1>
+
+<!-- The Section Name and its corresponding number (here 0) which has an href in the index must be changed/filled in.  Note that the first section is identified as “0” here only;  and the second section is denoted “2”, etc. 
+
+This is confusing because subsequently it is denoted as Section 1 and reference to all questions in this section begin with a 1.  However, the first question of Section 1 is called question 0, presumably to assist in scoring.
+
+Thus, the first question of Section 1 is denoted as q_1_0 and its second question is denoted q_1_1.	
+
+When a second section of Questions is added, this is called Section 2 with first and second questions denoted q_2_0 and q_2_1. 
+
+Each section has counting variables corresponding to each question. So the counting variables  are denoted c_1_0 for the Section 1/first question, while c_2_1 counts for Section 2/second question. -->
+
+<!-- FOR THE PURPOSES OF THIS DOCUMENT WE WILL CONSIDER ALL QUESTIONS TO REFER TO SECTION STATIC and are numbered consecutively. THE WORD DOCUMENT CAN THEN BE PUT INTO PROPER FORM BY “SEARCH AND REPLACE STATIC BY THE APPROPRIATE SECTION NUMBER”-->
+
+
+<!-- ################ SECTION M, QUIZ QUESTION  1############## -->
+
+<ol><li style="margin-top: 8px"> 关于铁磁性，以下哪项陈述是错误的？
+<ol type="a" id="q_STATIC_0">
+
+<li id="correct_STATIC_0"><input type=radio name="c_STATIC_0" id="c_STATIC_0"> 根据定义，所有铁磁性材料必须至少含有一些铁。</li>
+
+
+<li ><input type=radio name="c_STATIC_0" > 当磁畴中的电子自旋排列对齐时，就会产生铁磁性。
+</li>
+		
+<li ><input type=radio name="c_STATIC_0" > 随着铁磁性物质被磁化，磁畴的大小和形状发生变化。
+</li>
+
+		
+<li ><input type=radio name="c_STATIC_0" > 硬铁磁性材料在从外部磁场中移除后仍能保持显著的磁化强度。
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_STATIC_0" onclick="showAnswer('STATIC_0')" value="Show Answer"></p>
+				
+<p class="explan" id="a_STATIC_0"> 尽管名称如此，铁磁性材料并不需要含有铁；它们只需要形成具有被磁化能力的磁畴。镍、钴、铬、锰以及几种稀土元素及其合金都是铁磁性的。因此a)是错误的。陈述b)、c)和d)是正确的。 
+
+<a href="Dangerous-metals-2.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+
+<!-- ################ SECTION STATIC, QUIZ QUESTION  2############## -->
+
+<li style="margin-top: 8px"> 以下哪种金属不被认为是铁磁性的？<ol type="a" id="q_STATIC_1">
+<li ><input type=radio name="c_STATIC_1" >  镍
+</li>
+
+<li ><input type=radio name="c_STATIC_1" > 钴
+</li>
+		
+<li ><input type=radio name="c_STATIC_1" > 铬
+</li>
+
+<li id="correct_STATIC_1"><input type=radio name="c_STATIC_1" id="c_STATIC_1"> 镁
+</li>
+		
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_STATIC_1" onclick="showAnswer('STATIC_1')" value="Show Answer"></p>
+				
+<p class="explan" id="a_STATIC_1"> 锰是铁磁性的，但镁(d)不是。
+
+<a href="dangerous-metals.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION STATIC, QUIZ QUESTION  3############## -->
+
+<li style="margin-top: 8px"> 关于不锈钢，以下哪项是错误的？
+<ol type="a" id="q_STATIC_2">
+
+<li ><input type=radio name="c_STATIC_2" > 400系列不锈钢是铁磁性的，而300系列是非磁性的。
+</li>
+		
+<li id="correct_STATIC_2"><input type=radio name="c_STATIC_2" id="c_STATIC_2"> 奥氏体不锈钢是铁磁性的，而马氏体不锈钢是非磁性的。
+</li>
+		
+<li ><input type=radio name="c_STATIC_2" >  自1990年以来，美国食品药品监督管理局要求所有钢制植入物必须由非铁磁性不锈钢制成。
+</li>
+<li ><input type=radio name="c_STATIC_2" > 即使是非铁磁性不锈钢，如果在机械加工过程中弯曲或拉伸，也可能产生铁磁性。
+</li>
+
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_STATIC_2" onclick="showAnswer('STATIC_2')" value="Show Answer"></p>
+				
+<p class="explan" id="a_STATIC_2"> 答案a)是正确的，但b)是错误的，因为名称被颠倒了：马氏体（=400系列）钢是铁磁性的，而奥氏体（=300系列）钢是非磁性的。c)和d)都是正确的。
+<a href="dangerous-metals.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION STATIC, QUIZ QUESTION  4############## -->
+<li style="margin-top: 8px"> 关于磁饱和，哪项陈述是错误的？
+<ol type="a" id="q_STATIC_3">
+
+<li ><input type=radio name="c_STATIC_3" > 几乎所有铁合金的饱和范围都在1-2特斯拉。
+</li>
+		
+<li ><input type=radio name="c_STATIC_3" > 所有铁磁性材料在3.0T磁场中都会饱和。
+</li>
+<li ><input type=radio name="c_STATIC_3" >  不可能制造出磁场强度大于2.5特斯拉的永久铁磁体。 
+</li>
+
+<li id="correct_STATIC_3"><input type=radio name="c_STATIC_3" id="c_STATIC_3"> 永磁体的最大强度与其饱和点无关。 
+</li>
+		
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_STATIC_3" onclick="showAnswer('STATIC_3')" value="Show Answer"></p>
+				
+<p class="explan" id="a_STATIC_3"> 选项d)是错误的。饱和点限制了永磁体或铁芯电磁铁能达到的最大强度，在大多数情况下远低于2特斯拉。答案a)-c)是正确的 <a href="dangerous-metals.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+
+
+
+ 
+<!-- ################ SECTION STATIC, QUIZ QUESTION  5############## -->
+
+<li style="margin-top: 8px"> 由以下哪种材料制成的植入物可能因其铁磁性而构成安全风险：
+<ol type="a" id="q_STATIC_4">
+
+<li ><input type=radio name="c_STATIC_4" > 铂
+</li>
+		
+<li ><input type=radio name="c_STATIC_4" > 镍钛诺（镍钛合金）
+</li>
+
+<li id="correct_STATIC_4"><input type=radio name="c_STATIC_4" id="c_STATIC_4"> 硅钢
+</li>
+		
+<li ><input type=radio name="c_STATIC_4" >  金
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_STATIC_4" onclick="showAnswer('STATIC_4')" value="Show Answer"></p>
+				
+<p class="explan" id="a_STATIC_4"> 答案c)，硅钢，是高度铁磁性的，不适合作为植入物材料。其他材料基本上是非磁性的（铂和镍钛诺为弱顺磁性，金为弱抗磁性）
+<a href="dangerous-metals.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION STATIC, QUIZ QUESTION  6############## -->
+
+<li style="margin-top: 8px"> 以下哪种稀土元素通常用于制造室温永磁体？
+<ol type="a" id="q_STATIC_5">
+<li id="correct_STATIC_5"><input type=radio name="c_STATIC_5" id="c_STATIC_5"> 钕
+</li>
+
+<li ><input type=radio name="c_STATIC_5" > 磁动力
+</li>
+		
+<li ><input type=radio name="c_STATIC_5" > 钬
+</li>
+
+		
+<li ><input type=radio name="c_STATIC_5" >  镝
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_STATIC_5" onclick="showAnswer('STATIC_5')" value="Show Answer"></p>
+				
+<p class="explan" id="a_STATIC_5"> 掺杂铁和硼的钕(a)通常用作室温永磁体的基础，钐钴也是如此。钬和镝在20 ºK以下具有高铁磁性，但在较高温度下会失去此特性。选项b)磁动力不是一种元素！
+<a href="dangerous-metals.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION STATIC, QUIZ QUESTION  7############## -->
+
+<li style="margin-top: 8px"> 以下列表中哪种金属或合金在梯度回波成像上预计会产生最大的磁敏感性伪影？
+<ol type="a" id="q_STATIC_6">
+
+<li ><input type=radio name="c_STATIC_6" > 铅
+</li>
+<li ><input type=radio name="c_STATIC_6" >  铜
+</li>
+		
+<li ><input type=radio name="c_STATIC_6" > 铝
+</li>
+
+<li id="correct_STATIC_6"><input type=radio name="c_STATIC_6" id="c_STATIC_6"> 镍钛诺（镍钛合金）
+</li>
+		
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_STATIC_6" onclick="showAnswer('STATIC_6')" value="Show Answer"></p>
+				
+<p class="explan" id="a_STATIC_6"> 镍钛诺，答案d)，由于其镍含量而具有最大的磁化率，因此会产生最大的伪影。
+<a href="safe-metals.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+	
+<!-- ################ SECTION STATIC, QUIZ QUESTION  8############## -->
+
+<li style="margin-top: 8px"> 关于铁磁性材料的磁滞回线，以下哪项是正确的？
+<ol type="a" id="q_STATIC_7">
+<li id="correct_STATIC_7"><input type=radio name="c_STATIC_7" id="c_STATIC_7"> 材料在首次暴露于外部磁场后，其曲线会发生变化。
+</li>
+
+<li ><input type=radio name="c_STATIC_7" > 矫顽力是外部磁场移除后保留的磁化强度
+</li>
+		
+<li ><input type=radio name="c_STATIC_7" > 反转磁场方向不能使磁化方向反转。
+</li>
+
+		
+<li ><input type=radio name="c_STATIC_7" >  硬铁磁性材料的磁滞回线具有小的矫顽力。
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_STATIC_7" onclick="showAnswer('STATIC_7')" value="Show Answer"></p>
+				
+<p class="explan" id="a_STATIC_7"> 只有a)是正确的。“原始”材料（即从未暴露于强外部磁场的材料）开始时内部磁化强度为零或极小，随着施加外部磁场，该磁化强度增长到最大值（饱和值）。当该外部磁场移除时，磁化强度通常不会回到零，而是保持在一个正值——剩磁，而不是如b)中错误陈述的“矫顽力”。反转外部磁场可以反转磁化强度，只要其大小大于矫顽力值（答案c是错误的）。硬铁磁性材料难以退磁，具有非常宽的磁滞回线，因此具有大的矫顽力（答案d是错误的）。
+
+<a href="magnetizing-metal.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION STATIC, QUIZ QUESTION  9############## -->
+
+<li style="margin-top: 8px"> 关于退磁场，哪项陈述是错误的？
+<ol type="a" id="q_STATIC_8">
+
+<li ><input type=radio name="c_STATIC_8" > 抗磁性和顺磁性材料的退磁场非常小，实际上可以忽略不计。
+</li>
+		
+<li ><input type=radio name="c_STATIC_8" > 退磁场(D)指向与磁化强度(M)相反的方向
+</li>
+<li ><input type=radio name="c_STATIC_8" >  退磁场(D)指向与外部磁场(Bo)相反的方向
+</li>
+
+<li id="correct_STATIC_8"><input type=radio name="c_STATIC_8" id="c_STATIC_8"> 退磁场(D)增加了物体内部的净磁场。
+</li>
+		
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_STATIC_8" onclick="showAnswer('STATIC_8')" value="Show Answer"></p>
+				
+<p class="explan" id="a_STATIC_8"> 答案d是错误的。退磁场通过对抗M和B，降低了物体内部的净磁场。
+<a href="object-shape.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+<!-- ################ SECTION STATIC, QUIZ QUESTION  10############## -->
+
+<li style="margin-top: 8px"> 关于退磁场的影响，哪项陈述是错误的？
+<ol type="a" id="q_STATIC_9">
+<li id="correct_STATIC_9"><input type=radio name="c_STATIC_9" id="c_STATIC_9"> 退磁场增加了弱铁磁性物体的表观磁化率。
+</li>
+		
+
+<li ><input type=radio name="c_STATIC_9" > 由强铁磁性材料制成的物体的表观磁化率主要取决于其形状，而非其具体成分。
+</li>
+		
+<li ><input type=radio name="c_STATIC_9" > 铁磁性材料中的退磁场降低了实现磁饱和所需的外部磁场强度。
+</li>
+
+<li ><input type=radio name="c_STATIC_9" >  退磁因子是无量纲数，范围在0到1之间。
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_STATIC_9" onclick="showAnswer('STATIC_9')" value="Show Answer"></p>
+				
+<p class="explan" id="a_STATIC_9"> 除a)外，所有陈述都是正确的。退磁场<u>降低</u>了弱铁磁性物体的表观磁化率。
+<a href="object-shape.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+<!-- ################ SECTION STATIC, QUIZ QUESTION  11############## -->
+
+<li style="margin-top: 8px"> 一名眼部嵌有钢珠的人接近3.0T磁共振扫描仪。假设制造该钢珠的低碳钢饱和值B<sub>sat</sub> = 1.5T，并且由于其球形，在每个方向上的退磁因子(<i>N</i>)为1/3，计算钢珠达到磁饱和时的外围外部磁场(B<sub>ext</sub>)为多少？<ol type="a" id="q_STATIC_10">
+<li id="correct_STATIC_10"><input type=radio name="c_STATIC_10" id="c_STATIC_10"> 0.5 T
+</li>
+
+		
+<li ><input type=radio name="c_STATIC_10" > 1.0 T
+</li>
+<li ><input type=radio name="c_STATIC_10" > 1.5 T
+</li>
+
+		
+<li ><input type=radio name="c_STATIC_10" >  3.0 T
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_STATIC_10" onclick="showAnswer('STATIC_10')" value="Show Answer"></p>
+				
+<p class="explan" id="a_STATIC_10"> 产生磁饱和的外部磁场由方程B<sub>ext</sub>= N • B<sub>sat</sub>给出。对于钢珠的情况，B<sub>ext</sub>= 1/3 • 1.5T = 0.5T (答案a)  
+<a href="object-shape.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+		
+
+
+
+
+
+<!-- ################ SECTION STATIC, QUIZ QUESTION  12############## -->
+
+<li style="margin-top: 8px"> 以下哪种形状的材料沿主磁场方向具有最大的退磁因子(N)？
+<ol type="a" id="q_STATIC_11">
+
+<li ><input type=radio name="c_STATIC_11" > 球体
+</li>
+		
+
+<li id="correct_STATIC_11"><input type=radio name="c_STATIC_11" id="c_STATIC_11"> 面向主磁场的平板
+</li>
+<li ><input type=radio name="c_STATIC_11" > 平行于主磁场的平板
+</li>
+		
+<li ><input type=radio name="c_STATIC_11" >  沿主磁场方向指向的细长圆柱体
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_STATIC_11" onclick="showAnswer('STATIC_11')" value="Show Answer"></p>
+				
+<p class="explan" id="a_STATIC_11"> 垂直于主磁场方向（<i>en face</i>）的平板，其虚拟磁极非常接近，因此会产生强烈的退磁效应。因此N将接近1.0，这是任何形状物体可能达到的最大值，所以答案b)是正确的。
+<a href="object-shape.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+<!-- ################ SECTION STATIC, QUIZ QUESTION  13############## -->
+
+<li style="margin-top: 8px"> 对金属物体所受磁力的数学分析通常使用基于以下哪种形状的模型？
+<ol type="a" id="q_STATIC_12">
+
+<li ><input type=radio name="c_STATIC_12" > 球体
+</li>
+		
+<li ><input type=radio name="c_STATIC_12" > 长管
+</li>
+
+<li id="correct_STATIC_12"><input type=radio name="c_STATIC_12" id="c_STATIC_12"> 椭球体
+</li>
+		
+<li ><input type=radio name="c_STATIC_12" >  平板
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_STATIC_12" onclick="showAnswer('STATIC_12')" value="Show Answer"></p>
+				
+<p class="explan" id="a_STATIC_12"> 答案c)，椭球体，是正确的。通过改变长度、角度和直径参数，椭球体可以近似变形为其他形状之一。并且椭球体在许多情况下允许有闭式数学解。
+<a href="forces-on-metal.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION STATIC, QUIZ QUESTION  14############## -->
+
+<li style="margin-top: 8px"> 将一个未饱和的金属物体移近圆柱孔式磁共振扫描仪时，其平移力最大处是
+<ol type="a" id="q_STATIC_13">
+
+<li ><input type=radio name="c_STATIC_13" > 刚进入磁共振扫描室门口时
+</li>
+		
+<li ><input type=radio name="c_STATIC_13" > 在磁体孔洞中心的扫描等中心点
+</li>
+<li ><input type=radio name="c_STATIC_13" >  在扫描等中心点的孔洞边缘
+</li>
+
+<li id="correct_STATIC_13"><input type=radio name="c_STATIC_13" id="c_STATIC_13"> 刚好在磁体孔洞开口边缘的内侧
+</li>
+		
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_STATIC_13" onclick="showAnswer('STATIC_13')" value="Show Answer"></p>
+				
+<p class="explan" id="a_STATIC_13"> 平移力与局部磁场(B)乘以其空间变化率(<i>dB/dz</i>)成正比，这个组合量称为<b>空间梯度积</b>。空间梯度积在磁体孔洞开口边缘附近最强，使其成为平移力最大的位置（答案<i>d</i>是正确的）。然而，在磁体等中心点，<i>dB/dz ≈ 0</i>，因此一旦物体到达磁体中心，出乎意料地没有平移力。
+<a href="forces-on-metal.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION STATIC, QUIZ QUESTION  15############## -->
+
+<li style="margin-top: 8px"> 将一个未饱和的金属物体移近圆柱孔式磁共振扫描仪时，其扭矩最大处是
+<ol type="a" id="q_STATIC_14">
+
+<li ><input type=radio name="c_STATIC_14" > 刚进入磁共振扫描室门口时
+</li>
+		
+<li ><input type=radio name="c_STATIC_14" > 在磁体孔洞中心的扫描等中心点
+</li>
+<li ><input type=radio name="c_STATIC_14" >  在扫描等中心点的孔洞边缘
+</li>
+
+<li id="correct_STATIC_14"><input type=radio name="c_STATIC_14" id="c_STATIC_14"> 刚好在磁体孔洞开口边缘的内侧
+</li>
+		
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_STATIC_14" onclick="showAnswer('STATIC_14')" value="Show Answer"></p>
+				
+<p class="explan" id="a_STATIC_14"> 这是一个有点误导性的问题。答案实际上是d)，位于空间梯度或空间梯度积最大值位置稍后的位置。对于未饱和物体，扭矩与磁场(B)的平方成正比。因此，扭矩在B最大处最大。大多数人认为这是在扫描仪的中心，但对于圆柱形磁体，局部场在孔洞开口边缘内侧沿扫描仪内壁处可能高出10-20%。因此正确答案是d)，位于空间梯度或空间梯度积最大值位置稍后，即磁场(B)最强的位置。 
+
+<a href="most-dangerous-place.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+<!-- ################ SECTION STATIC, QUIZ QUESTION 16############## -->
+
+<li style="margin-top: 8px"> 未饱和金属物体所受的力最小处是哪里？
+<ol type="a" id="q_STATIC_15">
+
+<li ><input type=radio name="c_STATIC_15" > 仅精确地在扫描等中心点
+</li>
+		
+
+<li id="correct_STATIC_15"><input type=radio name="c_STATIC_15" id="c_STATIC_15"> 在磁体孔洞内静态场均匀的绝大多数位置
+</li>
+<li ><input type=radio name="c_STATIC_15" > 刚好在扫描仪孔洞开口边缘的内侧
+</li>
+		
+<li ><input type=radio name="c_STATIC_15" >  距扫描仪孔洞开口一米处
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_STATIC_15" onclick="showAnswer('STATIC_15')" value="Show Answer"></p>
+				
+<p class="explan" id="a_STATIC_15"> 正确答案是b。当空间梯度(<i>dB/dz</i>)最小时，平移力最小。由于现代扫描仪具有高度均匀性，磁体主孔内的大多数位置<i>dB/dz</i> = 0，因此不产生平移力。
+
+<a href="forces-on-metal.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION STATIC, QUIZ QUESTION  17############## -->
+
+<li style="margin-top: 8px"> 一把钢制扳手被无意中带入装有自屏蔽1.5 T扫描仪的房间。关于扳手所受的磁扭矩，哪项陈述是正确的？
+<ol type="a" id="q_STATIC_16">
+
+<li ><input type=radio name="c_STATIC_16" > 当扳手垂直竖立并垂直于主磁场时，扭矩最大。
+</li>
+		
+
+<li id="correct_STATIC_16"><input type=radio name="c_STATIC_16" id="c_STATIC_16"> 当扳手与磁场方向成45º角倾斜时，扭矩最大。
+</li>
+<li ><input type=radio name="c_STATIC_16" > 当扳手转向与磁场平行时，扭矩最大。
+</li>
+		
+<li ><input type=radio name="c_STATIC_16" >  扳手的确切形状或位置对扭矩没有影响，只有其质量有影响。
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_STATIC_16" onclick="showAnswer('STATIC_16')" value="Show Answer"></p>
+				
+<p class="explan" id="a_STATIC_16"> 答案b)是正确的。未饱和细长物体的扭矩取决于sin 2θ，其中θ是与外部磁场形成的角度。当θ = 45º时，该值最大。
+<a href="forces-on-metal.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+<!-- ################ SECTION STATIC, QUIZ QUESTION  18############## -->
+
+<li style="margin-top: 8px"> 当金属物体被外部磁场(B)磁饱和时，以下哪项是错误的？
+<ol type="a" id="q_STATIC_17">
+
+<li ><input type=radio name="c_STATIC_17" > 位移力与B无关。
+</li>
+<li ><input type=radio name="c_STATIC_17" >  位移力与<i>dB/dz</i>无关。
+</li>
+		
+<li ><input type=radio name="c_STATIC_17" > 扭矩与B无关。
+</li>
+
+<li id="correct_STATIC_17"><input type=radio name="c_STATIC_17" id="c_STATIC_17"> 扭矩与物体相对于B的倾角(θ)无关。
+</li>
+		
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_STATIC_17" onclick="showAnswer('STATIC_17')" value="Show Answer"></p>
+				
+<p class="explan" id="a_STATIC_17"> 只有d)是错误的。扭矩仍与sin 2θ成正比，但与B无关。位移力与B和<i>dB/dz</i>均无关。
+<a href="forces-on-metal.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+		
+
+<!-- ################ SECTION STATIC, QUIZ QUESTION  19############## -->
+
+<li style="margin-top: 8px"> 空间梯度积定义为空间各点（静态场强）乘以（静态场的空间梯度）。空间梯度积的单位是 <ol type="a" id="q_STATIC_18">
+
+<li ><input type=radio name="c_STATIC_18" > 特斯拉
+</li>
+		
+<li ><input type=radio name="c_STATIC_18" > 特斯拉/米 
+</li>
+<li ><input type=radio name="c_STATIC_18" >  特斯拉/米²
+</li>
+
+<li id="correct_STATIC_18"><input type=radio name="c_STATIC_18" id="c_STATIC_18"> 特斯拉²/米
+</li>
+		
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_STATIC_18" onclick="showAnswer('STATIC_18')" value="Show Answer"></p>
+				
+<p class="explan" id="a_STATIC_18"> 静态场(T)乘以空间梯度(T/m)得出空间梯度积的单位为T²/m，因此答案d)是正确的。
+<a href="most-dangerous-place.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+<!-- ################ SECTION STATIC, QUIZ QUESTION  20############## -->
+
+<li style="margin-top: 8px"> 对于典型的圆柱形磁共振扫描仪，空间梯度积的最大值位于 
+<ol type="a" id="q_STATIC_19">
+
+<li ><input type=radio name="c_STATIC_19" > 磁体孔洞中心的扫描等中心点
+</li>
+		
+<li ><input type=radio name="c_STATIC_19" > 扫描等中心点的孔洞壁处
+</li>
+<li ><input type=radio name="c_STATIC_19" >  孔洞开口的中心
+</li>
+
+<li id="correct_STATIC_19"><input type=radio name="c_STATIC_19" id="c_STATIC_19"> 孔洞开口处的壁沿
+</li>
+		
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_STATIC_19" onclick="showAnswer('STATIC_19')" value="Show Answer"></p>
+				
+<p class="explan" id="a_STATIC_19"> 空间梯度积和空间梯度在孔洞开口处的壁沿均最大，且通常非常接近。(答案d)。该区域将对金属物体施加最强的位移力。
+<a href="most-dangerous-place.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+		
+<!-- ################ SECTION STATIC, QUIZ QUESTION  21############## -->
+
+<li style="margin-top: 8px"> 一个小的金属物体正在使用ASTM方法在扫描仪孔洞开口边缘通过细线悬挂进行平移力测试。悬挂物使细线偏离垂直线40º。以下哪项结论是不正确的？
+<ol type="a" id="q_STATIC_20">
+<li id="correct_STATIC_20"><input type=radio name="c_STATIC_20" id="c_STATIC_20"> ASTM会声明磁力带来的风险不大于地球重力带来的风险。
+</li>
+
+<li ><input type=radio name="c_STATIC_20" > ASTM会宣布该物体为MR条件性安全。
+</li>
+		
+<li ><input type=radio name="c_STATIC_20" > ASTM会宣布该物体为MR不安全。
+</li>
+
+
+		
+<li ><input type=radio name="c_STATIC_20" >  ASTM会宣布该物体为MR安全。
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_STATIC_20" onclick="showAnswer('STATIC_20')" value="Show Answer"></p>
+				
+<p class="explan" id="a_STATIC_20"> 由于物体偏转角未超过45º，偏转力小于装置自身的重量。因此根据ASTM标准，施加磁感应偏转力带来的任何风险都不大于正常日常活动在地球引力场中带来的任何风险。因此答案a)是正确的。MR安全、不安全、条件性安全的定义基于多种因素（即，加热、扭矩），超出了此简单位移测试所能提供的信息。
+<a href="forcetorque-testing.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+
+
+		
+<!-- ################ SECTION STATIC, QUIZ QUESTION  22############## -->
+
+<li style="margin-top: 8px"> 关于洛伦兹力，以下哪项是正确的？
+<ol type="a" id="q_STATIC_21">
+
+<li ><input type=radio name="c_STATIC_21" > 它是带电粒子在电场中运动时所受的力。
+</li>
+		
+
+<li id="correct_STATIC_21"><input type=radio name="c_STATIC_21" id="c_STATIC_21"> 它导致心电图出现T波变化 
+</li>
+<li ><input type=radio name="c_STATIC_21" > 它导致7T扫描仪中出现磁光幻视和味觉干扰。
+</li>
+	
+<li ><input type=radio name="c_STATIC_21" >  它导致镰状红细胞在磁场中堆积。
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_STATIC_21" onclick="showAnswer('STATIC_21')" value="Show Answer"></p>
+				
+<p class="explan" id="a_STATIC_21"> 只有b)是正确的。这描述了磁流体动力学效应，是由于洛伦兹力导致降主动脉中正负离子位移引起的心电图记录电压变化。其他选项都是错误的。洛伦兹力是由粒子在磁场（而非电场）中运动产生的。磁光幻视和味觉干扰是由法拉第-楞次定律感应的电流引起的。镰状红细胞的堆积是一种磁敏感性诱导力。
+<a href="static-field-bioeffects.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+
+
+
+
+		
+<!-- ################ SECTION STATIC, QUIZ QUESTION  23############## -->
+
+<li style="margin-top: 8px"> 关于磁共振相关的头晕和眩晕，以下哪项是错误的？
+<ol type="a" id="q_STATIC_22">
+
+<li ><input type=radio name="c_STATIC_22" > 在7T比3T更为常见。
+</li>
+		
+<li ><input type=radio name="c_STATIC_22" > 可能是由于洛伦兹力作用于内淋巴离子流所致。
+</li>
+<li ><input type=radio name="c_STATIC_22" >  快速头部或床运动可加剧症状。
+</li>
+
+<li id="correct_STATIC_22"><input type=radio name="c_STATIC_22" id="c_STATIC_22"> 当患者头部到达磁体等中心点时最严重且持续。
+</li>
+		
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_STATIC_22" onclick="showAnswer('STATIC_22')" value="Show Answer"></p>
+				
+<p class="explan" id="a_STATIC_22"> 答案d)是错误的。头晕/眩晕通常在患者被拉入或拉出磁体孔洞通过机架入口时最为严重。一旦患者头部到达等中心点，眩晕症状和眼球震颤约在一分钟后减轻（除非患者摇头）。
+<a href="dizzinessvertigo.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+
+
+
+		
+<!-- ################ SECTION STATIC, QUIZ QUESTION  24############## -->
+
+<li style="margin-top: 8px"> 关于磁光幻视，哪项陈述是错误的？
+<ol type="a" id="q_STATIC_23">
+
+<li ><input type=radio name="c_STATIC_23" > 在7T比3T更为常见。
+</li>
+		
+
+<li id="correct_STATIC_23"><input type=radio name="c_STATIC_23" id="c_STATIC_23"> 是由电场刺激视神经引起的。
+</li>
+<li ><input type=radio name="c_STATIC_23" > 在扫描仪周围走动的技术人员也可能体验到。
+</li>
+		
+<li ><input type=radio name="c_STATIC_23" >  快速头部或床运动可加剧症状
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_STATIC_23" onclick="showAnswer('STATIC_23')" value="Show Answer"></p>
+				
+<p class="explan" id="a_STATIC_23"> 答案b)是错误的。磁光幻视是由极低频率和幅度的电场直接作用于视网膜细胞产生的，而非视神经。其他陈述是正确的。
+<a href="flickering-lights.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+<!-- ################ SECTION STATIC, QUIZ QUESTION  25############## -->
+
+<li style="margin-top: 8px"> 关于磁共振检查期间的金属味觉，以下哪项是错误的？
+<ol type="a" id="q_STATIC_24">
+
+<li ><input type=radio name="c_STATIC_24" > 其产生机制与磁光幻视相似。
+</li>
+		
+
+<li id="correct_STATIC_24"><input type=radio name="c_STATIC_24" id="c_STATIC_24"> 与金属牙科填充物释放离子有关。
+</li>
+<li ><input type=radio name="c_STATIC_24" > 在7T比3T更为常见。
+</li>
+		
+<li ><input type=radio name="c_STATIC_24" >  比眩晕或磁光幻视少见得多。
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_STATIC_24" onclick="showAnswer('STATIC_24')" value="Show Answer"></p>
+				
+<p class="explan" id="a_STATIC_24"> 该现象发生在没有牙科填充物的患者身上，因此答案b)是错误的。
+<a href="metallic-taste.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+
+
+
+
+
+
+
+
+
+
+
+<!--##################################################-->
+<!--############SCORING SECTION Needs to go at end of each subsection-->
+
+</ol><p><input type=button id="show_all_STATIC" onclick="showAllAnswers('STATIC')" value="显示本节所有答案"><span style="font-weight: bold" id="scoretxt_STATIC"></span></p>
+<p><a href="#top">返回页首</a></p></div>
+<!--END OF SCORING SECTION-->
+
+
+
+</div>
+
+
+
+</div>

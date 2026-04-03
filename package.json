@@ -1,0 +1,20 @@
+{
+  "name": "mriqa-website",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "concurrently \"npm --prefix server run dev\" \"npm --prefix frontend run dev\"",
+    "dev:server": "npm --prefix server run dev",
+    "dev:frontend": "npm --prefix frontend run dev",
+    "build": "npm --prefix frontend run build",
+    "start": "npm --prefix server run start",
+    "screenshots": "node screenshot-tool.js"
+  },
+  "devDependencies": {
+    "concurrently": "^9.0.1",
+    "puppeteer": "^23.0.0"
+  },
+  "dependencies": {
+    "flexsearch": "^0.8.212"
+  }
+}

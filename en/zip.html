@@ -1,0 +1,157 @@
+<div id="content"><div id="wsite-content" class="wsite-elements wsite-not-footer">
+	<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<h2 class="wsite-content-title" style="text-align:center;">Zero-Interpolation Filling&nbsp;<br /></h2>
+
+<div class="paragraph" style="text-align:center;"><strong style="color: rgb(135, 135, 135); font-size: large; line-height: 1.5;"><em><font color="#0376be">A option called ZIP is available for some sequences. Is this a type of file compression?&nbsp;</font></em></strong><strong style="color: rgb(55, 138, 87); font-size: large; line-height: 1.5;"><em>&nbsp;</em></strong><br /></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-thin" style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
+<a href='uploads/3/4/5/7/34572113/14101_orig.png' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/1410153c3.png?293" alt="Zero-Interpolation Filling (ZIP)" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:52.228412256267%; padding:0 15px;">
+					
+						
+
+<div class="paragraph" style="text-align:skip_to_justify;">Processing of MRI data is usually performed in an array processor using the&nbsp;<strong><em><font color="#24678d">Fast Fourier Transform (FFT)</font></em></strong> algorithm. These computational requirements generally require the input data to be in a matrix whose dimensions are a power of 2, such as 128x128, 256x256, or 512x512. If the acquired <em>k</em>-space data does not complete this matrix, it is customary to fill in the missing cells with zeroes, a technique called <strong><em><font color="#24678d">zero padding,</font></em></strong>&nbsp;<strong><em><font color="#24678d">zero filling</font></em></strong>, or<strong><em><font color="#24678d"> zero-interpolation filling (ZIP)</font></em></strong>.&nbsp;<br /><br />ZIP in MRI has nothing to do with the *.zip technique of file compression. And nothing to do with postal codes either!<br /><span></span></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:47.771587743733%; padding:0 15px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-thin" style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
+<a href='uploads/3/4/5/7/34572113/7015770_orig.gif' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/701577016a5.gif?286" alt="Zero-Interpolation Filling (ZIP)" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;">Zero-filling is routinely used to expand the image matrix size in the phase-encoded direction. For 2D imaging this increase in matrix size is "within-plane" (e.g., from 256 to 512 pixels). For 3D imaging ZIP can be used "through-plane" to increase apparent resolution in the slab-select direction (e.g., from 64 to 128 slices). The gains occur for the first doubling of matrix size; thereafter, no benefit is realized.<br /><span></span></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;">Although zero-filling does not add any information to the input raw data, it can nevertheless improve the <em><u>apparent</u></em> spatial resolution of the image due to reduced partial volume artifacts. Zero filling acts as method to interpolate the signals from neighboring voxels, giving the image a smoother and less "pixel-ly" appearance.<br /><span></span></div>
+
+<div><div class="wsite-image wsite-image-border-thin" style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
+<a href='uploads/3/4/5/7/34572113/8121028_orig.jpg' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/8121028.jpg" alt="Zero-Interpolation Filling (ZIP) in MRA" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%"><b>Examples of cranial MRAs without and with zero-interpolation (ZIP) filling. </b><br>On left, images acquired with full data in 128x128 and 256x256 matrices. <br>On right, ZIP filling has been performed, increasing matrix size to 256x256 and 512x512 respectively.<br> Note improvement in image quality, especially for the 128x128 data set.</div>
+</div></div>
+
+<div><div id="742562971508282500" align="left" style="width: 100%; overflow-y: hidden;" class="wcustomhtml"><html> <head><script src="gdpr/gdprscript6f19.js?buildTime=1774025472"></script> <script type="text/javascript" 
+></script> 
+<script type="text/javascript">
+		$(function() {$('#Q').click(function() {$('.Q').toggle(500); return false;});});</script></head><body>
+<a href="#" id=Q><h3><font color="#378a57">Advanced Discussion (show/hide)»</font></h3></a><div class=Q style="display:none;">
+
+<!--content goes below here-->
+
+
+
+<p>Why is zero-filling <i>k</i>-space similar to pixel-interpolation in image space? The underlying mathematics is somewhat difficult, and the interested reader is referred to the various references below (especially the Bartholdi-Ernst paper) as a place to start.</p>
+
+<p> In brief, regardless of how large a matrix is chosen, it is always smaller than the theoretically infinite <i>k</i>-space representation of an object and must be truncated (cut short) at some point. Truncation is equivalent to multiplication of the <i>k</i>-space data by a "boxcar"/rectangle function. This, in turn is equivalent to convolution in image space with a SINC function (which is the Fourier transform of a rectangle function). Zero-filling produces additional SINC-interpolated pixels in the display matrix.</p>
+
+<p>A fascinating result is that the initial doubling the number of data points through zero filling actually does add "fresh information" beyond simple interpolation. But how can extra zero's constitute "new" data? The reason they help is that the plain FFT does not extract all the information available in an FID. By doubling the number of points, the FFT becomes more efficient at extracting all "true" data. It's not so much that ZIP creates new information, but that the standard FFT is insufficient at digging out all that is available. Beyond the initial doubling, no advantage accrues, as the Fourier coefficients now become fully correlated with each other. Hence only one ZIP step is generally used in data processing.</p>
+
+
+<p>As described above, in 2D imaging, ZIP is applied "in-plane". In 3D imaging, ZIP may be applied "in-plane", "through plane" or both. Vendors have different nomenclature for these two types of ZIP. GE Healthcare, for example, denotes in-plane ZIP as "ZIP 512" or "ZIP 1024" while referring to through-plane ZIP as "ZIP x 2" or "ZIP x 4".</p>
+
+<!--content goes above here-->
+</div></body>
+<!-- Mirrored from mriquestions.com/zip.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 21 Mar 2026 06:16:33 GMT -->
+</html></div>
+
+
+
+</div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;"><strong>References</strong><br />&nbsp; &nbsp; &nbsp;Bartholdi E, Ernst RR. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/bartholdi_ernst_ft_causality_main.pdf">Fourier spectroscopy and the causality principle</a>. J Magn Reson 1973; 11:9-19. &nbsp;&nbsp;<br />&nbsp; &nbsp; &nbsp;Bernstein MA, Fain SB, Riederer SJ. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/bernstein_windowing_zip.pdf">Effect of windowing and zero-filled reconstruction of MRI data on spatial resolution and acquisition strategy</a>. J Magn Reson Imaging 2001;14:270-280.<br />&nbsp; &nbsp; &nbsp;Du YP, Parker DL, Davis WL, Cao G. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/du___zip_magnetic_resonance_imaging_-_september_october_1994_-_du_-_reduction_of_partial-volume_artifacts_with_zero-filled.pdf">Reduction of partial volume artifacts with zero-filled interpolation in three dimensional MR angiography</a>. J Magn Reson Imaging 1994; 4:733-741<span><font color="#878787">&nbsp; &nbsp; &nbsp;</font></span><br />&nbsp; &nbsp; &nbsp;Ebel A, Dreher W, Leibfritz D. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/zip_ac.els-cdn.com_s1090780706001911_1-s2.0-s1090780706001911-main.pdf">Effects of zero-filling and apodization on spectral integrals in discrete Fourier-transform spectroscopy of noisy data</a>. J Magn Reson 2006;182:330-338.<br />&nbsp;&nbsp; &nbsp;&nbsp;Lindon JC, Ferrige AG. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/zip_fourier.pdf">Digitisation and data processing in Fourier transform NMR</a>. Prog NMR Spect 1980; 14:27-66. (Although adding zero interpolation filling beyond the first FT step does not provide independent information, it can occasionally be useful in spectroscopy to better define a line or peak position more precisely)<br />&nbsp;&nbsp; &nbsp;&nbsp;Zhu X, Tomanek B, Sharp J. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/zip_zhu_et_al-2013-concepts_in_magnetic_resonance_part_a.pdf">A pixel is an artifact: on the necessity of zero-filling in Fourier imaging</a>. Concepts Magn Reson 2013; 42A:32-44. (Interesting paper showing how constraining images into pixels attenuates high spatial frequencies and introduces high frequency artifactual structure.)</div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;"><strong>Related Questions</strong><br /><strong><em><a href="k-space-grid.html">&nbsp; &nbsp; &nbsp;<span style="text-align: center;">Why is k-space drawn as a grid? What do the axes in k-space mean?&nbsp;</span><span style="text-align: center;">&nbsp;</span></a></em></strong></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div style="text-align:skip_to_justify;"><div style="height: 10px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-normal" href="why-not-use-both.html" >
+<span class="wsite-button-inner">← &nbsp;Previous Question</span>
+</a>
+<div style="height: 10px; overflow: hidden;"></div></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div style="text-align:right;"><div style="height: 10px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-normal" href="what-is-fsetse.html" >
+<span class="wsite-button-inner">Next Question &nbsp;→</span>
+</a>
+<div style="height: 10px; overflow: hidden;"></div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div style="text-align:center;"><div style="height: 10px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-highlight" href="complete-list-of-questions.html" >
+<span class="wsite-button-inner">↑&nbsp;Complete List of Questions ↑</span>
+</a>
+<div style="height: 10px; overflow: hidden;"></div></div>
+</div></div>

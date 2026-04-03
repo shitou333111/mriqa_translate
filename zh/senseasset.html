@@ -1,0 +1,192 @@
+<div id="content"><div id="wsite-content" class="wsite-elements wsite-not-footer">
+	<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<h2 class="wsite-content-title" style="text-align:center;">SENSE/ASSET<br /></h2>
+
+<div class="paragraph" style="text-align:center;"><strong style="color: rgb(135, 135, 135); font-size: large; line-height: 1.5;"><em><font color="#0376be">SENSE/ASSET 是如何工作的？&nbsp;</font></em></strong><strong style="color: rgb(55, 138, 87); font-size: large; line-height: 1.5;"><em>&nbsp;</em></strong><br /></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-thin" style="padding-top:5px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
+<a href='uploads/3/4/5/7/34572113/3365555_orig.png' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/3365555_orig.png" alt="SENSE/ASSET" style="width:100%;max-width:704px" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;"><strong><em><font color="#24678d">SENSE (灵敏度编码)</font></em></strong> 和 <strong><em><font color="#24678d">ASSET (阵列线圈空间灵敏度编码)</font></em></strong> 是应用最广泛的并行成像方法之一。这些技术主要在图像空间执行，<em>在</em>各个线圈的数据重建<em>之后</em>。（这与 GRAPPA/ARC 方法形成对比，后者主要在图像重建<em>之前</em>对<em>k</em>空间数据进行操作）。<span>&nbsp;&nbsp;</span>各大主要 MR 厂商都提供不同商品名称的 SENSE 技术版本：西门子 (<strong><em><font color="#24678d">mSENSE</font></em></strong>)、GE (<strong><em><font color="#24678d">ASSET</font></em></strong>)、飞利浦 (<strong><em><font color="#24678d">SENSE</font></em></strong>)、富士胶片 (<strong><em><font color="#24678d">RAPID</font></em></strong> - "通过并行成像设计的快速采集") 以及佳能 (<strong><em><font color="#24678d">SPEEDER</font></em></strong>)。<br></div>
+
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:27.754532775453%; padding:0 15px;">
+					
+						
+
+<div class="paragraph" style="text-align:skip_to_justify;">SENSE/ASSET 包含 4 个步骤：<br /><br /><strong>1. 生成线圈&nbsp;</strong><br /><strong>&nbsp; &nbsp; 灵敏度图</strong><br /><br /><strong>2. 采集部分 <em>k</em>-</strong><br /><strong>&nbsp; &nbsp; 空间 MR 数据</strong><br /><br /><strong>3. 从每个线圈</strong><br /><strong>&nbsp; &nbsp; 重建部分</strong><br /><strong>&nbsp; &nbsp; 视野图像</strong><br /><br /><strong>4. 通过矩阵求逆</strong><br /><strong>&nbsp; &nbsp; 展开/合并</strong><br /><strong>&nbsp; &nbsp; 部分视野图像&nbsp;</strong></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:72.245467224547%; padding:0 15px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-thin" style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
+<a href='uploads/3/4/5/7/34572113/9030626_orig.png' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/90306267fe1.png?459" alt="SENSE/ASSET" style="width:459;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:39.693593314763%; padding:0 15px;">
+					
+						
+
+<div class="paragraph" style="text-align:skip_to_justify;">计算线圈灵敏度是 SENSE 过程中最初也是最重要的一步。需要从每个表面线圈分别采集全视野的低分辨率图像。这些表面线圈图像通过除以低分辨率的体线圈图像进行归一化。然后对数据进行滤波、阈值处理和点估计，以生成线圈灵敏度图（如右图所示）。这些图量化了每个线圈接收区域内来自不同源点的信号的相对权重。<br /></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:60.306406685237%; padding:0 15px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-thin" style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
+<a href='uploads/3/4/5/7/34572113/1463752_orig.jpg' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/1463752_orig.jpg" alt="SENSE/ASSET" style="width:100%;max-width:904px" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;">线圈灵敏度的计算可以在实际成像开始前，通过一次单独的约 20 秒的采集获得（GE 的 ASSET 使用此方法）。或者，自动线圈校准可以集成到脉冲序列本身中（西门子的 mSENSE）。后一种方法的优点是对校准时间和扫描正式开始之间发生的运动不那么敏感。</div>
+
+<div class="paragraph" style="text-align:skip_to_justify;">一旦计算出线圈灵敏度图，MR 脉冲序列便开始。对于 PI 加速因子为 2 的情况，会跳过交替的<em>k</em>空间线，导致从每个线圈获得的图像为&nbsp;&frac12;视野，并伴有混叠（卷叠）现象。使用矩阵求逆过程来展开和合并来自每个线圈的混叠图像。这个求逆过程的工作原理并不像乍看起来那么复杂，请尝试理解下面这个简单的 2 像素示例：</div>
+
+<div><div class="wsite-image wsite-image-border-thin" style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
+<a href='uploads/3/4/5/7/34572113/6622840_orig.jpg' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/6622840daca.jpg?588" alt="SENSE/ASSET" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;">在预扫描校准步骤中，扫描仪已经计算了每个表面线圈的逐点灵敏度，现在作为一大组数字存储在内存中。对于来自患者 A 点的 MR 信号，线圈 1 和线圈 2 检测该信号的灵敏度将分别表示为 S<font size="1">1A</font> 和 S<font size="1">2A</font>。类似地，任何其他 B 点的线圈灵敏度也是已知的，将表示为 S<font size="1">1B</font> 和 S<font size="1">2B</font>。</div>
+
+<div class="paragraph" style="text-align:skip_to_justify;">当每个线圈的数据重建为图像时，存在明显的卷叠（折叠）伪影。这种现象被称为<strong><em><font color="#24678d">混叠</font></em></strong>，其发生是因为在成像过程中采样的频率分量数量不足，无法唯一区分所有空间位置。&nbsp;&frac12;视野图像中的每个像素 (P) 的信号是来自患者体内两个点 (A 和 B) 的贡献之和。用 P<font size="1">1</font> 和 P<font size="1">2</font> 表示来自线圈 1 和线圈 2 的这些像素值，我们可以写出</div>
+
+<div class="paragraph" style="text-align:center;">P<font size="1">1</font> = A&bull;S<font size="1">1A</font> + B&bull;S<font size="1">1B</font><br />P<font size="1">2</font> = A&bull;S<font size="1">2A</font> + B&bull;S<font size="1">2B</font></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;">由于 P<font size="1">i</font> 和 S<font size="1">i</font> 都是已知的，真实的信号 (A 和 B) 可以通过简单的代数方法求解 2 个未知数的 2 个联立方程来计算。在 MR 扫描仪中，使用矩阵求逆技术对图像中的所有数据点执行类似的过程，但原理相同。希望这个例子能消除一些围绕 SENSE 的 PI 重建过程的神秘感。</div>
+
+<div><div id="740982633694457272" align="left" style="width: 100%; overflow-y: hidden;" class="wcustomhtml"><html> <head><script src="gdpr/gdprscript6f19.js?buildTime=1774025472"></script> <script type="text/javascript" 
+></script> 
+<script type="text/javascript">
+		$(function() {$('#Q').click(function() {$('.Q').toggle(500); return false;});});</script></head><body>
+<a href="#" id=Q><h3><font color="#378a57">进阶讨论 (显示/隐藏)»</font></h3></a><div class=Q style="display:none;">
+
+<!--content goes below here-->
+
+<p>正如你可能预料的那样，实际的重建过程比上述讨论要稍微复杂一些。SENSE 的典型描述使用矩阵公式，包含以下组成部分：<b><i>I</i></b> = 全视野的最终图像；<b><i>P</i></b> = 带有混叠的部分视野图像；<b><i>S</i></b> = 来自各个线圈的粗略灵敏度分布，通过体线圈归一化以获得均匀信号；
+<b><i>λ</i></b>= 来自集成体线圈的粗略分辨率图像，用于在正则化过程中约束解；以及 <b><i>ψ</i></b> = 噪声协方差矩阵，代表由于线圈元件之间患者特异性相互作用导致的噪声增加。</p>
+
+<p>求逆过程需要在图像域中使用最小二乘优化来求解以下矩阵方程：</p>
+
+<p align=center>
+<i><b>I</b> = (<b>S<sup>H</sup>ψ<sup>-1</sup>S</b> + <b>λ<sup>-1</sup>)<sup>-1</sup><b>S<sup>H</sup>ψ<sup>-1</sup>P</b></i>
+</p></b>
+
+
+<!--content goes above here-->
+</div></body>
+<!-- Mirrored from mriquestions.com/senseasset.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 21 Mar 2026 06:18:30 GMT -->
+</html></div>
+
+
+
+</div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div><div class="paragraph" style="text-align:skip_to_justify;"><strong>参考文献</strong><br />&nbsp; &nbsp; &nbsp;Blaimer M, Breuer F, Mueller M, Heidemann RM, Griswold MA, Jakob PM.&nbsp;<a href="http://mriquestions.com/uploads/3/4/5/7/34572113/blaimer_parallelreview.pdf" title="">SMASH, SENSE, PILS, GRAPPA. How to choose the optimal method</a>. Top Magn Reson Imaging 2004;15:223-236 [review].&nbsp;<br />&nbsp;&nbsp; &nbsp;Deshmane A, Gulani V, Griswold MA, Seiberlich N.&nbsp;<a href="http://mriquestions.com/uploads/3/4/5/7/34572113/deshane_pi_review.pdf" title="">Parallel MR imaging</a>. J Magn Reson Imaging 2012;36:55-72. (review)<br />&nbsp; &nbsp; &nbsp;Glockner JF, Hu HH, Stanley DW, et al.&nbsp;<a href="http://mriquestions.com/uploads/3/4/5/7/34572113/glockner_radiographics_parallel_imaging_users_guide.pdf" title="">Parallel MR imaging: a user's guide</a>. Radiographics 2005;25:1279-1297.<br />&nbsp; &nbsp; &nbsp;Larkman DJ, Nunes RG.&nbsp;<a href="http://mriquestions.com/uploads/3/4/5/7/34572113/parallel_imaging_2007_review.pdf" title="">Parallel magnetic resonance imaging</a>. Phys Med Biol 2007;52:R15-R55 [review]<br />&nbsp; &nbsp; &nbsp;Pruessmann KP, Weiger M, Scheidegger MB, Boesiger P.&nbsp;<a href="https://mriquestions.com/uploads/3/4/5/7/34572113/pruessmann-sense.pdf" title="">SENSE: Sensitivity encoding for fast MRI</a>. Magn Reson Med 1999; 42:952-962.<br /></div><div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;">
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;"><strong>相关问题</strong><br /><strong>&nbsp; &nbsp; &nbsp;</strong><strong style="font-size: 15.5555562973022px; line-height: 25px;">&nbsp;</strong><a href="pi-coils-and-sequences.html" title=""><span style="text-align: center;"><strong><em>并行成像是一种特殊的脉冲序列吗？它能否与任何线圈在任何方向上使用？</em></strong></span></a><br /><strong style="font-size: 15.5555562973022px; line-height: 25px;"><em><a href="pi-coils-and-sequences.html" title=""><span style="text-align: center;">&nbsp;</span><span style="text-align: center;">&nbsp;</span></a>&nbsp; &nbsp;</em></strong><strong><em><a href="what-is-pi.html" title="">什么是并行成像？它与“常规”成像有何不同？</a></em></strong><font size="3"><span style="line-height: 25px;"><br /></span></font><br /><br /></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;">
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div style="text-align:skip_to_justify;"><div style="height: 10px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-normal" href="two-types-of-pi.html" >
+<span class="wsite-button-inner">← &nbsp;上一问题</span>
+</a>
+<div style="height: 10px; overflow: hidden;"></div></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div style="text-align:right;"><div style="height: 10px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-normal" href="grappaarc.html" >
+<span class="wsite-button-inner">下一问题 &nbsp;→</span>
+</a>
+<div style="height: 10px; overflow: hidden;"></div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div style="text-align:center;"><div style="height: 10px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-highlight" href="complete-list-of-questions.html" >
+<span class="wsite-button-inner">↑&nbsp;问题完整列表 ↑</span>
+</a>
+<div style="height: 10px; overflow: hidden;"></div></div>
+</div></div>

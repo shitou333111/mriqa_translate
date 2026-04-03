@@ -1,0 +1,172 @@
+<div id="content"><div id="wsite-content" class="wsite-elements wsite-not-footer">
+	<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<h2 class="wsite-content-title" style="text-align:center;">GRAPPA/ARC<br /></h2>
+
+<div class="paragraph" style="text-align:center;"><strong style="color: rgb(135, 135, 135); font-size: large; line-height: 1.5;"><em><font color="#0376be">GRAPPA/ARC 是如何工作的？&nbsp;</font></em></strong><br /></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-thin" style="padding-top:0;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
+<a href='uploads/3/4/5/7/34572113/36019_orig.png' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/36019_orig.png" alt="GRAPPA/ARC" style="width:100%;max-width:868px" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;"><strong><em><font color="#24678d">GRAPPA&nbsp;(广义自动校准部分并行采集)&nbsp;</font></em></strong>和 <strong><em><font color="#24678d">ARC (笛卡尔成像自动校准重建)</font></em></strong>&nbsp;是多线圈并行成像技术。与其他并行成像方法（例如 SENSE/ASSET）类似，GRAPPA/ARC 仅采集有限数量的相位编码步级。相位方向欠采样可显著缩短成像时间，但会导致信号重叠/混叠，必须予以分离。&nbsp;
+
+
+
+
+
+
+
+<span>在 SENSE/ASSET 中，线圈灵敏度用于在傅里叶变换<em>后</em>的图像域中分离这些信号。而在 GRAPPA/ARC 中，校正在傅里叶变换<em>前</em>的<em>k</em>空间中进行。&nbsp;</span>有时人们会说：<br /><span></span></div>
+
+<div class="paragraph" style="text-align:center;"><strong><font color="#8d5024">SENSE/ASSET 方法先重建，后校正。&nbsp;<br />GRAPPA/ARC 方法先校正，后重建。</font></strong></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;">下图说明了 GRAPPA/ARC 处理过程中的四个主要步骤。</div>
+
+<div class="paragraph">&nbsp; &nbsp; &nbsp;<strong>1. &nbsp;数据采集</strong>。采集到的 MR 信号被数字化、解调，并用于填充每个线圈的<em>k</em>空间矩阵。由于跳过了多个相位编码步级，许多<em>k</em>空间线将会缺失。然而，穿过 k 空间中心的线会被完全采样，构成<span style="font-size: 15px; line-height: 1.5; color: rgb(135, 135, 135); background-color: initial;">&nbsp;</span><strong style="font-size: 15px; line-height: 1.5; color: rgb(135, 135, 135); background-color: initial;"><em><font color="#24678d">自动校准信号 (ACS)</font></em></strong><span style="font-size: 15px; line-height: 1.5; color: rgb(135, 135, 135); background-color: initial;"> </span>区域。这些额外的 ACS 线与图像采集本身交织进行（因此称为“自动校准”）。<br /></div>
+
+<div class="paragraph">&nbsp; &nbsp; &nbsp;<strong>2. &nbsp;缺失线的估计。&nbsp;</strong><span style="font-size: 15.5555562973022px;">来自 ACS 的已知数据用于计算每个线圈的<strong><em><font color="#24678d">加权因子</font></em></strong>。这些加权因子反映了每个线圈在全视野 <em>k</em> 空间数据中如何扭曲、涂抹和位移空间频率。缺失的<em>k</em>空间点通过迭代方式估计，使用这些全局加权因子结合每个小区域（称为块或<strong><em><font color="#24678d">内核</font></em></strong>）的局部已知数据。需要注意的是，</span><span style="font-size: 15.5555562973022px;">来自<em>所有</em>线圈的加权因子和已知数据被用来估计<em>每个</em>线圈的缺失数据。&nbsp;</span></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;">&nbsp; &nbsp; &nbsp;<strong>3. &nbsp;生成各线圈图像。 </strong>&nbsp;现在<em>k</em>空间的缺失线已被填充，执行傅里叶变换以从每个线圈创建单独的图像。与 SENSE/ASSET 中的线圈图像不同，这些 GRAPPA/ARC 图像没有混叠伪影。</div>
+
+<div class="paragraph" style="text-align:skip_to_justify;">&nbsp; &nbsp; &nbsp;<strong>4. &nbsp;合并。</strong> 最后，使用平方和法将各个线圈图像合并成最终的幅度图像。</div>
+
+<div><div class="wsite-image wsite-image-border-thin" style="padding-top:10px;padding-bottom:10px;margin-left:0px;margin-right:0px;text-align:center">
+<a href='uploads/3/4/5/7/34572113/4062968_orig.png' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/40629681595.png?681" alt="GRAPPA/ARC" style="width:681;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%">GRAPPA/ARC 重建过程概述。注意相位编码沿水平轴。</div>
+</div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;">GRAPPA/ARC 的关键步骤涉及缺失点的估计。存在许多可能的变体，包括重建内核的大小和所用参数的数量。GRAPPA 和 ARC 之间的主要区别在于，后者使用 3D 内核来合成缺失数据，同时考虑了来自所有三个方向的相邻源数据。ARC 还采用了略有不同的估计过程，以使 3D 数据计算易于管理。</div>
+
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:54.735376044568%; padding:0 15px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-none" style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
+<a href='uploads/3/4/5/7/34572113/5088091_orig.jpg' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/508809113f3.jpg?527" alt="GRAPPA/ARC" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:45.264623955432%; padding:0 15px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-none" style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
+<a href='uploads/3/4/5/7/34572113/9781580_orig.jpg' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/9781580_orig.jpg" alt="图片" style="width:100%;max-width:520px" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div class="paragraph" style="text-align:center;">GRAPPA/ARC 中缺失<em>k</em>空间数据的估计。此处相位编码沿垂直轴。</div>
+
+<div><div id="356320075178369037" align="left" style="width: 100%; overflow-y: hidden;" class="wcustomhtml"><html> <head><script src="gdpr/gdprscript6f19.js?buildTime=1774025472"></script> <script type="text/javascript" 
+></script> 
+<script type="text/javascript">
+		$(function() {$('#Q').click(function() {$('.Q').toggle(500); return false;});});</script></head><body>
+<a href="#" id=Q><h3><font color="#378a57">进阶讨论 (显示/隐藏)»</font></h3></a><div class=Q style="display:none;">
+
+<!--content goes below here-->
+
+<p>除了标准产品外，GE 还提供以“Turbo 模式”运行 ARC 的选项，可将扫描速度提高最多 2 倍。TurboARC 调整数据采样模式，以在 <i>k</i> 空间外围采集更少的数据点。填充模式（向心式与椭圆向心式）也可以调整。</p>
+
+
+<!--content goes above here-->
+</div></body>
+<!-- Mirrored from mriquestions.com/grappaarc.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 21 Mar 2026 06:18:39 GMT -->
+</html></div>
+
+
+
+</div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div><div class="paragraph" style="text-align:skip_to_justify;"><strong>参考文献</strong><br /><span style="line-height: 1.5;"><font color="#878787">&nbsp; &nbsp; &nbsp;</font></span>Blaimer M, Breuer F, Mueller M, Heidemann RM, Griswold MA, Jakob PM.&nbsp;<a href="http://mriquestions.com/uploads/3/4/5/7/34572113/blaimer_parallelreview.pdf" title="">SMASH, SENSE, PILS, GRAPPA. How to choose the optimal method</a>. Top Magn Reson Imaging 2004;15:223-236 [review].&nbsp; &nbsp; &nbsp;<br />&nbsp; &nbsp; &nbsp;Brau A.&nbsp;<a href="http://mriquestions.com/uploads/3/4/5/7/34572113/arc_ge.pdf" title="">New parallel imaging method enhances imaging speed and accuracy</a>. GE Signa Pulse, 2007; 36-38. (Promotional piece describing GE's ARC method).&nbsp; &nbsp;&nbsp;<br />&nbsp; &nbsp; &nbsp;Brau ACS, Beatty P, Skare S, Bammer R. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/brau_comparison_of_ccdd_methodsnihms-388017.pdf" title="">Comparison of reconstruction accuracy and efficiency among autocalibrating data-driven parallel imaging methods</a>. Magn Reson Med 2008; 59:382-395<br /><span></span>&nbsp; &nbsp; &nbsp;Deshmane A, Gulani V, Griswold MA, Seiberlich N.&nbsp;<a href="http://mriquestions.com/uploads/3/4/5/7/34572113/deshane_pi_review.pdf" title="">Parallel MR imaging</a>. J Magn Reson Imaging 2012;36:55-72. (review)<br />&nbsp; &nbsp; &nbsp;Griswold MA, Jakob PM, Heidemann RM, et al. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/griswold-grappa.pdf" title="">Generalized autocalibrating partially parallel acquisitions (GRAPPA)</a>. Magn Reson Med 2002; 47:1202-1210<br /><span></span></div><div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;"><strong>相关问题</strong><br /><strong>&nbsp; &nbsp; &nbsp;</strong><span style="text-align: center;"><strong><em><a href="two-types-of-pi.html">我们的扫描仪有两种不同的并行成像选项（SENSE 和 GRAPPA）。它们是什么？我应该使用哪一种？&nbsp;</a></em></strong></span></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div style="text-align:skip_to_justify;"><div style="height: 10px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-normal" href="senseasset.html" >
+<span class="wsite-button-inner">← &nbsp;上一问题</span>
+</a>
+<div style="height: 10px; overflow: hidden;"></div></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div style="text-align:right;"><div style="height: 10px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-normal" href="caipirinha.html" >
+<span class="wsite-button-inner">下一问题 &nbsp;→</span>
+</a>
+<div style="height: 10px; overflow: hidden;"></div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div style="text-align:center;"><div style="height: 10px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-highlight" href="complete-list-of-questions.html" >
+<span class="wsite-button-inner">↑&nbsp;问题完整列表 ↑</span>
+</a>
+<div style="height: 10px; overflow: hidden;"></div></div>
+</div></div>

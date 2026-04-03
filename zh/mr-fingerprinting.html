@@ -1,0 +1,130 @@
+<div id="content"><div id="wsite-content" class="wsite-elements wsite-not-footer">
+	<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<h2 class="wsite-content-title" style="text-align:center;">磁共振指纹成像<br></h2>
+
+<div class="paragraph" style="text-align:center;"><font size="4"><strong style="color:rgb(135, 135, 135)"><em><br /></em></strong></font><font size="5"><strong style="color:rgb(135, 135, 135)"><em><font color="#0376be">什么是磁共振指纹成像 (MRF)？</font></em></strong><strong style="color:rgb(55, 138, 87)"><em>&nbsp;</em></strong></font><br></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-thin" style="padding-top:0px;padding-bottom:10px;margin-left:0px;margin-right:0px;text-align:center">
+<a href='uploads/3/4/5/7/34572113/screenshot-2025-11-03-at-11-07-54-am_orig.png' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/screenshot-2025-11-03-at-11-07-54-am_orig.png" alt="磁共振指纹成像" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div class="paragraph"><span><span><em><strong><font color="#24678d">磁共振指纹成像 (MRF)</font></strong></em> 是一种基于快速、同步测量多种组织特性（如 T1 和 T2 弛豫时间）的定量 MRI 诊断方法。</span></span>&nbsp;<span><span>与传统序列不同，MRF 通过半随机变化的参数（如 TR、TE 和翻转角）快速采集数百幅图像序列，然后将每个像素的信号演变与预先构建的数据库（或称“字典”）进行比较，为每种组织生成独特的“指纹”。</span></span>&nbsp;其潜力（尚未完全实现）在于能够<span><span>比单纯依靠视觉分析更客观、定量地区分健康与病变组织。&nbsp;&nbsp;</span></span></div>
+
+<div class="paragraph">MRF 仍在发展中，目前尚无商业化的产品（尽管西门子等主要厂商提供原型序列和开发工具包）。虽然尚无普遍认可的单一 MRF 方法，但大多数方法都具有几个共同特征。&nbsp;</div>
+
+<div class="paragraph"><strong><font color="#8d7824" size="4">图像采集</font></strong><ul><li>核心脉冲序列通常是多层 2D SSFP-GRE，可同时采集每个解剖分区的数百幅图像。对于 3D 采集，通常使用 EPI。&nbsp;&nbsp;</li><li>核心序列通过半随机变化的 TR 值（10-100 ms）、低（约 1&deg;）到中等（约 70&deg;）的翻转角（通常排列成特征性的“驼峰”状以优化图像对比度）、1-2 秒的暂停（TR “尖峰”）、间歇性施加的去相位梯度、准备脉冲和反转脉冲来构成；TE 通常保持恒定且较短（2-5 ms），但有时也会变化。&nbsp;</li><li>通常采用非笛卡尔 <em>k</em> 空间轨迹（如螺旋、径向或星堆栈），以实现快速、欠采样的采集。</li><li>总扫描时间从数秒（针对单个 2D 层面）到多层 2D 和 3D 采集的 5-10 分钟不等。</li><li><span><span>这种半随机化的方法为每个体素基于其特定的物理特性，创建了一个独特的、时间分辨的信号演变，即“指纹”。</span><span><span>&nbsp;</span></span></span><br></li></ul></div>
+
+<div class="paragraph"><font color="#8d7824" size="4"><strong>MRF “字典”</strong></font><ul><li>MRF “字典”是一个基于组织参数（如 T1、T2）、脉冲序列变化和 k 空间轨迹组合，通过布洛赫方程模拟生成的大型信号时间过程（指纹）数据库。</li><li>对于每组参数，生成的信号时间过程作为向量存储在字典中，形成一个大型的多维查找表。</li></ul></div>
+
+<div class="paragraph"><font color="#8d7824" size="4"><strong>模式匹配</strong></font><ul><li>采集 MRF 图像后，逐体素提取时间依赖的信号演变。<br></li><li>然后将每个体素的测量信号与字典中的每个条目进行比较。使用内积或归一化相关等相似性度量来寻找最佳匹配的字典元素。这是一个耗时的过程，需要特殊的计算资源，对于大型数据集可能需要数小时。<br></li><li>为了加速匹配，目前正在使用诸如平均或滤波方法、对字典条目分组、主成分分析、基于树的搜索或深度学习方法等策略。<br></li><li>可以为整幅图像创建定量参数图，该图基于分配给每个体素的最佳匹配。&nbsp;</li></ul></div>
+
+<div><div class="wsite-image wsite-image-border-none" style="padding-top:10px;padding-bottom:0px;margin-left:0px;margin-right:0px;text-align:center">
+<a href='uploads/3/4/5/7/34572113/mrf1-bioengineering-11-00236_orig.jpg' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/mrf1-bioengineering-11-00236_orig.jpg" alt="磁共振指纹成像" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+<div><div class="wsite-image wsite-image-border-none" style="padding-top:0px;padding-bottom:10px;margin-left:0px;margin-right:0px;text-align:center">
+<a href='uploads/3/4/5/7/34572113/mrf2-bioengineering-11-00236_orig.jpg' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/mrf2-bioengineering-11-00236_orig.jpg" alt="图片" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%">心脏 MRF 的操作步骤。（来自 Velasco 等人，遵循 CC-BY 协议）</div>
+</div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;"><span style="color:rgb(10, 10, 10); font-weight:400"><span>尽管磁共振指纹成像 (MRF)</span><span>&nbsp;</span>在多参数定量成像方面具有显著优势，但它目前主要还是一种研究技术，面临着若干挑战，限制了其广泛的临床应用</span><span style="color:rgb(10, 10, 10); font-weight:400">。关键问题包括<span>&nbsp;</span></span>对运动伪影的敏感性、有限的空间分辨率（由于欠采样采集）、部分容积效应（在组织边界处的体素中）、苛刻的计算要求（字典大小和处理时间）以及缺乏临床验证。<br></div>
+
+<div><div id="411437627605443609" align="left" style="width: 100%; overflow-y: hidden;" class="wcustomhtml"><html> <head><script src="gdpr/gdprscript6f19.js?buildTime=1774025472"></script> <script type="text/javascript" 
+></script> 
+<script type="text/javascript">
+		$(function() {$('#Q').click(function() {$('.Q').toggle(500); return false;});});</script></head><body>
+<a href="#" id=Q><h3><font color="#378a57">进阶讨论（显示/隐藏）»</font></h3></a><div class=Q style="display:none;">
+
+<!--content goes below here-->
+
+暂无补充材料。请稍后再来查看！
+
+
+<!--content goes above here-->
+</div></body>
+<!-- Mirrored from mriquestions.com/mr-fingerprinting.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 21 Mar 2026 06:55:05 GMT -->
+</html></div>
+
+
+
+</div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div><div class="paragraph" style="text-align:skip_to_justify;"><strong>参考文献</strong><br />&nbsp; &nbsp; &nbsp;&nbsp;<font color="#8d2424" size="4">&#10026;&nbsp;</font>Cloos MA, Knoll F, Zhao T, et al. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/cloos_fingerprint_open_ncomms12445.pdf">Multiparametric imaging with heterogeneous&nbsp;radiofrequency fields</a>. Nature communications 2016;17:12445&nbsp; [<a href="https://doi.org/10.1038/ncomms12445" target="_blank">DOI LINK</a>]<br />&nbsp; &nbsp; &nbsp;Coppo S,Mehta BB, McGivney D, <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/gulani_mrf_magnetom_flash_ismrm_2016_1800000003041101.pdf">Overview of magnetic resonance fingerprinting</a>. MAGNETOM Flash 2016;65(2):11-21.<br />&nbsp; &nbsp; &nbsp;K&ouml;rzd&ouml;rfer G, Jiang Y, Pang J, et al. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/magnetom-flash-70_magnetic-resonance-field-fingerprinting_nittka_1800000005401382.pdf">Magnetic Resonance Field Fingerprinting (MRF&sup2;)</a>. MAGNETOM Flash 2018; 70:120-123.<br />&nbsp; &nbsp; &nbsp;Ma D, Fulani V, Seiberlich N, et al. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/mr_fingerprinting_nature11971.pdf">Magnetic resonance fingerprinting</a>. Nature 2013; 495:187-192.&nbsp; [<a href="https://doi.org/10.1038/nature11971" target="_blank">DOi LINK</a>]<br />&nbsp; &nbsp; &nbsp;<font color="#8d2424" size="4">&#10026;&nbsp;</font>McGivney DF, Boyac&#305;oglu R, Jiang Y, et al. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/fingerprinting_ii_2020jmri.26877.pdf">Magnetic Resonance Fingerprinting Part 2:<br />Technique and directions</a>.&nbsp; J Magn Reson Imaging 2020;51:993-1007.&nbsp; [<a href="https://doi.org/10.1002/jmri.26877" target="_blank">DOI LINK</a>]<br />&nbsp; &nbsp; &nbsp;<font color="#8d2424" size="4">&#10026;&nbsp;</font>Mehta BB,Coppo S, McGiveney DF. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/fingerprint_mehta_et_al-2019-magnetic_resonance_in_medicine.pdf">Magnetic resonance fingerprinting: a technical review</a>.&nbsp; Magn Reson Med . 2019;81:25&ndash;46..&nbsp; [<a href="https://doi.org/10.1002/mrm.27403" target="_blank">DOi LINK</a>]<br />&nbsp; &nbsp; &nbsp;Monga A, Singh D, de Moura HL, et al. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/bioengineering-11-00236.pdf">Emerging trends in magnetic resonance fingerprinting for quantitative biomedical imaging applications: a review</a>. Bioengineering 2024; 11:236.&nbsp; [<a href="https://doi.org/10.3390/bioengineering11030236" target="_blank">DOI LINK]</a><br />&nbsp; &nbsp; &nbsp;<font color="#8d2424" size="4">&#10026;&nbsp;</font>Poorman ME, Martin MN, Ma D, et al. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/fingerprinting_i_2020_jmri.26836.pdf">Magnetic Resonance Fingerprinting Part 1: Potential uses, current challenges,and recommendations</a>.&nbsp; J Magn Reson Imaging 2020;51:675&ndash;692.&nbsp; [<a href="https://doi.org/0.1002/jmri.26836" target="_blank">DOI LINK</a>]<br />&nbsp; &nbsp; &nbsp;Velasco C, Fletcher TJ, Botnar RM, Prieto C. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/fcvm-09-1009131.pdf">Artificial intelligence in cardiac magnetic resonance fingerprinting</a>.&nbsp; Front Cardiovasc Med 2022; 9:1009131.&nbsp; [<a href="https://doi.org/10.3389/fcvm.2022.1009131" target="_blank">DOI LINK</a>]<br></div><div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;"><strong>相关问题</strong><br /><strong>&nbsp; &nbsp; &nbsp;</strong><strong style="color:rgb(0, 0, 0)"><em>&nbsp;<a href="what-is-t2.html">什么是 T2 弛豫？</a></em></strong><br /><strong style="color:rgb(0, 0, 0)"><em>&nbsp; &nbsp; &nbsp;<a href="bloch-equations.html">&nbsp;什么是布洛赫方程？&nbsp;</a></em></strong><br></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div style="text-align:skip_to_justify;"><div style="height: 0px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-normal" href="javascript:;" >
+<span class="wsite-button-inner">← &nbsp;上一问题</span>
+</a>
+<div style="height: 0px; overflow: hidden;"></div></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div style="text-align:right;"><div style="height: 0px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-normal" href="javascript:;" >
+<span class="wsite-button-inner">下一问题 &nbsp;→</span>
+</a>
+<div style="height: 0px; overflow: hidden;"></div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div style="text-align:center;"><div style="height: 0px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-highlight" href="complete-list-of-questions.html" >
+<span class="wsite-button-inner">↑&nbsp;问题完整列表 ↑</span>
+</a>
+<div style="height: 10px; overflow: hidden;"></div></div>
+</div></div>

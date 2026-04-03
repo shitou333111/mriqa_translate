@@ -1,0 +1,181 @@
+<div id="content"><div id="wsite-content" class="wsite-elements wsite-not-footer">
+	<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -0px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:50.436046511628%; padding:0 0px;">
+					
+						
+
+<h2 class="wsite-content-title" style="text-align:center;">扰相<br /></h2>
+
+<div class="paragraph" style="text-align:center;"><strong style="color: rgb(135, 135, 135); font-size: large; line-height: 1.5;"><em><font color="#0376be">什么是扰相，它是如何实现的？&nbsp;</font></em></strong><strong style="color: rgb(55, 138, 87); font-size: large; line-height: 1.5;"><em>&nbsp;</em></strong><br /></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:49.563953488372%; padding:0 0px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-thin" style="padding-top:0;padding-bottom:0;margin-left:0;margin-right:0;text-align:center">
+<a href='uploads/3/4/5/7/34572113/9410617_orig.png' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/9410617.png" alt="MRI 扰相" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div class="paragraph" style="text-align:skip_to_justify;"><em style=""><strong style=""><font color="#24678d">扰相</font></strong></em>&nbsp;指的是破坏在梯度回波序列中可能从一个周期持续到下一个周期的横向相干性。扰相确保在每个射频脉冲之前，稳态磁化矢量没有横向分量。纵向磁化矢量 (<strong style="">M<font size="1">z</font></strong>) 确实在&nbsp;<em style="">z</em> 方向上达到了稳态 (<em style="">M<font size="1">ss</font></em>)，但横向磁化矢量 (<strong style="">M<font size="1">xy</font></strong>) 在每个周期结束时被消除，并且没有建立横向稳态 (<em style="">M</em><em>'</em><em style=""><font size="1">ss</font></em>)。 &nbsp;<br /></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-thin" style="padding-top:15px;padding-bottom:0;margin-left:0;margin-right:0;text-align:center">
+<a href='uploads/3/4/5/7/34572113/2832236_orig.jpg' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/28322365737.jpg?322" alt="MRI 扰相 GRE 图像 脑" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%">扰相（左）与非扰相 GRE 图像的对比。两者参数完全相同：TR = 33 ms, TE = 4 ms, α = 30°。
+
+</div>
+</div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;">信不信由你，实现完美的扰相实际上相当困难，因为那些讨厌的受激回波和远距离相干性总习惯性地重新出现！有三种方法可以单独或组合使用来消除横向磁化：<br /><br /><strong>1</strong>. &nbsp;<u><strong>长&nbsp;<em>TR</em> 扰相</strong></u>。 &nbsp;当 <em>TR</em>&gt;&gt;T2* 时，横向磁化将在周期结束时自然衰减为零。 &nbsp;因此，任何使用数百毫秒或更长 <em>TR</em> 值的梯度回波序列都将被“自然”扰相。通过在 2D 多层面模式下运行序列可以增强扰相效果。在此模式下，来自其他层面的射频脉冲及其相关的成像梯度所产生的离共振效应将进一步破坏横向相干性。利用此方法的序列包括 GE 的 MPGR 和 MERGE、西门子的 MEDIC 以及飞利浦的 multi-FFE。&nbsp;</div>
+
+<div class="paragraph" style="text-align:skip_to_justify;"><strong>2</strong>. &nbsp;<strong style=""><u style="">梯度扰相</u></strong>。 &nbsp;在此方法中，扰相是通过在每个周期结束时、下一个射频脉冲之前，施加幅度可变的层面选择（有时是读出）梯度来实现的。&nbsp; 扰相梯度的强度从一个视图到下一个视图线性或半随机地变化。这种方法本身并不完全足够，因为梯度会产生空间变化的磁场，导致扰相效果在空间上不均匀。这就引出了第三种也是最好的方法....<br /></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;"><strong>3</strong>. &nbsp;<strong style=""><u style="">射频扰相</u></strong>。 &nbsp;在此方法中，射频载波的相位根据预定义的公式从一个视图到下一个视图进行改变。使用完全随机的相位变化模式并不理想，因为可能会出现意外的自旋聚集，并且扰相程度可能在不同间隔之间发生变化。一种更优的方法是使用递归公式对相位进行二次递增。无论在理论上还是实践中，射频扰相都优于梯度扰相，因为它不会产生涡流，并且在空间上具有不变性。 &nbsp;所有厂商都普遍使用射频扰相来实现其专用的扰相序列。 &nbsp;这些序列包括 GE 的 SPGR 和 FSPGR、西门子的 FLASH 和 VIBE，以及飞利浦的 T1-FFE。&nbsp;<br /><br />下方展示了“基本”（非扰相）GRE 序列以及同时使用梯度和射频扰相的序列的简化脉冲时序图。为清晰起见，图表已简化（例如，回绕梯度和其他细节已被省略）。</div>
+
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -0px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:48.885793871866%; padding:0 0px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-thin" style="padding-top:10px;padding-bottom:15px;margin-left:0;margin-right:0;text-align:center">
+<a href='uploads/3/4/5/7/34572113/1797261_orig.gif' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/1797261_orig.gif" alt="基本梯度回波脉冲序列 MR" style="width:100%;max-width:500px" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:51.114206128134%; padding:0 0px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-thin" style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
+<a href='uploads/3/4/5/7/34572113/7729106_orig.gif' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/7729106cd00.gif?328" alt="扰相梯度回波脉冲序列 MR" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div><div id="504540015869976814" align="left" style="width: 100%; overflow-y: hidden;" class="wcustomhtml"><html> <head><script src="gdpr/gdprscript6f19.js?buildTime=1774025472"></script> <script type="text/javascript" 
+></script> 
+<script type="text/javascript">
+		$(function() {$('#Q').click(function() {$('.Q').toggle(500); return false;});});</script></head><body>
+<a href="#" id=Q><h3><font color="#378a57">进阶讨论 (显示/隐藏)»</font></h3></a><div class=Q style="display:none;">
+
+<!--content goes below here-->
+
+<p>许多厂商采用了基于 Zur 等人 (1991) 工作的射频相位循环模式。这里，第 <i>j</i> 步的相位用 Φ<sub><i>j</i></sub> 表示，并由以下递归公式给出</p>
+<p style="color:#8a3741; text-align:center;text-size:14 pts">
+Φ<sub><i>j</i></sub> =  ½ Φ<sub>o</sub> (<i>j<sup>2</sup> + j + 2</i>)
+</p>
+<p style="color:black, align=left">其中 Φ<sub>o</sub> 是初始射频相位。这个公式导出了以下一系列相位角：Φ<sub>o</sub>, 2Φ<sub>o</sub>, 4Φ<sub>o</sub>, 7Φ<sub>o</sub>, 11Φ<sub>o</sub> 等。起始相位角 (Φ<sub>o</sub>) 通常选择为 117º 或 123º。选择这样一个看似奇怪的值作为 Φ<sub>o</sub> 的原因是，117º 或 123º 的任何小整数倍都不能被 360º 整除。</p>
+
+
+<!--content goes above here-->
+</div></body>
+<!-- Mirrored from mriquestions.com/spoiling---what-and-how.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 21 Mar 2026 06:07:39 GMT -->
+</html></div>
+
+
+
+</div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div><div class="paragraph" style="text-align:skip_to_justify;"><strong>参考文献</strong><br />&nbsp; &nbsp; &nbsp;Denolin V, Azizieh C, Metens T. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/denolin_signal_formation_in_spgr.pdf">New insights into the mechanisms of signal formation in RF-spoiled gradient echo sequences</a>. Mag Reson Med 2005; 54:937-954.<span><font color="#878787">&nbsp; &nbsp; &nbsp;</font></span><br />&nbsp; &nbsp; &nbsp;Epstein FH, Mugler JP III, Brookeman JR. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/gre_in_approach_to_ss.pdf">Spoiling of transverse magnetization in gradient-echo (GRE) imaging during the approach to steady state</a>. Magn Reson Med 1996;35:237-245.<br />&nbsp; &nbsp; &nbsp;Elster AD.&nbsp;<a href="http://mri-q.com/uploads/3/4/5/7/34572113/elster_gre_acros_radiology.pdf" target="_blank">Gradient echo imaging: techniques and acronyms</a>. Radiology 1993; 186:1-8.<br />&nbsp; &nbsp; &nbsp;Haase A, Frahm J, Matthaei KD.&nbsp;<a href="http://mri-q.com/uploads/3/4/5/7/34572113/flash_haase_1-s2.0-0022236486904336-main.pdf">FLASH imaging: rapid NMR imaging using low flip angle pulses</a>. J Magn Reson 1986: 67: 258-266.<br />&nbsp; &nbsp; &nbsp;Zur Y, Wood ML, Neuringer LJ. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/zur_539246.pdf" target="_blank">Spoiling of transverse magnetization in steady state sequences</a>. Magn Reson Med 1991; 21:251-263.</div><div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;"><strong>相关问题</strong><br /><strong style=""><em style="">&nbsp; &nbsp; &nbsp;<a href="spoiled-gre-parameters.html">为何要使用扰相梯度回波技术？ &nbsp;如何选择参数？&nbsp;</a></em></strong><br /></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div style="text-align:skip_to_justify;"><div style="height: 10px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-normal" href="commercial-acronyms.html" >
+<span class="wsite-button-inner">← &nbsp;上一问题</span>
+</a>
+<div style="height: 10px; overflow: hidden;"></div></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div style="text-align:right;"><div style="height: 10px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-normal" href="spoiled-gre-parameters.html" >
+<span class="wsite-button-inner">下一问题 &nbsp;→</span>
+</a>
+<div style="height: 10px; overflow: hidden;"></div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div style="text-align:center;"><div style="height: 10px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-highlight" href="complete-list-of-questions.html" >
+<span class="wsite-button-inner">↑&nbsp;问题完整列表 ↑</span>
+</a>
+<div style="height: 10px; overflow: hidden;"></div></div>
+</div></div>

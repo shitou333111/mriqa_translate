@@ -1,0 +1,177 @@
+<div id="content"><div id="wsite-content" class="wsite-elements wsite-not-footer">
+	<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:49.442896935933%; padding:0 15px;">
+					
+						
+
+<h2 class="wsite-content-title" style="text-align:center;">Velocity Encoding (VENC)</h2>
+
+<div class="paragraph" style="text-align:center;"><strong style="color: rgb(135, 135, 135); font-size: large; line-height: 1.5;"><em><font color="#0376be">What is VENC and how do you set it correctly?&nbsp;</font></em></strong><strong style="color: rgb(55, 138, 87); font-size: large; line-height: 1.5;"><em>&nbsp;</em></strong><br /></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:50.557103064067%; padding:0 15px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-thin" style="padding-top:0;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
+<a href='uploads/3/4/5/7/34572113/2936097_orig.png' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/2936097_orig.png" alt="VENC" style="width:100%;max-width:642px" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;"><strong><em><font color="#24678d">VENC</font></em></strong> stands for <strong><em><font color="#24678d">velocity encoding</font></em></strong>, a parameter that must be specified before performing a phase-contrast (PC) MRI or MRA study. VENC, measured in cm/sec, should be chosen to encompass the highest velocities likely to be encountered within the vessel of interest. If VENC is set to 50 cm/sec, for example, flows in the range of&nbsp;&plusmn;50 cm/sec can be accurately represented by a set of phase shifts spanning from&nbsp;&minus;180&deg; to +180&deg;.<br /><br />The VENC parameter adjusts the strength of the <strong><em><font color="#24678d">bipolar gradients</font></em></strong> so that the maximum velocity selected corresponds to a 180&deg; phase shift in the data. VENC is inversely related to the size of these gradients. Larger gradients create more dephasing and correspond to smaller values of VENC.<br /><span style=""></span><br /><span style=""></span>  The VENC setting is critical for proper performance of the PC pulse sequence, but usually can only be estimated since its optimal value is generally not known in advance. Often a study will be repeated using 2-3 different VENCs based on typical velocities expected.<br /><br />If the selected VENC is set too high, the range of flows imaged will span only a limited phase shift range. The signal-to-noise of the image and quality of the data will suffer. Small velocity differences on flow studies will not be distinguishable, and vessels with slow flow may be impossible to see.&nbsp;<br /><span style=""></span></div>
+
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:50.557103064067%; padding:0 15px;">
+					
+						
+
+<div class="paragraph" style="text-align:skip_to_justify;">If VENC is picked too low, <strong><em><font color="#24678d">velocity aliasing</font></em></strong> may occur with faster flows not being appropriately represented. For example, if the chosen value of VENC is 50 cm/sec, the bipolar gradient is adjusted so that a flows of +25 and +50 cm/sec are assigned a phases of +90&deg; and +180&deg; respectively. If the actual velocity is +75 cm/sec, this flow will be mapped to +270&deg;, a value that cannot be distinguished from a phase shift of&nbsp;&minus;90&deg;. Instead of&nbsp;representing the +75-cm/sec flow as its actual velocity, the computer will assign it a flow of 25 cm/sec in the opposite direction! &nbsp;</div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:49.442896935933%; padding:0 15px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-thin" style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
+<a href='uploads/3/4/5/7/34572113/1702100_orig.jpg' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/1702100_orig.jpg" alt="VENC" style="width:100%;max-width:500px" />
+</a>
+<div style="display:block;font-size:90%">Velocity aliasing occurs when VENC is set too low.</div>
+</div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;">Proper estimation of VENC is thus critical for successful of PC angiography.&nbsp; As a general rule, choosing VENC about 20&minus;25% higher than the maximum expected flow velocity is advised.</div>
+
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:50.8356545961%; padding:0 15px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-thin" style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
+<a href='uploads/3/4/5/7/34572113/9422369_orig.jpg' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/9422369bc6d.jpg?323" alt="VENC" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%">PC study of pulmonary artery with VENC set too low (15 cm/sec). Note velocity aliasing (white areas) which appears to be flow in the wrong direction.</div>
+</div></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:49.1643454039%; padding:0 15px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-thin" style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
+<a href='uploads/3/4/5/7/34572113/6214709_orig.jpg' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/6214709_orig.jpg" alt="VENC" style="width:100%;max-width:500px" />
+</a>
+<div style="display:block;font-size:90%">PC study of pulmonary artery with VENC set properly (30 cm/sec). The vessel is properly displayed as black with velocity aliasing no longer apparent.</div>
+</div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div><div id="421944318665857181" align="left" style="width: 100%; overflow-y: hidden;" class="wcustomhtml"><html> <head><script src="gdpr/gdprscript6f19.js?buildTime=1774025472"></script> <script type="text/javascript" 
+></script> 
+<script type="text/javascript">
+		$(function() {$('#Q').click(function() {$('.Q').toggle(500); return false;});});</script></head><body>
+<a href="#" id=Q><h3><font color="#378a57">Advanced Discussion (show/hide)»</font></h3></a><div class=Q style="display:none;">
+
+<!--content goes below here-->
+
+No supplementary material yet.  Check back soon.
+
+
+<!--content goes above here-->
+</div></body>
+<!-- Mirrored from mriquestions.com/what-is-venc.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 21 Mar 2026 06:25:17 GMT -->
+</html></div>
+
+
+
+</div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;"><strong>References</strong><br /><span style="line-height: 1.5;"><font color="#878787">&nbsp; &nbsp; &nbsp;</font></span>&nbsp; &nbsp;Lotz J, Meier C, Leppert A, Galanski M.&nbsp;<a href="http://mriquestions.com/uploads/3/4/5/7/34572113/lotz_pc_mra_2002.pdf" title="">Cardiovascular flow measurement with phase-contrast MR imaging: basic facts and implementation</a>. Radiographics 2002; 22:651-671.<br /></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;"><strong>Related Questions</strong><br /><strong><em><a href="phase-contrast-mra.html" title="">&nbsp; &nbsp; &nbsp;<span style="text-align: center;">How does phase-contrast MR angiography work?&nbsp;</span><span style="text-align: center;">&nbsp;</span></a></em></strong><br /><strong><em><a href="expected-velocities.html">&nbsp; &nbsp; &nbsp;<span style="text-align: center;">What are the usual velocities of blood found in the human vascular system?&nbsp;</span><span style="text-align: center;">&nbsp;</span></a></em></strong></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div style="text-align:skip_to_justify;"><div style="height: 10px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-normal" href="phase-contrast-mra.html" >
+<span class="wsite-button-inner">← &nbsp;Previous Question</span>
+</a>
+<div style="height: 10px; overflow: hidden;"></div></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div style="text-align:right;"><div style="height: 10px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-normal" href="measuring-flow.html" >
+<span class="wsite-button-inner">Next Question &nbsp;→</span>
+</a>
+<div style="height: 10px; overflow: hidden;"></div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div style="text-align:center;"><div style="height: 10px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-highlight" href="complete-list-of-questions.html" >
+<span class="wsite-button-inner">↑&nbsp;Complete List of Questions ↑</span>
+</a>
+<div style="height: 10px; overflow: hidden;"></div></div>
+</div></div>

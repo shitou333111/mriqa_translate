@@ -1,0 +1,263 @@
+<div id="content"><div id="wsite-content" class="wsite-elements wsite-not-footer">
+	<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<h2 class="wsite-content-title" style="text-align:center;">Diffusion Tensor<br /></h2>
+
+<div class="paragraph" style="text-align:center;"><strong style="color: rgb(135, 135, 135); font-size: large; line-height: 1.5;"><em><font color="#0376be">What is the diffusion tensor? How is this different from "regular" diffusion?&nbsp;</font></em></strong><br /></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-thin" style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
+<a href='uploads/3/4/5/7/34572113/4019059_orig.png' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/4019059_orig.png" alt="Diffusion tensor MRI" style="width:100%;max-width:643px" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;">The diffusion tensor was briefly discussed in a&nbsp;<a href="iso-anisotropic-diffusion.html" title="" style="">previous Q&amp;A</a>&nbsp;where the concept of <strong><em><font color="#24678d">diffusion anisotropy </font></em></strong>was introduced. Biological tissues are highly anisotropic, meaning that their diffusion rates are&nbsp;<em style="">not</em>&nbsp;the same in every direction. For routine DW imaging we often ignore this complexity and reduce diffusion to a single average value, the&nbsp;<strong style=""><em style=""><font color="#24678d">apparent diffusion coefficient (ADC)</font></em></strong>, but&nbsp;this is overly simplistic.&nbsp;<br /></div>
+
+<span class='imgPusher' style='float:left;height:0px'></span><span style='display: table;width:auto;position:relative;float:left;max-width:100%;;clear:left;margin-top:20px;*margin-top:40px'><a href='uploads/3/4/5/7/34572113/1990471_orig.png' rel='lightbox' onclick='if (!lightboxLoaded) return false'><img src="uploads/3/4/5/7/34572113/editor/19904718429.png?1487202781" style="margin-top: 20px; margin-bottom: 10px; margin-left: 0px; margin-right: 15px; border-width:0; max-width:100%" alt="Diffusion tensor MRI" class="galleryImageBorder wsite-image" /></a><span style="display: table-caption; caption-side: bottom; font-size: 90%; margin-top: -10px; margin-bottom: 10px; text-align: center;" class="wsite-caption"><br>Diffusion Tensor</span></span>
+<div class="paragraph" style="display:block;">A superior method to model diffusion in complex materials is to use the&nbsp;<strong><em><font color="#24678d">diffusion tensor</font></em></strong>, a [3 x 3] array of numbers corresponding to diffusion rates in each combination of directions.&nbsp;The three diagonal elements (<em>D<font size="1">xx</font>, D<font size="1">yy</font>, D<font size="1">zz</font></em>) represent diffusion coefficients measured along each of the principal (<em>x-, y-</em>&nbsp;and&nbsp;<em>z</em>-) laboratory axes. The six off-diagonal terms (<em>D<font size="1">xy</font></em>,&nbsp;<em>D<font size="1">yz</font></em>, etc) reflect&nbsp;reflect the correlation of random motions between each pair of principal directions.</div>
+<hr style="width:100%;clear:both;visibility:hidden;"></hr>
+
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:58.077994428969%; padding:0 15px;">
+					
+						
+
+<div class="paragraph" style="text-align:skip_to_justify;">For the special case of perfect <strong><em><font color="#24678d">isotropic diffusion</font></em></strong> (such as seen in pure liquids), the off-diagonal elements are all zero. The diagonal elements are all the same and equal the single diffusion coefficient,&nbsp;<em style="">D</em>, for the isotropic material (i.e.,&nbsp;<em style="">D<font size="1">xx</font>&nbsp;= D</em><em><font size="1">yy</font></em><em style="">&nbsp;= D<font size="1">zz</font>&nbsp;= D</em>).&nbsp;</div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:41.922005571031%; padding:0 15px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-none" style="padding-top:15px;padding-bottom:5px;margin-left:0;margin-right:15px;text-align:center">
+<a href='uploads/3/4/5/7/34572113/_6809865_orig.png' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/_6809865115f.png?223" alt="Diffusion tensor MRI" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;">For <strong><em><font color="#24678d">anisotropic diffusion</font></em></strong>, however, the diagonal elements are unequal and the off-diagonal elements cannot be ignored. An additional complicating factor is that the value of each tensor element depends upon the frame of reference in which it is measured.<br /><br />To measure these individual tensor elements we typically begin in the so-called laboratory (<em>x-y-z</em>) frame, which for clinical MRI is typically aligned with the patient's body and main magnetic field. Gradients are applied in different directions and several sets of raw data (source) images are obtained. After some filtering and other mathematical corrections, linear regression techniques are applied to the data to create estimates for each tensor component.&nbsp;Because x&rarr;y and y&rarr;x&nbsp;diffusivities should be the same, mirror-image off-diagonal elements are equal (<em style="">D<font size="1">xy</font>&nbsp;= D<font size="1">yx</font>, D<font size="1">yz</font>&nbsp;= D<font size="1">zy</font></em>, and&nbsp;<em style="">D<font size="1">xz</font>&nbsp;= D<font size="1">zx</font></em>). This means the diffusion tensor matrix is symmetric with only 6 unique elements. To estimate all of them we need a minimum of 7 measurements: one baseline (<em>b0</em>) and 6 source data sets.</div>
+
+<div class="paragraph" style="text-align:skip_to_justify;">The values we calculate for each tensor component (such as&nbsp;<em>D<font size="1">xx</font></em> or <em>D<font size="1">xy</font></em>), however, are not unique, being dependent on the&nbsp;(<em style="">x-y-z</em>)&nbsp;frame of reference chosen for measurement. Had we selected a&nbsp;different coordinate system&nbsp;(<em style="">x'-y'-z'</em>)&nbsp;not aligned with the patient but at some arbitrary angle, the calculated values&nbsp;(<em>D<font size="1">x'x'</font></em> or <em>D<font size="1">x'y'</font></em>) would have been completely different.&nbsp;<br /><br />Fortunately an ideal frame of reference for viewing the diffusion tensor exists and can be determined using measurements obtained from&nbsp;<em>any</em> frame of reference. This optimal coordinate system is based upon the <strong><em><font color="#24678d">diffusion ellipsoid</font></em></strong>, whose main axis is parallel to the principal diffusion direction within a voxel. This principal axis often corresponds to anatomic features such as white matter tracts or fascial planes.&nbsp;<br /><br />The major and minor axes of the diffusion ellipsoid are defined by thee&nbsp;orthogonal unit vectors (<strong><em>&epsilon;<font size="1">1</font></em></strong>,&nbsp;<em><font color="#2a2a2a"><strong><span style="font-size: 15px; line-height: 1.5;">&epsilon;</span><span style="line-height: 16.666667938232422px;"><font size="1">2</font></span></strong></font></em><span style="color: rgb(42, 42, 42); font-size: 15px; line-height: 1.5;">, and&nbsp;</span><em style="color: rgb(42, 42, 42);"><strong style="font-size: 15px; line-height: 1.5;">&epsilon;</strong><strong style="line-height: 16.666667938232422px;"><font size="1">3</font></strong></em><span style="font-size: 15px; line-height: 1.5;"><font color="#2a2a2a">)&nbsp;</font></span><font color="#2a2a2a" style="font-size: 15px; line-height: 1.5;">known as </font><strong style="font-size: 15px; line-height: 1.5; color: rgb(135, 135, 135);"><em><font color="#24678d">eigenvectors</font></em></strong><font color="#2a2a2a" style="font-size: 15px; line-height: 1.5;">. The length of each eigenvector (</font><span style="line-height: 1.5;"><em style="font-weight: bold;"><font color="#2a2a2a"><span style="font-size: 15px;">&epsilon;</span><font size="1">i</font></font></em><span style="color: rgb(135, 135, 135); font-size: 15px;">)&nbsp;</span></span>is multiplied by a factor&nbsp;<em>&lambda;<font size="1">i</font></em>, called the <strong><em><font color="#24678d">eigenvalue</font></em></strong>. The eigenvalues of the ellipsoid are proportional to Einstein's root mean squared diffusion displacement in each direction. By convention, eigenvalues are labeled in descending order of magnitude (<em>&lambda;<font size="1">1</font></em>&nbsp;&ge;&nbsp;<em>&lambda;<font size="1">2</font></em> &ge;&nbsp;<em>&lambda;<font size="1">3</font></em>).&nbsp;<br /></div>
+
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:33.333333333333%; padding:0 15px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-none" style="padding-top:0;padding-bottom:0;margin-left:0;margin-right:0;text-align:center">
+<a href='uploads/3/4/5/7/34572113/3867765_orig.gif' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/3867765.gif" alt="Diffusion tensor MRI" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%">Diffusion along a group of fiber tracts. In the laboratory frame of reference (x-y-z) we measure diffusion coefficients in 6 unique directional combinations described by the diffusion tensor, <b><i>D</b></i>. The measured values of each component depend on the frame of reference.</div>
+</div></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:33.333333333333%; padding:0 15px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-none" style="padding-top:0;padding-bottom:0;margin-left:0;margin-right:0;text-align:center">
+<a href='uploads/3/4/5/7/34572113/1571810_orig.gif' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/1571810a597.gif?194" alt="Diffusion tensor MRI" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%">A simpler frame of reference is to center the coordinate system in each voxel with axes parallel and tangent to the principal directions of diffusion (here along fiber bundles). This is commonly represented as an ellipsoid. The off-diagonal elements of the tensor disappear.</div>
+</div></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:33.333333333333%; padding:0 15px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-none" style="padding-top:0;padding-bottom:0;margin-left:0;margin-right:0;text-align:center">
+<a href='uploads/3/4/5/7/34572113/208325_orig.gif' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/208325_orig.gif" alt="Diffusion tensor MRI" style="width:100%;max-width:600px" />
+</a>
+<div style="display:block;font-size:90%">The diffusion ellipsoid has three unit vectors, (<b></i>ε<sub>1</sub></b></i>,  <b></i>ε<sub>2</sub></b></i>, and <b></i>ε<sub>3</sub></b></i>) called eigenvectors, with corresponding lengths (<i>λ<sub>1</sub>, λ<sub>2</sub>, and λ<sub>3</sub></i>), the eigenvalues. For perfect isotropic diffusion, the ellipsoid becomes a sphere with <i>λ<sub>1</sub> = λ<sub>2</sub> = λ<sub>3</sub></i>.</div>
+</div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:67.548746518106%; padding:0 15px;">
+					
+						
+
+<div class="paragraph" style="text-align:skip_to_justify;">An additional benefit to using the diffusion ellipsoid is that in this frame of reference, the off-diagonal elements disappear. The set of eigenvalues define a matrix with only 3 diagonal elements denoted by the symbol&nbsp;<strong>&Lambda;</strong>&nbsp;("capital lambda") that appears in many advanced treatises about diffusion tensors.</div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:32.451253481894%; padding:0 15px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-none" style="padding-top:15px;padding-bottom:0;margin-left:0;margin-right:0;text-align:center">
+<a href='uploads/3/4/5/7/34572113/6781522_orig.png' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/67815223cec.png?247" alt="Diffusion tensor MRI" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div class="paragraph" style="text-align:skip_to_justify;">As a bonus, you may wish to watch this math professor explaining tensor and vectors. It's pretty good and only 12 minutes long.</div>
+
+<div class="wsite-youtube" style="margin-bottom:10px;margin-top:10px;"><div class="wsite-youtube-wrapper wsite-youtube-size-auto wsite-youtube-align-center">
+<div class="wsite-youtube-container">
+
+<iframe src="http://www.youtube.com/embed/f5liqUk0ZTw?wmode=opaque" frameborder="0" allowfullscreen></iframe>
+</div>
+</div></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-thin" style="padding-top:15px;padding-bottom:0;margin-left:0;margin-right:0;text-align:center">
+<a href='uploads/3/4/5/7/34572113/7546639_orig.gif' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/7546639.gif" alt="Diffusion tensor MRI" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%">Color-coded diffusion ellipsoids in the brain, The reddish boomerang-shaped structure is the posterior corpus callosum just behind the black lateral ventricles.</div>
+</div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div><div id="678677711997979693" align="left" style="width: 100%; overflow-y: hidden;" class="wcustomhtml"><html> <head><script src="gdpr/gdprscript6f19.js?buildTime=1774025472"></script> <script type="text/javascript" 
+></script> 
+<script type="text/javascript">
+		$(function() {$('#Q').click(function() {$('.Q').toggle(500); return false;});});</script></head><body>
+<a href="#" id=Q><h3><font color="#378a57">Advanced Discussion (show/hide)»</font></h3></a><div class=Q style="display:none;">
+
+<!--content goes below here-->
+
+No supplementary material yet.  Check back soon!
+
+
+<!--content goes above here-->
+</div></body>
+<!-- Mirrored from mriquestions.com/diffusion-tensor.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 21 Mar 2026 06:11:44 GMT -->
+</html></div>
+
+
+
+</div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;"><strong>References</strong><br /><span><font color="#878787">&nbsp; &nbsp; &nbsp;</font></span>Nucifora PGP, Verma R, Lee S-K, Melhem ER. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/nucifora_dti_review_radiology.pdf">Diffusion-tensor MR imaging and tractography: exploring brain microstructure and connectivity</a>.&nbsp;Radiology 2007; 245: 367-384. [review]<br />&nbsp; &nbsp; &nbsp; Shimony JS, McKinstry RC, Akbudak E, et al.&nbsp; <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/shimony_radiology_2e212_2e3_2er99au51770.pdf" target="_blank">Quantitative diffusion-tensor anisotropy brain MR imaging: normative human data and anatomic analysis</a>.&nbsp; Radiology 1999; 212:770-784.<span>&nbsp;&nbsp;</span><br />&nbsp; &nbsp; &nbsp; Hermoye L, Wakana S, Laurent J-P, et al. White matter atlas. Accessed at <a href="http://www.dtiatlas.org/">www.dtiatlas.org</a>.&nbsp;&nbsp;(Cool site with a DTI-based whole-brain atlas. You select at tract by name and it shows it to you in multiple color images).&nbsp;<br />&nbsp; &nbsp; &nbsp; Jellison BJ, Field AS, Medow J, et al. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/jellison_ajnr.pdf">Diffusion tensor imaging of cerebral white matter: a pictorial review of physics, fiber tract anatomy, and tumor imaging patterns</a>. AJNR Am J Neuroradiol 2004; 25:356-369.<br />&nbsp; &nbsp; &nbsp;Mukherjee P, Berman JI, Chung SW, et al. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/mukherjee_dti_ajnr.pdf">Diffusion tensor MR imaging and fiber tractography: theoretic underpinnings</a>. AJNR Am J Neuroradiol 2008; 29:632-640. (A two-part series, very nice).<br />&nbsp; &nbsp; &nbsp;Mukherjee P, Chung SW, Berman JI, et al.<a href="https://mriquestions.com/uploads/3/4/5/7/34572113/mukherjee_ajnr_part_2_review.pdf"> Diffusion tensor MR imaging and fiber tractography: technical considerations</a>. AJNR Am J Neuroradiol 2008; 29:843-52.</div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;"><strong>Related Questions</strong><br /><strong>&nbsp; &nbsp; &nbsp;</strong><strong><em><a href="making-a-dw-image.html">&nbsp;&nbsp;<span style="text-align: center;">How do you make a DW image?</span></a></em></strong></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div style="text-align:skip_to_justify;"><div style="height: 10px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-normal" href="dwi-bright-causes.html" >
+<span class="wsite-button-inner">← &nbsp;Previous Question</span>
+</a>
+<div style="height: 10px; overflow: hidden;"></div></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div style="text-align:right;"><div style="height: 10px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-normal" href="dti-tensor-imaging.html" >
+<span class="wsite-button-inner">Next Question &nbsp;→</span>
+</a>
+<div style="height: 10px; overflow: hidden;"></div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div style="text-align:center;"><div style="height: 10px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-highlight" href="complete-list-of-questions.html" >
+<span class="wsite-button-inner">↑&nbsp;Complete List of Questions ↑</span>
+</a>
+<div style="height: 10px; overflow: hidden;"></div></div>
+</div></div>

@@ -1,0 +1,149 @@
+<div id="content"><div id="wsite-content" class="wsite-elements wsite-not-footer">
+	<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<h2 class="wsite-content-title" style="text-align:center;">Quantifying Perfusion</h2>
+
+<div class="paragraph" style="text-align:center;"><strong style="color: rgb(135, 135, 135); font-size: large; line-height: 1.5;"><em><font color="#0376be">Can myocardial perfusion be accurately quantified?&nbsp;</font></em></strong><strong style="color: rgb(55, 138, 87); font-size: large; line-height: 1.5;"><em>&nbsp;</em></strong><br /></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-thin" style="padding-top:0;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
+<a href='uploads/3/4/5/7/34572113/8670563_orig.png' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/867056311b9.png?303" alt="myocardial perfusion MRI" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;">At most clinical cardiac MR centers today, only&nbsp;<em>qualitative</em>&nbsp;(visual) assessment of myocardial perfusion is commonly performed.&nbsp;Perfusion defects (hypoenhancement) for each cardiac segment are typically graded into one of five categories based on transmural extent: no defect, defect &lt;25%, 25&minus;50%, 50&minus;75%, or defect &gt;75%. Regional areas of hypoenhancement exceeding 25% in any segment are generally considered to be pathological (inducible perfusion deficits).</div>
+
+<div class="paragraph" style="text-align:skip_to_justify;">Quantification of myocardial perfusion is indeed possible, but is technically demanding, subject to errors, and requires considerable post-processing time. As such, it is largely confined to research centers and has not yet attained "mainstream" status for routine clinical care. To be done properly, quantification of myocardial perfusion requires the following constraints and assumptions:<br /><ol><li><strong><u>Signal intensity should be proportional to gadolinium concentration</u></strong>. In reality, some departure from direct proportionality is expected. The degree of non-linearity is dependent on the absolute concentration of gadolinium, field strength, pulse sequence, type of magnetization preparation, inversion time, and <em>k</em>-space ordering. A half-dose (0.05 mmol/kg) or less of gadolinium contrast should be used to avoid T2*-shortening and underestimation of myocardial blood flow.<br /></li><li><strong><u>Corrections for surface-coil and RF-nonuniformities</u></strong>. Intensity correction maps are often obtained prior to injection (or may be incorporated into the parallel imaging algorithm itself). <strong>B<font size="1">1</font></strong>-field nonuniformity of excitation results in spatially-dependent flip angles. The use of adiabatic (BIR-4), notched, or composite RF-pulses may be needed, especially at 3T and higher.</li><li><strong><u>Modeling of myocardial structure</u></strong>. &nbsp;The simplest analysis considers the myocardium a single compartment that accumulates gadolinium based on inflow and outflow rates in accordance with Zierler's <strong><em><font color="#24678d">Central Volume Principle</font></em></strong> (a generalization of&nbsp;<strong><em><font color="#24678d">Fick's Principle</font></em></strong>). More commonly, a two-compartment model is used, dividing the myocardium into vascular and interstitial spaces. More complex models have been developed, including those considering (a) fast water exchange with a third (intracellular) compartment, and (b) spatially-dependent variations of gadolinium concentration across the myocardium.</li><li><strong><u>Mathematical analysis</u></strong>. All mathematical analyses for perfusion require measurement of the&nbsp;<strong><em><font color="#24678d">arterial input function (AIF)</font></em></strong>, representing the changing signal intensity of blood in the LV or aorta during the first pass of gadolinium (red curve below). An assumption about the impulse response of the myocardium to the AIF must then be made (a popular choice is to describe it as a&nbsp;<strong><em><font color="#24678d">Fermi function</font></em></strong>). Finally, a mathematical procedure known as <strong><em><font color="#24678d">deconvolution</font></em></strong> must be applied to estimate parameters of the model chosen, including myocardial perfusion in absolute terms (ml/min/g of tissue).&nbsp;<br /></li></ol></div>
+
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:62.395543175487%; padding:0 15px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-thin" style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
+<a href='uploads/3/4/5/7/34572113/6155428_orig.gif' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/6155428_orig.gif" alt="myocardial perfusion software MRI" style="width:100%;max-width:1000px" />
+</a>
+<div style="display:block;font-size:90%">Commercially available software (such as this example from <a href="http://cmrtools.com/" target="_blank">CMRtools.com</a>) allows model-based quantification of myocardial perfusion. Here the ventricular blood pool (red) serves as the arterial input function (AIF).</div>
+</div></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:37.604456824513%; padding:0 15px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-none" style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
+<a href='uploads/3/4/5/7/34572113/1997499_orig.gif' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/1997499_orig.gif" alt="up-slope method of myocardial perfusion" style="width:100%;max-width:800px" />
+</a>
+<div style="display:block;font-size:90%">Semiquantitative perfusion method using the relative "up-slopes" of the myocardium and blood pool (dotted lines) after a Gd bolus.</div>
+</div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;">A quicker, semi-quantitative method for myocardial perfusion commonly employed is to measure the "<strong><em><font color="#24678d">up-slope</font></em></strong>" of signal in the myocardium during the first pass of gadolinium (dotted lines above). To account for variations in arterial bolus, a <strong><em><font color="#24678d">normalized myocardial perfusion slope</font></em></strong> may be obtained by dividing the myocardial uptake slope by the blood pool uptake slope. Other semi-quantitative indices are also possible (e.g., time-to-peak, mean transit time, ratio of stress-to-rest perfusion up-slopes). &nbsp;</div>
+
+<div><div id="597668779618081949" align="left" style="width: 100%; overflow-y: hidden;" class="wcustomhtml"><html> <head><script src="gdpr/gdprscript6f19.js?buildTime=1774025472"></script> <script type="text/javascript" 
+></script> 
+<script type="text/javascript">
+		$(function() {$('#Q').click(function() {$('.Q').toggle(500); return false;});});</script></head><body>
+<a href="#" id=Q><h3><font color="#378a57">Advanced Discussion (show/hide)»</font></h3></a><div class=Q style="display:none;">
+
+<!--content goes below here-->
+
+<p>Accurate measurement of the arterial input function (AIF) is a major source of error limiting the accuracy of quantitative perfusion methods. The true AIF is affected by T2* effects that occur with high gadolinium concentrations during passage of the contrast bolus. Two imaging strategies have resulted to ameliorate these effects: 1) a "dual bolus" method using AIF measurement during a separate tiny test dose (5-10% of the total dose); and 2) a "dual sequence" method where one of the imaging slices is replaced by an AIF measurement slice employing an acquisition that avoids T2* and saturation effects of high gadolinium concentrations. These techniques are discussed in greater detail in the references.</p>
+
+
+<!--content goes above here-->
+</div></body>
+<!-- Mirrored from mriquestions.com/quantifying-perfusion.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 21 Mar 2026 06:30:42 GMT -->
+</html></div>
+
+
+
+</div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;"><strong>References</strong><br />&nbsp; &nbsp;&nbsp; &nbsp;Axel L. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/axel_-_mtt_539275.pdf" target="_blank">Tissue mean transit time from dynamic computed tomography by a simple deconvolution technique</a>. Invest Radiol 1983; 18:94-99. &nbsp; <font color="#878787">&nbsp;&nbsp;</font><br />&nbsp; &nbsp; &nbsp;Christian TF, Aletras AH, Arai AE. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/christian_et_al-2008-journal_of_magnetic_resonance_imaging.pdf">Estimation of absolute myocardial blood flow during first-pass MR perfusion imaging using a dual-bolus injection technique: comparison to single-bolus injection method</a>. J Magn Reson Imaging 2008; 27:1271-1277. (slightly more accurate quantitative results with double-bolus method).&nbsp;<br />&nbsp; &nbsp; &nbsp;Fick A.&nbsp;<a href="https://mriquestions.com/uploads/3/4/5/7/34572113/fick_original.pdf">Ueber die Messung des Blutquantums in der Herzventrikeln</a>. Sitz der Physik-Med Ges Wurzburg 1870; 2:16&ndash;28.&nbsp;<br />&nbsp; &nbsp; &nbsp;Gatehouse PD, Elkington AG, Ablitt NA, et al. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/gatehouseaifjmri2004.pdf">Accurate assessment of the arterial input function during high-dose myocardial perfusion cardiovascular magnetic resonance</a>. J Magn Reson Imaging 2004; 20:39-45.<br />&nbsp; &nbsp; &nbsp;Jerosch-Herold M. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/perfusion_review1532-429x-12-57.pdf">Quantification of myocardial perfusion by cardiovascular magnetic resonance</a>. J Cardiovasc Magn Reson 2010; 12:57.<br />&nbsp; &nbsp; &nbsp;Nagel E, Klein C, Paetsch I, et al. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/circulation-2003-nagel-432-7.pdf">Magnetic resonance perfusion measurements for the noninvasive detection of coronary artery disease</a>. Circulation 2003; 108:432-437 (Description of the up-slope technique for perfusion measurement)<br />&nbsp; &nbsp; &nbsp;Shehata ML, Basha TA, Hayeri MR, et al.&nbsp;<a href="https://mriquestions.com/uploads/3/4/5/7/34572113/myocardial_perfusion_radiographics_2014.pdf">MR myocardial perfusion imaging: insights on techniques, analysis, interpretation, and findings</a>. RadioGraphics 2014; 34:1636-1657.<br />&nbsp; &nbsp; &nbsp;Zierler K. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/zierler_indicator_disultion_review.pdf">Indicator dilution methods for measuring blood flow, volume, and other properties of biological systems: a brief history and memoir</a>. Ann Biomed Eng 2000; 28:836-848.</div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;"><strong>Related Questions</strong><br /><strong><em><a href="interpreting-perfusion.html">&nbsp; &nbsp; &nbsp;<span style="text-align: center;">How do you interpret myocardial perfusion studies?&nbsp;</span><span style="text-align: center;">&nbsp;</span></a></em></strong></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div style="text-align:skip_to_justify;"><div style="height: 0px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-normal" href="1st-pass-perfusion.html" >
+<span class="wsite-button-inner">← &nbsp;Previous Question</span>
+</a>
+<div style="height: 0px; overflow: hidden;"></div></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div style="text-align:right;"><div style="height: 0px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-normal" href="dark-rim-artifact.html" >
+<span class="wsite-button-inner">Next Question &nbsp;→</span>
+</a>
+<div style="height: 0px; overflow: hidden;"></div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div style="text-align:center;"><div style="height: 0px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-highlight" href="complete-list-of-questions.html" >
+<span class="wsite-button-inner">↑&nbsp;Complete List of Questions ↑</span>
+</a>
+<div style="height: 10px; overflow: hidden;"></div></div>
+</div></div>

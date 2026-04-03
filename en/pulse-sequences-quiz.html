@@ -1,0 +1,3361 @@
+<div id="content"><div id="wsite-content" class="wsite-elements wsite-not-footer">
+	<div><div id="599447266881997902" align="left" style="width: 100%; overflow-y: hidden;" class="wcustomhtml"><!--############NEW MASTER HEADER AND INDEX##############-->
+<!--THIS IS THE MASTER HEADER SECTION FOR QUIZZES ON EACH SUPER TAB-->
+<!-- Each super tab in the regular Q&A part of the website corresponds to  a set of review QUIZZES on a single web page. This single web page must begin with the html script included below (which must be appropriately renamed). -->
+
+<!--After the title there is an index that identifies ~5 subsections each with 10-20 quiz questions. The html script for each section of questions is in a separate document titled 20 EMPTY QUESTIONS.  Instructions for filling these out are provided in that document. -->
+
+<html>
+<head><script src="/gdpr/gdprscript.js?buildTime=1774025472"></script>
+<title>QUIZ QUESTIONS ON PULSE SEQUENCES</title>
+<!--All Yellow highlighted items need to be replaced-->
+<meta name="keywords" content="radiology physics, review questions, MRI physics">
+<meta name="description" content="Collection of review quiz questions from MRIquestions.com">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="/mr_styles.css">
+<style>
+.explan {
+	display: none;
+	font-style: italic;
+	margin-top: 2px;
+	margin-bottom: 6px;
+}
+</style>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-52206512-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+<script>
+function showAnswer(q_string) {
+	var button = document.getElementById('show_'+q_string);
+	var shown = button.value == "Hide Answer";
+	if(!shown) {
+		document.getElementById('a_'+q_string).style.display = "block";
+		
+		document.getElementById('correct_'+q_string).style.fontWeight = "bold";
+		if(document.getElementById('c_'+q_string).checked) {
+			document.getElementById('correct_'+q_string).style.color = "Green";
+		} else {
+			document.getElementById('correct_'+q_string).style.color = "Red";
+		}
+		
+		button.value = "Hide Answer";
+	} else {
+		document.getElementById('a_'+q_string).style.display = "none";
+		button.value = "Show Answer";
+	}
+}
+
+function showAllAnswers(topic) {
+	var button = document.getElementById('show_all_'+topic);
+	var shown = button.value == "Hide All Answers for Section";
+	
+	var i = 0;
+	var correct = 0;
+	var ans_el;
+	while((ans_el=document.getElementById('a_'+topic+'_'+i)) != null) {
+		if(document.getElementById('c_'+topic+'_'+i).checked) {
+			correct++;
+		}
+		if(!shown) {
+			ans_el.style.display = "block";
+			document.getElementById('correct_'+topic+'_'+i).style.fontWeight = "bold";
+			if(document.getElementById('c_'+topic+'_'+i).checked) {
+				document.getElementById('correct_'+topic+'_'+i).style.color = "Green";
+			} else {
+				document.getElementById('correct_'+topic+'_'+i).style.color = "Red";
+			}
+		} else {
+			ans_el.style.display = "none";
+		}
+		i++;
+	}
+	
+	var scoretext = document.getElementById('scoretxt_'+topic);
+	scoretext.innerHTML = 'You answered '+correct+'/'+i+' correct, for a score of '+Math.round(correct/i*100)+'%';
+	
+	if(!shown) {
+		button.value = "Hide All Answers for Section";
+	} else {
+		button.value = "Show All Answers for Section";
+	}
+}
+
+function scoreAnswers(topic) {
+	var button = document.getElementById('score_'+topic);
+	
+	var i = 0;
+	var correct = 0;
+	var ans_el;
+	while((ans_el=document.getElementById('a_'+topic+'_'+i)) != null) {
+		if(document.getElementById('c_'+topic+'_'+i).checked) {
+			correct++;
+		}
+		i++;
+	}
+	
+	var scoretext = document.getElementById('scoretxt_'+topic);
+	scoretext.innerHTML = 'You answered '+correct+'/'+i+' correct, for a score of '+Math.round(correct/i*100)+'%';
+}
+
+function changeMode(button_value) {
+	if(button_value != 0) {
+		window.location = "/review/mri_b.html?mode="+button_value;
+	}
+}
+</script>
+<style type="text/css">
+.button_unchecked {
+	border: 2px outset #3498db;
+	background: #3498db;
+	background-image: -webkit-linear-gradient(top, #3498db, #2980b9);
+	background-image: -moz-linear-gradient(top, #3498db, #2980b9);
+	background-image: -ms-linear-gradient(top, #3498db, #2980b9);
+	background-image: -o-linear-gradient(top, #3498db, #2980b9);
+	background-image: linear-gradient(to bottom, #3498db, #2980b9);
+	padding: 4px;
+	
+	font-size: 120%;
+	font-weight: bold;
+}
+.button_checked {
+	border: 2px inset #3498db;
+	background: #3498db;
+	background-image: -webkit-linear-gradient(top, #3498db, #2980b9);
+	background-image: -moz-linear-gradient(top, #3498db, #2980b9);
+	background-image: -ms-linear-gradient(top, #3498db, #2980b9);
+	background-image: -o-linear-gradient(top, #3498db, #2980b9);
+	background-image: linear-gradient(to bottom, #3498db, #2980b9);
+	padding: 4px;
+	
+	font-size: 120%;
+	font-weight: bold;
+}
+</style>
+</head>
+
+<!-- END OF MASTER HEADER -->
+
+<!--SECOND SECTION: Lists Subsections for Questions below-->
+<body style="background-color:white">
+<div class="main_div">
+<h1 style="color:black";><a name="top"></a>Pulse Sequences Quiz</h1>
+<div style="font-size: 140%; font-family: sans-serif">
+<ul>
+	<li><a href="#0">MR Signals</a></li>
+	<li><a href="#1">Spin Echo and Inversion Recovery</a></li>
+	<li><a href="#2">Gradient Echo and Susceptibility</a></li>
+	<li><a href="#3">Diffusion</a></li>
+             <li><a href="#4">Fat-Water</a></li>
+
+</ul>
+
+<!-- Note the numbering of these subsections as they have a href values of #0, #1, #2, etc. These numbers are needed so that clicking on the index file takes you to the proper place in the web page identified on the 20 BLANK QUESTIONS script.-->
+
+
+
+</div>
+
+
+</div>
+
+
+
+</div>
+
+<div><div id="512277411165278663" align="left" style="width: 100%; overflow-y: hidden;" class="wcustomhtml"><!-- ###############NEW QUIZ SUBSECTION ##################-->
+
+<hr style="1px solid black">
+<!-- Creates optional line above new Quiz Subsection Title ---->
+
+<h1 style="color:black";><a name="0"></a>MR SIGNALS</h1>
+
+<!-- The Section Name and its corresponding number (here 0) which has an href in the index must be changed/filled in.  Note that the first section is identified as “0” here only;  and the second section is denoted “2”, etc. 
+
+This is confusing because subsequently it is denoted as Section 1 and reference to all questions in this section begin with a 1.  However, the first question of Section 1 is called question 0, presumably to assist in scoring.
+
+Thus, the first question of Section 1 is denoted as q_1_0 and its second question is denoted q_1_1.	
+
+When a second section of Questions is added, this is called Section 2 with first and second questions denoted q_2_0 and q_2_1. 
+
+Each section has counting variables corresponding to each question. So the counting variables  are denoted c_1_0 for the Section 1/first question, while c_2_1 counts for Section 2/second question. -->
+
+<!-- FOR THE PURPOSES OF THIS DOCUMENT WE WILL CONSIDER ALL QUESTIONS TO REFER TO SECTION MRSIGNALS and are numbered consecutively. THE WORD DOCUMENT CAN THEN BE PUT INTO PROPER FORM BY “SEARCH AND REPLACE MRSIGNALS BY THE APPROPRIATE SECTION NUMBER”-->
+
+
+<!-- ################ SECTION M, QUIZ QUESTION  1############## -->
+
+<ol><li style="margin-top: 8px"> The MR signal generated by a single RF-pulse is called a
+<ol type="a" id="q_MRSIGNALS_0">
+<li id="correct_MRSIGNALS_0"><input type=radio name="c_MRSIGNALS_0" id="c_MRSIGNALS_0"> Free induction decay (FID)
+</li>
+
+<li ><input type=radio name="c_MRSIGNALS_0" > Spin echo (SE)
+</li>
+		
+<li ><input type=radio name="c_MRSIGNALS_0" > Gradient echo (GRE)
+</li>
+
+		
+<li ><input type=radio name="c_MRSIGNALS_0" > Stimulated echo (STE)
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_MRSIGNALS_0" onclick="showAnswer('MRSIGNALS_0')" value="Show Answer"></p>
+				
+<p class="explan" id="a_MRSIGNALS_0"> The FID is produced by a single RF-pulse as the tipped nuclear magnetization precesses around <b>B<sub>o</sub></b> and generates current in the receiver coil via induction (Faraday-Lenz Law).
+<a href="/free-induction-decay.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+
+<!-- ################ SECTION MRSIGNALS, QUIZ QUESTION  2############## -->
+
+<li style="margin-top: 8px"> Concerning the FID, which of the following is true?
+<ol type="a" id="q_MRSIGNALS_1">
+
+<li ><input type=radio name="c_MRSIGNALS_1" > It oscillates indefinitely at the resonance frequency
+</li>
+		
+
+<li id="correct_MRSIGNALS_1"><input type=radio name="c_MRSIGNALS_1" id="c_MRSIGNALS_1"> It decays with time constant T2*
+</li>
+<li ><input type=radio name="c_MRSIGNALS_1" > It increases in amplitude with time constant T1
+</li>
+		
+<li ><input type=radio name="c_MRSIGNALS_1" >  It is generated by a perfect 180º pulse
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_MRSIGNALS_1" onclick="showAnswer('MRSIGNALS_1')" value="Show Answer"></p>
+				
+<p class="explan" id="a_MRSIGNALS_1"> The FID is a damped sinusoidal oscillation at the resonance frequency that decays with time constant T2*.
+<a href="/free-induction-decay.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION MRSIGNALS, QUIZ QUESTION  3############## -->
+
+<li style="margin-top: 8px"> If a magnetic field gradient is turned on immediately after an RF pulse, what happens to the MR signal?
+<ol type="a" id="q_MRSIGNALS_2">
+
+<li ><input type=radio name="c_MRSIGNALS_2" > It becomes a free induction decay (FID)
+</li>
+		
+<li ><input type=radio name="c_MRSIGNALS_2" > It remains unchanged
+</li>
+
+<li id="correct_MRSIGNALS_2"><input type=radio name="c_MRSIGNALS_2" id="c_MRSIGNALS_2"> It dies out quickly
+</li>
+		
+<li ><input type=radio name="c_MRSIGNALS_2" >  It becomes refocused into a gradient echo (GRE)
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_MRSIGNALS_2" onclick="showAnswer('MRSIGNALS_2')" value="Show Answer"></p>
+				
+<p class="explan" id="a_MRSIGNALS_2"> The initial MR signal is already synonymous with the FID (choice <i>a</i> is false). Turning on a gradient during the FID causes it to decay more quickly than it would by T2* processes alone (choice <i>c</i> is correct). A second, later applied gradient with opposite polarity is required to generate a GRE.
+<a href="/ gradient-echo.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION MRSIGNALS, QUIZ QUESTION  4############## -->
+<li style="margin-top: 8px"> Another name for a gradient echo is a
+<ol type="a" id="q_MRSIGNALS_3">
+<li id="correct_MRSIGNALS_3"><input type=radio name="c_MRSIGNALS_3" id="c_MRSIGNALS_3"> Field echo
+</li>
+
+<li ><input type=radio name="c_MRSIGNALS_3" > RF echo
+</li>
+		
+<li ><input type=radio name="c_MRSIGNALS_3" > Spin echo
+</li>
+
+		
+<li ><input type=radio name="c_MRSIGNALS_3" >  Stimulated echo
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_MRSIGNALS_3" onclick="showAnswer('MRSIGNALS_3')" value="Show Answer"></p>
+				
+<p class="explan" id="a_MRSIGNALS_3"> Less commonly used, field echo (FE) is the correct answer. Some manufacturers, including Philips and Canon, use FE or FFE (fast field echo) to name their gradient echo sequences. Another synonym is gradient-recalled echo (GRE).
+<a href="/gradient-echo.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+
+
+
+<!-- ################ SECTION MRSIGNALS, QUIZ QUESTION  5############## -->
+
+<li style="margin-top: 8px"> What happens if a gradient is turned on after the FID has spontaneously decayed?
+<ol type="a" id="q_MRSIGNALS_4">
+
+<li ><input type=radio name="c_MRSIGNALS_4" > A gradient recalled echo is produced.
+</li>
+		
+<li ><input type=radio name="c_MRSIGNALS_4" > A spin echo is produced.
+</li>
+<li ><input type=radio name="c_MRSIGNALS_4" >  The FID is partially regenerated.
+</li>
+
+<li id="correct_MRSIGNALS_4"><input type=radio name="c_MRSIGNALS_4" id="c_MRSIGNALS_4"> Nothing.</li>
+		
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_MRSIGNALS_4" onclick="showAnswer('MRSIGNALS_4')" value="Show Answer"></p>
+				
+<p class="explan" id="a_MRSIGNALS_4"> Once the FID has spontaneously decayed by T2* processes, no signal can be recovered by action of a gradient.
+<a href="/gradient-echo.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION MRSIGNALS, QUIZ QUESTION  6############## -->
+
+<li style="margin-top: 8px"> The first lobe of a gradient applied during a simple GRE imaging sequence is called the
+<ol type="a" id="q_MRSIGNALS_5">
+
+		
+<li ><input type=radio name="c_MRSIGNALS_5" > Readout gradient.
+</li>
+
+<li id="correct_MRSIGNALS_5"><input type=radio name="c_MRSIGNALS_5" id="c_MRSIGNALS_5"> Dephasing gradient.
+</li>
+<li ><input type=radio name="c_MRSIGNALS_5" > Rephasing gradient.
+</li>
+		
+<li ><input type=radio name="c_MRSIGNALS_5" >  Bipolar gradient.
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_MRSIGNALS_5" onclick="showAnswer('MRSIGNALS_5')" value="Show Answer"></p>
+				
+<p class="explan" id="a_MRSIGNALS_5"> The first step in a GRE sequence is to dephase the FID, so this lobe is referred to as the “dephasing gradient”.  The dephasing gradient results in accelerated dephasing beyond normal T2* processes with 'squelching/ scrambling' of the FID.
+<a href="/gradient-echo.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION MRSIGNALS, QUIZ QUESTION  7############## -->
+
+<li style="margin-top: 8px"> The rephasing gradient refocuses spins that have been dephased by
+<ol type="a" id="q_MRSIGNALS_6">
+<li id="correct_MRSIGNALS_6"><input type=radio name="c_MRSIGNALS_6" id="c_MRSIGNALS_6"> The dephasing gradient only
+</li>
+
+<li ><input type=radio name="c_MRSIGNALS_6" > T2 only
+</li>
+		
+<li ><input type=radio name="c_MRSIGNALS_6" > T2* only
+</li>
+
+		
+<li ><input type=radio name="c_MRSIGNALS_6" >  The dephasing gradient, T2, and T2*
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_MRSIGNALS_6" onclick="showAnswer('MRSIGNALS_6')" value="Show Answer"></p>
+				
+<p class="explan" id="a_MRSIGNALS_6"> The rephasing gradient only refocuses spins scrambled by the dephasing gradient itself. T2 and T2* processes are unaffected and contribute to continued signal loss <a href="/gradient-echo.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+	
+<!-- ################ SECTION MRSIGNALS, QUIZ QUESTION  8############## -->
+
+<li style="margin-top: 8px"> Spin echoes were first described by
+<ol type="a" id="q_MRSIGNALS_7">
+
+<li ><input type=radio name="c_MRSIGNALS_7" > Felix Bloch
+</li>
+		
+<li ><input type=radio name="c_MRSIGNALS_7" > Edward Purcell
+</li>
+<li ><input type=radio name="c_MRSIGNALS_7" >  Isador Rabi
+</li>
+
+<li id="correct_MRSIGNALS_7"><input type=radio name="c_MRSIGNALS_7" id="c_MRSIGNALS_7"> Erwin Hahn
+</li>
+		
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_MRSIGNALS_7" onclick="showAnswer('MRSIGNALS_7')" value="Show Answer"></p>
+				
+<p class="explan" id="a_MRSIGNALS_7"> Erwin Hahn discovered spin echoes while a graduate student in 1949.
+<a href="/spin-echo1.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION MRSIGNALS, QUIZ QUESTION  9############## -->
+
+<li style="margin-top: 8px"> A single spin echo is produced by
+<ol type="a" id="q_MRSIGNALS_8">
+
+<li ><input type=radio name="c_MRSIGNALS_8" > A single RF-pulse
+</li>
+		
+<li ><input type=radio name="c_MRSIGNALS_8" > A single RF-pulse plus gradient reversal
+</li>
+
+<li id="correct_MRSIGNALS_8"><input type=radio name="c_MRSIGNALS_8" id="c_MRSIGNALS_8"> Two RF-pulses
+</li>
+		
+<li ><input type=radio name="c_MRSIGNALS_8" >  Three RF-pulses
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_MRSIGNALS_8" onclick="showAnswer('MRSIGNALS_8')" value="Show Answer"></p>
+				
+<p class="explan" id="a_MRSIGNALS_8"> A single RF pulse generates a free induction decay (FID), but two successive RF pulses produce a spin echo (SE).  
+
+<a href="/spin-echo1.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+<!-- ################ SECTION MRSIGNALS, QUIZ QUESTION  10############## -->
+
+<li style="margin-top: 8px"> In a spin echo pulse sequence, the time between the middle of the first RF-pulse and the peak of the spin echo is 
+<ol type="a" id="q_MRSIGNALS_9">
+
+<li ><input type=radio name="c_MRSIGNALS_9" > TR
+</li>
+		
+
+<li id="correct_MRSIGNALS_9"><input type=radio name="c_MRSIGNALS_9" id="c_MRSIGNALS_9"> TE
+</li>
+<li ><input type=radio name="c_MRSIGNALS_9" > TE/2
+</li>
+		
+<li ><input type=radio name="c_MRSIGNALS_9" >  TI
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_MRSIGNALS_9" onclick="showAnswer('MRSIGNALS_9')" value="Show Answer"></p>
+				
+<p class="explan" id="a_MRSIGNALS_9"> The time between the middle of the first RF pulse and the peak of the spin echo is called the echo time (TE).  
+<a href="/spin-echo1.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+<!-- ################ SECTION MRSIGNALS, QUIZ QUESTION  11############## -->
+
+<li style="margin-top: 8px"> In a spin echo pulse sequence, the time between the first and second RF-pulses is
+<ol type="a" id="q_MRSIGNALS_10">
+
+<li ><input type=radio name="c_MRSIGNALS_10" > TR
+</li>
+		
+<li ><input type=radio name="c_MRSIGNALS_10" > TE
+</li>
+
+<li id="correct_MRSIGNALS_10"><input type=radio name="c_MRSIGNALS_10" id="c_MRSIGNALS_10"> TE/2
+</li>
+		
+<li ><input type=radio name="c_MRSIGNALS_10" >  TI
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_MRSIGNALS_10" onclick="showAnswer('MRSIGNALS_10')" value="Show Answer"></p>
+				
+<p class="explan" id="a_MRSIGNALS_10"> The spin echo occurs at time TE, which is twice the interpulse spacing. So the correct answer is TE/2<a href="/spin-echo1.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+		
+
+
+
+
+
+<!-- ################ SECTION MRSIGNALS, QUIZ QUESTION  12############## -->
+
+<li style="margin-top: 8px"> Spin-echoes for imaging are often produced using a 90º-pulse followed by a 180º-pulse. What would happen if the second pulse were changed to 90º?
+<ol type="a" id="q_MRSIGNALS_11">
+
+<li ><input type=radio name="c_MRSIGNALS_11" > No echo would be produced.
+</li>
+		
+<li ><input type=radio name="c_MRSIGNALS_11" > A normal sized echo would be produced at a time 2 x TE
+</li>
+
+<li id="correct_MRSIGNALS_11"><input type=radio name="c_MRSIGNALS_11" id="c_MRSIGNALS_11"> An echo half as large would be produced at time TE
+</li>
+		
+<li ><input type=radio name="c_MRSIGNALS_11" >  An echo half as large would be produced at time 2 x TE
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_MRSIGNALS_11" onclick="showAnswer('MRSIGNALS_11')" value="Show Answer"></p>
+				
+<p class="explan" id="a_MRSIGNALS_11"> A 90º-90º RF pair was what Erwin Hahn originally used, and the resultant echo is often known as a Hahn echo.  A Hahn echo will be formed from any two arbitrary RF pulses at time TE, with magnitude reduced depending on the angles chosen. The maximum SE intensity of a 90°-90° pair is only half as large as that produced by a 90°-180° pair.
+<a href="/90deg-90deg-hahn-echo.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+<!-- ################ SECTION MRSIGNALS, QUIZ QUESTION  13############## -->
+
+<li style="margin-top: 8px"> Which spin-echo pulse pair would be expected to produce the largest signal?
+<ol type="a" id="q_MRSIGNALS_12">
+
+<li ><input type=radio name="c_MRSIGNALS_12" > 90º-90º
+</li>
+		
+
+<li id="correct_MRSIGNALS_12"><input type=radio name="c_MRSIGNALS_12" id="c_MRSIGNALS_12"> 90º-180º
+</li>
+		
+<li ><input type=radio name="c_MRSIGNALS_12" >  180º-90º
+</li>
+<li ><input type=radio name="c_MRSIGNALS_12" > 180º-180º
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_MRSIGNALS_12" onclick="showAnswer('MRSIGNALS_12')" value="Show Answer"></p>
+				
+<p class="explan" id="a_MRSIGNALS_12"> The reason 90°-180° pairs are most commonly used is that this combination produces the maximum possible echo signal. The maximum SE intensity of a 90°-90° pair is only half as large as that produced by a 90°-180° pair. In general, if the first RF-pulse has flip angle α<sub>1</sub> and the second has flip angle α<sub>2</sub>, the maximum signal intensity of the Hahn echo will be smaller than the conventional (90°-180°) echo by a factor of  (sin α<sub>1</sub>)•(sin² α<sub>2</sub>/2).
+<a href="/90deg-90deg-hahn-echo.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION MRSIGNALS, QUIZ QUESTION  14############## -->
+
+<li style="margin-top: 8px"> How many echoes may a series of 3 closely spaced successive RF-pulses produce?
+<ol type="a" id="q_MRSIGNALS_13">
+
+<li ><input type=radio name="c_MRSIGNALS_13" > 3
+</li>
+		
+<li ><input type=radio name="c_MRSIGNALS_13" > 4
+</li>
+
+<li id="correct_MRSIGNALS_13"><input type=radio name="c_MRSIGNALS_13" id="c_MRSIGNALS_13"> 5
+</li>
+		
+<li ><input type=radio name="c_MRSIGNALS_13" >  6
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_MRSIGNALS_13" onclick="showAnswer('MRSIGNALS_13')" value="Show Answer"></p>
+				
+<p class="explan" id="a_MRSIGNALS_13"> Three RF-pulses can produce up to 5 spin echoes: 3 primary, one secondary, and one stimulated.
+<a href="/stimulated-echoes.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION MRSIGNALS, QUIZ QUESTION  15############## -->
+
+<li style="margin-top: 8px"> Of these, how many are considered to be “stimulated” echoes?
+<ol type="a" id="q_MRSIGNALS_14">
+<li id="correct_MRSIGNALS_14"><input type=radio name="c_MRSIGNALS_14" id="c_MRSIGNALS_14"> 1 </li>
+
+<li ><input type=radio name="c_MRSIGNALS_14" > 2</li>
+		
+<li ><input type=radio name="c_MRSIGNALS_14" > None of them
+</li>
+
+		
+<li ><input type=radio name="c_MRSIGNALS_14" >  All of them
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_MRSIGNALS_14" onclick="showAnswer('MRSIGNALS_14')" value="Show Answer"></p>
+				
+<p class="explan" id="a_MRSIGNALS_14"> Only 1 stimulated echo is produced by 3 RF pulses.
+<a href="/stimulated-echoes.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+<!-- ################ SECTION MRSIGNALS, QUIZ QUESTION 16############## -->
+
+<li style="margin-top: 8px"> A sample placed in a static magnetic field develops an initial longitudinal magnetization <i>M<sub>o</sub></i>. It is then subjected to series of RF-pulses equally spaced apart by time TR. If TR>>T1, what can be said about <i>M<sub>z</sub></i>, the longitudinal magnetization immediately <u>before</u> each subsequent RF-pulse?
+
+<ol type="a" id="q_MRSIGNALS_15">
+
+<li ><input type=radio name="c_MRSIGNALS_15" > It cannot be predicted.
+</li>
+		
+
+<li id="correct_MRSIGNALS_15"><input type=radio name="c_MRSIGNALS_15" id="c_MRSIGNALS_15"> It is the same as <i>M<sub>o</sub></i>.
+</li>
+<li ><input type=radio name="c_MRSIGNALS_15" > It is larger than <i>M<sub>o</sub></i>.
+</li>
+		
+<li ><input type=radio name="c_MRSIGNALS_15" >  It is smaller than <i>M<sub>o</sub></i>.
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_MRSIGNALS_15" onclick="showAnswer('MRSIGNALS_15')" value="Show Answer"></p>
+				
+<p class="explan" id="a_MRSIGNALS_15"> If TR is sufficiently long (the usual requirement is TR > 4-5x T1), the longitudinal magnetization will have time to completely recover and be restored to its full initial magnetization <i>M<sub>o</sub></i> at the time of the next RF-pulse. 
+<a href="4-or-more-rf-pulses.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION MRSIGNALS, QUIZ QUESTION  17############## -->
+
+<li style="margin-top: 8px"> A sample placed in a static magnetic field develops an initial longitudinal magnetization <i>M<sub>o</sub></i>. It is then subjected to series of RF-pulses equally spaced apart by time TR. If T2* < TR < T1, what can be said about <i>M<sub>z</sub></i>, the longitudinal magnetization immediately <u>before</u> each subsequent RF-pulse?
+<ol type="a" id="q_MRSIGNALS_16">
+
+<li ><input type=radio name="c_MRSIGNALS_16" > It cannot be predicted.
+</li>
+		
+<li ><input type=radio name="c_MRSIGNALS_16" > It is the same as <i>M<sub>o</sub></i>.
+</li>
+<li ><input type=radio name="c_MRSIGNALS_16" >  It is larger than <i>M<sub>o</sub></i>.
+</li>
+
+<li id="correct_MRSIGNALS_16"><input type=radio name="c_MRSIGNALS_16" id="c_MRSIGNALS_16"> It is smaller than <i>M<sub>o</sub></i>.
+</li>
+		
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_MRSIGNALS_16" onclick="showAnswer('MRSIGNALS_16')" value="Show Answer"></p>
+				
+<p class="explan" id="a_MRSIGNALS_16"> In this scenario, TR is now the same or shorter than T1. Here the second and subsequent pulses occur before the longitudinal magnetization has returned to its initial value (<i>M<sub>o</sub></i>). After a few pulses a new steady-state longitudinal magnetization (<i>M<sub>ss</sub></i>) will be established, where <i>M<sub>ss</sub></i>) < <i>M<sub>o</sub></i>.
+<a href="/4-or-more-rf-pulses.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+<!-- ################ SECTION MRSIGNALS, QUIZ QUESTION  18############## -->
+
+<li style="margin-top: 8px"> The above situation (in Question 17) is known as
+<ol type="a" id="q_MRSIGNALS_17">
+<li id="correct_MRSIGNALS_17"><input type=radio name="c_MRSIGNALS_17" id="c_MRSIGNALS_17"> Partial saturation
+</li>
+
+<li ><input type=radio name="c_MRSIGNALS_17" > Complete saturation
+</li>
+		
+<li ><input type=radio name="c_MRSIGNALS_17" > Steady-state free precession
+</li>
+
+		
+<li ><input type=radio name="c_MRSIGNALS_17" >  Incomplete magnetic equilibrium
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_MRSIGNALS_17" onclick="showAnswer('MRSIGNALS_17')" value="Show Answer"></p>
+				
+<p class="explan" id="a_MRSIGNALS_17"> This phenomenon is called partial saturation, meaning that the spin system has not fully relaxed back to its equilibrium condition.
+<a href="/4-or-more-rf-pulses.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+		
+
+<!-- ################ SECTION MRSIGNALS, QUIZ QUESTION  19############## -->
+
+<li style="margin-top: 8px"> A sample placed in a static magnetic field develops an initial longitudinal magnetization <i>M<sub>o</sub></i>. It is then subjected to series of RF-pulses equally spaced apart by time TR. If T2* < TR < T1, what can be said about <i>M<sup>xy</sup></i>, the transverse magnetization, midway between subsequent RF-pulses?
+<ol type="a" id="q_MRSIGNALS_18">
+
+<li ><input type=radio name="c_MRSIGNALS_18" > It cannot be predicted.
+</li>
+<li ><input type=radio name="c_MRSIGNALS_18" >  It is the same as <i>M<sub>o</sub></i>.
+</li>
+		
+<li ><input type=radio name="c_MRSIGNALS_18" > It is smaller than <i>M<sub>o</sub></i> but not zero.
+</li>
+
+<li id="correct_MRSIGNALS_18"><input type=radio name="c_MRSIGNALS_18" id="c_MRSIGNALS_18"> It is zero.
+</li>
+		
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_MRSIGNALS_18" onclick="showAnswer('MRSIGNALS_18')" value="Show Answer"></p>
+				
+<p class="explan" id="a_MRSIGNALS_18"> The sample is partially saturated, as noted in question #17, reaching a new non-zero steady-state longitudinal magnetization, <i>M<sub>ss</sub></i>) < <i>M<sub>o</sub></i>. But because TR > T2*, complete decay of the transverse magnetization occurs midway between each pair of RF-pulses, so the answer is zero (d).
+<a href="/4-or-more-rf-pulses.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+<!-- ################ SECTION MRSIGNALS, QUIZ QUESTION  20############## -->
+
+<li style="margin-top: 8px"> Same scenario as Question #19, but here TR<T2*.  What can then be said about the transverse magnetization <i>M<sup>xy</sup></i> midway between each pair of pulses?
+
+<ol type="a" id="q_MRSIGNALS_19">
+
+<li ><input type=radio name="c_MRSIGNALS_19" > It cannot be predicted.
+</li>
+		
+<li ><input type=radio name="c_MRSIGNALS_19" > It is the same as <i>M<sub>o</sub></i>.
+</li>
+
+<li id="correct_MRSIGNALS_19"><input type=radio name="c_MRSIGNALS_19" id="c_MRSIGNALS_19"> It is smaller than <i>M<sub>o</sub></i> but not zero.
+</li>
+		
+<li ><input type=radio name="c_MRSIGNALS_19" >  It is zero.
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_MRSIGNALS_19" onclick="showAnswer('MRSIGNALS_19')" value="Show Answer"></p>
+				
+<p class="explan" id="a_MRSIGNALS_19"> In this situation with TR so short, the transverse magnetization <i>M<sup>xy</sup></i> does not fully decay between RF pulses, reaching a non-zero value less than <i>M<sub>o</sub></i>.
+
+<a href="/4-or-more-rf-pulses.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+		
+<!-- ################ SECTION MRSIGNALS, QUIZ QUESTION  21############## -->
+
+<li style="margin-top: 8px"> The above situation is known as
+<ol type="a" id="q_MRSIGNALS_20">
+
+<li ><input type=radio name="c_MRSIGNALS_20" > Partial saturation
+</li>
+		
+<li ><input type=radio name="c_MRSIGNALS_20" > Complete saturation
+</li>
+
+<li id="correct_MRSIGNALS_20"><input type=radio name="c_MRSIGNALS_20" id="c_MRSIGNALS_20"> Steady-state free precession
+</li>
+		
+<li ><input type=radio name="c_MRSIGNALS_20" >  Complete magnetic equilibrium
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_MRSIGNALS_20" onclick="showAnswer('MRSIGNALS_20')" value="Show Answer"></p>
+				
+<p class="explan" id="a_MRSIGNALS_20"> If TR is made even shorter (≤T2*) the FID following each RF-pulse does not completely die out before the SE/STE component begins to form. The tails of the FIDs and SE/STEs merge together. In this situation the transverse signal never completely disappears and the result is called a steady state free precession (SSFP).
+<a href="/4-or-more-rf-pulses.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+
+
+		
+<!-- ################ SECTION MRSIGNALS, QUIZ QUESTION  22############## -->
+
+<li style="margin-top: 8px"> If the initial longitudinal magnetization of a sample is <i>M<sub>o</sub></i>, what is the <u>longitudinal</u> magnetization immediately after a 90º-pulse?
+
+<ol type="a" id="q_MRSIGNALS_21">
+
+<li ><input type=radio name="c_MRSIGNALS_21" > <i>M<sub>o</sub></i>
+</li>
+		
+<li ><input type=radio name="c_MRSIGNALS_21" > −<i>M<sub>o</sub></i>
+</li>
+<li ><input type=radio name="c_MRSIGNALS_21" >  ½ <i>M<sub>o</sub></i>
+</li>
+
+<li id="correct_MRSIGNALS_21"><input type=radio name="c_MRSIGNALS_21" id="c_MRSIGNALS_21"> Zero
+</li>
+		
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_MRSIGNALS_21" onclick="showAnswer('MRSIGNALS_21')" value="Show Answer"></p>
+				
+<p class="explan" id="a_MRSIGNALS_21"> After an ideal 90º-pulse the longitudinal magnetization should be zero.
+<a href="/partial-flip-angles.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+
+
+
+
+		
+<!-- ################ SECTION MRSIGNALS, QUIZ QUESTION  23############## -->
+
+<li style="margin-top: 8px"> If the initial longitudinal magnetization of a sample is <i>M<sub>o</sub></i>, what is the <u>transverse</u> magnetization immediately after a 90º-pulse?
+
+<ol type="a" id="q_MRSIGNALS_22">
+<li id="correct_MRSIGNALS_22"><input type=radio name="c_MRSIGNALS_22" id="c_MRSIGNALS_22"> <i>M<sub>o</sub></i>
+</li>
+
+<li ><input type=radio name="c_MRSIGNALS_22" > −<i>M<sub>o</sub></i>
+</li>
+		
+<li ><input type=radio name="c_MRSIGNALS_22" > ½ <i>M<sub>o</sub></i>
+</li>
+
+		
+<li ><input type=radio name="c_MRSIGNALS_22" >  Zero
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_MRSIGNALS_22" onclick="showAnswer('MRSIGNALS_22')" value="Show Answer"></p>
+				
+<p class="explan" id="a_MRSIGNALS_22"> After an ideal 90º-pulse all the longitudinal magnetization should be converted to transverse.
+<a href="/partial-flip-angles.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+
+
+
+		
+<!-- ################ SECTION MRSIGNALS, QUIZ QUESTION  24############## -->
+
+<li style="margin-top: 8px"> If the initial longitudinal magnetization of a sample is <i>M<sub>o</sub></i>, what are the <u>longitudinal</u> (<i>M<sub>z</sub></i>) and <u>transverse</u> (<i>M<sub>z</sub></i>) magnetizations
+ immediately after a <i>45</i>º-pulse?
+<ol type="a" id="q_MRSIGNALS_23">
+
+<li ><input type=radio name="c_MRSIGNALS_23" > About 90% of <i>M<sub>o</sub></i>
+</li>
+		
+
+<li id="correct_MRSIGNALS_23"><input type=radio name="c_MRSIGNALS_23" id="c_MRSIGNALS_23"> About 70% of <i>M<sub>o</sub></i>
+</li>
+<li ><input type=radio name="c_MRSIGNALS_23" > About 50% of <i>M<sub>o</sub></i>
+</li>
+		
+<li ><input type=radio name="c_MRSIGNALS_23" >  About 10% of <i>M<sub>o</sub></i>
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_MRSIGNALS_23" onclick="showAnswer('MRSIGNALS_23')" value="Show Answer"></p>
+				
+<p class="explan" id="a_MRSIGNALS_23"> From trigonometric identities we see that when a magnetization vector initially aligned with the z-axis is flipped by angle α, the transverse and longitudinal components of magnetization after the flip will be [<i>M<sub>o</sub></i>
+ sin α] and [<i>M<sub>o</sub></i> cos α], respectively. For α=45º, sin 45º = cos 45º = 1/√2 ≈ 0.707. So about 70% of <i>M<sub>o</sub></i> is the correct answer (b).
+<a href="/ partial-flip-angles.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+<!-- ################ SECTION MRSIGNALS, QUIZ QUESTION  25############## -->
+
+<li style="margin-top: 8px"> The flip angle that maximizes MR signal from a tissue in a GRE sequence without transverse coherences is known as the
+<ol type="a" id="q_MRSIGNALS_24">
+
+<li ><input type=radio name="c_MRSIGNALS_24" > Hahn angle
+</li>
+		
+<li ><input type=radio name="c_MRSIGNALS_24" > Bloch angle
+</li>
+<li ><input type=radio name="c_MRSIGNALS_24" >  Purcell angle
+</li>
+
+<li id="correct_MRSIGNALS_24"><input type=radio name="c_MRSIGNALS_24" id="c_MRSIGNALS_24"> Ernst angle
+</li>
+		
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_MRSIGNALS_24" onclick="showAnswer('MRSIGNALS_24')" value="Show Answer"></p>
+				
+<p class="explan" id="a_MRSIGNALS_24"> Named after Richard R. Ernst, who received the Nobel Prize in Chemistry in 1991 for his discovery.
+<a href="/optimal-flip-angle.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+
+
+
+<!-- ################ SECTION MRSIGNALS, QUIZ QUESTION  26############## -->
+
+<li style="margin-top: 8px"> When is the Ernst (optimal flip) angle approximately equal to 90º?
+<ol type="a" id="q_MRSIGNALS_25">
+<li id="correct_MRSIGNALS_25"><input type=radio name="c_MRSIGNALS_25" id="c_MRSIGNALS_25"> When TR >> T1
+</li>
+
+<li ><input type=radio name="c_MRSIGNALS_25" > When TR ≈ T1
+</li>
+		
+<li ><input type=radio name="c_MRSIGNALS_25" > When TR << T1
+</li>
+
+		
+<li ><input type=radio name="c_MRSIGNALS_25" >  Never
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_MRSIGNALS_25" onclick="showAnswer('MRSIGNALS_25')" value="Show Answer"></p>
+				
+<p class="explan" id="a_MRSIGNALS_25"> The Ernst angle (<i>α<sub>E</sub></i>) can be calculated from the equation, <i>α<sub>E</sub></i> = arccos (<i>e<sup>−TR/T1</i>). It reaches its maximum of 90º only when TR >> T1.
+<a href="/optimal-flip-angle.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+
+
+				 
+
+
+
+
+
+
+
+<!--##################################################-->
+<!--############SCORING SECTION Needs to go at end of each subsection-->
+
+</ol><p><input type=button id="show_all_MRSIGNALS" onclick="showAllAnswers('MRSIGNALS')" value="Show All Answers for Section"><span style="font-weight: bold" id="scoretxt_MRSIGNALS"></span></p>
+<p><a href="#top">Back to top of page</a></p></div>
+<!--END OF SCORING SECTION-->
+
+
+
+</div>
+
+
+
+</div>
+
+<div><div id="272386788958915706" align="left" style="width: 100%; overflow-y: hidden;" class="wcustomhtml"><!-- ###############NEW QUIZ SUBSECTION ##################-->
+
+<hr style="1px solid black">
+<!-- Creates optional line above new Quiz Subsection Title ---->
+
+<h1 style="color:black";><a name="1"></a>SPIN ECHO AND INVERSION RECOVERY</h1>
+
+<!-- The Section Name and its corresponding number (here 0) which has an href in the index must be changed/filled in.  Note that the first section is identified as “0” here only;  and the second section is denoted “2”, etc. 
+
+This is confusing because subsequently it is denoted as Section 1 and reference to all questions in this section begin with a 1.  However, the first question of Section 1 is called question 0, presumably to assist in scoring.
+
+Thus, the first question of Section 1 is denoted as q_1_0 and its second question is denoted q_1_1.	
+
+When a second section of Questions is added, this is called Section 2 with first and second questions denoted q_2_0 and q_2_1. 
+
+Each section has counting variables corresponding to each question. So the counting variables  are denoted c_1_0 for the Section 1/first question, while c_2_1 counts for Section 2/second question. -->
+
+<!-- FOR THE PURPOSES OF THIS DOCUMENT WE WILL CONSIDER ALL QUESTIONS TO REFER TO SECTION SEIR and are numbered consecutively. THE WORD DOCUMENT CAN THEN BE PUT INTO PROPER FORM BY “SEARCH AND REPLACE SEIR BY THE APPROPRIATE SECTION NUMBER”-->
+
+
+<!-- ################ SECTION M, QUIZ QUESTION  1############## -->
+
+<ol><li style="margin-top: 8px"> In a spin-echo pulse sequences the 180°-pulse refocuses spins dephased by 
+<ol type="a" id="q_SEIR_0">
+<li id="correct_SEIR_0"><input type=radio name="c_SEIR_0" id="c_SEIR_0"> Magnetic field inhomogeneities
+</li>
+
+<li ><input type=radio name="c_SEIR_0" > Diffusion
+</li>
+		
+<li ><input type=radio name="c_SEIR_0" > T2 processes
+</li>
+
+		
+<li ><input type=radio name="c_SEIR_0" > All of the above
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_SEIR_0" onclick="showAnswer('SEIR_0')" value="Show Answer"></p>
+				
+<p class="explan" id="a_SEIR_0"> The 180°-pulse allows refocusing of nonmoving spins whose phases have been scattered by constant field distortions and inhomogeneities. The pulse does not correct for T1 or true T2 effects due to random processes at the atomic/molecular level. It does not correct for phase shifts of spins that move, flow, diffuse or undergo chemical exchange.
+<a href="/se-vs-multi-se-vs-fse.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+
+<!-- ################ SECTION SEIR, QUIZ QUESTION  2############## -->
+
+<li style="margin-top: 8px"> Comparing Multi-echo Spin Echo (MSE) and Fast (Turbo) Spin Echo (FSE), which of the following statements is false?
+<ol type="a" id="q_SEIR_1">
+
+<li ><input type=radio name="c_SEIR_1" > Both MSE and FSE use more than one 180°-pulses during each TR interval.
+</li>
+		
+<li ><input type=radio name="c_SEIR_1" > MSE uses only one phase-encoding gradient during each TR interval.
+</li>
+<li ><input type=radio name="c_SEIR_1" >  FSE applies the phase-encoding gradient multiple times during each TR interval.
+</li>
+
+<li id="correct_SEIR_1"><input type=radio name="c_SEIR_1" id="c_SEIR_1"> The echo amplitude decreases with successive 180°-pulses in both MSE and FSE imaging.
+</li>
+		
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_SEIR_1" onclick="showAnswer('SEIR_1')" value="Show Answer"></p>
+				
+<p class="explan" id="a_SEIR_1"> In FSE different phase-encoding gradients are being applied with each 180°-pulse, so the amplitude of the echo may vary depending on the phase-encode step.  In MSE the phase-encoding gradient is turned on only once in each TR interval, so successive echoes become reduced in signal intensity.
+<a href="/se-vs-multi-se-vs-fse.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION SEIR, QUIZ QUESTION  3############## -->
+
+<li style="margin-top: 8px"> Which of the following spin-echo parameter selections would produce a proton-density-weighted image?
+<ol type="a" id="q_SEIR_2">
+
+<li ><input type=radio name="c_SEIR_2" > TR = 500, TE = 10
+</li>
+		
+<li ><input type=radio name="c_SEIR_2" > TR = 500, TE = 100
+</li>
+
+<li id="correct_SEIR_2"><input type=radio name="c_SEIR_2" id="c_SEIR_2"> TR = 5000, TE = 10
+</li>
+		
+<li ><input type=radio name="c_SEIR_2" >  TR = 5000, TE = 100
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_SEIR_2" onclick="showAnswer('SEIR_2')" value="Show Answer"></p>
+				
+<p class="explan" id="a_SEIR_2"> Answer c), a long TR and short TE are used to produce a proton-density-weighted image.
+<a href="/image-contrast-trte.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION SEIR, QUIZ QUESTION  4############## -->
+<li style="margin-top: 8px"> A spin-echo sequence using a short TR and long TE produces
+<ol type="a" id="q_SEIR_3">
+
+<li ><input type=radio name="c_SEIR_3" > A T1-weighted image
+</li>
+		
+<li ><input type=radio name="c_SEIR_3" > A T2-weigthed image
+</li>
+<li ><input type=radio name="c_SEIR_3" >  A PD-weighed image
+</li>
+
+<li id="correct_SEIR_3"><input type=radio name="c_SEIR_3" id="c_SEIR_3"> A noisy low contrast image
+</li>
+		
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_SEIR_3" onclick="showAnswer('SEIR_3')" value="Show Answer"></p>
+				
+<p class="explan" id="a_SEIR_3"> The correct answer is d). So this combination is seldom used.
+<a href="/image-contrast-trte.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+
+
+
+ 
+<!-- ################ SECTION SEIR, QUIZ QUESTION  5############## -->
+
+<li style="margin-top: 8px"> Tissues or lesions with long values of T1 and T2 are typically
+<ol type="a" id="q_SEIR_4">
+
+<li ><input type=radio name="c_SEIR_4" > Bright on T1-weighted SE images
+</li>
+		
+
+<li id="correct_SEIR_4"><input type=radio name="c_SEIR_4" id="c_SEIR_4"> Bright on T2-weighted SE images
+</li>
+<li ><input type=radio name="c_SEIR_4" > Bright on both T1- and T2-weighted SE images
+</li>
+		
+<li ><input type=radio name="c_SEIR_4" >  Dark on both T1- and T2-weighted SE images 
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_SEIR_4" onclick="showAnswer('SEIR_4')" value="Show Answer"></p>
+				
+<p class="explan" id="a_SEIR_4"> Such lesions are typically bright on T2-weighted images and dark on T1-weighted images.
+<a href="/image-contrast-trte.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION SEIR, QUIZ QUESTION  6############## -->
+
+<li style="margin-top: 8px"> By alternating the phase of 180°-pulse transmission, the CPMG (Carr-Purcell-Meiboom-Gill) modification of the spin-echo pulse sequence
+<ol type="a" id="q_SEIR_5">
+
+
+		
+<li ><input type=radio name="c_SEIR_5" > Reduces cumulative phase errors from repetitive imperfect 180°-pulses.
+</li>
+
+		
+<li ><input type=radio name="c_SEIR_5" >  Reduces artifacts due to B1 inhomogentity effects.
+</li>
+<li ><input type=radio name="c_SEIR_5" >  Improves estimation of T2 values
+</li>
+<li ><input type=radio name="c_SEIR_5" > None of the above</li>
+	<li id="correct_SEIR_5"><input type=radio name="c_SEIR_5" id="c_SEIR_5"> All of the above
+</li>
+	
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_SEIR_5" onclick="showAnswer('SEIR_5')" value="Show Answer"></p>
+				
+<p class="explan" id="a_SEIR_5"> Developed in 1958, the CPMG technique is still used in multi-echo spin echo sequences for all the reasons listed.
+<a href="/direction-of-180deg-pulse.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION SEIR, QUIZ QUESTION  7############## -->
+
+<li style="margin-top: 8px"> In the Inversion Recovery (IR) spin-echo pulse sequence, the inversion time (TI) is defined as
+<ol type="a" id="q_SEIR_6">
+<li id="correct_SEIR_6"><input type=radio name="c_SEIR_6" id="c_SEIR_6"> The time between the first 180°-pulse and first 90°-pulse
+</li>
+
+<li ><input type=radio name="c_SEIR_6" > The time between the first 180°-pulse and the echo
+</li>
+		
+<li ><input type=radio name="c_SEIR_6" > The time between the two 180°-pulses in each TR interval
+</li>
+
+		
+<li ><input type=radio name="c_SEIR_6" >  The time between the first 90°-pulse and second 180°-pulse
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_SEIR_6" onclick="showAnswer('SEIR_6')" value="Show Answer"></p>
+				
+<p class="explan" id="a_SEIR_6">Answer a) is the definition of TI. <a href="/what-is-ir.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+	
+<!-- ################ SECTION SEIR, QUIZ QUESTION  8############## -->
+
+<li style="margin-top: 8px"> Advantages of IR techniques include
+<ol type="a" id="q_SEIR_7">
+
+<li ><input type=radio name="c_SEIR_7" > Shorter scan times
+</li>
+		
+<li ><input type=radio name="c_SEIR_7" > Decrease in flow-related artifacts
+</li>
+
+<li id="correct_SEIR_7"><input type=radio name="c_SEIR_7" id="c_SEIR_7"> Additive T1 and T2 contrast
+</li>
+		
+<li ><input type=radio name="c_SEIR_7" >  Lower specific absorption rate (SAR)
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_SEIR_7" onclick="showAnswer('SEIR_7')" value="Show Answer"></p>
+				
+<p class="explan" id="a_SEIR_7"> In conventional SE imaging combined T1 and T2 effects are generally competitive, meaning that ↑T1 generally results in decreased signal intensity while ↑T2 results in increased intensity.  In IR imaging by the appropriate choice of TR, T1 and T2 effects can be separated and made to be additive.
+<a href="/why-use-ir.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION SEIR, QUIZ QUESTION  9############## -->
+
+<li style="margin-top: 8px"> On a magnitude-reconstructed IR image obtained at 1.5 T, which inversion time would be useful for suppressing fat?
+<ol type="a" id="q_SEIR_8">
+<li id="correct_SEIR_8"><input type=radio name="c_SEIR_8" id="c_SEIR_8"> TI = 170
+</li>
+
+<li ><input type=radio name="c_SEIR_8" > TI = 450
+</li>
+		
+<li ><input type=radio name="c_SEIR_8" > TI = 980
+</li>
+
+		
+<li ><input type=radio name="c_SEIR_8" >  TI = 2000
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_SEIR_8" onclick="showAnswer('SEIR_8')" value="Show Answer"></p>
+				
+<p class="explan" id="a_SEIR_8"> For most tissues the null point typically occurs when TI ≈ 0.69 x T1.  For fat with a T1 value at 1.5 T of approximately 250, this corresponds to a TI of approximately 170 ms.
+
+<a href="/why-use-ir.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+<!-- ################ SECTION SEIR, QUIZ QUESTION  10############## -->
+
+<li style="margin-top: 8px"> Which of the following statements concerning phase-sensitive inversion recovery (PSIR) is false?
+<ol type="a" id="q_SEIR_9">
+
+<li ><input type=radio name="c_SEIR_9" > Short T1 tissues always have a signal brighter than long T1 tissues, regardless of TI.
+</li>
+		
+
+<li id="correct_SEIR_9"><input type=radio name="c_SEIR_9" id="c_SEIR_9"> Background air always appears black.
+</li>
+<li ><input type=radio name="c_SEIR_9" > Selective nulling of tissues by adjusting TI is not possible as it is for magnitude-reconstructed IR.
+</li>
+		
+<li ><input type=radio name="c_SEIR_9" >  It is useful for assessing pediatric myelination and myocardial contrast enhancement.
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_SEIR_9" onclick="showAnswer('SEIR_9')" value="Show Answer"></p>
+				
+<p class="explan" id="a_SEIR_9"> Phase-sensitive IR preserves the information about the polarity of the longitudinal magnetization after the 180°(inverting)-pulse, with more negative values rendered increasingly darker. Background air is generally rendered a middle shade of gray, not black. Short T1 tissues are always brighter than long T1 tissues, but both can be darker than air at short TI’s. Common applications are in pediatric and cardiac imaging.
+
+<a href="/phase-sensitive-ir.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+<!-- ################ SECTION SEIR, QUIZ QUESTION  11############## -->
+
+<li style="margin-top: 8px"> Concerning the null point value (TI<sub>null</sub>) for a given tissue in magnitude-reconstructed IR, which statement is false?
+<ol type="a" id="q_SEIR_10">
+
+<li ><input type=radio name="c_SEIR_10" > TI<sub>null</sub> increases with increasing field strength.
+</li>
+		
+<li ><input type=radio name="c_SEIR_10" > TI<sub>null</sub> increases with increasing T1 value
+</li>
+
+<li id="correct_SEIR_10"><input type=radio name="c_SEIR_10" id="c_SEIR_10"> For long TR, TI<sub>null</sub> ≈  0.69 x T2.
+</li>
+		
+<li ><input type=radio name="c_SEIR_10" >  TI<sub>null</sub> depends on whether the signal is generated by a conventional spin-echo or fast spin-echo sequence.
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_SEIR_10" onclick="showAnswer('SEIR_10')" value="Show Answer"></p>
+				
+<p class="explan" id="a_SEIR_10"> For TR>>T1, TI<sub>null</sub> = T1 • (ln 2) ≈ 0.69 x T1, (not 0.69 x T2, so answer <i>c</i> is false). Because tissue T1 increases with field strength, TI<sub>null</sub> does also. TI<sub>null</sub> depends on echo time of the last echo in a FSE sequence.
+<a href="/ti-to-null-a-tissue.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+		
+
+
+
+
+
+<!-- ################ SECTION SEIR, QUIZ QUESTION  12############## -->
+
+<li style="margin-top: 8px"> Which of the following statements about the Short TI Inversion Recovery (STIR) sequence is false?
+<ol type="a" id="q_SEIR_11">
+
+<li ><input type=radio name="c_SEIR_11" > It is a very useful technique for fat saturation.
+</li>
+		
+
+<li id="correct_SEIR_11"><input type=radio name="c_SEIR_11" id="c_SEIR_11"> It is a very useful technique for detecting gadolinium enhancement.
+</li>
+<li ><input type=radio name="c_SEIR_11" > It has additive T1 and T2 effects.
+</li>
+		
+<li ><input type=radio name="c_SEIR_11" >  It is especially useful in lower field permanent magnets with relatively poor homogeneity.
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_SEIR_11" onclick="showAnswer('SEIR_11')" value="Show Answer"></p>
+				
+<p class="explan" id="a_SEIR_11"> STIR cannot be used as a fat suppression technique post-gadolinium. STIR does not specifically suppress fat; it only suppresses tissues with T1 values in the range of fat (200-300 ms), so gadolinium enhancement would be suppressed.
+<a href="/stir.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+<!-- ################ SECTION SEIR, QUIZ QUESTION  13############## -->
+
+<li style="margin-top: 8px"> Which of the following pulse sequence parameters might be used to create a T1-FLAIR brain image? 
+<ol type="a" id="q_SEIR_12">
+<li id="correct_SEIR_12"><input type=radio name="c_SEIR_12" id="c_SEIR_12"> TR = 2500, TE = 10, TI = 900
+</li>
+
+<li ><input type=radio name="c_SEIR_12" > TR = 2500, TE = 50, TI = 180
+</li>
+		
+<li ><input type=radio name="c_SEIR_12" > TR = 4000, TE = 80, TI = 1800
+</li>
+
+		
+<li ><input type=radio name="c_SEIR_12" >  TR = 8000, TE = 100, TI = 2500
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_SEIR_12" onclick="showAnswer('SEIR_12')" value="Show Answer"></p>
+				
+<p class="explan" id="a_SEIR_12"> Answer (a) is correct. Answer (b) would be considered a STIR image, while (c) and (d) would be T2-FLAIR images.
+<a href="/t1-flair.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION SEIR, QUIZ QUESTION  14############## -->
+
+<li style="margin-top: 8px"> Double Inversion Recovery (DIR) sequences for brain imaging utilize two different TI values, which typically suppress
+<ol type="a" id="q_SEIR_13">
+
+<li ><input type=radio name="c_SEIR_13" > Fat and CSF
+</li>
+		
+
+<li id="correct_SEIR_13"><input type=radio name="c_SEIR_13" id="c_SEIR_13"> CSF and white matter
+</li>
+<li ><input type=radio name="c_SEIR_13" > CSF and gray matter 
+</li>
+		
+<li ><input type=radio name="c_SEIR_13" >  Gray matter and white matter
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_SEIR_13" onclick="showAnswer('SEIR_13')" value="Show Answer"></p>
+				
+<p class="explan" id="a_SEIR_13"> DIR brain imaging is particularly useful for detecting lesions of the white matter and cortex. Typically the first 180°-pulse suppresses CSF and the second suppresses white matter. 
+<a href="/double-ir.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+
+
+
+
+
+
+
+
+<!--##################################################-->
+<!--############SCORING SECTION Needs to go at end of each subsection-->
+
+</ol><p><input type=button id="show_all_SEIR" onclick="showAllAnswers('SEIR')" value="Show All Answers for Section"><span style="font-weight: bold" id="scoretxt_SEIR"></span></p>
+<p><a href="#top">Back to top of page</a></p></div>
+<!--END OF SCORING SECTION-->
+
+
+
+</div>
+
+
+
+
+<div><div id="294748313588655546" align="left" style="width: 100%; overflow-y: hidden;" class="wcustomhtml"><!-- ###############NEW QUIZ SUBSECTION ##################-->
+
+<hr style="1px solid black">
+<!-- Creates optional line above new Quiz Subsection Title ---->
+
+<h1 style="color:black";><a name="2"></a>Gradient Echo and Susceptibility</h1>
+
+<!-- The Section Name and its corresponding number (here 0) which has an href in the index must be changed/filled in.  Note that the first section is identified as “0” here only;  and the second section is denoted “2”, etc. 
+
+This is confusing because subsequently it is denoted as Section 1 and reference to all questions in this section begin with a 1.  However, the first question of Section 1 is called question 0, presumably to assist in scoring.
+
+Thus, the first question of Section 1 is denoted as q_1_0 and its second question is denoted q_1_1.	
+
+When a second section of Questions is added, this is called Section 2 with first and second questions denoted q_2_0 and q_2_1. 
+
+Each section has counting variables corresponding to each question. So the counting variables  are denoted c_1_0 for the Section 1/first question, while c_2_1 counts for Section 2/second question. -->
+
+<!-- FOR THE PURPOSES OF THIS DOCUMENT WE WILL CONSIDER ALL QUESTIONS TO REFER TO SECTION GRADSUS and are numbered consecutively. THE WORD DOCUMENT CAN THEN BE PUT INTO PROPER FORM BY “SEARCH AND REPLACE GRADSUS BY THE APPROPRIATE SECTION NUMBER”-->
+
+
+<!-- ################ SECTION M, QUIZ QUESTION  1############## -->
+
+<ol><li style="margin-top: 8px"> Which of the following is <u>not</u> an advantage of gradient echo imaging over spin-echo imaging?
+<ol type="a" id="q_GRADSUS_0">
+
+<li ><input type=radio name="c_GRADSUS_0" > Shorter TEs
+</li>
+		
+<li ><input type=radio name="c_GRADSUS_0" > Shorter TRs
+</li>
+<li ><input type=radio name="c_GRADSUS_0" > Reduced flow artifacts
+</li>
+
+<li id="correct_GRADSUS_0"><input type=radio name="c_GRADSUS_0" id="c_GRADSUS_0"> Reduced susceptibility artifacts
+</li>
+		
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_GRADSUS_0" onclick="showAnswer('GRADSUS_0')" value="Show Answer"></p>
+				
+<p class="explan" id="a_GRADSUS_0">Phase shifts resulting from magnetic field inhomogeneities, static tissue susceptibility gradients, or chemical shifts are not cancelled at the center of the GRE as they are in SE sequences.  Image contrast is therefore dictated not by true T2-relaxation, but by these other factors which constitute T2*. GRE sequences are therefore more frequently troubled by susceptibility and chemical shift artifacts and do not function well on scanners whose magnetic fields lack homogeneity<a href="/gre-vs-se.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+
+<!-- ################ SECTION GRADSUS, QUIZ QUESTION  2############## -->
+
+<li style="margin-top: 8px"> Concerning multi-echo GRE, which statement is true?
+<ol type="a" id="q_GRADSUS_1">
+
+<li ><input type=radio name="c_GRADSUS_1" > The peak value of successive echoes is determined by the T2 decay of the tissue imaged.
+</li>
+<li ><input type=radio name="c_GRADSUS_1" > The peak value of successive echoes echo is determined by the T1 value of the tissue imaged.
+</li>
+		
+
+<li id="correct_GRADSUS_1"><input type=radio name="c_GRADSUS_1" id="c_GRADSUS_1"> One common application is for fat-water imaging.
+</li>
+		
+<li ><input type=radio name="c_GRADSUS_1" >  Each successive echo must be preceded by its own RF-pulse.
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_GRADSUS_1" onclick="showAnswer('GRADSUS_1')" value="Show Answer"></p>
+				
+<p class="explan" id="a_GRADSUS_1"> The peak value of successive echoes is determined by the T2* decay (not T2 decay) of the tissue imaged (options <i>a</i> and <i>b</i> are false). One common application of multi-echo GRE is for acquiring fat-water "in-phase" and "out-of-phase" images using two different TE's (options <i>c</i> is true). Only one RF pulse is used for the entire chain of echoes (option <i>d</i> is false).
+
+<a href="/multi-echo-gre.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION GRADSUS, QUIZ QUESTION  3############## -->
+
+<li style="margin-top: 8px"> Which is not a technique for gradient echo spoiling?
+<ol type="a" id="q_GRADSUS_2">
+<li id="correct_GRADSUS_2"><input type=radio name="c_GRADSUS_2" id="c_GRADSUS_2"> Use of very short TR
+</li>
+		
+
+<li ><input type=radio name="c_GRADSUS_2" > Use of 2D multislice mode
+</li>
+		
+<li ><input type=radio name="c_GRADSUS_2" > Use of a variable spoiler gradient
+</li>
+
+<li ><input type=radio name="c_GRADSUS_2" >  Semirandom phase change of the RF-carrier wave
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_GRADSUS_2" onclick="showAnswer('GRADSUS_2')" value="Show Answer"></p>
+				
+<p class="explan" id="a_GRADSUS_2"> All are valid spoiling methods except choice (a). Long TR values produce “natural” spoiling, not short TRs.  When TR>>T2*, the transverse magnetization will naturally decay to zero by the end of the cycle.  Thus any gradient echo sequence using TR values of several hundred milliseconds will no longer have appreciable transverse coherences and be “spoiled”.
+
+<a href="/spoiling---what-and-how.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION GRADSUS, QUIZ QUESTION  4############## -->
+<li style="margin-top: 8px"> A spoiled GRE sequence with TR = 10, TE = 3, and α = 50º would be considered primarily
+<ol type="a" id="q_GRADSUS_3">
+<li id="correct_GRADSUS_3"><input type=radio name="c_GRADSUS_3" id="c_GRADSUS_3"> T1-weighted
+</li>
+
+<li ><input type=radio name="c_GRADSUS_3" > T2-weighted
+</li>
+		
+<li ><input type=radio name="c_GRADSUS_3" > T2*-weighted
+</li>
+
+		
+<li ><input type=radio name="c_GRADSUS_3" >  Proton-density-weighted
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_GRADSUS_3" onclick="showAnswer('GRADSUS_3')" value="Show Answer"></p>
+				
+<p class="explan" id="a_GRADSUS_3"> Short TR and large α accentuate T1-weighted imaging.
+<a href="/spoiled-gre-parameters.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+
+
+
+ 
+<!-- ################ SECTION GRADSUS, QUIZ QUESTION  5############## -->
+
+<li style="margin-top: 8px"> A spoiled GRE sequence with TR = 1000, TE = 30, and α = 5º would be considered primarily
+<ol type="a" id="q_GRADSUS_4">
+
+<li ><input type=radio name="c_GRADSUS_4" > T1-weighted
+</li>
+		
+<li ><input type=radio name="c_GRADSUS_4" > T2-weighted
+</li>
+
+<li id="correct_GRADSUS_4"><input type=radio name="c_GRADSUS_4" id="c_GRADSUS_4"> T2*-weighted
+</li>
+		
+<li ><input type=radio name="c_GRADSUS_4" >  Proton-density-weighted
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_GRADSUS_4" onclick="showAnswer('GRADSUS_4')" value="Show Answer"></p>
+				
+<p class="explan" id="a_GRADSUS_4"> Long TR and small α minimize T1 weighting, while long TE accentuates T2* weighting.
+
+spoiled-gre-parameters.html
+<a href="/spoiled-gre-parameters.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION GRADSUS, QUIZ QUESTION  6############## -->
+
+<li style="margin-top: 8px"> A spoiled GRE sequence with TR = 1000, TE = 2, and α = 5º would be considered primarily
+<ol type="a" id="q_GRADSUS_5">
+
+<li ><input type=radio name="c_GRADSUS_5" > T1-weighted
+</li>
+		
+<li ><input type=radio name="c_GRADSUS_5" > T2-weighted
+</li>
+<li ><input type=radio name="c_GRADSUS_5" >  T2*-weighted
+</li>
+
+<li id="correct_GRADSUS_5"><input type=radio name="c_GRADSUS_5" id="c_GRADSUS_5"> Proton-density-weighted
+</li>
+		
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_GRADSUS_5" onclick="showAnswer('GRADSUS_5')" value="Show Answer"></p>
+				
+<p class="explan" id="a_GRADSUS_5"> Long TR and small α minimize T1 weighting, while short TE minimizes T2* weighting. This leaves the image more proton-density weighted than the other examples. 
+<a href="/spoiled-gre-parameters.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION GRADSUS, QUIZ QUESTION  7############## -->
+
+<li style="margin-top: 8px"> In a spoiled GRE sequence, a low flip angle (α)
+<ol type="a" id="q_GRADSUS_6">
+<li id="correct_GRADSUS_6"><input type=radio name="c_GRADSUS_6" id="c_GRADSUS_6"> Minimizes T1 weighting
+</li>
+
+<li ><input type=radio name="c_GRADSUS_6" > Accentuates T1 weighting
+</li>
+		
+<li ><input type=radio name="c_GRADSUS_6" > Minimizes T2* weighting
+</li>
+
+<li id="correct_GRADSUS_6"><input type=radio name="c_GRADSUS_6" id="c_GRADSUS_6"> Minimizes proton density weighting
+</li>
+		
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_GRADSUS_6" onclick="showAnswer('GRADSUS_6')" value="Show Answer"></p>
+				
+<p class="explan" id="a_GRADSUS_6"> Flip angle (α) controls T1-weighting. A small flip angle minimizes T1-weighting because the longitudinal magnetizations of various tissues are not differentiated much by such a small angular displacement. Hence at small flip angles, [H] and T2* effects predominate. Conversely, as α → 90º, T1-weighting increases.
+<a href="/spoiled-gre-parameters.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+	
+<!-- ################ SECTION GRADSUS, QUIZ QUESTION  8############## -->
+
+<li style="margin-top: 8px"> In a spoiled GRE sequence, a long TE
+<ol type="a" id="q_GRADSUS_7">
+
+<li ><input type=radio name="c_GRADSUS_7" > Maximizes T2 weighting
+</li>
+		
+
+<li id="correct_GRADSUS_7"><input type=radio name="c_GRADSUS_7" id="c_GRADSUS_7"> Maximizes T2* weighting
+</li>
+		
+<li ><input type=radio name="c_GRADSUS_7" >  Minimizes T2 weighting
+</li>
+<li ><input type=radio name="c_GRADSUS_7" > Minimizes T2* weighting
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_GRADSUS_7" onclick="showAnswer('GRADSUS_7')" value="Show Answer"></p>
+				
+<p class="explan" id="a_GRADSUS_7"> T2*-weighting increases as TE is prolonged. This is because a longer TE allows more time for dephasing before echo formation.
+<a href="/spoiled-gre-parameters.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION GRADSUS, QUIZ QUESTION  9############## -->
+
+<li style="margin-top: 8px"> Which of the following SSFP pulse sequences is considered “balanced”?
+<ol type="a" id="q_GRADSUS_8">
+<li id="correct_GRADSUS_8"><input type=radio name="c_GRADSUS_8" id="c_GRADSUS_8"> TrueFISP/FIESTA
+</li>
+
+<li ><input type=radio name="c_GRADSUS_8" > FISP/GRASS/FFE
+</li>
+		
+<li ><input type=radio name="c_GRADSUS_8" > DESS/MENSA
+</li>
+
+		
+<li ><input type=radio name="c_GRADSUS_8" >  PSIF/T2-FFE
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_GRADSUS_8" onclick="showAnswer('GRADSUS_8')" value="Show Answer"></p>
+				
+<p class="explan" id="a_GRADSUS_8"> Sequences such as TrueFISP (Siemens) and FIESTA (GE) sample both FID-like and Echo-like SSFP signals and are considered “balanced”.
+<a href="/what-is-ssfp.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+<!-- ################ SECTION GRADSUS, QUIZ QUESTION  10############## -->
+
+<li style="margin-top: 8px"> Which of the following is <u>not</u> a condition for a SSFP signal to exist?
+<ol type="a" id="q_GRADSUS_9">
+<li id="correct_GRADSUS_9"><input type=radio name="c_GRADSUS_9" id="c_GRADSUS_9"> TR must be longer than T2.
+</li>
+
+<li ><input type=radio name="c_GRADSUS_9" > Phase shifts caused by gradients must be constant from cycle to cycle.
+</li>
+		
+<li ><input type=radio name="c_GRADSUS_9" > Field inhomogeneities must be static.
+</li>
+
+		
+<li ><input type=radio name="c_GRADSUS_9" >  Spins must be stationary or motion-compensated.
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_GRADSUS_9" onclick="showAnswer('GRADSUS_9')" value="Show Answer"></p>
+				
+<p class="explan" id="a_GRADSUS_9"> Choice (a) is incorrect. TR must be significantly shorter (not longer) than T2, or else natural decay processes will destroy the transverse coherence. 
+
+<a href="/what-is-ssfp.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+<!-- ################ SECTION GRADSUS, QUIZ QUESTION  11############## -->
+
+<li style="margin-top: 8px"> Concerning “coherent” gradient echo sequences like GRASS/FISP, which statement is false?
+<ol type="a" id="q_GRADSUS_10">
+
+<li ><input type=radio name="c_GRADSUS_10" > If TR is long compared to T2*, the contrast resembles that of a spoiled GRE sequence.
+</li>
+		
+<li ><input type=radio name="c_GRADSUS_10" > TE controls T2* weighting.
+</li>
+
+<li id="correct_GRADSUS_10"><input type=radio name="c_GRADSUS_10" id="c_GRADSUS_10"> Small flip angles (α) produce T1-weighted images.
+</li>
+		
+<li ><input type=radio name="c_GRADSUS_10" >  Large flip angles produce images that are weighted by T2/T1.
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_GRADSUS_10" onclick="showAnswer('GRADSUS_10')" value="Show Answer"></p>
+				
+<p class="explan" id="a_GRADSUS_10"> Choice (c) is incorrect. A small flip angle minimizes T1-weighting because the longitudinal magnetizations of various tissues are not differentiated much by such a small angular displacement. Hence at small flip angles, [H] and T2* effects predominate.
+
+<a href="/grassfisp-parameters.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+		
+
+
+
+
+
+<!-- ################ SECTION GRADSUS, QUIZ QUESTION  12############## -->
+
+<li style="margin-top: 8px"> An important tissue weighting present in balanced SSFP sequences like True FISP and FIESTA is
+<ol type="a" id="q_GRADSUS_11">
+
+<li ><input type=radio name="c_GRADSUS_11" > T1
+</li>
+		
+<li ><input type=radio name="c_GRADSUS_11" > T2*
+</li>
+<li ><input type=radio name="c_GRADSUS_11" >  T1 + T2
+</li>
+
+<li id="correct_GRADSUS_11"><input type=radio name="c_GRADSUS_11" id="c_GRADSUS_11"> T2/T1
+</li>
+		
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_GRADSUS_11" onclick="showAnswer('GRADSUS_11')" value="Show Answer"></p>
+				
+<p class="explan" id="a_GRADSUS_11"> True FISP sequences behave more like spin echo than gradient echo sequences in that they do not have T2*-dependence. Also, since TR is nearly always much, much shorter than T1 or T2, the signal intensity is related to the ratio T2/T1.
+<a href="/true-fispfiesta.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+<!-- ################ SECTION GRADSUS, QUIZ QUESTION  13############## -->
+
+<li style="margin-top: 8px"> Excluding fluids (like urine, blood, and CSF), which of the following tissues is the brightest on balanced SSFP sequences like True FISP and FIESTA?
+
+<ol type="a" id="q_GRADSUS_12">
+<li id="correct_GRADSUS_12"><input type=radio name="c_GRADSUS_12" id="c_GRADSUS_12"> Fat
+</li>
+
+<li ><input type=radio name="c_GRADSUS_12" > Myocardium
+</li>
+		
+<li ><input type=radio name="c_GRADSUS_12" > Liver
+</li>
+
+		
+<li ><input type=radio name="c_GRADSUS_12" > Brain </li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_GRADSUS_12" onclick="showAnswer('GRADSUS_12')" value="Show Answer"></p>
+				
+<p class="explan" id="a_GRADSUS_12"> Fat is the second brightest tissue on balanced SSFP images after pure fluids.
+<a href="/true-fispfiesta.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION GRADSUS, QUIZ QUESTION  14############## -->
+
+<li style="margin-top: 8px"> What is the explanation for the brightness of fluid and the tissue identified in the prior question?
+<ol type="a" id="q_GRADSUS_13">
+
+<li ><input type=radio name="c_GRADSUS_13" > The T2 values are long.
+</li>
+		
+<li ><input type=radio name="c_GRADSUS_13" > The T2* values are long.
+</li>
+
+<li id="correct_GRADSUS_13"><input type=radio name="c_GRADSUS_13" id="c_GRADSUS_13"> The T2/T1 ratios are large.
+</li>
+		
+<li ><input type=radio name="c_GRADSUS_13" >  The T1+T2 values are large.
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_GRADSUS_13" onclick="showAnswer('GRADSUS_13')" value="Show Answer"></p>
+				
+<p class="explan" id="a_GRADSUS_13"> Balanced SSFP sequences have the special property that their contrast is dependent not on just T1 or T2, but the ratio T2/T1. For most solid tissues, T1>>T2 so the T2/T1 ratio is small (< 0.10). The exceptions are fat (T2/T1 ≈ 0.30, due to its short T1) and fluids (T2/T1 ≈ 0.70, due to the fact that T1 and T2 are approximately equal).  
+<a href="/true-fispfiesta.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION GRADSUS, QUIZ QUESTION  15############## -->
+
+<li style="margin-top: 8px">TEXTFORquestion15<ol type="a" id="q_GRADSUS_14">
+
+<li ><input type=radio name="c_GRADSUS_14" > There is no substantial difference; just name changes for marketing purposes.
+</li>
+		
+<li ><input type=radio name="c_GRADSUS_14" > More phase banding artifacts are present in CISS and FIESTA-C.
+</li>
+<li ><input type=radio name="c_GRADSUS_14" >  CISS/FIESTA-C images are T1-weighted
+</li>
+
+<li id="correct_GRADSUS_14"><input type=radio name="c_GRADSUS_14" id="c_GRADSUS_14"> CISS/FIESTA-C consist of two balanced SSFP sequences run back-to-back.
+</li>
+		
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_GRADSUS_14" onclick="showAnswer('GRADSUS_14')" value="Show Answer"></p>
+				
+<p class="explan" id="a_GRADSUS_14"> FIESTA-C/CISS is composed of a pair of TrueFISP acquisitions run back-to-back preceded by an automatic shimming procedure. The first uses phase alternation of the RF-pulses (+α, −α, +α, −α, ...) while the second does not (+α, +α, +α, etc). When the paired data sets are combined in maximum intensity projection, the phase errors cancel, resulting in an image largely free of dispersion banding.
+
+<a href="/fiesta-v-fiesta-c.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+<!-- ################ SECTION GRADSUS, QUIZ QUESTION 16############## -->
+
+<li style="margin-top: 8px"> Which of the following statements about DESS (dual-echo steady state) is false?
+<ol type="a" id="q_GRADSUS_15">
+
+<li ><input type=radio name="c_GRADSUS_15" > Its main use is in musculoskeletal imaging.
+</li>
+		
+
+<li id="correct_GRADSUS_15"><input type=radio name="c_GRADSUS_15" id="c_GRADSUS_15"> It is insensitive to motion.
+</li>
+<li ><input type=radio name="c_GRADSUS_15" > FID-like and Echo-like signal components are recorded separately during a single TR interval. 
+</li>
+		
+<li ><input type=radio name="c_GRADSUS_15" >  Fluids are very bright while trabecular bone is very dark.
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_GRADSUS_15" onclick="showAnswer('GRADSUS_15')" value="Show Answer"></p>
+				
+<p class="explan" id="a_GRADSUS_15"> By means of a prolonged and unbalanced readout gradient, DESS generates the FID-like and Echo-like signals from the steady-state free precession individually. It then combines the signals on a pixel-by-pixel basis. DESS is very sensitive to motion, so option (b) is false.
+Its main use is in musculoskeletal imaging where joint fluid is bright and bone is dark.
+<a href="/dess.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION GRADSUS, QUIZ QUESTION  17############## -->
+
+<li style="margin-top: 8px"> Which of the following statements about the GRASE (Gradient and Spin Echo) pulse sequence is true?
+<ol type="a" id="q_GRADSUS_16">
+
+<li ><input type=radio name="c_GRADSUS_16" > It is a widely used sequence for routine head imaging.
+</li>
+		
+<li ><input type=radio name="c_GRADSUS_16" > Its tissue energy deposition (specific absorption rate) is higher than with conventional spin echo sequences.
+</li>
+
+<li id="correct_GRADSUS_16"><input type=radio name="c_GRADSUS_16" id="c_GRADSUS_16"> It is superior to conventional spin echo (CSE) or fast spin echo (FSE) for detecting calcifications and hemorrhages.
+</li>
+		
+<li ><input type=radio name="c_GRADSUS_16" > It is primarily used to generate T1-weighted images.
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_GRADSUS_16" onclick="showAnswer('GRADSUS_16')" value="Show Answer"></p>
+				
+<p class="explan" id="a_GRADSUS_16"> GRASE is a hybrid technique supposedly combines the best features of CSE and GRE imaging. The GRE contribution makes it useful for detecting calcification of blood (although less so than a pure GRE sequence). Its SAR is lower than a comparable fast spin-echo sequence because there are fewer RF-pulses. GRASE has never achieved much popularity as an imaging method.
+<a href="/grase.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+<!-- ################ SECTION GRADSUS, QUIZ QUESTION  18############## -->
+
+<li style="margin-top: 8px"> The SI unit for magnetic susceptibility (χ) <ol type="a" id="q_GRADSUS_17">
+
+<li ><input type=radio name="c_GRADSUS_17" > Tesla
+</li>
+		
+<li ><input type=radio name="c_GRADSUS_17" > Oersted
+</li>
+<li ><input type=radio name="c_GRADSUS_17" >  Ampere-meter
+</li>
+
+<li id="correct_GRADSUS_17"><input type=radio name="c_GRADSUS_17" id="c_GRADSUS_17"> Dimensionless
+</li>
+		
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_GRADSUS_17" onclick="showAnswer('GRADSUS_17')" value="Show Answer"></p>
+				
+<p class="explan" id="a_GRADSUS_17"> Magnetic susceptibility,  denoted by the Greek letter chi (χ), is defined as the magnitude of the internal polarization (J) divided by the strength of the external field (B). Since it is the ratio of two magnetic fields, susceptibility is a dimensionless number.
+<a href="/what-is-susceptibility-chi.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+		
+
+<!-- ################ SECTION GRADSUS, QUIZ QUESTION  19############## -->
+
+<li style="margin-top: 8px"> Concerning diamagnetism, which statement is false?
+<ol type="a" id="q_GRADSUS_18">
+
+<li ><input type=radio name="c_GRADSUS_18" > The internal magnetization/polarization of a diamagnetic substance opposes the applied field.
+</li>
+		
+
+<li id="correct_GRADSUS_18"><input type=radio name="c_GRADSUS_18" id="c_GRADSUS_18"> Diamagnetic substances have positive susceptibilities (χ > 0). 
+</li>
+<li ><input type=radio name="c_GRADSUS_18" > Water, and hence most tissues, are diamagnetic.
+</li>
+		
+<li ><input type=radio name="c_GRADSUS_18" >  Calcifications are diamagnetic.
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_GRADSUS_18" onclick="showAnswer('GRADSUS_18')" value="Show Answer"></p>
+				
+<p class="explan" id="a_GRADSUS_18"> Diamagnetic substances become polarized in a manner that opposes the applied magnetic field. They have negative, not positive, susceptibilities (option <i>b</i> is false). Water, calcifications, and most tissues are diamagnetic.
+<a href="/what-is-susceptibility-chi.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+<!-- ################ SECTION GRADSUS, QUIZ QUESTION  20############## -->
+
+<li style="margin-top: 8px"> Concerning paramagnetism, which statement is false?
+<ol type="a" id="q_GRADSUS_19">
+
+<li ><input type=radio name="c_GRADSUS_19" > The internal magnetization/polarization of a paramagnetic substance is in the same direction as the applied field.
+</li>
+		
+<li ><input type=radio name="c_GRADSUS_19" > Air is paramagnetic.
+</li>
+<li ><input type=radio name="c_GRADSUS_19" >  Gadolinium contrast material is paramagnetic.
+</li>
+
+<li id="correct_GRADSUS_19"><input type=radio name="c_GRADSUS_19" id="c_GRADSUS_19"> Most steels are paramagnetic.
+</li>
+		
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_GRADSUS_19" onclick="showAnswer('GRADSUS_19')" value="Show Answer"></p>
+				
+<p class="explan" id="a_GRADSUS_19"> Paramagnetic substances become polarized in a manner that augments the applied magnetic field. They have positive susceptibilities. Surprisingly, molecular oxygen is mildly paramagnetic, so air is as well. Gadolinium contrast is paramagnetic. Most steels are ferromagnetic, a phenomenon resembling, but many orders of magnitude greater than paramagnetism.
+<a href="/what-is-susceptibility-chi.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+		
+<!-- ################ SECTION GRADSUS, QUIZ QUESTION  21############## -->
+
+<li style="margin-top: 8px"> Which of the following 2D gradient echo sequences would be most useful for demonstrating small calcifications or hemorrhages in the brain?
+<ol type="a" id="q_GRADSUS_20">
+<li id="correct_GRADSUS_20"><input type=radio name="c_GRADSUS_20" id="c_GRADSUS_20"> TR = 800, TE = 30, α = 20°
+</li>
+
+<li ><input type=radio name="c_GRADSUS_20" > TR = 2000, TE = 10, α = 70°
+</li>
+		
+<li ><input type=radio name="c_GRADSUS_20" > TR = 60, TE = 3, α = 45°
+</li>
+
+		
+<li ><input type=radio name="c_GRADSUS_20" >  TR = 800, TE = 10, α = 45°
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_GRADSUS_20" onclick="showAnswer('GRADSUS_20')" value="Show Answer"></p>
+				
+<p class="explan" id="a_GRADSUS_20"> Hemorrhage/calcification GRE sequences are characteristically operated in 2D multi-slice mode using relatively long TR's and low flip angles (both minimizing T1 effects) and relatively long TE's (to accentuate T2* dependence). So choice (a) is the best answer.
+<a href="/whats-wrong-with-gre.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+
+
+		
+<!-- ################ SECTION GRADSUS, QUIZ QUESTION  22############## -->
+
+<li style="margin-top: 8px"> Concerning susceptibility-weighted imaging (SWI), which of the following is false?
+<ol type="a" id="q_GRADSUS_21">
+
+<li ><input type=radio name="c_GRADSUS_21" > SWI images are typically acquired in 3D rather than 2D mode.
+</li>
+		
+<li ><input type=radio name="c_GRADSUS_21" > Magnitude and phase information can be individually viewed or combined.
+</li>
+
+<li id="correct_GRADSUS_21"><input type=radio name="c_GRADSUS_21" id="c_GRADSUS_21"> SWI imaging is inferior to 3D GRE studies for detecting microhemorrhages and calcifications.
+</li>
+		
+<li ><input type=radio name="c_GRADSUS_21" >  SWI studies typically include minimum intensity images.
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_GRADSUS_21" onclick="showAnswer('GRADSUS_21')" value="Show Answer"></p>
+				
+<p class="explan" id="a_GRADSUS_21"> Multiple studies have shown that SWI imaging is <u>superior</u> to 3D GRE studies for detecting microhemorrhages and calcifications.
+<a href="/making-an-sw-image.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+
+
+
+
+		
+<!-- ################ SECTION GRADSUS, QUIZ QUESTION  23############## -->
+
+<li style="margin-top: 8px"> Concerning SWI phase map images, which statement is incorrect?
+<ol type="a" id="q_GRADSUS_22">
+
+<li ><input type=radio name="c_GRADSUS_22" > A lesion that is bright on a GE scanner will appear dark on a Siemens scanner.
+</li>
+		
+
+<li id="correct_GRADSUS_22"><input type=radio name="c_GRADSUS_22" id="c_GRADSUS_22"> Phase map images are displayed using a minimum intensity projection algorithm.
+</li>
+<li ><input type=radio name="c_GRADSUS_22" > If a venous sinus appears dark on a phase image, paramagnetic blood products will also be dark.
+</li>
+		
+<li ><input type=radio name="c_GRADSUS_22" >  The choroid plexus and pineal gland provide a good internal reference for diamagnetic substances.
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_GRADSUS_22" onclick="showAnswer('GRADSUS_22')" value="Show Answer"></p>
+				
+<p class="explan" id="a_GRADSUS_22"> Phase map images are rendered in a simple magnitude mode on a slice-by-slice basis, so option (b) is false. The "colors" (black or white) of diamagnetic and paramagnetic substances on SWI phase images are scanner- dependent, so reference to a known tissue (veins for paramagnetic, choroid plexus calcification for diamagnetic) are needed as an internal check. 
+<a href="/phase-of-blood-v-ca.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--##################################################-->
+<!--############SCORING SECTION Needs to go at end of each subsection-->
+
+</ol><p><input type=button id="show_all_GRADSUS" onclick="showAllAnswers('GRADSUS')" value="Show All Answers for Section"><span style="font-weight: bold" id="scoretxt_GRADSUS"></span></p>
+<p><a href="#top">Back to top of page</a></p></div>
+<!--END OF SCORING SECTION-->
+
+
+
+</div>
+
+
+
+
+<div><div id="302380945926392074" align="left" style="width: 100%; overflow-y: hidden;" class="wcustomhtml"><!-- ###############NEW QUIZ SUBSECTION ##################-->
+
+<hr style="1px solid black">
+<!-- Creates optional line above new Quiz Subsection Title ---->
+
+<h1 style="color:black";><a name="3"></a>Diffusion</h1>
+
+<!-- The Section Name and its corresponding number (here 0) which has an href in the index must be changed/filled in.  Note that the first section is identified as “0” here only;  and the second section is denoted “2”, etc. 
+
+This is confusing because subsequently it is denoted as Section 1 and reference to all questions in this section begin with a 1.  However, the first question of Section 1 is called question 0, presumably to assist in scoring.
+
+Thus, the first question of Section 1 is denoted as q_1_0 and its second question is denoted q_1_1.	
+
+When a second section of Questions is added, this is called Section 2 with first and second questions denoted q_2_0 and q_2_1. 
+
+Each section has counting variables corresponding to each question. So the counting variables  are denoted c_1_0 for the Section 1/first question, while c_2_1 counts for Section 2/second question. -->
+
+<!-- FOR THE PURPOSES OF THIS DOCUMENT WE WILL CONSIDER ALL QUESTIONS TO REFER TO SECTION DIFFQUIZ and are numbered consecutively. THE WORD DOCUMENT CAN THEN BE PUT INTO PROPER FORM BY “SEARCH AND REPLACE DIFFQUIZ BY THE APPROPRIATE SECTION NUMBER”-->
+
+
+<!-- ################ SECTION M, QUIZ QUESTION  1############## -->
+
+<ol><li style="margin-top: 8px"> The units for the diffusion coefficient (D) are
+<ol type="a" id="q_DIFFQUIZ_0">
+
+<li ><input type=radio name="c_DIFFQUIZ_0" > mm/sec
+</li>
+<li id="correct_DIFFQUIZ_0"><input type=radio name="c_DIFFQUIZ_0" id="c_DIFFQUIZ_0"> mm²/sec
+</li>
+		
+		
+<li ><input type=radio name="c_DIFFQUIZ_0" > mm³/sec
+</li>
+
+<li ><input type=radio name="c_DIFFQUIZ_0" > Dimensionless
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_DIFFQUIZ_0" onclick="showAnswer('DIFFQUIZ_0')" value="Show Answer"></p>
+				
+<p class="explan" id="a_DIFFQUIZ_0"> D reflects the flux of particles through a surface during a certain period of time, it therefore has units of area/time (e.g. mm²/sec).
+
+<a href="/what-is-diffusion.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+
+<!-- ################ SECTION DIFFQUIZ, QUIZ QUESTION  2############## -->
+
+<li style="margin-top: 8px"> According to the Stokes-Einstein equation, which of the following system changes would increase the diffusion coefficient?  (You should be able to reason this out even if you’ve forgotten the exact equation).
+<ol type="a" id="q_DIFFQUIZ_1">
+<li id="correct_DIFFQUIZ_1"><input type=radio name="c_DIFFQUIZ_1" id="c_DIFFQUIZ_1"> Increasing temperature
+</li>
+
+<li ><input type=radio name="c_DIFFQUIZ_1" > Increasing viscosity of the medium
+</li>
+		
+<li ><input type=radio name="c_DIFFQUIZ_1" > Increasing the size of the particles
+</li>
+<li ><input type=radio name="c_DIFFQUIZ_1" >  All of the above
+</li>
+
+		
+<li ><input type=radio name="c_DIFFQUIZ_1" >  None of the above
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_DIFFQUIZ_1" onclick="showAnswer('DIFFQUIZ_1')" value="Show Answer"></p>
+				
+<p class="explan" id="a_DIFFQUIZ_1"> Increasing temperature increases the kinetic energy and hence motion of the particles, so D is increased. Bigger particles and ones in more viscous media move more slowly, so D is decreased.
+<a href="/what-is-diffusion.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION DIFFQUIZ, QUIZ QUESTION  3############## -->
+
+<li style="margin-top: 8px"> Comparing the diffusion coefficients of water (D<sub>w</sub>) and biological tissues (D<sub>t</sub>), which statement is most accurate?
+<ol type="a" id="q_DIFFQUIZ_2">
+
+<li ><input type=radio name="c_DIFFQUIZ_2" > D<sub>w</sub> < D<sub>t</sub>
+</li>
+		
+<li ><input type=radio name="c_DIFFQUIZ_2" > D<sub>w</sub> and D<sub>t</sub> are almost exactly the same
+</li>
+
+<li id="correct_DIFFQUIZ_2"><input type=radio name="c_DIFFQUIZ_2" id="c_DIFFQUIZ_2"> D<sub>t</sub> is typically only 10-50% of D<sub>w</sub>
+</li>
+		
+<li ><input type=radio name="c_DIFFQUIZ_2" >  D<sub>t</sub> is typically less that 1% of D<sub>w</sub>
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_DIFFQUIZ_2" onclick="showAnswer('DIFFQUIZ_2')" value="Show Answer"></p>
+				
+<p class="explan" id="a_DIFFQUIZ_2"> The diffusion constant for pure water at body temperatures is approximately 3.0 x 10<sup>−3</sup> mm2/sec. The values of D for biological tissues are only 10-50% as long, perhaps 1.0 x 10<sup>−3</sup>mm2/sec on the average.
+<a href="/what-is-diffusion.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION DIFFQUIZ, QUIZ QUESTION  4############## -->
+<li style="margin-top: 8px"> How many elements are there in a first-order diffusion tensor for describing anisotropic materials?
+<ol type="a" id="q_DIFFQUIZ_3">
+
+<li ><input type=radio name="c_DIFFQUIZ_3" > 3
+</li>
+		
+<li ><input type=radio name="c_DIFFQUIZ_3" > 6
+</li>
+
+<li id="correct_DIFFQUIZ_3"><input type=radio name="c_DIFFQUIZ_3" id="c_DIFFQUIZ_3"> 9
+</li>
+		
+<li ><input type=radio name="c_DIFFQUIZ_3" >  12
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_DIFFQUIZ_3" onclick="showAnswer('DIFFQUIZ_3')" value="Show Answer"></p>
+				
+<p class="explan" id="a_DIFFQUIZ_3"> In anisotropic materials, diffusion cannot be described by a single number, but a [3 x 3] array called the diffusion tensor. The three diagonal elements (<i>D<sub>xx</sub></i>,  <i>D<sub>yy</sub></i>, and (<i>D<sub>zz</sub></i>) of the tensor represent diffusion coefficients measured in the laboratory frame of reference along each of the principal (x-, y- and z-) directions. The six off-diagonal terms (<i>D<sub>xy</sub></i>, <i>D<sub>yz</sub></i>, etc) reflect correlation between random motions corresponding to each pair of principal directions. 
+<a href="/iso-anisotropic-diffusion.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+
+
+<!-- ################ SECTION DIFFQUIZ, QUIZ QUESTION  5############## -->
+
+<li style="margin-top: 8px"> Modern diffusion-weighted pulse sequences all trace their origin to the pulsed gradient spin echo (PGSE) technique developed by
+<ol type="a" id="q_DIFFQUIZ_4">
+<li id="correct_DIFFQUIZ_4"><input type=radio name="c_DIFFQUIZ_4" id="c_DIFFQUIZ_4"> Stejskal and Tanner
+</li>
+
+<li ><input type=radio name="c_DIFFQUIZ_4" > Solomon and Blombergen
+</li>
+		
+<li ><input type=radio name="c_DIFFQUIZ_4" > Carr and Purcell
+</li>
+
+<li ><input type=radio name="c_DIFFQUIZ_4" >  Einstein and Stokes
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_DIFFQUIZ_4" onclick="showAnswer('DIFFQUIZ_4')" value="Show Answer"></p>
+				
+<p class="explan" id="a_DIFFQUIZ_4"> The pulsed gradient spin echo (PGSE) technique was developed by chemists Edward Stejskal and John Tanner in the mid-1960's. It consisted of paired diffusion sensitizing gradients flanking either side of a 180º-inversion pulse. Modern variations include addition of a chemically selective fat suppression pulses, use of bipolar gradients, and a second 180º pulse immediately before the image acquisition module.
+<a href="/making-a-dw-image.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION DIFFQUIZ, QUIZ QUESTION  6############## -->
+
+<li style="margin-top: 8px"> How can a larger b-value be achieved with paired pulsed diffusion gradients?
+<ol type="a" id="q_DIFFQUIZ_5">
+
+<li ><input type=radio name="c_DIFFQUIZ_5" > By increasing the amplitude of the gradients
+</li>
+		
+<li ><input type=radio name="c_DIFFQUIZ_5" > By increasing the duration of the gradients
+</li>
+<li ><input type=radio name="c_DIFFQUIZ_5" >  By widening the time interval between the two gradients
+</li>
+
+<li id="correct_DIFFQUIZ_5"><input type=radio name="c_DIFFQUIZ_5" id="c_DIFFQUIZ_5"> All of the above
+</li>
+		
+<li ><input type=radio name="c_DIFFQUIZ_5" >  None of the above
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_DIFFQUIZ_5" onclick="showAnswer('DIFFQUIZ_5')" value="Show Answer"></p>
+				
+<p class="explan" id="a_DIFFQUIZ_5"> The b-value depends on the strength, duration, and spacing of the pulsed diffusion gradients.  A larger b-value is achieved with increasing the gradient amplitude and duration and by widening the interval between gradient pulses.
+
+<a href="/what-is-the-b-value.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION DIFFQUIZ, QUIZ QUESTION  7############## -->
+
+<li style="margin-top: 8px"> What is the approximate range of b-values used to produce diffusion-weighted images in standard clinical MRI today? 
+<ol type="a" id="q_DIFFQUIZ_6">
+
+<li ><input type=radio name="c_DIFFQUIZ_6" > 0 – 10 s/mm²
+</li>
+		
+<li ><input type=radio name="c_DIFFQUIZ_6" > 0 – 100 s/mm²
+</li>
+
+<li id="correct_DIFFQUIZ_6"><input type=radio name="c_DIFFQUIZ_6" id="c_DIFFQUIZ_6"> 0 – 1,000 s/mm²
+</li>
+		
+<li ><input type=radio name="c_DIFFQUIZ_6" >  0 – 10,000 s/mm²
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_DIFFQUIZ_6" onclick="showAnswer('DIFFQUIZ_6')" value="Show Answer"></p>
+				
+<p class="explan" id="a_DIFFQUIZ_6"> Most routine clinical DWI currently use b-values between 0 and 1000 or perhaps 0 and 2000, with slightly lower values being used outside the central nervous system.
+<a href="/what-is-the-b-value.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+	
+<!-- ################ SECTION DIFFQUIZ, QUIZ QUESTION  8############## -->
+
+<li style="margin-top: 8px"> What are the minimum number of source image gradient directions that must be applied to obtain a diffusion-weighted anatomic image?
+<ol type="a" id="q_DIFFQUIZ_7">
+
+<li ><input type=radio name="c_DIFFQUIZ_7" > 1</li>
+<li id="correct_DIFFQUIZ_7"><input type=radio name="c_DIFFQUIZ_7" id="c_DIFFQUIZ_7"> 3 </li>
+		
+<li ><input type=radio name="c_DIFFQUIZ_7" > 9 </li>
+
+		
+<li ><input type=radio name="c_DIFFQUIZ_7" >  27 </li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_DIFFQUIZ_7" onclick="showAnswer('DIFFQUIZ_7')" value="Show Answer"></p>
+				
+<p class="explan" id="a_DIFFQUIZ_7"> At least three sets of source images must be obtained. These may be along the laboratory x-, y-, and z-axes or in three arbitrary perpendicular orientations. More modern schemes typically obtain source images in 6, 20 or more directions, but three is the minimum. 
+<a href="/trace-vs-adc-map.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION DIFFQUIZ, QUIZ QUESTION  9############## -->
+
+<li style="margin-top: 8px"> What is the definition of the “trace” of a 3x3 diffusion tensor matrix?
+<ol type="a" id="q_DIFFQUIZ_8">
+
+<li ><input type=radio name="c_DIFFQUIZ_8" > The largest element
+</li>
+		
+<li ><input type=radio name="c_DIFFQUIZ_8" > The sum of all the elements
+</li>
+
+<li id="correct_DIFFQUIZ_8"><input type=radio name="c_DIFFQUIZ_8" id="c_DIFFQUIZ_8"> The sum of the diagonal elements
+</li>
+		
+<li ><input type=radio name="c_DIFFQUIZ_8" >  The average of the diagonal elements
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_DIFFQUIZ_8" onclick="showAnswer('DIFFQUIZ_8')" value="Show Answer"></p>
+				
+<p class="explan" id="a_DIFFQUIZ_8"> The term "trace" comes from matrix algebra where it means the sum of diagonal elements of such an array. The trace of the diffusion tensor equals (<i>D<sub>xx</sub></i> +  <i>D<sub>yy</sub></i> + <i>D<sub>zz</sub></i>).
+<a href="/trace-vs-adc-map.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+<!-- ################ SECTION DIFFQUIZ, QUIZ QUESTION  10############## -->
+
+<li style="margin-top: 8px"> If the trace of a 3x3 diffusion tensor matrix corresponding to a single pixel is calculated to be 1.5 x 10<sup>–3</sup> s/mm², what is the corresponding apparent diffusion coefficient (ADC)?
+<ol type="a" id="q_DIFFQUIZ_9">
+<li id="correct_DIFFQUIZ_9"><input type=radio name="c_DIFFQUIZ_9" id="c_DIFFQUIZ_9"> 0.5 x 10<sup>–3</sup> s/mm²
+</li>
+
+<li ><input type=radio name="c_DIFFQUIZ_9" > 1.5 x 10<sup>–3</sup> s/mm²
+</li>
+		
+<li ><input type=radio name="c_DIFFQUIZ_9" > 3.0 x 10<sup>–3</sup> s/mm²
+</li>
+
+		
+<li ><input type=radio name="c_DIFFQUIZ_9" >  4.5 x 10<sup>–3</sup> s/mm²
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_DIFFQUIZ_9" onclick="showAnswer('DIFFQUIZ_9')" value="Show Answer"></p>
+				
+<p class="explan" id="a_DIFFQUIZ_9"> The apparent diffusion coefficient (ADC) is considered to be the average value of the trace, or ADC = (<i>D<sub>xx</sub></i> +  <i>D<sub>yy</sub></i> + <i>D<sub>zz</sub></i>) / 3.
+So the correct answer is (a).
+
+<a href="/trace-vs-adc-map.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+<!-- ################ SECTION DIFFQUIZ, QUIZ QUESTION  11############## -->
+
+<li style="margin-top: 8px"> Concerning the ADC map, which one of the following statements is true?
+<ol type="a" id="q_DIFFQUIZ_10">
+
+<li ><input type=radio name="c_DIFFQUIZ_10" > A lesion bright on a trace DWI image will be dark on an ADC map.
+</li>
+		
+<li ><input type=radio name="c_DIFFQUIZ_10" > Lesions with very long T2 values will appear dark on an ADC map.
+</li>
+
+<li id="correct_DIFFQUIZ_10"><input type=radio name="c_DIFFQUIZ_10" id="c_DIFFQUIZ_10"> Normal urine will appear dark on a trace DWI image and bright on an ADC map.
+</li>
+		
+<li ><input type=radio name="c_DIFFQUIZ_10" >  The ADC map is simply the inverse of the trace DWI image.
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_DIFFQUIZ_10" onclick="showAnswer('DIFFQUIZ_10')" value="Show Answer"></p>
+				
+<p class="explan" id="a_DIFFQUIZ_10"> The Trace DW image is not a map of diffusion; it is only diffusion-<u>weighted</u>, a fact implicit in its name. Trace DW images possess considerable T2-weighting. As such, lesions with either very long or very short T2 values may "contaminate" the Trace DW images, making them appear "artificially" bright or dark. These important phenomena are known as "T2-shine-through" and "T2-black-out. T2-effects can be mathematically removed from the DW image to create a pure parametric image of apparent diffusion coefficients (the "ADC Map"). The ADC map is not a simple inverse of the DWI trace image.
+<a href="/trace-vs-adc-map.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+		
+
+
+
+
+
+<!-- ################ SECTION DIFFQUIZ, QUIZ QUESTION  12############## -->
+
+<li style="margin-top: 8px"> Which of the following is incorrect concerning exponential ADC maps?
+<ol type="a" id="q_DIFFQUIZ_11">
+
+<li ><input type=radio name="c_DIFFQUIZ_11" > eADC maps have a gray scale that parallels that seen in the trace DW images.
+</li>
+		
+<li ><input type=radio name="c_DIFFQUIZ_11" > eADC maps are simply the trace DW image divided by the b0 image.
+</li>
+<li ><input type=radio name="c_DIFFQUIZ_11" >  eADC maps have more noise than trace DW images.
+</li>
+
+<li id="correct_DIFFQUIZ_11"><input type=radio name="c_DIFFQUIZ_11" id="c_DIFFQUIZ_11"> eADC maps still have the problem of “T2-shine-through”.
+</li>
+		
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_DIFFQUIZ_11" onclick="showAnswer('DIFFQUIZ_11')" value="Show Answer"></p>
+				
+<p class="explan" id="a_DIFFQUIZ_11"> The eADC map is simply the trace DW image divided by the b0 image for each point. 
+Because T2 effects in the numerator and denominator cancel, eADC maps eliminate the problem of T2-shine-through. (Option <i>d</i> is false.) The signal intensities are more intuitive because they follow that seen on the trace images. However, because the exponential image is a calculated map, like the ADC map it is often of lower quality and noisier than the DW image. 
+<a href="/exponential-adc.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+<!-- ################ SECTION DIFFQUIZ, QUIZ QUESTION  13############## -->
+
+<li style="margin-top: 8px"> A cerebral hematoma 36-hours-old appears dark on both the b0 and trace DW images.
+What is the explanation?
+<ol type="a" id="q_DIFFQUIZ_12">
+
+<li ><input type=radio name="c_DIFFQUIZ_12" > Diffusion is not restricted in the hematoma.
+</li>
+		
+<li ><input type=radio name="c_DIFFQUIZ_12" > This is an example of “T2-shine-through”.
+</li>
+
+<li id="correct_DIFFQUIZ_12"><input type=radio name="c_DIFFQUIZ_12" id="c_DIFFQUIZ_12"> This is an example of “T2-blackout”.
+</li>
+		
+<li ><input type=radio name="c_DIFFQUIZ_12" >  This is an example of diffusion anisotropy.
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_DIFFQUIZ_12" onclick="showAnswer('DIFFQUIZ_12')" value="Show Answer"></p>
+				
+<p class="explan" id="a_DIFFQUIZ_12"> This case illustrates the “T2-blackout” phenomenon, where severe T2* shortening (here due to paramagnetic deoxyhemoglobin in the hematoma) spills over and “contaminates” the trace DW images. Diffusion is actually restricted in the hematoma (think of all the clumped red blood cells and fibrin), but appears (falsely) dark on the DW image.
+
+<a href="/t2-black-out.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION DIFFQUIZ, QUIZ QUESTION  14############## -->
+
+<li style="margin-top: 8px"> Which one of the following mechanisms does <u>not</u> explain restricted diffusion in an acute cerebral infarction?
+<ol type="a" id="q_DIFFQUIZ_13">
+
+<li ><input type=radio name="c_DIFFQUIZ_13" > Increased intracellular water (cytotoxic edema)
+</li>
+		
+
+<li id="correct_DIFFQUIZ_13"><input type=radio name="c_DIFFQUIZ_13" id="c_DIFFQUIZ_13"> Decreased intracellular and extracellular viscosity.
+</li>
+<li ><input type=radio name="c_DIFFQUIZ_13" > Reduction in extracellular space.
+</li>
+		
+<li ><input type=radio name="c_DIFFQUIZ_13" >  Fragmentation of cellular components.
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_DIFFQUIZ_13" onclick="showAnswer('DIFFQUIZ_13')" value="Show Answer"></p>
+				
+<p class="explan" id="a_DIFFQUIZ_13"> All are correct except for (b). As cellular components fragment and proteins unravel, viscosity increases (not decreases). Increased viscosity restricts diffusion because it inhibits the movement of water molecules through the diseased tissue.
+<a href="/dwi-bright-causes.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION DIFFQUIZ, QUIZ QUESTION  15############## -->
+
+<li style="margin-top: 8px"> Which of the following tumors would not be expected to demonstrate restricted diffusion?
+<ol type="a" id="q_DIFFQUIZ_14">
+
+<li ><input type=radio name="c_DIFFQUIZ_14" > Splenic lymphoma
+</li>
+		
+<li ><input type=radio name="c_DIFFQUIZ_14" > Cerebellar medulloblastoma
+</li>
+
+<li id="correct_DIFFQUIZ_14"><input type=radio name="c_DIFFQUIZ_14" id="c_DIFFQUIZ_14"> Pancreatic serous cystadenoma
+</li>
+		
+<li ><input type=radio name="c_DIFFQUIZ_14" >  Ewing’s sarcoma (PNET) of the pelvis
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_DIFFQUIZ_14" onclick="showAnswer('DIFFQUIZ_14')" value="Show Answer"></p>
+				
+<p class="explan" id="a_DIFFQUIZ_14"> Highly cellular neoplasms with densely packed cells and relatively little extracellular space often demonstrate restricted diffusion. Examples include lymphomas, medulloblastomas, primitive neuroectodermal tumors (PNETs) and highly malignant gliomas. A cystic tumor (like option <i>c</i> would not be expected to restrict diffusion.
+<a href="/dwi-bright-causes.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+<!-- ################ SECTION DIFFQUIZ, QUIZ QUESTION 16############## -->
+
+<li style="margin-top: 8px"> Assuming mirror-image off-diagonal elements are equal, how many <u>
+unique</u>
+ elements does a first-order [3x3] diffusion tensor contain?
+<ol type="a" id="q_DIFFQUIZ_15">
+
+<li ><input type=radio name="c_DIFFQUIZ_15" > 3</li>
+		
+
+<li id="correct_DIFFQUIZ_15"><input type=radio name="c_DIFFQUIZ_15" id="c_DIFFQUIZ_15"> 6 </li>
+		
+<li ><input type=radio name="c_DIFFQUIZ_15" >  9 </li>
+<li ><input type=radio name="c_DIFFQUIZ_15" > 12 </li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_DIFFQUIZ_15" onclick="showAnswer('DIFFQUIZ_15')" value="Show Answer"></p>
+				
+<p class="explan" id="a_DIFFQUIZ_15"> The off-diagonal elements being equal implies that diffusivities should be the same in the forward and reverse directions (i.e., x→y and y→x diffusivities are the same). This means the tensor is symmetric and 3 of the 9 tensor elements are equal (<i>D<sub>xy</sub></i> = <i>D<sub>yx</sub></i>, <i>D<sub>xz</sub></i> = <i>D<sub>zx</sub></i>, and <i>D<sub>yz</sub></i> = <i>D<sub>zy</sub></i>). This leaves 6 unique elements to be measured.
+<a href="/diffusion-tensor.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION DIFFQUIZ, QUIZ QUESTION  17############## -->
+
+<li style="margin-top: 8px"> How many measurements does it take to determine the unique diffusion tensor elements in the prior question?
+<ol type="a" id="q_DIFFQUIZ_16">
+
+<li ><input type=radio name="c_DIFFQUIZ_16" > 5</li>
+		
+<li ><input type=radio name="c_DIFFQUIZ_16" > 6 </li>
+
+<li id="correct_DIFFQUIZ_16"><input type=radio name="c_DIFFQUIZ_16" id="c_DIFFQUIZ_16"> 7 </li>
+		
+<li ><input type=radio name="c_DIFFQUIZ_16" >  9 </li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_DIFFQUIZ_16" onclick="showAnswer('DIFFQUIZ_16')" value="Show Answer"></p>
+				
+<p class="explan" id="a_DIFFQUIZ_16"> Six measurements need to be taken with the diffusion sensitizing gradients applied, plus one b0 measurement, giving a total of 7.
+<a href="/diffusion-tensor.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+<!-- ################ SECTION DIFFQUIZ, QUIZ QUESTION  18############## -->
+
+<li style="margin-top: 8px"> Concerning the diffusion ellipsoid, which statement is false?
+<ol type="a" id="q_DIFFQUIZ_17">
+
+<li ><input type=radio name="c_DIFFQUIZ_17" > The directions of its major and minor axes are described by eigenvectors.
+</li>
+		
+<li ><input type=radio name="c_DIFFQUIZ_17" > The radii of its major and minor axes are eigenvalues.
+</li>
+<li ><input type=radio name="c_DIFFQUIZ_17" >  The eigenvalues are proportional to Einstein’s root mean square diffusion displacement in each direction.
+</li>
+
+<li id="correct_DIFFQUIZ_17"><input type=radio name="c_DIFFQUIZ_17" id="c_DIFFQUIZ_17"> The diffusion tensor matrix for the diffusion ellipsoid has 6 unique elements.
+</li>
+		
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_DIFFQUIZ_17" onclick="showAnswer('DIFFQUIZ_17')" value="Show Answer"></p>
+				
+<p class="explan" id="a_DIFFQUIZ_17">A significant benefit to using the diffusion ellipsoid is that in this frame of reference, the off-diagonal elements of the diffusion tensor disappear. The set of eigenvalues define a matrix with only unique 3 diagonal elements (λ<sub>1</sub>, λ<sub>2</sub>, and λ<sub>3</sub>) with the off-diagonal elements all zeroes.<a href="/diffusion-tensor.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+		
+
+<!-- ################ SECTION DIFFQUIZ, QUIZ QUESTION  19############## -->
+
+<li style="margin-top: 8px"> Concerning fractional anisotropy (FA), which statement is incorrect?
+<ol type="a" id="q_DIFFQUIZ_18">
+<li id="correct_DIFFQUIZ_18"><input type=radio name="c_DIFFQUIZ_18" id="c_DIFFQUIZ_18"> FA varies from −1 to +1.
+</li>
+
+<li ><input type=radio name="c_DIFFQUIZ_18" > FA is an index for the amount of diffusion asymmetry within a voxel.
+</li>
+		
+<li ><input type=radio name="c_DIFFQUIZ_18" > FA = 0 for a voxel with perfect isotropic diffusion.
+</li>
+
+		
+<li ><input type=radio name="c_DIFFQUIZ_18" >  On an FA map, brighter areas are more anisotropic than darker areas.
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_DIFFQUIZ_18" onclick="showAnswer('DIFFQUIZ_18')" value="Show Answer"></p>
+				
+<p class="explan" id="a_DIFFQUIZ_18"> The value of FA varies between 0 and +1 (option <i>a</i> is incorrect). For perfect isotropic diffusion, λ<sub>1</sub> = λ<sub>2</sub> = λ<sub>3</sub>, the diffusion ellipsoid is a sphere, and FA = 0. With progressive diffusion anisotropy, the eigenvalues become more unequal, the ellipsoid becomes more elongated, and the FA → 1. The FA map is a gray-scale display of FA values across the image. Brighter areas are more anisotropic than darker areas.
+<a href="/dti-tensor-imaging.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+<!-- ################ SECTION DIFFQUIZ, QUIZ QUESTION  20############## -->
+
+<li style="margin-top: 8px"> Concerning whole-body DWI, which statement is false?
+<ol type="a" id="q_DIFFQUIZ_19">
+
+<li ><input type=radio name="c_DIFFQUIZ_19" > Imaging is obtained in multiple blocks or stations, then digitally stitched together.
+</li>
+		
+
+<li id="correct_DIFFQUIZ_19"><input type=radio name="c_DIFFQUIZ_19" id="c_DIFFQUIZ_19"> Views of the chest and abdomen must be obtained during breath holding to reduce motion artifact. 
+</li>
+<li ><input type=radio name="c_DIFFQUIZ_19" > Standard image display is in a black-background mode to resemble PET-CT.
+</li>
+		
+<li ><input type=radio name="c_DIFFQUIZ_19" >  Each DWI sequence is preceded by a STIR-like inversion pulse for fat suppression.
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_DIFFQUIZ_19" onclick="showAnswer('DIFFQUIZ_19')" value="Show Answer"></p>
+				
+<p class="explan" id="a_DIFFQUIZ_19"> Whole-body DWI does not require breath holding. Even though the organs of the abdomen and chest move during image acquisition, they do so "coherently". Their physical displacements are cyclic and while this motion produces some spatial blurring it does not significantly affect the magnitude of the DW signal. 
+<a href="/whole-body-dwi.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+		
+<!-- ################ SECTION DIFFQUIZ, QUIZ QUESTION  21############## -->
+
+<li style="margin-top: 8px"> All of the following are advantages of readout-segmented DWI over single-shot DWI, except 
+<ol type="a" id="q_DIFFQUIZ_20">
+
+<li ><input type=radio name="c_DIFFQUIZ_20" > Increased signal-to-noise
+</li>
+		
+
+<li id="correct_DIFFQUIZ_20"><input type=radio name="c_DIFFQUIZ_20" id="c_DIFFQUIZ_20"> Decreased imaging time
+</li>
+		
+<li ><input type=radio name="c_DIFFQUIZ_20" >  Decreased susceptibility artifacts
+</li>
+<li ><input type=radio name="c_DIFFQUIZ_20" > Reduced spatial blurring
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_DIFFQUIZ_20" onclick="showAnswer('DIFFQUIZ_20')" value="Show Answer"></p>
+				
+<p class="explan" id="a_DIFFQUIZ_20"> Depending on the number of “shots” readout segmented DWI can take 3-5 times longer than single-shot DWI, so option (b) is false.
+
+<a href="/readout-segmented-dwi.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+
+
+		
+<!-- ################ SECTION DIFFQUIZ, QUIZ QUESTION  22############## -->
+
+<li style="margin-top: 8px"> The key technological development underlying modern small field-of-view DWI methods (like ZOOMit and FOCUS) is
+<ol type="a" id="q_DIFFQUIZ_21">
+<li id="correct_DIFFQUIZ_21"><input type=radio name="c_DIFFQUIZ_21" id="c_DIFFQUIZ_21"> Use of 2D spatially-selective composite RF pulses
+</li>
+
+<li ><input type=radio name="c_DIFFQUIZ_21" > Use of outer volume saturation pulses
+</li>
+		
+<li ><input type=radio name="c_DIFFQUIZ_21" > Use of stimulated echo inner volume pulses
+</li>
+
+		
+<li ><input type=radio name="c_DIFFQUIZ_21" >  Use of extremely strong, continuously applied gradients
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_DIFFQUIZ_21" onclick="showAnswer('DIFFQUIZ_21')" value="Show Answer"></p>
+				
+<p class="explan" id="a_DIFFQUIZ_21"> Newer small FOV DWI sequences employ a special 2D RF excitation pulse that is spatially selective in both the slice select and phase-encoding directions. The 2D RF "pulse" is a composite of approximately 25 closely spaced "sub-pulses" extending over a time frame of about 15 ms. This RF excitation is played out simultaneously with a fast (oscillatory) gradient along the phase-encode axis and a slow ("blipped") gradient along slice-select.
+
+<a href="/small-fov-dwi.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+
+
+
+
+		
+<!-- ################ SECTION DIFFQUIZ, QUIZ QUESTION  23############## -->
+
+<li style="margin-top: 8px"> Which of the following statements about intravoxel incoherent motion (IVIM) is true?
+<ol type="a" id="q_DIFFQUIZ_22">
+
+<li ><input type=radio name="c_DIFFQUIZ_22" > IVIM effects are most easily recognized when high b-values are used.
+</li>
+		
+
+<li id="correct_DIFFQUIZ_22"><input type=radio name="c_DIFFQUIZ_22" id="c_DIFFQUIZ_22"> IVIM describes signal losses due to both diffusion and microscopic perfusion.
+</li>
+<li ><input type=radio name="c_DIFFQUIZ_22" > IVIM perfusion effects mitigate the signal losses caused by diffusion alone. 
+</li>
+		
+<li ><input type=radio name="c_DIFFQUIZ_22" >  Le Bihan’s IVIM model allows estimation of capillary blood flow.
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_DIFFQUIZ_22" onclick="showAnswer('DIFFQUIZ_22')" value="Show Answer"></p>
+				
+<p class="explan" id="a_DIFFQUIZ_22"> The correct statement is (b): IVIM describes signal losses due to both diffusion and microscopic perfusion. If the gradients are relatively strong, IVIM-induced signal losses are primarily due to diffusion — the Brownian motion of water molecules in and around cells. When weaker gradients are used, however, a second IVIM mechanism also contributes to signal loss — microcirculation of blood in the capillary network. Le Bihan’s IVIM model allows estimation of the perfusion fraction (the percent of a voxel volume occupied by capillaries), but not the blood flow through them.
+<a href="/ivim.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+
+
+
+		
+<!-- ################ SECTION DIFFQUIZ, QUIZ QUESTION  24############## -->
+
+<li style="margin-top: 8px"> Which of the following statements about diffusion kurtosis is false?
+<ol type="a" id="q_DIFFQUIZ_23">
+
+<li ><input type=radio name="c_DIFFQUIZ_23" > Diffusion kurtosis measures the non-Gaussian movement of water molecules.
+</li>
+		
+<li ><input type=radio name="c_DIFFQUIZ_23" > Kurtosis effects are more noticeable when long echo times are used.
+</li>
+
+<li id="correct_DIFFQUIZ_23"><input type=radio name="c_DIFFQUIZ_23" id="c_DIFFQUIZ_23"> Kurtosis effects are more noticeable when low b-values are used.
+</li>
+		
+<li ><input type=radio name="c_DIFFQUIZ_23" >  The mean kurtosis (K) of a pure fluid is zero.
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_DIFFQUIZ_23" onclick="showAnswer('DIFFQUIZ_23')" value="Show Answer"></p>
+				
+<p class="explan" id="a_DIFFQUIZ_23"> Standard diffusion weighted imaging (DWI) methods have incorporated Einstein's original concept that the diffusion water molecules follows a Gaussian (normal) distribution. Non-Gaussian behavior becomes more noticeable when stronger gradients (higher b-values) and longer echo times are used.  By definition, a Gaussian distribution has K = 0, which would be the case with a pure fluid.
+<a href="/diffusion-kurtosis.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+
+
+
+
+
+
+
+
+
+
+
+<!--##################################################-->
+<!--############SCORING SECTION Needs to go at end of each subsection-->
+
+</ol><p><input type=button id="show_all_DIFFQUIZ" onclick="showAllAnswers('DIFFQUIZ')" value="Show All Answers for Section"><span style="font-weight: bold" id="scoretxt_DIFFQUIZ"></span></p>
+<p><a href="#top">Back to top of page</a></p></div>
+<!--END OF SCORING SECTION-->
+
+
+
+</div>
+
+
+
+
+<div><div id="791481767781984030" align="left" style="width: 100%; overflow-y: hidden;" class="wcustomhtml"><!-- ###############NEW QUIZ SUBSECTION ##################-->
+
+<hr style="1px solid black">
+<!-- Creates optional line above new Quiz Subsection Title ---->
+
+<h1 style="color:black";><a name="4"></a>Fat-Water</h1>
+
+<!-- The Section Name and its corresponding number (here 0) which has an href in the index must be changed/filled in.  Note that the first section is identified as “0” here only;  and the second section is denoted “2”, etc. 
+
+This is confusing because subsequently it is denoted as Section 1 and reference to all questions in this section begin with a 1.  However, the first question of Section 1 is called question 0, presumably to assist in scoring.
+
+Thus, the first question of Section 1 is denoted as q_1_0 and its second question is denoted q_1_1.	
+
+When a second section of Questions is added, this is called Section 2 with first and second questions denoted q_2_0 and q_2_1. 
+
+Each section has counting variables corresponding to each question. So the counting variables  are denoted c_1_0 for the Section 1/first question, while c_2_1 counts for Section 2/second question. -->
+
+<!-- FOR THE PURPOSES OF THIS DOCUMENT WE WILL CONSIDER ALL QUESTIONS TO REFER TO SECTION FWQUIZ and are numbered consecutively. THE WORD DOCUMENT CAN THEN BE PUT INTO PROPER FORM BY “SEARCH AND REPLACE FWQUIZ BY THE APPROPRIATE SECTION NUMBER”-->
+
+
+<!-- ################ SECTION M, QUIZ QUESTION  1############## -->
+
+<ol><li style="margin-top: 8px"> What is the main type of fat within the body which contributes most to the signal recorded on MRI?
+<ol type="a" id="q_FWQUIZ_0">
+<li id="correct_FWQUIZ_0"><input type=radio name="c_FWQUIZ_0" id="c_FWQUIZ_0"> Triglycerides
+</li>
+
+<li ><input type=radio name="c_FWQUIZ_0" > Free fatty acids
+</li>
+		
+<li ><input type=radio name="c_FWQUIZ_0" > Cholesterol
+</li>
+
+		
+<li ><input type=radio name="c_FWQUIZ_0" > Phospholipids
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_FWQUIZ_0" onclick="showAnswer('FWQUIZ_0')" value="Show Answer"></p>
+				
+<p class="explan" id="a_FWQUIZ_0"> The bulk of the MR signal in fatty human tissues arises from triglycerides, with lesser contributions from free fatty acids and cholesterol (when esterified or in a semi-solid or liquid state).
+<a href="/fat--water-properties.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+
+<!-- ################ SECTION FWQUIZ, QUIZ QUESTION  2############## -->
+
+<li style="margin-top: 8px"> At a given field strength, how do the nuclear precession frequencies of ¹H protons differ between fat and water?  
+<ol type="a" id="q_FWQUIZ_1">
+
+<li ><input type=radio name="c_FWQUIZ_1" > Fat and water protons precess at the same frequency
+</li>
+		
+<li ><input type=radio name="c_FWQUIZ_1" > Fat protons precess faster than water protons.
+</li>
+
+<li id="correct_FWQUIZ_1"><input type=radio name="c_FWQUIZ_1" id="c_FWQUIZ_1"> Fat protons precess slower than water protons.
+</li>
+		
+<li ><input type=radio name="c_FWQUIZ_1" >  Fat protons may precess either faster or slower depending on their location along the triglyceride side chains.
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_FWQUIZ_1" onclick="showAnswer('FWQUIZ_1')" value="Show Answer"></p>
+				
+<p class="explan" id="a_FWQUIZ_1"> The H protons of triglycerides are nestled within long carbon chains, shielded by electron clouds and protected from the full force of the externally applied magnetic field. In water, by comparison, the electronegative O atom pulls protective electron clouds away from the H nuclei, exposing them to the full force of the external magnetic field. Thus water protons resonate faster than fat protons.  
+<a href="/fat--water-properties.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION FWQUIZ, QUIZ QUESTION  3############## -->
+
+<li style="margin-top: 8px"> A chemical shift of 3.5 ppm written in decimal form is
+<ol type="a" id="q_FWQUIZ_2">
+
+<li ><input type=radio name="c_FWQUIZ_2" > 0.00000035
+</li>
+		
+
+<li id="correct_FWQUIZ_2"><input type=radio name="c_FWQUIZ_2" id="c_FWQUIZ_2"> 0.0000035
+</li>
+<li ><input type=radio name="c_FWQUIZ_2" > 0.000035
+</li>
+		
+<li ><input type=radio name="c_FWQUIZ_2" >  0.00035
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_FWQUIZ_2" onclick="showAnswer('FWQUIZ_2')" value="Show Answer"></p>
+				
+<p class="explan" id="a_FWQUIZ_2"> The abbreviation ppm stands for “parts per million” and is equivalent to multiplying the base value by 10<sup>−6</sup>. So 3.5 ppm = 3.5 x 10<sup>−6</sup> = 0.0000035 (answer <i>b</i>).
+<a href="/f-w-chemical-shift.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION FWQUIZ, QUIZ QUESTION  4############## -->
+<li style="margin-top: 8px"> If the water-fat chemical shift is 3.5 ppm, calculate the fat-water frequency difference for a 7T scanner operating at 200 MHz.  
+<ol type="a" id="q_FWQUIZ_3">
+
+<li ><input type=radio name="c_FWQUIZ_3" > 220 Hz
+</li>
+		
+<li ><input type=radio name="c_FWQUIZ_3" > 440 Hz
+</li>
+
+<li id="correct_FWQUIZ_3"><input type=radio name="c_FWQUIZ_3" id="c_FWQUIZ_3"> 700 Hz
+</li>
+		
+<li ><input type=radio name="c_FWQUIZ_3" >  900 Hz
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_FWQUIZ_3" onclick="showAnswer('FWQUIZ_3')" value="Show Answer"></p>
+				
+<p class="explan" id="a_FWQUIZ_3"> Δf = (200 MHz)(3.5 ppm) = (200 x 10<sup>6</sup> Hz)(3.5 x10<sup>−6</sup>) ≈ 700 Hz
+<a href="/f-w-chemical-shift.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+
+
+
+ 
+<!-- ################ SECTION FWQUIZ, QUIZ QUESTION  5############## -->
+
+<li style="margin-top: 8px">If the water-fat chemical shift is 3.5 ppm, calculate the water-fat frequency difference for a portable 0.064T scanner operating at 150 kHz.<ol type="a" id="q_FWQUIZ_4">
+<li id="correct_FWQUIZ_4"><input type=radio name="c_FWQUIZ_4" id="c_FWQUIZ_4"> 0.5 Hz </li>
+<li ><input type=radio name="c_FWQUIZ_4" > 5 Hz</li>
+		
+<li ><input type=radio name="c_FWQUIZ_4" > 50 Hz </li>
+
+
+		
+<li ><input type=radio name="c_FWQUIZ_4" >  500 Hz </li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_FWQUIZ_4" onclick="showAnswer('FWQUIZ_4')" value="Show Answer"></p>
+				
+<p class="explan" id="a_FWQUIZ_4">Δf = (150 kHz)(3.5 ppm) = (150 x 10<sup>3</sup> Hz)(3.5 x10<sup>−6</sup>) ≈ 0.5 Hz. This very low frequency separation means that water-fat artifacts will be minimal at this field strength, and also that spectral fat suppression methods cannot be used. <a href="/f-w-chemical-shift.html " target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION FWQUIZ, QUIZ QUESTION  6############## -->
+
+<li style="margin-top: 8px"> At 1.5 T water and fat go in and out of phase about every 2.2 msec. How fast would they go in and out of phase at 3.0T?
+<ol type="a" id="q_FWQUIZ_5">
+<li id="correct_FWQUIZ_5"><input type=radio name="c_FWQUIZ_5" id="c_FWQUIZ_5"> Every 1.1 msec
+</li>
+
+<li ><input type=radio name="c_FWQUIZ_5" > Every 2.2 msec
+</li>
+		
+<li ><input type=radio name="c_FWQUIZ_5" > Every 3.3 msec
+</li>
+
+		
+<li ><input type=radio name="c_FWQUIZ_5" >  Every 4.4 msec
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_FWQUIZ_5" onclick="showAnswer('FWQUIZ_5')" value="Show Answer"></p>
+				
+<p class="explan" id="a_FWQUIZ_5"> The period of this phase cycling is 1/Δf, where Δf is the frequency offset between the spins. So if the field is doubled, the frequency offset is twice as large, and the phase cycling period is half as large, so (a) 1.1 msec is the correct answer.
+<a href="/in-phaseout-of-phase.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION FWQUIZ, QUIZ QUESTION  7############## -->
+
+<li style="margin-top: 8px"> An adrenal mass that is of intermediate signal intensity on an in-phase image and low signal on an out-of-phase image is most likely an
+<ol type="a" id="q_FWQUIZ_6">
+
+<li ><input type=radio name="c_FWQUIZ_6" > Adrenal carcinoma
+</li>
+	<li id="correct_FWQUIZ_6"><input type=radio name="c_FWQUIZ_6" id="c_FWQUIZ_6"> Adrenal adenoma
+</li>
+	
+<li ><input type=radio name="c_FWQUIZ_6" > Adrenal metastasis
+</li>
+
+		
+<li ><input type=radio name="c_FWQUIZ_6" >  Adrenal pheochromocytoma
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_FWQUIZ_6" onclick="showAnswer('FWQUIZ_6')" value="Show Answer"></p>
+				
+<p class="explan" id="a_FWQUIZ_6"> Adrenal adenomas, the most common tumor of the adrenal gland, often contain microscopic lipid droplets. Voxels containing both lipid and water result in signal cancellation with low signal on out-of-phase GRE images.
+<a href="/in-phaseout-of-phase.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+	
+<!-- ################ SECTION FWQUIZ, QUIZ QUESTION  8############## -->
+
+<li style="margin-top: 8px"> Which of the following is <u>not</u> one of the four standard images produced by most commercial Dixon-type sequences?
+<ol type="a" id="q_FWQUIZ_7">
+<li id="correct_FWQUIZ_7"><input type=radio name="c_FWQUIZ_7" id="c_FWQUIZ_7"> Chemical shift
+</li>
+
+<li ><input type=radio name="c_FWQUIZ_7" > Water
+</li>
+		
+<li ><input type=radio name="c_FWQUIZ_7" > Fat
+</li>
+
+		
+<li ><input type=radio name="c_FWQUIZ_7" >  In-phase
+</li>
+<li ><input type=radio name="c_FWQUIZ_7" >  Out-of-phase
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_FWQUIZ_7" onclick="showAnswer('FWQUIZ_7')" value="Show Answer"></p>
+				
+<p class="explan" id="a_FWQUIZ_7"> Choice (a), chemical shift, is not a standard image generated by a Dixon sequence. The other four are.
+<a href="/dixon-method.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION FWQUIZ, QUIZ QUESTION  9############## -->
+
+<li style="margin-top: 8px"> Concerning CHESS/Fat-Sat pulses, which one of the following statements is incorrect?
+<ol type="a" id="q_FWQUIZ_8">
+
+<li ><input type=radio name="c_FWQUIZ_8" > They reduce the number of available slices for a given TR.
+</li>
+		
+<li ><input type=radio name="c_FWQUIZ_8" > They cause tissue heating.
+</li>
+<li ><input type=radio name="c_FWQUIZ_8" >  They include a spectrally tuned RF-pulse followed by spoiler gradients along one or more axes.
+</li>
+
+<li id="correct_FWQUIZ_8"><input type=radio name="c_FWQUIZ_8" id="c_FWQUIZ_8"> They are the preferred method for fat suppression at 0.3T and below.
+</li>
+		
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_FWQUIZ_8" onclick="showAnswer('FWQUIZ_8')" value="Show Answer"></p>
+				
+<p class="explan" id="a_FWQUIZ_8"> All are correct except choice (d). The effectiveness of a Fat-Sat pulse depends primarily on field strength and field homogeneity. At fields below 0.3T the water and fat peaks are so close together (in Hz) that it is difficult to cleanly suppress one or the other with a chemically selective pulse. At low fields another method of fat suppression (typically STIR or Dixon) must therefore be used. 
+<a href="/fat-sat-pulses.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+<!-- ################ SECTION FWQUIZ, QUIZ QUESTION  10############## -->
+
+<li style="margin-top: 8px"> Which of the following flip angle patterns would not be considered to define a composite binomial pulse for water excitation?
+<ol type="a" id="q_FWQUIZ_9">
+
+<li ><input type=radio name="c_FWQUIZ_9" > 1:1
+</li>
+		
+
+<li id="correct_FWQUIZ_9"><input type=radio name="c_FWQUIZ_9" id="c_FWQUIZ_9"> 1:1:1
+</li>
+<li ><input type=radio name="c_FWQUIZ_9" > 1:2:1
+</li>
+		
+<li ><input type=radio name="c_FWQUIZ_9" >  1:3:3:1 
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_FWQUIZ_9" onclick="showAnswer('FWQUIZ_9')" value="Show Answer"></p>
+				
+<p class="explan" id="a_FWQUIZ_9"> Binomial pulses are typically used for selective water excitation as a means of fat suppression. Binomial pulses have flip angles that follow the pattern of coefficients of the binomial expansion of (a+b)<sup>n</sup>: 1-1, 1-2-1, 1-3-3-1, etc. Thus, a 90º-pulse could be constructed as a [45º-45º] pair, a [22.5º-45º-22.5º] triplet, or a [11.25º-33.75º-33.75º-11.25º] quadruplet. So choice (b), 1:1:1 is not a binomial pulse.
+<a href="/water-excitation.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+<!-- ################ SECTION FWQUIZ, QUIZ QUESTION  11############## -->
+
+<li style="margin-top: 8px"> Limitations of the STIR technique for fat suppression include all except
+<ol type="a" id="q_FWQUIZ_10">
+
+<li ><input type=radio name="c_FWQUIZ_10" > Inability to use it to detect gadolinium enhancement.
+</li>
+		
+<li ><input type=radio name="c_FWQUIZ_10" > Suppression of other short T1 materials besides fat (eg, protein, blood).
+</li>
+<li ><input type=radio name="c_FWQUIZ_10" >  Tissue heating from multiple 180º pulses.
+</li>
+
+<li id="correct_FWQUIZ_10"><input type=radio name="c_FWQUIZ_10" id="c_FWQUIZ_10"> Decreased visualization of long T1/long T2 lesions due to competitive signal effects.
+</li>
+		
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_FWQUIZ_10" onclick="showAnswer('FWQUIZ_10')" value="Show Answer"></p>
+				
+<p class="explan" id="a_FWQUIZ_10"> All are valid limitations except for (d), which is incorrect. In routine SE imaging lesions with prolonged T1 and T2 have competitive effects on signal intensity (↑T1 reduces signal while ↑T2 increases signal). In STIR imaging the effects of ↑T1 and ↑T2 are additive, allowing for improved visualization of some lesions, such as multiple sclerosis plaques.
+<a href="/stir1.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+		
+
+
+
+
+
+<!-- ################ SECTION FWQUIZ, QUIZ QUESTION  12############## -->
+
+<li style="margin-top: 8px"> The Spectral Presaturation with Inversion Recovery (SPIR) technique can be thought of as a hybrid combining fat suppression features of
+
+<ol type="a" id="q_FWQUIZ_11">
+<li id="correct_FWQUIZ_11"><input type=radio name="c_FWQUIZ_11" id="c_FWQUIZ_11"> Spectral Fat Sat (CHESS) + STIR
+</li>
+		
+
+<li ><input type=radio name="c_FWQUIZ_11" > Dixon Technique + STIR
+</li>
+		
+<li ><input type=radio name="c_FWQUIZ_11" > Spectral Fat Sat (CHESS) + Selective Water excitation
+</li>
+
+<li ><input type=radio name="c_FWQUIZ_11" >  Dixon Technique + Selective Water excitation
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_FWQUIZ_11" onclick="showAnswer('FWQUIZ_11')" value="Show Answer"></p>
+				
+<p class="explan" id="a_FWQUIZ_11"> SPIR is a hybrid technique that combines a fat-selective RF-pulse and spoiler gradient (similar to CHESS) together with nulling of the residual longitudinal fat magnetization through an inversion delay mechanism (similar to STIR). These spin manipulations purely involve fat; the water resonance is unaffected. After a suitable inversion time to null residual fat signal, any pulse sequence can be used to image the remaining water. 
+<a href="/spir.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+<!-- ################ SECTION FWQUIZ, QUIZ QUESTION  13############## -->
+
+<li style="margin-top: 8px"> Which of the following statements comparing SPAIR (SPectral Attenuated Inversion Recovery) and SPIR (Spectral Presaturation with Inversion Recovery) is incorrect?
+<ol type="a" id="q_FWQUIZ_12">
+
+<li ><input type=radio name="c_FWQUIZ_12" > SPAIR uses adiabatic pulses while SPIR does not.
+</li>
+		
+<li ><input type=radio name="c_FWQUIZ_12" > SPAIR uses an inversion pulse of 180º, while SPIR uses pulses in the 100º -120º range
+</li>
+
+<li id="correct_FWQUIZ_12"><input type=radio name="c_FWQUIZ_12" id="c_FWQUIZ_12"> SPAIR deposits less RF energy into tissue than does SPIR.
+</li>
+		
+<li ><input type=radio name="c_FWQUIZ_12" >  The inversion time is longer for SPAIR than SPIR.
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_FWQUIZ_12" onclick="showAnswer('FWQUIZ_12')" value="Show Answer"></p>
+				
+<p class="explan" id="a_FWQUIZ_12"> Both SPAIR and SPIR can be thought of as CHESS-STIR hybrids. SPAIR uses 180º adiabatic pulses while SPIR uses non-adiabatic pulses in the 100º -120º range. Accordingly-SPAIR pulses deposit more RF-energy in tissue than the smaller flip angle SPIR or CHESS pulses. The inversion time is longer in SPAIR than SPIR, so there is a greater penalty in terms of imaging time and reduced number of slices for a given TR. 
+<a href="/spair-v-spir.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION FWQUIZ, QUIZ QUESTION  14############## -->
+
+<li style="margin-top: 8px"> Which of the following statements about adiabatic RF-pulses is false?
+<ol type="a" id="q_FWQUIZ_13">
+
+<li ><input type=radio name="c_FWQUIZ_13" > They are both amplitude- and frequency-modulated.
+</li>
+<li ><input type=radio name="c_FWQUIZ_13" >  Their transmitted frequency changes simultaneously with amplitude as the pulse evolves.
+</li>
+		
+<li ><input type=radio name="c_FWQUIZ_13" > They are less sensitive to <b>B<sub>1</sub></b> inhomogeneities that other pulses.
+</li>
+
+<li id="correct_FWQUIZ_13"><input type=radio name="c_FWQUIZ_13" id="c_FWQUIZ_13"> They are commonly used in low-field applications.
+</li>
+		
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_FWQUIZ_13" onclick="showAnswer('FWQUIZ_13')" value="Show Answer"></p>
+				
+<p class="explan" id="a_FWQUIZ_13">Only (d) is false. Like other non-adiabatic but spectrally selective pulses (CHESS, STIR) they can only be used at higher, rather homogeneous fields where there is a clean separation of water and fat resonances<a href="/spair-v-spir.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+		
+		
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--##################################################-->
+<!--############SCORING SECTION Needs to go at end of each subsection-->
+
+</ol><p><input type=button id="show_all_FWQUIZ" onclick="showAllAnswers('FWQUIZ')" value="Show All Answers for Section"><span style="font-weight: bold" id="scoretxt_FWQUIZ"></span></p>
+<p><a href="#top">Back to top of page</a></p></div></div></div>
+</div>
+<!--END OF SCORING SECTION-->

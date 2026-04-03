@@ -1,0 +1,157 @@
+<div id="content"><div id="wsite-content" class="wsite-elements wsite-not-footer">
+	<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<h2 class="wsite-content-title" style="text-align:center;">Network/Graph Theory</h2>
+
+<div class="paragraph" style="text-align:center;"><strong style="color:rgb(135, 135, 135)"><em><font color="#0376be" size="4">How is network theory used to analyze fMRI data?&nbsp;</font></em></strong><strong style="color:rgb(55, 138, 87)"><em><font size="4">&nbsp;</font></em></strong></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-thin" style="padding-top:0px;padding-bottom:10px;margin-left:0px;margin-right:0px;text-align:center">
+<a href='uploads/3/4/5/7/34572113/screen-shot-2016-09-29-at-7-24-22-am_orig.png' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/screen-shot-2016-09-29-at-7-24-22-am_orig.png" alt="Picture" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;"><em><strong><font color="#24678d">Network/graph theory</font></strong></em><font color="#2a2a2a"> &mdash; used to analyze such diverse systems as telecommunications,&nbsp;computer circuitry, social organizations, and the internet &mdash; has become an increasingly popular method for describing functional and anatomic connectivity in the brain. Although one step removed from classic MR physics, network/graph analysis seems poised to become a pre-eminent method for fMRI analysis, so a brief introduction to some of its concepts may be useful. </font></div>
+
+<div class="paragraph"><font color="#2a2a2a">The initial step in network analysis is to define </font><em><strong><font color="#24678d">nodes</font></strong></em><font color="#2a2a2a"> (or <em>vertices</em>):&nbsp;identifiable brain regions thought to function homogeneously in a given experiment.&nbsp; Nodes may be as small as individual voxels, but are more typically somewhat larger anatomic units (such as gyri, nuclei, or areas with a common cytoarchitecture).&nbsp;A </font><em><strong><font color="#24678d">link</font></strong></em><font color="#2a2a2a"> (or </font><em style="color:rgb(42, 42, 42)">edge</em><font color="#2a2a2a">) joins two nodes that have correlated activity (by fMRI, EEG, MEG, etc.) or a direct physical connection (e.g., from neuroanatomy or diffusion tensor tractography). A network with nodes and links may be represented either graphically or as a numerical array. The latter is known as an </font><em><strong><font color="#24678d">adjacency matrix</font></strong></em><font color="#2a2a2a">, where each element (<em>e<font size="1">ij</font></em>) is a number reflecting the strength of the link between nodes <em>i</em> and <em>j</em>.</font></div>
+
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-none" style="padding-top:10px;padding-bottom:10px;margin-left:0px;margin-right:0px;text-align:center">
+<a href='uploads/3/4/5/7/34572113/brain-network-yellow_1_orig.gif' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/brain-network-yellow_1_orig.gif" alt="brain network fmri" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-none" style="padding-top:10px;padding-bottom:10px;margin-left:0px;margin-right:0px;text-align:center">
+<a href='uploads/3/4/5/7/34572113/network-graph_orig.gif' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/network-graph_orig.gif" alt="network graph fmri" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div class="paragraph">A<strong> <em><font color="#24678d">path</font></em></strong> is an ordered sequence of links connecting two nodes, whose&nbsp;<em><strong><font color="#24678d">length</font></strong></em>&nbsp;is defined as the number of links. Some paris of nodes may be connected by several paths with different lengths. The average length of the shortest paths for all node pairs in a network is called the <em><strong><font color="#24678d">characteristic path length</font></strong></em>, a metric inversely related to communication efficiency. <em><font color="#24678d"><strong>Connection</strong></font></em> <em><strong><font color="#24678d">density</font></strong></em> is the ratio of actual&nbsp;number of links to the total number of possible links and is often used as an estimator for energy expenditure, resource utilization, or other physical "cost" of the network.</div>
+
+<div class="paragraph"><font color="#2a2a2a">In a complex system like the brain some nodes will be extensively interconnected while others may remain relatively isolated. The number of connections a node has with the rest of the network is called its</font><em><strong><font color="#24678d">&nbsp;degree</font></strong></em><font color="#2a2a2a">.&nbsp; A node with a large number of connections is called a </font><em><strong><font color="#24678d">hub</font></strong></em><font color="#2a2a2a"> and said to have a high </font><em><strong><font color="#24678d">centrality</font></strong></em><font color="#2a2a2a">. Such nodes are often essential to efficient communication in the network.</font></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;">A <em><strong><font color="#24678d">cluster</font></strong></em> refers to a small group of connected nearest neighbor nodes. The smallest cluster is a <em><strong><font color="#24678d">triangle</font></strong></em> (3 nodes). Many networks contain smaller subnetworks known as <em><strong><font color="#24678d">modules</font></strong></em>. which may be organized <em><strong><font color="#24678d">hierarchially</font></strong></em>. The <strong><em><font color="#24678d">clustering</font></em> <em><font color="#24678d">coefficient</font></em></strong> relates the number of clusters to the size of the entire network. Efficient and complex networks typically have a high degree of clustering.</div>
+
+<div class="paragraph">Many brain networks also demonstrate<em><strong><font color="#24678d"> 'small-world' organization</font></strong></em>. The small-world concept takes origin from social networks and the phenomenon that even strangers on far sides of the earth can be connected by a relatively small number of mutual acquaintances.<br /><br /><font color="#2a2a2a">&#8203;Small world networks are characterized by many hubs, high degrees of local clustering, and short path lengths globally linking all the network nodes. Thus, e</font><span><font color="#2a2a2a">ven though most nodes maintain only a limited number of direct connections in </font><em><strong><font color="#24678d">cliques</font></strong></em><font color="#2a2a2a">, all nodes of the system can be accessed through a relatively small number of intermediate steps.</font></span></div>
+
+<div class="paragraph">At present it is not certain which of the many possible network descriptors and metrics listed above will prove most useful, but preliminary studies in disorders such as Alzheimer disease, autism spectrum, and schizophrenia have already identified changes in brain organization identifiable through network measures. &nbsp;</div>
+
+<div><div id="841970409975385838" align="left" style="width: 100%; overflow-y: hidden;" class="wcustomhtml"><html> <head><script src="gdpr/gdprscript6f19.js?buildTime=1774025472"></script> <script type="text/javascript" 
+></script> 
+<script type="text/javascript">
+		$(function() {$('#Q').click(function() {$('.Q').toggle(500); return false;});});</script></head><body>
+<a href="#" id=Q><h3><font color="#378a57">Advanced Discussion (show/hide)»</font></h3></a><div class=Q style="display:none;">
+
+<!--content goes below here-->
+
+No supplementary material yet.  Check back soon!
+
+
+<!--content goes above here-->
+</div></body>
+<!-- Mirrored from mriquestions.com/networkgraphs.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 21 Mar 2026 06:44:04 GMT -->
+</html></div>
+
+
+
+</div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;"><strong>References</strong><br /><span><font color="#878787">&nbsp; &nbsp; &nbsp;</font></span>Bullmore E, Sporns O. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/review_bullmore_sporns_graph_theory561109.pdf">Complex brain networks: graph theoretical&nbsp;analysis of structural and functional systems</a>. Nat Rev Neurosci&nbsp;2009;10:186&ndash;98.<br />&nbsp;&nbsp; &nbsp;&nbsp;Brain Connectivity Toolbox, available at <a href="http://www.brain-connectivity-toolbox.net/">brain-connectivity-toolbox.net</a>. (Best web site for MATLAB-based processing modules and explanation of terms). Contains the following <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/bct_table_complex_network_measures.pdf">very useful table defining network metrics</a> mathematically (assessed Oct 2016).<br />&nbsp; &nbsp; &nbsp; De Martino F, Valente G, Staeren N, et al. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/vector_machines_561108.pdf">Combining&nbsp;multivariate voxel selection and<br />support vector machines for mapping and&nbsp;classification of fMRI spatial patterns</a>. NeuroImage&nbsp;2008; 43:44&ndash;58.<br /><span style="color:rgb(135, 135, 135)">&nbsp; &nbsp; &nbsp;</span>Milgram S. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/tw_social_networks_milgram_1967_small_world_problem.pdf">The small-world problem</a>. Psychology Today 1967; 1:61-67. (First elucidation of this concept applied to social networks. Some of Milgram's experimental findings have been criticized, but he may be right after all. The concept is more commonly known as "Six degrees of separation", stating that we are all just six links away from everyone else in the world. This phrase was first coined by&nbsp;Hungarian author Frigyes Karinthy in his 1929 short story, <em>Chains</em>, and later popularized in the eponymous 1990 play of John Guare and its 1993 movie adaptation.)<br />&nbsp; &nbsp; &nbsp; Pereira F, Mitchell T, Botvinick M. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/network_review_nihms100405.pdf">Machine learning classifiers and&nbsp;fMRI: a tutorial overview</a>. NeuroImage 2009;&nbsp;45:S199&ndash;209.<br />&nbsp; &nbsp; &nbsp;&nbsp;Smith SM, Miller KL, Salimi-Khorshidi G,&nbsp;et al. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/smith-fmri-2011.pdf">Network modelling methods for FMRI</a>.&nbsp;NeuroImage 2011; 54:875&ndash;891.<br />&nbsp; &nbsp; &nbsp;&nbsp;Smith SM. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/smith_future_of_connectivity561107.pdf">The future of FMRI connectivity</a>. NeuroImage 2012;62(2):1257&ndash;1266.<br />&nbsp; &nbsp; &nbsp;&nbsp;Sporns O, Honey CJ, Kotter R. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/sporns_hubs_journal.pone.0001049.pdf">Identification and classification of&nbsp;hubs in brain networks</a>. PLoS One 2007; 2:e1049.<br />&nbsp; &nbsp; &nbsp;&nbsp;van den Heuvel MP, Hulshoff-Pol HE. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/heuvel_reviewbrainnets1.pdf">Exploring&nbsp;the brain network: a review on resting-state fMRI functional connectivity</a>. Eur&nbsp;Neuropsychopharmacol 2010; 20:519&ndash;534.<br />&nbsp;&nbsp; &nbsp;&nbsp;Watts DJ, Strogatz SH. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/watts_small_world_561806.pdf">Collective dynamics of "small-world" networks</a>. Nature 1998; 393:440-442. (Seminal paper on small-world theory and applications)</div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;"><strong>Related Questions</strong><br /><strong>&nbsp; &nbsp; &nbsp;</strong><em style="color:rgb(0, 0, 0)"><strong><a href="fmri-statistical-analysis.html">How do you statistically analyze fMRI data?</a></strong></em><br /><em><strong><a href="analyze-rs-fmri.html">&nbsp; &nbsp; &nbsp;How do you process and analyze resting state fMRI data?&nbsp;</a><br /></strong></em><em><strong><a href="mind-readinglie-detector.html">&nbsp; &nbsp; &nbsp;Can fMRI read your mind?&nbsp;&nbsp;</a></strong></em></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div style="text-align:skip_to_justify;"><div style="height: 0px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-normal" href="analyze-rs-fmri.html" >
+<span class="wsite-button-inner">← &nbsp;Previous Question</span>
+</a>
+<div style="height: 0px; overflow: hidden;"></div></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div style="text-align:right;"><div style="height: 0px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-normal" href="fmri-at-7t.html" >
+<span class="wsite-button-inner">Next Question &nbsp;→</span>
+</a>
+<div style="height: 0px; overflow: hidden;"></div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div style="text-align:center;"><div style="height: 0px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-highlight" href="complete-list-of-questions.html" >
+<span class="wsite-button-inner">↑&nbsp;Complete List of Questions ↑</span>
+</a>
+<div style="height: 10px; overflow: hidden;"></div></div>
+</div></div>

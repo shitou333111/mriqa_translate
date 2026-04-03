@@ -1,0 +1,142 @@
+<div id="content"><div id="wsite-content" class="wsite-elements wsite-not-footer">
+	<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:49.1643454039%; padding:0 15px;">
+					
+						
+
+<h2 class="wsite-content-title" style="text-align:center;">Wrap-around Direction<br /></h2>
+
+<div class="paragraph" style="text-align:center;"><strong style="color: rgb(135, 135, 135); font-size: large; line-height: 1.5;"><em><font color="#0376be">Why aren't wrap-around artifacts seen in the frequency-encode direction, too?&nbsp;</font></em></strong><strong style="color: rgb(55, 138, 87); font-size: large; line-height: 1.5;"><em>&nbsp;</em></strong><br /></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:50.8356545961%; padding:0 15px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-thin" style="padding-top:10px;padding-bottom:15px;margin-left:0;margin-right:0;text-align:center">
+<a href='uploads/3/4/5/7/34572113/7941466_orig.png' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/7941466_orig.png" alt="frequency aliasing" style="width:100%;max-width:892px" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:49.093444909344%; padding:0 15px;">
+					
+						
+
+<div class="paragraph" style="text-align:skip_to_justify;">Wrap-around, a form of&nbsp;<strong><em><font color="#24678d">aliasing</font></em></strong>, is a phenomenon fundamental to digital signal processing and can theoretically occur in both the phase-encode or frequency-encode directions.&nbsp; The basis for this phenomenon is illustrated in the diagram right, where a high frequency signal is inadequately sampled and thereby misinterpreted as a signal of lower frequency.&nbsp; This mismapping of high frequencies into a lower part of the spectrum is can produce spatial ambiguity in the MR image and a "fold-over" or "wrap-around" artifact.<br /></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:50.906555090656%; padding:0 15px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-thin" style="padding-top:0;padding-bottom:0;margin-left:0;margin-right:0;text-align:center">
+<a href='uploads/3/4/5/7/34572113/5564610_orig.gif' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/55646109fd8.gif?297" alt="frequency aliasing" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;">To avoid frequency aliasing, digital sampling of the MR signal must be performed at least twice as rapidly as the highest frequency expected. This critical sampling rate is known as the&nbsp;<em><strong><font color="#24678d">Nyquist frequency</font></strong>.</em>&nbsp;If the signal is sampled less frequently than the Nyquist limit, a misassignment of higher frequencies as lower frequencies will occur.</div>
+
+<div class="paragraph" style="text-align:skip_to_justify;">Unlike aliasing in the phase-encode direction, aliasing in the frequency-encoding direction is not usually a problem in modern clinical MR imaging. This is because frequency aliasing is largely eliminated by two methods: 1) <strong><em><font color="#24678d">signal oversampling</font></em></strong> and 2) <strong><em><font color="#24678d">bandpass filtering</font></em></strong> before the image is reconstructed.&nbsp;<br /><br /><strong><em><font color="#24678d">Oversampling</font></em></strong> means that more data measurements of the MR signal are performed than required for image display resolution. In most modern MR scanners, the MR signal is sampled 512-1024 times per echo (even though the display resolution in the frequency-encode direction is usually taken to be 256). In other words, the Nyquist sampling rate is 2-4 times the highest frequency in the signal. Because this task is accomplished by merely increasing the digitizing rate of the sampling circuitry, it imposes essentially no time penalty and occurs "invisibly".&nbsp;&nbsp;<br /><br />A 2x level of frequency oversampling is performed by default on most MR scanners, though the oversampling factor may be adjustable. Vendor-specific terms for this method include "frequency oversampling" (Siemens, Philips, Fujifilm), "anti-aliasing" (GE), and "frequency-wrap suppression" (Canon).&nbsp;<br /><br /><strong><em><font color="#24678d">Bandpass filtering</font></em></strong> is an analog, digital, or hybrid method by which spurious high-frequency components are eliminated. The filter "passes" through all frequency components in a desired band, but attenuates/rejects frequencies outside of the chosen range.&nbsp;<br /><br />As a result of oversampling and filtering of the raw MR signal before image reconstruction occurs, aliasing in the frequency-encoding direction is essentially imperceptible in modern MRI.<br></div>
+
+<div><div id="912196783745336215" align="left" style="width: 100%; overflow-y: hidden;" class="wcustomhtml"><html> <head><script src="gdpr/gdprscript6f19.js?buildTime=1774025472"></script> <script type="text/javascript" 
+></script> 
+<script type="text/javascript">
+		$(function() {$('#Q').click(function() {$('.Q').toggle(500); return false;});});</script></head><body>
+<a href="#" id=Q><h3><font color="#378a57">Advanced Discussion (show/hide)»</font></h3></a><div class=Q style="display:none;">
+
+<!--content goes below here-->
+
+No supplementary material yet.  Check back soon.
+
+
+<!--content goes above here-->
+</div></body>
+<!-- Mirrored from mriquestions.com/frequency-wrap-around.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 21 Mar 2026 06:35:52 GMT -->
+</html></div>
+
+
+
+</div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;"><strong>References</strong><br /><span></span><span style="color:rgb(0, 0, 0)">&nbsp; &nbsp; &nbsp;Pusey E, Yoon C, Anselmo ML, Lufkin RB.&nbsp;</span><a href="http://mriquestions.com/uploads/3/4/5/7/34572113/pusey_wraparound539298.pdf" target="_blank">Aliasing artifacts in MR imaging</a><span style="color:rgb(0, 0, 0)">. Comput Med Imag Graphics 1988;12:219-224.</span></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;"><strong>Related Questions</strong><br /><strong><em><a href="aliasing.html">&nbsp; &nbsp; &nbsp;<span style="text-align: center;">What is aliasing?</span></a></em></strong></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div style="text-align:skip_to_justify;"><div style="height: 10px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-normal" href="phase-oversampling.html" >
+<span class="wsite-button-inner">← &nbsp;Previous Question</span>
+</a>
+<div style="height: 10px; overflow: hidden;"></div></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div style="text-align:right;"><div style="height: 10px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-normal" href="spiralradial-artifacts.html" >
+<span class="wsite-button-inner">Next Question &nbsp;→</span>
+</a>
+<div style="height: 10px; overflow: hidden;"></div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div style="text-align:center;"><div style="height: 10px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-highlight" href="complete-list-of-questions.html" >
+<span class="wsite-button-inner">↑&nbsp;Complete List of Questions ↑</span>
+</a>
+<div style="height: 10px; overflow: hidden;"></div></div>
+</div></div>

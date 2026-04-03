@@ -1,0 +1,183 @@
+<div id="content"><div id="wsite-content" class="wsite-elements wsite-not-footer">
+	<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<h2 class="wsite-content-title" style="text-align:center;">Data Prep and Fitting</h2>
+
+<div class="paragraph" style="text-align:center;"><font size="4"><strong style="color:rgb(135, 135, 135)"><em><font color="#0376be">In machine learning how do you&nbsp; prepare data and select model parameters for the best fit?&nbsp;</font></em></strong></font></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-thin" style="padding-top:0px;padding-bottom:0px;margin-left:0px;margin-right:0px;text-align:center">
+<a href='uploads/3/4/5/7/34572113/screen-shot-2023-03-31-at-4-14-27-pm_orig.png' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/published/screen-shot-2023-03-31-at-4-14-27-pm77b5.png?1680297302" alt="Picture" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;">In the <a href="machine-learning-ml.html">prior Q&amp;A </a>we briefly described several machine learning techniques (including logistic regression, cluster analysis, and support vector machines) used to classify and subdivide large data sets. Here we explain several important methods to prepare raw data for analysis and to optimally fit it to a given model.</div>
+
+<div class="paragraph"><strong><font color="#8d5024" size="4">Selecting a Model</font></strong></div>
+
+<div class="paragraph">In many quantitative data processing scenarios a straightforward model may be relatively easy to select.&nbsp; As a simple example, one may wish to find a relationship between liver and spleen volumes on MRI.&nbsp; Or another&nbsp;&mdash; to classify whether a patient has Alzheimer disease, Parkinson disease, or some other dementia based upon the thickness of cortical gray matter.&nbsp; These types of problems could be amenable to modeling by regression or one of the other shallow learning techniques (support vector machine, cluster analysis, random forest) as described <a href="machine-learning-ml.html">in a prior Q&amp;A</a>.<br /><br />In other situations, such as reducing motion artifacts in an MR image, the best model may not at all be obvious and a generalized deep learning approach (such as a convolutional neural network) is needed.&nbsp; Here the network may be&nbsp; allowed to find its own optimal solution by analyzing in training data that has been partially or fully labeled.&nbsp;&#8203;<br /></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;"><strong><font size="4" color="#8d5024">Data Preparation</font></strong></div>
+
+<div class="paragraph">The first recommended step is to normalize the data.&nbsp; This is typically done by zero-centering it in each direction, then normalizing it to have a mean of <em>0</em> and <span style="color:rgb(0, 0, 0)">standard deviation of <em>1</em> along each direction</span>.</div>
+
+<span class='imgPusher' style='float:right;height:0px'></span><span style='display: table;width:auto;position:relative;float:center;max-width:100%;;clear:right;margin-top:0px;*margin-top:0px'><a href='uploads/3/4/5/7/34572113/data-preprocessing_orig.png' rel='lightbox' onclick='if (!lightboxLoaded) return false'><img src="uploads/3/4/5/7/34572113/data-preprocessing_orig.png" style="margin-top: 0px; margin-bottom: 0px; margin-left: 0px; margin-right: 0px; border-width:0; max-width:100%" alt="Data preprocessing" class="galleryImageBorder wsite-image" /></a><span style="display: table-caption; caption-side: bottom; font-size: 90%; margin-top: -0px; margin-bottom: 0px; text-align: center;" class="wsite-caption"></span></span>
+<div class="paragraph" style="display:block;"></div>
+<hr style="width:100%;clear:both;visibility:hidden;"></hr>
+
+<div class="paragraph"><strong><font size="4" color="#8d5024">Initializing Model Parameters</font></strong></div>
+
+<div class="paragraph">Prior to training the network, initialization of network parameters such as weights and biases for each neuron must be selected. One popular choice (a version of the <em><strong><font color="#24678d">Xavier initialization</font></strong></em>) is to set starting parameters with values drawn randomly from a Gaussian distribution of mean = 0 and standard deviation =&nbsp;<em>&radic;</em><em>(2/n)</em>, where n = the number of inputs + outputs for each neuron. A even better method may be the<em><strong><font color="#24678d"> He initialization</font></strong></em>&nbsp;(optimized for ReLU activations), where n = the number of inputs only.</div>
+
+<div class="paragraph">In truth, AI application developers seldom start with such highly randomized initialization parameters.&nbsp; Instead, they often employ a <strong><em><font color="#24678d">transfer learning</font></em> </strong>approach, copying weights and biases from other tested networks as a starting point.&nbsp; This approach can significantly reduce training time for the new network being designed.</div>
+
+<div class="paragraph"><strong><font size="4" color="#8d5024">Training</font></strong></div>
+
+<div class="paragraph">After selecting a model and preparing the raw data, training of the network must take place.&nbsp; For image-based applications, a <em><strong><font color="#24678d">supervised learning</font></strong></em> technique is most commonly used. The data scientists will likely have at their disposal a reasonably large number of cases (usually in the thousands or higher) that contain images each with an independently verified label serving as "ground truth".&nbsp; For example, the cases might all be MR images of brain tumors together with a binary label (e.g., benign or malignant).&nbsp;&nbsp;</div>
+
+<div class="paragraph">Armed with this labeled data set, the investigators will save out a relatively small proportion (10-15%) of the whole to be used as a <em><strong><font color="#24678d">validation set</font></strong></em>&nbsp;<u>after</u> the network has been fully trained. The other labeled samples (85-90%) will form the<strong><em><font color="#24678d"> training set</font></em></strong>. For computational efficiency, this training data is usually divided into<span style="color:rgb(0, 0, 0)">&nbsp;</span><em style="color:rgb(0, 0, 0)"><strong><font color="#24678d">batches</font></strong></em>&nbsp;(typically of size 32, 64, 128, or another factor of 2).&nbsp; After each training batch is passed through the network, the predicted output from the network is compared to the table of ground truths and a <em><strong><font color="#24678d">loss function</font></strong></em>&nbsp;(error score) is calculated. Weighting factors and parameters of the network are then modified in an iterative fashion to minimize the loss function.&nbsp;Usually&nbsp;<em style="color:rgb(0, 0, 0)"><strong><font color="#24678d">iterations</font></strong></em><span style="color:rgb(0, 0, 0)">&nbsp;of several batches are needed so that all training examples have had a chance to have been fed through the network. At this point an&nbsp;</span><em style="color:rgb(0, 0, 0)"><strong><font color="#24678d">epoch</font></strong></em><span style="color:rgb(0, 0, 0)">&nbsp;is said to have been completed.&nbsp; To fully train the network many epochs are needed, often in the hundreds or thousands, which can take hours or days even on fast computers.&nbsp;</span></div>
+
+<div class="paragraph"><strong style="color:rgb(0, 0, 0)"><font color="#8d5024" size="4">The Loss Function</font></strong></div>
+
+<div class="paragraph">The <em><strong><font color="#24678d">Loss Function</font></strong></em>, also sometimes known as the <em><strong><font color="#24678d">Cost or Error Function</font></strong></em>, is a measure of the level of error&nbsp;<span style="color:rgb(0, 0, 0)">in</span>&nbsp;a network's output when using a certain set of internal parameters (such as weights and biases).&nbsp; Two loss functions are commonly used:</div>
+
+<div class="paragraph"><u style="color:rgb(0, 0, 0)"><strong>Mean Squared Error (MSE) Loss</strong></u><span style="color:rgb(0, 0, 0)">.&nbsp;This is average of the squared differences between the expected and predicted values, given by the formula</span></div>
+
+<div><div class="wsite-image wsite-image-border-none" style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
+<a>
+<img src="uploads/3/4/5/7/34572113/published/screen-shot-2022-02-03-at-4-22-27-pm_1.png" alt="Picture" style="width:583;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+<div class="paragraph">&#8203;MSE Loss functions are typically used when the outcome is numeric, such as a distance measurement or volume. This is the metric by which linear regression is optimized.<br />&#8203;<br /><u><strong>Cross-Entropy (CE) Loss</strong></u>.&nbsp; Also known as&nbsp;<em><strong><font color="#24678d">Logistic Loss</font></strong></em>&nbsp;or&nbsp;<em><strong><font color="#24678d">Log Loss</font></strong></em>, this method penalizes errors using a non-linear function (logarithm).&nbsp; When the difference between expected and predicted values is small, the penalty is small; but when the difference is large, the penalty can be enormous. The CE Loss formula for a binary classification system is&nbsp;written as</div>
+
+<div><div class="wsite-image wsite-image-border-none" style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
+<a>
+<img src="uploads/3/4/5/7/34572113/published/screen-shot-2022-02-03-at-4-17-13-pm_1.png" alt="Picture" style="width:370;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+<div class="paragraph"><strong><font size="4" color="#8d5024">Overfitting and Underfitting</font></strong></div>
+
+<div class="paragraph">What is the optimal number of parameters to optimally fit a set of data?&nbsp; As all data sets vary, there is no general answer to this question, but the problems with overfitting and underfitting can be appreciated in the diagrams below:</div>
+
+<div><div class="wsite-image wsite-image-border-none" style="padding-top:0px;padding-bottom:0px;margin-left:0px;margin-right:0px;text-align:center">
+<a href='uploads/3/4/5/7/34572113/screen-shot-2023-03-27-at-7-32-26-pm_orig.png' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/screen-shot-2023-03-27-at-7-32-26-pm_orig.png" alt="Picture" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+<div class="paragraph">In <em><strong><font color="#24678d">underfitting</font></strong></em>, the model has an insufficient number of parameters to fully learn the data.&nbsp; In <em><strong><font color="#24678d">overfitting</font></strong></em> the model is too complex and contains too many parameters.&nbsp; The computational burden is excessive and even though it fits the sample data with high precision, the model is highly optimized for the particular training data and will not generalize well to other data sets.&nbsp;</div>
+
+<div class="paragraph"><strong><font size="4" color="#8d5024">Regularization</font></strong></div>
+
+<div class="paragraph">One possible solution to overfitting would be to collect more training data points. However, this is time-consuming and may not be practical if training data is hard to generate. Another option would be to reduce the number of model parameters, but this is a blunt instrument and it is often not clear at the onset how many variables will actually need to be used.</div>
+
+<div class="paragraph">Rather than directly manipulating the number of parameters, a more robust method is to restrict the values that the parameters can take, a process known as <em><strong><font color="#24678d">regularization</font></strong></em>.&nbsp; The most commonly used technique is known as <strong><font color="#24678d"><em>L2 regularizatio</em>n</font></strong>, which adds an additional term to the loss function of the form&nbsp;<strong><font color="#8d5024" size="4">&lambda;(&Sigma;w&sup2;<em>&#8203;</em></font></strong><strong><font color="#8d5024" size="4">)</font></strong><strong></strong> where<strong><font size="4">&nbsp;<font color="#8d5024">&lambda;</font></font></strong> is a user-defined constant known as the <em><strong><font color="#24678d">regularization strength</font></strong></em>&nbsp;and <strong><font color="#8d5024" size="4">&Sigma;w&sup2;</font></strong>&nbsp;is the sum of squared values of the calculated weights at each step of training.</div>
+
+<div class="paragraph">A second and very useful regularization method applicable to most multilayer networks is known as&nbsp;<em><strong><font color="#24678d">dropout</font></strong></em>. As the name implies, various nodes and their outputs are randomly ignored or temporarily dropped out of the model during training.&nbsp; Typical dropout rates are about 20% of input nodes and 20-50% of intermediate nodes. (Output nodes do not participate).<br /></div>
+
+<div class="paragraph">Dropout has several direct and indirect effects on the network: 1) it means that the structure of the network will randomly change from time to time, forcing nodes to be more independent; 2) it introduces noise, making the weight calculations less dependent on a particular configuration of training data, thus reducing overfitting; and 3)&nbsp;<span style="color:rgb(0, 0, 0)">it may break apart co-dependent nodes that adapt to fix mistakes committed by other nodes in prior layers, thus making the model more robust.&nbsp;</span></div>
+
+<div class="paragraph"><strong><font size="4" color="#8d5024">Batch Normalization</font></strong></div>
+
+<div class="paragraph"><em><strong><font color="#24678d">Batch normalization</font></strong></em> is a procedure applied to rescale outputs of <u>intermediate</u> layer neurons during the course of training so that their values are Gaussian with a mean of <em>0</em> and standard deviation of <em>1</em>.&nbsp; Recall that one of the first steps in data preparation was to normalize the input data to the network so that each first layer neuron could expect to receive a consistent range of information.&nbsp; But deeper layers in the network have no such guarantee what their inputs may be (sometimes extremely large or extremely small). They become highly dependent on earlier nodes.&nbsp; By renormalizing inputs to nodes at intermediate layers, training speeds can be markedly improved.&nbsp; Because it restricts large swings in intermediate data, batch normalization is also provides a modest degree of regularization.</div>
+
+<div><div id="100860684234917380" align="left" style="width: 100%; overflow-y: hidden;" class="wcustomhtml"><html> <head><script src="gdpr/gdprscript6f19.js?buildTime=1774025472"></script> <script type="text/javascript" 
+></script> 
+<script type="text/javascript">
+		$(function() {$('#Q').click(function() {$('.Q').toggle(500); return false;});});</script></head><body>
+<a href="#" id=Q><h3><font color="#378a57">Advanced Discussion (show/hide)»</font></h3></a><div class=Q style="display:none;">
+
+<!--content goes below here-->
+
+No supplementary material yet.  Check back soon!
+
+
+<!--content goes above here-->
+</div></body>
+<!-- Mirrored from mriquestions.com/data-prep-and-fitting.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 21 Mar 2026 06:49:56 GMT -->
+</html></div>
+
+
+
+</div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;"><strong>&nbsp;References</strong><font color="#878787">&nbsp; &nbsp;</font><br />&nbsp; &nbsp; &nbsp;He K, Zhang X, Res S, Sun J. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/he_regularization.pdf">Delving deep into rectifiers: surpassing human-level performance on ImageNet classification</a>. arXiv:1502.01852v1 (6 Feb 2015) - describes an initialization technique optimized for networks with ReLU activations.&nbsp;<br />&nbsp; &nbsp; &nbsp;Ioffe S, Szegedy C. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/batchnorm.pdf">Batch normalization: accelerating deep network training by reducing internal covariate shift</a>. arXiv:1502.03167v3 (2 Mar 2015)<br />&nbsp; &nbsp; &nbsp;<span style="color:rgb(0, 0, 0)">Karpathy A.&nbsp;CS231n Convolutional Neural Networks for Visual Recognition. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/cs231n_convolutional_neural_networks_for_visual_recognition_svm.pdf">Linear Classifiers: Support Vector Machine, Softmax</a>.&nbsp;Stanford University, 2016.&nbsp; <a href="https://cs231n.github.io/linear-classify/" target="_blank">[LINK</a>]</span><br />&nbsp; &nbsp; &nbsp;Karpathy A.&nbsp;CS231n Convolutional Neural Networks for Visual Recognition.&nbsp;<a href="https://mriquestions.com/uploads/3/4/5/7/34572113/cs231n_convolutional_neural_networks_for_visual_recognition_-_1.pdf">Neural Networks Part 1: Setting up the Architecture</a>. Stanford University, 2016. <a href="https://cs231n.github.io/neural-networks-1/" target="_blank">[LINK]</a><br />&nbsp; &nbsp; &nbsp;Karpathy A.&nbsp;CS231n Convolutional Neural Networks for Visual Recognition. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/cs231n_convolutional_neural_networks_for_visual_recognition_2.pdf">Neural Networks Part 2: Setting up the Data and the Loss.&nbsp;</a>Stanford University, 2016<a href="https://mriquestions.com/uploads/3/4/5/7/34572113/cs231n_convolutional_neural_networks_for_visual_recognition_2.pdf">.&nbsp;</a><span style="color:rgb(0, 0, 0)">[<a href="https://cs231n.github.io/neural-networks-2/" target="_blank">LINK</a>]</span><br />&nbsp; &nbsp; &nbsp;Srivastava N, Hinton GE, Krizhevsky A, et al.&nbsp; <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/srivastava14a_dropout_paper.pdf">Dropout: a simple way to prevent neural networks from overfitting</a>. Journal of Machine Learning Research 2014; 15:1929&ndash;1958.</div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;"><strong>Related Questions</strong><br /><strong>&nbsp; &nbsp; &nbsp;</strong><strong><em><font color="#0376be"><a href="deep-network-types.html">What are the various types of deep networks and how are they used?</a>&nbsp;</font></em></strong><strong style="color:rgb(55, 138, 87)"><em>&nbsp;</em></strong><em></em></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div style="text-align:skip_to_justify;"><div style="height: 10px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-normal" href="deep-network-types.html" >
+<span class="wsite-button-inner">← &nbsp;Previous Question</span>
+</a>
+<div style="height: 10px; overflow: hidden;"></div></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div style="text-align:right;"><div style="height: 10px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-normal" href="back-propagation.html" >
+<span class="wsite-button-inner">Next Question &nbsp;→</span>
+</a>
+<div style="height: 10px; overflow: hidden;"></div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div style="text-align:center;"><div style="height: 10px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-highlight" href="complete-list-of-questions.html" >
+<span class="wsite-button-inner">↑&nbsp;Complete List of Questions ↑</span>
+</a>
+<div style="height: 10px; overflow: hidden;"></div></div>
+</div></div>

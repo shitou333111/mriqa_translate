@@ -1,0 +1,130 @@
+<div id="content"><div id="wsite-content" class="wsite-elements wsite-not-footer">
+	<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<h2 class="wsite-content-title" style="text-align:center;">梯度下降与反向传播</h2>
+
+<div class="paragraph" style="text-align:center;"><font color="#0376be" size="4"><strong><em>我仍然不明白机器是如何通过自我优化来解决问题的。&nbsp;&nbsp;</em></strong></font></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-thin" style="padding-top:0px;padding-bottom:10px;margin-left:0px;margin-right:0px;text-align:center">
+<a href='uploads/3/4/5/7/34572113/screen-shot-2022-06-25-at-12-40-22-pm_orig.png' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/screen-shot-2022-06-25-at-12-40-22-pm_orig.png" alt="图片" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div class="paragraph"><span style="color:rgb(55, 65, 81)">机器通过以下步骤在训练期间更新神经网络组件的权重和偏置来实现“自我优化”：</span></div>
+
+<div class="paragraph"><ol><li>&#8203;<font color="#2a2a2a"><u><strong>前向传播：</strong></u> 训练输入数据被送入神经网络，沿前向方向传递，同时经历一系列线性变换和非线性激活，以产生一个或多个输出。</font></li><li><font color="#2a2a2a"><u><strong>损失计算</strong></u>：&nbsp;</font><span style="color:rgb(55, 65, 81)">每个输出的理想预测值与测量值之间的差异由</span><span style="color:rgb(0, 0, 0)">&nbsp;</span><em style="color:rgb(0, 0, 0)"><strong><font color="#24678d">损失函数</font></strong></em><span style="color:rgb(0, 0, 0)">量化，</span><span style="color:rgb(55, 65, 81)">&nbsp;该函数已在<a href="data-prep-and-fitting.html">之前的问答中介绍</a>。&nbsp;</span></li><li><span style="color:rgb(55, 65, 81)"><u><strong>梯度下降与反向传播</strong></u>。 </span><span style="color:rgb(42, 42, 42)">使用微积分中的链式法则计算损失函数相对于网络中每个权重的梯度。该梯度代表了损失函数在每个节点处的最陡峭斜率。梯度是通过将误差从输出层开始，逐层反向传播通过网络来计算的。</span>&#8203;</li><li><font color="#2a2a2a"><u><strong>权重更新：</strong></u>&nbsp; 通过沿损失函数梯度的相反方向移动来调整网络中的权重和偏置。具体做法是从权重和偏置的当前值中减去梯度的一小部分。被减去的梯度部分称为</font><em><strong><font color="#24678d">学习率</font></strong></em><font color="#2a2a2a">，它决定了权重更新的幅度。</font></li><li><font color="#2a2a2a"><u><strong>重复</strong></u>： 重复步骤 1 到 4，进行多个周期或迭代，直到网络收敛到</font><span style="color:rgb(55, 65, 81)">&nbsp;损失函数的最小值。</span></li></ol></div>
+
+<div class="paragraph"><strong><font color="#8d5024" size="4">梯度下降&nbsp;</font></strong></div>
+
+<div class="paragraph">优化过程的第三步，<em><strong><font color="#24678d">梯度下降</font></strong></em>，涉及在每组训练数据输入系统后，规划<em>最小化损失函数</em>的最有效路径。<em><strong><font color="#24678d">&nbsp;</font></strong></em>这个过程常被比作在雾中下山。在每一点，你都会在局部范围内寻找下降最陡峭的斜坡方向，然后朝那个方向迈出一步并重复。最终，你希望找到通往山底的路，从而获得损失函数的最低全局值。然而，有时你可能会被困在山上的平坦区域（所有方向的斜率都为零）或陷入一个中间山谷（局部最小值）。<br /><br />&#8203;为了减少计算负担，人们开发了该方法的几种变体，最流行的是<em><strong><font color="#24678d">随机梯度下降</font></strong></em>（使用随机选择的数据区域子集，而不是在每个点计算精确的斜率/导数）及其变体<em><strong><font color="#24678d">Adam</font></strong></em>（包含<u>自适应</u><u>矩</u>估计）。&nbsp;</div>
+
+<div><div class="wsite-image wsite-image-border-none" style="padding-top:10px;padding-bottom:10px;margin-left:0px;margin-right:0px;text-align:center">
+<a href='uploads/3/4/5/7/34572113/steepest-descent-loss-funciton_orig.png' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/steepest-descent-loss-funciton_orig.png" alt="损失函数与梯度下降" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%"><b>损失函数</b>的三维表示。网络从实心黑点开始，具有相对较高的错误率（损失）。损失函数相对于各种参数权重的数值微分（即梯度/斜率计算）确定了局部最陡下降路径。在下降路径的每个点上，都会计算新的最陡梯度并调整下降路径，直到达到最小值。</div>
+</div></div>
+
+<div class="paragraph">一种特定的算法，<em style="color:rgb(0, 0, 0)"><strong><font color="#24678d">反向传播</font></strong></em>，从后到前依次更新网络权重和偏置。这个过程的细节有些复杂，但涉及使用链式法则（来自微积分）来允许梯度权重被逐层计算和更新。<font color="#2a2a2a">一旦计算出输出层误差，这些误差就会通过网络反向传播。在每一层，误差会乘以激活函数相对于输入加权和的导数。这样就得到了每个节点输入加权和的误差。</font></div>
+
+<div class="paragraph">以下视频有助于理解这个过程。</div>
+
+<div class="wsite-youtube" style="margin-bottom:10px;margin-top:10px;"><div class="wsite-youtube-wrapper wsite-youtube-size-auto wsite-youtube-align-center">
+<div class="wsite-youtube-container">
+
+<iframe src="http://www.youtube.com/embed/Ilg3gGewQ5U?wmode=opaque" frameborder="0" allowfullscreen></iframe>
+</div>
+</div></div>
+
+<div><div id="813170666826417160" align="left" style="width: 100%; overflow-y: hidden;" class="wcustomhtml"><html> <head><script src="gdpr/gdprscript6f19.js?buildTime=1774025472"></script> <script type="text/javascript" 
+></script> 
+<script type="text/javascript">
+		$(function() {$('#Q').click(function() {$('.Q').toggle(500); return false;});});</script></head><body>
+<a href="#" id=Q><h3><font color="#378a57">进阶讨论（显示/隐藏）»</font></h3></a><div class=Q style="display:none;">
+
+<!--content goes below here-->
+
+暂无补充材料。请稍后再来查看！
+
+
+<!--content goes above here-->
+</div></body>
+<!-- Mirrored from mriquestions.com/back-propagation.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 21 Mar 2026 06:49:59 GMT -->
+</html></div>
+
+
+
+</div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div><div class="paragraph" style="text-align:skip_to_justify;"><strong>参考文献</strong><br /><font color="#878787">&nbsp; &nbsp; &nbsp;</font><a href="https://en.wikipedia.org/wiki/Backpropagation" target="_blank">Backpropagation</a>. Wikipaedia, The Free Encyclopedia. (downloaded 3 Feb 2022)<br />&nbsp; &nbsp; &nbsp;<span>Kingma DP, Ba JL. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/adam.pdf">Adam: a method for stochastic optimization</a>. arXIV:1412.6980v9 2017.</span>&nbsp;<font color="#878787">&nbsp;</font><br />&nbsp; &nbsp; &nbsp;Le Cun Y. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/lecun-88_back_projection_famous_paper.pdf">A theoretical framework for back-propagation</a>. In: Touretzky D, Hinton G, Sejnowski T (eds). <em>Proceedings of the 1988 Connectionist Models Summer School</em>, Carnegie Mellon University,&nbsp;<span style="color:rgb(0, 0, 0)">Pittsburgh PA,</span>&nbsp;Morgan Kaufmann, 1988: pp 21-28.<br />&nbsp; &nbsp; &nbsp;Meeden L. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/backprop.dvi.pdf">Derivation of backpropagation</a>. Course notes for CS81 - Adaptive Robotics 2010: 1-4. <a href="https://www.cs.swarthmore.edu/~meeden/cs81/s10/BackPropDeriv.pdf" target="_blank">[Downloaded from this link 6-25-22]<br />&nbsp; &nbsp; &nbsp;<span style="color:rgb(0, 0, 0)">Rumelhart DE, Hinton GE, Williams RJ. Learning representations by back-propagating errors. Nature (letters) 1986;323:533-5.</span></a><br />&nbsp; &nbsp; Sebatian. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/an_introduction_to_neural_network_loss_functions.pdf">An introduction to neural network loss functions</a>. Blog post on Programmathically 28 Sept 2021. <a href="https://programmathically.com/an-introduction-to-neural-network-loss-functions/" target="_blank">[available at this link]</a></div><div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;"><strong>相关问题</strong><br /><a href="index.html"><strong>&nbsp; </strong><span style="color:rgb(0, 0, 0)">&nbsp; &nbsp;&nbsp;</span><strong style="color:rgb(0, 0, 0)"><em><font color="#0376be">深度学习 (DL) 与机器学习 (ML) 是相同的吗？</font></em></strong></a></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div style="text-align:skip_to_justify;"><div style="height: 0px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-normal" href="data-prep-and-fitting.html" >
+<span class="wsite-button-inner">← &nbsp;上一问题</span>
+</a>
+<div style="height: 0px; overflow: hidden;"></div></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div style="text-align:right;"><div style="height: 0px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-normal" href="dl-playground.html" >
+<span class="wsite-button-inner">下一问题 &nbsp;→</span>
+</a>
+<div style="height: 0px; overflow: hidden;"></div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div style="text-align:center;"><div style="height: 0px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-highlight" href="complete-list-of-questions.html" >
+<span class="wsite-button-inner">↑&nbsp;问题完整列表 ↑</span>
+</a>
+<div style="height: 10px; overflow: hidden;"></div></div>
+</div></div>

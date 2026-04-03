@@ -1,0 +1,178 @@
+<div id="content"><div id="wsite-content" class="wsite-elements wsite-not-footer">
+	<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<h2 class="wsite-content-title" style="text-align:center;">Rectangular FOV</h2>
+
+<div class="paragraph" style="text-align:center;"><strong style="color: rgb(135, 135, 135); font-size: large; line-height: 1.5;"><em><font color="#0376be">How does one obtain a rectangular field of view? Why would you want to use it?&nbsp;</font></em></strong><strong style="color: rgb(55, 138, 87); font-size: large; line-height: 1.5;"><em>&nbsp;</em></strong><br /></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-thin" style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
+<a href='uploads/3/4/5/7/34572113/6819383_orig.png' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/6819383_orig.png" alt="rectangular FOV " style="width:100%;max-width:942px" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:38.300835654596%; padding:0 15px;">
+					
+						
+
+<div class="paragraph" style="text-align:skip_to_justify;">In the <a href="field-of-view-fov.html" title="">prior Q&amp;A</a> we showed how the field-of- view (<em>FOV</em>) is inversely related to the spacing (<em>&Delta;k</em>) of samples in <em>k</em>-space.&nbsp;For simplicity of explanation we considered square pixels with the same <em>FOV</em> in each direction. However, by altering the sampling rates along the frequency and phase<em>&nbsp;</em>axes it is possible to alter the <em>FOV</em> along each image dimension independently.</div>
+
+<div class="paragraph" style="text-align:center;"><em>FOV<font size="1">f</font></em> = 1 /<font size="1">&nbsp;</font><em>&Delta;k<font size="1">f</font></em><br /><em>FOV<font size="1">p</font></em>&nbsp;= 1 /<font size="1">&nbsp;</font><em>&Delta;k<font size="1">p</font></em><br /></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:61.699164345404%; padding:0 15px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-thin" style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
+<a href='uploads/3/4/5/7/34572113/8388995_orig.gif' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/838899570c6.gif?393" alt="rectangular FOV " style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%">Rectangular (1:2) FOV obtained by sampling every other line<br>in the <i>k<sub>p</sub></i>-direction</div>
+</div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;">For 2D-spin warp imaging, a rectangular FOV with a 1:2 ratio is obtained by sampling alternate phase-encode&nbsp;lines in <em>k</em>-space while leaving the maximum and minimum amplitudes of the phase-encoding gradient unchanged. This process halves the number of phase-encoding steps (<em>N<font size="1">p</font></em>), but doubles the&nbsp;<em>increment</em>&nbsp;between successive steps.&nbsp;</div>
+
+<div class="paragraph" style="text-align:skip_to_justify;">The sampling rate and hence the field-of-view in the frequency-encode direction (<em>FOV<font size="1"><span style="line-height: 16.666667938232422px;">f</span></font></em>) remains unaffected.&nbsp; Furthermore, because both the <em>FOV<font size="1">p</font></em> and&nbsp;<em>N<font size="1">p</font></em>&nbsp;have been reduced by one-half, pixel size in the phase-encode direction (<em>FOV<font size="1">p&nbsp;</font>/<font size="1">&nbsp;</font>N<font size="1">p</font></em>) and overall spatial resolution of the image are also unchanged.&nbsp;&nbsp;<br /></div>
+
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:70.473537604457%; padding:0 15px;">
+					
+						
+
+<div class="paragraph" style="text-align:skip_to_justify;">All MR manufacturers offer rectangular FOV as a standard option applicable to most pulse sequences. The names differ slightly by vendor: "Rectangular FOV" (Siemens, Philips, Fujifilm, Canon), and "Asymmetric FOV" (GE). &nbsp;<br></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;">The rectangular FOV option is most beneficial in imaging the spine and extremities, where one anatomical dimension is much longer than the other.&nbsp; Most scanners allow adjusting the phase-sampling ratio over a large range; accordingly, considerable latitude may be permitted in the size and shape of the rectangular FOV.&nbsp;&nbsp;</div>
+
+<div class="paragraph" style="text-align:skip_to_justify;">Rectangular FOV techniques have two major drawbacks, however.&nbsp; First, because fewer phase-encoding steps are acquired, the signal-to-noise ratio (SNR) is proportionately lower compared to full FOV imaging.&nbsp; Secondly, <strong><em><font color="#24678d">wrap-around</font></em></strong> <strong><font color="#24678d">(<em>aliasing</em>)</font></strong> in the phase-encoding direction may occur if the object dimensions exceed this defined&nbsp;<em>FOV<font size="1">p</font></em>. Careful positioning of the patient and the use&nbsp;of saturation bands may be needed to eliminate this artifact.</div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:29.526462395543%; padding:0 15px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-thin" style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
+<a href='uploads/3/4/5/7/34572113/2989454_orig.jpg' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/2989454_orig.jpg" alt="rectangular FOV " style="width:100%;max-width:300px" />
+</a>
+<div style="display:block;font-size:90%">Rectangular FOV with wrap-around (aliasing) artifact from chin (red arrow)</div>
+</div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div><div id="891746177658991591" align="left" style="width: 100%; overflow-y: hidden;" class="wcustomhtml"><html> <head><script src="gdpr/gdprscript6f19.js?buildTime=1774025472"></script> <script type="text/javascript" 
+></script> 
+<script type="text/javascript">
+		$(function() {$('#Q').click(function() {$('.Q').toggle(500); return false;});});</script></head><body>
+<a href="#" id=Q><h3><font color="#378a57">Advanced Discussion (show/hide)»</font></h3></a><div class=Q style="display:none;">
+
+<!--content goes below here-->
+
+No supplementary material yet.  Check back soon!
+
+
+<!--content goes above here-->
+</div></body>
+<!-- Mirrored from mriquestions.com/rectangular-fov.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 21 Mar 2026 06:16:06 GMT -->
+</html></div>
+
+
+
+</div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;"><strong>References</strong><br /><span style="line-height: 1.5;"><font color="#878787">&nbsp; &nbsp; &nbsp;</font></span>Mezrich R.&nbsp;<a href="http://mriquestions.com/uploads/3/4/5/7/34572113/fourier.kspace.mezrich.1995.pdf" title="">A perspective on k-space</a>. Radiology 1995; 195: 297-315. [review].<br />&nbsp; &nbsp; &nbsp;Miller K.&nbsp;<a href="uploads/3/4/5/7/34572113/miler-image_formation.ppt" title="">MRI image formation (ppt)</a>. On-line lecture notes available at<a href="http://users.fmrib.ox.ac.uk/~karla/teaching/image_formation.ppt" target="_blank" title="">users.fmrib.ox.ac.uk/~karla/teaching/image_formation.ppt</a><br /></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;"><strong>Related Questions</strong><br /><strong><em><a href="rectangular-fov.html" title="">&nbsp; &nbsp; &nbsp;</a></em></strong><strong><em><a href="field-of-view-fov.html" title="">How does k-space relate to field-of-view (FOV) and pixel width?&nbsp;&nbsp;<br /></a></em></strong><strong><em><span style="text-align: center;">&nbsp; &nbsp; &nbsp;<a href="wrap-around-artifact.html">Why does phase wrap-around occur?</a></span><a href="rectangular-fov.html" title=""><span style="text-align: center;">&nbsp;</span><span style="text-align: center;">&nbsp;</span></a></em></strong></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div style="text-align:skip_to_justify;"><div style="height: 10px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-normal" href="field-of-view-fov.html" >
+<span class="wsite-button-inner">← &nbsp;Previous Question</span>
+</a>
+<div style="height: 10px; overflow: hidden;"></div></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div style="text-align:right;"><div style="height: 10px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-normal" href="partial-fourier.html" >
+<span class="wsite-button-inner">Next Question &nbsp;→</span>
+</a>
+<div style="height: 10px; overflow: hidden;"></div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div style="text-align:center;"><div style="height: 10px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-highlight" href="index.html" >
+<span class="wsite-button-inner">↑&nbsp;Complete List of Questions ↑</span>
+</a>
+<div style="height: 10px; overflow: hidden;"></div></div>
+</div></div>

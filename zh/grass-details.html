@@ -1,0 +1,134 @@
+<div id="content"><div id="wsite-content" class="wsite-elements wsite-not-footer">
+	<div class="paragraph" style="text-align:center;"><font color="#0376be" size="5"><span style="line-height: 27px;"><strong>GRASS/FISP 脉冲序列的技术细节</strong></span></font></div>
+
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:38.300835654596%; padding:0 15px;">
+					
+						
+
+<div class="paragraph" style="text-align:skip_to_justify;">在 GRASS/FISP 序列中，通常会对“基础”梯度回波序列进行三项修改：1) 相位交替的射频脉冲，2) 在读出（通常还有层选）方向上施加恒定的额外梯度场，以及 3) 沿相位编码轴施加可变的“重绕梯度”。这些特殊功能的作用是本期高级专题页面的主题。</div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:61.699164345404%; padding:0 15px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-thin " style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
+<a>
+<img src="uploads/3/4/5/7/34572113/_1101823.png" alt="示意图" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;"><strong><u>交替射频脉冲</u></strong></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;">使用交替相位射频脉冲并非 GRASS/FISP 独有，而是任何使用极短<em>TR</em>值的脉冲序列的常见做法。如<a href="4-or-more-rf-pulses.html" title="">先前问答</a>所述，快速施加的射频脉冲会导致纵向磁化饱和。如果射频脉冲持续以相同 (+&alpha;) 方向施加，其稳态磁化强度将低于使用交替相位 (+&alpha;,&nbsp;&minus;&alpha;,&nbsp;+&alpha;,&nbsp;&minus;&alpha;, ...) 脉冲的情况。相反相位 (&minus;&alpha;) 的脉冲有助于恢复纵向磁化，其方式等效于<a href="driven-equilibrium.html">后续问答</a>中讨论的驱动平衡技术。</div>
+
+<div class="paragraph" style="text-align:skip_to_justify;">要理解额外梯度和重绕器的作用，必须首先引入共振偏移角 (&beta;) 的概念。</div>
+
+<div class="paragraph" style="text-align:skip_to_justify;"><strong><u>共振偏移角 (&beta;)</u></strong><br /><br />当稳态自由进动建立后，每次射频脉冲前瞬间存在的磁化矢量通常并不恰好指向<em style="">z</em>轴。相反，它通常是倾斜定向的，并且在<em style="">&nbsp;xy</em>平面内具有非零的横向分量。该横向磁化矢量相对于旋转坐标系<em>x'</em>轴所成的<strong><em><font color="#24678d">角度</font></em><font color="#24678d"> (<em>&beta;</em>)</font></strong>被称为<strong><em><font color="#24678d">共振偏移角、相位角</font></em></strong>，或<em style=""><font color="#24678d"><strong>进动角</strong></font>。</em>&nbsp;&nbsp;<br /><br />下图展示了射频脉冲的作用如何依赖于共振偏移。<span style="color: rgb(135, 135, 135); line-height: 1.5;"><br /></span></div>
+
+<div><div class="wsite-image wsite-image-border-thin " style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
+<a>
+<img src="uploads/3/4/5/7/34572113/843578416c2.gif?541" alt="示意图" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%"><b>共振偏移效应。</b> (左) 自旋 A、B 和 C 具有不同的共振偏移角 (β)。(右) 射频脉冲 (α) 的效应取决于原始的共振偏移。A'、B' 和 C' 是 A、B、C 在此脉冲后的最终位置。</div>
+</div></div>
+
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:55.087209302326%; padding:0 15px;">
+					
+						
+
+<div class="paragraph" style="text-align:skip_to_justify;">在稳态梯度回波成像中，由于图像中像素间共振偏移角的聚集和非均匀性，可能会产生许多伪影和问题。如果在周期结束时，切片内存在与位置相关的共振偏移角分布，那么下一个射频脉冲对该信号的影响也将是位置依赖性的。结果，可能会出现规则变化的信号强度带（有时称为“<strong><em><font color="#24678d">FLASH 条带</font></em></strong>”），并显著降低 MR 图像质量。</div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:44.912790697674%; padding:0 15px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-thin " style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
+<a>
+<img src="uploads/3/4/5/7/34572113/6177418_orig.jpg" alt="示意图" style="width:100%;max-width:400px" />
+</a>
+<div style="display:block;font-size:90%">“FLASH 条带”</div>
+</div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;">稳态梯度回波序列主要通过两种方式控制共振偏移效应并维持稳态相干性：(1) 通过在读出和层选方向上施加恒定幅度的额外梯度场，以平均化这些共振偏移效应；(2) 通过可变的“重绕”梯度沿相位编码方向产生净零相位偏移。&nbsp;<br /></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;"><strong style=""><u>额外梯度场的作用</u></strong><br><span style=""></span><br>如上图所示，额外梯度场通常在 GRASS/FISP 脉冲序列的末端沿读出（频率编码）方向施加，通常也沿层选方向施加。沿读出方向的额外梯度在图中难以察觉，因为它只是现有读出梯度瓣的延长。&nbsp;<br><br>这些额外梯度通常被称为“扰相梯度”。这是一个容易混淆的命名，因为它让人联想到像 SPGR 这样的“完全扰相”序列，后者结合使用射频相位递增和可变梯度扰相器来<em>完全</em>破坏横向磁化。在 GRASS/FISP 中，没有射频扰相，且梯度扰相器的幅度是恒定的（而非可变的）。GRASS/FISP 的扰相器不会（也不能）完全破坏横向磁化；它们只是在体素内对其进行平均。&nbsp;<br><br>GRASS/FISP 扰相器的开启时间刚好足以确保在每个周期结束时，每个体素内存在从 0&deg; 到 360&deg; 的完整共振偏移角范围。&nbsp; 在下一次射频脉冲前，自旋相位角的这种均匀重新分布意味着对稳态磁化的贡献将在所有 &beta; 值上被平滑或平均。&nbsp; 因此，信号强度和相位的与位置相关的变化将被最小化。此过程被称为<strong style=""><em style=""><font color="#24678d">共振偏移平均化。</font></em></strong><br></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;"><strong><u>重绕器的作用</u></strong><br /><br /><em style=""><strong style=""><font color="#24678d">重绕梯度</font></strong>&nbsp;</em>是在每个周期结束时以反向极性施加的第二组相位编码步骤。&nbsp; 这些重绕器的目的是确保 MR 信号在每个重复间隔内的相位稳定性，并有助于形成相干的横向磁化。如果没有重绕器，共振偏移会因周期而异（因为相位编码步长会变化）。&nbsp; 因此，一个周期内的相位编码信息可能会“溢出”到下一个周期，在图像中产生不需要的受激回波和 FLASH 条带。<br /><br />最后，应当指出，重绕梯度的使用并非 GRASS/FISP 或梯度回波成像所独有，而是可以广泛用于多种脉冲序列（包括自旋回波和快速自旋回波），以达到相同的一般目的。</div>
+
+<div style="text-align:center;"><div style="height: 10px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-large wsite-button-highlight" href="grassfisp-how.html" >
+<span class="wsite-button-inner">返回 GRASS/FiSP 主要问题</span>
+</a>
+<div style="height: 10px; overflow: hidden;"></div></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div style="text-align:skip_to_justify;"><div style="height: 10px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-normal" href="grassfisp-how.html" >
+<span class="wsite-button-inner">← &nbsp;上一问题</span>
+</a>
+<div style="height: 10px; overflow: hidden;"></div></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div style="text-align:right;"><div style="height: 10px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-normal" href="grassfisp-parameters.html" >
+<span class="wsite-button-inner">下一问题 &nbsp;→</span>
+</a>
+<div style="height: 10px; overflow: hidden;"></div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div style="text-align:center;"><div style="height: 10px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-highlight" href="index.html" >
+<span class="wsite-button-inner">↑&nbsp;问题完整列表 ↑</span>
+</a>
+<div style="height: 10px; overflow: hidden;"></div></div>
+</div>
+</div>

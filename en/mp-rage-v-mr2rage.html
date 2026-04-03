@@ -1,0 +1,181 @@
+<div id="content"><div id="wsite-content" class="wsite-elements wsite-not-footer">
+	<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<h2 class="wsite-content-title" style="text-align:center;">MP-RAGE v MP2RAGE</h2>
+
+<div class="paragraph" style="text-align:center;"><font size="4"><strong style="color:rgb(135, 135, 135)"><em><font color="#0376be">What is the difference between MPRAGE and MP2RAGE?&nbsp;</font></em></strong><strong style="color:rgb(55, 138, 87)"><em>&nbsp;</em></strong></font></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-thin" style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
+<a>
+<img src="uploads/3/4/5/7/34572113/screen-shot-2019-08-13-at-2-40-18-pm_orig.png" alt="Picture" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;">The original <em><strong><font color="#24678d">MP-RAGE (Magnetization Prepared - RApid Gradient Echo)</font></strong></em> was introduced&nbsp;<a href="ir-prepped-sequences.html">in a prior Q&amp;A </a>dealing with inversion preparation methods. Since its development nearly 30 years ago, MP-RAGE has become the dominant&nbsp;sequence for 3D-T1-weighted imaging especially on Siemens scanners.</div>
+
+<div class="paragraph">As shown in the schematic below, MP-RAGE consists of a non-selective (180&ordm;) inversion pulse followed by a collection of rapidly acquired gradient echoes obtained at short <em>TE's</em> (2-4 ms) and small flip angles <em>&alpha;</em> (5- 12&ordm;). A medium inversion time (<em>TI</em>) of 600-900 ms and long repetition time (<em>TR</em>) of approximately 2000 ms are typical.</div>
+
+<div><div class="wsite-image wsite-image-border-none" style="padding-top:10px;padding-bottom:10px;margin-left:0px;margin-right:0px;text-align:center">
+<a href='uploads/3/4/5/7/34572113/mp-rage-revised_orig.png' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/mp-rage-revised_orig.png" alt="MP-RAGE" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%">Schematic of the <b>MP-RAGE sequence</b> (imaging gradients have been omitted for clarity). </div>
+</div></div>
+
+<div><div id="829489158842044122" align="left" style="width: 100%; overflow-y: hidden;" class="wcustomhtml"><p>The standard Siemens implementation of MP-RAGE is as a 3DFT technique. Following the non-selective 180º pulse, <b><i>M<sub>z</sub></i></b> is inverted and allowed to regrow via T1 relaxation mechanisms over inversion time interval (<i>TI</i>), at which time signal is acquired by using a spoiled GRE (“Turbo-FLASH”) with low flip angle.</p>
+
+<p>Sequential ordering is typically used for both in-plane (G<sub>y</sub>) and slice-select (G<sub>z</sub>) phase encoding. 
+ All the (G<sub>z</sub>) phase-encoding lines are collected following the inversion pulse, then repeated for the next value of the G<sub>y</sub> gradient, and so forth. Because the number of partitions (G<sub>z</sub> phase steps) is usually smaller than the number of G<sub>y</sub> steps, this strategy results in the shortest scan time.  Image contrast is determined by the effective inversion time (<i>TI<sub>eff</sub></i>), which is the time between the 180º-pulse and the central G<sub>z</sub> phase steps (i.e., <i>k<sub>z</sub></i> near 0).</p>
+
+<p>MP-RAGE contrast is determined strongly by T1-contrast, but spin density and T2* effects are also present. Use of high bandwidth and short data collection period reduces susceptibility effects including eddy currents associated with metal. It is widely used in isotropic mode for T1-weighted brain imaging.</p>
+</div>
+
+
+
+</div>
+
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-none" style="padding-top:10px;padding-bottom:10px;margin-left:0px;margin-right:0px;text-align:center">
+<a href='uploads/3/4/5/7/34572113/mprage1-comparison_orig.jpg' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/editor/mprage1-comparison9986.jpg?1560186086" alt="Picture" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%">MP-RAGE brain image with TR=2200, TI=1000, TE=3.</div>
+</div></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-none" style="padding-top:10px;padding-bottom:10px;margin-left:0px;margin-right:0px;text-align:center">
+<a href='uploads/3/4/5/7/34572113/mp2rage-tr-4300-te-3-1_1_orig.png' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/mp2rage-tr-4300-te-3-1_1_orig.png" alt="Picture" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%">MP2RAGE brain image with TR=4300, TI1=600, TI2=2000, TE=3.</div>
+</div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div class="paragraph">The <em><strong><font color="#24678d">MP2RAGE sequence</font></strong></em>, by comparison, uses two Turbo-FLASH GRE readouts between each inversion pulse.&nbsp;<span style="color: rgb(135, 135, 135); background-color: transparent;">T</span>he first inversion time (<em>TI<font size="2">1</font></em>) is typically about 700 ms, producing a T1-weighted image with the gray matter nulled at the center of <em>k</em>-space. The second inversion time (<em>TI<font size="2">2</font></em>) is long (~2500 ms), which combined with small flip angles (4-5&ordm;) and long <em>TR</em> (~5000 ms), produces spin-density-weighted contrast. By combining image data from the 1st and 2nd readouts, T2* and B1 inhomogeneity effects can be largely cancelled out, resulting in a strongly T1-weighted image with superior gray matter to white matter contrast than available by MP-RAGE.&nbsp;&nbsp;</div>
+
+<div><div class="wsite-image wsite-image-border-none" style="padding-top:10px;padding-bottom:10px;margin-left:0px;margin-right:0px;text-align:center">
+<a href='uploads/3/4/5/7/34572113/mp2rage-diagram_orig.png' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/mp2rage-diagram_orig.png" alt="MP2RAGE" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%">Schematic of the <b>MP2RAGE sequence</b> (imaging gradients have been omitted for clarity). Unlike MP-RAGE data acquisition occurs in two separate readouts at different inversion times (TI<sub>1</sub> and TI<sub>2</sub>). Each TI is defined as the time between the middle of the inversion pulse and the central echo of <i>k</i>-space.</div>
+</div></div>
+
+<div><div id="490937909169570509" align="left" style="width: 100%; overflow-y: hidden;" class="wcustomhtml"><html> <head><script src="gdpr/gdprscript6f19.js?buildTime=1774025472"></script> <script type="text/javascript" 
+></script> 
+<script type="text/javascript">
+		$(function() {$('#Q').click(function() {$('.Q').toggle(500); return false;});});</script></head><body>
+<a href="#" id=Q><h3><font color="#378a57">Advanced Discussion (show/hide)»</font></h3></a><div class=Q style="display:none;">
+
+<!--content goes below here-->
+
+<p>Another variant, called MEMP-(“Multi Echo MP”)-RAGE, uses four echoes between about 2.5 and 7.5 ms, and is being increasingly used for ultra-high field MR imaging.</p>
+<p>Comments from my colleague Graeme Bydder:</p>
+
+<p>“With MP2RAGE eventually the long TI acquisition is not proton-density weighted because the authors normalize their short TI and long TI images by dividing the multiplied short TI and long TI images by the sum of the two images. This eliminates proton-density weighting and a lot of/all T2/T2* sequence weighing depending on whether they use the same sequences parameters for each of the short TI and long TI RAGE data collections or not.</p>
+
+<p>The multiplication means that the sequence displays synergistic negative T1-weighting from the short TI and long TI contributions across a broad range of T1s from about those of white matter to about that of CSF.</p>
+
+<p>The FLAWS sequence specifically nulls white matter and CSF, and in its original incarnation multiplied the short TI and long TI images before normalizing them (the UNI variant). In a recent paper (attached) the authors have performed minimum intensity projection and subtractions to combine the short TI and long TI images as well. The later give mildly synergistic T1 sequence weighting over a broad range of T1s. The sequence weighting is reversed in sign by subtracting the two acquisitions in the reverse order.”</p> 
+
+<!--content goes above here-->
+</div></body>
+<!-- Mirrored from mriquestions.com/mp-rage-v-mr2rage.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 21 Mar 2026 06:09:18 GMT -->
+</html></div>
+
+
+
+</div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;"><strong>References</strong><br />&nbsp; &nbsp; &nbsp;Beaumont J, Gambarota G,&nbsp;Saint-Jalmes H, et al. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/beaumont_flaws_2020[1].pdf">High-resolution multi-T1&ndash;weighted contrast and T1 mapping with low B1+&nbsp;sensitivity using the fluid and white matter suppression (FLAWS) sequence at 7T</a>. Magn Reson Med. 2021;85:1364&ndash;1378. <a href="https://doi.org/10.1002/mrm.28517" target="_blank">[DOI LINK]</a>&nbsp;(Improvements on the MP2RAGE technique suitable for UHF imaging.)&nbsp; &nbsp;&nbsp;<br />&nbsp; &nbsp; Marques JP, Kober T, Krueger G, et al. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/mp2rage_1-s2.0-s1053811909010738-main.pdf">MP2RAGE, a self bias-field corrected sequence for improved segmentation and T1-mapping at high field</a>. NeuroImage 2010; 49:1271-1281.<br /><span style="color:rgb(0, 0, 0)">&nbsp; &nbsp; &nbsp;Mugler JP 3rd, Brookeman JR.&nbsp;</span><a href="http://mriquestions.com/uploads/3/4/5/7/34572113/mugler_mprage539244.pdf" target="_blank">Rapid three-dimensional T1-weighted MR imaging with the MP-RAGE sequence</a><span style="color:rgb(0, 0, 0)">. J Magn Reson Imaging 1991; 1:561-7.&nbsp; &nbsp;</span>&#8203;<br />&nbsp; &nbsp; &nbsp;Tanner M, Bambarota G, Kober T, et al. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/mp2ragejmri.23532.pdf">Fluid and white matter suppression with the MP2RAGE sequence</a>. J Magn Reson Imaging 2012; 35:1063-1070.</div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;"><strong>Related Questions</strong><br /><strong>&nbsp; &nbsp; &nbsp;</strong><strong><em><font color="#0376be"><a href="ir-prepped-sequences.html">What is meant by an "IR-prepped" sequence? How is this different from "standard" inversion recovery?&nbsp;</a></font></em></strong><em></em></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div style="text-align:skip_to_justify;"><div style="height: 0px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-normal" href="javascript:;" >
+<span class="wsite-button-inner">← &nbsp;Previous Question</span>
+</a>
+<div style="height: 0px; overflow: hidden;"></div></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div style="text-align:right;"><div style="height: 0px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-normal" href="javascript:;" >
+<span class="wsite-button-inner">Next Question &nbsp;→</span>
+</a>
+<div style="height: 0px; overflow: hidden;"></div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div style="text-align:center;"><div style="height: 0px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-highlight" href="complete-list-of-questions.html" >
+<span class="wsite-button-inner">↑&nbsp;Complete List of Questions ↑</span>
+</a>
+<div style="height: 10px; overflow: hidden;"></div></div>
+</div></div>

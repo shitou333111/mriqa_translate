@@ -1,0 +1,250 @@
+<div id="content"><div id="wsite-content" class="wsite-elements wsite-not-footer">
+	<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<h2 class="wsite-content-title" style="text-align:center;">一般线性模型 (GLM)</h2>
+
+<div class="paragraph" style="text-align:center;"><strong style="color:rgb(135, 135, 135)"><em><font color="#0376be" size="4">我实在不理解 GLM 是如何工作的。你能更完整地解释一下吗？</font></em></strong><strong style="color:rgb(55, 138, 87)"><em><font size="4">&nbsp;</font></em></strong></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-thin" style="padding-top:0px;padding-bottom:10px;margin-left:0px;margin-right:0px;text-align:center">
+<a>
+<img src="uploads/3/4/5/7/34572113/screen-shot-2016-07-14-at-8-13-02-amad13.png?315" alt="图片" style="width:315;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div class="paragraph">请不要气馁。对于缺乏统计学或矩阵代数背景的人来说，<em><strong><font color="#24678d">一般线性模型 (GLM)</font></strong></em> 可能令人生畏，但我会尝试在此让它变得更易于理解。这是一项值得付出的努力，因为在过去的 25 年里，GLM 一直是分析基于任务的 fMRI 实验最广泛使用的技术，并且是<span style="color:rgb(0, 0, 0)">厂商为其临床 fMRI 软件包提供的默认方法。</span></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;">可以将 GLM 视为一个更熟悉的统计技术的扩展：<em><strong><font color="#24678d">线性回归</font></strong></em>。线性回归，有时也称为<em><strong><font color="#24678d">趋势线分析</font></strong></em>，是一种<span style="color:rgb(0, 0, 0)">用于为一组实验数据计算“最佳拟合”直线的方法。</span>线性回归软件在流行的图形和电子表格软件包（如 Microsoft Excel）中广泛可用。</div>
+
+<span class='imgPusher' style='float:left;height:14px'></span><span style='display: table;width:329px;position:relative;float:left;max-width:100%;;clear:left;margin-top:20px;*margin-top:40px'><a href='uploads/3/4/5/7/34572113/6822689_orig.jpg' rel='lightbox' onclick='if (!lightboxLoaded) return false'><img src="uploads/3/4/5/7/34572113/6822689ef0d.jpg?299" style="margin-top: 20px; margin-bottom: 10px; margin-left: 0px; margin-right: 30px; none; max-width:100%" alt="线性回归" class="galleryImageBorder wsite-image" /></a><span style="display: table-caption; caption-side: bottom; font-size: 90%; margin-top: -10px; margin-bottom: 10px; text-align: center;" class="wsite-caption"><br><br>简化的线性回归示例，改编自<br>Hansen 等人 (2004) 的数据</span></span>
+<div class="paragraph" style="text-align:skip_to_justify;display:block;">作为线性回归的一个应用，让我们研究一下视觉皮层中一个体素的平均 fMRI 信号 (<em><strong>Y</strong></em>) 如何响应视网膜光照水平 (<em><strong>X</strong></em>) 的增加。将我们的数据绘制在图表上（左图），我们可以看出 <em><strong>X</strong></em> 和 <em><strong>Y</strong></em> 之间存在相当线性的关系。线性回归软件为此数据计算“最佳拟合”直线。对于每个数据点 (<em>x<font size="1">i</font></em>, <em>y<font size="1">i</font></em>)，其关系可以写成 <em>y<font size="1">i</font> = x<font size="1">i</font></em><em style="color:rgb(0, 0, 0)">&beta;</em><em> +&nbsp;<em>&epsilon;<font size="1">i</font></em>,&nbsp;</em>其中 <em>&beta;<strong>&nbsp;</strong></em>是计算出的直线斜率，而 <em>&epsilon;<font size="1">i&nbsp;</font></em>&nbsp;是计算出的直线与相应数据点之间的<em><strong><font color="#24678d">误差</font></strong><em><em>&#8203;</em></em></em>（或<em><strong><font color="#24678d">残差</font></strong></em>）距离。请注意，<em style="color:rgb(0, 0, 0)">x<font size="1">i</font></em> 值由实验设计决定，<em style="color:rgb(0, 0, 0)">y<font size="1">i</font></em><span style="color:rgb(0, 0, 0)"> 值是测量得到的，</span>而<em style="color:rgb(0, 0, 0)">&beta; </em>和<em style="color:rgb(0, 0, 0)">&nbsp;<em>&epsilon;<font size="1">i</font></em>'</em><em style="color:rgb(0, 0, 0)">s </em>则由软件计算得出。</div>
+<hr style="width:100%;clear:both;visibility:hidden;"></hr>
+
+<div class="paragraph" style="text-align:skip_to_justify;">线性回归的一个必要假设是误差 (<em>&epsilon;<font size="1">i</font></em>) 是随机且独立的，遵循均值为零的高斯分布。“最佳拟合”直线被定义为使点与所选直线之间的误差平方和 (<em>&epsilon;<font size="1">1</font>&sup2; + &epsilon;<font size="1">2</font>&sup2;&nbsp;+ &nbsp;&epsilon;<font size="1">3</font>&sup2;</em>&nbsp;+ &hellip;) 最小化的那条直线。请注意，尽管计算出的斜率 (<em style="color:rgb(0, 0, 0)">&beta;)&nbsp;</em>对于每个数据点<span style="color:rgb(0, 0, 0)">(</span><em style="color:rgb(0, 0, 0)">x<font size="1">i</font></em><span style="color:rgb(0, 0, 0)">,&nbsp;</span><em style="color:rgb(0, 0, 0)">y<font size="1">i</font></em><span style="color:rgb(0, 0, 0)">) 是相同的，但个体误差&nbsp;(</span><em style="color:rgb(0, 0, 0)">&epsilon;<font size="1">i</font></em><span style="color:rgb(0, 0, 0)">) 会有所不同。</span></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;">我们简单的线性回归示例实际上产生了<em>n</em> 个独立的方程，每个方程的形式为 &nbsp;<em style="color:rgb(0, 0, 0)">y<font size="1">i</font>&nbsp;= x<font size="1">i</font></em><em style="color:rgb(0, 0, 0)">&beta;</em><em style="color:rgb(0, 0, 0)">&nbsp;+&nbsp;<em>&epsilon;<font size="1">i</font></em></em>，其中 <em>n</em> 是每个时间间隔<em>&nbsp;i</em> 采集的数据点数量。矩阵代数允许我们将这组方程压缩成更易于管理的形式。我们通过将 <strong>Y</strong>、<strong>X</strong> 和 <strong>&epsilon;</strong> 定义为“列向量”来实现这一点，每个向量包含一系列单独的测量值或计算值。具体来说，</div>
+
+<div><div class="wsite-image wsite-image-border-none" style="padding-top:10px;padding-bottom:10px;margin-left:0px;margin-right:0px;text-align:center">
+<a href='uploads/3/4/5/7/34572113/3073630_orig.gif' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/3073630_orig.gif" alt="线性回归矩阵" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+<div class="paragraph" style="text-align:center;">如果你不熟悉矩阵代数或需要简单回顾，请查看 <a href="http://www.coolmath.com/algebra/24-matrices" target="_blank">Coolmath.com</a></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;"><span style="color:rgb(0, 0, 0)">fMRI 实验的</span><span style="color:rgb(0, 0, 0)">一般线性模型 (GLM) 表示</span><span style="color:rgb(0, 0, 0)">保留了与我们简单线性回归示例相同的基本形式</span><font color="#2a2a2a">(<font size="3"><strong>Y&nbsp;</strong>=<strong>&nbsp;X</strong><strong><em>&beta;</em>&nbsp;</strong>+</font><font size="3"><strong>&nbsp;&epsilon;</strong>)</font></font><span style="color:rgb(0, 0, 0)">。用文字表述，GLM 表明 <strong>Y</strong>（单个体素随时间变化的测量 fMRI 信号）可以</span><span style="color:rgb(0, 0, 0)">表示为一个或多个实验设计变量 (</span><strong><font color="#2a2a2a">X</font></strong><span style="color:rgb(0, 0, 0)">) 的总和，每个变量乘以一个权重因子 (</span><em><strong><font color="#2a2a2a">&beta;</font></strong></em><span style="color:rgb(0, 0, 0)">)，再加上随机误差 (</span><a title=""><strong><font color="#2a2a2a">&epsilon;</font></strong></a><span style="color:rgb(0, 0, 0)">)。<br /><br />在 GLM 中，</span><strong style="color:rgb(0, 0, 0)">Y</strong><span style="color:rgb(0, 0, 0)">&nbsp;&#8203;</span><span style="color:rgb(0, 0, 0)">和<strong>&nbsp;</strong></span><font color="#2a2a2a"><strong>&epsilon;&nbsp;</strong>仍然作为单列向量，分别包含单个体素在连续时间点 (<em>i = 1 </em></font>到 <em>n</em>) 的 fMRI 信号数据 (<em>y<font size="1">i</font></em>) 或误差估计 (<em style="color:rgb(0, 0, 0)">&epsilon;<font size="1">i</font></em>)。然而，<em style="color:rgb(0, 0, 0)"><strong><font color="#24678d">实验设计矩阵 (X)</font></strong></em><span style="color:rgb(0, 0, 0)"> 通常要复杂得多，可能包含 5-10 列，而不仅仅是一列。</span><strong style="color:rgb(0, 0, 0)">X</strong><span style="color:rgb(0, 0, 0)">&nbsp;的每一新列将由研究者构建，以反映被认为会影响实验结果的特定因素（“</span><em style="color:rgb(0, 0, 0)"><strong><font color="#24678d">回归因子</font></strong></em><span style="color:rgb(0, 0, 0)">”）。</span></div>
+
+<span class='imgPusher' style='float:right;height:0px'></span><span style='display: table;width:auto;position:relative;float:right;max-width:100%;;clear:right;margin-top:0px;*margin-top:0px'><a href='uploads/3/4/5/7/34572113/modeled-hrf-for-glm_orig.jpg' rel='lightbox' onclick='if (!lightboxLoaded) return false'><img src="uploads/3/4/5/7/34572113/glm-predicted-hrf.jpg" style="margin-top: 10px; margin-bottom: 10px; margin-left: 10px; margin-right: 10px; none; max-width:100%" alt="GLM 中任务的模拟 HRF" class="galleryImageBorder wsite-image" /></a><span style="display: table-caption; caption-side: bottom; font-size: 90%; margin-top: -10px; margin-bottom: 10px; text-align: center;" class="wsite-caption"></span></span>
+<div class="paragraph" style="text-align:skip_to_justify;display:block;"><em><strong><font color="#24678d"><u>基本</u>回归因子</font></strong></em>&nbsp;（也称为<em><strong><font color="#24678d">关注回归因子</font></strong></em>）是一组理想化的预测，描述了如果感兴趣的体素因任务或刺激而被激活，其<em><strong><font color="#24678d">血流动力学响应函数 (HRF)</font></strong></em> 应该呈现的样子。例如，考虑一个简单的事件相关 fMRI 实验，受试者被给予三个任务（A、B 和 C）——例如，以随机顺序呈现三种不同频率的声音。如果任务 A 的刺激在上图红色箭头所示的时间点施加，那么听觉皮层中一个感受性体素的预测响应可能是一系列略有延迟、短时程的 HRF，如图所示。与任务 A 的此预测响应模式对应时间点的数值 (<em style="color:rgb(0, 0, 0)">X&nbsp;<font size="1">i,1</font></em>) 随后将被转移到 GLM 设计矩阵的第一列并垂直列出（如下图所示）。对任务 B 和 C 的预测响应也将以类似方式创建，并用于填充设计矩阵 (<strong>X</strong>) 的第二列和第三列。</div>
+<hr style="width:100%;clear:both;visibility:hidden;"></hr>
+
+<div class="paragraph" style="text-align:skip_to_justify;">我们设计矩阵示例的最后 7 列被认为是<em><strong><font color="#24678d">协变量</font></strong></em>或<em><strong><font color="#24678d"><u>干扰</u>回归因子</font></strong></em>——这些是干扰分析（例如头动或信号漂移）但本身并不特别感兴趣的实验因素。填充这些列的数据可以是经验确定的（例如，实验期间获得的头部平移和旋转的实际测量值），也可以是建模的（例如，通过线性趋势或振荡基函数）。</div>
+
+<div class="paragraph" style="text-align:skip_to_justify;"><span style="color:rgb(0, 0, 0)">由于设计矩阵 (<strong>X</strong>) 现在包含多列，权重参数 (</span><em style="color:rgb(0, 0, 0)">&beta;</em>) 将不再是简单线性回归示例中的单个数字。在完整的<span style="color:rgb(0, 0, 0)">GLM 实验中拟合数据意味着</span><span style="color:rgb(0, 0, 0)">&nbsp;<em><strong>&beta;</strong></em> 现在将变成一个列向量，其值为 (<em>&beta;<font size="1">1</font>, &beta;<font size="1">2</font>, &hellip;, &beta;<font size="1">p</font></em>)，每个值反映了每个设计因子 (<em>X<font size="1"><span>i</span></font></em>) 对 fMRI 信号的相对贡献。因此，幅度向量 (<em><strong>&beta;</strong></em>) 必须具有与设计矩阵 (<strong>X</strong>) 的列数相同的行数。</span><span style="color:rgb(0, 0, 0)">&#8203;&#8203;</span></div>
+
+<div><div class="wsite-image wsite-image-border-none" style="padding-top:10px;padding-bottom:20px;margin-left:0px;margin-right:0px;text-align:center">
+<a href='uploads/3/4/5/7/34572113/9355842_orig.jpg' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/9355842_orig.jpg" alt="一般线性模型" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%"><br>单个体素的一般线性模型（GLM）示意图，其时间序列 <b>Y</b> 由设计矩阵 <b>X</b> 预测，该矩阵包含10个效应（三个感兴趣的回归量 – 例如，任务A、B、C – 以及七个 nuisance 回归量 – 例如，六个运动参数和一个线性漂移）。计算得出的与每个回归量相对应的加权因子（<i>β<sub>1</sub></i> − <i>β<sub>10</sub></i>）置于幅度向量 <b>β</b> 中，而列向量 <b>ε</b> 则包含与每个时间点 <i>i</i> 相对应的模型计算误差项（<i>ε<sub>i</sub></i>）。（来自 Monti, 2011，遵循 CC BY 许可）</div>
+</div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;">基本的GLM分析固有两大假设，这两项假设都可能受到合理质疑。首先，GLM是一种<em><strong><font color="#24678d">单变量</font></strong></em>方法，它在逐个体素的基础上计算统计量，并假设每个体素的信号相互独立。其次，该模型假设误差是随机且独立的，遵循均值为零的高斯分布。&nbsp;</div>
+
+<span class='imgPusher' style='float:left;height:0px'></span><span style='display: table;width:227px;position:relative;float:left;max-width:100%;;clear:left;margin-top:0px;*margin-top:0px'><a href='uploads/3/4/5/7/34572113/sentence-completion1_orig.jpg' rel='lightbox' onclick='if (!lightboxLoaded) return false'><img src="uploads/3/4/5/7/34572113/sentence-completion163dc.jpg?217" style="margin-top: 10px; margin-bottom: 10px; margin-left: 0px; margin-right: 20px; border-width:0; max-width:100%" alt="SPM" class="galleryImageBorder wsite-image" /></a><span style="display: table-caption; caption-side: bottom; font-size: 90%; margin-top: -10px; margin-bottom: 10px; text-align: center;" class="wsite-caption">统计参数图（SPM）<br>叠加于解剖图像之上</span></span>
+<div class="paragraph" style="text-align:skip_to_justify;display:block;">在fMRI数据被采集并存储于<strong>Y</strong>向量中、实验设计因子被指定于<strong>X</strong>矩阵之后，随后使用经典或贝叶斯方法计算<em style="color:rgb(0, 0, 0)"><strong>&beta;</strong></em><em style="color:rgb(0, 0, 0)">&nbsp;</em><em style="color:rgb(0, 0, 0)">和</em><strong style="color:rgb(42, 42, 42)">&epsilon;</strong>向量的分量。然后可以对这些结果进行统计检验，测试关于各个回归量或其组合的各种假设。最终输出通常是叠加在解剖图像或模板上的<em><strong><font color="#24678d">统计参数图（SPM）</font></strong></em>或<em><strong><font color="#24678d">后验概率图（PPM）</font></strong></em>。<br /><br />毋庸置疑，GLM分析和处理非常复杂，感兴趣的读者应参考下面提供的参考文献以及<strong><font color="#508d24">高级讨论</font></strong>中的材料。</div>
+<hr style="width:100%;clear:both;visibility:hidden;"></hr>
+
+<div><div id="102972223451611482" align="left" style="width: 100%; overflow-y: hidden;" class="wcustomhtml"><html> <head><script src="gdpr/gdprscript6f19.js?buildTime=1774025472"></script> <script type="text/javascript" 
+></script> 
+<script type="text/javascript">
+		$(function() {$('#Q').click(function() {$('.Q').toggle(500); return false;});});</script></head><body>
+<a href="#" id=Q><h3><font color="#378a57">高级讨论（显示/隐藏）»</font></h3></a><div class=Q style="display:none;">
+
+<!--content goes below here-->
+
+<div class="paragraph"><strong><font size="4" color="#8d5024">血液动力学响应函数（HRF）的建模</font></strong></div>
+
+
+
+<span class='imgPusher' style='float:left;height:0px'></span><span style='display: table;width:220px;position:relative;float:left;max-width:100%;;clear:left;margin-top:0px;*margin-top:0px'><a href='uploads/3/4/5/7/34572113/hrf-models-revised_orig6f3e.png?210' rel='lightbox' onclick='if (!lightboxLoaded) return false'><img src="uploads/3/4/5/7/34572113/hrf-models-revised6f3e.png?210" style="margin-top: 5px; margin-bottom: 10px; margin-left: 0px; margin-right: 10px; none; max-width:100%" alt="fMRI中血液动力学响应函数（HRF）的模型" class="galleryImageBorder wsite-image" /></a><span style="display: table-caption; caption-side: bottom; font-size: 90%; margin-top: -10px; margin-bottom: 10px; text-align: center;" class="wsite-caption">HRF模型</span></span>
+
+<div class="paragraph" style="display:block;"><span style="color:rgb(0, 0, 0)">对于给定的fMRI实验，究竟应该如何确定HRF的形状？术语</span><strong style="color:rgb(0, 0, 0)"><em><font color="#24678d">“规范”HRF</font></em>&nbsp;</strong><span style="color:rgb(0, 0, 0)">指的是研究者在数据采集之前选择的默认形状。选择包括简单的伽马函数、两个伽马函数的差值（以允许刺激后 undershoot）、傅里叶基组、由“合理”HRF形状组成的基组以及有限脉冲响应函数。为了提高准确性，可以将HRF的一阶和二阶时间导数（通常分别称为“时间”导数和“弥散”导数）添加到模型中。使用这些导数相当于对HRF函数进行二阶泰勒级数近似。包含一阶导数可以调整峰值响应的时间，而二阶导数则允许HRF的宽度变化。</span><span>&#65279;</span><br /><br /><span style="color:rgb(0, 0, 0)">为了创建回归量，将所选HRF的形状与实验设计进行卷积（“乘以”）。事件之间的非线性相互作用可能会扭曲预期的HRF（例如，两个刺激在非常短的时间框架内施加，总响应可能小于各自响应之和），也可以使用Volterra核或其他方法进行建模。</span><span style="color:rgb(0, 0, 0)">&#8203;&#8203;</span></div>
+
+<hr style="width:100%;clear:both;visibility:hidden;"></hr>
+
+
+
+<div><div class="wsite-image wsite-image-border-none" style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center"> 
+
+<a> 
+
+<img src="uploads/3/4/5/7/34572113/convolution-of-3-events_orig.gif" alt="图片" style="width:auto;max-width:100%" /> 
+
+</a> 
+
+<div style="display:block;font-size:90%"></div> 
+
+</div></div>
+
+
+
+<div class="paragraph"><strong><font size="4" color="#8d5024">统计显著性的检验</font></strong></div>
+
+<div class="paragraph"><span>&#65279;</span><span>&#65279;</span>大多数fMRI实验的最终目的是确定大脑如何响应各种刺激和条件。对于基于任务的fMRI研究，从GLM计算出的幅度向量<em><strong>&beta;</strong></em>提供了实验设计中每个分量（<em>X<font size="1">i</font></em>）的相对权重（“重要性”）的估计值（<em>&beta;<font size="1">i</font></em>）。<br /><br />我们从最简单的fMRI实验之一开始：手指敲击。在此实验中，受试者在敲击手指和休息之间交替循环，同时记录全脑的BOLD响应。在此示例中，设计矩阵可能只包含一个基本的回归量，表示为：<em>X<font size="2">1</font></em> = “手指敲击”。数据采集后，GLM分析产生每个体素对手指敲击的幅度响应估计值（<em>&beta;<font size="1">1</font></em>）。运动皮层附近的体素将表现出强烈的响应，其<em style="color:rgb(0, 0, 0)">&beta;<font size="1">1</font></em>值相对较大，而远处的体素可能仅包含静息态“噪声”。那么，我们可以使用什么标准来确定何时认为一个体素被真正激活了呢？&nbsp;</div>
+
+
+
+<div class="paragraph">检验统计显著性的形式化/经典方法涉及构建一个<em style="color:rgb(0, 0, 0)"><strong><font color="#24678d">零假设（H<font size="2">o</font>）</font></strong></em><span style="color:rgb(0, 0, 0)">，用语言表述可能是：</span><span style="color:rgb(0, 0, 0)">“与休息相比，手指敲击期间体素内没有净BOLD信号效应。”用数学术语可表示为：<br />&#8203;<em><strong>H<font size="2">o</font></strong>: &nbsp;</em></span><em>&beta;<font size="1">1</font> = 0.</em></div>
+
+
+
+<div class="paragraph"><span>&#65279;</span><span style="color:rgb(0, 0, 0)">通常，零假设是以一种否定/反常的方式构建的——即，给定事件或行为<u>没有</u>产生fMRI效应。然而，在现实中，我们暗自希望感到惊讶，并发现一个不太可能偶然发生的结果，从而可以拒绝零假设。</span></div>
+
+<div class="paragraph">我们通常所说的“统计显著”是指拒绝零假设的<em><strong><font color="#24678d">I型（假阳性）错误</font></strong></em>小于某个任意设定的概率水平（<em><strong><font color="#24678d">p值</font></strong></em>），例如<em>p</em> &le;&nbsp;0.05。换句话说，只有当事件偶然发生的概率小于5%时，我们才可能称结果为“显著”。&nbsp;</div>
+
+<span class='imgPusher' style='float:left;height:0px'></span><span style='display: table;width:332px;position:relative;float:left;max-width:100%;;clear:left;margin-top:0px;*margin-top:0px'><a href='uploads/3/4/5/7/34572113/t-vs-z_orig5737.png?322' rel='lightbox' onclick='if (!lightboxLoaded) return false'><img src="uploads/3/4/5/7/34572113/t-vs-z5737.png?322" style="margin-top: 10px; margin-bottom: 10px; margin-left: 0px; margin-right: 10px; border-width:0; max-width:100%" alt="t分布与z分布的比较" class="galleryImageBorder wsite-image" /></a><span style="display: table-caption; caption-side: bottom; font-size: 90%; margin-top: -10px; margin-bottom: 10px; text-align: center;" class="wsite-caption"><i>t</i>分布与<i>z</i>分布的比较。随着自由度（df）增加，两者趋同。</span></span>
+
+<div class="paragraph" style="display:block;">GLM计算既产生<em>&beta;<font size="1">1</font></em>的估计值，也产生该估计值的标准差（<em>SD</em>）。<em>SD</em>取决于均方误差之和以及设计矩阵（<strong>X</strong>）的结构和大小。为了检验零假设，我们构造检验统计量<em><strong><font color="#8d5024">T = </font></strong></em><em><font color="#8d5024"><strong>&beta;</strong><font size="1"><strong>1</strong></font></font></em><em><strong><font color="#8d5024">/SD</font></strong></em>。假设GLM的假设成立（即误差是独立的且服从均值为零的高斯分布），则统计量<em><font color="#8d5024"><strong>T</strong></font></em>服从<em><strong><font color="#24678d">学生t分布</font></strong></em>，据此可以确定<em>p</em>值的百分位数。<em>t</em>分布的确切形状取决于<em><strong><font color="#24678d">自由度（df）</font></strong></em>，其定义为分析的时间点数减去独立回归量的数量。<em>t</em>分布与<em><strong><font color="#24678d">高斯分布或标准正态（z-）分布</font></strong></em>密切相关，随着df &rarr;&nbsp;<font size="3">&infin;</font>，前者收敛于后者。在观测值超过100个的实验中，通常报告<em>Z</em>值和百分位数而非<em>T</em>值，因为两者非常接近。</div>
+
+<hr style="width:100%;clear:both;visibility:hidden;"></hr>
+
+
+<div class="paragraph"><font color="#8d5024" size="4"><span><strong>多个回归量：对比和<em>F</em>检验</strong></span></font></div>
+
+<div class="paragraph">上述手指敲击示例仅包含一个感兴趣的协变量（<em>X<font size="1">1</font></em> = “手指敲击”）及其对应的估计幅度（<em style="color:rgb(0, 0, 0)">&beta;<font size="1">1</font></em>）。然而，大多数有趣的fMRI研究包含多个感兴趣的回归量。让我们考虑一个更复杂的fMRI实验，其中受试者交替看到红色、蓝色和绿色的光，单独或组合呈现。设计的三个基本回归量可能是：<em>X<font size="1">1</font></em> = “红光开启”，<em>X<font size="1">2</font></em> = “蓝光开启”，以及<em>X<font size="1">3&nbsp;</font></em>= “绿光开启”。数据采集后，GLM将生成三个幅度估计值（<em style="color:rgb(0, 0, 0)">&beta;<font size="1">1</font></em>，<em style="color:rgb(0, 0, 0)">&beta;<font size="1">2</font></em>和<em style="color:rgb(0, 0, 0)"><font size="1">&nbsp;</font>&beta;<font size="1">3</font></em>），对应于可以检验统计显著性的三种条件。</div>
+
+<div class="paragraph" style="text-align:skip_to_justify;">多个设计变量允许研究组合效应。例如，我们可能想知道一个体素是否被红光和蓝光同等激活（<em style="color:rgb(0, 0, 0)">&beta;<font size="1">1</font></em><span style="color:rgb(0, 0, 0)">=&nbsp;</span><em style="color:rgb(0, 0, 0)">&beta;<font size="1">2</font></em>），或等价地（<em style="color:rgb(0, 0, 0)">&beta;<font size="1">1&nbsp;</font></em>&minus;<span style="color:rgb(0, 0, 0)">&nbsp;</span><em style="color:rgb(0, 0, 0)">&beta;<font size="1">2&nbsp;</font></em>= <em>0</em>）。或者，红光和蓝光照射的平均效果是否与单独绿光照射的效果相同（<span style="color:rgb(0, 0, 0)">&frac12; [</span><em style="color:rgb(0, 0, 0)">&beta;<font size="1">1&nbsp;</font></em><span style="color:rgb(0, 0, 0)">+&nbsp;</span><em style="color:rgb(0, 0, 0)">&beta;<font size="1">2 </font></em><span style="color:rgb(0, 0, 0)">] = </span><em style="color:rgb(0, 0, 0)">&beta;<font size="1">3</font></em>），或等价地（<span style="color:rgb(0, 0, 0)">&frac12;</span><em>&beta;<font size="1">1</font></em> +&nbsp;&frac12;<em>&beta;<font size="1">2</font></em>&nbsp;&minus;&nbsp;<em>&beta;<font size="1">3</font></em> = 0）。</div>
+
+<div><div id="127577980906607825" align="left" style="width: 100%; overflow-y: hidden;" class="wcustomhtml"><p>这些组合用语言难以表达，但可以方便地用矩阵形式表示，将每个计算出的幅度向量 <b><i>β</i></b> 乘以一个线性<b><i><font color="#24678d">对比向量 c<sup>T</sup></font></b></i>。上述两个对比可以写成：</p></div> 
+
+
+</div>
+
+<div><div class="wsite-image wsite-image-border-none" style="padding-top:0px;padding-bottom:0px;margin-left:0px;margin-right:10px;text-align:center"> 
+
+<a href='uploads/3/4/5/7/34572113/contrast-vectors-3_orig25dd.png?474' rel='lightbox' onclick='if (!lightboxLoaded) return false'> 
+
+<img src="uploads/3/4/5/7/34572113/contrast-vectors-325dd.png?474" alt="GLM对比向量" style="width:474;max-width:100%" /> 
+
+</a> 
+
+<div style="display:block;font-size:90%"></div> 
+
+</div></div>
+
+
+
+<div class="paragraph">可以想象涉及这些多个回归量的更复杂的假设检验。例如，三个均值是否<em>同时</em>都等于零？或者某种灯光组合是否导致比另一种组合显著更高的活动？在这些情况下，对比向量变成一个完整的矩阵，而不是数字的线性数组，GLM过程发展成为完全的<em><strong><font color="#24678d">方差分析（ANOVA）</font></strong></em>。适用的检验统计量现在变成<em><strong><font color="#8d5024">F</font></strong></em>而不是<em>T</em>，其中<em><strong><font color="#8d5024">F</font></strong></em>是通过简化模型（不含回归量）下的残差平方和除以完整模型下的残差平方和而形成的。假设通常的GLM假设（误差的相同且独立分布）得以保持，则统计量<em><strong><font color="#8d5024">F</font></strong></em>服从<em><strong><font color="#24678d">F分布</font></strong></em>，可用于检验假设的统计显著性。&nbsp;</div>
+
+
+
+<div class="paragraph" style="text-align:skip_to_justify;"><strong><font size="4" color="#8d5024">数据的自相关性</font></strong></div>
+
+
+
+<div class="paragraph" style="text-align:skip_to_justify;"><font color="#2a2a2a">GLM的基本信条之一——逐点误差的统计独立性——在fMRI实验中几乎总是被违反的。功能MRI研究不是随机的数据集合，而是时间序列，高值之后更可能出现高值，低值之后更可能出现低值。准周期性噪声源（如心脏和呼吸搏动）也促成了这一现象。</font><br /><br /><font color="#2a2a2a">幸运的是，序列相关性的存在并不影响加权参数（</font><em style="color:rgb(42, 42, 42)">&beta;<font size="2">i)</font></em><font color="#2a2a2a">的估计。然而，它确实会导致误差方差被低估，因为真正独立观测的数量（“有效”</font><em><strong><font color="#24678d">自由度，df</font></strong></em><font color="#2a2a2a">）将低于实际进行的观测数量。因此，</font><em style="color:rgb(42, 42, 42)">t-</em><font color="#2a2a2a">或</font><em style="color:rgb(42, 42, 42)">F-</em><font color="#2a2a2a">统计量（其分布形状取决于<em>df</em>）</font><font color="#2a2a2a">将被人为放大，可能导致假阳性率升高和错误的推论。</font><br /><br /><font color="#2a2a2a">控制自相关最常用的方法被称为</font><em><strong><font color="#24678d">预白化</font></strong></em><font color="#2a2a2a">。术语“预白化”指的是移除时间序列数据中的序列相关性，使其残差具有更均匀的频率分布，类似于“白噪声”。预白化通过迭代过程执行。首先生成一个初始GLM解，并将残差的自相关结构拟合为一阶或二阶</font><em><strong><font color="#24678d">自回归模型</font></strong></em><font color="#2a2a2a">[AR(1)或AR(2)]。然后通过移除估计的协方差结构来调整原始数据，并对“白化”后的数据执行第二次GLM。</font></div>
+
+<div class="paragraph"><font size="4" color="#8d5024"><strong>多受试者分析</strong></font><br /><span></span></div>
+
+
+
+<div class="paragraph"><font color="#2a2a2a">到目前为止，我们只讨论了单个受试者数据的GLM分析。为了使fMRI结论更具普适性，通常将个体结果汇总到多个受试者或组中。然而，在进行统计分析之前，必须将多个受试者的数据变形（warp）到一个共同的解剖空间（如Talairach或MNI模板）。这个过程称为</font><em><strong><font color="#24678d">归一化</font></strong></em><font color="#2a2a2a">，已在<a href="registrationnormalization.html">之前的问答</a>中描述过。</font></div>
+
+
+
+<div class="paragraph"><font color="#2a2a2a">最早的组分析方法之一是将所有受试者的数据变形到归一化空间，然后将它们连接成一个巨大的时间序列（就好像数据都来自一个“超级”受试者）。这种所谓的</font><em><strong><font color="#24678d">固定效应分析</font></strong></em><font color="#2a2a2a">已被基本放弃，因为它不能充分解释个体差异，也不能干净地用于进行总体推断。</font></div>
+
+
+
+<div class="paragraph"><font color="#2a2a2a">多受试者fMRI数据本质上是层次化的，至少需要考虑两个层次：个体和群体。因此，</font><em><strong><font color="#24678d">混合效应分析</font></strong></em><font color="#2a2a2a">更为合适，其中误差在受试者内部和受试者之间都被测量和考虑。</font></div>
+
+
+
+<div class="paragraph"><span>&#65279;</span>实现这一点的一种方法是<em><strong><font color="#24678d">两水平GLM</font></strong></em>分析。在第一水平，对每个受试者分别执行标准GLM。然而，在第二水平，仅传递<em><strong>&beta;<font size="1">i</font></strong></em>值（而不是完整的fMRI响应数据），它们成为因变量。第二水平的推论可能很困难，因为<em style="color:rgb(0, 0, 0)"><strong>&beta;<font size="1">i</font></strong></em>只是估计值，其值被第一水平分析的方差“污染”。存在几种处理此问题的方法，其中最流行的方法之一是使用期望最大化算法的限制性最大似然技术。</div>
+
+
+
+
+
+<!--content goes above here-->
+</div></body>
+<!-- Mirrored from mriquestions.com/general-linear-model.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 21 Mar 2026 06:43:32 GMT -->
+</html></div>
+
+
+
+</div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+<div class="paragraph" style="text-align:skip_to_justify;"><strong>参考文献</strong><br /><span style="color:rgb(42, 42, 42)">&nbsp;&nbsp; &nbsp;&nbsp;</span><span style="color:rgb(42, 42, 42)">Hansen KA, David SV, Gallant JL. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/hansenk_ni_2004_23_233_241.pdf">Parametric reverse correlation reveals spatial linearity of retinotopic human V1 BOLD response</a>. NeuroImage 2004; 23:233-241. (This experiment is the model used for our simplified linear regression example above)<br />&nbsp;&nbsp; &nbsp;&nbsp;</span><span style="color:rgb(42, 42, 42)">Monti MM. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/monti_fnhum-05-00028.pdf">Statistical analysis of fMRI time-series: a critical review of the GLM approach</a>. Front Hum Neurosci 2011; 5(28):1-13, doi: 10.3389/fnhum.2011.00028<br />&nbsp;&nbsp; &nbsp;&nbsp;</span>Poline J-B, Brett M. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/_glm_does_love_last_forever_1-s2.0-s1053811912001607-main.pdf">The general linear model and fMRI: Does love last forever?</a> Neuroimage 2012; 62:871-880.<br />&nbsp;&nbsp; &nbsp; Student. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/student_paper_1908.pdf">The probable error of a mean</a>. Biometrika 1908; 6:1-25. (The original paper by "Student", a pseudonym used by William Sealy Gosset who wished to remain anonymous due to his work in quality assurance of small samples at the Guinness Brewery in Dublin. The letter "<em>t</em>" associated with Student's distribution was supplied by English statistician R. A. Fisher in 1925).<br />&nbsp; &nbsp; &nbsp;<span style="color:rgb(0, 0, 0)">The FIL Methods Group.&nbsp;</span><a href="https://mriquestions.com/uploads/3/4/5/7/34572113/spm12_manual.pdf">SPM12 Manual</a><span style="color:rgb(0, 0, 0)">. Wellcome Trust Center for Neuroimaging, London, 2014.</span></div><div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;"><strong>相关问题</strong><br /><strong style="color:rgb(3, 118, 190)"><em>&nbsp; &nbsp; &nbsp;<a href="activation-blobs.html">fMRI 图像上的那些激活“斑点”是如何产生的，它们究竟代表什么？</a></em></strong></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div style="text-align:skip_to_justify;"><div style="height: 0px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-normal" href="fmri-statistical-analysis.html" >
+<span class="wsite-button-inner">← &nbsp;上一问题</span>
+</a>
+<div style="height: 0px; overflow: hidden;"></div></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div style="text-align:right;"><div style="height: 0px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-normal" href="activation-blobs.html" >
+<span class="wsite-button-inner">下一问题 &nbsp;→</span>
+</a>
+<div style="height: 0px; overflow: hidden;"></div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div style="text-align:center;"><div style="height: 0px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-highlight" href="complete-list-of-questions.html" >
+<span class="wsite-button-inner">↑&nbsp;问题完整列表 ↑</span>
+</a>
+<div style="height: 10px; overflow: hidden;"></div></div>
+</div></div>

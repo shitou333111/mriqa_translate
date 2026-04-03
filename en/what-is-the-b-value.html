@@ -1,0 +1,172 @@
+<div id="content"><div id="wsite-content" class="wsite-elements wsite-not-footer">
+	<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<h2 class="wsite-content-title" style="text-align:center;">DWI b-Value<br /></h2>
+
+<div class="paragraph" style="text-align:center;"><strong style="color: rgb(135, 135, 135); font-size: large; line-height: 1.5;"><em><font color="#0376be">What is meant by the b-value?&nbsp;</font></em></strong><br /><strong style="color: rgb(135, 135, 135); font-size: large; line-height: 1.5;"><em><font color="#0376be">How do I pick it?&nbsp;</font></em></strong><strong style="color: rgb(55, 138, 87); font-size: large; line-height: 1.5;"><em>&nbsp;&nbsp;</em></strong><br /></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-thin" style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
+<a href='uploads/3/4/5/7/34572113/6402165_orig.png' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/6402165_orig.png" alt="Diffusion MRI b-value" style="width:100%;max-width:574px" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;">The&nbsp;<strong><em><font color="#24678d">b-value</font></em></strong>&nbsp;is a factor that reflects the strength and timing of the gradients used to generate diffusion-weighted images. The higher the <em>b</em>-value, the stronger the diffusion effects. Specifically, if <strong><em>S<font size="1">o</font></em></strong> is the MR signal at baseline and <strong><em><font color="#24678d">ADC</font></em></strong> is the <em><strong><font color="#24678d">apparent diffusion coefficient</font></strong></em>, the signal (<strong><em>S</em></strong>) after the diffusion gradients have been applied is given by<br></div>
+
+<div><div id="845766879299840064" align="center" style="width: 100%; overflow-y: hidden;" class="wcustomhtml"><h3><center><p style="color:#8a3741">
+<i><b>S</b> = <b>S<sub>o</sub></b>e<sup>−<b>b•ADC</sup></b></i></center></h3>
+</div>
+
+
+
+</div>
+
+<div><div id="541093836725369309" align="left" style="width: 100%; overflow-y: hidden;" class="wcustomhtml"><p>The term <i>e<sup>−b•ADC</sup></i> thus behaves very much like the T2-weighting term <i>e<sup>−TE/T2</sup></i> found in many other pulse sequences. The value of <i>b</i> is selected by the operator prior to imaging. This choice controls the degree of observed diffusion-weighting similar to the way choosing <i>TE</i> affects T2-weighting. Diffusion may thus be thought of as another relaxation mechanism in addition to T1 and T2.  In pulse sequences without extra diffusion gradients, this relaxation mechanism is relatively unimportant, affecting the final signal by no more than 5%. When diffusion gradients are applied, however, the effects of diffusion are significantly amplified and become the dominant mechanism of tissue contrast.</p>
+
+</div>
+
+
+
+</div>
+
+<div class="paragraph" style="text-align:skip_to_justify;">In a<a href="what-is-diffusion.html">&nbsp;prior Q&amp;A</a> we showed that because diffusion is the flux of particles across a surface in a period of time, the units of <strong><em>AD</em></strong>C are of the form [area/time]. So that <em>exp(&minus;b</em>&bull;A<em>DC)</em>&nbsp;will be dimensionless, the units for <em>b</em> should be the inverse of <strong><em>ADC</em></strong>. In other words, <em>b</em> should be expressed as [time/area]. Typical <em>b</em>-values available on modern MRI scanners range from 0 to about 4000 s/mm&sup2;.<br></div>
+
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:53.064066852368%; padding:0 15px;">
+					
+						
+
+<div class="paragraph" style="text-align:skip_to_justify;">The term "<em>b</em>-value" derives from the landmark 1965 paper by&nbsp;Stejskal&nbsp;and Tanner in which they described their pulsed gradient diffusion method. This technique still forms the basis for most modern DWI pulse sequences and consists of two strong gradient pulses of <strong><em><font color="#060cf5">magnitude (G)</font></em></strong> and <strong><em><font color="#25a300">duration (&delta;)</font></em></strong>, separated by <strong><em><font color="#f20e0e">time interval (&Delta;)</font></em></strong>. The formula for <font color="#24678d" style="font-weight: bold; font-style: italic;">b</font><font color="#2a2a2a">, specific to this particular implementation only, is shown in the diagram right.&nbsp;</font></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:46.935933147632%; padding:0 15px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-none" style="padding-top:10px;padding-bottom:0;margin-left:0;margin-right:0;text-align:center">
+<a href='uploads/3/4/5/7/34572113/696634_orig.gif' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/6966346da9.gif?230" alt="Diffusion MRI b-value" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%"><br>Stejskal-Tanner pulsed gradient diffusion method.<br><br>
+<h3><i>b</i> = <i>γ</i>² G² δ² (Δ−δ/3)</h3></div>
+</div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;">The <em>b</em>-value depends on the strength, duration, and spacing of these pulsed gradients.&nbsp; A larger <em>b</em>-value is achieved with increasing the gradient amplitude and duration and by widening the interval between gradient pulses. Because MR systems may use different shapes and durations of the pulsed gradients, it may be difficult to compare b-values precisely between studies.</div>
+
+<div class="paragraph" style="text-align:skip_to_justify;">The "optimal" choice of <em>b</em>-value is not clearly defined and depends upon field strength, number of signals averaged, anatomical features, and predicted pathology. Three brain images using <em>b</em>-values of 0, 1000, and 3000 s/mm&sup2; below show progressively more diffusion weighting (as evidenced by the brighter corticospinal tracts) but also more noise. Mechanical vibration artifacts may also be a problem as <em>b</em>-values are increased. &nbsp;As a practical matter, most routine clinical DWI currently use <em>b</em>-values between 0 and 1000, with slightly lower values being used outside the central nervous system.&nbsp;</div>
+
+<div><div class="wsite-image wsite-image-border-thin" style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
+<a href='uploads/3/4/5/7/34572113/915291_orig.jpg' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/915291250c.jpg?456" alt="Diffusion MRI increasing b-values brain" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%">Brain DWI images using 3 different <i>b</i>-values (0, 1000, and 3000 s/mm²)</div>
+</div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;">The brains of neonates and young infants have much higher water content than adults with T2- and ADC-values 25-40% longer. In these patients the <em>b</em>-value is often made shorter, in the range of 600-700 s/mm&sup2;. &nbsp;A useful rule of thumb is to pick the&nbsp;<em>b</em>-value so that (<em>b</em>&nbsp;<span style="font-size: 15px; line-height: 22.5px;">&times; ADC)&nbsp;</span><span style="font-size: 15px; line-height: 22.5px;">&asymp; 1.</span></div>
+
+<div><div id="245962112749577748" align="left" style="width: 100%; overflow-y: hidden;" class="wcustomhtml"><html> <head><script src="gdpr/gdprscript6f19.js?buildTime=1774025472"></script> <script type="text/javascript" 
+></script> 
+<script type="text/javascript">
+		$(function() {$('#Q').click(function() {$('.Q').toggle(500); return false;});});</script></head><body>
+<a href="#" id=Q><h3><font color="#378a57">Advanced Discussion (show/hide)»</font></h3></a><div class=Q style="display:none;">
+
+<!--content goes below here-->
+<p>Although the historical Stejskal-Tanner equation for b is given above and found in most textbooks, this particular implementation is seldom used in modern clinical or experimental systems. Rather than pure rectangular pulses, either sinusoidal or trapezoidal pulses are more frequently employed. For sinusoidal pulses the equation becomes b = 4γ²G²δ²(Δ−δ/4)/π².  If trapezoidal pulses with rise times ξ are used, then b = γ²G²[δ²(Δ−δ/3) + ξ³/30 −δξ²/6]. </p>
+
+<p>Diffusion schemes other than the pulsed gradient method have also been studied, with the calculation of the b-value depending on the details of the gradient scheme used.  For example, if a single long diffusion gradient G is applied during the time TE, then b = γ²G²TE³/12.  If a fast spin echo technique with n echoes is used, then b = γ²G²TE³/12n².</p>
+
+<!--content goes above here-->
+</div></body>
+<!-- Mirrored from mriquestions.com/what-is-the-b-value.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 21 Mar 2026 06:10:26 GMT -->
+</html></div>
+
+
+
+</div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;"><strong>References</strong><br />&nbsp; &nbsp; &nbsp;Bourne RM. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/deceptive_adc_bourne-2015-journal_of_medical_radiation_sciences.pdf">The trouble with apparent diffusion coefficient papers</a>. J Med Radiat Sci 2015; 62:89-91.&nbsp; [<a href="https://doi.org/10.1002/jmrs.110" target="_blank">DOI LINK</a>] (Citing methdologic problems surrounding definitions of b-value on different systems, Bourne calls ADC the "Apparently <em>Deceptive</em> Coefficient")<br /><span><font color="#878787">&nbsp; &nbsp;</font></span>&nbsp;Burdette JH, Durden DD, Elster AD, Yen YF. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/high_b_value_diffusion_weighted_mri_of_normal.2.pdf">High <em>b</em>-value diffusion-weighted MRI of normal brain</a>. J Comput Assist Tomogr 2001; 25:515-519.<br />&nbsp; &nbsp; &nbsp;Kingsley PB, Monahan WG. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/kingsley.pdf">Selection&nbsp;of the optimum <em>b</em> factor for diffusion-weighted&nbsp;<br />magnetic resonance imaging assessment of ischemic stroke</a>. Mag Reson Med 2004; 51:996-1001.<br />&nbsp; &nbsp; &nbsp;Stejskal EO, Tanner JE.&nbsp;<a href="http://mri-q.com/uploads/3/4/5/7/34572113/stejskal_and_tanner1965.pdf">Spin diffusion measurements: spin echoes in the presence of<br />time-dependent field gradient</a>. J Chem Phys 1965; 42(1):288-292<br></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;"><strong>Related Questions</strong><br /><strong><em><a href="making-a-dw-image.html" title="">&nbsp; &nbsp; &nbsp;<span style="text-align: center;">How do you make a DW image?</span></a></em></strong><br /><strong><em>&nbsp; &nbsp; <a href="b0-vs-b50.html" title="">&nbsp;In body imaging a starting b-value of 50 (s/mm</a></em></strong><a href="b0-vs-b50.html" title=""><strong><em>&sup2;</em></strong><strong><em>) instead of b=0 is often used. Why is this?</em></strong></a><strong><em>&nbsp;</em></strong><br /></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div style="text-align:skip_to_justify;"><div style="height: 10px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-normal" href="making-a-dw-image.html" >
+<span class="wsite-button-inner">← &nbsp;Previous Question</span>
+</a>
+<div style="height: 10px; overflow: hidden;"></div></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div style="text-align:right;"><div style="height: 10px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-normal" href="b0-vs-b50.html" >
+<span class="wsite-button-inner">Next Question &nbsp;→</span>
+</a>
+<div style="height: 10px; overflow: hidden;"></div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div style="text-align:center;"><div style="height: 10px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-highlight" href="complete-list-of-questions.html" >
+<span class="wsite-button-inner">↑&nbsp;Complete List of Questions ↑</span>
+</a>
+<div style="height: 10px; overflow: hidden;"></div></div>
+</div></div>

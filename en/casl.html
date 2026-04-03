@@ -1,0 +1,128 @@
+<div id="content"><div id="wsite-content" class="wsite-elements wsite-not-footer">
+	<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<h2 class="wsite-content-title" style="text-align:center;">Continuous Arterial Spin Labeling (CASL)<br /></h2>
+
+<div class="paragraph" style="text-align:center;"><strong style="color: rgb(135, 135, 135); font-size: large; line-height: 1.5;"><em><font color="#0376be">What is CASL?&nbsp;</font></em></strong><strong style="color: rgb(55, 138, 87); font-size: large; line-height: 1.5;"><em>&nbsp;</em></strong><br /></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-thin" style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
+<a href='uploads/3/4/5/7/34572113/5136495_orig.png' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/5136495950a.png?312" alt="Picture" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;">The technique we now know of as <strong><em><font color="#24678d">CASL&nbsp;(Continuous Arterial Spin Labeling)</font></em></strong>&nbsp;was the first true ASL method, described by Williams, Detre, and&nbsp;colleagues in the early 1990s. CASL&nbsp;used a constant, low-amplitude,&nbsp;continuous&nbsp;RF-pulse in conjunction&nbsp;with an imaging gradient to produce spin inversion of flowing blood proximal to the imaged slice. When these inverted spins flowed into the imaged slice they reduced its signal intensity slightly, detectable by a subtraction technique. Although now primarily of historical interest, the fundamental concepts embodied by CASL are needed to understand newer and more sophisticated ASL techniques.</div>
+
+<div class="paragraph" style="text-align:skip_to_justify;">The inversion pulses used in CASL (and all ASL techniques) give rise to an interesting (and problematic) MR phenomenon, <strong><em><font color="#24678d">magnetization transfer (MT)</font></em></strong>. As described in a <a href="magnetization-transfer1.html">prior Q&amp;A</a>,&nbsp;MT occurs when&nbsp;an RF-pulse centered in the inversion slab "spills over" and indirectly lowers signal in the imaged slice. The MT effect takes place via off-resonance water-macromolecular interactions and is&nbsp;entirely separate from ASL signal changes caused by flow.<br /><br />The MT phenomenon occurs in normal imaging, but usually is not noticeable because it affects tissue signal in adjacent slices by only a few percent. In ASL, however, where the change in signal between tagged and control images is less than 1%, unwanted MT effects may overwhelm detection of the desired flow-related changes.<br /><br />All ASL techniques must therefore address how to cancel or diminish this MT effect. An illustration of the "MT Problem" and two solutions possible with the CASL method is given below.</div>
+
+<div><div class="wsite-image wsite-image-border-thin" style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
+<a href='uploads/3/4/5/7/34572113/_5681302_orig.gif' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/_5681302_orig.gif" alt="MT and ASL in CASL" style="width:100%;max-width:1100px" />
+</a>
+<div style="display:block;font-size:90%">The MT problem and two CASL solutions.</div>
+</div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;">In the top row the MT Problem is illustrated. A single inversion pulse applied off-resonance (at a different resonance frequency and location) reduces signal from the imaged slab. This confounds calculation of the desired signal change (Signal<font size="1">control</font>&nbsp;&minus; Signal<font size="1">inversion</font>) reflecting perfusion.<br /><br />In the second row the original CASL solution is illustrated. Here the control image is obtained using a second inversion pulse identical to the first but applied on the opposite side of the imaged slice. The MT effects within the imaged slice are the same between Labeling and Control; they are eliminated when the two images are subtracted.<br /><br />"CASL Solution #2" a modification of the original technique by Alsop and Detre (1998). Here, the inversion pulse played out during the Control sequence is split into two parts (sidebands) by amplitude modulation. Since the sidebands have half the amplitude of the original pulse and are very close together, the MT effect on the imaged slice remains unchanged and disappears when the sequences are subtracted. The split pulse results in no net inversion of flowing spins in the Control sequence since the pair acts as two 180&deg; pulses = 360&deg; (a double inversion) when placed side-by-side.&nbsp;</div>
+
+<div class="paragraph" style="text-align:skip_to_justify;">CASL techniques are now primarily of historical and didactic interest, having fallen out of favor by the late 1990s. The main problems with CASL were the high tissue energy deposition and transmitter duty-cycle requirements accompanying the use of continuous RF-pulses. Thus came PASL, a family of ASL methods using pulsed (rather than continuous) RF-excitation. PASL and its variants are discussed in the <a href="pasl.html">next Q&amp;A</a>.</div>
+
+<div><div id="724110603628901407" align="left" style="width: 100%; overflow-y: hidden;" class="wcustomhtml"><html> <head><script src="gdpr/gdprscript6f19.js?buildTime=1774025472"></script> <script type="text/javascript" 
+></script> 
+<script type="text/javascript">
+		$(function() {$('#Q').click(function() {$('.Q').toggle(500); return false;});});</script></head><body>
+<a href="#" id=Q><h3><font color="#378a57">Advanced Discussion (show/hide)»</font></h3></a><div class=Q style="display:none;">
+
+<!--content goes below here-->
+
+<p>The idea that flowing spins can be selectively inverted by the combination of a radiofrequency (RF)-pulse AND a gradient is an interesting and unique feature of CASL and pCASL. The underlying physics is a little complex and introduces the concept of<font color="#0376be"><b><i> flow-related adiabatic inversion</b></i></font>. </p>
+
+<p>The general adiabatic phenomenon has been previously introduced in a <a href="adiabatic-excitation.html">prior Q&A</a>. In brief, adiabatic excitation is a special type of RF-stimulation that occurs only under certain limited conditions and produces a nearly perfect inversion of net magnetization (<b>M</b>) that is relatively tolerant to <b>B<sub>1</sub></b>-field inhomogeneities. The phenomenon was described in the early days of NMR in which a specimen in a constant magnetic field was subjected to continuous RF-excitation swept over a range of frequencies from far below to far above the resonance frequency. Provided the <b>B<sub>1</sub></b>-field was strong enough and applied slowly enough (the<font color="#0376be"><b><i> adiabatic condition</b></i></font>), the net magnetization (<b>M</b>) could be nutated with a complete inversion by the end of the sweep. </p>
+
+<p>Surprisingly, adiabatic inversion of flowing spins in ASL can occur even when the RF-field is maintained at a constant frequency and amplitude. This happens if a strong spatial gradient oriented in the direction of flow is applied concomitantly with RF-excitation. As the flowing spins move within this gradient their resonant frequencies change by location. What looks like a stationary RF-field to the outside world seems like a sweeping RF-field to the flowing spins. Thus they can undergo adiabatic following and inversion provided their velocities (<i>v</i>) are neither too small nor too large compared the T2 relaxation time of arterial blood, strength of the gradient (<i>G</i>), and magnitude of the effective field (≈  <i>B<sub>1</sub></i>) according to the relationship:</p>
+
+<p align=center><large><b><i>1/T2 << G</b>•<b>v/B<sub>1</sub> << γB<sub>1</sub></i></b></large></p>
+
+<!--content goes above here-->
+</div></body>
+<!-- Mirrored from mriquestions.com/casl.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 21 Mar 2026 06:40:06 GMT -->
+</html></div>
+
+
+
+</div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;"><strong>References</strong><br /><span style="line-height: 1.5;"><font color="#878787">&nbsp; &nbsp; &nbsp;</font></span>Alsop DC, Detre JA. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/alsop_detre_multislice_casl_radiology_1998.pdf" title="">Multisection cerebral blood flow MR imaging with continuous arterial spin labeling</a>. Radiology 1998; 208:410-416. (improvement of the CASL technique using an amplitude modulated inversion pulse to self-correct for off-resonance effects)&nbsp;<br /><span></span>&nbsp; &nbsp; &nbsp;Williams DS, Detre JA, Leigh JS, Koretsky AP. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/pnas-1992-williams-212-6.pdf" title="">Magnetic resonance imaging of perfusion using spin inversion of arterial water</a>. Proc Natl Acad Sci USA 1992; 89:212-216. (first demonstration of ASL, using a single-slice continuous technique in a rat brain, later known as CASL)<br />&nbsp; &nbsp; &nbsp;Wong EC, Buxton RB, Frank LR. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/wong_pasl-picore.pdf" title="">Implementation of quantitative perfusion imaging techniques for functional brain mapping using pulsed arterial spin labeling</a>. NMR in Biomed 1997; 10:237-249. (comparison of CASL to pulsed methods)<br /><span></span></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;"><strong>Related Questions</strong><br /><strong><em><a href="asl-methods-overview.html" title="">&nbsp; &nbsp; &nbsp;Can you briefly explain the difference between the various ASL methods? Which is the best?</a></em></strong><br /><strong><em><a href="pcasl.html" title=""><span style="text-align: center;">&nbsp; &nbsp; &nbsp;What is pCASL and how does it differ from CASL and PASL?&nbsp;</span><span style="text-align: center;">&nbsp;&nbsp;</span></a></em></strong><br /></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div style="text-align:skip_to_justify;"><div style="height: 0px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-normal" href="asl-methods-overview.html" >
+<span class="wsite-button-inner">← &nbsp;Previous Question</span>
+</a>
+<div style="height: 0px; overflow: hidden;"></div></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div style="text-align:right;"><div style="height: 0px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-normal" href="pasl.html" >
+<span class="wsite-button-inner">Next Question &nbsp;→</span>
+</a>
+<div style="height: 0px; overflow: hidden;"></div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div style="text-align:center;"><div style="height: 0px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-highlight" href="complete-list-of-questions.html" >
+<span class="wsite-button-inner">↑&nbsp;Complete List of Questions ↑</span>
+</a>
+<div style="height: 10px; overflow: hidden;"></div></div>
+</div></div>

@@ -1,0 +1,186 @@
+<div id="content"><div id="wsite-content" class="wsite-elements wsite-not-footer">
+	<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<h2 class="wsite-content-title" style="text-align:center;">Receiver Bandwidth</h2>
+
+<div class="paragraph" style="text-align:center;"><strong style="color: rgb(135, 135, 135); font-size: large; line-height: 1.5;"><em><font color="#0376be">What is bandwidth?</font></em></strong><strong style="color: rgb(55, 138, 87); font-size: large; line-height: 1.5;"><em>&nbsp;</em></strong><br /></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-thin" style="padding-top:0;padding-bottom:0;margin-left:0;margin-right:0;text-align:center">
+<a href='uploads/3/4/5/7/34572113/3063776_orig.png' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/3063776f90f.png?290" alt="Receiver Bandwidth" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;"><font color="#24678d" style="font-weight: bold; font-style: italic;">Bandwidth (BW)</font>&nbsp;is the range of frequencies (measured in Hz) involved in the&nbsp;transmission or reception of an electronic signal.&nbsp;In MRI the term may be used to refer to the frequencies associated either with RF-excitation (<strong><em><font color="#24678d">transmitter bandwidth</font></em></strong>, <strong><em><font color="#24678d">tBW</font></em></strong>) or signal reception (<strong><em><font color="#24678d">receiver bandwidth</font></em></strong>, <strong><em><font color="#24678d">rBW</font></em></strong>). When not specified, the generic term "bandwidth" usually refers to receiver bandwidth, the subject of this page. Concepts surrounding RF-bandwidth will be discussed in a later Q&amp;A.</div>
+
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div class="paragraph" style="text-align:skip_to_justify;">Recall that one dimension of an image is typically frequency-encoded by applying a spatially-varying gradient (<em>G<font size="1">f</font></em>) in that direction. This gradient slightly alters the precession frequencies as shown in the adjacent image. In this example the voxels at the extreme&nbsp;left side of the image resonate at 64,000,000 Hz while those at the far right resonate at 64,050,000 Hz. The total rBW is therefore 50,000 Hz. This value is an operator-selectable parameter, chosen by the technologist before the scan begins. Available values for total receiver BW range from about 5-100 kHz with 50kHz being typical.<br /><br />This total bandwidth is apportioned to pixels along the frequency-encoding direction equally. The <em>width</em>&nbsp;(&Delta;<em>w</em>) of each pixel, in turn, is determined by two additional operator-selected parameters: the&nbsp;<font color="#24678d"><strong style=""><em style="">field-of-view</em></strong><strong><em>&nbsp;in the frequency-encoding direction</em></strong> <strong>(<em style="">FOV<font size="1">f</font></em>)</strong></font> and the&nbsp;<font color="#24678d"><strong style=""><em style="">number of frequency-encoding steps</em></strong><strong><em>&nbsp;</em>(<em style="">N<font size="1">f</font></em>)</strong></font>. &nbsp;<br /></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-thin" style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:15px;text-align:center">
+<a href='uploads/3/4/5/7/34572113/6379345_orig.jpg' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/6379345_orig.jpg" alt="Receiver Bandwidth" style="width:100%;max-width:505px" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+<div><div class="wsite-image wsite-image-border-none" style="padding-top:15px;padding-bottom:15px;margin-left:0;margin-right:0;text-align:center">
+<a href='uploads/3/4/5/7/34572113/6183995_orig.jpg' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/6183995d18f.jpg?479" alt="bandwidth per pixel" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+<div class="paragraph" style="text-align:center;">BW per pixel = Total BW&nbsp;&divide; <em>N<font size="1">f</font></em></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;">MR manufacturers have slightly different methods for defining receiver bandwidth. GE Healthcare uses the total bandwidth across the entire image, while Siemens and Canon use bandwidth per pixel (Px). In the example above, GE would report a rBW = 50 kHz regardless of the spatial resolution chosen. Siemens and Canon would calculate BW on a per pixel basis. So for&nbsp;<em>N<font size="1">f</font></em> = 256 they would report the BW to be 50,000/256 or 195 Hz/Px.&nbsp;<br /><br />Philips has a somewhat obtuse way of prescribing bandwidth - the "fat/water shift" in pixels. At 1.5T the resonant frequencies of fat and water protons differ by about 220 Hz causing them to refocus in slightly different positions in the image. This is known as the <strong><em><font color="#24678d">chemical shift artifact</font></em></strong> and will be explained much more completely in a <a href="chemical-shift-artifact.html">future Q&amp;A</a>. Continuing the example above, a BW of 195 Hz/pixel at 1.5T would be reported by Philips as 220/195 = 1.1 pixels (Px). At 3.0T the chemical shift difference is about 440 Hz, so the Philips BW at this field would be reported as 2.2 pixels.&nbsp;<br></div>
+
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-none" style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
+<a href='uploads/3/4/5/7/34572113/1733068_orig.gif' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/1733068_orig.gif" alt="Receiver Bandwidth and sampling time, dwell time" style="width:100%;max-width:900px" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div class="paragraph" style="text-align:skip_to_justify;">At the "nuts and bolts" level, <strong>receiver BW is the same as the digitization rate of the MR signal</strong>. The <strong><font color="#24678d"><em>dwell time</em> (<em>t<font size="1">d</font></em>)</font></strong> is the interval between digitized samples. This, in turn, is defined by the <strong><font color="#24678d"><em>sampling time</em> (<em>t<font size="1">s</font></em>)</font></strong> and the <font color="#24678d"><strong><em>number of complex samples </em>(<em>n<font size="1">s</font></em>)</strong> </font>measured.&nbsp;<br><br>Continuing the above example, if 256 samples were acquired in 5.12 ms, the dwell time (<em>t<font size="1">d</font></em>) would be 5.12 ms/256 = 20<font color="#2a2a2a">&nbsp;<span style="line-height: 1.5;">&mu;s. This would result in a total receiver BW of 1/20</span></font><span style="color: rgb(42, 42, 42); line-height: 1.5;">&mu;s = 50,000 Hz.</span></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div><div id="200009729458003249" align="left" style="width: 100%; overflow-y: hidden;" class="wcustomhtml"><html> <head><script src="gdpr/gdprscript6f19.js?buildTime=1774025472"></script> <script type="text/javascript" 
+></script> 
+<script type="text/javascript">
+		$(function() {$('#Q').click(function() {$('.Q').toggle(500); return false;});});</script></head><body>
+<a href="#" id=Q><h3><font color="#378a57">Advanced Discussion (show/hide)»</font></h3></a><div class=Q style="display:none;">
+
+<!--content goes below here-->
+
+<p>You might wonder why our definition of <i>BW=1/t<sub>d</sub></i> isn't in conflict with the Nyquist criterion from sampling theory. The Nyquist criterion requires that a sinusoid must be sampled at least twice per cycle to determine its true frequency. So it would seem the proper equation should be <i>BW=1/2t<sub>d</sub></i>.</p>
+
+<p>The answer is that in MRI we sample in complex mode, collecting both real and imaginary data for each point. If we only sampled a single real signal (as is done in some older NMR spectrometers and very old MRI scanners), then the true BW would be only <i>1/2t<sub>d</sub></i>. We would be able to detect signals over the the range −<i>1/2t<sub>d</sub></i> to +<i>1/2t<sub>d</sub></i>, but would be unable to distinguish positive from negative frequencies within this range. The bandwidth we can actually represent is only from 0 to <i>1/2t<sub>d</sub></i>. </p>
+
+<p>Collecting both the real and imaginary data allows us to distinguish +<i>1/2t<sub>d</sub></i> from −<i>1/2t<sub>d</sub></i>. The full usable bandwidth is therefore BW = +<i>1/2t<sub>d</sub> − (−1/2t<sub>d</sub></i>) = <i>1/t<sub>d</sub></i>. The maximum detectable frequency is still <i>1/2t<sub>d</sub></i>, but we can now distinguish positive from negative frequencies in that range.</p>
+
+<p>Another topic ignored in the above discussion is the concept of <b><i>frequency oversampling</b></i>. For simplicity, I didn't make a sharp distinction between <i>N<sub>f</sub></i>, the displayed number of pixels in the frequency-encode direction, and <i>n<sub>s</sub></i>, the number of complex data points in the signal actually sampled. The high digitization rates available on modern scanners now allows the MR signal to be sampled at rates much higher than that required for the desired display resolution. In general, <i>n<sub>s</sub></i> may exceed <i>N<sub>f</sub></i> by a factor of two or more. Thus it is possible (and commonplace) to sample 512 or 1024 points of the MR signal even though the base display resolution in the frequency-encoding direction may still be only <i>N<sub>f</sub></i> = 256. This is known as frequency oversampling and is useful for eliminating aliasing (wrap-around) artifacts in the frequency-encode direction.  Routine frequency oversampling is why we typically see this artifact only in the phase-encode and not in the frequency-encode direction. Much more on this in a later Q&A!
+
+<!--content goes above here-->
+</div></body>
+<!-- Mirrored from mriquestions.com/receiver-bandwidth.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 21 Mar 2026 06:01:50 GMT -->
+</html></div>
+
+
+
+</div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;"><strong>References</strong><br /><span style="line-height: 1.5;"><font color="#878787">&nbsp; &nbsp; &nbsp;</font></span>Graessner J. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/bandwidth_in_mri_siemens_.pdf" title="">Bandwidth in MRI?</a>&nbsp; MAGNETOM Flash 2/2013, pp 3-8. (very nice educational article available online at <a href="http://www.siemens.com/magnetom-world" style="" title="">www.siemens.com/magnetom-world</a>).<br /><span style=""></span></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;"><strong>Related Questions</strong><br /><strong><em><a href="frequency-encoding.html" title="">&nbsp; &nbsp;&nbsp;<span style="text-align: center;">How does frequency-encoding work?&nbsp;</span></a></em></strong><br /><a href="narrow-bandwidth.html"><strong style=""><em style="">&nbsp; &nbsp; What is narrow bandwidth, and when would you want to use it?&nbsp;</em></strong><strong style=""><em style="">&nbsp;</em></strong></a><br /></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div style="text-align:skip_to_justify;"><div style="height: 10px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-normal" href="frequency-encoding.html" >
+<span class="wsite-button-inner">← &nbsp;Previous Question</span>
+</a>
+<div style="height: 10px; overflow: hidden;"></div></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div style="text-align:right;"><div style="height: 10px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-normal" href="narrow-bandwidth.html" >
+<span class="wsite-button-inner">Next Question &nbsp;→</span>
+</a>
+<div style="height: 10px; overflow: hidden;"></div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div style="text-align:center;"><div style="height: 10px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-highlight" href="complete-list-of-questions.html" >
+<span class="wsite-button-inner">↑&nbsp;Complete List of Questions ↑</span>
+</a>
+<div style="height: 10px; overflow: hidden;"></div></div>
+</div></div>

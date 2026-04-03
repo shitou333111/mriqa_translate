@@ -1,0 +1,270 @@
+<div id="content"><div id="wsite-content" class="wsite-elements wsite-not-footer">
+	<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:50.416666666667%; padding:0 15px;">
+					
+						
+
+<h2 class="wsite-content-title" style="text-align:center;">浅层神经网络&nbsp;</h2>
+
+<div class="paragraph" style="text-align:center;"><font size="4"><strong style="color:rgb(135, 135, 135)"><em><font color="#0376be">为何要使用浅层神经网络？有哪些不同类型？&nbsp;</font></em></strong></font></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:49.583333333333%; padding:0 15px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-thin" style="padding-top:0px;padding-bottom:0px;margin-left:0px;margin-right:0px;text-align:center">
+<a href='uploads/3/4/5/7/34572113/screen-shot-2023-04-02-at-3-31-17-pm_orig.png' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/published/screen-shot-2023-04-02-at-3-31-17-pm5500.png?1680467533" alt="机器学习类型" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<span class='imgPusher' style='float:left;height:0px'></span><span style='display: table;width:auto;position:relative;float:left;max-width:100%;;clear:left;margin-top:0px;*margin-top:0px'><a href='uploads/3/4/5/7/34572113/shallow-neural-network_orig.png' rel='lightbox' onclick='if (!lightboxLoaded) return false'><img src="uploads/3/4/5/7/34572113/published/shallow-neural-network5e59.png?1680448962" style="margin-top: 10px; margin-bottom: 10px; margin-left: 0px; margin-right: 10px; border-width:0; max-width:100%" alt="浅层神经网络示意图" class="galleryImageBorder wsite-image" /></a><span style="display: table-caption; caption-side: bottom; font-size: 90%; margin-top: -10px; margin-bottom: 10px; text-align: center;" class="wsite-caption">浅层神经网络</span></span>
+<div class="paragraph" style="display:block;">正如<a href="shallow-v-deep-ml.html">之前的问答</a>中所描述的，<em><strong><font color="#24678d">浅层神经网络</font></strong></em>在输入层和输出层之间只有一个（或仅少数几个）隐藏层。输入层接收数据，隐藏层处理数据，最终层产生输出。与可能拥有数十层、数千个隐藏单元的<em><strong><font color="#24678d">深度神经网络</font></strong></em>相比，浅层神经网络更简单、更容易训练，并且具有更高的计算效率。浅层网络通常用于更简单的任务，如线性回归、二元分类或低维特征提取。<font color="#2a2a2a">&nbsp;</font></div>
+<hr style="width:100%;clear:both;visibility:hidden;"></hr>
+
+<div class="paragraph">从技术上讲，具有超过一个隐藏层的神经网络不再被视为浅层神经网络。然而，在某些情况下，一个具有2或3个隐藏层，每层隐藏单元数量较少且层间连接简单的神经网络，可能产生直接的输出，并且<span style="color:rgb(0, 0, 0)">仍可能被视为“浅层”网络。&nbsp;</span>&nbsp;</div>
+
+<div class="paragraph">在磁共振成像的图像处理应用中，使用了四种常见的浅层机器学习技术，下面将进行图示和讨论。</div>
+
+<div><div class="wsite-image wsite-image-border-thick wsite-image-border-black" style="padding-top:10px;padding-bottom:10px;margin-left:0px;margin-right:0px;text-align:center">
+<a href='uploads/3/4/5/7/34572113/screen-shot-2023-03-29-at-10-29-16-am_1.png' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/screen-shot-2023-03-29-at-10-29-16-am_1.png" alt="图片" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%">各种<b>浅层神经网络</b>（根据 CC BY 协议修改自 Argentiero 等人）</div>
+</div></div>
+
+<div class="wsite-youtube" style="margin-bottom:10px;margin-top:10px;"><div class="wsite-youtube-wrapper wsite-youtube-size-auto wsite-youtube-align-center">
+<div class="wsite-youtube-container">
+
+<iframe src="http://www.youtube.com/embed/E0Hmnixke2g?wmode=opaque" frameborder="0" allowfullscreen></iframe>
+</div>
+</div></div>
+
+<div class="paragraph"><strong><font size="4" color="#8d5024">逻辑回归</font></strong></div>
+
+<div><div id="980143726550444765" align="left" style="width: 100%; overflow-y: hidden;" class="wcustomhtml"><p>逻辑回归是一种浅层监督机器学习技术，最常用于解决分类问题，特别是当结果是二元时，例如（A 或 B）、（是或否）以及（恶性或良性）。逻辑回归与更熟悉的线性回归类似，区别在于后者的输出可以取任何值。而在逻辑回归中，输出被限制为仅两个（或最多几个）离散值。逻辑回归的核心是<font color="#0376be"><b><i>逻辑函数</b></i></font>，<i>f(x) = 1 / (1 + e<sup>−x</sup></i>)，它具有 S 形曲线，对于所有输入 <i>x</i> 返回一个介于 0 和 1 之间的值。</p></div>
+
+
+
+</div>
+
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:42.361111111111%; padding:0 15px;">
+					
+						
+
+<div class="paragraph">在训练期间，系统会提供正确分类的案例，每个案例由一个或多个输入描述。然后，逻辑回归算法计算输入的线性组合，并通过最大似然法优化参数，生成接近 0 或 1 的比值比，具体取决于输入对应的二元类别。一旦参数优化完成，当呈现新的未知数据时，该模型可用于对结果进行分类。</div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:57.638888888889%; padding:0 15px;">
+					
+						
+
+<div class="wsite-youtube" style="margin-bottom:0px;margin-top:30px;"><div class="wsite-youtube-wrapper wsite-youtube-size-auto wsite-youtube-align-center">
+<div class="wsite-youtube-container">
+
+<iframe src="http://www.youtube.com/embed/XnOAdxOWXWg?wmode=opaque" frameborder="0" allowfullscreen></iframe>
+</div>
+</div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div class="paragraph"><strong><font color="#8d5024" size="4">支持向量机</font></strong></div>
+
+<div class="paragraph">在支持向量机中，数据被分为两类，每类由空间中的点表示，两类之间尽可能保持最大距离。一个分界边界将类别分开。边界的选择标准是使其与每个组中最近点之间的距离（即“间隔”）最大化。换句话说，最佳边界是能够清晰划分数据但又不过于接近任何一组的边界。位于边界最近处的数据点称为<em><strong><font color="#24678d">支持向量</font></strong></em>。它们代表了最难分类的点，并直接影响边界的最佳位置。&nbsp;<br /></div>
+
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:58.472222222222%; padding:0 15px;">
+					
+						
+
+<div class="wsite-youtube" style="margin-bottom:10px;margin-top:0px;"><div class="wsite-youtube-wrapper wsite-youtube-size-auto wsite-youtube-align-center">
+<div class="wsite-youtube-container">
+
+<iframe src="http://www.youtube.com/embed/N1vOgolbjSc?wmode=opaque" frameborder="0" allowfullscreen></iframe>
+</div>
+</div></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:41.527777777778%; padding:0 15px;">
+					
+						
+
+<div class="paragraph"><span style="color:rgb(0, 0, 0)">对于简单的分类问题，边界只是一条直线或平面。在更复杂的情况下，可能需要构建非线性边界，例如抛物线、圆形或超平面。这是通过使用所谓的<em><strong><font color="#24678d">核函数</font></strong></em>将数据转换到更高维度来实现的。</span><br />&#8203;</div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div class="paragraph"><span style="color:rgb(0, 0, 0)">与逻辑回归类似，支持向量机中的最优边界是使用一个分类和输入已知的训练集计算出来的。然后，新案例根据它们落在边界的哪一侧进行分类。</span><span style="color:rgb(0, 0, 0)">支持向量机方法可以扩展到两个以上的类别（尽管有些困难）。</span>&#8203;</div>
+
+<div class="paragraph" style="text-align:skip_to_justify;"><strong><font size="4" color="#8d5024">随机森林</font></strong></div>
+
+<div class="paragraph"><span style="color:rgb(0, 0, 0)">随机森林是一种用于数据分类和预测的机器学习技术。随机森林的基本构建模块是<em><strong><font color="#24678d">决策树</font></strong></em>。</span>&#8203;</div>
+
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:42.361111111111%; padding:0 15px;">
+					
+						
+
+<div class="paragraph">决策树的构建相对直接且简单。例如，一个将球分类为足球、高尔夫球或网球的决策树可能包括两个初始分支，处理形状（圆形或椭圆形），然后沿着圆形分支再分出两个分支处理尺寸（大于或小于 4 厘米）。简单决策树的主要问题是其高方差——它们通常会过度拟合数据，并且不能很好地泛化到训练集之外的样本。</div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:57.638888888889%; padding:0 15px;">
+					
+						
+
+<div class="wsite-youtube" style="margin-bottom:10px;margin-top:20px;"><div class="wsite-youtube-wrapper wsite-youtube-size-auto wsite-youtube-align-center">
+<div class="wsite-youtube-container">
+
+<iframe src="http://www.youtube.com/embed/J4Wdy0Wc_xQ?wmode=opaque" frameborder="0" allowfullscreen></iframe>
+</div>
+</div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div class="paragraph">随机森林的开发正是为了克服这些问题。随机森林不是单一的树，而是由大量独立的树组成的集合，这些树是使用从原始变量子集中随机选择的数据构建的。一旦树构建完成，它们会使用已知数据进行测试，并根据预测准确性对森林中的各个树进行评分。因此，它们可以用来对数据中最重要的变量进行排序。其他优点包括对异常值不敏感、能够处理新数据而无需大幅改变，以及能够处理缺失数据。</div>
+
+<div class="paragraph"><strong><font size="4" color="#8d5024">聚类分析</font></strong></div>
+
+<div class="paragraph">与上述三种监督机器学习技术不同，聚类分析是<em>无监督的</em>。其目标是将大型数据集细分为<em><strong><font color="#24678d">聚类</font></strong></em>，即与其他组相比具有相似属性或特征的对象的组。</div>
+
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:58.472222222222%; padding:0 15px;">
+					
+						
+
+<div class="wsite-youtube" style="margin-bottom:10px;margin-top:10px;"><div class="wsite-youtube-wrapper wsite-youtube-size-auto wsite-youtube-align-center">
+<div class="wsite-youtube-container">
+
+<iframe src="http://www.youtube.com/embed/4cxVDUybHrI?wmode=opaque" frameborder="0" allowfullscreen></iframe>
+</div>
+</div></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:41.527777777778%; padding:0 15px;">
+					
+						
+
+<div class="paragraph"><br />&#8203;成像应用中使用的流行聚类方法包括：<ul><li>K-均值聚类</li><li><span>基于连通性的聚类</span></li><li><span>高斯混合聚类</span></li><li><span>&#8203;基于密度的聚类</span></li></ul> <span>这些方法在左侧的 YouTube 视频中介绍，并在参考文献中有更详细的解释。</span></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div><div id="445845269783320486" align="left" style="width: 100%; overflow-y: hidden;" class="wcustomhtml"><html> <head><script src="gdpr/gdprscript6f19.js?buildTime=1774025472"></script> <script type="text/javascript" 
+></script> 
+<script type="text/javascript">
+		$(function() {$('#Q').click(function() {$('.Q').toggle(500); return false;});});</script></head><body>
+<a href="#" id=Q><h3><font color="#378a57">进阶讨论（显示/隐藏）»</font></h3></a><div class=Q style="display:none;">
+
+<!--content goes below here-->
+
+暂无补充材料。请稍后再来查看！
+
+
+<!--content goes above here-->
+</div></body>
+<!-- Mirrored from mriquestions.com/shallow-networks.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 21 Mar 2026 06:49:38 GMT -->
+</html></div>
+
+
+
+</div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div><div class="paragraph" style="text-align:skip_to_justify;"><strong>参考文献</strong><br /><font color="#878787">&nbsp; &nbsp; &nbsp;</font>Argentiero A, Muscogiuri G, Rabbat MG, et al. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/jcm-11-02866.pdf">The applications of artificial intelligence in cardiovascular magnetic resonance &mdash; a comprehensive review.</a> J Clin Med 2022; 111:2866.&nbsp; <a href="https://doi.org/10.3390/jcm11102866" target="_blank">[DOI LINK]</a><br />&nbsp; &nbsp; &nbsp;Breiman L. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/breiman2001_article_randomforests.pdf">Random forests</a>. Machine Learning 2001; 45:5-32.&nbsp; (original description of the technique).<br />&nbsp; &nbsp; &nbsp;<a href="https://en.wikipedia.org/wiki/Cluster_analysis" target="_blank">Cluster Analysis</a>.&nbsp; Wikipedia, The Free Encyclopedia. (accessed 7-16-22)<br />&#8203;&nbsp; &nbsp; &nbsp;Levy JJ, O&rsquo;Malley AJ. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/s12874-020-01046-3.pdf">Don&rsquo;t dismiss logistic regression: the case for sensible extraction of interactions in the&nbsp;era of machine learning</a><span style="color:rgb(19, 20, 19)">. </span><span style="color:rgb(19, 20, 19)">BMC Medical Research Methodology (2020) 20:171.</span><span style="color:rgb(19, 20, 19)">&nbsp;</span> <a href="https://doi.org/10.1186/s12874-020-01046-3" target="_blank">[DOI LINK]</a><br />&nbsp; &nbsp; &nbsp;Noble WS.&nbsp; <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/what_is_a_support_vector_machine.pdf">What is a support vector machine?</a> Nature Biotechnology 2006; 24:1565-7. <a href="https://doi.org/10.1038/nbt1206-1565" target="_blank">[DOI LINK]</a><br />&nbsp; &nbsp; &nbsp;Seif G. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/the_5_clustering_algorithms_data_scientists_need_to_know___by_george_seif___towards_data_science.pdf">The 5 clustering algorithms data scientists need to know</a>. Toward Data Science, 2018;1-10.<br />Downloaded 7-16-22 <a href="https://towardsdatascience.com/the-5-clustering-algorithms-data-scientists-need-to-know-a36d136ef68" target="_blank">from this link</a>.&nbsp; (Recommend viewing online as it contains multiple animated gifs).<br /></div><div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;"><strong>相关问题</strong><br /><a href="index.html"><font size="3"><strong style="">&nbsp; &nbsp; &nbsp;</strong><em style="color: rgb(0, 0, 0);"><strong style=""><font color="#24678d" style="">人工智能与机器学习是同一回事吗？</font></strong></em></font></a></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div style="text-align:skip_to_justify;"><div style="height: 0px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-normal" href="shallow-v-deep-ml.html" >
+<span class="wsite-button-inner">← &nbsp;上一问题</span>
+</a>
+<div style="height: 0px; overflow: hidden;"></div></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div style="text-align:right;"><div style="height: 0px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-normal" href="deep-network-types.html" >
+<span class="wsite-button-inner">下一问题 &nbsp;→</span>
+</a>
+<div style="height: 0px; overflow: hidden;"></div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div style="text-align:center;"><div style="height: 0px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-highlight" href="complete-list-of-questions.html" >
+<span class="wsite-button-inner">↑&nbsp;问题完整列表 ↑</span>
+</a>
+<div style="height: 10px; overflow: hidden;"></div></div>
+</div></div>

@@ -1,0 +1,452 @@
+<div id="content"><div id="wsite-content" class="wsite-elements wsite-not-footer">
+	<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<h2 class="wsite-content-title" style="text-align:center;">高级 DSC 后处理</h2>
+
+<div class="paragraph" style="text-align:center;"><strong style="color: rgb(135, 135, 135); font-size: large; line-height: 1.5;"><em><font color="#0376be">动脉输入函数如何用于从 DSC 数据中提取更定量的血流信息？</font></em></strong><br /></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-thin" style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
+<a href='uploads/3/4/5/7/34572113/235069_orig.png' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/235069_orig.png" alt="DSC 去卷积" style="width:100%;max-width:1100px" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;">将原始 DSC 成像数据转换为定量的血流测量值需要三个步骤：&nbsp;<br /><ol><li><font color="#2a2a2a"><span style="line-height: 1.5; background-color: initial;">将组织 MR 信号 <em>s(t)</em> 转换为钆浓度&nbsp;</span><em style="line-height: 1.5; background-color: initial;">c(t)</em><span style="line-height: 1.5; background-color: initial;">；&nbsp;</span></font></li><li><font color="#2a2a2a"><span style="line-height: 1.5; background-color: initial;">选择合适的动脉输入函数&nbsp;</span><em style="line-height: 1.5; background-color: initial;">a(t)</em><span style="line-height: 1.5; background-color: initial;">；以及&nbsp;</span></font></li><li><span style="line-height: 1.5; background-color: initial;"><font color="#2a2a2a">数学建模与计算。&nbsp;</font></span><br /></li></ol></div>
+
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:72.284122562674%; padding:0 15px;">
+					
+						
+
+<div class="paragraph" style="text-align:skip_to_justify;">前两个步骤已在之前的问答中描述。本节讨论在仅知道&nbsp;<em>c(t)</em> 和 <em>a(t)</em> 的情况下量化血流的数学方法。该分析源自线性系统理论，并需要几个重要假设：<br /><ol><li><font color="#2a2a2a"><span style="line-height: 1.5; background-color: initial;">血流 (<em>F</em>) 和血容量 (<em>V</em>) 在测量期间保持恒定。</span></font></li><li><span style="line-height: 1.5; background-color: initial;"><font color="#2a2a2a">所有注入的示踪剂分子最终都会流出系统。换言之，组织内不存在示踪剂的永久性滞留、汇集或丢失。</font></span></li><li><span style="line-height: 1.5; background-color: initial;"><font color="#2a2a2a">系统对输入具有线性响应，并遵循叠加原理。这意味着两个独立输入的总输出响应等于分别考虑这些输入时的响应之和。</font></span></li></ol><span></span></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:27.715877437326%; padding:0 15px;">
+					
+						
+
+<blockquote style="text-align:skip_to_justify;"><font size="3" color="#24678d">读者会立刻意识到，这个简单模型在实践中是多么容易失效。例如，通过渗漏的血脑屏障积累钆对比剂的脑肿瘤就不符合假设 #2。&nbsp;</font><br /><span></span></blockquote>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;"><strong><em><font color="#2a2a2a">血容量 (V)</font></em></strong> 是第一个也是最容易提取的参数。假设没有渗漏或再循环效应，<em>V</em> 与对比剂首次通过期间组织浓度曲线 <em>c(t)</em> 下的面积成正比。理论上，通过除以仅包含血液的体素中的钆浓度，可以使这种关系定量化。通常，这样的参考体素选择位于供血动脉内，而动脉输入函数曲线&nbsp;<em>a(t)</em> 使用起来很方便。（也可以选择大静脉中的体素，这是 CT 灌注研究中的常见做法）。&nbsp;用数学形式表示为&nbsp;<br /></div>
+
+<div><div class="wsite-image wsite-image-border-none" style="padding-top:0;padding-bottom:0;margin-left:0;margin-right:0;text-align:center">
+<a href='uploads/3/4/5/7/34572113/9722550_orig.png' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/9722550a4a0.png?171" alt="血容量方程 dsc" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;"><strong><em>血流 (F)</em></strong> 是接下来要计算的参数，但计算过程有些“卷积”。（请原谅这个老旧的物理双关语）。理解该方法需要对线性系统理论进行简要介绍。</div>
+
+<span class='imgPusher' style='float:right;height:0px'></span><span style='display: table;width:auto;position:relative;float:right;max-width:100%;;clear:right;margin-top:0px;*margin-top:0px'><a href='uploads/3/4/5/7/34572113/2297065_orig.png' rel='lightbox' onclick='if (!lightboxLoaded) return false'><img src="uploads/3/4/5/7/34572113/2297065352f.png?399" style="margin-top: 0px; margin-bottom: 0px; margin-left: 0px; margin-right: 0px; none; max-width:100%" alt="狄拉克函数与残留函数" class="galleryImageBorder wsite-image" /></a><span style="display: table-caption; caption-side: bottom; font-size: 90%; margin-top: -0px; margin-bottom: 0px; text-align: center;" class="wsite-caption"></span></span>
+<div class="paragraph" style="text-align:skip_to_justify;display:block;">一个线性系统（例如，组织毛细血管床）可以通过考虑其对一种假设的、强度无限高、持续时间无限短的脉冲（称为&nbsp;<strong><em><font color="#24678d">狄拉克 δ 函数&nbsp;&delta;(t)</font></em></strong>）的响应来分析。对于我们的系统，<em>&delta;(t)&nbsp;</em>可以看作是在时间&nbsp;<em>t=0</em> 时，通过动脉端口将一团对比剂粒子<em>瞬时</em>注入组织。&nbsp;注射后，其中一些粒子会找到相对直接的路径到达静脉端口；另一些则会选择更迂回的路线，需要更长的时间穿过毛细血管床。这导致注入的对比剂团在组织内发生弥散，并产生一系列粒子通过时间。&nbsp;<br /></div>
+<hr style="width:100%;clear:both;visibility:hidden;"></hr>
+
+<div class="paragraph" style="text-align:skip_to_justify;">在这种脉冲注射后，时间&nbsp;<em>t</em>&nbsp;时仍留在组织中的注入对比剂粒子的比例称为&nbsp;<strong><em><font color="#24678d">残留</font></em></strong>，由无量纲函数&nbsp;<em><strong><font color="#24678d">R(t)</font></strong></em> 描述。注射后立即（在任何粒子离开系统之前）<em>R(t)</em>&nbsp;处于最大值，其值为&nbsp;<em>R(0)</em>&nbsp;=&nbsp;<em>1。</em>&nbsp;随着粒子流出系统，<em>R(t)</em> 减小，最终当组织中不再有对比剂时达到最终值&nbsp;<em>R(</em>&infin;<em>)</em>&nbsp;=&nbsp;<em>0</em>。<span style="display:none;"></span></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;">残留函数的宽度反映了粒子通过组织的通过时间分布。通过时间快的组织具有尖锐、狭窄的残留曲线，而通过时间延长的组织则具有宽的残留曲线。残留函数下的面积反映了粒子在组织血管床中通过的平均时间，这是一个重要的生理参数，称为 <strong><em><font color="#24678d">平均通过时间 (MTT)</font></em></strong>。用数学形式表示为<br /><span></span></div>
+
+<div><div class="wsite-image wsite-image-border-none" style="padding-top:0;padding-bottom:0;margin-left:0;margin-right:0;text-align:center">
+<a href='uploads/3/4/5/7/34572113/4357256_orig.png' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/4357256e00d.png?139" alt="图片" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:56.545961002786%; padding:0 15px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-none" style="padding-top:0;padding-bottom:0;margin-left:0;margin-right:0;text-align:center">
+<a href='uploads/3/4/5/7/34572113/8142532_orig.png' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/8142532352f.png?399" alt="图片" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%">上图：一个真实生活中的动脉输入函数 (AIF) 及其对应的组织浓度曲线 <i>c(t)</i>
+<br>下图：通过一组狄拉克 δ 函数对组织响应进行建模</div>
+</div></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:43.454038997214%; padding:0 15px;">
+					
+						
+
+<div class="paragraph"><!--[if gte mso 9]>
+ 
+  0
+  0
+  1
+  70
+  404
+  ELSTER LLC
+  3
+  1
+  473
+  14.0
+ 
+ 
+  
+ 
+<![endif]-->
+
+<!--[if gte mso 9]>
+ 
+  Normal
+  0
+  
+  
+  
+  
+  false
+  false
+  false
+  
+  EN-US
+  JA
+  X-NONE
+  
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+  
+  
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+  
+<![endif]--><!--[if gte mso 9]>
+ 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ 
+<![endif]-->
+
+<!--[if gte mso 10]>
+
+ /* Style Definitions */
+table.MsoNormalTable
+	{mso-style-name:"Table Normal";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-parent:"";
+	mso-padding-alt:0in 5.4pt 0in 5.4pt;
+	mso-para-margin:0in;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:Cambria;
+	mso-ascii-font-family:Cambria;
+	mso-ascii-theme-font:minor-latin;
+	mso-hansi-font-family:Cambria;
+	mso-hansi-theme-font:minor-latin;}
+
+<![endif]-->在现实生活中，不可能将动脉对比剂团瞬时输送到组织。因此，动脉输入函数 <em>a(t)</em> 在时间上总是弥散的，如图所示。然而，这个宽的动脉输入可以表示为一系列在不同时间延迟 (<em>&tau;</em>) 下的狄拉克 δ 函数，每个函数产生独立的响应。缩放并求和这些单独的脉冲响应以生成组织对比剂浓度曲线&nbsp;<em>c(t)</em> 的数学运算称为 <strong><em><font color="#24678d">卷积</font></em></strong>。用数学符号表示为</div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div><div class="wsite-image wsite-image-border-none" style="padding-top:0;padding-bottom:0;margin-left:0;margin-right:0;text-align:center">
+<a href='uploads/3/4/5/7/34572113/3401680_orig.png' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/3401680b396.png?344" alt="卷积方程" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;">其中 <em>F</em> 是血流，“圆圈/x”符号是卷积运算符。卷积过程将各个动脉输入在注射后不同时间延迟 (<em>&tau;</em>) 处，按残留函数加权（“相乘”）后求和（“积分”）。考虑到钆对比剂仅分布在血管的细胞外空间，该方程的某些版本在 <em>F</em> 前包含一个常数因子 (<em>&rho;</em>/<em>h</em>)，其中&nbsp;<em>&rho;</em> 是组织密度（单位 g/mL），<em> h</em>&nbsp;是用于解释毛细血管与较大血管之间血细胞比容差异的分数。<span></span></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;">在 DSC 灌注实验中，我们直接测量 <em>a(t)</em> 和 <em>c(t)</em>，但既不知道血流 (<em>F</em>)，也不知道残留函数 <em>R(t)</em>。由于该方程中未知数多于已知数，不存在唯一解。尽管如此，各种数学技术可以提取这些参数的合理估计值，尤其是血流 (<em>F</em>)。</div>
+
+<div class="paragraph" style="text-align:skip_to_justify;">执行数学&nbsp;<strong><em><font color="#24678d">去卷积</font></em></strong> 存在三种通用策略。&nbsp;最常用的方法是将方程转换为矩阵形式，并使用称为&nbsp;<em><strong><font color="#24678d">奇异值分解 (SVD)</font></strong></em> 的过程进行迭代计算。&nbsp;第二种方法使用较少，称为“参数化”方法，因为它假设残留函数具有预定的形状，例如衰减指数。其他去卷积技术涉及傅里叶变换或随机估计。&nbsp;</div>
+
+<div class="paragraph" style="text-align:skip_to_justify;">所有去卷积方法的最终结果是血流（F）的定量估计。由于血容量（V）已经计算完毕，最后一步是利用<strong><em><font color="#24678d">中心容积定理</font></em></strong>&nbsp;(<em><strong><font color="#24678d">MTT = V/F)</font></strong></em>，以逐体素的方式计算平均通过时间（MTT）。&nbsp;</div>
+
+<div class="paragraph" style="text-align:skip_to_justify;">应当注意，根据AIF的选择以及所使用的商业软件产品的不同，可能会得到显著不同的结果。即使是声称使用相同方法的软件，在应用于相同的原始数据时也可能给出不同的结果。建议不要过分依赖从这些定量方法获得的绝对值。&nbsp;</div>
+
+<div><div id="638653557388881859" align="left" style="width: 100%; overflow-y: hidden;" class="wcustomhtml"><html> <head><script src="gdpr/gdprscript6f19.js?buildTime=1774025472"></script> <script type="text/javascript" 
+></script> 
+<script type="text/javascript">
+		$(function() {$('#Q').click(function() {$('.Q').toggle(500); return false;});});</script></head><body>
+<a href="#" id=Q><h3><font color="#378a57">高级讨论（显示/隐藏）»</font></h3></a><div class=Q style="display:none;">
+
+<!--content goes below here-->
+
+<p><b>用于去卷积的傅里叶方法</b>首先对血流卷积方程的每一侧进行傅里叶变换（<i>FT</i>）。这依赖于著名的卷积定理，即两个函数乘积的傅里叶变换是每个函数傅里叶变换之间的卷积。用数学术语表示为</p>
+
+<p align=center><i>F • R(t) = FT<sup>−1</sup>{FT[c(t)] / FT[a(t)]}</i></p>
+
+<p>注意到残差函数的初始值为<i>1</i>（即<i>R(0) = 1</i>），解的第一个时间点的幅度等于血流（<i>F</i>）。尽管概念上直接，但由于不稳定性和噪声问题，此方法并不常用。</p>
+
+<p>最流行的技术<b><i>奇异值分解（SVD）</b></i>有许多变体。SVD是矩阵代数中常用于求解逆问题的一种分解方法。由于舍入误差和噪声，SVD可能是病态的（不稳定的），因此必须应用一些约束（正则化）。最直接的正则化方法（截断）将所有低于某个水平的奇异矩阵值视为零。第二种方法（吉洪诺夫正则化）通过操作对角元素来稳定算法，从而对奇异值进行更平滑的截断。</p>
+
+<p>标准SVD方法的另一个问题是其结果对对比剂在不同组织区域之间到达时间的延迟敏感。诸如重组SVD和块循环SVD等变体在很大程度上克服了这一局限性，并逐渐被厂商集成到他们的软件中。</p>
+
+<p>几种较新的统计方法更侧重于改进残差函数的估计并减少其振荡。目前还难以预测哪种方法（如果有的话）将会胜出。</br>.</p>
+
+
+<p><b><large>T<sub>max</sub>以及我为何不喜欢它</b></LARGE></p>
+
+<p>卒中文献中的许多临床试验使用了一种称为<b><font color="#24678d">T<sub>max</sub></font></b>的计算灌注指标。T<sub>max</sub>被定义为通过去卷积计算出的残差函数<i>R(t)</i>达到其最大值的时间。因此，理论上，T<sub>max</sub>是动脉输入函数（AIF）峰值与残差函数峰值之间的时间。</p>
+
+<p>T<sub>max</sub>与MTT不同。MTT反映对比剂一旦到达感兴趣组织后通过毛细血管床的通过时间。相反，T<sub>max</sub>反映对比剂在从AIF测量位置到毛细血管系统的路径上的时间延迟和弥散。</p>
+
+<p>因此，T<sub>max</sub>高度依赖于所选AIF的位置。离感兴趣组织越远，计算出的T<sub>max</sub>值越大。此外，为减少去卷积中的噪声效应而对SVD矩阵进行的正则化（滤波）会通过引入振荡和峰值偏移来改变<i>R(t)</i>，从而也影响T<sub>max</sub>。</p>
+
+<p>尽管存在这些方法学问题，许多卒中神经科医生似乎非常喜欢T<sub>max</sub>，并已在多项临床试验中推荐使用它。我认为它如此受青睐的一个原因是，T<sub>max</sub>图在正常脑区显示相对“平坦”的图像对比度，而在灌注不良或边缘区域则显示出巨大差异。</p>
+
+<p>总之，T<sub>max</sub>确实提供了一些与MTT和CBF互补的信息。然而，它是一个“混乱”的参数，主要反映对比剂在所选AIF测量位置与感兴趣组织之间的延迟和弥散。因此，它非常依赖于AIF，并且在卒中研究方案中比较不同患者时应谨慎使用。</p>
+
+
+
+<!--content goes above here-->
+</div></body>
+<!-- Mirrored from mriquestions.com/quantitative-dsc.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 21 Mar 2026 06:38:40 GMT -->
+</html></div>
+
+
+
+</div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+	
+<div class="paragraph" style="text-align:skip_to_justify;"><strong>参考文献</strong><br /><span><font color="#878787">&nbsp; &nbsp; &nbsp;</font></span><font size="4" color="#fb0101">&#10026;&nbsp;</font><span>Bammer R, Amukotuwa SA. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/1-s2.0-s1064968923000892.pdf">Dynamic susceptibility contrast perfusion, Part 1: The fundamentals</a>. Magn Reson Imaging Clin N Am 2024; 32:1&ndash;23. <a href="https://doi.org/10.1016/j.mric.2023.09.010" target="_blank">[DOI LINK]</a><br />&nbsp; &nbsp; &nbsp;</span><font size="4" color="#fb0101">&#10026;&nbsp;</font><span>Bammer R, Amukotuwa SA. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/1-s2.0-s1064968923000909.pdf">Dynamic susceptibility contrast perfusion, Part 2: Deployment with and without contrast leakage present</a>. Magn Reson Imaging Clin N Am 2024; 32:25-45. <a href="https://doi.org/10.1016/j.mric.2023.09.011" target="_blank">[DOI LINK]<br /><font color="#2a2a2a">&nbsp; &nbsp; &nbsp;</font></a></span><a href="https://mriquestions.com/uploads/3/4/5/7/34572113/boxerman_jmri_1997.pdf"><font color="#2a2a2a">Boxerman JL, Rosen BR, Weisskoff RM.</font> Signal-to-noise analysis of cerebral blood volume maps from dynamic NMR imaging studies</a>. J Magn Reson Imaging 1997; 7:528-37.<br />&nbsp; &nbsp; &nbsp;Calamante F, Christensen S, Desmond PM, et al. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/stroke_tmax-2010-calamante-1169-74.pdf">The physiological significance of the time-to-maximum (Tmax) parameter in perfusion MRI</a>. Stroke 2010; 41:1169-1174. (See Advanced Discussion tab for why I don't favor this parameter in practice.)<br />&nbsp; &nbsp; &nbsp;Fieselmann A, Kowarschik M, Ganguly A, et al. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/review_perfusion_467563.pdf">Deconvolution-based CT and MR brain perfusion measurement: theoretical model revisited and practical implementation details</a>. Int J Biomed Imag 2011; doi:10/1155/2011/467563<br />&nbsp; &nbsp; &nbsp;Orsingher L, Piccinini S, Crisi G. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/differences_in_dynamic_susceptibility_contrast_mr.4.pdf">Differences in dynamic susceptibility contrast MR perfusion maps generated by different methods implemented in commercial software</a>. J Comput Assist Tomogr 2014; 38:647-654. (different software gives different results, even when methods are said to be the same!)<br />&nbsp; &nbsp; &nbsp;&Oslash;stergaard L, Weisskoff RM, Chesler DA, et al. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/ostergaard_svd.pdf">High resolution measurement of cerebral blood flow using intravascular tracer bolus passages. Part I. Mathematical approach and statistical analysis</a>. Magn Reson Med 1996; 36:715-725. (good description of deconvolution techniques including Fourier and SVD).<br />&nbsp; &nbsp; &nbsp;Zaharchuk G.&nbsp;<a href="https://mriquestions.com/uploads/3/4/5/7/34572113/ajnr_zharchuk_perfusion_review.pdf">Theoretical basis of hemodynamic MR imaging techniques to measure cerebral blood volume, cerebral blood flow, and permeability</a>.&nbsp;AJNR Am J Neuroradiol 2007; 28:1850-8.<br></div><div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;"><strong>相关问题</strong><br /><strong><em><a href="arterial-input-aif.html" title="">&nbsp; &nbsp; &nbsp;<span style="text-align: center;">什么是动脉输入函数 (AIF)，为何需要测量它？</span><span style="text-align: center;">&nbsp;</span></a></em></strong><br /><strong>&nbsp; &nbsp; &nbsp;</strong><strong><em><a href="quantitative-dsc.html"><span style="text-align: center;">在灌注成像中，BF、BV 和 MTT 等参数是如何定义和使用的？&nbsp;</span><span style="text-align: center;">&nbsp;</span></a></em></strong></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div style="text-align:skip_to_justify;"><div style="height: 0px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-normal" href="arterial-input-aif.html" >
+<span class="wsite-button-inner">← &nbsp;上一问题</span>
+</a>
+<div style="height: 0px; overflow: hidden;"></div></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div style="text-align:right;"><div style="height: 0px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-normal" href="what-is-dce.html" >
+<span class="wsite-button-inner">下一问题 &nbsp;→</span>
+</a>
+<div style="height: 0px; overflow: hidden;"></div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div style="text-align:center;"><div style="height: 0px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-highlight" href="complete-list-of-questions.html" >
+<span class="wsite-button-inner">↑&nbsp;问题完整列表 ↑</span>
+</a>
+<div style="height: 10px; overflow: hidden;"></div></div>
+</div></div>

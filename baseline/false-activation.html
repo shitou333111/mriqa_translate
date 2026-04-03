@@ -1,0 +1,151 @@
+<div id="content"><div id="wsite-content" class="wsite-elements wsite-not-footer">
+	<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<h2 class="wsite-content-title" style="text-align:center;">假阳性激活</h2>
+
+<div class="paragraph" style="text-align:center;"><strong><em><font color="#0376be"><font size="4">我们经常在脑组织本身之外看到 fMRI 激活区域。这些现象为何会发生？如何纠正？&nbsp;</font></font></em></strong><strong><em>&nbsp;</em></strong></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-thin" style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
+<a>
+<img src="uploads/3/4/5/7/34572113/screen-shot-2016-10-13-at-8-14-43-am_orig.png" alt="图片" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div class="paragraph">请看下面两幅图像，它们来自我们机构最近进行的两项 fMRI 研究，使用了标准的预处理和 GLM 分析。看出什么问题了吗？那些不在大脑内部的红色“激活”斑块是怎么回事？如果图像没有使用椭圆形掩膜进行裁剪，还会在头部周围的“外太空”区域发现更多无关的斑块。我们原本希望所采用的严格统计方法能够最大限度地减少此类假阳性激活，但事实并非如此。&nbsp;</div>
+
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:34.305555555556%; padding:0 15px;">
+					
+						
+
+<div class="paragraph" style="text-align:skip_to_justify;">左图中大部分斑块是由于眼球运动、部分容积效应以及生理性搏动未能得到充分补偿/校正所致。<span style="color:rgb(0, 0, 0)">减少生理噪声的策略已在</span><a href="data-pre-processing.html">之前的问答中</a><span style="color:rgb(0, 0, 0)">描述过，包括数据清理、运动校正、时间滤波，以及将测量的心率和呼吸模式作为协变量纳入统计模型。&nbsp;</span></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:32.361111111111%; padding:0 15px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-none" style="padding-top:15px;padding-bottom:10px;margin-left:0px;margin-right:0px;text-align:center">
+<a href='uploads/3/4/5/7/34572113/430511_1_orig.jpg' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/430511_1.jpg" alt="图片" style="width:205;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%">与运动相关的假阳性激活。注意由于任务期间眼球运动相关而在眼眶区域出现的显著信号。绿色箭头显示由血管和脑脊液搏动引起的生理伪影。</div>
+</div></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:33.333333333333%; padding:0 15px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-none" style="padding-top:15px;padding-bottom:10px;margin-left:0px;margin-right:10px;text-align:center">
+<a href='uploads/3/4/5/7/34572113/8489827_2_orig.jpg' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/8489827_2.jpg" alt="图片" style="width:189;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%">鼻咽部空气、枕骨和颈部肌肉（箭头所示）中散在的假阳性激活灶，很可能是随机噪声和统计效力不足的表现。</div>
+</div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div class="paragraph"><span style="color:rgb(0, 0, 0)">右图中的斑块没有明显的生理或技术原因可以解释，它们更可能是随机噪声和统计问题的表现，可能与阈值设定、聚类以及</span><em style="color:rgb(0, 0, 0)">p</em><span style="color:rgb(0, 0, 0)">值的不当估计有关。这些问题的影响构成了</span><a href="fmri-critique.html">后续问答</a>的主要议题。</div>
+
+<div><div id="132462139152087033" align="left" style="width: 100%; overflow-y: hidden;" class="wcustomhtml"><html> <head><script src="gdpr/gdprscript6f19.js?buildTime=1774025472"></script> <script type="text/javascript" 
+></script> 
+<script type="text/javascript">
+		$(function() {$('#Q').click(function() {$('.Q').toggle(500); return false;});});</script></head><body>
+<a href="#" id=Q><h3><font color="#378a57">进阶讨论（显示/隐藏）»</font></h3></a><div class=Q style="display:none;">
+
+<!--content goes below here-->
+
+暂无补充材料。请稍后再来查看！
+
+
+<!--content goes above here-->
+</div></body>
+<!-- Mirrored from mriquestions.com/false-activation.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 21 Mar 2026 06:43:49 GMT -->
+</html></div>
+
+
+
+</div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div><div class="paragraph" style="text-align:skip_to_justify;"><strong>参考文献<br />&nbsp; &nbsp; </strong>&nbsp;Birn RM, Diamond JB, Smith MA, Bandettini PA. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/birn_separating_respirator.pdf">Separating respiratory-variation-related fluctuations from neuronal-acitivity-related fluctuations in fMRI</a>. NeuroImage 2006; 31:1536-48.&nbsp; &nbsp;<br />&nbsp; &nbsp; &nbsp;Bright MG, Murphy K. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/bright_murphy_noise_removal_bold1-s2.0-s1053811912009536-main.pdf">Removing motion and physiological artifacts from intrinsic BOLD fluctuations using short echo data</a>. NeuroImage 2013; 64:526-537. (Paper that focuses on resting-state and functional connectivity studies that are perhaps more affected by motion and physiological noise than task-based fMRI)<br /><span style="color:rgb(135, 135, 135)">&nbsp; &nbsp; &nbsp;</span>Chang C, Glover GH. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/chang_glover_nihms112293.pdf">Relationship between respiration, end-tidal CO2, ad BOLD signals in resting-state fMRI</a>. NeuroImage 2009; 47:1381&ndash;1393.<br />&nbsp; &nbsp; &nbsp;Glover G, Li T, Ress,D.&nbsp; <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/retroicor_glover_et_al-2000-magnetic_resonance_in_medicine.pdf">Image based method for retrospective correction of&nbsp;physiological motion effects in fMRI: RETROICOR</a>. Magn Reson Med 2000; 44:162&ndash;167.<br />&nbsp; &nbsp; &nbsp;Nichols TE. &nbsp;<a href="https://mriquestions.com/uploads/3/4/5/7/34572113/nichols_rft_1-s2.0-s1053811912003953-main.pdf">Multiple testing corrections, nonparametric methods, and random field theory</a>. NeuroImage 2012; 62:811-815.<br />&nbsp; &nbsp; &nbsp;Nichols T, Hayasaka S. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/nicholshayasaka.pdf">Controlling the familywise error rate in functional neuroimaging: a comparative review</a>. Stat Methods Med Res 2003; 12:419-446.</div><div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;"><strong>相关问题</strong><br /><strong>&nbsp; &nbsp; &nbsp;</strong><em><strong><a href="activation-blobs.html">fMRI 图像上的那些激活“斑点”是如何产生的，它们究竟代表什么？</a></strong></em><br /><em><strong><a href="data-pre-processing.html">&nbsp; &nbsp; &nbsp;fMRI 数据预处理的步骤有哪些？ &nbsp;&#8203;<br /></a></strong></em><em><strong>&nbsp; &nbsp; &nbsp;<a href="fmri-critique.html">Elster 博士，我了解到你对 fMRI 的某些方面持保留态度。能否请你解释一下？ &nbsp;</a></strong></em><em><strong></strong></em><br /></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div style="text-align:skip_to_justify;"><div style="height: 0px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-normal" href="activation-blobs.html" >
+<span class="wsite-button-inner">← &nbsp;上一问题</span>
+</a>
+<div style="height: 0px; overflow: hidden;"></div></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div style="text-align:right;"><div style="height: 0px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-normal" href="resting-state-fmri.html" >
+<span class="wsite-button-inner">下一问题 &nbsp;→</span>
+</a>
+<div style="height: 0px; overflow: hidden;"></div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div style="text-align:center;"><div style="height: 0px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-highlight" href="complete-list-of-questions.html" >
+<span class="wsite-button-inner">↑&nbsp;问题完整列表 ↑</span>
+</a>
+<div style="height: 10px; overflow: hidden;"></div></div>
+</div></div>

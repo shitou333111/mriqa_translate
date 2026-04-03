@@ -1,0 +1,205 @@
+<div id="content"><div id="wsite-content" class="wsite-elements wsite-not-footer">
+	<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<h2 class="wsite-content-title" style="text-align:center;">PROPELLER/BLADE<br /></h2>
+
+<div class="paragraph" style="text-align:center;"><strong style="color: rgb(135, 135, 135); font-size: large; line-height: 1.5;"><em><font color="#0376be">How does PROPELLER reduce motion artifacts?&nbsp;</font></em></strong><br /></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-thin" style="padding-top:5px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
+<a href='uploads/3/4/5/7/34572113/267662_orig.png' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/267662_orig.png" alt="PROPELLER/BLADE" style="width:100%;max-width:665px" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div class="paragraph" style="text-align:skip_to_justify;">The <strong><em><font color="#24678d">PROPELLER</font></em></strong> (<strong>P</strong>eriodically&nbsp;<strong>R</strong>otated <strong>O</strong>verlapping Parall<strong>EL L</strong>ines with <strong>E</strong>nhanced&nbsp;<strong>R</strong>econstruction) technique was developed by Pipe in the late 1990s as a motion reduction method. The basic idea was to sample <em>k</em>-space in a rotating fashion using a set of radially directed strips or "blades".</div>
+
+<div class="paragraph" style="text-align:skip_to_justify;">Each blade is composed of multiple parallel phase-encoded lines that can be collected using fast spin echo or gradient echo methods. In common practice, 8-32 blade lines are acquired in a single shot. The blades are then rotated by a small angle (10&deg;&minus;20&deg;)&nbsp;at which time a second set of data are acquired. The process continues until imaging data from the entire <em>k</em>-space circle has been collected.</div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-none" style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
+<a href='uploads/3/4/5/7/34572113/6154900_orig.gif' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/6154900_orig.gif" alt="PROPELLER/BLADE" style="width:100%;max-width:650px" />
+</a>
+<div style="display:block;font-size:90%">PROPELLER sequence sampling strips of data in a rotating fashion around the center of <i>k-</i>space</div>
+</div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;">The PROPELLER trajectory through k-space offers some unique advantages. The center of <em>k</em>-space (which contains the highest signal amplitude and contributes most to image contrast) is oversampled, meaning that the signal-to-noise and contrast-to-noise will be high. Oversampling in this region also provides redundancy of information, meaning that the data for new each blade can be compared to the data from previous blades for consistency. If the patient moves between blades, the data for the second blade can be corrected (or even completely discarded) based on how anomalous its central information appears.&nbsp;</div>
+
+<div class="paragraph" style="text-align:skip_to_justify;">The PROPELLER reconstruction algorithm involves several steps: 1) phase correction for each blade to assure its point of rotation is exactly at the center of k-space; 2) corrections for bulk in-plane rotation and in-plane translation of the object; and 3) correlation-weighting to minimize the data from blades containing motion or displacement errors. Current 2D versions of PROPELLER correct only for in-plane motion, but 3D versions may overcome this limitation in the future. This sophisticated reconstruction process does take some additional time after the scan is completed, and with our current computer hardware an additional delay of 15+ seconds may be required to process a large data set before the next sequence can begin.</div>
+
+<div class="paragraph" style="text-align:skip_to_justify;">As with most popular MR sequences, all major vendors have their own minor variations with clever trade names: GE (<strong><em><font color="#24678d">PROPELLER</font></em></strong>), Siemens (<strong><em><font color="#24678d">BLADE</font></em></strong>), Philips (<strong><em><font color="#24678d">MulitVane</font></em></strong>), Fujifilm (<strong><em><font color="#24678d">RADAR</font></em></strong>), and Canon (<strong><em><font color="#24678d">JET</font></em></strong>).<br></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;">The degree of motion correction can be substantial, and we routinely use PROPELLER sequences for DWI, FLAIR and T2-weighted images on any patient we suspect will not hold still during the course of a scan. Due to its oversampling of <em>k</em>-space, susceptibility artifacts are also slightly reduced. An example is shown below:</div>
+
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:11.527777777778%; padding:0 15px;">
+					
+						
+
+<div class="wsite-spacer" style="height:50px;"></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:38.472222222222%; padding:0 15px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-thin" style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
+<a href='uploads/3/4/5/7/34572113/4885686_orig.jpg' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/48856868f12.jpg?268" alt="PROPELLER/BLADE" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%">Without PROPELLER: Patient motion artifacts on routine FSE image</div>
+</div></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:38.54748603352%; padding:0 15px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-thin" style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
+<a href='uploads/3/4/5/7/34572113/5419247_orig.jpg' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/54192473905.jpg?270" alt="PROPELLER/BLADE" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%">With PROPELLER: Motion artifacts substantially reduced </div>
+</div></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:11.45251396648%; padding:0 15px;">
+					
+						
+
+<div class="wsite-spacer" style="height:50px;"></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div><div id="353982625747867348" align="left" style="width: 100%; overflow-y: hidden;" class="wcustomhtml"><html> <head><script src="gdpr/gdprscript6f19.js?buildTime=1774025472"></script> <script type="text/javascript" 
+></script> 
+<script type="text/javascript">
+		$(function() {$('#Q').click(function() {$('.Q').toggle(500); return false;});});</script></head><body>
+<a href="#" id=Q><h3><font color="#378a57">Advanced Discussion (show/hide)»</font></h3></a><div class=Q style="display:none;">
+
+<!--content goes below here-->
+
+<h3><font color="#0376be">Further comments on PROPELLER imaging</font></h3>
+
+<p>Although the center of <i>k</i>-space is highly oversampled, the "corners" of <i>k</i>-space are not sampled at all. However, these locations only contribute high spatial frequency information at oblique angles within the final image, and so are often considered the "least important" regions of <i>k</i>-space.</p>
+
+<p>If there are <b><i>L</b></i> lines per blade and <b><i>N</b></i> blades, the equivalent imaging matrix diameter <b><i>M</b></i> is given by the equation <i><b>LN = πM/2</i></b>.</p>
+
+<p>Complete coverage of the <i>k</i>-space circle (without gaps between the blades) therefore requires a factor of π/2 ≈ 1.57 times as long as coverage using a Cartesian (rectangular) method. The degree of blade overlap (angle between the blades) is usually an operator-selectable parameter given as a percentage with a vendor-specific name such as "blade coverage factor" (Siemens), "MultiVane percentage" (Philips), or "<i>k</i>-space filling factor" (Toshiba). A coverage factor of 157% would be gapless, while a coverage factor of 100% would not impose any time penalty compared to a Cartesian method but would contain gaps between the ends of the blades. Scans using coverage factors lower than 100% have more noticeable streaking artifacts. Scans with higher coverage factors have fewer artifacts and higher signal-to-noise, at the cost of increased imaging time. Usually some value between 100% and 157% is chosen in clinical practice.</p> 
+
+
+<!--content goes above here-->
+</div></body>
+<!-- Mirrored from mriquestions.com/propellerblade.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 21 Mar 2026 06:34:58 GMT -->
+</html></div>
+
+
+
+</div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;"><strong>References</strong><br />&nbsp; &nbsp; &nbsp;Hirokawa Y, Isoda H, Maetani YS, et al.<a href="https://mriquestions.com/uploads/3/4/5/7/34572113/hirokawa_blade_ajr_2010.pdf"> MRI artifact reduction and quality improvement in the upper abdomen with PROPELLER and Prospective Acquisition Correction (PACE) technique</a>. AJR Am J Roengenol 2008;191:1154-1158.<span><font color="#878787">&nbsp;<br /></font></span>&nbsp; &nbsp; &nbsp;Kojima S, Morita S, Ueno E, et al. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/magnetic_resonance_imaging_-_2011_-_kojima_-_aliasing_artifacts_with_the_blade_technique__causes_and_effective_suppression.pdf">Aliasing artifacts with the BLADE technique: causes and effective suppression</a>. J Magn Reson Imaging 2011; 33:432-440. (Aliasing artifacts may become a problem for BLADE/PROPELLER in sagittal or coronal images)&nbsp;<a href="https://doi.org/10.1002/jmri.22465" target="_blank">[DOI LINK]</a><br /><span><font color="#878787">&nbsp;&nbsp;</font></span>&nbsp; <font size="4" color="#fb0c0c">&nbsp;&#10026;&nbsp;</font>Pipe JG. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/pipej_mrm_1999_42_953_959_propeller.pdf">Motion correction with PROPELLER MRI: application to head motion and free-breathing cardiac imaging</a>. Magn Reson Med 1999; 42:963-969.<br />&nbsp; &nbsp; &nbsp;van Loon L. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/tips_for_robust_motion_correction_in_liver_imaging_using_multivane.pdf">Tips for robust motion correction in liver imaging using MultiVane</a>. Philips NetForum Community, 30 Jan 2014.</div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;"><strong>Related Questions</strong><br /><strong>&nbsp; &nbsp; &nbsp;</strong><span style="text-align: center;"><strong><em><a href="spiralradial-artifacts.html" title="">What about wrap-around artifacts on radial or spiral imaging? it seems like they should always be present because phase-encode goes in every direction.&nbsp;</a></em></strong></span></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div style="text-align:skip_to_justify;"><div style="height: 10px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-normal" href="navigator-echoes.html" >
+<span class="wsite-button-inner">← &nbsp;Previous Question</span>
+</a>
+<div style="height: 10px; overflow: hidden;"></div></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div style="text-align:right;"><div style="height: 10px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-normal" href="samer.html" >
+<span class="wsite-button-inner">Next Question &nbsp;→</span>
+</a>
+<div style="height: 10px; overflow: hidden;"></div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div style="text-align:center;"><div style="height: 10px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-highlight" href="complete-list-of-questions.html" >
+<span class="wsite-button-inner">↑&nbsp;Complete List of Questions ↑</span>
+</a>
+<div style="height: 10px; overflow: hidden;"></div></div>
+</div></div>

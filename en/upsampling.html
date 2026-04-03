@@ -1,0 +1,144 @@
+<div id="content"><div id="wsite-content" class="wsite-elements wsite-not-footer">
+	<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<h2 class="wsite-content-title" style="text-align:center;">Upsampling</h2>
+
+<div class="paragraph" style="text-align:center;"><font size="4"><strong style="color:rgb(135, 135, 135)"><em><font color="#0376be">What is upsampling?&nbsp; Why might one want to perform this action on a previously convoluted data set?&nbsp;</font></em></strong><strong style="color:rgb(55, 138, 87)"><em>&nbsp;</em></strong></font></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-thin" style="padding-top:10px;padding-bottom:10px;margin-left:0px;margin-right:0px;text-align:center">
+<a href='uploads/3/4/5/7/34572113/screen-shot-2023-04-11-at-8-05-12-pm_orig.png' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/screen-shot-2023-04-11-at-8-05-12-pm_orig.png" alt="upsampling definition" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div class="paragraph">The initial convolutional and pooling layers of a CNN<span style="color:rgb(0, 0, 0)">&nbsp;progressively reduce the spatial dimensions&nbsp;(width and height) of the input and intermediate feature maps</span>, a process known as&nbsp;<strong style="color:rgb(0, 0, 0)"><font color="#24678d">encoding</font></strong><span style="color:rgb(0, 0, 0)">&nbsp;or</span> <em><strong><font color="#24678d">downsampling</font></strong></em>. <span style="color:rgb(0, 0, 0)">This produces a compressed representation of the input image that can be efficiently processed,</span>&nbsp;allowing the network to extract key structural features and relationships within the input.&nbsp;</div>
+
+<div class="paragraph"><span style="color:rgb(0, 0, 0)">For many image processing applications (such as segmentation, co-registration, artifact removal, and image enhancement) it may be desirable to reverse the process, gradually restoring the spatial dimensions of the feature maps while reducing the number of channels or features. </span>This process is known as <em><strong><font color="#24678d">upsampling</font></strong></em> (also called <em><strong><font color="#24678d">decoding</font></strong></em>,&nbsp;<em><strong><font color="#24678d">unpooling,</font></strong></em> or <em><strong><font color="#24678d">upscaling</font></strong></em>). Sequential downsampling and upsampling is the basis of&nbsp;<em style="color:rgb(0, 0, 0)"><strong><font color="#24678d">encoder-decoder networks</font></strong></em><span style="color:rgb(0, 0, 0)">, one of the more commonly used image-processing AI architectures. </span><span style="color:rgb(0, 0, 0)">Because of their shape, such configurations are also called&nbsp;</span><em style="color:rgb(0, 0, 0)"><strong><font color="#24678d">U-networks</font></strong></em><span style="color:rgb(0, 0, 0)">.</span></div>
+
+<div><div class="wsite-image wsite-image-border-none" style="padding-top:10px;padding-bottom:10px;margin-left:0px;margin-right:0px;text-align:center">
+<a href='uploads/3/4/5/7/34572113/down-and-upsampling-cnn_orig.png' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/down-and-upsampling-cnn_orig.png" alt="encoder-decoder network; upsampling" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%">Encoder-decoder network, consisting of a convolution/pooling portion that reduces image dimensions (downsampling) followed by an upsampling portion which returns image dimensions to its original size (here with a tumor segmentation overlay).</div>
+</div></div>
+
+<div class="paragraph">Several methods exist for the upsampling portion of th</div>
+
+<div class="paragraph"><strong><font size="4" color="#8d5024">Interpolation Methods for Upsampling</font></strong></div>
+
+<div class="paragraph"><ol><li><u><strong>Nearest Neighbor</strong></u>: This method involves duplicating the existing pixels or samples to create new ones. It is the simplest and fastest method but may result in a blocky or pixelated appearance.</li><li><u><strong>Bed of NailsTechnique</strong></u>: Unlike Nearest Neighbor, the Bed-of-Nails only inputs one of the input elements in each region, setting the rest to zero.</li><li><u><strong>Max Unpooling</strong></u>: This is similar to the Bed-of-Nails but places elements in the larger matrix at locations from where they originally occurred. (This requires memory of their original locations).</li><li><u><strong>Bilinear Interpolation</strong></u>: This method computes the value of new pixels by taking a weighted average of the nearest four pixels. It results in a smoother image than nearest neighbor interpolation but may introduce artifacts such as blurring and aliasing.</li><li><u><strong>Bicubic Interpolation</strong></u>: This method uses a more complex interpolation algorithm that takes into account 16 neighboring pixels to compute the value of new pixels. It results in a higher-quality image than bilinear interpolation but requires more computational resources.</li><li><u><strong>Lanczos Interpolation</strong></u>: This method uses a weighted average of a larger number of neighboring pixels to compute the value of new pixels. It produces sharp and detailed images but requires a larger kernel size and more computational resources.&#8203;<u></u></li></ol></div>
+
+<div><div class="wsite-image wsite-image-border-none" style="padding-top:10px;padding-bottom:10px;margin-left:0px;margin-right:0px;text-align:center">
+<a href='uploads/3/4/5/7/34572113/uppooling-methods_orig.png' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/uppooling-methods_orig.png" alt="Picture" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%">Three types of unpooling/upscaling to increase size of feature maps from 2x2 to 4x4. <b>Nearest Neighbor Unpooling</b> replicates each element of the 2x2 input into 4 identical adjacent locations in the 4x4 matrix. The <b>Bed of Nails</b> method only replicates one of the input elements in corresponding 2x2 regions, setting the rest to zero. <b> Max Unpooling</b> is similar to the Bed of Nails, but places elements in the larger matrix at locations from where they originally occurred.</div>
+</div></div>
+
+<div class="paragraph"><strong><font size="4" color="#8d5024">Transposed Convolution</font></strong></div>
+
+<div class="paragraph"><em><strong><font color="#24678d">Transposed convolution</font></strong></em><font color="#2a2a2a">, also called </font><em><strong><font color="#24678d">(backward) strided convolution,&nbsp;</font></strong></em><font color="#2a2a2a">is one of the more common and sophisticated&nbsp;techniques for upsampling or enlarging feature maps. It involves applying a learned convolutional filter to the reduced size feature maps in a way that reverses the effects of the original convolution operation.&nbsp;</font><span style="color:rgb(0, 0, 0)">This is a learnable method that can be optimized during training and is effective for generating high-quality images of larger size.</span></div>
+
+<div class="paragraph"><font color="#2a2a2a">In "regular" convolution, a small kernel or filter is slid across the input signal or feature map, producing a set of output features or channels. The output feature map is typically smaller than the input, due to the kernel size and stride.<br />&#8203;</font><br /><font color="#2a2a2a">In transposed convolution, the process is reversed. Instead of applying a kernel to a local region of the input, a kernel is applied to each location of the output feature map, with a stride that determines the distance between successive kernel positions. Each kernel output is then added to the corresponding location in the output feature map. </font><span style="color:rgba(0, 0, 0, 0.87)">The transposed convolution&nbsp;</span><em style="color:rgba(0, 0, 0, 0.87)">broadcasts</em><span style="color:rgba(0, 0, 0, 0.87)">&nbsp;input elements via the kernel, thereby producing an output that is larger than the input</span><font color="#2a2a2a">. A simple example is shown below.</font></div>
+
+<div><div class="wsite-image wsite-image-border-none" style="padding-top:10px;padding-bottom:10px;margin-left:0px;margin-right:0px;text-align:center">
+<a href='uploads/3/4/5/7/34572113/transposed-convolution_orig.png' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/transposed-convolution_orig.png" alt="Transposed Convolution" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%"><b>Transposed Convolution</b> of 2x2 input with a 2x2 kernel to produce a 3x3 output. At each step, a single element (e.g., red) of the input matrix multiplies all 4 kernel elements, with the result placed in an intermediate 3x3 matrix at a location corresponding to position of the red input element. The process is repeated for the three other input elements. The four intermediate matrices are added together to create the final 3x3 output.</div>
+</div></div>
+
+<div><div id="750563519927158367" align="left" style="width: 100%; overflow-y: hidden;" class="wcustomhtml"><html> <head><script src="gdpr/gdprscript6f19.js?buildTime=1774025472"></script> <script type="text/javascript" 
+></script> 
+<script type="text/javascript">
+		$(function() {$('#Q').click(function() {$('.Q').toggle(500); return false;});});</script></head><body>
+<a href="#" id=Q><h3><font color="#378a57">Advanced Discussion (show/hide)»</font></h3></a><div class=Q style="display:none;">
+
+<!--content goes below here-->
+
+<p>The term "Deconvolution" is often incorrectly applied as a synonym for "Transposed Convolution" since it is not reversing the original convolution.</p>
+
+<!--content goes above here-->
+</div></body>
+<!-- Mirrored from mriquestions.com/upsampling.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 21 Mar 2026 06:50:48 GMT -->
+</html></div>
+
+
+
+</div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;"><strong>References</strong><br /><font color="#878787">&nbsp; &nbsp; &nbsp;</font><span style="color: rgba(0, 0, 0, 0.87); background-color: transparent;">Dumoulin V, Visin F. (2016). <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/conv_arithm_1603.07285.pdf">A guide to convolution arithmetic for deep learning</a>.&nbsp;</span><em style="color: rgba(0, 0, 0, 0.87); background-color: transparent;">arXiv preprint arXiv:1603.07285</em><span style="color: rgba(0, 0, 0, 0.87); background-color: transparent;">.</span><br /><span style="color:rgb(0, 0, 0)">&nbsp; &nbsp; &nbsp;Maier A, Syben C, Lasser T, Riess C.&nbsp;</span><a href="https://mriquestions.com/uploads/3/4/5/7/34572113/intro_to_deep_learning_1-s2.0-s093938891830120x-main.pdf">A gentle introduction to deep learning in medical image processing</a><span style="color:rgb(0, 0, 0)">. Z Med Pay 2019; 29:86-101.&nbsp;</span><a href="https://doi.org/10.1016/j.zemedi.2018.12.003" target="_blank">[DOI LINK]<br />&#8203;</a>&nbsp; &nbsp; &nbsp;Noh H, Hong S, Han. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/arxiv1505.04366.pdf">Learning deconvolution network for semantic segmentation</a>. <span style="color:rgb(36, 62, 62)">Proceedings of ICCV, 2015. <a href="https://arxiv.org/pdf/1505.04366.pdf" target="_blank">[arXiv LINK]&nbsp;</a></span><br /><span style="color:rgb(42, 42, 42)">&nbsp; &nbsp; &nbsp;Siddique N, Paheding S, Elkin CP, Devabhaktuni V.&nbsp;<a href="https://mriquestions.com/uploads/3/4/5/7/34572113/u-net_and_its_variants_for_medical_image_segmentation_a_review_of_theory_and_applications.pdf">U-Net and its variants for medical image segmentation: a review of theory and applications</a>. IEEE Access 2021:82031-82057.&nbsp;&nbsp;</span><span style="color:rgb(42, 42, 42)"><a href="https://doi.org/10.1109/ACCESS.2021.3086020" target="_blank">[DOI LINK]</a></span></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;"><strong>Related Questions</strong><br /><a href="convolutional-network.html"><strong>&nbsp; &nbsp; &nbsp;</strong><strong style="color:rgb(3, 118, 190)"><em>What is a convolutional neural network (CNN) and how does it work?</em></strong></a><em></em></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div style="text-align:skip_to_justify;"><div style="height: 0px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-normal" href="softmax.html" >
+<span class="wsite-button-inner">← &nbsp;Previous Question</span>
+</a>
+<div style="height: 0px; overflow: hidden;"></div></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div style="text-align:right;"><div style="height: 0px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-normal" href="javascript:;" >
+<span class="wsite-button-inner">Next Question &nbsp;→</span>
+</a>
+<div style="height: 0px; overflow: hidden;"></div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div style="text-align:center;"><div style="height: 0px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-highlight" href="complete-list-of-questions.html" >
+<span class="wsite-button-inner">↑&nbsp;Complete List of Questions ↑</span>
+</a>
+<div style="height: 10px; overflow: hidden;"></div></div>
+</div></div>

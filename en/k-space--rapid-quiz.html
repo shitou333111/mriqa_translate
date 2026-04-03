@@ -1,0 +1,1842 @@
+<div id="content"><div id="wsite-content" class="wsite-elements wsite-not-footer">
+	<div><div id="262090759384548911" align="left" style="width: 100%; overflow-y: hidden;" class="wcustomhtml"><!--############NEW MASTER HEADER AND INDEX##############-->
+<!--THIS IS THE MASTER HEADER SECTION FOR QUIZZES ON EACH SUPER TAB-->
+<!-- Each super tab in the regular Q&A part of the website corresponds to  a set of review QUIZZES on a single web page. This single web page must begin with the html script included below (which must be appropriately renamed). -->
+
+<!--After the title there is an index that identifies ~5 subsections each with 10-20 quiz questions. The html script for each section of questions is in a separate document titled 20 EMPTY QUESTIONS.  Instructions for filling these out are provided in that document. -->
+
+<html>
+<head><script src="gdpr/gdprscript6f19.js?buildTime=1774025472"></script>
+<title>MRI Safety and Screening Quiz</title>
+<!--All Yellow highlighted items need to be replaced-->
+<meta name="keywords" content="radiology physics, review questions, MRI physics">
+<meta name="description" content="Collection of review quiz questions from MRIquestions.com">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="mr_styles.html">
+<style>
+.explan {
+	display: none;
+	font-style: italic;
+	margin-top: 2px;
+	margin-bottom: 6px;
+}
+</style>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','../www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-52206512-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+<script>
+function showAnswer(q_string) {
+	var button = document.getElementById('show_'+q_string);
+	var shown = button.value == "Hide Answer";
+	if(!shown) {
+		document.getElementById('a_'+q_string).style.display = "block";
+		
+		document.getElementById('correct_'+q_string).style.fontWeight = "bold";
+		if(document.getElementById('c_'+q_string).checked) {
+			document.getElementById('correct_'+q_string).style.color = "Green";
+		} else {
+			document.getElementById('correct_'+q_string).style.color = "Red";
+		}
+		
+		button.value = "Hide Answer";
+	} else {
+		document.getElementById('a_'+q_string).style.display = "none";
+		button.value = "Show Answer";
+	}
+}
+
+function showAllAnswers(topic) {
+	var button = document.getElementById('show_all_'+topic);
+	var shown = button.value == "Hide All Answers for Section";
+	
+	var i = 0;
+	var correct = 0;
+	var ans_el;
+	while((ans_el=document.getElementById('a_'+topic+'_'+i)) != null) {
+		if(document.getElementById('c_'+topic+'_'+i).checked) {
+			correct++;
+		}
+		if(!shown) {
+			ans_el.style.display = "block";
+			document.getElementById('correct_'+topic+'_'+i).style.fontWeight = "bold";
+			if(document.getElementById('c_'+topic+'_'+i).checked) {
+				document.getElementById('correct_'+topic+'_'+i).style.color = "Green";
+			} else {
+				document.getElementById('correct_'+topic+'_'+i).style.color = "Red";
+			}
+		} else {
+			ans_el.style.display = "none";
+		}
+		i++;
+	}
+	
+	var scoretext = document.getElementById('scoretxt_'+topic);
+	scoretext.innerHTML = 'You answered '+correct+'/'+i+' correct, for a score of '+Math.round(correct/i*100)+'%';
+	
+	if(!shown) {
+		button.value = "Hide All Answers for Section";
+	} else {
+		button.value = "Show All Answers for Section";
+	}
+}
+
+function scoreAnswers(topic) {
+	var button = document.getElementById('score_'+topic);
+	
+	var i = 0;
+	var correct = 0;
+	var ans_el;
+	while((ans_el=document.getElementById('a_'+topic+'_'+i)) != null) {
+		if(document.getElementById('c_'+topic+'_'+i).checked) {
+			correct++;
+		}
+		i++;
+	}
+	
+	var scoretext = document.getElementById('scoretxt_'+topic);
+	scoretext.innerHTML = 'You answered '+correct+'/'+i+' correct, for a score of '+Math.round(correct/i*100)+'%';
+}
+
+function changeMode(button_value) {
+	if(button_value != 0) {
+		window.location = "review/mri_b3526.html?mode="+button_value;
+	}
+}
+</script>
+<style type="text/css">
+.button_unchecked {
+	border: 2px outset #3498db;
+	background: #3498db;
+	background-image: -webkit-linear-gradient(top, #3498db, #2980b9);
+	background-image: -moz-linear-gradient(top, #3498db, #2980b9);
+	background-image: -ms-linear-gradient(top, #3498db, #2980b9);
+	background-image: -o-linear-gradient(top, #3498db, #2980b9);
+	background-image: linear-gradient(to bottom, #3498db, #2980b9);
+	padding: 4px;
+	
+	font-size: 120%;
+	font-weight: bold;
+}
+.button_checked {
+	border: 2px inset #3498db;
+	background: #3498db;
+	background-image: -webkit-linear-gradient(top, #3498db, #2980b9);
+	background-image: -moz-linear-gradient(top, #3498db, #2980b9);
+	background-image: -ms-linear-gradient(top, #3498db, #2980b9);
+	background-image: -o-linear-gradient(top, #3498db, #2980b9);
+	background-image: linear-gradient(to bottom, #3498db, #2980b9);
+	padding: 4px;
+	
+	font-size: 120%;
+	font-weight: bold;
+}
+</style>
+</head>
+
+<!-- END OF MASTER HEADER -->
+
+<!--SECOND SECTION: Lists Subsections for Questions below-->
+<body style="background-color:white">
+<div class="main_div">
+<h1 style="color:black";><a name="top"></a>K-space and Rapid Imaging Quiz</h1>
+<div style="font-size: 140%; font-family: sans-serif">
+<ul>
+	<li><a href="#0">K-space</a></li>
+	<li><a href="#1">Rapid Imaging</a></li>
+              <li><a href="#2">Parallel Imaging</a></li>
+	
+</ul>
+
+<!-- Note the numbering of these subsections as they have a href values of #0, #1, #2, etc. These numbers are needed so that clicking on the index file takes you to the proper place in the web page identified on the 20 BLANK QUESTIONS script.-->
+
+
+
+</div>
+
+
+</div>
+
+
+
+</div>
+
+<div><div id="859550469302450784" align="left" style="width: 100%; overflow-y: hidden;" class="wcustomhtml"><!-- ###############NEW QUIZ SUBSECTION ##################-->
+
+<hr style="1px solid black">
+<!-- Creates optional line above new Quiz Subsection Title ---->
+
+<h1 style="color:black";><a name="0"></a>K-Space</h1>
+
+<!-- The Section Name and its corresponding number (here 0) which has an href in the index must be changed/filled in.  Note that the first section is identified as “0” here only;  and the second section is denoted “2”, etc. 
+
+This is confusing because subsequently it is denoted as Section 1 and reference to all questions in this section begin with a 1.  However, the first question of Section 1 is called question 0, presumably to assist in scoring.
+
+Thus, the first question of Section 1 is denoted as q_1_0 and its second question is denoted q_1_1.	
+
+When a second section of Questions is added, this is called Section 2 with first and second questions denoted q_2_0 and q_2_1. 
+
+Each section has counting variables corresponding to each question. So the counting variables  are denoted c_1_0 for the Section 1/first question, while c_2_1 counts for Section 2/second question. -->
+
+<!-- FOR THE PURPOSES OF THIS DOCUMENT WE WILL CONSIDER ALL QUESTIONS TO REFER TO SECTION KQUIZ and are numbered consecutively. THE WORD DOCUMENT CAN THEN BE PUT INTO PROPER FORM BY “SEARCH AND REPLACE KQUIZ BY THE APPROPRIATE SECTION NUMBER”-->
+
+
+<!-- ################ SECTION M, QUIZ QUESTION  1############## -->
+
+<ol><li style="margin-top: 8px"> A point in k-space corresponds to
+<ol type="a" id="q_KQUIZ_0">
+<li id="correct_KQUIZ_0"><input type=radio name="c_KQUIZ_0" id="c_KQUIZ_0"> The amount of a particular spatial frequency in the entire imaged object
+</li>
+
+<li ><input type=radio name="c_KQUIZ_0" > The amount of a particular spatial frequency at a particular point in the imaged object 
+</li>
+		
+<li ><input type=radio name="c_KQUIZ_0" > The magnitude and phase of the signal arising from a particular point in the imaged object
+</li>
+
+		
+<li ><input type=radio name="c_KQUIZ_0" > The spin density of the signal arising from the entire imaged object.
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_KQUIZ_0" onclick="showAnswer('KQUIZ_0')" value="Show Answer"></p>
+				
+<p class="explan" id="a_KQUIZ_0"> K-space is an array of numbers representing spatial frequencies in the MR image. The individual points (kx,ky) in k-space do not correspond one-to-one with individual pixels (x,y) in the image. Each k-space point contains spatial frequency and phase information about every pixel in the final image. 
+<a href="what-is-k-space.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+
+<!-- ################ SECTION KQUIZ, QUIZ QUESTION  2############## -->
+
+<li style="margin-top: 8px"> Which of the following statements about k-space is false?
+<ol type="a" id="q_KQUIZ_1">
+
+<li ><input type=radio name="c_KQUIZ_1" > The k<sub>x</sub> and k<sub>y</sub> axes of k-space generally correspond to the horizontal (x-) and vertical (y-) axes of the image.
+</li>
+		
+<li ><input type=radio name="c_KQUIZ_1" > Each point in k-space contains spatial frequency and phase information about every pixel in the final image.
+</li>
+<li ><input type=radio name="c_KQUIZ_1" >  Each pixel in the image maps to every point in k-space.
+</li>
+
+<li id="correct_KQUIZ_1"><input type=radio name="c_KQUIZ_1" id="c_KQUIZ_1"> Points near the center of k-space correspond to points in the center of the image.
+</li>
+		
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_KQUIZ_1" onclick="showAnswer('KQUIZ_1')" value="Show Answer"></p>
+				
+<p class="explan" id="a_KQUIZ_1"> Each point in k-space contains spatial frequency and phase information about every pixel in the final image. So choice (d) is false.
+
+<a href="what-is-k-space.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION KQUIZ, QUIZ QUESTION  3############## -->
+
+<li style="margin-top: 8px"> Which of the following statements about k-space is true?
+<ol type="a" id="q_KQUIZ_2">
+
+<li ><input type=radio name="c_KQUIZ_2" > The center of k-space provides information about the edges and details of the imaged object.
+</li>
+		
+<li ><input type=radio name="c_KQUIZ_2" > The periphery of k-space provides information about the general shape and contour of the object.
+</li>
+
+<li id="correct_KQUIZ_2"><input type=radio name="c_KQUIZ_2" id="c_KQUIZ_2"> The raw data at the exact center of k-space always has a larger magnitude than any other point.
+</li>
+		
+<li ><input type=radio name="c_KQUIZ_2" >  k-space must be filled with data in a specific order.
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_KQUIZ_2" onclick="showAnswer('KQUIZ_2')" value="Show Answer"></p>
+				
+<p class="explan" id="a_KQUIZ_2"> Only (c) is true. There are two reasons the central area of k-space has the largest magnitude. First, the central row (k<sub>y</sub> = 0) is acquired with no phase-encoding gradient (and hence no destructive wave interference caused by phase-encoding steps). Secondly, the central column of k-space (k<sub>x</sub>  = 0) coincides with the peak of the MR echo.
+
+<a href="big-spot-in-middle.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION KQUIZ, QUIZ QUESTION  4############## -->
+<li style="margin-top: 8px"> In routine anatomic MR images, what points in k-space have the lowest amplitudes?
+<ol type="a" id="q_KQUIZ_3">
+<li id="correct_KQUIZ_3"><input type=radio name="c_KQUIZ_3" id="c_KQUIZ_3"> The four corners
+</li>
+		
+
+<li ><input type=radio name="c_KQUIZ_3" > The center
+</li>
+		
+<li ><input type=radio name="c_KQUIZ_3" > The middle of the top and bottom edges
+</li>
+
+<li ><input type=radio name="c_KQUIZ_3" >  The middle of the left and right edges
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_KQUIZ_3" onclick="showAnswer('KQUIZ_3')" value="Show Answer"></p>
+				
+<p class="explan" id="a_KQUIZ_3"> Signals from the four corners have the highest spatial frequencies in both directions and correspond to data locations where the MR signals are weakest. For time-savings in spiral imaging, the four corners are often excluded from data sampling with only minimal loss of resolution noted.
+<a href="parts-of-k-space.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+
+
+
+ 
+<!-- ################ SECTION KQUIZ, QUIZ QUESTION  5############## -->
+
+<li style="margin-top: 8px"> The “k” of k-space refers to “wavenumber”, an index for spatial frequency, which is the number of waves or cycles per unit distance. An acceptable unit for “k” could therefore be
+<ol type="a" id="q_KQUIZ_4">
+
+<li ><input type=radio name="c_KQUIZ_4" > Cycles per second
+</li>
+		
+
+<li id="correct_KQUIZ_4"><input type=radio name="c_KQUIZ_4" id="c_KQUIZ_4"> mm<sup>−1</sup>
+</li>
+		
+<li ><input type=radio name="c_KQUIZ_4" >  cm/sec
+</li>
+<li ><input type=radio name="c_KQUIZ_4" > Line pairs
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_KQUIZ_4" onclick="showAnswer('KQUIZ_4')" value="Show Answer"></p>
+				
+<p class="explan" id="a_KQUIZ_4"> The wavenumber (k) is simply the reciprocal of the wavelength. Since the wavelength is measured in units of distance, the units for wavenumber are (1/distance), such as 1/mm = mm<sup>−1</sup>. Other acceptable units would include line pairs per mm and cycles per mm.
+
+<a href="what-does-k-stand-for.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION KQUIZ, QUIZ QUESTION  6############## -->
+
+<li style="margin-top: 8px"> Which statement about the location of spatial frequencies in k-space is true?
+<ol type="a" id="q_KQUIZ_5">
+
+<li ><input type=radio name="c_KQUIZ_5" > A point along the k<sub>x</sub> axis corresponds to horizontal stripes in the image
+</li>
+		
+<li ><input type=radio name="c_KQUIZ_5" > A point along the k<sub>y</sub> axis corresponds to vertical stripes in the image
+</li>
+
+<li id="correct_KQUIZ_5"><input type=radio name="c_KQUIZ_5" id="c_KQUIZ_5"> A point at a 45º angle from the the k<sub>x</sub> axis corresponds to stripes at 45º in the image
+</li>
+		
+<li ><input type=radio name="c_KQUIZ_5" >  If the imaged object is small relative to the field-of-view, its k-space frequency representation will be mostly confined to the center.
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_KQUIZ_5" onclick="showAnswer('KQUIZ_5')" value="Show Answer"></p>
+				
+<p class="explan" id="a_KQUIZ_5"> Option (c) is true. Options (a) and (b) are reversed. Concerning incorrect choice (d), the physical size of the object imaged and its frequency expanse in k-space are inversely related. In other words, small objects have ripples far out into the periphery of k-space, while larger objects have their spectral energies more concentrated at the center. 
+<a href="locations-in-k-space.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION KQUIZ, QUIZ QUESTION  7############## -->
+
+<li style="margin-top: 8px"> Consider a conventional 2DFT spin-echo pulse sequence with frequency encoding along the x-axis and phase-encoding along the y-axis. Which statement is false?
+<ol type="a" id="q_KQUIZ_6">
+
+<li ><input type=radio name="c_KQUIZ_6" > For a given phase-encode step (k<sub>y</sub>), digitized data from the early part of the echo is placed at the far left side of k-space (negative k<sub>x</sub> values).
+</li>
+		
+<li ><input type=radio name="c_KQUIZ_6" > For a given phase-encode step (k<sub>y</sub>), digitized data from the early part of the echo is placed at the far right side of k-space (positive k<sub>x</sub> values).
+</li>
+
+<li id="correct_KQUIZ_6"><input type=radio name="c_KQUIZ_6" id="c_KQUIZ_6"> For a given phase-encode step (k<sub>y</sub>), digitized data from the peak of the echo is placed at the the point (k<sub>x</sub>=0, k<sub>y</sub>=0).
+</li>
+		
+<li ><input type=radio name="c_KQUIZ_6" >  For a given phase-encode step (k<sub>y</sub>), digitized data from the peak of the echo is placed at the the point (k<sub>x</sub>=0, k<sub>y</sub>).
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_KQUIZ_6" onclick="showAnswer('KQUIZ_6')" value="Show Answer"></p>
+				
+<p class="explan" id="a_KQUIZ_6"> Option (c) is false, while option (d) is true. 
+<a href="spin-warp-imaging.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+	
+<!-- ################ SECTION KQUIZ, QUIZ QUESTION  8############## -->
+
+<li style="margin-top: 8px"> Concerning the filling of k-space by a conventional 2DFT spin-echo pulse sequence with frequency encoding along the x-axis and phase-encoding along the y-axis, which statement is false?
+<ol type="a" id="q_KQUIZ_7">
+
+<li ><input type=radio name="c_KQUIZ_7" > The central point of k-space (k<sub>x</sub>=0, k<sub>y</sub>=0) corresponds to the constant term in the Fourier representation of the image.
+</li>
+<li id="correct_KQUIZ_7"><input type=radio name="c_KQUIZ_7" id="c_KQUIZ_7"> Except for the central row (k<sub>y</sub>=0), each row of k-space is acquired with the same constant value of the phase-encoding gradient.
+</li>
+
+
+<li ><input type=radio name="c_KQUIZ_7" >  The central row (k<sub>y</sub>=0) of k-space is acquired with no phase-encoding gradient. 
+</li>
+		
+<li ><input type=radio name="c_KQUIZ_7" > The central column of k-space (k<sub>x</sub>=0) coincides with the peak of the MR echo for each phase-encoding step.
+</li>
+
+		
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_KQUIZ_7" onclick="showAnswer('KQUIZ_7')" value="Show Answer"></p>
+				
+<p class="explan" id="a_KQUIZ_7"> Option (b) is false. In 2DFT spin-echo imaging, the phase encoding gradient is stepped in magnitude from cycle to cycle, not held constant. The other statements are correct.
+<a href="big-spot-in-middle.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION KQUIZ, QUIZ QUESTION  9############## -->
+
+<li style="margin-top: 8px"> The row-by-row filling of k-space by a conventional 2DFT spin-echo pulse sequence is often referred to as what trajectory?
+<ol type="a" id="q_KQUIZ_8">
+<li id="correct_KQUIZ_8"><input type=radio name="c_KQUIZ_8" id="c_KQUIZ_8"> Cartesian
+</li>
+
+<li ><input type=radio name="c_KQUIZ_8" > Radial
+</li>
+		
+<li ><input type=radio name="c_KQUIZ_8" > Zig-Zag
+</li>
+
+		
+<li ><input type=radio name="c_KQUIZ_8" >  Blipped
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_KQUIZ_8" onclick="showAnswer('KQUIZ_8')" value="Show Answer"></p>
+				
+<p class="explan" id="a_KQUIZ_8"> Traditionally the Cartesian (row-by-row) method was used nearly exclusively for all pulse sequences, but today many different patterns are widely encountered. 
+<a href="k-space-trajectories.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+<!-- ################ SECTION KQUIZ, QUIZ QUESTION  10############## -->
+
+<li style="margin-top: 8px">  
+Disadvantages of radial sampling methods include all of the following except
+<ol type="a" id="q_KQUIZ_9">
+<li id="correct_KQUIZ_9"><input type=radio name="c_KQUIZ_9" id="c_KQUIZ_9"> Sensitivity to motion artifacts.
+</li>
+
+<li ><input type=radio name="c_KQUIZ_9" > Exclusion of the corners of k-space.
+</li>
+		
+<li ><input type=radio name="c_KQUIZ_9" > Need to run a calibration scan to estimate gradient delays and distortion.
+</li>
+
+		
+<li ><input type=radio name="c_KQUIZ_9" >  Acquired data points not in format suitable for Fast Fourier Transformation. 
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_KQUIZ_9" onclick="showAnswer('KQUIZ_9')" value="Show Answer"></p>
+				
+<p class="explan" id="a_KQUIZ_9"> In radial acquisition the center of k-space is oversampled and continuously updated due to the overlapping "spokes" that repeatedly pass through this region. This redundancy can be exploited to detect and correct for movement if the signal from the k-space center changes between views. Additionally, all radial spokes make equal contributions to the image (unlike Cartesian sampling where just a few lines through the center of k-space set overall image contrast and noise levels). So motion on just one or a few radial views is not likely to severely degrade image quality.
+<a href="radial-sampling.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+<!-- ################ SECTION KQUIZ, QUIZ QUESTION  11############## -->
+
+<li style="margin-top: 8px"> The non-uniform raw data from a radial or spiral acquisition must be placed into a rectangular (Cartesian) matrix format for efficient computations. This process is referred to as
+<ol type="a" id="q_KQUIZ_10">
+
+<li ><input type=radio name="c_KQUIZ_10" > Morphing
+</li>
+		
+
+<li id="correct_KQUIZ_10"><input type=radio name="c_KQUIZ_10" id="c_KQUIZ_10"> Gridding
+</li>
+<li ><input type=radio name="c_KQUIZ_10" > Pigeon-holing
+</li>
+		
+<li ><input type=radio name="c_KQUIZ_10" >  Compressing
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_KQUIZ_10" onclick="showAnswer('KQUIZ_10')" value="Show Answer"></p>
+				
+<p class="explan" id="a_KQUIZ_10"> “Gridding“ is the commonly used term for this process. Although various methods exist, the typical gridding algorithm first involves multiplication of original data with a set of density compensation weights and convolution with a gridding kernel. The resultant data is then interpolated and placed into the uniformly spaced matrix (the "grid") where a discrete Fourier transform is performed. Finally, the field-of-view is trimmed and the transformed data multiplied by an apodization correction function.
+<a href="radial-sampling.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+		
+
+
+
+
+
+<!-- ################ SECTION KQUIZ, QUIZ QUESTION  12############## -->
+
+<li style="margin-top: 8px"> How many phase cycles are needed to uniquely differentiate each pixel along a certain direction in an image?
+<ol type="a" id="q_KQUIZ_11">
+
+<li ><input type=radio name="c_KQUIZ_11" > 0.5
+</li>
+		
+
+<li id="correct_KQUIZ_11"><input type=radio name="c_KQUIZ_11" id="c_KQUIZ_11"> 1.0
+</li>
+<li ><input type=radio name="c_KQUIZ_11" > 1</li>
+		
+<li ><input type=radio name="c_KQUIZ_11" >  2.0
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_KQUIZ_11" onclick="showAnswer('KQUIZ_11')" value="Show Answer"></p>
+				
+<p class="explan" id="a_KQUIZ_11"> One full phase cycle is needed to uniquely differentiate each pixel. If there are N pixels of width (Δw) spanning the field-of-view (FOV), then N phase cycles are needed. 
+
+<a href="field-of-view-fov.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+<!-- ################ SECTION KQUIZ, QUIZ QUESTION  13############## -->
+
+<li style="margin-top: 8px"> If the data sampling rate is halved in the frequency-encode direction (x), what happens to the spacing (Δk<sub>x</sub>) between points in k-space?
+<ol type="a" id="q_KQUIZ_12">
+
+<li ><input type=radio name="c_KQUIZ_12" > It remains unchanged.
+</li>
+		
+<li ><input type=radio name="c_KQUIZ_12" > It is halved.
+</li>
+
+<li id="correct_KQUIZ_12"><input type=radio name="c_KQUIZ_12" id="c_KQUIZ_12"> It is doubled.
+</li>
+		
+<li ><input type=radio name="c_KQUIZ_12" >  It is quadrupled.
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_KQUIZ_12" onclick="showAnswer('KQUIZ_12')" value="Show Answer"></p>
+				
+<p class="explan" id="a_KQUIZ_12"> This is equivalent to sampling every other k<sub>x</sub> value, so compared to the original pattern, the spacing Δk<sub>x</sub>) will double <a href="field-of-view-fov.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION KQUIZ, QUIZ QUESTION  14############## -->
+
+<li style="margin-top: 8px"> If the data sampling rate is halved in the frequency encode direction (x), what happens to the field of view in that direction?
+<ol type="a" id="q_KQUIZ_13">
+
+<li ><input type=radio name="c_KQUIZ_13" > It remains unchanged.</li>
+		
+
+<li id="correct_KQUIZ_13"><input type=radio name="c_KQUIZ_13" id="c_KQUIZ_13"> It is halved.
+</li>
+<li ><input type=radio name="c_KQUIZ_13" > It is doubled.
+</li>
+		
+<li ><input type=radio name="c_KQUIZ_13" >  It is quadrupled.
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_KQUIZ_13" onclick="showAnswer('KQUIZ_13')" value="Show Answer"></p>
+				
+<p class="explan" id="a_KQUIZ_13"> We use the formula Δk = 1/FOV. So doubling Δk means the FOV is halved.
+<a href="field-of-view-fov.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION KQUIZ, QUIZ QUESTION  15############## -->
+
+<li style="margin-top: 8px"> If the data sampling rate is halved in the frequency encode direction (x), what happens to the pixel size in that direction?
+<ol type="a" id="q_KQUIZ_14">
+<li id="correct_KQUIZ_14"><input type=radio name="c_KQUIZ_14" id="c_KQUIZ_14"> It remains unchanged.
+</li>
+
+<li ><input type=radio name="c_KQUIZ_14" > It is halved.
+</li>
+		
+<li ><input type=radio name="c_KQUIZ_14" > It is doubled.
+</li>
+
+		
+<li ><input type=radio name="c_KQUIZ_14" >  It is quadrupled.
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_KQUIZ_14" onclick="showAnswer('KQUIZ_14')" value="Show Answer"></p>
+				
+<p class="explan" id="a_KQUIZ_14"> The pixel width Δw = 1/ k<sub>FOV</sub>. As long as the k<sub>FOV</sub> = 2k<sub>max</sub> is unchanged, the pixel width will remain unchanged also. 
+<a href="field-of-view-fov.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+<!-- ################ SECTION KQUIZ, QUIZ QUESTION 16############## -->
+
+<li style="margin-top: 8px"> Supposed the data sampling rate in the frequency encode direction (x) is unchanged, but the sampling time is reduced so that only the central ⅓ of k-space is sampled. What happens to the pixel width and FOV in that direction?
+<ol type="a" id="q_KQUIZ_15">
+<li id="correct_KQUIZ_15"><input type=radio name="c_KQUIZ_15" id="c_KQUIZ_15"> The pixel size is tripled and the FOV is unchanged.
+</li>
+
+<li ><input type=radio name="c_KQUIZ_15" > The pixel size is unchanged and the FOV is tripled.
+</li>
+		
+<li ><input type=radio name="c_KQUIZ_15" > Both the pixel size and FOV are reduced by ⅓.
+</li>
+
+		
+<li ><input type=radio name="c_KQUIZ_15" >  Both the pixel size and FOV are tripled.
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_KQUIZ_15" onclick="showAnswer('KQUIZ_15')" value="Show Answer"></p>
+				
+<p class="explan" id="a_KQUIZ_15"> Because the data sampling rate is unchanged, Δk<sub>x</sub> is unchanged and the points are spaced out as before. So since Δk = 1/FOV, the FOV<sub>x</sub> is unchanged. By sampling only the center ⅓ of k-space, the k<sub>FOV</sub> is now only ⅓ as large. And since pixel width Δw = 1/ k<sub>FOV</sub>, this means the pixel width has tripled. Hence answer (a) is correct.
+<a href="field-of-view-fov.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION KQUIZ, QUIZ QUESTION  17############## -->
+
+<li style="margin-top: 8px"> Suppose that the frequency encoding portion of the 2D spin warp imaging was left alone, but the number of phase-encoding steps was cut in half (while leaving the maximum and minimum amplitudes of the phase-encoding gradient unchanged). What happens to the spacing (Δk<sub>y</sub>) between points in the phase-encode direction (y)?
+<ol type="a" id="q_KQUIZ_16">
+
+<li ><input type=radio name="c_KQUIZ_16" > It remains unchanged.
+</li>
+		
+<li ><input type=radio name="c_KQUIZ_16" > It is halved.
+</li>
+
+<li id="correct_KQUIZ_16"><input type=radio name="c_KQUIZ_16" id="c_KQUIZ_16"> It is doubled.
+</li>
+		
+<li ><input type=radio name="c_KQUIZ_16" >  It is quadrupled.
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_KQUIZ_16" onclick="showAnswer('KQUIZ_16')" value="Show Answer"></p>
+				
+<p class="explan" id="a_KQUIZ_16"> Cutting the number of phase encode steps (N<sub>y</sub>) in half in this scenario doubles the increment between successive steps, so Δk<sub>y</sub> is doubled.
+
+<a href="rectangular-fov.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+<!-- ################ SECTION KQUIZ, QUIZ QUESTION  18############## -->
+
+<li style="margin-top: 8px"> In the question above, what does the phrase “while leaving the maximum and minimum amplitudes of the phase-encoding gradient unchanged” mean in terms of k<sub>FOV</sub> in the y-direction?
+<ol type="a" id="q_KQUIZ_17">
+<li id="correct_KQUIZ_17"><input type=radio name="c_KQUIZ_17" id="c_KQUIZ_17"> It remains unchanged.
+</li>
+
+<li ><input type=radio name="c_KQUIZ_17" > It is halved.
+</li>
+		
+<li ><input type=radio name="c_KQUIZ_17" > It is doubled.
+</li>
+
+		
+<li ><input type=radio name="c_KQUIZ_17" >  It is quadrupled.
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_KQUIZ_17" onclick="showAnswer('KQUIZ_17')" value="Show Answer"></p>
+				
+<p class="explan" id="a_KQUIZ_17"> The phrase basically stipulates that k<sub>FOV</sub> is unchanged.
+<a href="rectangular-fov.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+		
+
+<!-- ################ SECTION KQUIZ, QUIZ QUESTION  19############## -->
+
+<li style="margin-top: 8px"> Continuing on with the same scenario as in questions 17 and 18, what happens to the pixel width and the phase FOV?
+<ol type="a" id="q_KQUIZ_18">
+
+<li ><input type=radio name="c_KQUIZ_18" > The pixel size is doubled and the FOV is unchanged.
+</li>
+		
+<li ><input type=radio name="c_KQUIZ_18" > The pixel size is unchanged and the FOV is doubled.
+</li>
+<li ><input type=radio name="c_KQUIZ_18" >  Both the pixel size and FOV are halved.
+</li>
+
+<li id="correct_KQUIZ_18"><input type=radio name="c_KQUIZ_18" id="c_KQUIZ_18"> The pixel size is unchanged and the FOV is halved.
+</li>
+		
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_KQUIZ_18" onclick="showAnswer('KQUIZ_18')" value="Show Answer"></p>
+				
+<p class="explan" id="a_KQUIZ_18"> The scenario in these last three questions is to create a rectangular field of view with a 1:2 frequency:phase ratio.  Because Δk<sub>y</sub> is doubled, the FOV<sub>y</sub> is halved. Furthermore, because both the FOV<sub>y</sub> and N<sub>y</sub> have been reduced by one-half, pixel size in the phase-encode direction (FOV<sub>y</sub>/ N<sub>y</sub>) and overall spatial resolution of the image are also unchanged.  
+<a href="rectangular-fov.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+<!-- ################ SECTION KQUIZ, QUIZ QUESTION  20############## -->
+
+<li style="margin-top: 8px"> Concerning obtaining a rectangular field of view by reducing the number of phase encoding steps as described above, which of the following statements is false?
+<ol type="a" id="q_KQUIZ_19">
+
+<li ><input type=radio name="c_KQUIZ_19" > This option is most beneficial when imaging the spine and extremities.
+</li>
+		
+<li ><input type=radio name="c_KQUIZ_19" > Spatial resolution is unchanged.
+</li>
+
+<li id="correct_KQUIZ_19"><input type=radio name="c_KQUIZ_19" id="c_KQUIZ_19"> Signal to noise ratio is unchanged.
+</li>
+		
+<li ><input type=radio name="c_KQUIZ_19" >  Wrap-around artifacts in the phase-encode direction are more likely to occur.
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_KQUIZ_19" onclick="showAnswer('KQUIZ_19')" value="Show Answer"></p>
+				
+<p class="explan" id="a_KQUIZ_19"> Option (c) is false. Because fewer phase-encoding steps and hence fewer echo signals are acquired, the signal-to-noise ratio (SNR) is proportionately lower compared to full FOV imaging.
+<a href="rectangular-fov.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+		
+<!-- ################ SECTION KQUIZ, QUIZ QUESTION  21############## -->
+
+<li style="margin-top: 8px"> Provided no phase errors occur during data collection, what type of symmetry does k-space exhibit?
+<ol type="a" id="q_KQUIZ_20">
+
+<li ><input type=radio name="c_KQUIZ_20" > x-axis symmetry
+</li>
+		
+<li ><input type=radio name="c_KQUIZ_20" > y-axis symmetry
+</li>
+<li ><input type=radio name="c_KQUIZ_20" >  z-axis symmetry
+</li>
+
+<li id="correct_KQUIZ_20"><input type=radio name="c_KQUIZ_20" id="c_KQUIZ_20"> conjugate symmetry
+</li>
+		
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_KQUIZ_20" onclick="showAnswer('KQUIZ_20')" value="Show Answer"></p>
+				
+<p class="explan" id="a_KQUIZ_20"> Provided no phase errors occur during data collection, k-space possesses a peculiar mirrored property known as conjugate (or Hermitian) symmetry. 
+Conjugate symmetry applies to pairs of points (like P and Q) that are located diagonally from each other across the origin of k-space. If the data at P is the complex number [a+bi], the data at Q is immediately known to be P's complex conjugate, [a−bi]. 
+<a href="partial-fourier.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+
+
+		
+<!-- ################ SECTION KQUIZ, QUIZ QUESTION  22############## -->
+
+<li style="margin-top: 8px"> Which statement concerning phase-conjugate symmetry (partial Fourier) imaging is false?
+<ol type="a" id="q_KQUIZ_21">
+<li id="correct_KQUIZ_21"><input type=radio name="c_KQUIZ_21" id="c_KQUIZ_21"> Over 50% savings in imaging time can be achieved by the use of this technique.
+</li>
+
+<li ><input type=radio name="c_KQUIZ_21" > More than half of the phase-encoding lines must be sampled to correct for phase errors.
+</li>
+		
+<li ><input type=radio name="c_KQUIZ_21" > Spatial resolution is preserved.
+</li>
+
+		
+<li ><input type=radio name="c_KQUIZ_21" >  For half-Fourier imaging, signal-to-noise is reduced by about 30%.
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_KQUIZ_21" onclick="showAnswer('KQUIZ_21')" value="Show Answer"></p>
+				
+<p class="explan" id="a_KQUIZ_21"> Phase-conjugate symmetry techniques use data from the top half of k-space to estimate data in the lower half of k-space. In theory, phase-conjugate symmetry allows one to acquire data using only half the normal number of phase-encoding steps, thus potentially reducing imaging time by up to one-half. However, to correct for phase errors, more than half of the phase-encoding lines must be sampled, so the actual time savings is less than 50%.   
+<a href="phase-symmetry.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+
+
+
+
+		
+<!-- ################ SECTION KQUIZ, QUIZ QUESTION  23############## -->
+
+<li style="margin-top: 8px"> Which statement concerning read-conjugate symmetry imaging is false?
+<ol type="a" id="q_KQUIZ_22">
+
+<li ><input type=radio name="c_KQUIZ_22" > There is no direct time savings.
+</li>
+		
+<li ><input type=radio name="c_KQUIZ_22" > Flow and motion artifacts along the frequency-encode direction are reduced.
+</li>
+
+<li id="correct_KQUIZ_22"><input type=radio name="c_KQUIZ_22" id="c_KQUIZ_22"> Only the first part of the echo is sampled.
+</li>
+		
+<li ><input type=radio name="c_KQUIZ_22" >  The technique allows for shorter TE values.
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_KQUIZ_22" onclick="showAnswer('KQUIZ_22')" value="Show Answer"></p>
+				
+<p class="explan" id="a_KQUIZ_22"> The direction of read-conjugate symmetry is along the readout (frequency-encode) axis. Only the <u>last</u> part of the echo is sampled, so choice (c) is false. The other statements are true.
+<a href="read-symmetry.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+
+
+
+		
+<!-- ################ SECTION KQUIZ, QUIZ QUESTION  24############## -->
+
+<li style="margin-top: 8px"> Which of the following statements about zero filling is false?
+<ol type="a" id="q_KQUIZ_23">
+
+<li ><input type=radio name="c_KQUIZ_23" > It may be used either for 2D or 3D imaging
+</li>
+		
+
+<li id="correct_KQUIZ_23"><input type=radio name="c_KQUIZ_23" id="c_KQUIZ_23"> It is used to expand the imaging matrix in the frequency-encoded direction
+</li>
+<li ><input type=radio name="c_KQUIZ_23" > It improves the apparent spatial resolution of the image.
+</li>
+		
+<li ><input type=radio name="c_KQUIZ_23" >  After the first doubling of matrix size with zeros, no added benefit is realized.
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_KQUIZ_23" onclick="showAnswer('KQUIZ_23')" value="Show Answer"></p>
+				
+<p class="explan" id="a_KQUIZ_23"> Zero-filling is routinely used to expand the image matrix size in the <u>phase</u>-encoded direction, which may be either within-plane (2D) or through-plane/slab select (3D). Zero filling acts as method to interpolate the signals from neighboring voxels, giving the image a smoother and less "pixel-ly" appearance.
+<a href="zip.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+
+
+
+
+
+
+
+
+
+
+<!--##################################################-->
+<!--############SCORING SECTION Needs to go at end of each subsection-->
+
+</ol><p><input type=button id="show_all_KQUIZ" onclick="showAllAnswers('KQUIZ')" value="Show All Answers for Section"><span style="font-weight: bold" id="scoretxt_KQUIZ"></span></p>
+<p><a href="#top">Back to top of page</a></p></div>
+<!--END OF SCORING SECTION-->
+
+
+
+</div>
+
+
+
+</div>
+
+<div><div id="204660531973148861" align="left" style="width: 100%; overflow-y: hidden;" class="wcustomhtml"><!-- ###############NEW QUIZ SUBSECTION ##################-->
+
+<hr style="1px solid black">
+<!-- Creates optional line above new Quiz Subsection Title ---->
+
+<h1 style="color:black";><a name="1"></a>Rapid Imaging (FSE/EPI)</h1>
+
+<!-- The Section Name and its corresponding number (here 0) which has an href in the index must be changed/filled in.  Note that the first section is identified as “0” here only;  and the second section is denoted “2”, etc. 
+
+This is confusing because subsequently it is denoted as Section 1 and reference to all questions in this section begin with a 1.  However, the first question of Section 1 is called question 0, presumably to assist in scoring.
+
+Thus, the first question of Section 1 is denoted as q_1_0 and its second question is denoted q_1_1.	
+
+When a second section of Questions is added, this is called Section 2 with first and second questions denoted q_2_0 and q_2_1. 
+
+Each section has counting variables corresponding to each question. So the counting variables  are denoted c_1_0 for the Section 1/first question, while c_2_1 counts for Section 2/second question. -->
+
+<!-- FOR THE PURPOSES OF THIS DOCUMENT WE WILL CONSIDER ALL QUESTIONS TO REFER TO SECTION RAPIDQ and are numbered consecutively. THE WORD DOCUMENT CAN THEN BE PUT INTO PROPER FORM BY “SEARCH AND REPLACE RAPIDQ BY THE APPROPRIATE SECTION NUMBER”-->
+
+
+<!-- ################ SECTION M, QUIZ QUESTION  1############## -->
+
+<ol><li style="margin-top: 8px"> Fast/Turbo Spin-Echo Imaging methods are commercial applications of which original technique?
+<ol type="a" id="q_RAPIDQ_0">
+<li id="correct_RAPIDQ_0"><input type=radio name="c_RAPIDQ_0" id="c_RAPIDQ_0"> RARE
+</li>
+
+<li ><input type=radio name="c_RAPIDQ_0" > MEDIUM
+</li>
+		
+<li ><input type=radio name="c_RAPIDQ_0" > ROAST
+</li>
+
+		
+<li ><input type=radio name="c_RAPIDQ_0" > SMASH
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_RAPIDQ_0" onclick="showAnswer('RAPIDQ_0')" value="Show Answer"></p>
+				
+<p class="explan" id="a_RAPIDQ_0"> Fast spin echo (FSE) imaging, also known as Turbo spin echo (TSE) imaging, are commercial implementations of the RARE (Rapid Acquisition with Relaxation Enhancement) technique originally described by Hennig et al in 1986.
+
+<a href="what-is-fsetse.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+
+<!-- ################ SECTION RAPIDQ, QUIZ QUESTION  2############## -->
+
+<li style="margin-top: 8px"> Which notation best describes the FSE/TSE technique?
+<ol type="a" id="q_RAPIDQ_1">
+
+<li ><input type=radio name="c_RAPIDQ_1" > 90º−180º−echo−90º−180º−echo−90º−180º−echo−…..
+</li>
+		
+
+<li id="correct_RAPIDQ_1"><input type=radio name="c_RAPIDQ_1" id="c_RAPIDQ_1"> 90º−180º−echo−180º−echo−180º−echo−180º−echo−…..
+</li>
+<li ><input type=radio name="c_RAPIDQ_1" > 90º−180º−echo−echo−echo−echo−…..
+</li>
+		
+<li ><input type=radio name="c_RAPIDQ_1" >  90º−180º−echo−90º−echo−180º−echo−90º−echo−180º−echo−…..
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_RAPIDQ_1" onclick="showAnswer('RAPIDQ_1')" value="Show Answer"></p>
+				
+<p class="explan" id="a_RAPIDQ_1"> The FSE/TSE pulse sequence uses a series of 180º-refocusing pulses after a single 90º-pulse to generate a train of echoes.
+<a href="what-is-fsetse.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION RAPIDQ, QUIZ QUESTION  3############## -->
+
+<li style="margin-top: 8px"> Advantages of FSE/TSE over conventional spin-echo imaging include all except
+<ol type="a" id="q_RAPIDQ_2">
+<li id="correct_RAPIDQ_2"><input type=radio name="c_RAPIDQ_2" id="c_RAPIDQ_2"> Decreased tissue energy deposition
+</li>
+
+<li ><input type=radio name="c_RAPIDQ_2" > Reduced susceptibility artifacts
+</li>
+		
+<li ><input type=radio name="c_RAPIDQ_2" > Reduced imaging time
+</li>
+
+		
+<li ><input type=radio name="c_RAPIDQ_2" >  Increased resolution or signal-to-noise in same imaging time
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_RAPIDQ_2" onclick="showAnswer('RAPIDQ_2')" value="Show Answer"></p>
+				
+<p class="explan" id="a_RAPIDQ_2"> FSE/TSE offers significant reduction of imaging time by scanning multiple lines of k-space nearly simultaneously. This savings may be used to lengthen TR, allowing more time for recovery of longitudinal magnetization and hence improved signal-to-noise. A higher number of phase-encoding steps may be used, allowing improvement in spatial resolution. Susceptibility-induced signal losses are reduced. However, the multiple 180º deposit considerable energy in tissue, leading to high specific absorption rates (SARs).
+<a href="what-is-fsetse.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION RAPIDQ, QUIZ QUESTION  4############## -->
+<li style="margin-top: 8px"> What is the main conceptual structural difference between FSE/TSE and Multi-echo Conventional Spin Echo (multi-CSE) sequences?
+<ol type="a" id="q_RAPIDQ_3">
+
+<li ><input type=radio name="c_RAPIDQ_3" > The number of 90º-pulses within a TR interval
+</li>
+		
+<li ><input type=radio name="c_RAPIDQ_3" > The pattern of 90º- and 180º-RF pulses within a TR interval
+</li>
+
+<li id="correct_RAPIDQ_3"><input type=radio name="c_RAPIDQ_3" id="c_RAPIDQ_3"> The pattern of phase-encoding gradients within a TR interval
+</li>
+		
+<li ><input type=radio name="c_RAPIDQ_3" >  The pattern of frequency-encoding gradients within a TR interval
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_RAPIDQ_3" onclick="showAnswer('RAPIDQ_3')" value="Show Answer"></p>
+				
+<p class="explan" id="a_RAPIDQ_3"> The FSE/TSE technique changes the phase-encoding gradient for each of these echoes (a multi-CSE sequence collects all echoes in a train with the same phase encoding).
+<a href="what-is-fsetse.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+
+
+ 
+<!-- ################ SECTION RAPIDQ, QUIZ QUESTION  5############## -->
+
+<li style="margin-top: 8px"> What is the effective echo time (TE<sub>eff</sub>)?
+<ol type="a" id="q_RAPIDQ_4">
+
+<li ><input type=radio name="c_RAPIDQ_4" > The time between the 90º-pulse and first echo
+</li>
+		
+<li ><input type=radio name="c_RAPIDQ_4" > The time between the 90º-pulse and last echo
+</li>
+<li ><input type=radio name="c_RAPIDQ_4" >  The time between successive echoes in the train
+</li>
+
+<li id="correct_RAPIDQ_4"><input type=radio name="c_RAPIDQ_4" id="c_RAPIDQ_4"> The time between the 90º-pulse and echo obtained at the center of k-space
+</li>
+		
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_RAPIDQ_4" onclick="showAnswer('RAPIDQ_4')" value="Show Answer"></p>
+				
+<p class="explan" id="a_RAPIDQ_4"> The effective echo time (TE<sub>eff</sub>) is the time at which the central line of k-space (k<sub>y</sub> = 0) is being filled.  
+
+<a href="fse-parameters.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION RAPIDQ, QUIZ QUESTION  6############## -->
+
+<li style="margin-top: 8px"> What is the echo spacing (ESP)?
+<ol type="a" id="q_RAPIDQ_5">
+
+<li ><input type=radio name="c_RAPIDQ_5" > The time between the 90º-pulse and first 180º-pulse
+</li>
+		
+<li ><input type=radio name="c_RAPIDQ_5" > The time between the 90º-pulse and last echo
+</li>
+
+<li id="correct_RAPIDQ_5"><input type=radio name="c_RAPIDQ_5" id="c_RAPIDQ_5"> The time between successive echoes in the train
+</li>
+		
+<li ><input type=radio name="c_RAPIDQ_5" >  The time between the 90º-pulse and echo obtained at the center of k-space
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_RAPIDQ_5" onclick="showAnswer('RAPIDQ_5')" value="Show Answer"></p>
+				
+<p class="explan" id="a_RAPIDQ_5"> The echo spacing is the time between any two successive echoes.
+<a href="fse-parameters.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION RAPIDQ, QUIZ QUESTION  7############## -->
+
+<li style="margin-top: 8px"> What is the echo train length (ETL) or turbo factor (TF)?
+<ol type="a" id="q_RAPIDQ_6">
+<li id="correct_RAPIDQ_6"><input type=radio name="c_RAPIDQ_6" id="c_RAPIDQ_6"> The number of echoes in a TR interval
+</li>
+
+<li ><input type=radio name="c_RAPIDQ_6" > The time between echoes in a TR interval
+</li>
+		
+<li ><input type=radio name="c_RAPIDQ_6" > The number of RF pulses in a TR interval
+</li>
+
+		
+<li ><input type=radio name="c_RAPIDQ_6" >  The number of RF pulses required to reach the center of k-space
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_RAPIDQ_6" onclick="showAnswer('RAPIDQ_6')" value="Show Answer"></p>
+				
+<p class="explan" id="a_RAPIDQ_6"> ETL or TF is simply the number of echoes in a FSE train between successive 90º-pulses. Imaging time is reduced proportionally by this factor.
+<a href="fse-parameters.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+	
+<!-- ################ SECTION RAPIDQ, QUIZ QUESTION  8############## -->
+
+<li style="margin-top: 8px"> If a conventional spin-echo sequence with a certain TR/TE/spatial resolution takes 8 minutes to perform, an otherwise identical FSE sequence with an echo train length (turbo factor) of 8 would take how long?
+<ol type="a" id="q_RAPIDQ_7">
+<li id="correct_RAPIDQ_7"><input type=radio name="c_RAPIDQ_7" id="c_RAPIDQ_7"> 1 minute
+</li>
+
+<li ><input type=radio name="c_RAPIDQ_7" > 2 minutes
+</li>
+		
+<li ><input type=radio name="c_RAPIDQ_7" > 4 minutes
+</li>
+
+		
+<li ><input type=radio name="c_RAPIDQ_7" >  8 minutes
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_RAPIDQ_7" onclick="showAnswer('RAPIDQ_7')" value="Show Answer"></p>
+				
+<p class="explan" id="a_RAPIDQ_7"> With an ETL/TF = 8, 8 lines of k-space are transversed for each TR interval, reducing imaging time by a factor of 1/8.
+<a href="fse-parameters.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION RAPIDQ, QUIZ QUESTION  9############## -->
+
+<li style="margin-top: 8px"> What image changes would <u>not</u> occur with increasing echo train length (ETL) or turbo factor (TF)?
+<ol type="a" id="q_RAPIDQ_8">
+
+<li ><input type=radio name="c_RAPIDQ_8" > Greater T2-weighting
+</li>
+		
+
+<li id="correct_RAPIDQ_8"><input type=radio name="c_RAPIDQ_8" id="c_RAPIDQ_8"> Increased signal-to-noise
+</li>
+<li ><input type=radio name="c_RAPIDQ_8" > Spatial blurring
+</li>
+		
+<li ><input type=radio name="c_RAPIDQ_8" >  Higher signal from fat
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_RAPIDQ_8" onclick="showAnswer('RAPIDQ_8')" value="Show Answer"></p>
+				
+<p class="explan" id="a_RAPIDQ_8"> Longer ETL's are associated with a decrease in overall signal-to-noise ratio (SNR) and contrast-to-noise ratio (CNR) because the later echoes in the train are smaller in amplitude. 
+<a href="fse-parameters.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+<!-- ################ SECTION RAPIDQ, QUIZ QUESTION  10############## -->
+
+<li style="margin-top: 8px"> What image changes would <u>not</u> be seen with increasing echo spacing (ESP)?
+<ol type="a" id="q_RAPIDQ_9">
+
+<li ><input type=radio name="c_RAPIDQ_9" > Increased motion artifacts
+</li>
+		
+<li ><input type=radio name="c_RAPIDQ_9" > Increased susceptibility artifacts
+</li>
+<li ><input type=radio name="c_RAPIDQ_9" >  Increased edge-related artifacts
+</li>
+
+<li id="correct_RAPIDQ_9"><input type=radio name="c_RAPIDQ_9" id="c_RAPIDQ_9"> Increased signal-to-noise
+</li>
+		
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_RAPIDQ_9" onclick="showAnswer('RAPIDQ_9')" value="Show Answer"></p>
+				
+<p class="explan" id="a_RAPIDQ_9">Increasing echo spacing (ESP) permits the use of longer TE's but adversely impacts SNR and CNR.  Motion, susceptibility, and edge-related artifacts increase.  In general, increased ESP has predominantly deleterious consequences on image quality; the shortest permitted ESP should therefore be chosen in most applications<a href="fse-parameters.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+<!-- ################ SECTION RAPIDQ, QUIZ QUESTION  11############## -->
+
+<li style="margin-top: 8px"> What is the reason fat looks brighter on FSE/TSE than on Conventional SE images?
+<ol type="a" id="q_RAPIDQ_10">
+
+<li ><input type=radio name="c_RAPIDQ_10" > FSE/TSE have more intrinsic T1-weighting
+</li>
+		
+
+<li id="correct_RAPIDQ_10"><input type=radio name="c_RAPIDQ_10" id="c_RAPIDQ_10"> Multiple FSE/TSE 180º-pulses disrupt J-coupling in fat molecules
+</li>
+<li ><input type=radio name="c_RAPIDQ_10" > Rapid phase-encode gradient switching inf FSE/TSE disrupts diffusion of fatty acids
+</li>
+		
+<li ><input type=radio name="c_RAPIDQ_10" >  It’s just a visual illusion; the absolute fat signal is unchanged.
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_RAPIDQ_10" onclick="showAnswer('RAPIDQ_10')" value="Show Answer"></p>
+				
+<p class="explan" id="a_RAPIDQ_10"> Although several factors may contribute to the FSE "bright fat" phenomenon, the dominant mechanism is thought to be T2 prolongation secondary to disruption of J-coupling interactions that take normally place between adjacent fat protons.
+<a href="bright-fat.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+		
+
+
+
+
+
+<!-- ################ SECTION RAPIDQ, QUIZ QUESTION  12############## -->
+
+<li style="margin-top: 8px"> Comparing FSE/TSE and CSE, which statement is false?
+<ol type="a" id="q_RAPIDQ_11">
+<li id="correct_RAPIDQ_11"><input type=radio name="c_RAPIDQ_11" id="c_RAPIDQ_11"> FSE/TSE shows increased sensitivity to susceptibility changes.
+</li>
+		
+
+<li ><input type=radio name="c_RAPIDQ_11" > FSE/TSE demonstrates increased magnetization transfer effects.
+</li>
+		
+<li ><input type=radio name="c_RAPIDQ_11" > FSE/TSE demonstrates spatial blurring
+</li>
+
+<li ><input type=radio name="c_RAPIDQ_11" >  FSE/TSE demonstrates pseudo-edge enhancement
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_RAPIDQ_11" onclick="showAnswer('RAPIDQ_11')" value="Show Answer"></p>
+				
+<p class="explan" id="a_RAPIDQ_11"> FSE/TSE sequences are <u>less</u> sensitive to susceptibility changes, as the 180°-refocusing pulses occurring at very short intervals allow relatively little time for susceptibility-induced dephasing. 
+<a href="other-fse-differences.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+<!-- ################ SECTION RAPIDQ, QUIZ QUESTION  13############## -->
+
+<li style="margin-top: 8px"> Which pulse would be considered a <i>driven-equilibrium</i> pulse if played at the end of an MR sequence?
+<ol type="a" id="q_RAPIDQ_12">
+
+<li ><input type=radio name="c_RAPIDQ_12" > +90º
+</li>
+		
+<li ><input type=radio name="c_RAPIDQ_12" > +180º
+</li>
+
+<li id="correct_RAPIDQ_12"><input type=radio name="c_RAPIDQ_12" id="c_RAPIDQ_12"> −90º
+</li>
+		
+<li ><input type=radio name="c_RAPIDQ_12" >  −180º
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_RAPIDQ_12" onclick="showAnswer('RAPIDQ_12')" value="Show Answer"></p>
+				
+<p class="explan" id="a_RAPIDQ_12"> Driven equilibrium (DE), also known as fast recovery, is technique in which a −90º "flip-back" pulse is used to help restore longitudinal magnetization at the end of an MR sequence.
+<a href="driven-equilibrium.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION RAPIDQ, QUIZ QUESTION  14############## -->
+
+<li style="margin-top: 8px"> Comparing the tissue energy deposition of RF-pulses, which is true?
+<ol type="a" id="q_RAPIDQ_13">
+
+<li ><input type=radio name="c_RAPIDQ_13" > Both 90º- and 180º-pulses deposit approximately the same energy
+</li>
+		
+<li ><input type=radio name="c_RAPIDQ_13" > A 180º-pulse deposits twice the energy as a 90º-pulse.
+</li>
+<li ><input type=radio name="c_RAPIDQ_13" >  A 180º-pulse deposits half the energy as a 90º-pulse.
+</li>
+
+<li id="correct_RAPIDQ_13"><input type=radio name="c_RAPIDQ_13" id="c_RAPIDQ_13"> A 180º-pulse deposits four times the energy as a 90º-pulse.
+</li>
+		
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_RAPIDQ_13" onclick="showAnswer('RAPIDQ_13')" value="Show Answer"></p>
+				
+<p class="explan" id="a_RAPIDQ_13"> Energy deposition from an RF-pulse is proportional to the square of the flip angle (α²). Thus, a 180°-pulse deposits 4x the energy of a 90°-pulse. 
+<a href="reduced-flip-angle-fse.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION RAPIDQ, QUIZ QUESTION  15############## -->
+
+<li style="margin-top: 8px"> Which pulse sequence feature is not commonly implemented as described in 3D-FSE sequences like CUBE/SPACE/VISTA?
+<ol type="a" id="q_RAPIDQ_14">
+
+<li ><input type=radio name="c_RAPIDQ_14" > Very short TE’s (2-4 ms)
+</li>
+		
+
+<li id="correct_RAPIDQ_14"><input type=radio name="c_RAPIDQ_14" id="c_RAPIDQ_14"> Medium length echo trains (Turbo factors 8-16) 
+</li>
+<li ><input type=radio name="c_RAPIDQ_14" > Reduced flip angles
+</li>
+		
+<li ><input type=radio name="c_RAPIDQ_14" >  Partial Fourier imaging with zero-interpolation filling.
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_RAPIDQ_14" onclick="showAnswer('RAPIDQ_14')" value="Show Answer"></p>
+				
+<p class="explan" id="a_RAPIDQ_14">3D-FSE sequences use extremely long echo trains, with perhaps 100-200 echoes. Other features include non-selective RF pulses, parallel imaging, and optimized k-space trajectories.
+<a href="spacecubevista.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+<!-- ################ SECTION RAPIDQ, QUIZ QUESTION 16############## -->
+
+<li style="margin-top: 8px"> Why is a zig-zag k-space trajectory commonly used for echo planar imaging instead of a consistent Cartesian (left to right) trajectory as in spin-echo imaging?
+<ol type="a" id="q_RAPIDQ_15">
+
+<li ><input type=radio name="c_RAPIDQ_15" > It offers better spatial resolution.
+</li>
+		
+<li ><input type=radio name="c_RAPIDQ_15" > It has fewer artifacts.
+</li>
+
+<li id="correct_RAPIDQ_15"><input type=radio name="c_RAPIDQ_15" id="c_RAPIDQ_15"> It is faster to perform.
+</li>
+		
+<li ><input type=radio name="c_RAPIDQ_15" >  It is done in the phase-encode direction rather than frequency-encode direction.
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_RAPIDQ_15" onclick="showAnswer('RAPIDQ_15')" value="Show Answer"></p>
+				
+<p class="explan" id="a_RAPIDQ_15"> The zig-zag trajectory is popular because it is easy to program and faster, as it doesn’t require rewinding the readout gradient back to −k<sub>max</sub> after each echo. The spatial resolution is the same, and the zig-zag is prone to more artifacts, like Nyquist N/2 ghosts.
+<a href="echo-planar-imaging.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION RAPIDQ, QUIZ QUESTION  17############## -->
+
+<li style="margin-top: 8px"> All of the following statements about single-shot FSE (HASTE) are true except
+<ol type="a" id="q_RAPIDQ_16">
+<li id="correct_RAPIDQ_16"><input type=radio name="c_RAPIDQ_16" id="c_RAPIDQ_16"> Gradient echo signal generation is used for speed.
+</li>
+
+<li ><input type=radio name="c_RAPIDQ_16" > The total number of echoes may exceed 200.
+</li>
+		
+<li ><input type=radio name="c_RAPIDQ_16" > Phase-conjugate symmetry is exploited to limit phase-encode steps.
+</li>
+
+		
+<li ><input type=radio name="c_RAPIDQ_16" >  Common applications include MR cholangiography and MR myelography.
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_RAPIDQ_16" onclick="showAnswer('RAPIDQ_16')" value="Show Answer"></p>
+				
+<p class="explan" id="a_RAPIDQ_16"> Implicit in its name SS-FSE/HASTE is a fast-spin echo technique, meaning that spin-echoes, not gradient echoes are recorded.
+<a href="hastess-fse.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+
+
+
+
+
+
+
+
+<!--##################################################-->
+<!--############SCORING SECTION Needs to go at end of each subsection-->
+
+</ol><p><input type=button id="show_all_RAPIDQ" onclick="showAllAnswers('RAPIDQ')" value="Show All Answers for Section"><span style="font-weight: bold" id="scoretxt_RAPIDQ"></span></p>
+<p><a href="#top">Back to top of page</a></p></div>
+<!--END OF SCORING SECTION-->
+
+
+
+</div>
+
+
+
+</div>
+
+<div><div id="262718201302943437" align="left" style="width: 100%; overflow-y: hidden;" class="wcustomhtml"><!-- ###############NEW QUIZ SUBSECTION ##################-->
+
+<hr style="1px solid black">
+<!-- Creates optional line above new Quiz Subsection Title ---->
+
+<h1 style="color:black";><a name="2"></a>Parallel Imaging</h1>
+
+<!-- The Section Name and its corresponding number (here 0) which has an href in the index must be changed/filled in.  Note that the first section is identified as “0” here only;  and the second section is denoted “2”, etc. 
+
+This is confusing because subsequently it is denoted as Section 1 and reference to all questions in this section begin with a 1.  However, the first question of Section 1 is called question 0, presumably to assist in scoring.
+
+Thus, the first question of Section 1 is denoted as q_1_0 and its second question is denoted q_1_1.	
+
+When a second section of Questions is added, this is called Section 2 with first and second questions denoted q_2_0 and q_2_1. 
+
+Each section has counting variables corresponding to each question. So the counting variables  are denoted c_1_0 for the Section 1/first question, while c_2_1 counts for Section 2/second question. -->
+
+<!-- FOR THE PURPOSES OF THIS DOCUMENT WE WILL CONSIDER ALL QUESTIONS TO REFER TO SECTION PIQUIZ and are numbered consecutively. THE WORD DOCUMENT CAN THEN BE PUT INTO PROPER FORM BY “SEARCH AND REPLACE PIQUIZ BY THE APPROPRIATE SECTION NUMBER”-->
+
+
+<!-- ################ SECTION M, QUIZ QUESTION  1############## -->
+
+<ol><li style="margin-top: 8px"> Which of the following statements about parallel imaging is false?
+<ol type="a" id="q_PIQUIZ_0">
+
+<li ><input type=radio name="c_PIQUIZ_0" > It can be used with virtually all pulse sequences.
+</li>
+		
+<li ><input type=radio name="c_PIQUIZ_0" > It requires multiple receiver coils.
+</li>
+
+<li id="correct_PIQUIZ_0"><input type=radio name="c_PIQUIZ_0" id="c_PIQUIZ_0"> It can be performed in any direction.
+</li>
+		
+<li ><input type=radio name="c_PIQUIZ_0" > Its primary purpose is to reduce the number of required phase-encoding steps.
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_PIQUIZ_0" onclick="showAnswer('PIQUIZ_0')" value="Show Answer"></p>
+				
+<p class="explan" id="a_PIQUIZ_0"> The allowed direction(s) in which PI can be performed depends on the arrangement of coils in the array. Specifically, the coils must should have different sensitivity profiles along the direction chosen for PI. PI cannot not be used with just a single surface, head, knee, or large body coil having only one pair of quadrature output channels.
+
+<a href="pi-coils-and-sequences.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+
+<!-- ################ SECTION PIQUIZ, QUIZ QUESTION  2############## -->
+
+<li style="margin-top: 8px"> Which of the following is <u>not</u> a disadvantage of parallel imaging?
+<ol type="a" id="q_PIQUIZ_1">
+<li id="correct_PIQUIZ_1"><input type=radio name="c_PIQUIZ_1" id="c_PIQUIZ_1"> Increased susceptibility artifacts.
+</li>
+
+<li ><input type=radio name="c_PIQUIZ_1" > Increased aliasing artifacts.
+</li>
+		
+<li ><input type=radio name="c_PIQUIZ_1" > Coil calibration artifacts.
+</li>
+
+		
+<li ><input type=radio name="c_PIQUIZ_1" >  Increased noise in a non-uniform fashion with reduced SNR. 
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_PIQUIZ_1" onclick="showAnswer('PIQUIZ_1')" value="Show Answer"></p>
+				
+<p class="explan" id="a_PIQUIZ_1"> Phase-related distortions in the MR signal due to susceptibility are reduced (not increased) by the PI acquisition and reconstruction process. This is especially advantageous in echo-planar sequences.
+<a href="why-and-when-to-use.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION PIQUIZ, QUIZ QUESTION  3############## -->
+
+<li style="margin-top: 8px"> Comparing image domain PI techniques (like SENSE/ASSET) and k-space PI techniques like (GRAPPA/ARC), which statement is false?
+<ol type="a" id="q_PIQUIZ_2">
+
+<li ><input type=radio name="c_PIQUIZ_2" > For high R(acceleration)-values, image domain PI techniques provide slightly higher SNR.
+</li>
+		
+
+<li id="correct_PIQUIZ_2"><input type=radio name="c_PIQUIZ_2" id="c_PIQUIZ_2"> Image domain PI performs better in heterogeneous body regions (like the chest)
+</li>
+<li ><input type=radio name="c_PIQUIZ_2" > K-space PI techniques display less aliasing and are more useful when small FOVs are needed.
+</li>
+		
+<li ><input type=radio name="c_PIQUIZ_2" >  K-space PI techniques are more effective at minimizing susceptibility distortions.
+
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_PIQUIZ_2" onclick="showAnswer('PIQUIZ_2')" value="Show Answer"></p>
+				
+<p class="explan" id="a_PIQUIZ_2"> Image domain PI techniques like SENSE/ASSET perform poorly in heterogenous body regions. This is because accurate coil sensitivity maps may difficult to obtain.  The lungs are a prime example. 
+<a href="two-types-of-pi.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION PIQUIZ, QUIZ QUESTION  4############## -->
+<li style="margin-top: 8px"> What is the proper order of steps in acquiring an image-domain PI image (like SENSE/ASSET)? Abbreviations: A = Acquire partial k-space data; G = Generate coil sensitivity maps; R = Reconstruct individual coil images; U = Unfold/combine partial FOV images.
+<ol type="a" id="q_PIQUIZ_3">
+
+<li ><input type=radio name="c_PIQUIZ_3" > A — G — R — U
+</li>
+		
+<li ><input type=radio name="c_PIQUIZ_3" > G — A — U — R
+</li>
+
+<li id="correct_PIQUIZ_3"><input type=radio name="c_PIQUIZ_3" id="c_PIQUIZ_3"> G — A — R — U
+</li>
+		
+<li ><input type=radio name="c_PIQUIZ_3" >  A — G — U — R
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_PIQUIZ_3" onclick="showAnswer('PIQUIZ_3')" value="Show Answer"></p>
+				
+<p class="explan" id="a_PIQUIZ_3"> The proper order is Generate/Acquire/Reconstruct/Unfold (c).
+<a href="senseasset.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+
+
+
+ 
+<!-- ################ SECTION PIQUIZ, QUIZ QUESTION  5############## -->
+
+<li style="margin-top: 8px"> What is the proper order of steps in acquiring an k-space PI image (like GRAPPA/ARC)? Abbreviations: A = Acquire partial k-space data; C = Combine data into magnitude image; E = Estimate missing k-space lines; G = generate individual coil images
+<ol type="a" id="q_PIQUIZ_4">
+
+<li ><input type=radio name="c_PIQUIZ_4" > A — C — E — G
+</li>
+		
+
+<li id="correct_PIQUIZ_4"><input type=radio name="c_PIQUIZ_4" id="c_PIQUIZ_4"> A — E — G — C
+</li>
+<li ><input type=radio name="c_PIQUIZ_4" > E — A — G — C
+</li>
+		
+<li ><input type=radio name="c_PIQUIZ_4" >  E — A — C — G
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_PIQUIZ_4" onclick="showAnswer('PIQUIZ_4')" value="Show Answer"></p>
+				
+<p class="explan" id="a_PIQUIZ_4"> The proper order is Acquire/Estimate/Generate/Combine (b).
+<a href="grappaarc.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION PIQUIZ, QUIZ QUESTION  6############## -->
+
+<li style="margin-top: 8px"> Which of the following statements about CAIPIRINHA sequence is false?
+<ol type="a" id="q_PIQUIZ_5">
+<li id="correct_PIQUIZ_5"><input type=radio name="c_PIQUIZ_5" id="c_PIQUIZ_5"> It can be classified as an image-domain PI technique.
+</li>
+		
+
+<li ><input type=radio name="c_PIQUIZ_5" > Acceleration factors (R) of 4 are typical.
+</li>
+		
+<li ><input type=radio name="c_PIQUIZ_5" > It is most commonly used for 3D dynamic liver imaging.
+</li>
+
+<li ><input type=radio name="c_PIQUIZ_5" >  It uses shifting k-space sampling patterns to reduce pixel aliasing and overlap.
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_PIQUIZ_5" onclick="showAnswer('PIQUIZ_5')" value="Show Answer"></p>
+				
+<p class="explan" id="a_PIQUIZ_5"> CAIPIRINHA is clearly a k-space (not image domain) PI technique, as it depends on k-space data sampling and manipulation prior to reconstruction.
+ 
+<a href="caipirinha.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION PIQUIZ, QUIZ QUESTION  7############## -->
+
+<li style="margin-top: 8px"> What happens to the imaging time in a PI study as the acceleration factor (R) is increased from 2 to 8?
+<ol type="a" id="q_PIQUIZ_6">
+<li id="correct_PIQUIZ_6"><input type=radio name="c_PIQUIZ_6" id="c_PIQUIZ_6"> It decreases by a factor of 4
+</li>
+
+<li ><input type=radio name="c_PIQUIZ_6" > It decreases by a factor of 2
+</li>
+		
+<li ><input type=radio name="c_PIQUIZ_6" > It decreases by a factor of √2
+</li>
+
+		
+<li ><input type=radio name="c_PIQUIZ_6" >  It decreases by a factor of 1/√2
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_PIQUIZ_6" onclick="showAnswer('PIQUIZ_6')" value="Show Answer"></p>
+				
+<p class="explan" id="a_PIQUIZ_6"> Imaging time is inversely related to R, so if R quadruples (from 2 to 8), the imaging time is reduced by a factor of 4<a href="noise-in-pi.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+	
+<!-- ################ SECTION PIQUIZ, QUIZ QUESTION  8############## -->
+
+<li style="margin-top: 8px"> What happens to the signal-to-noise ratio (SNR) in a PI study as the acceleration factor (R) is increased from 2 to 8?
+<ol type="a" id="q_PIQUIZ_7">
+
+<li ><input type=radio name="c_PIQUIZ_7" > It decreases by a factor of 4
+</li>
+		
+
+<li id="correct_PIQUIZ_7"><input type=radio name="c_PIQUIZ_7" id="c_PIQUIZ_7"> It decreases by a factor of 2
+</li>
+<li ><input type=radio name="c_PIQUIZ_7" > It decreases by a factor of √2
+</li>
+		
+<li ><input type=radio name="c_PIQUIZ_7" >  It decreases by a factor of 1/√2
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_PIQUIZ_7" onclick="showAnswer('PIQUIZ_7')" value="Show Answer"></p>
+				
+<p class="explan" id="a_PIQUIZ_7"> SNR is inversely related to √R, so if R quadruples (from 2 to 8), the SNR is reduced by a factor of √4 = 2. 
+<a href="noise-in-pi.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION PIQUIZ, QUIZ QUESTION  9############## -->
+
+<li style="margin-top: 8px"> Which statement about the g-factor is false?
+<ol type="a" id="q_PIQUIZ_8">
+
+<li ><input type=radio name="c_PIQUIZ_8" > It depends on the number and location of coils.
+</li>
+		
+<li ><input type=radio name="c_PIQUIZ_8" > It depends on the direction of phase-encoding
+</li>
+
+<li ><input type=radio name="c_PIQUIZ_8" >  It varies by location across the image. 
+</li>
+<li id="correct_PIQUIZ_8"><input type=radio name="c_PIQUIZ_8" id="c_PIQUIZ_8"> Typical values range from about 10 to 100.
+</li>
+		
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_PIQUIZ_8" onclick="showAnswer('PIQUIZ_8')" value="Show Answer"></p>
+				
+<p class="explan" id="a_PIQUIZ_8"> The g-factor depends on 1) number and location of surface coils, 2) coil loading, 3) plane of imaging, 4) direction of phase-encoding within the scan plane, and 5) voxel location within the imaged region. With typical coil designs in common use, g-factors ranging from 1.0 to 2.0 across the imaging volume are commonly measured.
+<a href="noise-in-pi.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+<!-- ################ SECTION PIQUIZ, QUIZ QUESTION  10############## -->
+
+<li style="margin-top: 8px"> The g-factor in the middle of a homogenous phantom imaged with PI is 2.0 while that near its periphery is 1.0. How do the SNR of the center and periphery compare?
+<ol type="a" id="q_PIQUIZ_9">
+<li id="correct_PIQUIZ_9"><input type=radio name="c_PIQUIZ_9" id="c_PIQUIZ_9"> SNR (center) is one-half as large as SNR (periphery).
+</li>
+
+<li ><input type=radio name="c_PIQUIZ_9" > SNR (center) is equal to SNR (periphery).
+</li>
+		
+<li ><input type=radio name="c_PIQUIZ_9" > SNR (center) is twice as large as SNR (periphery).
+</li>
+
+		
+<li ><input type=radio name="c_PIQUIZ_9" >  SNR (center) is four times as large as SNR (periphery).
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_PIQUIZ_9" onclick="showAnswer('PIQUIZ_9')" value="Show Answer"></p>
+				
+<p class="explan" id="a_PIQUIZ_9"> SNR is inversely related to the g-factor, so if the g-factor doubles, the SNR is only ½ as large.
+<a href="noise-in-pi.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+<!-- ################ SECTION PIQUIZ, QUIZ QUESTION  11############## -->
+
+<li style="margin-top: 8px"> Artifacts specific to parallel imaging include all of the following except
+<ol type="a" id="q_PIQUIZ_10">
+
+<li ><input type=radio name="c_PIQUIZ_10" > Coil sensitivity artifacts
+</li>
+		
+<li ><input type=radio name="c_PIQUIZ_10" > Fold-over (SENSE) ghosts
+</li>
+
+<li id="correct_PIQUIZ_10"><input type=radio name="c_PIQUIZ_10" id="c_PIQUIZ_10"> Chemical shift
+</li>
+		
+<li ><input type=radio name="c_PIQUIZ_10" >  Spatially dependent noise
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_PIQUIZ_10" onclick="showAnswer('PIQUIZ_10')" value="Show Answer"></p>
+				
+<p class="explan" id="a_PIQUIZ_10"> Chemical shift artifacts are unaffected by the PI reconstruction process and are thus not unique.
+<a href="artifacts-in-pi.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+		
+
+
+
+
+
+
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--##################################################-->
+<!--############SCORING SECTION Needs to go at end of each subsection-->
+
+</ol><p><input type=button id="show_all_PIQUIZ" onclick="showAllAnswers('PIQUIZ')" value="Show All Answers for Section"><span style="font-weight: bold" id="scoretxt_PIQUIZ"></span></p>
+<p><a href="#top">Back to top of page</a></p></div>
+<!--END OF SCORING SECTION-->
+
+
+
+</div>
+
+
+
+</div>

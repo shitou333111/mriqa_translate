@@ -1,0 +1,151 @@
+<div id="content"><div id="wsite-content" class="wsite-elements wsite-not-footer">
+	<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:58.472222222222%; padding:0 15px;">
+					
+						
+
+<h2 class="wsite-content-title" style="text-align:center;">配准/标准化&nbsp;</h2>
+
+<div class="paragraph" style="text-align:center;"><strong><em><font color="#0376be"><font size="4">配准和标准化有什么区别？它们是如何执行的？&nbsp;</font></font></em></strong><strong><em>&nbsp;</em></strong></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:41.527777777778%; padding:0 15px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-thin" style="padding-top:10px;padding-bottom:10px;margin-left:0px;margin-right:0px;text-align:center">
+<a href='uploads/3/4/5/7/34572113/screen-shot-2016-07-12-at-6-29-04-pm_orig.png' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/screen-shot-2016-07-12-at-6-29-04-pm3666.png?262" alt="fMRI 配准" style="width:262;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;"><em><strong><font color="#24678d">配准</font></strong></em><font color="#2a2a2a">&nbsp;(或简称为&nbsp;</font><em><strong><font color="#24678d">registration</font></strong></em><font color="#2a2a2a">) 指的是将来自<em style="color:rgb(42, 42, 42)"><u>单个</u>受试者</em>的 fMRI 数据与该受试者自身但独立获取的解剖成像研究进行对齐和叠加。解剖研究通常来自同一次扫描中获取的另一组 MRI 序列，但也可能来自完全不同的成像模态（PET、CT 等）。</font></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;"><em><strong><font color="#24678d">标准化</font></strong></em> 是一个类似的过程，它将 fMRI 数据对齐并变形到一个通用的解剖模板中。最广泛使用的两个模板是 Talairach 和 MNI 图谱。配准是针对单个受试者的数据进行的，而标准化通常是针对<em>&nbsp;<u>多个</u>受试者</em>的数据进行的。&nbsp;</div>
+
+<span class='imgPusher' style='float:right;height:0px'></span><span style='display: table;width:auto;position:relative;float:right;max-width:100%;;clear:right;margin-top:11px;*margin-top:22px'><a href='uploads/3/4/5/7/34572113/6136054_1_orig.gif' rel='lightbox' onclick='if (!lightboxLoaded) return false'><img src="uploads/3/4/5/7/34572113/6136054_16c98.gif?250" style="margin-top: 10px; margin-bottom: 10px; margin-left: 10px; margin-right: 10px; border-width:1px;padding:3px; max-width:100%" alt="图片" class="galleryImageBorder wsite-image" /></a><span style="display: table-caption; caption-side: bottom; font-size: 90%; margin-top: -10px; margin-bottom: 10px; text-align: center;" class="wsite-caption">BOLD 激活区在 3D 脑图像上的配准<br>（由西门子公司提供）</span></span>
+<div class="paragraph" style="text-align:skip_to_justify;display:block;"><font color="#2a2a2a"><strong style="color:rgb(0, 0, 0)"><font color="#8d5024"><font size="4">配准概述</font></font></strong><br /><br />&#8203;对于配准，单个受试者的 fMRI 数据通常叠加在同一次扫描期间获取的 MR 解剖图像上。解剖参考通常来自具有高分辨率体素（例如，1mm x 1mm x 1mm）的 3D MR 序列（例如，MP-RAGE）。体素应该是<em><strong><font color="#24678d">各向同性</font></strong></em><font color="#2a2a2a">的（完美的立方体，各维度相等），以便数据能够被旋转、重新切片和操作。<br /><br />&#8203;数据预处理中的许多相同的图像校正和对齐技术也用于执行配准。<span style="color:rgb(0, 0, 0)">这些在 Klein 等人（2009 年）的参考文献以及下面 Ashburner 和 Friston 的教科书章节中有更全面的描述。几乎所有方法都从使用插值技术进行图像重采样开始，然后是刚体变换（平移、旋转、缩放和剪切）。接着通常会采用优化协议，通常是通过最小化一个<font color="#0376be"><strong><em>代价函数</em></strong></font><span style="color:rgb(0, 0, 0)">来衡量每次迭代后 fMRI 数据与解剖数据之间的差异程度。</span></font></div>
+<hr style="width:100%;clear:both;visibility:hidden;"></hr>
+
+<div class="paragraph" style="text-align:skip_to_justify;"><strong><font size="4" color="#8d5024">标准化概述</font></strong></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;"><font color="#2a2a2a">标准化比配准更复杂，因为必须对齐多个受试者的数据。为了将不同形状的大脑挤压到一个共同的模板或参考空间中，必须进行大量的图像变形和扭曲。&nbsp;</font></div>
+
+<div><div class="wsite-image wsite-image-border-none" style="padding-top:0px;padding-bottom:10px;margin-left:0px;margin-right:0px;text-align:center">
+<a href='uploads/3/4/5/7/34572113/normalization-from-rorden_orig.jpg' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/normalization-from-rorden_orig.jpg" alt="fMRI 标准化" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%">标准化将一个或多个受试者的 fMRI 数据变形到一个共同的解剖模板中。（改编自 Chris Rorden）</div>
+</div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;">标准化可能从将每个人的 fMRI 数据与其自身的解剖图像进行配准开始，就像单受试者情况一样。然而，更常见的是，跳过这一步，直接转换到所需的坐标系。<em><strong><font color="#24678d">仿射变换</font></strong></em>（包括位移、旋转、反射、缩放和剪切）以及非线性方法在此过程中经常被使用。通过正则化（即对过度拉伸或收缩施加惩罚）或组织分割（即分离灰质和白质），可以使这些方法更加稳健。<span style="color:rgb(135, 135, 135)">&nbsp;</span>最近，采用贝叶斯统计的有限元技术已被开发出来，以获得可优化的变形场的最大后验概率估计。</div>
+
+<span class='imgPusher' style='float:left;height:0px'></span><span style='display: table;width:283px;position:relative;float:left;max-width:100%;;clear:left;margin-top:0px;*margin-top:0px'><a href='uploads/3/4/5/7/34572113/7157406_orig.gif' rel='lightbox' onclick='if (!lightboxLoaded) return false'><img src="uploads/3/4/5/7/34572113/71574064734.gif?273" style="margin-top: 15px; margin-bottom: 0px; margin-left: 0px; margin-right: 20px; border-width:0; max-width:100%" alt="Talaraich 图谱" class="galleryImageBorder wsite-image" /></a><span style="display: table-caption; caption-side: bottom; font-size: 90%; margin-top: -0px; margin-bottom: 0px; text-align: center;" class="wsite-caption">Talaraich 图谱图像（1988）</span></span>
+<div class="paragraph" style="text-align:skip_to_justify;display:block;">在大多数 fMRI 研究中，两种不同的模板系统被广泛使用。<span style="color:rgb(0, 0, 0)">&nbsp;</span><em style="color:rgb(0, 0, 0)"><strong><font color="#24678d">Talaraich 图谱</font></strong></em><span style="color:rgb(0, 0, 0)">&nbsp;是最古老的（1988 年），基于对一位女性大脑尸检获得的厚矢状解剖切片的照片。然后根据这些照片绘制了手描图，并将其放置在一个以连合前-连合后线为参考的直角坐标系中。如今更广泛使用的是来自&nbsp;</span><em style="color:rgb(0, 0, 0)"><font color="#24678d"><strong>蒙特利尔神经病学研究所</strong></font></em>的模板。这些模板源自数百名健康年轻人的 MRI 扫描。这两个空间可以相互转换，尽管有些困难，因为 Talaraich 大脑的颞叶比 MNI 大脑更大。<font color="#24678d"><em><strong>国际脑图谱联盟</strong></em></font>已采用 MNI 数据作为其推荐的多个 fMRI 皮层映射脑模板的基础。&nbsp;目前流行的模板是 ICBM152，它使用了 152 个正常成人大脑 MRI 扫描的数据。</div>
+<hr style="width:100%;clear:both;visibility:hidden;"></hr>
+
+<div><div class="wsite-image wsite-image-border-none" style="padding-top:10px;padding-bottom:10px;margin-left:0px;margin-right:0px;text-align:center">
+<a href='uploads/3/4/5/7/34572113/8421896_orig.jpg' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/8421896b5dc.jpg?667" alt="ICBM 模板" style="width:667;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%">国际脑图谱联盟 2009a 非线性对称 1x1x1mm 模板，基于 MNI 数据集</div>
+</div></div>
+
+<div><div id="172229211810233951" align="left" style="width: 100%; overflow-y: hidden;" class="wcustomhtml"><html> <head><script src="gdpr/gdprscript6f19.js?buildTime=1774025472"></script> <script type="text/javascript" 
+></script> 
+<script type="text/javascript">
+		$(function() {$('#Q').click(function() {$('.Q').toggle(500); return false;});});</script></head><body>
+<a href="#" id=Q><h3><font color="#378a57">进阶讨论（显示/隐藏）»</font></h3></a><div class=Q style="display:none;">
+
+<!--content goes below here-->
+
+<h3>配准中应用于解剖图像的图像校正</h3>
+
+<p>正如原始 fMRI 数据可能失真一样，用于配准的 T1 或 T2 解剖图像也可能失真。这些解剖图像通常也必须经过采集前或预处理校正步骤。例如：</p>
+
+<p>     <b>1.  <u>梯度非线性补偿</u>。</b> 通常使用诸如 "Gradwarp" 之类的方法来校正由梯度非线性引起的图像失真。许多商用扫描仪会自动将其作为常规图像处理的一部分来完成。</p>
+
+<p>     <b>2.  <u>B1 不均匀性校正</u>。</b> 这指的是由于<b>B<sub>1</sub></b>发射场的变化或非均匀头部线圈接收 RF 信号引起的信号强度差异。可以在图像采集阶段进行校准扫描，以考虑这些空间依赖性的信号变化。</p> 
+
+<p>     <b>3.  <u>介电效应不均匀性校正</u>。</b> 这指的是由于驻波和介电效应引起的信号强度变化，这些问题在 3T 及以上场强时变得越来越严重。可以通过强度校正滤波器或直方图峰锐化算法（如 N3 技术）来减少这些影响。</p> 
+
+<h3>多模态配准的注意事项</h3>
+
+<p>如果解剖 MR 图像与 fMRI 研究在同一扫描期间获取，那么数据中的头文件信息将允许执行全自动的初始对齐。如果解剖数据来自不同的模态（如 CT），或者如果患者在功能性和解剖性 MR 序列之间发生了显著移动，则可能需要手动调整以确保图像集大致对应。在某些情况下，数据集之间的初始对齐是通过手动匹配图像上的指定点来完成的。这些点可能是一个容易识别的解剖结构（如中线前连合）或一个外部标志（如附着在头皮上的基准标记）。</p>
+
+<h3>Talairach 患者</h3>
+
+<p>关于其大脑被用于 Talairach 图谱的那位女性，几乎一无所知。20 世纪 90 年代发表的轶事参考文献表明，她可能是法国人，60-69 岁，右利手，可能酗酒。我曾试图追溯不同作者的这些说法，但迄今为止无法证实任何关于她人口统计信息的陈述。1988 年的 T&T 图谱除了说明受试者为女性外，没有提及任何其他信息，不幸的是，Talariach 和 Tournoux 都已去世，无法进一步评论。我怀疑，因为 T&T 在巴黎工作，所以人们只是假设这位女性是法国人，而关于酗酒的提及很可能只是对热爱葡萄酒的法国人的一种诋毁。我也对她 60 多岁的年龄表示怀疑，因为在我看来，对于这个年龄段的普通人来说，她的脑沟和脑室似乎相当小。如果任何读者对此受试者有直接了解，请告诉我！</p>
+
+<!--content goes above here-->
+</div></body>
+<!-- Mirrored from mriquestions.com/registrationnormalization.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 21 Mar 2026 06:43:01 GMT -->
+</html></div>
+
+
+
+</div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div><div class="paragraph" style="text-align:skip_to_justify;"><strong>参考文献</strong><br /><font color="#2a2a2a">&nbsp; &nbsp; &nbsp;Ashburner J, Friston KJ. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/ch2.pdf">Rigid body registration</a>. In: Frackowiak RSJ (ed). <em>Human Brain Function</em>, 2nd ed. London: Academic Press, 2004. (pdf made available on-line by the authors at </font><a href="http://www.fil.ion.ucl.ac.uk/spm/doc/books/hbf2/">http://www.fil.ion.ucl.ac.uk/spm/doc/books/hbf2/</a>)<br /><font color="#2a2a2a">&nbsp; &nbsp; &nbsp;Ashburner J, Friston KJ. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/ch3.pdf">Spatial normalization using basis functions</a>. In: Frackowiak RSJ (ed). <em>Human Brain Function</em>, 2nd ed. London: Academic Press, 2004. (pdf made available on-line by the authors at </font><a href="http://www.fil.ion.ucl.ac.uk/spm/doc/books/hbf2/">http://www.fil.ion.ucl.ac.uk/spm/doc/books/hbf2/</a>)<br />&nbsp;&nbsp; &nbsp;&nbsp;<font color="#2a2a2a">Ashburner J, Friston KJ. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/ch4.pdf">High-dimensional image warping</a>. In: Frackowiak RSJ (ed).&nbsp;<em>Human Brain Function</em>, 2nd ed. London: Academic Press, 2004. (pdf made available on-line by the authors at&nbsp;</font><a href="http://www.fil.ion.ucl.ac.uk/spm/doc/books/hbf2/">http://www.fil.ion.ucl.ac.uk/spm/doc/books/hbf2/</a><span>)</span><br />&nbsp; &nbsp; &nbsp;Brett M, Christoff K, Cusack R, Lancaster JL. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/talairachversusmni.pdf">Using the Talairach atlas with the MNI template</a>. Medical Research Council, 1997. (Downloaded from brainmap.org 5/20/16)<br />&nbsp;&nbsp; &nbsp; Greve DN, Fischl B. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/greve_bbr_1-s2.0-s1053811909006752-main.pdf">Accurate and robust brain image alignment using boundary-based registration</a>. NeuroImage 2009; 48:63-73.&nbsp; &nbsp; &nbsp;<font color="#2a2a2a">&nbsp;<br />&nbsp; &nbsp; &nbsp;Klein A, Andersson J, Ardekani BA, et al. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/klein_registration_algorithms_1-s2.0-s1053811908012974-main.pdf">Evaluation of 14 nonlinear deformation algorithms applied to human brain MRI registration</a>. NeuroImage 2009; 46:786-802. (Good review of various functional-structural co-registration and spatial normalization algorithms)<br />&nbsp;&nbsp; &nbsp;&nbsp;</font>Lancaster JL, Woldorff MG, Parsons LM, et al. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/taileraich_lancaster_hbm_00.pdf">Automated Talairach atlas labels for functional brain mapping</a>. Hum Brain Mapp 2000; 10:120-131.<br /><span>&nbsp; &nbsp; &nbsp;Talairach J, Tournoux P. <em>Co-planar Stereotaxic Atlas of the Human Brain: 3-Dimensional Proportional System - an Approach to Cerebral Imaging</em>. New York: Thieme Medical Publishers,1988.</span></div><div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;"><strong>相关问题</strong><br /><em><strong>&nbsp; &nbsp; &nbsp;<a href="data-pre-processing.html">功能磁共振成像（fMRI）数据的预处理步骤有哪些？&nbsp;<br /></a>&nbsp; &nbsp; &nbsp;</strong></em><strong style="color:rgb(3, 118, 190)"><em><a href="activation-blobs.html">功能磁共振成像（fMRI）图像上的那些激活“斑点”是如何生成的，它们究竟代表什么？</a></em></strong><em></em><br /></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div style="text-align:skip_to_justify;"><div style="height: 0px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-normal" href="data-pre-processing.html" >
+<span class="wsite-button-inner">← &nbsp;上一问题</span>
+</a>
+<div style="height: 0px; overflow: hidden;"></div></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div style="text-align:right;"><div style="height: 0px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-normal" href="fmri-statistical-analysis.html" >
+<span class="wsite-button-inner">下一问题 &nbsp;→</span>
+</a>
+<div style="height: 0px; overflow: hidden;"></div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div style="text-align:center;"><div style="height: 0px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-highlight" href="complete-list-of-questions.html" >
+<span class="wsite-button-inner">↑&nbsp;问题完整列表 ↑</span>
+</a>
+<div style="height: 10px; overflow: hidden;"></div></div>
+</div></div>

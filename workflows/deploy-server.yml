@@ -30,7 +30,6 @@ jobs:
       - name: Build
         run: npm run build
         env:
-          # Server root deployment; no GitHub Pages sub-path prefix.
           BASE_URL: /
 
       - name: Upload dist to server tmp path
@@ -40,10 +39,10 @@ jobs:
           username: ${{ secrets.SSH_USER }}
           key: ${{ secrets.SSH_KEY }}
           port: ${{ secrets.SSH_PORT || 22 }}
-          source: dist/*
-          target: /tmp/wants_record_pwa-deploy
+          source: frontend/dist/*
+          target: /tmp/mriqa_translate-deploy
           overwrite: true
-          strip_components: 1
+          strip_components: 2
 
       - name: Atomic deploy on server
         uses: appleboy/ssh-action@v1.0.3
@@ -59,9 +58,7 @@ jobs:
             RELEASE_DIR="${RELEASES_DIR}/release-${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}"
 
             mkdir -p "$RELEASE_DIR"
-            cp -a /tmp/wants_record_pwa-deploy/. "$RELEASE_DIR/"
+            cp -a /tmp/mriqa_translate-deploy/. "$RELEASE_DIR/"
             ln -sfn "$RELEASE_DIR" "${TARGET_DIR}/current"
 
-            # If Nginx/Apache points to current/ this is enough.
-            # Keep only latest 5 releases.
             ls -1dt "${RELEASES_DIR}"/release-* 2>/dev/null | tail -n +6 | xargs -r rm -rf

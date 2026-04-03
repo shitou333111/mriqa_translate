@@ -1,0 +1,2717 @@
+<div id="content"><div id="wsite-content" class="wsite-elements wsite-not-footer">
+	<div><div id="299925795121526226" align="left" style="width: 100%; overflow-y: hidden;" class="wcustomhtml"><!--THIS IS THE MASTER HEADER SECTION FOR QUIZZES ON EACH BIG TAB-->
+<html>
+<head><script src="/gdpr/gdprscript.js?buildTime=1774025472"></script>
+<title>磁体与扫描仪自我评估</title>
+<meta name="keywords" content="放射学物理, 复习题, MRI物理">
+<meta name="description" content="来自MRIquestions.com的复习测验题集">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="/mr_styles.css">
+<style>
+.explan {
+	display: none;
+	font-style: italic;
+	margin-top: 2px;
+	margin-bottom: 6px;
+}
+</style>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-52206512-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+<script>
+function showAnswer(q_string) {
+	var button = document.getElementById('show_'+q_string);
+	var shown = button.value == "Hide Answer";
+	if(!shown) {
+		document.getElementById('a_'+q_string).style.display = "block";
+		
+		document.getElementById('correct_'+q_string).style.fontWeight = "bold";
+		if(document.getElementById('c_'+q_string).checked) {
+			document.getElementById('correct_'+q_string).style.color = "Green";
+		} else {
+			document.getElementById('correct_'+q_string).style.color = "Red";
+		}
+		
+		button.value = "Hide Answer";
+	} else {
+		document.getElementById('a_'+q_string).style.display = "none";
+		button.value = "Show Answer";
+	}
+}
+
+function showAllAnswers(topic) {
+	var button = document.getElementById('show_all_'+topic);
+	var shown = button.value == "Hide All Answers for Section";
+	
+	var i = 0;
+	var correct = 0;
+	var ans_el;
+	while((ans_el=document.getElementById('a_'+topic+'_'+i)) != null) {
+		if(document.getElementById('c_'+topic+'_'+i).checked) {
+			correct++;
+		}
+		if(!shown) {
+			ans_el.style.display = "block";
+			document.getElementById('correct_'+topic+'_'+i).style.fontWeight = "bold";
+			if(document.getElementById('c_'+topic+'_'+i).checked) {
+				document.getElementById('correct_'+topic+'_'+i).style.color = "Green";
+			} else {
+				document.getElementById('correct_'+topic+'_'+i).style.color = "Red";
+			}
+		} else {
+			ans_el.style.display = "none";
+		}
+		i++;
+	}
+	
+	var scoretext = document.getElementById('scoretxt_'+topic);
+	scoretext.innerHTML = '你答对了 '+correct+'/'+i+' 题，得分 '+Math.round(correct/i*100)+'%';
+	
+	if(!shown) {
+		button.value = "Hide All Answers for Section";
+	} else {
+		button.value = "Show All Answers for Section";
+	}
+}
+
+function scoreAnswers(topic) {
+	var button = document.getElementById('score_'+topic);
+	
+	var i = 0;
+	var correct = 0;
+	var ans_el;
+	while((ans_el=document.getElementById('a_'+topic+'_'+i)) != null) {
+		if(document.getElementById('c_'+topic+'_'+i).checked) {
+			correct++;
+		}
+		i++;
+	}
+	
+	var scoretext = document.getElementById('scoretxt_'+topic);
+	scoretext.innerHTML = '你答对了 '+correct+'/'+i+' 题，得分 '+Math.round(correct/i*100)+'%';
+}
+
+function changeMode(button_value) {
+	if(button_value != 0) {
+		window.location = "/review/mri_b.html?mode="+button_value;
+	}
+}
+</script>
+<style type="text/css">
+.button_unchecked {
+	border: 2px outset #3498db;
+	background: #3498db;
+	background-image: -webkit-linear-gradient(top, #3498db, #2980b9);
+	background-image: -moz-linear-gradient(top, #3498db, #2980b9);
+	background-image: -ms-linear-gradient(top, #3498db, #2980b9);
+	background-image: -o-linear-gradient(top, #3498db, #2980b9);
+	background-image: linear-gradient(to bottom, #3498db, #2980b9);
+	padding: 4px;
+	
+	font-size: 120%;
+	font-weight: bold;
+}
+.button_checked {
+	border: 2px inset #3498db;
+	background: #3498db;
+	background-image: -webkit-linear-gradient(top, #3498db, #2980b9);
+	background-image: -moz-linear-gradient(top, #3498db, #2980b9);
+	background-image: -ms-linear-gradient(top, #3498db, #2980b9);
+	background-image: -o-linear-gradient(top, #3498db, #2980b9);
+	background-image: linear-gradient(to bottom, #3498db, #2980b9);
+	padding: 4px;
+	
+	font-size: 120%;
+	font-weight: bold;
+}
+</style>
+</head>
+
+<!-- END OF MASTER HEADER -->
+
+
+
+
+<!--SECOND SECTION: Lists Subsections for Questions below-->
+<body style="background-color:white">
+<div class="main_div">
+<h1 style="color:black";><a name="top"></a>磁体与扫描仪测验</h1>
+<div style="font-size: 140%; font-family: sans-serif">
+<ul>
+	<li><a href="#0">基础电磁学</a></li>
+	<li><a href="#1">MR磁体</a></li>
+	<li><a href="#2">梯度</a></li>
+	<li><a href="#3">射频与线圈</a></li>
+	<li><a href="#4">场地规划</a></li>
+	
+</ul>
+
+<hr style="1px solid black">
+</div>
+
+
+
+<!-- THIRD Part CREATES TITLE OF QUIZ SUBSECTION -->
+		<h1 style="color:black";><a name="0"></a>基础电磁学</h1>
+		
+		
+<!--END of subsection NAME and back to top link-->
+
+
+<!-- START OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+<!--This is question 0 of  Section 1, so note that the value 1_0 must be placed in 9 locations. The second question in this section is denoted q1_1.  The first question of section 2 is denoted q2_0.  Note that the first <ol> should be left off of subsequent questions or indenting will be off. Also a final </div> is needed at the end of each section-->
+
+
+<ol><li style="margin-top: 8px">当流经导线的电流方向反转时，导线周围的磁场<ol type="a" id="q_1_0">
+
+<li ><input type=radio name="c_1_0" > 不变</li>
+		
+<li ><input type=radio name="c_1_0" > 增加</li>
+		
+<li ><input type=radio name="c_1_0" > 消失</li>
+
+<li id="correct_1_0"><input type=radio name="c_1_0" id="c_1_0"> 方向反转 </li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_1_0" onclick="showAnswer('1_0')" value="显示答案"></p>
+				
+<p class="explan" id="a_1_0">安培定律指出，导线中的电流（<i>i</i>）会在导线周围感应出磁场（<b>B</b>）。如果电流方向反转，磁场方向也随之反转，因此d)正确。磁场的大小取决于电流的大小，因此b)和c)错误。<a href="/what-causes-magnetism.html" target="_blank">链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+<!-- START OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+<!--This is question 0 of  Section 1, so note that the value 1_0 must be placed in 9 locations. The second question in this section is denoted q1_1.  The first question of section 2 is denoted q2_0.  Note that the first <ol> should be left off of subsequent questions or indenting will be off. Also a final </div> is needed at the end of each section-->
+
+
+<li style="margin-top: 8px">物质的体磁性质主要源于<ol type="a" id="q_1_1">
+
+<li ><input type=radio name="c_1_1" > 质子</li>
+		
+<li ><input type=radio name="c_1_1" > 中子</li>
+
+<li id="correct_1_1"><input type=radio name="c_1_1" id="c_1_1"> 电子 </li>
+		
+<li ><input type=radio name="c_1_1" > 整个原子核</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_1_1" onclick="showAnswer('1_1')" value="显示答案"></p>
+				
+<p class="explan" id="a_1_1">固有电子自旋和电子轨道角动量的结合是物质体磁性质的主要原因。质子、中子和整个原子核具有自旋，但磁效应的大小相对较小，仅限于原子核附近区域。<a href="/what-causes-magnetism.html" target="_blank">链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+<li style="margin-top: 8px">如果导线中的电流加倍，感生磁场<ol type="a" id="q_1_2">
+<li id="correct_1_2"><input type=radio name="c_1_2" id="c_1_2"> 加倍 </li>
+
+<li ><input type=radio name="c_1_2" > 变为四倍</li>
+
+		
+<li ><input type=radio name="c_1_2" > 保持不变</li>
+		
+<li ><input type=radio name="c_1_2" > 减半</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_1_2" onclick="showAnswer('1_2')" value="显示答案"></p>
+				
+<p class="explan" id="a_1_2">安培定律指出，导线中的电流（<i>i</i>）会在导线周围感应出与电流成正比的磁场（<b>B</b>）。如果电流加倍，<b>B</b>的大小也加倍。<a href="/what-causes-magnetism.html" target="_blank">链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+
+
+<li style="margin-top: 8px">导线周围磁力线的方向可以用______确定<ol type="a" id="q_1_3">
+
+<li id="correct_1_3"><input type=radio name="c_1_3" id="c_1_3"> 右手定则 </li>
+
+<li ><input type=radio name="c_1_3" > 左手定则</li>
+		
+<li ><input type=radio name="c_1_3" > 法拉第定律</li>
+		
+<li ><input type=radio name="c_1_3" > 楞次定律</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_1_3" onclick="showAnswer('1_3')" value="显示答案"></p>
+				
+<p class="explan" id="a_1_3">弗莱明提出了右手定则：用右手握住载流导线，拇指指向电流方向，则手指弯曲的方向即为感生磁场的方向。<a href="/what-causes-magnetism.html" target="_blank">链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+<li style="margin-top: 8px">在外加静磁场中，静止导体上的感应电压<ol type="a" id="q_1_4">
+
+<li ><input type=radio name="c_1_4" > 取决于导体与磁场的夹角</li>
+		
+<li ><input type=radio name="c_1_4" > 随时间增加</li>
+
+<li id="correct_1_4"><input type=radio name="c_1_4" id="c_1_4"> 为零 </li>
+		
+<li ><input type=radio name="c_1_4" > 取决于磁场的强度</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_1_4" onclick="showAnswer('1_4')" value="显示答案"></p>
+				
+<p class="explan" id="a_1_4">这是法拉第-楞次定律的一个例子，感应电压与磁场的变化率（<i>dB/dt</i>）成正比。本例中导体和磁场都是静态的，因此<i>dB/dt = 0</i>，感应电压为零。<a href="what-causes-magnetism.html" target="_blank">链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+
+
+<li style="margin-top: 8px">关于电与磁的关系，以下哪项陈述是错误的？<ol type="a" id="q_1_5">
+
+<li ><input type=radio name="c_1_5" > 导线中的恒定电流会在导线周围感应出恒定磁场。</li>
+		
+<li ><input type=radio name="c_1_5" > 导线中的变化电流会在导线周围感应出变化磁场。</li>
+
+<li id="correct_1_5"><input type=radio name="c_1_5" id="c_1_5"> 恒定磁场会在附近的静止导线中感应出电压。</li>
+		
+<li ><input type=radio name="c_1_5" > 变化磁场会在附近的导线中感应出电压。</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_1_5" onclick="showAnswer('1_5')" value="显示答案"></p>
+				
+<p class="explan" id="a_1_5">安培定律指出，导线中的电流（i）会在导线周围感应出磁场（B）。如果电流恒定，磁场恒定；如果电流波动，磁场也随之波动。因此(a)和(b)正确。
+
+法拉第-楞次定律指出，变化磁场可以在附近的导线中感应出电势（电压）。该电压（<i>V</i>）的大小与磁场的变化率（<i>dB/dt</i>）成正比。因此(d)正确。恒定磁场不随时间变化（<i>dB/dt = 0</i>），因此不会在附近导线中感应出电压。故(c)错误。  
+
+<a href="/what-causes-magnetism.html" target="_blank">链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+
+<li style="margin-top: 8px">关于特斯拉（T）的哪项问题是正确的？<ol type="a" id="q_1_6">
+
+
+<li ><input type=radio name="c_1_6" > 它是cgs单位制中磁感应强度的官方单位。</li>
+		
+<li ><input type=radio name="c_1_6" > 1特斯拉 = 1,000高斯（G）</li>
+		
+<li ><input type=radio name="c_1_6" > 1 G = 1 mT</li>
+
+<li id="correct_1_6"><input type=radio name="c_1_6" id="c_1_6"> 它是道路上最酷的汽车之一</li>
+
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_1_6" onclick="showAnswer('1_6')" value="显示答案"></p>
+				
+<p class="explan" id="a_1_6">特斯拉是国际单位制（SI）（以前称为mks（米-千克-秒）制）中磁感应强度的单位。高斯是cgs（厘米-克-秒）制中的对应单位，因此a)错误。1特斯拉 = 10,000 G，且1 G = 0.1 mT，因此b)和c)都错误。剩下选项d)作为正确答案，这一点大家都知道！<a href="/what-is-a-tesla.html" target="_blank">链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+
+<li style="margin-top: 8px">关于磁场强度，哪项陈述是正确的？<ol type="a" id="q_1_7">
+
+<li id="correct_1_7"><input type=radio name="c_1_7" id="c_1_7"> 地球磁场约为0.5 G。 </li>
+
+<li ><input type=radio name="c_1_7" > 用于拾起汽车的废金属场电磁铁比大多数MR扫描仪的主磁场强得多。</li>
+		
+<li ><input type=radio name="c_1_7" > 用于人体的研究型MR扫描仪现已存在场强超过20 T的系统。</li>
+		
+<li ><input type=radio name="c_1_7" > 更高场强的扫描仪具有更宽的孔径，以容纳额外的磁通线。</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_1_7" onclick="showAnswer('1_7')" value="显示答案"></p>
+				
+<p class="explan" id="a_1_7">赤道处的地球磁场约为0.5 G，因此a)是正确答案。废金属场电磁铁的场强通常约为1T，受限于钢的磁通密度，因此比大多数MR扫描仪弱得多，故b)错误。目前最大的人体扫描仪为11.7T，故c)错误。更高场强的扫描仪孔径更小，而非更大，故d)错误。<a href="/how-strong-is30t.html" target="_blank">链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+
+<li style="margin-top: 8px">以下哪种材料是顺磁性的？<ol type="a" id="q_1_8">
+
+		
+<li ><input type=radio name="c_1_8" > 水</li>
+		
+<li ><input type=radio name="c_1_8" > 脂肪</li>
+
+<li ><input type=radio name="c_1_8" > 骨骼</li>
+
+<li id="correct_1_8"><input type=radio name="c_1_8" id="c_1_8"> 空气 </li>
+
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_1_8" onclick="showAnswer('1_8')" value="显示答案"></p>
+				
+<p class="explan" id="a_1_8">大多数生物组织（包括水、脂肪和骨骼）是弱抗磁性的。分子氧（O<sub>2</sub>）是顺磁性的，其效应超过了空气中其他成分N<sub>2</sub>和CO<sub>2</sub>的弱抗磁性。<a href="/what-is-susceptibility.html" target="_blank">链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+<li style="margin-top: 8px">被磁场弱斥的材料称为<ol type="a" id="q_1_9">
+
+<li ><input type=radio name="c_1_9" > 顺磁性</li>
+
+<li id="correct_1_9"><input type=radio name="c_1_9" id="c_1_9"> 抗磁性 </li>
+		
+<li ><input type=radio name="c_1_9" > 超顺磁性</li>
+		
+<li ><input type=radio name="c_1_9" > 铁磁性</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_1_9" onclick="showAnswer('1_9')" value="显示答案"></p>
+				
+<p class="explan" id="a_1_9">抗磁性材料产生的内部极化（<i>J</i>）与外施磁场方向相反，因此b)正确。其他类别材料的极化方向与磁场相同，并被磁场吸引。<a href="/what-is-susceptibility.html" target="_blank">链接至问答讨论</a> 
+</p>
+
+
+<!-- START OF 11-20 CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+<!--   -->
+
+
+<li style="margin-top: 8px">对于______材料，磁化率（<i>χ</i>）为负。<ol type="a" id="q_1_10">
+
+<li ><input type=radio name="c_1_10" > 顺磁性</li>
+		
+<li ><input type=radio name="c_1_10" > 超顺磁性</li>
+
+<li id="correct_1_10"><input type=radio name="c_1_10" id="c_1_10"> 抗磁性 </li>
+		
+<li ><input type=radio name="c_1_10" > 铁磁性</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_1_10" onclick="showAnswer('1_10')" value="显示答案"></p>
+				
+<p class="explan" id="a_1_10">当内部极化（<i>J</i>）方向与主磁场（<i>B</i>）相反时，磁化率（<i>χ</i>）为负。根据定义，只有抗磁性材料具有负磁化率。<a href="/what-is-susceptibility.html" target="_blank">链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+<!-- START OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+<!--This is question 0 of  Section 1, so note that the value 1_0 must be placed in 9 locations. The second question in this section is denoted q1_1.  The first question of section 2 is denoted q2_0.  Note that the first <ol> should be left off of subsequent questions or indenting will be off. Also a final </div> is needed at the end of each section-->
+
+
+<li style="margin-top: 8px">当电子自旋阵列通过量子交换相互作用连接起来时，铁磁性材料会形成磁________。<ol type="a" id="q_1_11">
+
+<li ><input type=radio name="c_1_11" > 磁通线</li>
+		
+<li ><input type=radio name="c_1_11" > 磁极</li>
+		
+<li ><input type=radio name="c_1_11" > 矢量</li>
+
+<li id="correct_1_11"><input type=radio name="c_1_11" id="c_1_11"> 磁畴 </li>
+
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_1_11" onclick="showAnswer('1_11')" value="显示答案"></p>
+				
+<p class="explan" id="a_1_11">交换相互作用是一种量子效应，其中未配对电子连接在一起形成单个磁畴，这些磁畴的行为类似于独立的小“磁铁”。<a href="/what-is-ferromagnetism.html" target="_blank">链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+<li style="margin-top: 8px">比较超顺磁性和铁磁性材料，哪项陈述是错误的？<ol type="a" id="q_1_12">
+
+<li ><input type=radio name="c_1_12" > 铁磁性通常比超顺磁性更强。</li>
+		
+<li ><input type=radio name="c_1_12" > 移除磁化场后铁磁性仍然存在。</li>
+
+<li id="correct_1_12"><input type=radio name="c_1_12" id="c_1_12"> 一旦移除外部场，超顺磁性仍然存在。 </li>
+		
+<li ><input type=radio name="c_1_12" > 超顺磁性可被视为单畴粒子。</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_1_12" onclick="showAnswer('1_12')" value="显示答案"></p>
+				
+<p class="explan" id="a_1_12">铁磁性材料保留先前磁化的记忆（剩磁），而超顺磁性粒子是单畴的，但其磁化强度在移除磁化场后消失。<a href="/what-is-superparamagnetism.html" target="_blank">链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+
+<!--SCORING SECTION Needs to go at end of each subsection-->
+</ol><p><input type=button id="show_all_1" onclick="showAllAnswers('1')" value="显示本节所有答案"><span style="font-weight: bold" id="scoretxt_1"></span></p>
+<p><a href="#top">返回页面顶部</a></p></div>
+<!--END OF SCORING SECTION-->
+
+
+<!--SECTION 2 STARTS HERE ####################################################-->
+
+
+<!-- THIRD Part CREATES TITLE OF QUIZ SUBSECTION -->
+<hr style="1px solid black">
+
+		<h1 style="color:black";><a name="1"></a>MR磁体</h1>
+		
+		
+<!--END of subsection NAME and back to top link-->
+
+
+<!-- START OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+<!--This is question 0 of  Section 1, so note that the value 1_0 must be placed in 9 locations. The second question in this section is denoted q_1_1.  The first question of section 2 is denoted q_2_0.  Note that the first <ol> should be left off of subsequent questions or indenting will be off. Also a final </div> is needed at the end of each section-->
+
+
+<ol><li style="margin-top: 8px">临床MR扫描仪最常见的配置是<ol type="a" id="q_2_0">
+
+<li ><input type=radio name="c_2_0" > 开放式孔径超导</li>
+
+<li id="correct_2_0"><input type=radio name="c_2_0" id="c_2_0"> 封闭式孔径超导</li>
+		
+
+		
+<li ><input type=radio name="c_2_0" > 开放式孔径永磁</li>
+
+<li ><input type=radio name="c_2_0" > 偶极电磁铁</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_2_0" onclick="showAnswer('2_0')" value="显示答案"></p>
+				
+<p class="explan" id="a_2_0">如今销售的MR扫描仪中超过90%是封闭式孔径（圆柱形）超导型。第二常见的是开放式孔径永磁型。
+<a href="/types-of-magnets.html" target="_blank">链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+<!-- START OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+<!--This is question 0 of  Section 1, so note that the value 1_0 must be placed in 9 locations. The second question in this section is denoted q_1_1.  The first question of section 2 is denoted q2_0.  Note that the first <ol> should be left off of subsequent questions or indenting will be off. Also a final </div> is needed at the end of each section-->
+
+
+<li style="margin-top: 8px">美国食品药品监督管理局（FDA）允许用于成人的常规临床实践的最高场强是
+<ol type="a" id="q_2_1">
+
+<li ><input type=radio name="c_2_1" > 3.0特斯拉</li>
+		
+<li ><input type=radio name="c_2_1" > 7.0特斯拉</li>
+
+<li id="correct_2_1"><input type=radio name="c_2_1" id="c_2_1"> 8.0特斯拉</li>
+		
+<li ><input type=radio name="c_2_1" > 11.7特斯拉</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_2_1" onclick="showAnswer('2_1')" value="显示答案"></p>
+				
+<p class="explan" id="a_2_1">目前FDA对临床MR扫描仪的限制为成人及1个月以上儿童8.0 T；1个月以下儿童为4.0 T。商业制造的最高场强临床扫描仪为7.0 T，但存在高达11.7 T的人体研究型扫描仪。<a href="/brands-of-scanners.html" target="_blank">链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+<li style="margin-top: 8px">第一家生产商用全身MRI扫描仪的公司是
+<ol type="a" id="q_2_2">
+
+<li ><input type=radio name="c_2_2" > GE</li>
+
+<li id="correct_2_2"><input type=radio name="c_2_2" id="c_2_2"> Fonar</li>
+		
+<li ><input type=radio name="c_2_2" > 西门子</li>
+		
+<li ><input type=radio name="c_2_2" > Technicare</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_2_2" onclick="showAnswer('2_2')" value="显示答案"></p>
+				
+<p class="explan" id="a_2_2">Raymond Damadian于1982年成立了第一家生产临床用MR扫描仪的公司FONAR。
+<a href="/who-invented-mri.html" target="_blank">链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+
+
+<li style="margin-top: 8px">圆柱形封闭式孔径扫描仪中主磁场（B<sub>o</sub>）的方向是<ol type="a" id="q_2_3">
+
+<li id="correct_2_3"><input type=radio name="c_2_3" id="c_2_3"> 圆柱的纵向（沿主轴）
+</li>
+
+<li ><input type=radio name="c_2_3" > 水平方向（横向于圆柱并与地板平行）
+</li>
+		
+<li ><input type=radio name="c_2_3" > 垂直方向（横向于圆柱并与地板垂直）</li>
+		
+<li ><input type=radio name="c_2_3" > 取决于开启的梯度，可以是任意角度</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_2_3" onclick="showAnswer('2_3')" value="显示答案"></p>
+				
+<p class="explan" id="a_2_3">圆柱形扫描仪的主磁场沿圆柱的长轴（螺线管）方向。答案d)明显错误，因为梯度不会改变（B<sub>o</sub>）场的方向。
+<a href="/which-way-does-field-point.html" target="_blank">链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+<li style="margin-top: 8px">以下哪项<u>不是</u>低场和中场（< 1.0 T）MR扫描仪的优势？
+<ol type="a" id="q_2_4">
+
+<li ><input type=radio name="c_2_4" > 价格较低</li>
+		
+<li ><input type=radio name="c_2_4" > 杂散场较低</li>
+
+<li id="correct_2_4"><input type=radio name="c_2_4" id="c_2_4"> 钆强化的检测能力提高</li>
+		
+<li ><input type=radio name="c_2_4" > 组织中的能量沉积较低</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_2_4" onclick="showAnswer('2_4')" value="显示答案"></p>
+				
+<p class="explan" id="a_2_4">在较低场强下，相对于组织的钆强化降低，这是一个缺点。
+<a href="/advantages-to-low-field.html" target="_blank">链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+
+
+<li style="margin-top: 8px">以下哪项<u>不是</u>高场（≥ 1.0 T）MR扫描仪的优势？
+<ol type="a" id="q_2_5">
+
+<li ><input type=radio name="c_2_5" > 更高的信噪比</li>
+		
+<li ><input type=radio name="c_2_5" > 更好地检测钙化和出血</li>
+
+<li id="correct_2_5"><input type=radio name="c_2_5" id="c_2_5"> 金属植入物周围的伪影较小 </li>
+		
+<li ><input type=radio name="c_2_5" > 更好的磁场均匀性</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_2_5" onclick="showAnswer('2_5')" value="显示答案"></p>
+				
+<p class="explan" id="a_2_5">金属物体周围的磁敏感性伪影在高场下比低场下更严重。
+<a href="/advantages-to-low-field.html" target="_blank">链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+
+<li style="margin-top: 8px">以下给出了四种不同磁体的规格。哪一个具有最佳的均匀性？<ol type="a" id="q_2_6">
+
+<li id="correct_2_6"><input type=radio name="c_2_6" id="c_2_6"> 在40 cm DSV上 <1 ppm</li>
+
+<li ><input type=radio name="c_2_6" > 在20 cm DSV上 <1 ppm</li>
+		
+<li ><input type=radio name="c_2_6" > 在40 cm DSV上 >1 ppm </li>
+		
+<li ><input type=radio name="c_2_6" > 在20 cm DSV上 >1 ppm </li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_2_6" onclick="showAnswer('2_6')" value="显示答案"></p>
+				
+<p class="explan" id="a_2_6">均匀性规格通常以在特定球体积（DSV）上的百万分之（ppm）磁场偏差来表示。因此，在最大DSV上具有最小ppm的磁体将是最均匀的——答案a)。<a href="/what-is-homogeneity.html " target="_blank">链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+
+<li style="margin-top: 8px">磁场均匀性差可能以下列方式影响图像质量
+ <ol type="a" id="q_2_7">
+
+
+<li ><input type=radio name="c_2_7" > 阴影伪影</li>
+		
+<li ><input type=radio name="c_2_7" > 空间畸变</li>
+		
+<li ><input type=radio name="c_2_7" > 脂肪抑制差</li>
+<li ><input type=radio name="c_2_7" > 仅a)和b)</li>
+
+<li id="correct_2_7"><input type=radio name="c_2_7" id="c_2_7"> 以上所有 </li>
+
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_2_7" onclick="showAnswer('2_7')" value="显示答案"></p>
+				
+<p class="explan" id="a_2_7">磁体均匀性差可能影响图像质量的多个方面，包括上述所有情况，加上模糊、强度损失、弯曲的层面轮廓和条纹伪影。
+<a href="/why-homogeneity.html" target="_blank">链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+
+<li style="margin-top: 8px">关于被动匀场，以下哪项陈述是正确的？
+<ol type="a" id="q_2_8">
+
+		
+<li ><input type=radio name="c_2_8" > 其主要目的是校正由患者身体产生的场畸变。
+</li>
+		
+<li ><input type=radio name="c_2_8" > 铁磁材料不能用于被动匀场。</li>
+<li id="correct_2_8"><input type=radio name="c_2_8" id="c_2_8"> 被动匀场受室温影响。</li>
+
+<li ><input type=radio name="c_2_8" > 一旦场被校准并实现磁场均匀性，就可以移除被动匀场材料。  
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_2_8" onclick="showAnswer('2_8')" value="显示答案"></p>
+				
+<p class="explan" id="a_2_8">被动匀场涉及放置<u>铁磁</u>元件（通常为板或棒）以校正<u>空</u>磁体（而非包含患者的磁体）的静态场不均匀性。因此a)和b)都是错误的。匀场元件由金属制成，因此匀场质量取决于扫描仪和室温，故答案c)正确。匀场元件在匀场完成后不会被移除，而是保留在磁体中，故d)错误。<a href="/passive-shimming.html" target="_blank">链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+<li style="margin-top: 8px">关于超导性，以下哪项陈述是正确的？
+<ol type="a" id="q_2_9">
+
+<li ><input type=radio name="c_2_9" > 如果温度足够低，所有元素都可以变得超导。</li>
+
+<li ><input type=radio name="c_2_9" > 只有金属可以成为超导体。</li>
+
+<li id="correct_2_9"><input type=radio name="c_2_9" id="c_2_9"> 超导线中心内部的磁场为零。 </li>
+		
+
+		
+<li ><input type=radio name="c_2_9" > 当温度低于转变温度（T<sub>C</sub>）时，导线的电阻线性降低到零。 
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_2_9" onclick="showAnswer('2_9')" value="显示答案"></p>
+				
+<p class="explan" id="a_2_9">只有约一半的已知元素在低温下可以变得超导，因此a)错误。其中大多数是金属或金属合金，但一些非金属陶瓷也可能具有超导性。超导性的发生是瞬时的，一旦跨越转变温度，电阻立即降至零；因此答案d)错误。正确答案是c)，它描述了<b>迈斯纳效应</b>，即所有磁场从超导体内部完全排出，产生完美的抗磁性状态。 
+<a href="/superconductivity.html " target="_blank">链接至问答讨论</a> 
+</p>
+
+
+<!-- START OF 11-20 CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+<!--   -->
+
+
+<li style="margin-top: 8px">几乎所有临床MR扫描仪主绕组中的超导成分是_____的合金。
+ <ol type="a" id="q_2_10">
+
+<li id="correct_2_10"><input type=radio name="c_2_10" id="c_2_10"> 铌（Nb）和钛（Ti） </li>
+
+
+<li ><input type=radio name="c_2_10" > 铌（Nb）和铜（Cu）</li>
+		
+<li ><input type=radio name="c_2_10" > 镍（Ni）和钛（Ti）</li>
+
+		
+<li ><input type=radio name="c_2_10" > 镍（Ni）和铜（Cu）</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_2_10" onclick="showAnswer('2_10')" value="显示答案"></p>
+				
+<p class="explan" id="a_2_10">几乎所有临床超导扫描仪的主绕组都使用嵌入铜芯中的铌钛（NbTi）合金微丝。铜芯不是超导的，但其作用是支撑微丝，并在失超时用作电流分流器。
+<a href="/superconductive-design.html" target="_blank">链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+<!-- START OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+<!--This is question 0 of  Section 1, so note that the value 1_0 must be placed in 9 locations. The second question in this section is denoted q_1_1.  The first question of section 2 is denoted q2_0.  Note that the first <ol> should be left off of subsequent questions or indenting will be off. Also a final </div> is needed at the end of each section-->
+
+
+<li style="margin-top: 8px">典型超导MR扫描仪的低温恒温器包含以下所有，除了
+<ol type="a" id="q_2_11">
+
+<li ><input type=radio name="c_2_11" > 液氦</li>
+
+<li id="correct_2_11"><input type=radio name="c_2_11" id="c_2_11"> 液氮 </li>
+
+		
+<li ><input type=radio name="c_2_11" > 主磁体绕组</li>
+		
+<li ><input type=radio name="c_2_11" >超导匀场线圈</li>
+
+
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_2_11" onclick="showAnswer('2_11')" value="显示答案"></p>
+				
+<p class="explan" id="a_2_11">虽然过去常见，但现代制冷系统已消除了对液氮的需求，因此当今MR扫描仪的低温恒温器中只存在液氦。 
+<a href="/liquid-helium-use.html " target="_blank">链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+<li style="margin-top: 8px">液氦的温度约为
+<ol type="a" id="q_2_12">
+<li id="correct_2_12"><input type=radio name="c_2_12" id="c_2_12"> 4 °K
+</li>
+
+<li ><input type=radio name="c_2_12" > 0 °K </li>
+		
+<li ><input type=radio name="c_2_12" > −4 °K </li>
+
+		
+<li ><input type=radio name="c_2_12" > −400 °C </li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_2_12" onclick="showAnswer('2_12')" value="显示答案"></p>
+				
+<p class="explan" id="a_2_12">用于冷却磁体主绕组的液氦温度仅比绝对零度高几度，约4 °K。这比维持NbTi合金丝超导性所需的转变温度低几度。等于或低于绝对零度（0 °K或−273.15 °C）的温度是不可能的，因此答案b)、c)和d)都是错误的。   
+ <a href="/superconductive-design.html" target="_blank">链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+
+
+<li style="margin-top: 8px">MRI设施通常在门上张贴标志，写道：“警告！磁体始终处于开启状态。”此标志严格来说不适用于
+
+ <ol type="a" id="q_2_13">
+<li id="correct_2_13"><input type=radio name="c_2_13" id="c_2_13"> 电阻式磁体扫描仪 </li>
+
+<li ><input type=radio name="c_2_13" > 永磁体扫描仪</li>
+		
+
+<li ><input type=radio name="c_2_13" > 超导磁体扫描仪</li>
+		
+<li ><input type=radio name="c_2_13" > 该标志适用于所有类型的扫描仪，始终如此。</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_2_13" onclick="showAnswer('2_13')" value="显示答案"></p>
+				
+<p class="explan" id="a_2_13">只有FONAR仍然生产用于人体的电阻式（电磁铁型）MR扫描仪，在不使用时可以关闭。然而，所有永磁体和超导扫描仪始终保持全场强，因此该标志适用于<u>几乎</u>所有MRI设施。<a href="/is-field-ever-turned-off.html" target="_blank">链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+<li style="margin-top: 8px">按下MRI扫描仪房间门附近的“红色大按钮”
+<ol type="a" id="q_2_14">
+
+<li ><input type=radio name="c_2_14" > 即使扫描正在进行，也立即开门</li>
+<li id="correct_2_14"><input type=radio name="c_2_14" id="c_2_14"> 启动磁场的受控失超 </li>
+
+<li ><input type=radio name="c_2_14" > 关闭扫描仪和房间的所有电源</li>
+
+		
+<li ><input type=radio name="c_2_14" > 呼叫急救人员（911）并发出警报</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_2_14" onclick="showAnswer('2_14')" value="显示答案"></p>
+				
+<p class="explan" id="a_2_14">“红色大按钮”通常标记为“磁体停止”或“紧急停运”，按下时会启动磁场的受控失超。只有在危及生命的紧急情况下（例如患者被金属物体压在扫描仪中）才应使用。 
+<a href="/emergency-stop-button.html" target="_blank">链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+
+
+<li style="margin-top: 8px">在磁体失超期间，为何应将患者和员工从扫描室撤离？
+<ol type="a" id="q_2_15">
+
+<li ><input type=radio name="c_2_15" > 即使是少量气态氦也会导致眼睛灼伤和刺激。
+</li>
+
+<li id="correct_2_15"><input type=radio name="c_2_15" id="c_2_15"> 可能发生窒息。</li>
+		
+<li ><input type=radio name="c_2_15" > 很可能发生严重冻伤。
+</li>
+		
+<li ><input type=radio name="c_2_15" >释放的氦可能起火或爆炸。
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_2_15" onclick="showAnswer('2_15')" value="显示答案"></p>
+				
+<p class="explan" id="a_2_15">氦气无味无色，但可能充满扫描室导致窒息。幸运的是，失超管道通常会将几乎所有释放的氦气排出室外，因此据我所知，在医疗环境中从未发生过因失超导致的死亡。直接接触液氦会引起灼伤，但氦气雾不太可能造成眼部损伤或冻伤（尽管如果房间内气体浓度高，理论上可能发生）。<a href="/what-is-a-quench.html" target="_blank">链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+
+
+
+<!--SCORING SECTION Needs to go at end of each subsection-->
+</ol><p><input type=button id="show_all_2" onclick="showAllAnswers('2')" value="显示本节所有答案"><span style="font-weight: bold" id="scoretxt_2"></span></p>
+<p><a href="#top">返回页面顶部</a></p></div>
+<!--END OF SCORING SECTION-->
+
+
+<!-- ###############NEW QUIZ SUBSECTION ##################-->
+
+<hr style="1px solid black">
+<!-- Creates optional line above new Quiz Subsection Title ---->
+
+<h1 style="color:black";><a name="2"></a>梯度</h1>
+
+<!-- The Section Name and its corresponding number (here 0) which has an href in the index must be changed/filled in.  Note that the first section is identified as “0” here only;  and the second section is denoted “2”, etc. 
+
+This is confusing because subsequently it is denoted as Section 1 and reference to all questions in this section begin with a 1.  However, the first question of Section 1 is called question 0, presumably to assist in scoring.
+
+Thus, the first question of Section 1 is denoted as q_1_0 and its second question is denoted q_1_1.	
+
+When a second section of Questions is added, this is called Section 2 with first and second questions denoted q_2_0 and q_2_1. 
+
+Each section has counting variables corresponding to each question. So the counting variables  are denoted c_1_0 for the Section 1/first question, while c_2_1 counts for Section 2/second question. -->
+
+<!-- FOR THE PURPOSES OF THIS DOCUMENT WE WILL CONSIDER ALL QUESTIONS TO REFER TO SECTION 3 and are numbered consecutively. THE WORD DOCUMENT CAN THEN BE PUT INTO PROPER FORM BY “SEARCH AND REPLACE 3 BY THE APPROPRIATE SECTION NUMBER”-->
+
+
+<!-- ################ SECTION M, QUIZ QUESTION  1############## -->
+
+<ol><li style="margin-top: 8px">用于成像的磁场梯度通常以______为单位测量
+<ol type="a" id="q_3_0">
+<li id="correct_3_0"><input type=radio name="c_3_0" id="c_3_0"> 毫特斯拉每米（mT/m）</li>
+
+
+<li ><input type=radio name="c_3_0" > 高斯每秒（G/s）
+</li>
+		
+<li ><input type=radio name="c_3_0" > 特斯拉（T）
+
+</li>
+
+		
+<li ><input type=radio name="c_3_0" > 特斯拉每米每秒（T/m-s）
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_3_0" onclick="showAnswer('3_0')" value="显示答案"></p>
+				
+<p class="explan" id="a_3_0">磁场梯度定义为在特定距离上测量的磁场变化，因此唯一合适的单位是答案a)，毫特斯拉每米 = [磁场强度]/距离。梯度强度也以高斯/厘米（G/cm）报告。
+<a href="/what-is-a-gradient.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+
+<!-- ################ SECTION 3, QUIZ QUESTION  2############## -->
+
+<li style="margin-top: 8px">对于仰卧患者，在层面选择期间仅启用<i>z</i>-梯度来改变患者体内的磁场将产生
+<ol type="a" id="q_3_1">
+
+<li id="correct_3_1"><input type=radio name="c_3_1" id="c_3_1"> 轴位层面</li>
+
+
+<li ><input type=radio name="c_3_1" > 冠状位层面</li>
+		
+<li ><input type=radio name="c_3_1" > 矢状位层面</li>
+
+		
+<li ><input type=radio name="c_3_1" >  斜位层面</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_3_1" onclick="showAnswer('3_1')" value="显示答案"></p>
+				
+<p class="explan" id="a_3_1">施加单一梯度会导致质子频率沿梯度方向随位置变化。这种频率变化可用于空间编码。如果在层面选择和信号读出期间施加梯度，可以选择垂直于梯度方向的层面。<a href="/gradient-coils.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION 3, QUIZ QUESTION  3############## -->
+
+<li style="margin-top: 8px">在层面选择期间同时施加<i>x</i>-梯度和<i>z</i>-梯度会有什么效果？
+<ol type="a" id="q_3_2">
+
+<li ><input type=radio name="c_3_2" > 图像将被扭曲。
+</li>
+		
+<li ><input type=radio name="c_3_2" > 会发生显著的层间串扰。</li>
+
+<li id="correct_3_2"><input type=radio name="c_3_2" id="c_3_2"> 将产生一个斜位层面。</li>
+		
+<li ><input type=radio name="c_3_2" > 扫描仪将显示警告，提示不允许这种组合。
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_3_2" onclick="showAnswer('3_2')" value="显示答案"></p>
+				
+<p class="explan" id="a_3_2">在层面选择期间施加单一梯度会产生垂直于梯度轴的层面。同时施加两个（或三个）梯度会分别产生单斜（或双斜）层面。
+<a href="/gradient-coils.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION 3, QUIZ QUESTION  4############## -->
+
+<li style="margin-top: 8px">当<i>y</i>-梯度开启时，主（<b>B<sub>o</sub></b>）场的方向会发生什么变化？
+<ol type="a" id="q_3_3">
+
+<li ><input type=radio name="c_3_3" > <b>B<sub>o</sub></b>场现在略微指向右侧。
+</li>
+		
+<li ><input type=radio name="c_3_3" > <b>B<sub>o</sub></b>场现在略微指向天花板。
+</li>
+
+		
+<li ><input type=radio name="c_3_3" >  <b>B<sub>o</sub></b>场方向反转。
+</li>
+
+<li id="correct_3_3"><input type=radio name="c_3_3" id="c_3_3"> <b>B<sub>o</sub></b>场保持指向其原始（<i>z</i>）方向。
+</li>
+
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_3_3" onclick="showAnswer('3_3')" value="显示答案"></p>
+				
+<p class="explan" id="a_3_3">梯度不会产生使<b>Bo</b>左右或上下旋转/倾斜的横向分量。它们仅作用于产生<b>Bo</b>的<i>z</i>分量的面内“倾斜”。
+<a href="/gradient-coils.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+
+
+
+ 
+<!-- ################ SECTION 3, QUIZ QUESTION  5############## -->
+
+<li style="margin-top: 8px">用于在圆柱形MR扫描仪中产生<i>z</i>-梯度的基本线圈配置称为
+<ol type="a" id="q_3_4">
+<li id="correct_3_4"><input type=radio name="c_3_4" id="c_3_4"> 麦克斯韦对。
+</li>
+
+
+<li ><input type=radio name="c_3_4" > 双鞍形。</li>
+		
+<li ><input type=radio name="c_3_4" > Golay。</li>
+
+		
+<li ><input type=radio name="c_3_4" >  指纹形。 </li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_3_4" onclick="showAnswer('3_4')" value="显示答案"></p>
+				
+<p class="explan" id="a_3_4"><i>Z</i>-梯度通常使用两个载有相反方向电流的环形线圈产生，这种配置称为麦克斯韦对。列出的其他线圈类型主要用于<i>x</i>-和<i>y</i>-梯度。 
+<a href="/how-do-z-gradients-work.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION 3, QUIZ QUESTION  6############## -->
+
+<li style="margin-top: 8px">关于涡电流，以下哪项陈述是错误的？
+<ol type="a" id="q_3_5">
+
+<li ><input type=radio name="c_3_5" > 它们会产生多种图像伪影，包括重影和模糊。
+ </li>
+		
+<li ><input type=radio name="c_3_5" > 它们是法拉第感应定律的一种表现形式。
+ </li>
+
+<li id="correct_3_5"><input type=radio name="c_3_5" id="c_3_5"> 它们尤其影响具有长<i>TE</i>的传统自旋回波序列。
+ </li>
+		
+<li ><input type=radio name="c_3_5" > 它们会导致组织发热。
+ </li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_3_5" onclick="showAnswer('3_5')" value="显示答案"></p>
+				
+<p class="explan" id="a_3_5">涡电流由快速变化的磁场（尤其是成像梯度切换）产生，因此是法拉第定律的一种表现。它们通常出现在使用短<i>TE</i>的快速梯度回波或平面回波序列中；因此答案c)错误。它们普遍不受欢迎，会产生各种伪影和组织发热问题。  
+ <a href="/eddy-current-problems.html " target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION 3, QUIZ QUESTION  7############## -->
+
+<li style="margin-top: 8px">关于有源屏蔽梯度，哪项陈述是正确的？
+ <ol type="a" id="q_3_6">
+
+<li ><input type=radio name="c_3_6" > 它们是减少超导系统中涡电流的最有效方法。
+ </li>
+		
+<li ><input type=radio name="c_3_6" > 它们是减少超导系统中涡电流的最有效方法。
+ </li>
+<li ><input type=radio name="c_3_6" >  这些线圈中的电流方向与其关联的成像梯度相反。
+</li>
+
+<li id="correct_3_6"><input type=radio name="c_3_6" id="c_3_6"> 以上所有均正确。
+</li>
+		
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_3_6" onclick="showAnswer('3_6')" value="显示答案"></p>
+				
+<p class="explan" id="a_3_6">有源屏蔽梯度在超导扫描仪中几乎普遍使用，因为它们在减少磁体本身涡电流方面非常有效。然而，它们不影响组织中产生的涡电流。
+<a href="/active-shielded-gradients.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+	
+<!-- ################ SECTION 3, QUIZ QUESTION  8############## -->
+
+<li style="margin-top: 8px">以下哪种方法不用于减少涡电流：
+<ol type="a" id="q_3_7">
+
+<li ><input type=radio name="c_3_7" > 有源屏蔽梯度。
+</li>
+		
+<li ><input type=radio name="c_3_7" > 自屏蔽梯度。
+</li>
+
+<li id="correct_3_7"><input type=radio name="c_3_7" id="c_3_7"> 有源匀场线圈。
+</li>
+		
+<li ><input type=radio name="c_3_7" >  预补偿。
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_3_7" onclick="showAnswer('3_7')" value="显示答案"></p>
+				
+<p class="explan" id="a_3_7">“有源屏蔽”和“自屏蔽”梯度是同义词，是减少涡电流的最有效方法。波形预补偿也有帮助。有源匀场线圈用于使主磁场更均匀，与涡电流或其校正无关。
+<a href="/active-shield-confusion.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION 3, QUIZ QUESTION  9############## -->
+
+<li style="margin-top: 8px">现代1.5 T扫描仪中峰值梯度强度的典型值范围为
+<ol type="a" id="q_3_8">
+
+<li ><input type=radio name="c_3_8" > 1-10 mT/m.
+</li>
+<li id="correct_3_8"><input type=radio name="c_3_8" id="c_3_8"> 20-50 mT/m.
+</li>
+		
+<li ><input type=radio name="c_3_8" > 200-400 mT/m.
+</li>
+
+		
+<li ><input type=radio name="c_3_8" >  500-1000 mT/m.
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_3_8" onclick="showAnswer('3_8')" value="显示答案"></p>
+				
+<p class="explan" id="a_3_8">较低场强的永磁体峰值梯度在15-25 mT/m范围内。
+<a href="/gradient-specifications.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+<!-- ################ SECTION 3, QUIZ QUESTION  10############## -->
+
+<li style="margin-top: 8px">梯度从其零值上升到其最大值所需的时间称为其
+<ol type="a" id="q_3_9">
+
+<li id="correct_3_9"><input type=radio name="c_3_9" id="c_3_9"> 上升时间。
+</li>
+
+
+<li ><input type=radio name="c_3_9" > 梯度时间。
+</li>
+		
+<li ><input type=radio name="c_3_9" > 转换速率。
+</li>
+
+		
+<li ><input type=radio name="c_3_9" >  占空比。
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_3_9" onclick="showAnswer('3_9')" value="显示答案"></p>
+				
+<p class="explan" id="a_3_9">这就是上升时间的定义。
+<a href="/gradient-specifications.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+<!-- ################ SECTION 3, QUIZ QUESTION  11############## -->
+
+<li style="margin-top: 8px">梯度转换速率的定义是
+<ol type="a" id="q_3_10">
+
+<li ><input type=radio name="c_3_10" > 峰值梯度强度 ÷ 主磁场强度（<i>Bo</i>）。
+</li>
+		
+<li ><input type=radio name="c_3_10" > 峰值梯度强度 ÷ 梯度开启的总时间。
+</li>
+
+<li id="correct_3_10"><input type=radio name="c_3_10" id="c_3_10"> 峰值梯度强度 ÷ 上升时间。
+</li>
+		
+<li ><input type=radio name="c_3_10" > 梯度每秒开启和关闭的次数。
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_3_10" onclick="showAnswer('3_10')" value="显示答案"></p>
+				
+<p class="explan" id="a_3_10">转换速率定义为峰值梯度强度 ÷ 上升时间。
+<a href="/gradient-specifications.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+		
+
+
+
+
+
+<!-- ################ SECTION 3, QUIZ QUESTION  12############## -->
+
+<li style="margin-top: 8px">转换速率的单位以______给出
+<ol type="a" id="q_3_11">
+
+<li ><input type=radio name="c_3_11" > 毫特斯拉每米（mT/m）。
+</li>
+<li id="correct_3_11"><input type=radio name="c_3_11" id="c_3_11"> 特斯拉每米每秒（T/m/s）。
+</li>
+		
+<li ><input type=radio name="c_3_11" > 特斯拉每秒（T/s）。
+</li>
+
+		
+<li ><input type=radio name="c_3_11" >  毫秒（ms）。 
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_3_11" onclick="showAnswer('3_11')" value="显示答案"></p>
+				
+<p class="explan" id="a_3_11">峰值梯度强度通常以mT/m为单位测量，上升时间以ms为单位测量。它们的比值，即转换速率，因此具有单位T/m/s。
+<a href="/gradient-specifications.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+<!-- ################ SECTION 3, QUIZ QUESTION  13############## -->
+
+<li style="margin-top: 8px">现代1.5 T扫描仪引用的典型最大转换速率值范围为
+<ol type="a" id="q_3_12">
+
+<li ><input type=radio name="c_3_12" > 1−2 T/m/s.
+</li>
+		
+<li ><input type=radio name="c_3_12" > 10−20 T/m/s.
+</li>
+
+<li id="correct_3_12"><input type=radio name="c_3_12" id="c_3_12"> 100−200 T/m/s.
+</li>
+		
+<li ><input type=radio name="c_3_12" >  1000−2000 T/m/s.
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_3_12" onclick="showAnswer('3_12')" value="显示答案"></p>
+				
+<p class="explan" id="a_3_12">答案c)正确。更高的转换速率可在研究型扫描仪中获得，但由于快速切换梯度存在外周神经刺激的风险而受到限制。
+<a href="/gradient-specifications.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION 3, QUIZ QUESTION  14############## -->
+
+<li style="margin-top: 8px">一个在0.25 ms内从0上升到30 mT/m峰值幅度的梯度，其转换速率为
+<ol type="a" id="q_3_13">
+
+<li ><input type=radio name="c_3_13" > 30 T/m/s.
+</li>
+		
+<li ><input type=radio name="c_3_13" > 60 T/m/s.
+</li>
+
+		
+<li ><input type=radio name="c_3_13" >  90 T/m/s.
+</li>
+<li id="correct_3_13"><input type=radio name="c_3_13" id="c_3_13"> 120 T/m/s.
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_3_13" onclick="showAnswer('3_13')" value="显示答案"></p>
+				
+<p class="explan" id="a_3_13">转换速率 = [峰值梯度强度] ÷ [上升时间] = [30 mT/m] ÷ [0.25 ms] = 120 T/m/s。
+<a href="/gradient-specifications.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION 3, QUIZ QUESTION  15############## -->
+
+<li style="margin-top: 8px">在评估MR系统执行快速高分辨率成像的能力时，通常哪项梯度规格最重要？
+<ol type="a" id="q_3_14">
+
+
+<li ><input type=radio name="c_3_14" > 峰值梯度强度。
+</li>
+<li id="correct_3_14"><input type=radio name="c_3_14" id="c_3_14"> 转换速率。
+</li>
+		
+<li ><input type=radio name="c_3_14" > 上升时间。
+</li>
+
+		
+<li ><input type=radio name="c_3_14" >  磁场强度。
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_3_14" onclick="showAnswer('3_14')" value="显示答案"></p>
+				
+<p class="explan" id="a_3_14">转换速率在其定义中同时包含了峰值梯度强度和上升时间，是考虑的最佳单一梯度规格。静态磁场强度是高分辨率成像的重要考虑因素，但不是梯度规格。
+<a href="/gradient-specifications.html " target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+<!-- ################ Gradient SECTION 3, QUIZ QUESTION  16############## -->
+
+<li style="margin-top: 8px">MR扫描仪中存在多少组配对的物理梯度？<ol type="a" id="q_3_15">
+
+<li ><input type=radio name="c_3_15" > 1</li>
+<li ><input type=radio name="c_3_15" >  2 </li>
+
+<li id="correct_3_15"><input type=radio name="c_3_15" id="c_3_15"> 3 </li>
+		
+<li ><input type=radio name="c_3_15" > 6 </li>
+	
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_3_15" onclick="showAnswer('3_15')" value="显示答案"></p>
+				
+<p class="explan" id="a_3_15">所有MR扫描仪中都存在三组配对的主梯度，沿三个主方向（x、y和z）产生场畸变。  <a href="/gradient-coils.html " target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+<!-- ################ Gradient SECTION 3, QUIZ QUESTION  17############## -->
+
+<li style="margin-top: 8px">关于梯度占空比，以下哪项陈述是错误的<ol type="a" id="q_3_16">
+
+<li ><input type=radio name="c_3_16" > 通常以百分比（%）衡量。</li>
+<li ><input type=radio name="c_3_16" > 它表示梯度以最大幅度工作的时间比例。</li>
+<li ><input type=radio name="c_3_16" > 其值取决于脉冲序列时序参数和层面数。 </li>
+
+
+<li id="correct_3_16"><input type=radio name="c_3_16" id="c_3_16"> 其值与脉冲序列类型（SE、IR等）无关。 </li>
+		
+	
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_3_16" onclick="showAnswer('3_16')" value="显示答案"></p>
+				
+<p class="explan" id="a_3_16">占空比定义为脉冲序列期间梯度以最大幅度工作的百分比时间。因此其值随脉冲序列和时序参数变化，故d)错误。<a href="/gradient-specifications.html " target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+
+<!-- ################ Gradient SECTION 3, QUIZ QUESTION  18############## -->
+
+<li style="margin-top: 8px">关于梯度子系统，以下哪项陈述是正确的<ol type="a" id="q_3_17">
+
+<li ><input type=radio name="c_3_17" > 梯度线圈位于低温恒温器内部。</li>
+<li id="correct_3_17"><input type=radio name="c_3_17" id="c_3_17"> 梯度线圈在运行期间会产生大量热量。 </li>
+<li ><input type=radio name="c_3_17" > 梯度线圈由液氦冷却。 </li>
+
+<li ><input type=radio name="c_3_17" >  增加供给梯度的功率会降低梯度斜率。 </li>
+
+		
+	
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_3_17" onclick="showAnswer('3_17')" value="显示答案"></p>
+				
+<p class="explan" id="a_3_17">梯度系统不是超导的，也不位于低温恒温器内。它们确实会产生大量热量，通常需要水和空气冷却（尽管不是液氦冷却）。增加供给梯度的功率会增加（而不是减少）其强度/斜率。<a href="/gradient-heating.html " target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+
+<!--##################################################-->
+<!--############SCORING SECTION Needs to go at end of each subsection-->
+
+</ol><p><input type=button id="show_all_3" onclick="showAllAnswers('3')" value="显示本节所有答案"><span style="font-weight: bold" id="scoretxt_3"></span></p>
+<p><a href="#top">返回页面顶部</a></p></div>
+<!--END OF SCORING SECTION-->
+
+
+<!-- ###############NEW QUIZ SUBSECTION ##################-->
+
+<hr style="1px solid black">
+<!-- Creates optional line above new Quiz Subsection Title ---->
+
+<h1 style="color:black";><a name="3"></a>射频与线圈</h1>
+
+<!-- The Section Name and its corresponding number (here 0) which has an href in the index must be changed/filled in.  Note that the first section is identified as “0” here only;  and the second section is denoted “2”, etc. 
+
+This is confusing because subsequently it is denoted as Section 1 and reference to all questions in this section begin with a 1.  However, the first question of Section 1 is called question 0, presumably to assist in scoring.
+
+Thus, the first question of Section 1 is denoted as q_1_0 and its second question is denoted q_1_1.	
+
+When a second section of Questions is added, this is called Section 2 with first and second questions denoted q_2_0 and q_2_1. 
+
+Each section has counting variables corresponding to each question. So the counting variables  are denoted c_1_0 for the Section 1/first question, while c_2_1 counts for Section 2/second question. -->
+
+<!-- FOR THE PURPOSES OF THIS DOCUMENT WE WILL CONSIDER ALL QUESTIONS TO REFER TO SECTION 4 and are numbered consecutively. THE WORD DOCUMENT CAN THEN BE PUT INTO PROPER FORM BY “SEARCH AND REPLACE 4 BY THE APPROPRIATE SECTION NUMBER”-->
+
+
+<!-- ################ SECTION M, QUIZ QUESTION  1############## -->
+
+<ol><li style="margin-top: 8px"> MR扫描仪中哪些线圈最靠近患者？
+ <ol type="a" id="q_4_0">
+
+<li ><input type=radio name="c_4_0" > 梯度线圈。
+</li>
+
+
+<li id="correct_4_0"><input type=radio name="c_4_0" id="c_4_0"> RF接收线圈。</li>
+
+<li ><input type=radio name="c_4_0" > 匀场线圈。
+</li>
+		
+		
+<li ><input type=radio name="c_4_0" > 体部RF发射线圈。
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_4_0" onclick="showAnswer('4_0')" value="显示答案"></p>
+				
+<p class="explan" id="a_4_0">RF接收线圈放置在最靠近患者的位置，以便以最高灵敏度检测MR信号。
+<a href="/many-kinds-of-coils.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+
+<!-- ################ SECTION 4, QUIZ QUESTION  2############## -->
+
+<li style="margin-top: 8px">在超导MR磁体的结构中，从最外层到最内层的正确线圈顺序是？
+<ol type="a" id="q_4_1">
+
+<li ><input type=radio name="c_4_1" > 主磁体绕组、梯度线圈、RF线圈、屏蔽线圈。
+</li>
+		
+<li ><input type=radio name="c_4_1" > 梯度线圈、屏蔽线圈、主磁体绕组、RF线圈。
+</li>
+
+<li id="correct_4_1"><input type=radio name="c_4_1" id="c_4_1"> 屏蔽线圈、主磁体绕组、梯度线圈、RF线圈。
+</li>
+		
+<li ><input type=radio name="c_4_1" >  RF线圈、屏蔽线圈、主磁体绕组、梯度线圈。
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_4_1" onclick="showAnswer('4_1')" value="显示答案"></p>
+				
+<p class="explan" id="a_4_1">屏蔽线圈是最外层的线圈。其功能是减少来自主磁体绕组的外部杂散场，主磁体绕组是下一个遇到的线圈。接下来是用于改善磁体均匀性的电阻式匀场线圈。然后是梯度线圈，接着是RF发射线圈，最后是RF接收线圈（最靠近患者）。
+<a href="/many-kinds-of-coils.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION 4, QUIZ QUESTION  3############## -->
+
+<li style="margin-top: 8px">虽然大多数局部RF线圈是“仅接收”的，但有些专门设计用于“发射-接收（T/R）”模式。MR供应商通常提供的T/R线圈包括以下所有，除了
+<ol type="a" id="q_4_2">
+
+<li ><input type=radio name="c_4_2" > 头部线圈。
+</li>
+		
+<li ><input type=radio name="c_4_2" > 膝关节线圈。
+</li>
+
+		
+<li ><input type=radio name="c_4_2" >  波谱线圈。
+</li>
+<li id="correct_4_2"><input type=radio name="c_4_2" id="c_4_2"> 脊柱线圈。</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_4_2" onclick="showAnswer('4_2')" value="显示答案"></p>
+				
+<p class="explan" id="a_4_2">标准的脊柱和体部相控阵表面线圈阵列不提供发射/接收双模式操作。
+<a href="/rf-coil-functions.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION 4, QUIZ QUESTION  4############## -->
+
+<li style="margin-top: 8px">1.5 T MR扫描仪的基本工作频率约为64 MHz。在电磁波谱中，这被认为属于______范围。
+<ol type="a" id="q_4_3">
+
+<li ><input type=radio name="c_4_3" > 红外频率。
+</li>
+<li id="correct_4_3"><input type=radio name="c_4_3" id="c_4_3"> 射频。
+</li>		
+<li ><input type=radio name="c_4_3" > X射线频率。
+</li>
+
+
+		
+<li ><input type=radio name="c_4_3" >  微波频率。 
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_4_3" onclick="showAnswer('4_3')" value="显示答案"></p>
+				
+<p class="explan" id="a_4_3">MRI工作的频率范围与无线电和电视传输使用的频率相同。
+<a href="/radiofrequency-waves.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+
+
+
+ 
+<!-- ################ SECTION 4, QUIZ QUESTION  5############## -->
+
+<li style="margin-top: 8px">使用直接放置在患者身上的单元素表面线圈有哪些优势？
+<ol type="a" id="q_4_4">
+<li id="correct_4_4"><input type=radio name="c_4_4" id="c_4_4"> 高信噪比。
+</li>
+
+<li ><input type=radio name="c_4_4" > 增加穿透深度。
+</li>
+		
+<li ><input type=radio name="c_4_4" > 能够实现更大的视野。
+</li>
+
+		
+<li ><input type=radio name="c_4_4" > 以上所有。
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_4_4" onclick="showAnswer('4_4')" value="显示答案"></p>
+				
+<p class="explan" id="a_4_4">单元素表面线圈为接收线圈下方体素信号提供了高信噪比。然而，穿透深度有限，通常小于线圈直径的75%。更大的FOV是不可能的，同样受限于线圈尺寸。
+<a href="/receive-only-coils.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION 4, QUIZ QUESTION  6############## -->
+
+<li style="margin-top: 8px">比较直径为10 cm和20 cm的表面线圈，以下哪项陈述是错误的？
+<ol type="a" id="q_4_5">
+
+<li ><input type=radio name="c_4_5" > 20 cm线圈的敏感体积更大。
+</li>
+		
+<li ><input type=radio name="c_4_5" > 20 cm线圈的穿透深度更大。
+</li>
+
+<li id="correct_4_5"><input type=radio name="c_4_5" id="c_4_5"> 对于线圈正下方的体素，20 cm线圈具有更高的信噪比。
+</li>
+		
+<li ><input type=radio name="c_4_5" >  20 cm线圈提供更大的视野。
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_4_5" onclick="showAnswer('4_5')" value="显示答案"></p>
+				
+<p class="explan" id="a_4_5">对于线圈正下方的体素，10 cm线圈将具有比20 cm线圈更优的信噪比。其他陈述均正确。 
+<a href="/receive-only-coils.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION 4, QUIZ QUESTION  7############## -->
+
+<li style="margin-top: 8px">比较线性和正交线圈
+<ol type="a" id="q_4_6">
+
+<li ><input type=radio name="c_4_6" > 正交线圈提供的信噪比是线性线圈的两倍。
+</li>
+		
+<li ><input type=radio name="c_4_6" > 正交线圈提供的信噪比是线性线圈的四倍。
+</li>
+
+<li id="correct_4_6"><input type=radio name="c_4_6" id="c_4_6"> 正交线圈提供的信噪比约高40%。
+</li>
+		
+<li ><input type=radio name="c_4_6" >  正交线圈大约大40%。
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_4_6" onclick="showAnswer('4_6')" value="显示答案"></p>
+				
+<p class="explan" id="a_4_6">正交线圈可以与线性线圈尺寸相同，但提供的信噪比约为√2（≈ 1.41），即比线性线圈高约40%。
+<a href="/lp-vs-cp-quadrature.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+	
+<!-- ################ SECTION 4, QUIZ QUESTION  8############## -->
+
+<li style="margin-top: 8px">正弦波可以用方程<i>S(t) = A sin (ωt − φ)</i>描述。常数<i>A</i>表示
+<ol type="a" id="q_4_7">
+
+<li ><input type=radio name="c_4_7" > 角频率。
+</li>
+		
+<li ><input type=radio name="c_4_7" > 正负峰值之间的高度差。 
+</li>
+
+<li id="correct_4_7"><input type=radio name="c_4_7" id="c_4_7"> 正负峰值之间高度差的一半。
+</li>
+		
+<li ><input type=radio name="c_4_7" >  相位偏移。
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_4_7" onclick="showAnswer('4_7')" value="显示答案"></p>
+				
+<p class="explan" id="a_4_7">“A”称为正弦波的“幅度”，从零到其最大正值测量。正负峰值之间的总偏移为2A，因此“A”是此差值的一半。
+<a href="/phase-v-frequency1.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION 4, QUIZ QUESTION  9############## -->
+
+<li style="margin-top: 8px">MR扫描仪使用三种不同的磁场——主磁场（<b>B<sub>0</sub></b>）、梯度场（<b>G</b>）和射频场（<b>B<sub>1</sub></b>）。按相对强度从弱到强的顺序，正确的排序是
+<ol type="a" id="q_4_8">
+<li id="correct_4_8"><input type=radio name="c_4_8" id="c_4_8"> <b>B<sub>1</sub></b> < <b>G</b> < <b>B<sub>0</sub></b>
+</li>
+
+<li ><input type=radio name="c_4_8" > <b>G</b> < <b>B<sub>0</sub></b> < <b>B<sub>1</sub></b>
+</li>
+		
+<li ><input type=radio name="c_4_8" > <b>G</b> < <b>B<sub>1</sub></b> < <b>B<sub>0</sub></b>
+</li>
+
+		
+<li ><input type=radio name="c_4_8" >  <b>B<sub>1</sub></b> < <b>B<sub>0</sub></b> < <b>G</b>
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_4_8" onclick="showAnswer('4_8')" value="显示答案"></p>
+				
+<p class="explan" id="a_4_8">主磁场（<b>B<sub>0</sub></b>）要强得多，通常大于1特斯拉。梯度场强度中等，值为mT量级。射频场最小，<b>B<sub>1</sub></b>值约为10−50 μT。
+<a href="/radiofrequency-waves.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+<!-- ################ SECTION 4, QUIZ QUESTION  10############## -->
+
+<li style="margin-top: 8px">以下哪项不是并行（多）发射RF的优势？
+<ol type="a" id="q_4_9">
+
+<li ><input type=radio name="c_4_9" > 减少组织中的RF能量沉积。
+</li>
+		
+<li ><input type=radio name="c_4_9" > 减少阴影伪影。
+</li>
+
+<li id="correct_4_9"><input type=radio name="c_4_9" id="c_4_9"> 由于介电效应导致的驻波增加。
+</li>
+		
+<li ><input type=radio name="c_4_9" >  更均匀的激发。
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_4_9" onclick="showAnswer('4_9')" value="显示答案"></p>
+				
+<p class="explan" id="a_4_9">并行发射RF激发具有许多优势，特别是在场强增加时，包括改善均匀激发和减少伪影。错误的答案a)由于介电效应导致的驻波在并行发射中减少，而不是增加。
+<a href="/multi-transmit-rf.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+<!-- ################ SECTION 4, QUIZ QUESTION  11############## -->
+
+<li style="margin-top: 8px">比较相控阵和并行阵列线圈，以下哪项是正确的？
+<ol type="a" id="q_4_10">
+<li id="correct_4_10"><input type=radio name="c_4_10" id="c_4_10"> 两种类型的线圈都能提高信噪比和增加视野。
+</li>
+
+<li ><input type=radio name="c_4_10" > 两种类型都避免线圈单元重叠。
+</li>
+		
+<li ><input type=radio name="c_4_10" > 相控阵线圈也称为可切换阵列。
+</li>
+
+		
+<li ><input type=radio name="c_4_10" >  两者都可以同样好地与并行成像采集方法配合使用。
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_4_10" onclick="showAnswer('4_10')" value="显示答案"></p>
+				
+<p class="explan" id="a_4_10">只有答案a)正确。线圈单元重叠是相控阵线圈系统的常见设计特征，但必须在并行阵列中避免。虽然一些相控阵线圈与并行成像应用兼容，但大多数不兼容。最后，相控阵和可切换阵列不同，后者在20多年前已基本被放弃。
+<a href="/array-coils.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+		
+
+
+
+
+
+<!-- ################ SECTION 4, QUIZ QUESTION  12############## -->
+
+<li style="margin-top: 8px">并行成像系统由线圈单元、段和通道组成。从患者开始向上通过处理链的正确传输层级是
+<ol type="a" id="q_4_11">
+
+<li ><input type=radio name="c_4_11" > 单元 → 通道 → 段
+
+</li>
+<li id="correct_4_11"><input type=radio name="c_4_11" id="c_4_11"> 单元 → 段 → 通道
+</li>
+		
+<li ><input type=radio name="c_4_11" > 单元 → 通道 → 段
+</li>
+
+		
+<li ><input type=radio name="c_4_11" >  通道 → 单元 → 通道
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_4_11" onclick="showAnswer('4_11')" value="显示答案"></p>
+				
+<p class="explan" id="a_4_11">正确顺序如上所述。
+<a href="/array-coils.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+<!-- ################ SECTION 4, QUIZ QUESTION  13############## -->
+
+<li style="margin-top: 8px">并行接收器线圈阵列的优势包括以下所有，除了
+<ol type="a" id="q_4_12">
+
+<li ><input type=radio name="c_4_12" > 提高信噪比。
+</li>
+		
+<li ><input type=radio name="c_4_12" > 增加视野。
+
+</li>
+
+<li id="correct_4_12"><input type=radio name="c_4_12" id="c_4_12"> 设计容易。
+</li>
+		
+<li ><input type=radio name="c_4_12" >  减少成像时间。
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_4_12" onclick="showAnswer('4_12')" value="显示答案"></p>
+				
+<p class="explan" id="a_4_12">并行线圈配置提供了上述所有优势，但设计容易除外。事实上，在这些阵列中将许多小线圈紧密地封装在一起而不产生显著的磁相互作用是相当困难的。
+<a href="/array-coils.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+<!-- ################ RF and COILS SECTION 4, QUIZ QUESTION  14############## -->
+
+<li style="margin-top: 8px">来自直径为20 cm的单环表面线圈的信号接收有效穿透深度约为<ol type="a" id="q_4_13">
+<li id="correct_4_13"><input type=radio name="c_4_13" id="c_4_13"> 10−15 cm </li>
+<li ><input type=radio name="c_4_13" > 20−25 cm</li>
+<li ><input type=radio name="c_4_13" > 30−40 cm </li>		
+<li ><input type=radio name="c_4_13" > 40−50 cm </li>		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_4_13" onclick="showAnswer('4_13')" value="显示答案"></p>
+				
+<p class="explan" id="a_4_13">来自简单环形RF表面线圈的接收穿透深度通常仅为线圈直径的50-75%。<a href="/receive-only-coils.html " target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+
+<!-- ################ RF and COILS SECTION 4, QUIZ QUESTION  15############## -->
+
+<li style="margin-top: 8px">关于主发射RF体线圈，哪项陈述是错误的？<ol type="a" id="q_4_14">
+<li id="correct_4_14"><input type=radio name="c_4_14" id="c_4_14"> 它通常用于接收MR信号 </li>
+<li ><input type=radio name="c_4_14" > 它内置于扫描仪机架外壳中，患者看不见</li>
+<li ><input type=radio name="c_4_14" > 它被认为是一种收发线圈，能够进行RF发射和接收。 </li>
+<li ><input type=radio name="c_4_14" > 它的发射场（<b>B<sub>1</sub></b>）垂直于主磁场（<b>B<sub>0</sub></b>）。 </li>		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_4_14" onclick="showAnswer('4_14')" value="显示答案"></p>
+				
+<p class="explan" id="a_4_14"> 体线圈隐藏在扫描仪机架外壳内。其主要目的是发射垂直于<b>B<sub>0</sub></b>的<b>B<sub>1</sub></b>场。它是一种能够进行RF发射和接收的收发线圈。然而，它很少用于接收，因为为此目的使用表面线圈可获得更好的信噪比。因此，答案a)是错误的。  <a href="/receive-only-coils.html " target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->	
+
+
+
+
+
+<!--##################################################-->
+<!--############SCORING SECTION Needs to go at end of each subsection-->
+
+</ol><p><input type=button id="show_all_4" onclick="showAllAnswers('4')" value="显示本节所有答案"><span style="font-weight: bold" id="scoretxt_4"></span></p>
+<p><a href="#top">返回页面顶部</a></p></div>
+<!--END OF SCORING SECTION-->
+
+<!-- ###############NEW QUIZ SUBSECTION ##################-->
+
+<hr style="1px solid black">
+<!-- Creates optional line above new Quiz Subsection Title ---->
+
+<h1 style="color:black";><a name="4"></a>场地规划</h1>
+
+<!-- The Section Name and its corresponding number (here 0) which has an href in the index must be changed/filled in.  Note that the first section is identified as “0” here only;  and the second section is denoted “2”, etc. 
+
+This is confusing because subsequently it is denoted as Section 1 and reference to all questions in this section begin with a 1.  However, the first question of Section 1 is called question 0, presumably to assist in scoring.
+
+Thus, the first question of Section 1 is denoted as q_1_0 and its second question is denoted q_1_1.	
+
+When a second section of Questions is added, this is called Section 2 with first and second questions denoted q_2_0 and q_2_1. 
+
+Each section has counting variables corresponding to each question. So the counting variables  are denoted c_1_0 for the Section 1/first question, while c_2_1 counts for Section 2/second question. -->
+
+<!-- FOR THE PURPOSES OF THIS DOCUMENT WE WILL CONSIDER ALL QUESTIONS TO REFER TO SECTION 5 and are numbered consecutively. THE WORD DOCUMENT CAN THEN BE PUT INTO PROPER FORM BY “SEARCH AND REPLACE $ BY THE APPROPRIATE SECTION NUMBER”-->
+
+
+<!-- ################ SECTION 5, QUIZ QUESTION  1############## -->
+
+<ol><li style="margin-top: 8px"> MR系统的以下哪个组件通常不位于相邻的设备室中？
+<ol type="a" id="q_5_0">
+
+<li ><input type=radio name="c_5_0" > RF功率放大器
+</li>
+		
+<li ><input type=radio name="c_5_0" > 梯度放大器
+</li>
+
+		
+<li ><input type=radio name="c_5_0" > 氦泵
+</li>
+<li id="correct_5_0"><input type=radio name="c_5_0" id="c_5_0"> 梯度线圈
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_5_0" onclick="showAnswer('5_0')" value="显示答案"></p>
+				
+<p class="explan" id="a_5_0"> 梯度线圈是MR扫描仪本身的一个组成部分，不位于单独的设备室中。
+<a href="/mr-system-layout.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+
+<!-- ################ SECTION 5, QUIZ QUESTION  2############## -->
+
+<li style="margin-top: 8px"> 控制MR扫描仪并将数据处理成图像的主计算机位于哪里？ 
+<ol type="a" id="q_5_1">
+
+<li ><input type=radio name="c_5_1" > 在MR扫描室中
+</li>
+<li id="correct_5_1"><input type=radio name="c_5_1" id="c_5_1"> 在MR扫描仪控制室中
+</li>
+
+		
+<li ><input type=radio name="c_5_1" > 在附近的MR设备室中
+</li>
+
+		
+<li ><input type=radio name="c_5_1" >  距离主扫描仪至少25米以避免干扰
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_5_1" onclick="showAnswer('5_1')" value="显示答案"></p>
+				
+<p class="explan" id="a_5_1">主计算机位于与磁体室相邻的控制室中的扫描仪控制台内。由于扫描仪屏蔽，无需将其放置在远处（答案d错误）。<a href="/mr-system-layout.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION 5, QUIZ QUESTION  3############## -->
+
+<li style="margin-top: 8px"> 阵列处理器的功能是
+<ol type="a" id="q_5_2">
+
+<li ><input type=radio name="c_5_2" > 为用于成像的RF脉冲和梯度波形阵列生成触发信号
+</li>
+<li id="correct_5_2"><input type=radio name="c_5_2" id="c_5_2"> 将原始NMR数据重建成图像
+</li>
+
+		
+<li ><input type=radio name="c_5_2" > 计算所需层面选择和视野的RF频率偏移和梯度强度
+</li>
+
+		
+<li ><input type=radio name="c_5_2" >  激活和/或禁用阵列中的各种线圈单元
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_5_2" onclick="showAnswer('5_2')" value="显示答案"></p>
+				
+<p class="explan" id="a_5_2"> 阵列处理器是操作MR扫描仪的主计算机中的一块专用板。它负责对原始数据执行快速傅里叶变换（FFT）并将数据构建成图像。
+<a href="/mr-system-layout.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION 5, QUIZ QUESTION  4############## -->
+<li style="margin-top: 8px"> 哪种扫描仪最重（因此需要最大的地板支撑）？
+<ol type="a" id="q_5_3">
+
+<li id="correct_5_3"><input type=radio name="c_5_3" id="c_5_3"> 0.35 T 永磁系统
+</li>
+
+<li ><input type=radio name="c_5_3" > 0.6 T 电阻式磁体系统
+</li>
+		
+<li ><input type=radio name="c_5_3" > 1.5 T 超导系统
+</li>
+
+		
+<li ><input type=radio name="c_5_3" >  3.0 T 超导系统
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_5_3" onclick="showAnswer('5_3')" value="显示答案"></p>
+				
+<p class="explan" id="a_5_3"> 永磁系统的重量可能超过35,000磅（16,000公斤），是超导扫描仪的3倍多。
+<a href="/mr-system-layout.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+
+
+
+ 
+<!-- ################ SECTION 5, QUIZ QUESTION  5############## -->
+
+<li style="margin-top: 8px"> 哪种扫描仪的总场地和运营成本最低？
+<ol type="a" id="q_5_4">
+<li id="correct_5_4"><input type=radio name="c_5_4" id="c_5_4"> 0.35 T 永磁系统
+</li>
+
+<li ><input type=radio name="c_5_4" > 0.6 T 电阻式磁体系统
+</li>
+		
+<li ><input type=radio name="c_5_4" > 1.5 T 超导系统
+</li>
+
+		
+<li ><input type=radio name="c_5_4" >  3.0 T 超导系统
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_5_4" onclick="showAnswer('5_4')" value="显示答案"></p>
+				
+<p class="explan" id="a_5_4"> 尽管之前的问题中提到了其重量带来的额外场地成本，但永磁扫描仪不需要制冷剂或复杂的冷却系统，因此其运营成本极低。它们的杂散场通常也非常小，因此房间要求小得多。相比之下，电阻式电磁铁扫描仪由于使用电力以及增加的环境冷却要求，运营成本较高。超导扫描仪因其尺寸、杂散场和冷却要求而成为场地成本最昂贵的。
+<a href="/mr-system-layout.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION 5, QUIZ QUESTION  6############## -->
+
+<li style="margin-top: 8px"> 超导MR扫描仪的哪个组件不需要专门的冷却来维持功能？
+<ol type="a" id="q_5_5">
+
+<li ><input type=radio name="c_5_5" > 主线圈绕组
+</li>
+		
+<li ><input type=radio name="c_5_5" > 梯度线圈
+</li>
+<li ><input type=radio name="c_5_5" >  梯度放大器
+</li>
+<li id="correct_5_5"><input type=radio name="c_5_5" id="c_5_5"> 射频线圈
+</li>
+
+<li ><input type=radio name="c_5_5" >  射频放大器
+</li>
+
+		
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_5_5" onclick="showAnswer('5_5')" value="显示答案"></p>
+				
+<p class="explan" id="a_5_5"> 主线圈绕组当然由液氦维持在超导温度。梯度线圈和放大器都会变得非常热，必须通过冷却器回路循环的水/防冻剂冷却。射频放大器通常与梯度放大器在同一机柜中，也需要空气和/或水冷却。RF发射线圈本身会变热，但不需要单独冷却。靠近患者的RF接收线圈根本不会发热。 
+<a href="/mr-system-layout.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION 5, QUIZ QUESTION  7############## -->
+
+<li style="margin-top: 8px"> MR扫描仪的<b>B<sub>0</sub></b>场在______处最均匀。
+<ol type="a" id="q_5_6">
+
+<li ><input type=radio name="c_5_6" > 在磁体的开口（机架）处
+</li>
+		
+<li ><input type=radio name="c_5_6" > 在磁体前方约1米的孔平面处
+</li>
+
+<li id="correct_5_6"><input type=radio name="c_5_6" id="c_5_6"> 在磁体孔的中心等中心点
+</li>
+		
+<li ><input type=radio name="c_5_6" >  在磁体外部紧贴其壁处
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_5_6" onclick="showAnswer('5_6')" value="显示答案"></p>
+				
+<p class="explan" id="a_5_6"> <b>B<sub>0</sub></b>场在磁体等中心点最均匀。
+<a href="/what-are-fringe-fields.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+	
+<!-- ################ SECTION 5, QUIZ QUESTION  8############## -->
+
+<li style="margin-top: 8px"> 哪种扫描仪的杂散场最大？
+<ol type="a" id="q_5_7">
+
+<li ><input type=radio name="c_5_7" > 0.35 T 永磁系统
+</li>
+		
+<li ><input type=radio name="c_5_7" > 0.6 T 电阻式磁体系统
+</li>
+<li ><input type=radio name="c_5_7" >  1.5 T 超导系统
+</li>
+
+
+<li id="correct_5_7"><input type=radio name="c_5_7" id="c_5_7"> 3.0 T 超导系统
+</li>
+		
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_5_7" onclick="showAnswer('5_7')" value="显示答案"></p>
+				
+<p class="explan" id="a_5_7"> 杂散场通常与场强直接相关，因此主磁场越高，杂散场越大。因此正确答案是d)。磁体配置也很重要。具体而言，C形磁体（永磁扫描仪的典型配置）的杂散场相对较低。
+<a href="/ what-are-fringe-fields.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION 5, QUIZ QUESTION  9############## -->
+
+<li style="margin-top: 8px"> 如果从距离磁体1米处移动到2米处，杂散场将减少约______倍。
+<ol type="a" id="q_5_8">
+
+<li ><input type=radio name="c_5_8" > √2
+</li>
+		
+<li ><input type=radio name="c_5_8" > 2 </li>
+<li ><input type=radio name="c_5_8" >  4 </li>
+
+
+<li id="correct_5_8"><input type=radio name="c_5_8" id="c_5_8"> 8 </li>
+		
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_5_8" onclick="showAnswer('5_8')" value="显示答案"></p>
+				
+<p class="explan" id="a_5_8"> 理论上，磁场杂散场的强度与距磁体等中心点的距离的三次方成反比（1/r³）。因此，距离磁体两倍远，杂散场应下降约1/2³ = 1/8倍。
+<a href="/what-are-fringe-fields.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+<!-- ################ SECTION 5, QUIZ QUESTION  10############## -->
+
+<li style="margin-top: 8px"> 圆柱形超导磁体的杂散场在______方向最高。
+<ol type="a" id="q_5_9">
+
+<li ><input type=radio name="c_5_9" > <i>x-</i>方向（横向于孔轴水平方向）
+</li>
+		
+<li ><input type=radio name="c_5_9" > <i>y-</i>方向（横向于孔轴垂直方向）
+</li>
+
+<li id="correct_5_9"><input type=radio name="c_5_9" id="c_5_9"> <i>z-</i>方向（沿孔轴方向）
+</li>
+		
+<li ><input type=radio name="c_5_9" >  所有方向均相等
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_5_9" onclick="showAnswer('5_9')" value="显示答案"></p>
+				
+<p class="explan" id="a_5_9"> 沿<i>z-</i>轴（<b>B<sub>0</sub></b>的方向）的杂散场明显更高。 
+<a href="/what-are-fringe-fields.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+<!-- ################ SECTION 5, QUIZ QUESTION  11############## -->
+
+<li style="margin-top: 8px"> 被动磁屏蔽的主要目的是 
+<ol type="a" id="q_5_10">
+
+<li id="correct_5_10"><input type=radio name="c_5_10" id="c_5_10"> 减少扫描室外的杂散磁场。
+</li>
+
+
+<li ><input type=radio name="c_5_10" > 防止外部射频噪声进入扫描室。
+</li>
+		
+<li ><input type=radio name="c_5_10" > 将NMR信号限制在磁体孔内以获得更好的接收效果。
+</li>
+
+		
+<li ><input type=radio name="c_5_10" >  减少移动设备（如汽车和电梯）对磁场的畸变影响。
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_5_10" onclick="showAnswer('5_10')" value="显示答案"></p>
+				
+<p class="explan" id="a_5_10"> 被动屏蔽通常涉及在扫描仪地板或墙壁的选定位置放置铁柱或钢板，以最大限度地减少扫描室外的杂散场扩展。对于现代自屏蔽扫描仪，除非它们空间紧凑或靠近其他敏感设备，否则通常不需要被动屏蔽。
+<a href="/ how-to-reduce-fringe.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+		
+
+
+
+
+
+<!-- ################ SECTION 5, QUIZ QUESTION  12############## -->
+
+<li style="margin-top: 8px"> 关于被动屏蔽，哪项陈述是正确的？
+<ol type="a" id="q_5_11">
+
+<li ><input type=radio name="c_5_11" > 通过在扫描室墙壁上放置厚铜板来实现。
+</li>
+		
+<li ><input type=radio name="c_5_11" > 这是一种减少外部射频干扰MR信号的方法。
+</li>
+
+<li id="correct_5_11"><input type=radio name="c_5_11" id="c_5_11"> 对于7.0 T的安装，它比对于1.5 T的安装更常用。
+</li>
+		
+<li ><input type=radio name="c_5_11" >  现代扫描仪设计中发现的主动屏蔽技术并未改变对它的需求。
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_5_11" onclick="showAnswer('5_11')" value="显示答案"></p>
+				
+<p class="explan" id="a_5_11"> 被动屏蔽是一种减少<u>杂散磁场</u>的方法，因此a)在墙壁上衬铜以减少b)RF干扰是错误的。更高场强的安装更需要它，因此c)正确。现代扫描仪中的主动屏蔽技术减少了对被动方法的需求，故d)错误。
+<a href="/how-to-reduce-fringe.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+<!-- ################ SECTION 5, QUIZ QUESTION  13############## -->
+
+<li style="margin-top: 8px"> 扫描室的被动磁屏蔽通常使用由______制成的板或棒来实现。
+<ol type="a" id="q_5_12">
+
+<li ><input type=radio name="c_5_12" > 铜
+</li>
+<li id="correct_5_12"><input type=radio name="c_5_12" id="c_5_12"> 铁
+</li>
+		
+<li ><input type=radio name="c_5_12" > 铝
+</li>
+
+		
+<li ><input type=radio name="c_5_12" >  铅
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_5_12" onclick="showAnswer('5_12')" value="显示答案"></p>
+				
+<p class="explan" id="a_5_12"> 需要铁或钢等铁磁物质来约束杂散磁力线。
+<a href="/how-to-reduce-fringe.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION 5, QUIZ QUESTION  14############## -->
+
+<li style="margin-top: 8px"> MR扫描仪产生的杂散磁场
+<ol type="a" id="q_5_13">
+
+<li ><input type=radio name="c_5_13" > 可以通过主动屏蔽消除。
+</li>
+		
+<li ><input type=radio name="c_5_13" > 可以通过被动屏蔽消除。
+</li>
+
+		
+<li ><input type=radio name="c_5_13" >  可以通过射频屏蔽减少。
+</li>
+<li id="correct_5_13"><input type=radio name="c_5_13" id="c_5_13"> 以上都不是。
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_5_13" onclick="showAnswer('5_13')" value="显示答案"></p>
+				
+<p class="explan" id="a_5_13"> 主动和被动屏蔽可以减少但不能消除杂散场。射频屏蔽可减少噪声，但不影响杂散场 <a href="/how-to-reduce-fringe.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION 5, QUIZ QUESTION  15############## -->
+
+<li style="margin-top: 8px"> “5高斯线”是什么？
+<ol type="a" id="q_5_14">
+
+<li ><input type=radio name="c_5_14" > 扫描仪内部<i>x-</i>和<i>y-</i>梯度强度相差小于5高斯（5 mT）的地方。
+</li>
+		
+<li ><input type=radio name="c_5_14" > MRI中心内，在此边界内信用卡会被消磁。
+</li>
+
+<li id="correct_5_14"><input type=radio name="c_5_14" id="c_5_14"> 可能对佩戴某些起搏器的患者造成危险的杂散场线
+</li>
+		
+<li ><input type=radio name="c_5_14" >  扫描室内对患者安全但MR技师应避免跨越的杂散场线。
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_5_14" onclick="showAnswer('5_14')" value="显示答案"></p>
+				
+<p class="explan" id="a_5_14"> 5高斯线由美国食品药品监督管理局（FDA）设定为不应使不知情公众暴露的边界。该值基于这样一个事实：旧式起搏器中的干簧管暴露于此水平的杂散磁场下可能被触发，可能将患者的需求型起搏器转换为异步模式。应该认识到，它不仅仅是一条线，而是一个从扫描仪向外延伸的三维表面。因此，它可以延伸到扫描仪上方和下方的楼层以及侧面。
+
+<a href="/what-are-fringe-fields.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+<!-- ################ SECTION 5, QUIZ QUESTION 16############## -->
+
+<li style="margin-top: 8px"> 关于ACR安全区1和2的陈述哪项是正确的？
+<ol type="a" id="q_5_15">
+
+<li id="correct_5_15"><input type=radio name="c_5_15" id="c_5_15"> 区域1和2都位于5高斯线之外。
+</li>
+
+<li ><input type=radio name="c_5_15" > 进入区域2之前需要进行患者安全筛查。
+</li>
+		
+<li ><input type=radio name="c_5_15" > 公众不应进入区域1；它仅供MR患者及其家属使用。
+</li>
+
+		
+<li ><input type=radio name="c_5_15" >  允许佩戴起搏器的患者进入区域2可能有风险。
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_5_15" onclick="showAnswer('5_15')" value="显示答案"></p>
+				
+<p class="explan" id="a_5_15"> 区域1对公众开放。进入通常从区域2开始受限，因为这里是进行安全筛查的地方。两者都位于5高斯线之外，对所有人都安全。
+<a href="/acr-safety-zones.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION 5, QUIZ QUESTION  17############## -->
+
+<li style="margin-top: 8px"> 关于ACR安全区3的陈述哪项是错误的？
+<ol type="a" id="q_5_16">
+
+<li ><input type=radio name="c_5_16" > 除非患者已接受安全筛查，否则不应允许其进入区域3。
+</li>
+
+<li id="correct_5_16"><input type=radio name="c_5_16" id="c_5_16"> 不得将铁磁物体带入该区域。
+</li>
+
+		
+<li ><input type=radio name="c_5_16" > MR操作员控制台位于该区域。
+</li>
+
+		
+<li ><input type=radio name="c_5_16" >  除非医务人员已接受MR安全培训，否则不应允许其进入该区域。
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_5_16" onclick="showAnswer('5_16')" value="显示答案"></p>
+				
+<p class="explan" id="a_5_16"> 区域3包括5高斯线以内的区域，因此所有患者和家属在进入前都需要接受筛查。区域3包括MR操作员控制台所在的位置。区域3的杂散场足够小，铁磁物体不会被推进扫描仪。然而，从区域3通常可以方便地直接进入扫描室（区域4），在那里可能发生飞铁危险。区域3不鼓励但也不禁止铁磁物体；它们当然不应被带到扫描室门附近。由于这些原因，所有医务人员在获准进入区域3之前都必须接受MR安全培训/教育。
+<a href="/acr-safety-zones.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+<!-- ################ SECTION 5, QUIZ QUESTION  18############## -->
+
+<li style="margin-top: 8px"> 关于ACR安全区4的陈述哪项是正确的？
+<ol type="a" id="q_5_17">
+
+<li ><input type=radio name="c_5_17" > 绝不允许陪同家属进入区域4。
+</li>
+<li id="correct_5_17"><input type=radio name="c_5_17" id="c_5_17"> 区域4等同于装有MR扫描仪的房间。
+</li>
+
+		
+<li ><input type=radio name="c_5_17" > 区域4包括扫描仪、操作员控制台和设备室（梯度放大器所在处）。
+</li>
+
+		
+<li ><input type=radio name="c_5_17" >  区域3和区域4之间必须有一扇需要刷卡、钥匙或密码才能进入的门，并且除了运送患者时应保持关闭。
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_5_17" onclick="showAnswer('5_17')" value="显示答案"></p>
+				
+<p class="explan" id="a_5_17"> 区域4就是扫描室本身，因此b)正确而c)错误。如果家属经过适当筛查，可以被允许进入扫描室，因此a)错误。扫描室的门不上锁，在不进行扫描时常保持打开状态（尽管我们建议用带子拦住以防止意外进入）。铁磁材料不应带入区域4，因为被吸入扫描仪的风险很高。
+<a href="/ acr-safety-zones.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+		
+
+<!-- ################ SECTION 5, QUIZ QUESTION  19############## -->
+
+<li style="margin-top: 8px"> 为什么距离MR扫描仪20米远的道路上的大型卡车可能会引起场地规划的关注？
+<ol type="a" id="q_5_18">
+
+<li ><input type=radio name="c_5_18" > 它们的民用波段无线电以与MR信号相同的频率工作。
+</li>
+		
+<li ><input type=radio name="c_5_18" > 扫描仪磁场可能受到经过的卡车底盘中的致密铁的影响。
+</li>
+
+<li id="correct_5_18"><input type=radio name="c_5_18" id="c_5_18"> 它们产生的物理振动会影响图像质量。
+</li>
+		
+<li ><input type=radio name="c_5_18" >  在此距离上，重型卡车交通根本无需担心。
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_5_18" onclick="showAnswer('5_18')" value="显示答案"></p>
+				
+<p class="explan" id="a_5_18"> 环境振动会显著影响扫描仪性能，在安装扫描仪之前，场地应进行振动测试。附近道路上重型卡车的频繁通过是可能的原因之一。其他振动源包括附近的空调设备、电机和建筑物电梯。来自民用波段无线电的RF干扰不应成为特殊问题，因为这些频率通常会被标准的RF屏蔽滤除。在20米的距离上，移动的金属不应引起静态场扰动；然而，如果卡车在10米内经过，这可能值得关注。
+<a href="/magnetic-shielding.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+<!-- ################ SECTION 5, QUIZ QUESTION  20############## -->
+
+<li style="margin-top: 8px"> 扫描期间MR系统产生的巨大噪音主要源于
+<ol type="a" id="q_5_19">
+
+<li id="correct_5_19"><input type=radio name="c_5_19" id="c_5_19"> 梯度线圈的振动
+</li>
+
+<li ><input type=radio name="c_5_19" > 射频线圈的振动
+</li>
+		
+<li ><input type=radio name="c_5_19" > 主磁体绕组的振动
+</li>
+
+		
+<li ><input type=radio name="c_5_19" >  冷却器和氦泵的振动
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_5_19" onclick="showAnswer('5_19')" value="显示答案"></p>
+				
+<p class="explan" id="a_5_19"> 扫描期间产生的噪音主要源于梯度在脉冲序列期间快速开启和关闭时产生的机电振动。这被传递到磁体外壳中的其他结构，这些结构也可能二次振动并放大噪音。
+
+<a href="/whats-that-noise.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+		
+<!-- ################ SECTION 5, QUIZ QUESTION  21############## -->
+
+<li style="margin-top: 8px"> 以下哪个序列在扫描期间可能产生最大的噪音？
+<ol type="a" id="q_5_20">
+
+<li ><input type=radio name="c_5_20" > 脊柱的T2加权涡轮自旋回波（TSE）成像
+</li>
+		
+<li ><input type=radio name="c_5_20" > 肝脏的Dixon水脂成像
+</li>
+
+<li id="correct_5_20"><input type=radio name="c_5_20" id="c_5_20"> 大脑的平面回波弥散张量成像
+</li>
+		
+<li ><input type=radio name="c_5_20" >  前列腺的MR波谱
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_5_20" onclick="showAnswer('5_20')" value="显示答案"></p>
+				
+<p class="explan" id="a_5_20"> 噪音最大的序列是那些梯度切换最快的序列，例如平面回波成像和短<i>TE</i>梯度回波成像。
+<a href="/ whats-that-noise.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+
+
+		
+<!-- ################ SECTION 5, QUIZ QUESTION  22############## -->
+
+<li style="margin-top: 8px"> 关于MR扫描仪噪音，以下哪项陈述是错误的
+<ol type="a" id="q_5_21">
+
+<li ><input type=radio name="c_5_21" > 某些序列的声音水平可达120 dB。
+</li>
+
+<li id="correct_5_21"><input type=radio name="c_5_21" id="c_5_21"> 虽然可能让患者感到不适，但没有真正的听力风险。
+</li>
+
+		
+<li ><input type=radio name="c_5_21" > 所有接受MR成像的患者都必须佩戴听力保护装置。
+</li>
+
+		
+<li ><input type=radio name="c_5_21" >  新的静音脉冲序列可以将噪音水平降低到背景10 dB以内。
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_5_21" onclick="showAnswer('5_21')" value="显示答案"></p>
+				
+<p class="explan" id="a_5_21"> 某些序列的声音水平确实可以达到120 dB，尤其是平面回波序列。这可能导致内耳损伤并造成听力损失，因此选项b)错误。因此，所有患者都必须佩戴听力保护装置。
+<a href="/ whats-that-noise.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+
+
+
+
+		
+<!-- ################ SECTION 5, QUIZ QUESTION  23############## -->
+
+<li style="margin-top: 8px"> 以下哪些方法可以减少扫描仪噪音？
+<ol type="a" id="q_5_22">
+
+<li ><input type=radio name="c_5_22" > 避免使用平面回波序列
+</li>
+		
+<li ><input type=radio name="c_5_22" > 使用具有较长上升时间的“柔和”梯度脉冲
+</li>
+
+
+		
+<li ><input type=radio name="c_5_22" >  使用3D超短TE序列
+</li>
+
+<li id="correct_5_22"><input type=radio name="c_5_22" id="c_5_22"> 以上所有
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_5_22" onclick="showAnswer('5_22')" value="显示答案"></p>
+				
+<p class="explan" id="a_5_22"> 这些策略都将降低扫描期间的噪音水平。
+<a href="/ whats-that-noise.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+
+
+
+		
+<!-- ################ SECTION 5, QUIZ QUESTION  24############## -->
+
+<li style="margin-top: 8px"> 现在可以使用具有较长梯度上升时间的新型“静音”MR序列。关于这些序列，以下哪项陈述是正确的
+<ol type="a" id="q_5_23">
+
+<li id="correct_5_23"><input type=radio name="c_5_23" id="c_5_23"> 它们可以将噪音水平降低到背景10 dB以内。
+</li>
+
+
+<li ><input type=radio name="c_5_23" > 这种策略可以应用于所有脉冲序列。
+</li>
+		
+<li ><input type=radio name="c_5_23" > 它们可以在没有信噪比损失的情况下使用。
+</li>
+
+		
+<li ><input type=radio name="c_5_23" >  对于给定的<i>TR</i>，它们不影响层面数。
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_5_23" onclick="showAnswer('5_23')" value="显示答案"></p>
+				
+<p class="explan" id="a_5_23"> 新型静音序列可以将噪音水平降低到背景10 dB以内，因此答案a)正确。它们可用于许多（但不是所有）脉冲序列。由于上升和下降时间增加，采样窗口变短，SNR降低。由于在梯度斜坡上花费的时间增加，在恒定带宽下，最大层面数也可能受到损失。
+<a href="/ whats-that-noise.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+<!-- ################ SECTION 5, QUIZ QUESTION  25############## -->
+
+<li style="margin-top: 8px"> 扫描室的射频屏蔽通常通过在墙壁上衬以薄______板来实现。
+<ol type="a" id="q_5_24">
+
+<li ><input type=radio name="c_5_24" > 铁</li>
+		
+<li ><input type=radio name="c_5_24" > 铝 </li>
+
+<li id="correct_5_24"><input type=radio name="c_5_24" id="c_5_24"> 铜 </li>
+		
+<li ><input type=radio name="c_5_24" >  铅 </li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_5_24" onclick="showAnswer('5_24')" value="显示答案"></p>
+				
+<p class="explan" id="a_5_24">在整个房间内衬薄铜层是扫描仪安装中最常用的方法。它起到法拉第笼的作用，可有效减少外部射频的穿透。然而，几乎任何导电金属都可以用于此目的，偶尔也会使用钢和铝笼。<a href="/why-rf-shielding.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+
+
+
+
+ 
+<!-- ################ SECTION 5, QUIZ QUESTION  26############## -->
+
+<li style="margin-top: 8px"> 射频屏蔽的主要目的是 
+<ol type="a" id="q_5_25">
+
+<li ><input type=radio name="c_5_25" > 将杂散场限制在扫描室本身。
+</li>
+		
+<li ><input type=radio name="c_5_25" > 将NMR信号限制在磁体孔内以获得更好的接收效果
+</li>
+
+<li id="correct_5_25"><input type=radio name="c_5_25" id="c_5_25"> 防止外部射频噪声进入扫描室
+</li>
+		
+<li ><input type=radio name="c_5_25" >  减少移动设备（如汽车和电梯）对磁场的畸变影响。
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_5_25" onclick="showAnswer('5_25')" value="显示答案"></p>
+				
+<p class="explan" id="a_5_25"> RF屏蔽主要防止扫描室外部的无关射频噪声进入并污染MR信号。  
+<a href="/ why-rf-shielding.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+
+
+
+<!-- ################ SECTION 5, QUIZ QUESTION  27############## -->
+
+<li style="margin-top: 8px"> 在大多数临床MR场地，需要排除的主要RF干扰源来自手机、电视和无线电传输。
+<ol type="a" id="q_5_26">
+
+<li ><input type=radio name="c_5_26" > 正确</li>
+		
+
+<li id="correct_5_26"><input type=radio name="c_5_26" id="c_5_26"> 错误 </li>
+		
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_5_26" onclick="showAnswer('5_26')" value="显示答案"></p>
+				
+<p class="explan" id="a_5_26"> 最常见的RF干扰形式来自附近电气设备（变压器、电机、泵）或电子设备（计算机、脉搏血氧仪、心脏监护仪）产生的噪声。
+<a href="/ why-rf-shielding.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+
+
+
+<!-- ################ SECTION 5, QUIZ QUESTION  28############## -->
+
+<li style="margin-top: 8px"> 允许塑料氧气管穿过MR扫描室墙壁而不破坏RF屏蔽完整性的装置称为
+
+<ol type="a" id="q_5_27">
+
+<li ><input type=radio name="c_5_27" > 穿透板
+</li>
+		
+<li ><input type=radio name="c_5_27" > 带阻滤波器
+</li>
+
+<li id="correct_5_27"><input type=radio name="c_5_27" id="c_5_27"> 波导管
+</li>
+		
+<li ><input type=radio name="c_5_27" >  法拉第笼
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_5_27" onclick="showAnswer('5_27')" value="显示答案"></p>
+				
+<p class="explan" id="a_5_27"> 正确答案是波导管（c）。它看起来像一个安装在墙内的管道，其设计可阻挡/捕获拉莫尔频率范围内的射频通过。该装置通常是穿透板的一部分，穿透板还包括用于电线的带阻滤波器。法拉第笼是围绕扫描室以产生RF屏蔽的整个外壳。
+
+<a href="/ wirestubes-thru-wall.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+
+
+
+<!-- ################ SECTION 5, QUIZ QUESTION  29############## -->
+
+<li style="margin-top: 8px"> 进入扫描室的RF泄漏常见位置是
+<ol type="a" id="q_5_28">
+
+<li id="correct_5_28"><input type=radio name="c_5_28" id="c_5_28"> 门周围
+</li>
+
+
+<li ><input type=radio name="c_5_28" > 扫描仪窗口的密封处
+</li>
+		
+<li ><input type=radio name="c_5_28" > 穿透板处
+</li>
+
+		
+<li ><input type=radio name="c_5_28" >  扫描室墙壁铜板的接缝处
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_5_28" onclick="showAnswer('5_28')" value="显示答案"></p>
+				
+<p class="explan" id="a_5_28"> 由于反复开关，门周围的RF密封条经常损坏，是RF进入室内的常见来源。 
+<a href="/ why-rf-shielding.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+
+
+
+
+<!--##################################################-->
+<!--############SCORING SECTION Needs to go at end of each subsection-->
+
+</ol><p><input type=button id="show_all_5" onclick="showAllAnswers('5')" value="显示本节所有答案"><span style="font-weight: bold" id="scoretxt_5"></span></p>
+<p><a href="#top">返回页面顶部</a></p></div>
+<!--END OF SCORING SECTION-->
+
+
+
+</div></div></div>

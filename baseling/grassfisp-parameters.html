@@ -1,0 +1,198 @@
+<div id="content"><div id="wsite-content" class="wsite-elements wsite-not-footer">
+	<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -0px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:46.220930232558%; padding:0 0px;">
+					
+						
+
+<h2 class="wsite-content-title" style="text-align:center;">GRASS/FISP 图像对比度<br /></h2>
+
+<div class="paragraph" style="text-align:center;"><strong style="color: rgb(135, 135, 135); font-size: large; line-height: 1.5;"><em><font color="#0376be">如何为 GRASS/FISP 序列选择成像参数？&nbsp;</font></em></strong><strong style="color: rgb(55, 138, 87); font-size: large; line-height: 1.5;"><em>&nbsp;</em></strong><br /></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:53.779069767442%; padding:0 0px;">
+					
+						
+
+<div class="paragraph" style="text-align:skip_to_justify;">&nbsp;</div>
+
+<div><div class="wsite-image wsite-image-border-thin" style="padding-top:0;padding-bottom:0;margin-left:0;margin-right:0;text-align:center">
+<a href='uploads/3/4/5/7/34572113/3427731_orig.png' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/3427731cd00.png?328" alt="GRASS/FISP 磁共振图像对比度" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;">与大多数其他磁共振成像技术一样，GRASS/FISP 序列中的图像对比度取决于三个操作者可选的参数（<em style="">TR</em>、<em style="">TE</em> 和 <em style="">&alpha;</em>）以及三个组织特异性参数（T1、T2* 和 [H]）。然而，与破坏性梯度回波序列不同，这些参数各自对图像对比度的影响并不那么直观，也不容易预测。GRASS/FISP 序列的信号强度方程可以通过递归过程推导出来，得到以下复杂的结果：<br /></div>
+
+<div><div class="wsite-image wsite-image-border-none" style="padding-top:0;padding-bottom:0;margin-left:0;margin-right:0;text-align:center">
+<a href='uploads/3/4/5/7/34572113/6967501_orig.png' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/69675010fcb.png?531" alt="GRASS/FISP 磁共振图像对比度" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;">这个公式之所以如此复杂，是因为纵向和横向稳态分量在每次射频脉冲作用下都会“混合”或相互交换。因此，最终的磁共振信号是经过多个周期累积的自由感应衰减信号、次级自旋回波和受激回波的总和。尽管存在这种复杂性，我们仍可以就这些序列中的图像对比度做出一些基本陈述。</div>
+
+<div class="paragraph" style="text-align:center;"><strong><font size="4"><em>TE</em> 控制 T2* 加权</font></strong></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;">与完全破坏性序列一样，GRASS/FISP 将类似自由感应衰减的信号去相位并重新聚相，形成梯度回波。这个梯度回波以时间常数 T2* 呈指数衰减。回波时间 (<em>TE</em>) 越长，衰减时间就越长，总体信号就越低。因此，与破坏性梯度回波序列一样，在 GRASS/FISP 中延长 <em>TE</em> 会增加 T2* 加权。</div>
+
+<div class="paragraph" style="text-align:center;"><strong><font size="4">长 <em>TR</em> 或多层模式：破坏性梯度回波行为</font></strong></div>
+
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:56.963788300836%; padding:0 15px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-thin" style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
+<a href='uploads/3/4/5/7/34572113/2295762_orig.jpg' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/2295762_orig.jpg" alt="GRASS/FISP 磁共振图像对比度" style="width:100%;max-width:434px" />
+</a>
+<div style="display:block;font-size:90%"><b>TR 的影响</b>。在长 TR（> 250 ms）时，T2* 衰减阻止了横向稳态的形成，将 GRASS/FISP 转换为 SPGR/FLASH 行为。两幅图像的 TE=7，α=60°。左侧图像 TR=40；右侧图像 TR=400。</div>
+</div></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:43.036211699164%; padding:0 15px;">
+					
+						
+
+<div class="paragraph" style="text-align:skip_to_justify;">在相干横向稳态的假设不成立的情况下，GRASS/FISP 对比度或许最容易理解。例如，当 <em>TR</em> 远长于 T2* 时（例如，对于大多数组织，<em>TR</em> > 250 ms），自然的 T2* 过程本质上会导致射频脉冲之间的横向磁化完全衰减。此时，GRASS/FISP 序列的行为类似于破坏性梯度回波序列，其对比度行为已在<a href="spoiled-gre-parameters.html" title="">单独的问答</a>中描述。<br /></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;">生理运动也可能导致 GRASS/FISP 序列的这种内在破坏效应。因此，流动的脑脊液和血液可能表现出破坏性对比度行为，尽管静止组织仍处于稳态自由进动状态。<br /><br />最后，在多层面模式（MPGR）下运行序列也会破坏相干横向磁化的发展，使序列表现出破坏性梯度回波行为。这将在<a href="grass-vs-mpgr.html" title="">下一篇问答</a>中更详细地讨论。<br /></div>
+
+<div class="paragraph" style="text-align:center;"><font size="4"><strong>翻转角的影响</strong><strong> (<em>&alpha;</em>)</strong></font></div>
+
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:58.635097493036%; padding:0 15px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-thin" style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
+<a href='uploads/3/4/5/7/34572113/7020493_orig.jpg' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/7020493_orig.jpg" alt="GRASS/FISP 磁共振图像对比度" style="width:100%;max-width:491px" />
+</a>
+<div style="display:block;font-size:90%"><b>翻转角 (α) 的影响</b>。两幅图像的 TR=50，TE=15。左侧图像 α = 15°，显示自旋密度加权。右侧图像 α = 90°，显示 T2/T1 加权。</div>
+</div></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:41.364902506964%; padding:0 15px;">
+					
+						
+
+<div class="paragraph" style="text-align:skip_to_justify;">对于较短的 <em style="">TR</em> 值，纵向和横向稳态都会建立起来，并且脉冲之间存在显著的混合。因此，图像对比度在很大程度上与 TR 无关，而主要由翻转角 (&alpha;) 决定。如下文所述，低翻转角 (&alpha;&lt;20&deg;) 产生自旋密度加权图像，而较大的翻转角 (&alpha;&gt;45&deg;) 则产生对 T2/T1 比值敏感的对比度。</div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;">在<a href="partial-flip-angles.html" title="">之前的问答</a>中，我描述了低翻转角脉冲如何产生可观的横向磁化，同时仅轻微扰动纵向磁化。因此，当 <em>&alpha;</em> 较小时，大部分稳态磁化保持在纵向方向，这种现象主要依赖于三角学事实：对于小的 <em>&alpha;</em>，cos <em>&alpha;</em>&nbsp;&asymp;&nbsp;1（因此基本上与组织的 T1 或 T2 无关）。换句话说，在小 <em>&alpha;</em> 脉冲之后，纵向磁化不会发生太大变化，无论 T1 或 T2 是多少都是如此。因此，对于低翻转角，图像对比度主要取决于平衡磁化强度，这反映了样本中的自旋总数。因此，低翻转角 (<em>&alpha;&nbsp;</em>&lt; 20&deg;) 产生自旋密度 [H] 加权图像。<br /><span style=""></span><br /><span style=""></span> 然而，当 &alpha; 较大时，每次射频脉冲都会导致纵向和横向磁化分量之间发生显著的交换。此时，净信号强烈依赖于 T1 和 T2（或更明确地说，依赖于 T2/T1 的<em style="">比值</em>）。对于大多数实体组织，T1 大约比 T2 长 5-10 倍，但对于液体，T2 和 T1 几乎相等。因此，随着翻转角的增加，由于这种 T2/T1 行为，脑脊液和其他液体的信号显著增加。<br /><br /><span style=""></span> 这些图像对比度操作的总结见下表。读者应认识到，“T1 加权”和“T2* 加权”等术语并非严格定义，并且在单幅图像中可能同时存在许多不同的组织对比度。例如，GRASS/FISP 图像的某些部分可能表现出 T1 对比度，而其他部分则显示 T2/T1 对比度和自旋密度加权。此外，与自旋回波成像不同，水/脑脊液的信号不能作为加权类型的简单可靠指南。在自旋密度加权、T2* 加权和 T2/T1 加权的稳态梯度回波图像上，水可能同样明亮。<br /><span style=""></span></div>
+
+<div><div class="wsite-image wsite-image-border-thin" style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
+<a href='uploads/3/4/5/7/34572113/5182175_orig.png' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/51821758fec.png?675" alt="GRASS/FISP 图像对比度表" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%">参数如何控制 GRASS/FISP 序列中的图像对比度</div>
+</div></div>
+
+<div><div id="772138712169883728" align="left" style="width: 100%; overflow-y: hidden;" class="wcustomhtml"><html> <head><script src="gdpr/gdprscript6f19.js?buildTime=1774025472"></script> <script type="text/javascript" 
+></script> 
+<script type="text/javascript">
+		$(function() {$('#Q').click(function() {$('.Q').toggle(500); return false;});});</script></head><body>
+<a href="#" id=Q><h3><font color="#378a57">进阶讨论（显示/隐藏）»</font></h3></a><div class=Q style="display:none;">
+
+<!--content goes below here-->
+
+<h3>关于 GRASS/FISP 对比度的补充说明</h3> 
+
+<p>尽管 GRASS/FISP 信号方程主要由其最后一项 (<i>e<sup>−T2*/TE</sup></i>) 主导，但你可能已经注意到，因子 "A" 是 T2 的函数，而不是 T2*。因此，GRASS/FISP 除了具有 T2* 类型的加权外，还具有一些真正的 T2 加权。其原因是，在 GRASS/FISP 中采样的重聚后激励信号不仅仅是简单的自由感应衰减信号。实际上，它包含了来自前几个周期的自旋回波和受激回波贡献，这些贡献受到真实 T2 衰减的影响。</p>
+
+
+<!--content goes above here-->
+</div></body>
+<!-- Mirrored from mriquestions.com/grassfisp-parameters.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 21 Mar 2026 06:08:25 GMT -->
+</html></div>
+
+
+
+</div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div><div class="paragraph" style="text-align:skip_to_justify;"><strong>参考文献</strong><br /><font color="#878787">&nbsp; &nbsp; &nbsp;</font>Haacke EM, Frahm J. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/haacke_editorial_jmri.1880010602.pdf">A guide to understanding key aspects of fast gradient-echo imaging</a>. J Magn Reson Imaging 1991; 1:621-624.<br />&nbsp; &nbsp; &nbsp;Oppelt A, Graumann R, Barfuss H, et al. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/oppelt_fisp_1986.pdf">FISP: a new fast MRI sequence</a>. Electromedica 1986; 54:15-18.</div><div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;"><strong>相关问题</strong><br /><strong><em>&nbsp; &nbsp; &nbsp;<span style="text-align: center;"><a href="grassfisp-how.html">GRASS/FISP/FFE 序列是如何工作的？</a>&nbsp;</span><span style="text-align: center;">&nbsp;</span></em></strong></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div style="text-align:skip_to_justify;"><div style="height: 10px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-normal" href="grassfisp-how.html" >
+<span class="wsite-button-inner">← &nbsp;上一问题</span>
+</a>
+<div style="height: 10px; overflow: hidden;"></div></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div style="text-align:right;"><div style="height: 10px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-normal" href="grass-vs-mpgr.html" >
+<span class="wsite-button-inner">下一问题 &nbsp;→</span>
+</a>
+<div style="height: 10px; overflow: hidden;"></div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div style="text-align:center;"><div style="height: 10px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-highlight" href="complete-list-of-questions.html" >
+<span class="wsite-button-inner">↑&nbsp;问题完整列表 ↑</span>
+</a>
+<div style="height: 10px; overflow: hidden;"></div></div>
+</div></div>

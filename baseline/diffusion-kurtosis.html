@@ -1,0 +1,142 @@
+<div id="content"><div id="wsite-content" class="wsite-elements wsite-not-footer">
+	<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<h2 class="wsite-content-title" style="text-align:center;">扩散峰度成像</h2>
+
+<div class="paragraph" style="text-align:center;"><strong style="color:rgb(135, 135, 135)"><em><font color="#0376be" size="4">什么是扩散峰度？它与常规“扩散”有何不同？&nbsp;</font></em></strong><strong style="color:rgb(55, 138, 87)"><em><font size="4">&nbsp;</font></em></strong></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-thin" style="padding-top:0px;padding-bottom:10px;margin-left:0px;margin-right:0px;text-align:center">
+<a href='uploads/3/4/5/7/34572113/screen-shot-2017-04-18-at-4-07-35-pm_orig.png' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/published/screen-shot-2017-04-18-at-4-07-35-pmec76.png?1492546265" alt="扩散峰度成像" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;"><font color="#2a2a2a">标准的扩散加权成像方法沿用了爱因斯坦最初的概念，即水分子的扩散遵循高斯（正态）分布。虽然这一假设对于纯液体和凝胶可能是正确的，但对于具有细胞膜、形成分隔和扩散屏障的复杂生物组织来说，则几乎肯定是错误的。当使用更强的梯度（更高的 <em>b</em> 值）和更长的回波时间时，非高斯行为变得更加明显。&nbsp;</font></div>
+
+<span class='imgPusher' style='float:left;height:0px'></span><span style='display: table;width:auto;position:relative;float:left;max-width:100%;;clear:left;margin-top:4px;*margin-top:8px'><a href='uploads/3/4/5/7/34572113/kurtosis-v-gaussian-graph_orig.png' rel='lightbox' onclick='if (!lightboxLoaded) return false'><img src="uploads/3/4/5/7/34572113/editor/kurtosis-v-gaussian-graphffdb.png?1492539040" style="margin-top: 20px; margin-bottom: 10px; margin-left: 0px; margin-right: 20px; border-width:0; max-width:100%" alt="峰度" class="galleryImageBorder wsite-image" /></a><span style="display: table-caption; caption-side: bottom; font-size: 90%; margin-top: -10px; margin-bottom: 10px; text-align: center;" class="wsite-caption">反映水分子在固定时间间隔内<br>可能扩散距离的概率分布。<br>纯液体中的扩散遵循高斯统计，<br>但组织扩散的特征是正峰度。</span></span>
+<div class="paragraph" style="display:block;"><em><strong><font color="#24678d">峰度</font></strong></em><font color="#2a2a2a">，用无量纲参数 </font><em><strong><font color="#24678d">K</font></strong></em><font color="#2a2a2a"> 表示，是一个长期公认的用于量化概率分布形状的统计指标。根据定义，高斯分布的 </font><em style="color:rgb(42, 42, 42)">K</em><font color="#2a2a2a"> = 0。分布形状更“尖峰”且“肩部”权重更小的分布通常具有正峰度（<em>K</em>&gt;0）。纯流体中的扩散是高斯性的，但生物组织的特征是正扩散峰度。这反映了水分子在遇到屏障、在分隔区间移动以及发生化学交换时所经历的异质性扩散环境。&nbsp;</span>遵循 <em>K</em>&gt;0 分布扩散的水分子，在给定时间间隔内通常不会像遵循高斯（<em>K</em>=0）统计的水分子扩散得那么远。</div>
+<hr style="width:100%;clear:both;visibility:hidden;"></hr>
+
+<div class="paragraph">对于高斯扩散，在施加扩散敏感梯度期间，预测的 MR 信号 (<em><strong>S</strong></em>) 相对于基线 (<em><strong>S<font size="2">o</font></strong></em>) 可以表示为</div>
+
+<div><div id="539694589660869253" align="center" style="width: 100%; overflow-y: hidden;" class="wcustomhtml"><div><h3><i><b>S</b> = <b>S<sub>o</sub></b>e<sup>−<b>b•ADC</sup></b></i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        <small></b><i>或</i></small>     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;     <i>ln</b><b>(S)</b> = ln(<b>S<sub>o</sub>)</b> − <b>b•ADC</b></i></center></h3> </div></div>
+
+
+
+</div>
+
+<div class="paragraph">其中&nbsp;<em><strong>ADC</strong></em> 是表观（或测量）扩散系数，<em><strong>b</strong></em> 是反映脉冲扩散梯度强度和持续时间的因子。&nbsp;<span style="color:rgb(0, 0, 0); font-weight:400">在此模型下，信号的对数图（以&nbsp;</span><em style="color:rgb(0, 0, 0)">ln<strong>&nbsp;(信号)</strong></em><span style="color:rgb(0, 0, 0); font-weight:400">&nbsp;对&nbsp;</span><em style="color:rgb(0, 0, 0)"><strong>b</strong></em><span style="color:rgb(0, 0, 0); font-weight:400">&nbsp;作图）应是一条斜率为&nbsp;</span><em style="color:rgb(0, 0, 0)"><strong>&minus;</strong></em><em style="color:rgb(0, 0, 0)"><strong>ADC</strong></em><span style="color:rgb(0, 0, 0); font-weight:400"> 的直线（下图中的红色实线）。</span><br></div>
+
+<span class='imgPusher' style='float:left;height:0px'></span><span style='display: table;width:auto;position:relative;float:left;max-width:100%;;clear:left;margin-top:0px;*margin-top:0px'><a href='uploads/3/4/5/7/34572113/ivim-and-kurtosis_1_orig.jpg' rel='lightbox' onclick='if (!lightboxLoaded) return false'><img src="uploads/3/4/5/7/34572113/screenshot-2025-11-09-at-2-28-26-pm_orig.png" style="margin-top: 5px; margin-bottom: 10px; margin-left: 0px; margin-right: 20px; border-width:0; max-width:100%" alt="IVIM 与 DKI 峰度成像" class="galleryImageBorder wsite-image" /></a><span style="display: table-caption; caption-side: bottom; font-size: 90%; margin-top: -10px; margin-bottom: 10px; text-align: center;" class="wsite-caption"><br>DWI 中预期 MR 信号与单指数模型的偏差。在低 <i>b</i> 值时，必须考虑微观灌注引起的 IVIM 效应（紫色），而在高 <i>b</i> 值时，必须考虑峰度效应（绿色）。</span></span>
+<div class="paragraph" style="display:block;"><a href="ivim.html">在之前的问答中</a>，我们展示了在低 <em>b</em> 值时，毛细血管内的体素内不相干运动灌注如何导致测量数据偏离这条预期直线。扩散峰度的影响<span style="color:rgb(0, 0, 0)">（绿色区域）</span>&nbsp;在高 <em>b</em> 值（即&nbsp;&ge; 1500 s/mm&sup2;）时最为明显。峰度&nbsp;<span style="color:rgb(0, 0, 0)">使曲线向与 IVIM 灌注相反的方向偏离，导致表观扩散系数低于预期值。</span></div>
+<hr style="width:100%;clear:both;visibility:hidden;"></hr>
+
+<div class="paragraph">考虑峰度影响的一种常用方法是对上述标准扩散信号方程中的指数项进行一步泰勒级数展开，得到&nbsp;</div>
+
+<div><div id="368699317341339029" align="center" style="width: 100%; overflow-y: hidden;" class="wcustomhtml"><div><h3><i><b>S</b> = <b>S<sub>o</sub></b>e<sup>−<b>bD + b²D²K/6</sup></b></i> </h3> </div></div>
+
+
+
+</div>
+
+<span class='imgPusher' style='float:right;height:0px'></span><span style='display: table;width:auto;position:relative;float:right;max-width:100%;;clear:right;margin-top:4px;*margin-top:8px'><a href='uploads/3/4/5/7/34572113/dki-stroke-mori-open-access_orig.jpg' rel='lightbox' onclick='if (!lightboxLoaded) return false'><img src="uploads/3/4/5/7/34572113/editor/dki-stroke-mori-open-access6f85.jpg?1492467867" style="margin-top: 10px; margin-bottom: 10px; margin-left: 20px; margin-right: 10px; border-width:0; max-width:100%" alt="扩散峰度成像" class="galleryImageBorder wsite-image" /></a><span style="display: table-caption; caption-side: bottom; font-size: 90%; margin-top: -10px; margin-bottom: 10px; text-align: center;" class="wsite-caption">急性脑梗死显示于迹线 DWI、ADC 图及平均峰度图像。注意 DK 图像中心区域的峰度降低，这在常规 DWI 或 ADC 图上未被察觉。该区域对应于 6 个月后 T2-FLAIR 图像上看到的更囊变的梗死区域。（来自 Hori 等人，采用 CC BY 许可）</span></span>
+<div class="paragraph" style="display:block;">通过在多个方向和不同&nbsp;<em>b</em> 值（最大在 2000&#8203;&minus;3000 s/<span style="color:rgb(0, 0, 0)">mm&sup2; 范围内）采集数据，可以估算此方程中的变量。获得的 <strong><em>D</em></strong> 值可视为经过峰度校正的表观扩散系数，而 <strong><em>K</em></strong> 可视为在三个主方向上平均的表观或平均峰度。在颅脑成像中，典型的计算峰度值范围可能从脑脊液的 <em>K</em></span>=<span style="color:rgb(0, 0, 0)">0 到灰质的 <em>K</em></span>=<span style="color:rgb(0, 0, 0)">0.7，再到白质的&nbsp;<em>K</em></span>=1.0。<br /><br />类似于 DTI，也可以创建扩散峰度张量，例如，估算峰度的轴向和径向分量。要创建这样的张量，至少需要探测 15 个不同的扩散方向和两个非零 <em style="color:rgb(0, 0, 0)">b</em> 值。还有几种更复杂的方法，包括 <em><strong><font color="#24678d">Q-Ball 成像</font></strong></em> 和 <em><strong><font color="#24678d">扩散谱成像</font></strong></em>，将在 <strong><font color="#508d24">高级讨论</font></strong> 中简要介绍。<br></div>
+<hr style="width:100%;clear:both;visibility:hidden;"></hr>
+
+<div><div id="855317552187657492" align="left" style="width: 100%; overflow-y: hidden;" class="wcustomhtml"><html> <head><script src="gdpr/gdprscript6f19.js?buildTime=1774025472"></script> <script type="text/javascript" 
+></script> 
+<script type="text/javascript">
+		$(function() {$('#Q').click(function() {$('.Q').toggle(500); return false;});});</script></head><body>
+<a href="#" id=Q><h3><font color="#378a57">进阶讨论（显示/隐藏）»</font></h3></a><div class=Q style="display:none;">
+
+<!--content goes below here-->
+
+<p><p>DTI 存在“交叉纤维问题”，该问题发生在限制不同方向扩散的解剖结构共存的体素中。这种情况在脑干和大脑半球的脑白质束中很常见。DTI 中使用的信号模型仅描述每个体素的单一扩散方向，因此无法表示体素内的纤维交叉。DKI 使用更灵活的信号模型，可容纳多个扩散方向，确实允许解析纤维交叉。</p></p>
+
+<p>即使考虑了峰度，张量模型也隐含地假设每个体素内只有一个扩散分隔区，具有单一的方向性最大值和最小值。这些模型无法描述具有多个最大值的扩散分布。</p>
+
+<p><font color="#0376be"><b><i>Q-Ball 成像</b></i></font> 是一种解析多个体素内纤维方向的方法，它不需要对扩散概率曲线的形状做特定假设。该方法目前仍局限于研究实验室，需要使用至少 60 个梯度方向（包括高振幅梯度，>4000 s/mm²）来探测组织。后处理使用复杂的滤波反投影方法（Funk-Radon 变换）进行。图像采集时间合理（10-20 分钟）。该技术前景看好，但尚未完全验证。</p>
+
+<p>更先进的是 <font color="#0376be"><b><i>扩散谱成像</b></i></font>。DSI 研究时间非常长（30-60 分钟），需要使用 8000-12000 s/mm² 的梯度（远超标准临床系统的范围）对超过 200 个梯度方向进行采样。DSI 相对无假设，可生成完整的 3D 扩散概率密度函数图，从而能够以高角度分辨率精确描绘纤维交叉。</p>
+
+
+<!--content goes above here-->
+</div></body>
+<!-- Mirrored from mriquestions.com/diffusion-kurtosis.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 21 Mar 2026 06:12:31 GMT -->
+</html></div>
+
+
+
+</div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div><div class="paragraph" style="text-align:skip_to_justify;"><strong>参考文献</strong><br />&nbsp;&nbsp; &nbsp;&nbsp;Balanda KP, MacGillivray HL. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/kurtosis_statistician.pdf">Kurtosis: a critical review</a>. Am Statistician 1988; 42:111-119. (A paper for you mathematicians out there. The actual definition of kurtosis and how to draw <em>K</em>&gt;0 versus <em>K</em>&lt;0 probability distributions is more complicated than my simple drawing suggests.)<br />&nbsp; &nbsp; &nbsp;Glenn GR, Kuo L-W, Chao Y-P, et al. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/jensen_kurtosis_2016.pdf">Mapping the orientation of white matter fiber bundles: a comparative study of diffusion tensor imaging, diffusional kurtosis imaging, and diffusion spectrum imaging</a>. AJNR Am J Neuroradiol 2016; 37:1216-1222. (recent improvements to the DKI regarding the fiber crossing problem)<br />&nbsp; &nbsp; &nbsp;Hagmann P, Jonasson L, Maeder P, et al. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/hagmann_2006dti_and_beyond_radiographics.pdf">Understanding diffusion MR imaging techniques: from scalar diffusion-weighted imaging to diffusion tensor imaging and beyond</a>. RadioGraphics 2006; 25:S205-223.<br /><span style="color:rgb(0, 0, 0)">&nbsp; &nbsp; &nbsp;Hori M, Aoki S, Fukunaga I, et al.&nbsp;</span><a href="https://mriquestions.com/uploads/3/4/5/7/34572113/dk_open_access_use_figs_a-c.pdf">A new diffusion metric, diffusion kurtosis imaging, used in the serial examination of a patient with stroke</a><span style="color:rgb(0, 0, 0)">. Acta Radiologica Short Reports 2012;1:2 DOI: 10.1258/arsr.2011.110024</span><br /><font color="#878787">&nbsp; &nbsp; &nbsp;</font>Jensen JH, Helpern JA, Ramani A, Lu H, Kaczynski K. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/jensen_et_al-2005-magnetic_resonance_in_medicine.pdf">Diffusional kurtosis imaging: the quantification of non-Gaussian water diffusion by means of magnetic resonance imaging</a>. Magn Reson Med 2005; 53:1432-1440. (original paper where DKI was first proposed)<br />&nbsp; &nbsp; &nbsp;Jensen JH, Helpern JA. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/nihms251449.pdf">MRI quantification of non-gaussian water diffusion by kurtosis analysis.</a> NMR Biomed 2010; 23:698-710. (follow-up paper to the original with a more comprehensive review and explanation)<br />&nbsp;&nbsp; &nbsp; Tuch DS. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/tuch-2004_q-ball_-magnetic_resonance_in_medicine.pdf">Q-Ball imaging</a>. Magn Reson Med 2004; 52:1358-1372.<br />&nbsp;&nbsp; &nbsp; Wedeen V, Hagmann P, Tseng WY, reese TG, Weisskoff RM. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/wedeen_et_al-2005-diffusion_spectrum_imaging_magnetic_resonance_in_medicine.pdf">Mapping complex tissue architecture with diffusion spectrum magnetic resonance imaging</a>. Magn Reson Med 2005; 54:1377-1386.&nbsp;<br />&nbsp; &nbsp; &nbsp;Yablonskiy DA, Sukstanskii AL. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/e_version.pdf">Theoretical models of the diffusion weighted MR signal</a>. NMR Biomed 2010; 23:661-681<span style="color:rgb(135, 135, 135)">.</span></div><div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;"><strong>相关问题</strong><br /><em><strong>&nbsp; &nbsp; &nbsp;<a href="ivim.html">什么是体素内不相干运动 (IVIM)？这与扩散相同吗？</a></strong></em></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div style="text-align:skip_to_justify;"><div style="height: 0px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-normal" href="ivim.html" >
+<span class="wsite-button-inner">← &nbsp;上一问题</span>
+</a>
+<div style="height: 0px; overflow: hidden;"></div></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div style="text-align:right;"><div style="height: 0px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-normal" href="fat--water-properties.html" >
+<span class="wsite-button-inner">下一问题 &nbsp;→</span>
+</a>
+<div style="height: 0px; overflow: hidden;"></div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div style="text-align:center;"><div style="height: 0px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-highlight" href="complete-list-of-questions.html" >
+<span class="wsite-button-inner">↑&nbsp;问题完整列表 ↑</span>
+</a>
+<div style="height: 10px; overflow: hidden;"></div></div>
+</div></div>

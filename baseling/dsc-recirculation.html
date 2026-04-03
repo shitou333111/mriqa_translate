@@ -1,0 +1,146 @@
+<div id="content"><div id="wsite-content" class="wsite-elements wsite-not-footer">
+	<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<h2 class="wsite-content-title" style="text-align:center;">DSC：再循环效应<br /></h2>
+
+<div class="paragraph" style="text-align:center;"><strong style="color: rgb(135, 135, 135); font-size: large; line-height: 1.5;"><em><font color="#0376be">为什么对比剂团注通过后，DSC 曲线没有回到基线？&nbsp;</font></em></strong><strong style="color: rgb(55, 138, 87); font-size: large; line-height: 1.5;"><em>&nbsp;</em></strong><br /></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-thin" style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
+<a href='uploads/3/4/5/7/34572113/873392_orig.png' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/873392_orig.png" alt="伽马变量DSC" style="width:100%;max-width:1100px" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:50.278551532033%; padding:0 15px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-none" style="padding-top:0;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
+<a href='uploads/3/4/5/7/34572113/6149570_orig.png' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/61495703fe9.png?316" alt="DSC再循环" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%">DSC 灌注研究中观察到的总信号的贡献：团注首次通过（早期）和再循环效应（晚期）</div>
+</div></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:49.721448467967%; padding:0 15px;">
+					
+						
+
+<div class="paragraph" style="text-align:skip_to_justify;">当钆剂通过组织时，会发生 T2/T2* 失相位，并伴随 MR 信号强度下降。主要的负峰主要反映了初始团注在区域动脉循环中的首次通过。然而，几乎同时，第二波钆剂会通过组织，影响第一个峰的大小和出现时间。这第二波代表含钆血液的再循环，这些血液已通过肾循环和冠脉循环分流，并返回心脏。除了影响主峰之外，持续的再循环会阻止 DSC 信号回到其原始基线。&nbsp;</div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;">经常对 DSC 数据应用各种数学技术来校正或补偿再循环效应。最流行的方法之一是使用<font color="#24678d" style="font-weight: bold; font-style: italic;">伽马变量</font><font color="#2a2a2a">&nbsp;拟合。伽马变量函数与上面所示的红色首次通过动脉曲线相似，具有相对陡峭的初始下降斜率和更平缓的基线回归。用于校正这些效应的其他方法包括单室再循环模型和随机模型。</font></div>
+
+<div><div id="895895424654289971" align="left" style="width: 100%; overflow-y: hidden;" class="wcustomhtml"><html> <head><script src="gdpr/gdprscript6f19.js?buildTime=1774025472"></script> <script type="text/javascript" 
+></script> 
+<script type="text/javascript">
+		$(function() {$('#Q').click(function() {$('.Q').toggle(500); return false;});});</script></head><body>
+<a href="#" id=Q><h3><font color="#378a57">进阶讨论（显示/隐藏）»</font></h3></a><div class=Q style="display:none;">
+
+<!--content goes below here-->
+
+<p>1.  伽马变量函数可以写成几种形式，但常用于首次通过对比剂实验的表达式如下：</p>
+
+<p align=center> <i>S(t) = A(t−t<sub>o</sub>)<sup>α</sup> e<sup>−(t−t<sub>o</sub>)/β</sup></i></p>
+
+<p>其中 <i>A</i> 是比例因子，<i>t<sub>o</sub></i> 是团注到达时间，而 <i>α</i> 和 <i>β</i> 决定了分布的形状。为了避免再循环效应被包含在伽马变量中，通常只使用对比剂曲线的第一部分来估计这些参数。</p>
+
+<p>2. 是否以及如何校正再循环效应存在争议。矛盾的是，当不消除再循环效应时，血容量估计值可能更准确。此外，伽马变量拟合本身就有噪声，因为只对摄取曲线的第一部分进行采样，从而产生了其自身的问题。</p>
+
+<p>3. 如果选择伽马变量方法，我建议生成第二个输出图（<i>χ²</i> 图）来检验拟合优度。</p>
+
+<p>4. 典型的 DSC 成像序列采集数据的时间少于 30 秒。在严重缺血的情况下，第一剂对比剂可能在此期间无法到达靶器官。因此，血容量和其他生理参数可能会被低估。</p>
+
+
+<!--content goes above here-->
+</div></body>
+<!-- Mirrored from mriquestions.com/dsc-recirculation.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 21 Mar 2026 06:38:07 GMT -->
+</html></div>
+
+
+
+</div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div><div class="paragraph" style="text-align:skip_to_justify;"><strong>参考文献</strong><br /><span></span>&nbsp;<font size="4" color="#fb0101">&nbsp; &nbsp;&#10026;&nbsp;</font><span>Bammer R, Amukotuwa SA. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/1-s2.0-s1064968923000892.pdf">Dynamic susceptibility contrast perfusion, Part 1: The fundamentals</a>. Magn Reson Imaging Clin N Am 2024; 32:1&ndash;23. <a href="https://doi.org/10.1016/j.mric.2023.09.010" target="_blank">[DOI LINK]</a><br />&nbsp; &nbsp; &nbsp;</span><font size="4" color="#fb0101">&#10026;&nbsp;</font><span>Bammer R, Amukotuwa SA. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/1-s2.0-s1064968923000909.pdf">Dynamic susceptibility contrast perfusion, Part 2: Deployment with and without contrast leakage present</a>. Magn Reson Imaging Clin N Am 2024; 32:25-45. <a href="https://doi.org/10.1016/j.mric.2023.09.011" target="_blank">[DOI LINK]</a><font color="#878787">&nbsp; &nbsp; &nbsp;<br /></font></span>&nbsp; &nbsp; &nbsp;Boxerman JL, Rosen BR, Weisskoff RM<a href="https://mriquestions.com/uploads/3/4/5/7/34572113/boxerman_jmri_1997.pdf">. Signal-to-noise analysis of cerebral blood volume maps from dynamic NMR imaging studies</a>. J Magn Reson Imaging 1997; 7:528-37. (Disadvantages of gamma variate fitting).<br />&nbsp; &nbsp; &nbsp;Patil V, Johnson G. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/gamma_variate_fitting_dsc.pdf">An improved model for describing the contrast bolus in perfusion MRI</a>. Med Phys 2011; 38:6380-3. (An alternative to gamma variate fitting, the single compartment recirculation (SCR) model).<br />&nbsp; &nbsp; &nbsp;Thompson HK Jr, Starmer CF, Whalen RE, McIntosh HD. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/gamma_variate_1964.pdf">Indicator transit time considered as a gamma variate</a>. Circ Res 1964; 14:502-515. (Original classic paper describing gamma variate fitting in indicator dilution experiments)<br /><br /></div><div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;"><strong>相关问题</strong><br /><strong>&nbsp; &nbsp; &nbsp;</strong><span style="text-align: center;"><strong><em><a href="bolus-gd-effect.html">如果钆对比剂用于增强常规 MR 图像的信号强度，为何在 DSC 灌注成像中它会降低信号？</a></em></strong></span></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div style="text-align:skip_to_justify;"><div style="height: 0px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-normal" href="bolus-gd-effect.html" >
+<span class="wsite-button-inner">← &nbsp;上一问题</span>
+</a>
+<div style="height: 0px; overflow: hidden;"></div></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div style="text-align:right;"><div style="height: 0px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-normal" href="dsc-curve-analysis.html" >
+<span class="wsite-button-inner">下一问题 &nbsp;→</span>
+</a>
+<div style="height: 0px; overflow: hidden;"></div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div style="text-align:center;"><div style="height: 0px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-highlight" href="complete-list-of-questions.html" >
+<span class="wsite-button-inner">↑&nbsp;问题完整列表 ↑</span>
+</a>
+<div style="height: 10px; overflow: hidden;"></div></div>
+</div></div>

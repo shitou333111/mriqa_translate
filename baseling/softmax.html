@@ -1,0 +1,124 @@
+<div id="content"><div id="wsite-content" class="wsite-elements wsite-not-footer">
+	<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:42.361111111111%; padding:0 15px;">
+					
+						
+
+<h2 class="wsite-content-title" style="text-align:center;">Softmax</h2>
+
+<div class="paragraph" style="text-align:center;"><font color="#0376be" size="4"><strong><em>什么是 Softmax 函数？为什么需要它？</em></strong></font></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:57.638888888889%; padding:0 15px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-thin" style="padding-top:0px;padding-bottom:0px;margin-left:0px;margin-right:0px;text-align:center">
+<a href='uploads/3/4/5/7/34572113/screen-shot-2023-01-19-at-4-20-46-pm_orig.png' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/published/screen-shot-2023-01-19-at-4-20-46-pmff1d.png?1674166870" alt="图片" style="width:303;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<span class='imgPusher' style='float:right;height:0px'></span><span style='display: table;width:auto;position:relative;float:right;max-width:100%;;clear:right;margin-top:0px;*margin-top:0px'><a href='uploads/3/4/5/7/34572113/softmax-example_orig.png' rel='lightbox' onclick='if (!lightboxLoaded) return false'><img src="uploads/3/4/5/7/34572113/editor/softmax-example15ff.png?1674147906" style="margin-top: 10px; margin-bottom: 0px; margin-left: 20px; margin-right: 0px; border-width:0; max-width:100%" alt="Softmax 函数" class="galleryImageBorder wsite-image" /></a><span style="display: table-caption; caption-side: bottom; font-size: 90%; margin-top: -0px; margin-bottom: 0px; text-align: center;" class="wsite-caption"></span></span>
+<div class="paragraph" style="display:block;"><em><strong><font color="#24678d">Softmax 函数</font></strong></em> 的目的是调整 <em><strong><font color="#24678d">卷积神经网络 (CNN)</font></strong></em> 的输出，使其总和为 1。这意味着模型输出值被重新缩放，从而可以被视为网络预测某个类别的相对“概率”。<br /><br />右侧的图展示了 Softmax 在 <a href="convolutional-network.html">上一个问答</a> 中所示的脑肿瘤分类 CNN 最后阶段的应用。&nbsp;&nbsp;<br />此处，原始输出数据 [&minus;0.1, 3.8, 1.1,&nbsp;&minus;0.3] 已被 Softmax 转换为相对“概率”。</div>
+<hr style="width:100%;clear:both;visibility:hidden;"></hr>
+
+<div><div id="709759218133119325" align="left" style="width: 100%; overflow-y: hidden;" class="wcustomhtml"><p>简而言之，Softmax 函数使用指数函数 (<i>e<sup>z<sub>i</sub></sup></i>) 将输出向量的各个分量转换为正数。对于给定的向量元素 (<i>z<sub>i</sub></i>)，Softmax 通过先将其取指数，然后除以原始输出向量中所有元素的指数之和，从而将该值转换为概率。例如，第二个向量元素 <i>z<sub>2</sub></i> = 3.8 的 Softmax 值计算如下：</div>
+
+
+
+</div>
+
+<div><div class="wsite-image wsite-image-border-none" style="padding-top:0px;padding-bottom:0px;margin-left:0px;margin-right:0px;text-align:center">
+<a href='uploads/3/4/5/7/34572113/screen-shot-2023-01-19-at-11-32-56-am_orig.png' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/published/screen-shot-2023-01-19-at-11-32-56-amcbf9.png?1674149626" alt="Softmax 计算" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+<div class="paragraph">向量中的其他元素依此类推。Softmax 函数是高度非线性的，因为它倾向于将较高的原始数据值推向 1，而将较小的值推向 0。</div>
+
+<div><div id="233111872664908849" align="left" style="width: 100%; overflow-y: hidden;" class="wcustomhtml"><html> <head><script src="gdpr/gdprscript6f19.js?buildTime=1774025472"></script> <script type="text/javascript" 
+></script> 
+<script type="text/javascript">
+		$(function() {$('#Q').click(function() {$('.Q').toggle(500); return false;});});</script></head><body>
+<a href="#" id=Q><h3><font color="#378a57">进阶讨论 (显示/隐藏)»</font></h3></a><div class=Q style="display:none;">
+
+<!--content goes below here-->
+
+<p>Softmax 函数本质上与统计力学中的 <font color="#0376be"><b><i>玻尔兹曼分布</b></i></font> 相同。你可能还记得，玻尔兹曼分布是一种概率度量，表示系统处于某种状态的概率，该概率是其粒子能量和温度的函数。</p>
+
+<p>很自然地会问，为什么要费心使用指数函数，而不是直接使用实际的原始输出数据。一个明显的问题是，当原始数据包含负数时，分母可能为零。使用原始数据 <u>绝对值</u> 的比值是可以的，但这样的函数是不可微的。</p>
+
+<!--content goes above here-->
+</div></body>
+<!-- Mirrored from mriquestions.com/softmax.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 21 Mar 2026 06:50:43 GMT -->
+</html></div>
+
+
+
+</div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div><div class="paragraph" style="text-align:skip_to_justify;"><strong>参考文献</strong><br /><span><font color="#878787">&nbsp; &nbsp; &nbsp;</font></span>Keisan Online Softmax Calculator. <a href="https://keisan.casio.com/exec/system/15168444286206" target="_blank">Available at this website</a>.<span><font color="#878787">&nbsp; &nbsp; &nbsp;</font></span>&#8203;<br />&nbsp; &nbsp; &nbsp;<a href="https://en.wikipedia.org/wiki/Softmax_function" target="_blank">Softmax Function</a>.&nbsp; Wikipedia. The Free Encyclopedia.<br /></div><div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;"><strong>相关问题</strong><br /><strong>&nbsp; &nbsp; &nbsp;</strong><strong style="color:rgb(3, 118, 190)"><em><a href="convolutional-network.html">什么是卷积神经网络 (CNN) 及其工作原理？</a></em></strong><em></em></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div style="text-align:skip_to_justify;"><div style="height: 10px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-normal" href="convolutional-network.html" >
+<span class="wsite-button-inner">← &nbsp;上一问题</span>
+</a>
+<div style="height: 10px; overflow: hidden;"></div></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div style="text-align:right;"><div style="height: 10px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-normal" href="upsampling.html" >
+<span class="wsite-button-inner">下一问题 &nbsp;→</span>
+</a>
+<div style="height: 10px; overflow: hidden;"></div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div style="text-align:center;"><div style="height: 10px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-highlight" href="complete-list-of-questions.html" >
+<span class="wsite-button-inner">↑&nbsp;问题完整列表 ↑</span>
+</a>
+<div style="height: 10px; overflow: hidden;"></div></div>
+</div></div>

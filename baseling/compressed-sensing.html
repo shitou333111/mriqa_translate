@@ -1,0 +1,204 @@
+<div id="content"><div id="wsite-content" class="wsite-elements wsite-not-footer">
+	<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<h2 class="wsite-content-title" style="text-align:center;">压缩感知</h2>
+
+<div class="paragraph" style="text-align:center;"><font size="4"><strong style="color:rgb(135, 135, 135)"><em><font color="#0376be">什么是压缩感知？它有什么用处？&nbsp;</font></em></strong><strong style="color:rgb(55, 138, 87)"><em>&nbsp;</em></strong></font></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-thin" style="padding-top:0px;padding-bottom:10px;margin-left:0px;margin-right:0px;text-align:center">
+<a href='uploads/3/4/5/7/34572113/screen-shot-2017-08-13-at-2-34-24-pm_orig.png' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/published/screen-shot-2017-08-13-at-2-34-24-pmdc38.png?1502649325" alt="图片" style="width:298;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;"><font color="#24678d"><strong>压缩感知</strong> <strong>(CS)</strong>&#8203;</font> <font color="#2a2a2a">指的是一组基于对 <em>k</em> 空间进行半随机、不完全采样的加速 MR 数据采集方法。最终图像是通过使用非傅里叶变换和对中间重建图像进行阈值处理的迭代优化过程创建的。尽管仍处于发展的相对早期阶段，但 CS 方法在 MRA</font><span style="color:rgb(42, 42, 42)">、3D/4D MRI、动态对比增强 (DCE) 研究以及心脏 MR 成像应用中显得尤其前景广阔。通过整合深度学习模型来提高重建精度并减少计算时间，其应用范围最近得到了扩展。</span></div>
+
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:72.638888888889%; padding:0 15px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-none" style="padding-top:0px;padding-bottom:0px;margin-left:0px;margin-right:0px;text-align:center">
+<a href='uploads/3/4/5/7/34572113/cs-annotated-from-pone_orig.jpg' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/cs-annotated-from-pone_orig.jpg" alt="图片" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:27.361111111111%; padding:0 15px;">
+					
+						
+
+<div class="paragraph"><font size="2">使用压缩感知的电影心脏研究，加速因子高达 15 倍。（改编自 Abascal 等人，遵循 CC BY 许可）&nbsp;</font></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;"><font color="#2a2a2a">大多数读者都知道，使用像&nbsp;</font><em><strong><font color="#24678d">jpeg</font></strong></em><font color="#2a2a2a"> 这样的格式，可以在保持良好质量的同时，将照片的文件大小压缩多达 10:1。这种压缩是可能的，因为照片（以及 MR）图像包含许多缺乏独特信息内容的像素（例如，背景中强度为零的像素以及与其相邻像素值几乎相同的像素）。&nbsp;</font></div>
+
+<div class="paragraph">这直接引出了 CS MRI 背后的巧妙想法：如果 MR 图像可以在重建<u>之后</u>被压缩，为什么<u>不</u>提前节省时间，只采集 MR 信号的“基本”成分，而不是所有的 <em>k</em> 空间数据呢？要成功实现这一点，需要三个要素：非相干欠采样、稀疏化变换和迭代重建。&nbsp;</div>
+
+<div class="paragraph"><strong><font color="#8d5024" size="4">非相干欠采样</font></strong></div>
+
+<div class="paragraph"><span style="color:rgb(0, 0, 0)">术语&nbsp;</span><em style="color:rgb(0, 0, 0)"><strong><font color="#24678d">欠采样</font></strong></em><span style="color:rgb(0, 0, 0)">&nbsp;意味着只测量 <em>k</em> 空间的一部分，从而可以显著减少数据采集时间。然而，这种欠采样必须以<em><strong><font color="#24678d">非相干</font></strong></em>（半随机）的方式进行。以相干（可预测）模式进行数据欠采样，例如选择 <em>k</em> 空间的每第 3 条线，会产生离散的混叠“鬼影”伪影，这些伪影会包裹在图像上。通过不规则采样，这些伪影反而会作为弥散噪声分布在整个图像中，随后可以被去除。同时，数据采样不能<u>过于</u>随机，因为 <em>k</em> 空间的中心比其外围包含更多“基本”的图像信息。因此，目前大多数 CS 方法（变密度&nbsp;<span style="color:rgb(0, 0, 0)">泊松盘、高斯和黄金角径向</span>）采用<u>半</u>随机数据采集，并在 <em>k</em> 空间中心附近优先采样。&nbsp;</div>
+
+<div class="paragraph"><strong><font color="#8d5024" size="4">稀疏化变换</font></strong></div>
+
+<div class="paragraph"><em><strong><font color="#24678d">稀疏性</font></strong></em> 反映了成像矩阵被有意义数据填充的程度。有些矩阵本质上是稀疏的，例如与 MRA 相关的矩阵，其中大部分是零（对应于黑色/非血管区域）。实体器官的图像在常规显示中可能看起来并不稀疏，但可以通过数学变换/分解成具有相对稀疏成分的表示。应用所谓的<em><strong><font color="#24678d">稀疏化变换</font></strong></em>（例如<em><strong><font color="#24678d">小波</font></strong></em>）是下文描述的 CS 重建方法的一个基本特征。&nbsp;</div>
+
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:34.305555555556%; padding:0 15px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-none" style="padding-top:10px;padding-bottom:10px;margin-left:0px;margin-right:0px;text-align:center">
+<a href='uploads/3/4/5/7/34572113/mra-sparse-legs_orig.jpg' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/mra-sparse-legs_orig.jpg" alt="腿部 MRA" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%">MRA - 本质稀疏的图像</div>
+</div></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:30%; padding:0 15px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-none" style="padding-top:10px;padding-bottom:10px;margin-left:0px;margin-right:0px;text-align:right">
+<a href='uploads/3/4/5/7/34572113/wavelet-brain-0-cmmm2014-958671_orig.jpg' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/published/wavelet-brain-0-cmmm2014-958671f29e.jpg?1502479125" alt="脑部小波" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%">脑部 MRI - 非本质稀疏</div>
+</div></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:35.694444444444%; padding:0 15px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-none" style="padding-top:10px;padding-bottom:10px;margin-left:0px;margin-right:0px;text-align:skip_to_justify">
+<a href='uploads/3/4/5/7/34572113/wavelet-three-brightened_orig.jpg' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/published/wavelet-three-brightenedac98.jpg?1502479042" alt="小波" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%">相对稀疏的小波成分<br>(来自 Zhao 等人，遵循 CC BY 许可)</div>
+</div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div class="paragraph"><strong><font color="#8d5024" size="4">迭代重建</font></strong></div>
+
+<div class="paragraph"><font color="#2a2a2a"><span>与常规 MR 图像的单步傅里叶重建不同，压缩感知涉及多个步骤和数据变换，由一个重复数十次的迭代优化算法介导，遵循类似以下的方案</span><span>：</span></font><ol><li><font color="#2a2a2a"><u><span>采集初始 k 空间数据</span></u><span>，使用有限的、非相干（半随机）采样。</span></font></li><li><u><span style="color:rgb(42, 42, 42)">对这些数据进行傅里叶变换</span></u><span style="color:rgb(42, 42, 42)">&nbsp;以创建<em>初始图像</em>。初始图像将非常粗糙，受到表现为“噪声”的弥散混叠伪影的影响。</span></li><li><u><span style="color:rgb(42, 42, 42)">应用稀疏化变换</span></u><span style="color:rgb(42, 42, 42)">&nbsp;（例如小波分解），将有意义的成像特征集中到数量较少的高强度像素中。混叠“噪声”现在强度较低，并分布在许多像素上，大部分在背景中。</span></li><li><u><span style="color:rgb(42, 42, 42)">对稀疏化数据进行去混叠（“<em>去噪</em>”）</span></u><span style="color:rgb(42, 42, 42)">&nbsp;，通过将低于最小阈值的像素值归零、数字滤波和/或减法来实现。&nbsp;</span></li><li><u><span style="color:rgb(42, 42, 42)">应用逆稀疏化和傅里叶变换</span></u><span style="color:rgb(42, 42, 42)">&nbsp;，将这种“<em>去噪</em>”数据重新转换回 <em>k</em> 空间格式。&nbsp;</span></li><li><u><span style="color:rgb(42, 42, 42)">创建一个 <em>k</em> 空间“<em>差异矩阵</em></span></u><span style="color:rgb(42, 42, 42)">”&nbsp;<u><span style="color:rgb(42, 42, 42)"></span></u>，方法是用<em>去噪</em>后的 <em>k</em> 空间数据减去原始数据，并将所有其他点设为零。通过傅里叶变换，可以创建一个“<em>差异图像</em>”。将初始图像和差异图像相加，创建一个“<em>更新图像</em>”。</span></li><span style="color:rgb(42, 42, 42)"></span><li><span style="color:rgb(42, 42, 42)"><u>比较<em>初始</em>图像和<em>更新</em>图像</u>。如果存在显著差异，则重复步骤 3-7。否则停止。</span>&#8203;</li></ol></div>
+
+<div class="paragraph"><strong><font size="4" color="#8d5024">CS 的商业应用</font></strong></div>
+
+<div class="paragraph">CS 方法现在已作为商业产品提供：<em><strong><font color="#24678d">Compressed Sensing</font></strong></em> (Siemens)、<em><strong><font color="#24678d">Compressed SENSE</font></strong></em> (Philips)、&nbsp;<em><strong><font color="#24678d">HyperSense&nbsp;</font></strong></em>(GE) 和&nbsp;<em><strong><font color="#24678d">Compressed Speeder </font></strong></em>(Canon)。这些方法现在正与基于深度学习的重建方法相结合，以缩短检查时间并提高图像质量。&nbsp;</div>
+
+<div><div id="614061520907097606" align="left" style="width: 100%; overflow-y: hidden;" class="wcustomhtml"><html> <head><script src="gdpr/gdprscript6f19.js?buildTime=1774025472"></script> <script type="text/javascript" 
+></script> 
+<script type="text/javascript">
+		$(function() {$('#Q').click(function() {$('.Q').toggle(500); return false;});});</script></head><body>
+<a href="#" id=Q><h3><font color="#378a57">进阶讨论 (显示/隐藏)»</font></h3></a><div class=Q style="display:none;">
+
+<!--content goes below here-->
+
+暂无补充材料。请稍后再来查看！
+
+
+<!--content goes above here-->
+</div></body>
+<!-- Mirrored from mriquestions.com/compressed-sensing.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 21 Mar 2026 06:18:58 GMT -->
+</html></div>
+
+
+
+</div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div><div class="paragraph" style="text-align:skip_to_justify;"><strong>参考文献<br />&nbsp;&nbsp; &nbsp;&nbsp;</strong>Abascal JFPJ, Montesinos P, Marinetto E, Pascau J, Desco M. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/pone.0110594.pdf">Comparison of total variation with a motion estimation based compressed sensing approach for self-gated cardiac cine MRI in small animal studies</a>. PLos ONE 2014; 9(10): e110594.<br />&nbsp;&nbsp; &nbsp; Blasche M, Forman C. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/siemens_mri_magnetom-world_compressed-sensing_compressed-sensing-flowchart_blasche-03520147.pdf">Compressed sensing&nbsp;&mdash; the flowchart</a>. MAGNETOM Flash 2016; 66:4-7. (Good review of the Siemens iterative construction algorithm).<br />&nbsp; &nbsp; &nbsp;Donoho DL. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/donoho_it_april06_1st_cs_paper.pdf">Compressed sensing</a>. IEEE Trans Information Theory 2006; 52:1289-1306.&nbsp; <a href="https://doi.org/10.1109/TIT.2006.871582" target="_blank">[DOI LINK]</a><br />(First paper on theory of CS)<br />&nbsp; &nbsp; &nbsp;Geethanath S, Reddy R, Konar AS, et al. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/cs_review_bioengineering.pdf">Compressed sensing MRI: a review</a>. Critical Reviews in Biomedical Engineering 2013; 41:183-204.<br />&nbsp; &nbsp; &nbsp;Jaspan ON, Fleysher R, Lipton ML. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/bjr.20150487_review.pdf">Compressed sensing MRI: a review of the clinical literature</a>. Brit J Radiol 2015; 88:20150487<br />&nbsp; &nbsp; &nbsp;<span style="background-color: transparent;">Liang D, Cheng J, Ke Z, Ying L. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/liang_cs_nihms-1551805.pdf">Deep magnetic resonance image reconstruction: inverse problems meet neural networks</a>.</span><span style="background-color: transparent;">&nbsp; </span><span style="background-color: transparent;">IEEE Signal Process Mag 2020; 37:141-151.</span><span style="background-color: transparent;">&nbsp; </span><span style="background-color: transparent;"><a href="https://doi.org/10.1109/MSP.2019.2950557" target="_blank">[DOI LINK]</a><br /></span>&nbsp; &nbsp; &nbsp;Lustig M, Donoho D, Pauly JM. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/compressed_sensing.pdf">Sparse MRI: the application of compressed sensing for rapid MR imaging</a>. Magn Reson Med 2007; 58:1182-1195.<br /><font color="#2a2a2a">&nbsp; &nbsp; &nbsp;Zhao D, Du H, Han Y, Mei w. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/cmmm2014-958671.pdf">Compressed sensing MR image reconstruction exploiting TGV and wavelet sparsity</a>. Comput Math Methods Med 2014; 958671.</font></div><div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;"><strong>相关问题</strong><br /><strong>&nbsp; &nbsp; &nbsp;</strong><strong><em><font color="#0376be"><a href="noise-in-pi.html">为什么并行成像研究看起来噪声这么大？</a>&nbsp;</font></em></strong><em></em></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div style="text-align:skip_to_justify;"><div style="height: 10px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-normal" href="caipirinha.html" >
+<span class="wsite-button-inner">← &nbsp;上一问题</span>
+</a>
+<div style="height: 10px; overflow: hidden;"></div></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div style="text-align:right;"><div style="height: 10px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-normal" href="noise-in-pi.html" >
+<span class="wsite-button-inner">下一问题 &nbsp;→</span>
+</a>
+<div style="height: 10px; overflow: hidden;"></div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div style="text-align:center;"><div style="height: 10px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-highlight" href="complete-list-of-questions.html" >
+<span class="wsite-button-inner">↑&nbsp;问题完整列表 ↑</span>
+</a>
+<div style="height: 10px; overflow: hidden;"></div></div>
+</div></div>

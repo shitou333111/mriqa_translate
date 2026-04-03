@@ -1,6 +1,27 @@
 import { useMemo, useEffect, useRef } from "react";
 import { initLightbox } from "../lightbox";
 import { useNavigate, useLocation } from "react-router-dom";
+import overlayMapStatic from "../meta/first_pic_texts_zh_map_basename.json";
+
+const APP_BASE_URL = import.meta.env.BASE_URL || "/";
+const IS_GITHUB_PAGES = typeof window !== "undefined" && /github\.io$/i.test(window.location.hostname);
+
+function withBase(path) {
+  const base = APP_BASE_URL.startsWith("/") ? APP_BASE_URL : `/${APP_BASE_URL}`;
+  const normalizedBase = base.endsWith("/") ? base : `${base}/`;
+  const clean = String(path || "").replace(/^\/+/, "");
+
+  if (!clean) {
+    return normalizedBase;
+  }
+
+  const baseNoLeadingSlash = normalizedBase.replace(/^\//, "");
+  if (clean.startsWith(baseNoLeadingSlash)) {
+    return `/${clean}`;
+  }
+
+  return `${normalizedBase}${clean}`.replace(/\/\/{2,}/g, "/");
+}
 
 const ADVANCED_TOGGLE_DURATION = 500;
 const advancedToggleTimers = new WeakMap();
@@ -163,6 +184,12 @@ export function createOverlayForImage(img, text, editable = false) {
 export let overlayMapCache = null;
 export async function fetchOverlayMap(forceRefresh = false) {
   if (overlayMapCache && !forceRefresh) return overlayMapCache;
+
+  if (IS_GITHUB_PAGES) {
+    overlayMapCache = overlayMapStatic && (overlayMapStatic.basename_map || overlayMapStatic) || {};
+    return overlayMapCache;
+  }
+
   try {
     const res = await fetch('/api/overlay-map', { cache: 'no-store' });
     if (!res.ok) throw new Error('fetch failed ' + res.status);
@@ -454,9 +481,9 @@ function toRootRelativeUrl(url) {
     return raw;
   }
   if (raw.startsWith("/")) {
-    return raw;
+    return withBase(raw);
   }
-  return `/${raw.replace(/^\.?\/+/, "")}`;
+  return withBase(raw.replace(/^\.?\/+/, ""));
 }
 
 function normalizeResourceUrls(root) {

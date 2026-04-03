@@ -10,6 +10,7 @@ import ScreenshotButton from "./components/ScreenshotButton";
 import SiteFooter from "./components/SiteFooter";
 import GuidePage from "./components/GuidePage";
 import * as searchService from "./search/searchService";
+import sidebarData from "./meta/sidebar.json";
 
 
 // Modern tray-style segmented control with sliding animation
@@ -62,6 +63,84 @@ const GUIDE_TOUR_STAGE_EDIT = "edit";
 const GUIDE_TOUR_STAGE_REVIEW_ENTRY = "review-entry";
 const GUIDE_TOUR_STAGE_REVIEW = "review";
 const GUIDE_TOUR_TOTAL_STEPS = 15;
+const APP_BASE_URL = import.meta.env.BASE_URL || "/";
+const IS_GITHUB_PAGES = typeof window !== "undefined" && /github\.io$/i.test(window.location.hostname);
+
+function withBase(path) {
+  const base = APP_BASE_URL.startsWith("/") ? APP_BASE_URL : `/${APP_BASE_URL}`;
+  const normalizedBase = base.endsWith("/") ? base : `${base}/`;
+  const clean = String(path || "").replace(/^\/+/, "");
+
+  if (!clean) {
+    return normalizedBase;
+  }
+
+  const baseNoLeadingSlash = normalizedBase.replace(/^\//, "");
+  if (clean.startsWith(baseNoLeadingSlash)) {
+    return `/${clean}`;
+  }
+
+  return `${normalizedBase}${clean}`.replace(/\/\/{2,}/g, "/");
+}
+
+function isHtmlDocumentString(text) {
+  const trimmed = String(text || "").trimStart();
+  return trimmed.startsWith("<") || /<!doctype\s+html/i.test(trimmed) || /^<html/i.test(trimmed);
+}
+
+function collectLeafIdsFromMenu(nodes) {
+  const result = [];
+
+  function walk(items) {
+    if (!Array.isArray(items)) {
+      return;
+    }
+    items.forEach((item) => {
+      if (!item || !item.id) {
+        return;
+      }
+      if (Array.isArray(item.children) && item.children.length > 0) {
+        walk(item.children);
+        return;
+      }
+      if (item.id !== "index" && item.id !== "complete-list-of-questions") {
+        result.push(item.id);
+      }
+    });
+  }
+
+  walk(nodes);
+  return result;
+}
+
+function parseArticleFromHtml(html) {
+  const doc = new DOMParser().parseFromString(String(html || ""), "text/html");
+  const title = doc.querySelector("title")?.textContent?.trim() || "Untitled";
+  const contentNode = doc.querySelector("#content");
+  const contentHtml = contentNode ? (contentNode.innerHTML || "") : (doc.body?.innerHTML || "");
+  return { title, contentHtml };
+}
+
+async function fetchStaticArticle(lang, routeId) {
+  const slug = (!routeId || routeId === "index") ? "index.html" : `${routeId}.html`;
+  const url = withBase(`${lang}/${slug}`);
+  const resp = await fetch(url, { cache: "no-store" });
+  if (!resp.ok) {
+    throw new Error(`fetch ${url} status ${resp.status}`);
+  }
+  const html = await resp.text();
+  if (!isHtmlDocumentString(html)) {
+    throw new Error(`invalid article html from ${url}`);
+  }
+  const parsed = parseArticleFromHtml(html);
+  return {
+    id: routeId || "index",
+    slug,
+    lang,
+    title: parsed.title,
+    contentHtml: parsed.contentHtml
+  };
+}
 
 // 兼容旧版Quiz静态HTML中通过onclick调用的函数（比如 showAnswer/showAllAnswers/scoreAnswers）。
 function queryControl(id, boundaryElement) {
@@ -425,9 +504,9 @@ function toRootRelativeUrl(url) {
     return raw;
   }
   if (raw.startsWith("/")) {
-    return raw;
+    return withBase(raw);
   }
-  return `/${raw.replace(/^\.?\/+/, "")}`;
+  return withBase(raw.replace(/^\.?\/+/, ""));
 }
 
 function normalizeResourceUrls(root, { markOriginal = false } = {}) {
@@ -912,7 +991,10 @@ function Header({
   }, [hasUnsavedChanges, pendingExit, onExitEdit]);
 
   useEffect(() => {
-    if (!activeSlug) return;
+    if (!activeSlug || IS_GITHUB_PAGES) {
+      setAuthors([]);
+      return;
+    }
     fetch("/api/article/meta?slug=" + activeSlug)
       .then(r => r.json())
       .then(d => setAuthors(d.authors || []))
@@ -1512,25 +1594,41 @@ function useDualArticles(slug) {
       setLoading(true);
       setError("");
       try {
-        // 同时读取中文和英文版本：
-        // - zh: 服务端从工作区 zh/ 目录读取对应 HTML
-        // - en: 服务端从工作区 en/ 目录读取对应 HTML
-        // 两边共用同一个 slug（如 Index.html），前端只负责并行请求与降级展示。
-        const [zhResponse, enResponse] = await Promise.all([
-          fetch(`/api/article?lang=zh&slug=${encodeURIComponent(slug)}`),
-          fetch(`/api/article?lang=en&slug=${encodeURIComponent(slug)}`)
+        const readArticle = async (lang) => {
+          try {
+            const resp = await fetch(`/api/article?lang=${lang}&slug=${encodeURIComponent(slug)}`);
+            if (resp.ok) {
+              const contentType = (resp.headers.get("content-type") || "").toLowerCase();
+              if (contentType.includes("application/json")) {
+                return await resp.json();
+              }
+              const text = await resp.text();
+              if (!isHtmlDocumentString(text)) {
+                return JSON.parse(text);
+              }
+            }
+          } catch {
+            // fallback below
+          }
+
+          if (IS_GITHUB_PAGES) {
+            return fetchStaticArticle(lang, slug);
+          }
+
+          return null;
+        };
+
+        const [zhArticle, enArticle] = await Promise.all([
+          readArticle("zh"),
+          readArticle("en")
         ]);
-        const [zhData, enData] = await Promise.all([zhResponse.json(), enResponse.json()]);
 
         if (ignore) {
           return;
         }
 
-        const zhArticle = zhResponse.ok ? zhData : null;
-        const enArticle = enResponse.ok ? enData : null;
-
         if (!zhArticle && !enArticle) {
-          throw new Error(zhData.message || enData.message || "加载文章失败");
+          throw new Error("加载文章失败");
         }
 
         setArticles({
@@ -1538,7 +1636,7 @@ function useDualArticles(slug) {
           en: enArticle
         });
 
-        if (!zhResponse.ok || !enResponse.ok) {
+        if (!zhArticle || !enArticle) {
           setError("部分语言内容未加载成功，已显示可用内容。");
         }
       } catch (err) {
@@ -3167,6 +3265,7 @@ export default function App() {
   useEffect(() => {
     async function loadIndex() {
       const candidates = [
+        withBase("search-index.json"),
         "/search-index.json",
         "/public/search-index.json",
         "/static/search-index.json"
@@ -3234,13 +3333,24 @@ export default function App() {
 
   useEffect(() => {
     async function bootstrap() {
-      // /api/menu 来自 frontend/src/meta/sidebar.json，用于侧栏树。
-      // /api/slugs 用于推导默认文章与路由兜底。
-      const [menuResp, slugsResp] = await Promise.all([fetch("/api/menu"), fetch("/api/slugs")]);
-      const menuData = await menuResp.json();
-      const slugData = await slugsResp.json();
-      setMenu(menuData);
-      setSlugs(slugData);
+      if (IS_GITHUB_PAGES) {
+        setMenu(Array.isArray(sidebarData) ? sidebarData : []);
+        setSlugs(collectLeafIdsFromMenu(sidebarData));
+        return;
+      }
+
+      try {
+        const [menuResp, slugsResp] = await Promise.all([fetch("/api/menu"), fetch("/api/slugs")]);
+        if (!menuResp.ok || !slugsResp.ok) {
+          throw new Error("menu/slugs fetch failed");
+        }
+        const [menuData, slugData] = await Promise.all([menuResp.json(), slugsResp.json()]);
+        setMenu(menuData);
+        setSlugs(slugData);
+      } catch {
+        setMenu(Array.isArray(sidebarData) ? sidebarData : []);
+        setSlugs(collectLeafIdsFromMenu(sidebarData));
+      }
     }
     bootstrap();
   }, []);
@@ -3253,6 +3363,12 @@ export default function App() {
       if (isEditing || isReviewing || !activeSlug) {
         setCanEnterReview(false);
         setReviewDisabledReason("");
+        return;
+      }
+
+      if (IS_GITHUB_PAGES) {
+        setCanEnterReview(false);
+        setReviewDisabledReason("GitHub Pages 为静态预览，不支持审核");
         return;
       }
 

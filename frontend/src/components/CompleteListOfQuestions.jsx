@@ -1,5 +1,8 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import sidebarData from "../meta/sidebar.json";
+
+const IS_GITHUB_PAGES = typeof window !== "undefined" && /github\.io$/i.test(window.location.hostname);
 
 export default function CompleteListOfQuestions() {
   const [menu, setMenu] = useState([]);
@@ -24,16 +27,22 @@ export default function CompleteListOfQuestions() {
       setLoading(true);
       setError("");
       try {
-        const [menuResp, statusResp] = await Promise.all([
-          fetch("/api/menu"),
-          fetch("/api/review-status")
-        ]);
-        
-        const menuData = await menuResp.json();
-        const statusData = await statusResp.json();
-        
-        if (!menuResp.ok || !statusResp.ok) {
-          throw new Error("加载数据失败");
+        let menuData = [];
+        let statusData = {};
+
+        if (IS_GITHUB_PAGES) {
+          menuData = Array.isArray(sidebarData) ? sidebarData : [];
+        } else {
+          const [menuResp, statusResp] = await Promise.all([
+            fetch("/api/menu"),
+            fetch("/api/review-status")
+          ]);
+
+          if (!menuResp.ok || !statusResp.ok) {
+            throw new Error("加载数据失败");
+          }
+
+          [menuData, statusData] = await Promise.all([menuResp.json(), statusResp.json()]);
         }
         
         if (ignore) {
@@ -49,7 +58,7 @@ export default function CompleteListOfQuestions() {
         );
         
         setMenu(filtered);
-        setReviewStatus(statusData);
+        setReviewStatus(statusData || {});
         
         if (filtered.length > 0) {
           setSelectedLevel1(filtered[0].id);

@@ -52,6 +52,13 @@ jobs:
         env:
           BASE_URL: ${{ github.event_name == 'pull_request' && format('/mriqa_translate/previews/pr-{0}/', github.event.number) || '/mriqa_translate/previews/latest/' }}
 
+      - name: Copy static articles for preview
+        if: github.event_name != 'workflow_dispatch'
+        run: |
+          mkdir -p frontend/dist/en frontend/dist/zh
+          cp -a en/. frontend/dist/en/
+          cp -a zh/. frontend/dist/zh/
+
       - name: Deploy to preview
         if: github.event_name != 'workflow_dispatch'
         uses: JamesIves/github-pages-deploy-action@v4
@@ -68,6 +75,13 @@ jobs:
         run: npm run build
         env:
           BASE_URL: /mriqa_translate/
+
+      - name: Copy static articles for production
+        if: github.event_name == 'workflow_dispatch' || (github.event_name == 'push' && contains(github.event.head_commit.message, '[release]'))
+        run: |
+          mkdir -p frontend/dist/en frontend/dist/zh
+          cp -a en/. frontend/dist/en/
+          cp -a zh/. frontend/dist/zh/
 
       - name: Deploy to production
         if: github.event_name == 'workflow_dispatch' || (github.event_name == 'push' && contains(github.event.head_commit.message, '[release]'))

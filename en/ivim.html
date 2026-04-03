@@ -1,0 +1,166 @@
+<div id="content"><div id="wsite-content" class="wsite-elements wsite-not-footer">
+	<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<h2 class="wsite-content-title" style="text-align:center;">IVIM Imaging</h2>
+
+<div class="paragraph" style="text-align:center;"><strong style="color:rgb(135, 135, 135)"><em><font color="#0376be" size="4">What is intravoxel incoherent motion (IVIM)? Is this the same as diffusion?&nbsp;</font></em></strong></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-thin" style="padding-top:0px;padding-bottom:10px;margin-left:0px;margin-right:0px;text-align:center">
+<a href='uploads/3/4/5/7/34572113/screen-shot-2017-04-17-at-3-35-58-pm_orig.png' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/screen-shot-2017-04-17-at-3-35-58-pm_orig.png" alt="IVIM" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;"><span style="color:rgb(0, 0, 0)">Denis Le Bihan,</span>&nbsp;father of modern diffusion imaging, coined the term&nbsp;<em><strong><font color="#24678d">intravoxel incoherent motion (IVIM)</font></strong></em>&nbsp;in the 1980s to refer to the microscopic translation of water molecules within a voxel during an MR experiment. When gradients are applied during evolution of the MR signal, IVIM causes spin dephasing and signal loss.</div>
+
+<div class="paragraph"><span style="color:rgb(0, 0, 0)">If the gradients are relatively strong</span>, IVIM-induced signal losses are primarily due to <em><strong><font color="#24678d">diffusion</font></strong></em> &mdash; the Brownian motion of water molecules in and around cells. When weaker gradients are used, however, a second IVIM mechanism also contributes to signal loss &mdash; microcirculation of blood in the capillary network. Microscopic <em><strong><font color="#24678d">perfusion</font></strong></em> effects have been largely ignored in the 25 years since Le Bihan's seminal papers, but have recently enjoyed a renaissance in what is now known as <em><strong><font color="#24678d">IVIM imaging</font></strong></em>.</div>
+
+<div class="paragraph">As described in a prior Q&amp;A, modern imaging systems measure&nbsp;MR signal intensity (<em><strong>S</strong></em>) from each voxel both with and without diffusion-sensitizing gradients.&nbsp;Often only two <em>b</em>-values are used: very <em>low</em> (e.g., b= 0-50&nbsp;<span style="color:rgb(0, 0, 0); font-weight:400">s/mm&sup2;</span>&nbsp; and <em>high</em>&nbsp;(e.g. 800-1000&nbsp;<span style="color:rgb(0, 0, 0); font-weight:400">s/mm&sup2;).</span>&nbsp;From these two measurements it is possible to calculate the <em><strong><font color="#24678d">apparent diffusion coefficient (ADC)</font></strong></em>, a useful but crude index based on a single exponential model expressing&nbsp;MR signal intensity (<em><strong>S</strong></em>) relative to baseline (<em><strong>S<font size="2">o</font></strong></em>) as&nbsp;&nbsp;<br></div>
+
+<div><div id="356637074807511541" align="center" style="width: 100%; overflow-y: hidden;" class="wcustomhtml"><div><h3><i><b>S</b> = <b>S<sub>o</sub></b>e<sup>−<b>b•ADC</sup></b></i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        <small></b><i>or</i></small>     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;     <i>ln</b><b>(S)</b> = ln(<b>S<sub>o</sub>)</b> − <b>b•ADC</b></i></center></h3> </div></div>
+
+
+
+</div>
+
+<div class="paragraph">Under this model, a semilogarithmic plot of signal as&nbsp;<em>ln<strong>&nbsp;(Signal)</strong></em>&nbsp;vs <em><strong>b</strong></em> should be a straight line with slope = <em><strong>&minus;</strong></em><em><strong>ADC</strong></em>. (Solid red line in graph below).<br></div>
+
+<div><div class="wsite-image wsite-image-border-none" style="padding-top:20px;padding-bottom:10px;margin-left:10px;margin-right:0px;text-align:center">
+<a href='uploads/3/4/5/7/34572113/screenshot-2025-11-09-at-2-28-26-pm_orig.png' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/screenshot-2025-11-09-at-2-28-26-pm_orig.png" alt="IVIM and DKI kurtosis imaging" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%"><br>Deviation of the expected MR signal in DWI from a mono-exponential model. At low <i>b</i>-values IVIM effects due to microscopic perfusion must be considered (purple), while at high <i>b</i>-values kurtosis effects must be considered (green).</div>
+</div></div>
+
+<div class="paragraph">When careful signal measurements are made using a large number of different <em>b</em>-values, however, considerable departures from this simplified mono-exponential model are observed. At low <em>b</em>-values (<span style="color:rgb(0, 0, 0)">i.e., &le; 300 s/mm&sup2;) the signal is drops off more quickly from <em>S<font size="2">o</font> </em>than expected due to increased IVIM losses from microscopic perfusion. At larger <em>b</em>-values (</span>&ge;&nbsp;1000&minus;1500 s/mm&sup2;), signal is often greater than expected from the crude ADC line, an effect due to the non-Gaussian shape (<em><strong><font color="#24678d">kurtosis</font></strong></em>) of the diffusion probability distribution further discussed in the <a href="diffusion-kurtosis.html">next Q&amp;A</a>.<br></div>
+
+<div class="paragraph">To explaing this variance at low and intermediate <em>b</em>-values, Le Bihan proposed a bi-exponential model taking into account both diffusion and perfusion effects.&nbsp; Here he distinguished and named two diffusion coefficients, <em><strong><font color="#24678d">D ("pure" diffusion)</font></strong></em> and <em><strong><font color="#24678d">D* ("pseudo"-diffusion)</font></strong></em>, the former reflecting diffusion in the extravascular space and the latter&nbsp;reflecting dephasing due to perfusion in semi-randomly organized capillaries. Vascular density was described by a dimensionless&nbsp;<em><strong><font color="#24678d">perfusion fraction (f)</font></strong></em>, the percent of a voxel volume occupied by capillaries. Conversely&nbsp;<em><strong>(1&minus;f) </strong></em>reflected the extravascular space where only pure diffusion took place. Depending on the steepness of the initial portion of the curve, (which in turn depends on capillary density and perfusion),&nbsp;<em><strong>D*</strong></em> may be 5-10x greater than pure&nbsp;<em><strong>D</strong></em>.effects, allowing the biexponential model to be simplified to&nbsp;<br></div>
+
+<div><div id="660848178198084209" align="center" style="width: 100%; overflow-y: hidden;" class="wcustomhtml"><h3><b><i>S/S<sub>o</sub> = fe<sup>−bD*</sup> + (1−f)e<sup>−bD</sup></h3></i></b></div>
+
+
+
+</div>
+
+<div class="paragraph">By acquiring DWI images at multiple <em>b</em>-values and fitting the data to above equation, it is possible to estimate <em><strong>f</strong></em>, <em><strong>D</strong></em>, and <em><strong>D*</strong></em> and create maps for each. Typically between 6 and 10 data sets are obtained with <em>b</em>-values ranging between 0 and 1000 <span style="color:rgb(0, 0, 0)">s/mm&sup2;</span>, with at least half the measurements performed at less than 250 <span style="color:rgb(0, 0, 0)">s/mm&sup2;</span>.</div>
+
+<div class="paragraph">As an example of such a calculation and hint to its potential clinical utility, the image below shows&nbsp;</div>
+
+<div class="paragraph">Some interesting results of IVIM imaging have been reported for tumors of the brain, prostate, liver, and soft tissues, where perfusion fractions have been shown to correlate with other methods of assessing vascularity. Two examples are shown below.</div>
+
+<div><div class="wsite-image wsite-image-border-none" style="padding-top:10px;padding-bottom:10px;margin-left:0px;margin-right:0px;text-align:center">
+<a href='uploads/3/4/5/7/34572113/d-d-f-ivim_orig.jpg' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/d-d-f-ivim_orig.jpg" alt="IVIM imaging" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%">IVIM imaging of a myxoid liposarcoma with maps of apparent diffusion coefficient (<i>D</i>), pseudodiffusion coefficient (<i>D*</i>), and perfusion fraction (<i>f</i>). Adapted from Du et al (2015) under CC BY.</div>
+</div></div>
+
+<div><div class="wsite-image wsite-image-border-none" style="padding-top:10px;padding-bottom:10px;margin-left:0px;margin-right:0px;text-align:center">
+<a href='uploads/3/4/5/7/34572113/screenshot-2025-11-12-at-8-12-44-pm_orig.png' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/screenshot-2025-11-12-at-8-12-44-pm_orig.png" alt="Picture" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%">Top Row: Rim-enhancing glioblastoma demonstrating increased blood flow on DSC image (<i>arrows</i>). <br>
+
+Bottom Row: <i>f</i>-Map clearly highlights the area with high perfusion in the margins of the tumor (<i>arrows</i>).  <i>D</i>-map shows small restricted diffusion area predominantly in the anterior tumor margin (<i>arrows</i>).  <i>D*</i>imap shows increased fast-diffusion values in the
+tumor tissue (<i>arrows</i>).     
+
+[Adapted from Puig et al under CC-BY]</div>
+</div></div>
+
+<div class="paragraph">However, considerable errors occur in the estimation of <em>D</em>*, which I personally feel are unreliable, varying too much among centers and studies. Not only <em>D</em>*, but all IVIM parameter estimates are affected by motion, noise, and secretory physiologic processes (such as glandular and renal tubular flows) that cannot easily be distinguished from capillary perfusion. I thus remain a little skeptical for now as to what extent IVIM imaging will find a major role in our future imaging armamentarium.</div>
+
+<div><div id="377066198732583557" align="left" style="width: 100%; overflow-y: hidden;" class="wcustomhtml"><html> <head><script src="gdpr/gdprscript6f19.js?buildTime=1774025472"></script> <script type="text/javascript" 
+></script> 
+<script type="text/javascript">
+		$(function() {$('#Q').click(function() {$('.Q').toggle(500); return false;});});</script></head><body>
+<a href="#" id=Q><h3><font color="#378a57">Advanced Discussion (show/hide)»</font></h3></a><div class=Q style="display:none;">
+
+<!--content goes below here-->
+
+No supplementary material yet.  Check back soon!
+
+
+<!--content goes above here-->
+</div></body>
+<!-- Mirrored from mriquestions.com/ivim.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 21 Mar 2026 06:12:23 GMT -->
+</html></div>
+
+
+
+</div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;"><strong>References</strong><br /><span style="color:rgb(0, 0, 0)">&nbsp; &nbsp; &nbsp;Du J, Li K, Zhang W, et al. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/medi-94-e1028_open_i_for_ivim_images.pdf">Intravoxel incoherent motion MR imaging: comparison of diffusion and perfusion characteristics for differential diagnosis of soft tissue tumors</a>. Medicine 2015; 94:1-8. &nbsp; &nbsp;<br />&nbsp;&nbsp; &nbsp; Iima M, Le Bihan D. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/le_bihan_dwi_2015_review_radiol_2e2015150244.pdf">Clinical intravoxel incoherent motion and diffusion MR imaging: past, present and future</a>. Radiology 2016; 278:13-32.<br />&nbsp;&nbsp; &nbsp; Koh D-M, Collins DJ, Orton MR. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/koh_ivim_body_ajr.10.5515.pdf">Intravoxel incoherent motion in body diffusion-weighted MRI: reality and challenges</a>. AJR Am J Roentgenol 2011; 196;1351-1361.&nbsp;</span><br />&nbsp; &nbsp; &nbsp;<font color="#8d2424" size="4">&#10026;&nbsp;</font>Le Bihan D. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/1-s2.0-s1053811917310868-main.pdf">What can we see with IVIM MRI?</a>&nbsp; Neuroimage 2019; 187:56-67.&nbsp; [<a href="https://doi.org/10.1016/j.neuroimage.2017.12.062" target="_blank">DOi LINK</a>]<br /><span style="color:rgb(0, 0, 0)">&nbsp; &nbsp; &nbsp;</span><font color="#8d2424" size="4">&#10026;&nbsp;</font><span style="color:rgb(0, 0, 0)">Le Bihan D, Breton E, Lallemand D, et al.&nbsp;</span><a href="http://mri-q.com/uploads/3/4/5/7/34572113/dlbihanradiology1986.pdf">MR imaging of intravoxel incoherent motions: applications to diffusion and perfusion in neurologic disorders</a><span style="color:rgb(0, 0, 0)">. Radiology 1986; 161:401-407.</span><font color="#878787">&nbsp;</font><span style="color:rgb(0, 0, 0)">(This seminal paper describes IVIM, separating perfusion and diffusion effects.)</span><font color="#878787"> &nbsp; &nbsp;</font><br />&nbsp; &nbsp; &nbsp;Le Bihan D, Breton E, Lallemand D, et al. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/lebihan88_radiology.pdf">Separation of diffusion and perfusion in intravoxel incoherent motion MR imaging</a>. Radiology 1988; 168:497-505.<br />&nbsp; &nbsp; &nbsp;Puig J, S&aacute;nchez-Gonz&aacute;lez J, Blasco G, et al. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/ivim_plos.pdf">Intravoxel incoherent motion metrics as potential biomarkers for survival in glioblastoma</a>. PLoS ONE 2016; 11(7): e0158887. [<a href="https://doi.org/10.1371/journal.pone.0158887" target="_blank">DOI LINK</a>]<br />&nbsp; &nbsp; &nbsp;<font color="#8d2424" size="4">&#10026;&nbsp;</font>Raju J, Shyna A, John A, Pillai MJ.&nbsp; <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/s00723-025-01758-z.pdf">Transforming medical imaging with IVIM MR Imaging:<br />A comprehensive review of advances and challenges in perfusion and diffusion analysis</a>.&nbsp; Applied Magn Reson 2025; 56:803-843.&nbsp; [<a href="https://doi.org/10.1007/s00723-025-01758-z" target="_blank">DOI LINK</a>]<br></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;"><strong>Related Questions</strong><br /><em><strong><a href="what-is-the-b-value.html">&nbsp; &nbsp; &nbsp;What is meant by the b-value?&nbsp;How do I pick it?&nbsp;&nbsp;</a></strong></em><br /><em><strong>&nbsp; &nbsp; &nbsp;<a href="diffusion-kurtosis.html">What is diffusion kurtosis and how does it differ from regular "diffusion"?&nbsp;&nbsp;</a></strong></em></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div style="text-align:skip_to_justify;"><div style="height: 0px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-normal" href="whole-body-dwi.html" >
+<span class="wsite-button-inner">← &nbsp;Previous Question</span>
+</a>
+<div style="height: 0px; overflow: hidden;"></div></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div style="text-align:right;"><div style="height: 0px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-normal" href="diffusion-kurtosis.html" >
+<span class="wsite-button-inner">Next Question &nbsp;→</span>
+</a>
+<div style="height: 0px; overflow: hidden;"></div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div style="text-align:center;"><div style="height: 0px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-highlight" href="complete-list-of-questions.html" >
+<span class="wsite-button-inner">↑&nbsp;Complete List of Questions ↑</span>
+</a>
+<div style="height: 10px; overflow: hidden;"></div></div>
+</div></div>

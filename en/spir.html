@@ -1,0 +1,127 @@
+<div id="content"><div id="wsite-content" class="wsite-elements wsite-not-footer">
+	<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<h2 class="wsite-content-title" style="text-align:center;">Spectral Presaturation with &nbsp;Inversion Recovery (SPIR)<br /></h2>
+
+<div class="paragraph" style="text-align:center;"><strong style="color: rgb(135, 135, 135); font-size: large; line-height: 1.5;"><em><font color="#0376be">What is SPIR and how does it compare to other fat suppression methods?&nbsp;</font></em></strong><strong style="color: rgb(55, 138, 87); font-size: large; line-height: 1.5;"><em>&nbsp;</em></strong><br /></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-thin" style="padding-top:0;padding-bottom:0;margin-left:0;margin-right:0;text-align:center">
+<a href='uploads/3/4/5/7/34572113/7841588_orig.png' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/784158834ed.png?301" alt="Spectral Presaturation with  Inversion Recovery (SPIR)" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<span class='imgPusher' style='float:right;height:0px'></span><span style='display: table;width:auto;position:relative;float:right;max-width:100%;;clear:right;margin-top:0px;*margin-top:0px'><a href='uploads/3/4/5/7/34572113/4832744_orig.gif' rel='lightbox' onclick='if (!lightboxLoaded) return false'><img src="uploads/3/4/5/7/34572113/published/483274403c5.gif?1482234091" style="margin-top: 10px; margin-bottom: 10px; margin-left: 10px; margin-right: 10px; border-width:0; max-width:100%" alt="Spectral Presaturation with  Inversion Recovery (SPIR)" class="galleryImageBorder wsite-image" /></a><span style="display: table-caption; caption-side: bottom; font-size: 90%; margin-top: -10px; margin-bottom: 10px; text-align: center;" class="wsite-caption">SPIR sequence combines features of CHESS (fat-selective RF pulse + spoiler) and STIR (inversion recovery nulling of fat signal).</span></span>
+<div class="paragraph" style="display:block;"><strong><em><font color="#24678d">SPIR</font></em></strong> stands for &ldquo;<strong><em><font color="#24678d">Spectral Presaturation with Inversion Recovery</font></em></strong>&rdquo; and is pictured right. SPIR is a hybrid technique that combines a fat-selective RF-pulse and spoiler gradient (similar to CHESS) together with nulling of the residual longitudinal fat magnetization through an inversion delay mechanism (similar to STIR).&nbsp;<br /><br />These spin manipulations purely involve fat; the water resonance is unaffected. After a suitable inversion time to null residual fat signal, any pulse sequence can be used to image the remaining water. Typically a T1-weighted sequence is employed.<br /><br /><span style="color:rgb(0, 0, 0)">Unlike CHESS, where a&nbsp;90</span><strong style="color:rgb(0, 0, 0)">&deg;</strong><span style="color:rgb(0, 0, 0)">-pulse is considered ideal, the&nbsp;RF-pulse in SPIR is intended to partially or completely invert the fat magnetization. The RF-pulse flip angle in SPIR is therefore set in the 100</span><strong style="color:rgb(0, 0, 0)">&deg;</strong><span style="color:rgb(0, 0, 0)">-180</span><strong style="color:rgb(0, 0, 0)">&deg;</strong><span style="color:rgb(0, 0, 0)">&nbsp;range. Any transverse magnetization components of fat created by this RF-pulse are dephased by the spoiler gradient. The residual (inverted) longitudinal magnetization of fat is then allowed to regrow via T1 relaxation over the next 100-200 msec. MR signal generation begins when the </span><strong style="color:rgb(0, 0, 0)">M<font size="1">z</font></strong><span style="color:rgb(0, 0, 0)"> for fat is zero, so fat does not contribute to the final image.&nbsp;</span>&#8203;<br /></div>
+<hr style="width:100%;clear:both;visibility:hidden;"></hr>
+
+<div class="paragraph" style="text-align:skip_to_justify;">Why is this extra inversion step necessary? It clearly uses up valuable time and makes SPIR sequences longer and more slice-inefficient than a simple CHESS technique.</div>
+
+<div class="paragraph" style="text-align:skip_to_justify;">The reason for this added complexity is that&nbsp;a perfect&nbsp;90<strong>&deg;</strong>-pulse (as required for simple CHESS) is impossible to achieve in practice. Due to <strong>B<font size="1">1&nbsp;</font></strong>(RF)-inhomogeneities, some fat spins are flipped at angles greater or lesser than&nbsp;90<strong>&deg;</strong>. These spins continue to have longitudinal components of magnetization that are not destroyed by the spoiler gradient, and ultimately contribute undesirably to the final MR signal. By selecting a flip angle greater than&nbsp;90<strong>&deg;&nbsp;</strong>SPIR insures that residual longitudinal fat magnetization is inverted and then nulled during the <em>TI</em> interval.</div>
+
+<div class="paragraph" style="text-align:skip_to_justify;">The simplest form of SPIR sequence described above is most widely used on Philips scanners, where it has long been their default method of fat suppression. I have been told Philips SPIR has a default RF-flip angle of about 110&ordm;.&nbsp;After an interactive shimming process, Philips users can then optimize the sequence by adjusting the precise frequency offset of the inverting pulse as well as the inversion time (<em>TI</em>). GE has similar sequence called <strong><em><font color="#24678d">SPECIAL (SPECtral Inversion At Lipid)</font></em></strong> that uses a flip angle closer to 100&ordm;. Other major vendors like Siemens, Fujifilm, and Canon offer <strong><em><font color="#24678d">SPAIR</font></em></strong> pulses instead.&nbsp;<br></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;">The SPIR technique does a reasonably good job of suppressing fat. Like other chemical-shift based sequences, however, SPIR suffers tissue-related susceptibility and dielectric effects that cause inhomogeneity of the <strong>B<font size="1">o</font></strong> and <strong>B<font size="1">1</font></strong> fields. This is manifest by incomplete fat suppression (and even water suppression) in certain regions of the image.</div>
+
+<div><div class="wsite-image wsite-image-border-thin" style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
+<a href='uploads/3/4/5/7/34572113/1385832_orig.jpg' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/1385832f0e5.jpg?574" alt="Spectral Presaturation with  Inversion Recovery (SPIR)" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%">T1-weighted images without and with SPIR. Note incomplete fat suppression at edges due to inhomogeneity effects.</div>
+</div></div>
+
+<div><div id="519850212885913763" align="left" style="width: 100%; overflow-y: hidden;" class="wcustomhtml"><html> <head><script src="gdpr/gdprscript6f19.js?buildTime=1774025472"></script> <script type="text/javascript" 
+></script> 
+<script type="text/javascript">
+		$(function() {$('#Q').click(function() {$('.Q').toggle(500); return false;});});</script></head><body>
+<a href="#" id=Q><h3><font color="#378a57">Advanced Discussion (show/hide)»</font></h3></a><div class=Q style="display:none;">
+
+<!--content goes below here-->
+
+<p>The reason flip angles just slightly greater than 90º are used in SPIR (instead of 180º) is so that the longitudinal magnetization of fat is not driven too far in the negative <i>z</i>-direction by the inverting pulse. T1-recovery takes much less time, so that the inversion time (<i>TI</i>) can be shortened down to the order of 30-60 msec (instead of ~150 msec which would be required if a 180º-pulse were used). The shorter <i>TI</i> means there will be a much smaller time and slice penalty for using the sequence.</p>
+
+
+<!--content goes above here-->
+</div></body>
+<!-- Mirrored from mriquestions.com/spir.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 21 Mar 2026 06:13:45 GMT -->
+</html></div>
+
+
+
+</div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;"><strong>References</strong><br />&nbsp; &nbsp; &nbsp;Foo TKF, Sawyer AM, Faulkner WH, Mills DG. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/foo_special.pdf" title="">Inversion in the steady state: contrast optimization and reduced imaging time with fast three-dimensional inversion-recovery-prepared GRE pulse sequences</a>. Radiology 1994; 191:85-90.<br />&nbsp; &nbsp; &nbsp;Kaldoudi E, Williams SC, Barker GJ, Tofts PS. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/kaldoudi_1993_cssir.pdf" title="">A chemical shift selective inversion recovery sequence for fat-suppressed MRI: theory and experimental validation</a>. Magn Reson Imaging 1993; 11:341-355.&nbsp;&nbsp;&nbsp;<br />&nbsp; &nbsp; &nbsp;Visser F. Application Tip. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/optimizing_spir_and_spair_fat_suppression.pdf" title="">Optimizing SPIR and SPAIR fat suppression</a>. Philips NetForum Community (<a href="http://clinical.netforum.healthcare.philips.com/" title="">http://clinical.netforum.healthcare.philips.com</a>), 2004.&nbsp; &nbsp;<br />&nbsp; &nbsp; &nbsp;Zee CS, Segall HD, Terk MR, et al. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/spir_mri_in_spinal_diseases_.4.pdf" title="">SPIR MRI in spinal diseases</a>. J Comput Assist Tomogr 1992;16:356-360.<br /></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;"><strong>Related Questions</strong><br /><strong><em><a href="spair-v-spir.html">&nbsp; &nbsp; &nbsp;<span style="text-align: center;">What is SPAIR? How is it different than SPIR?&nbsp;</span></a></em></strong></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div style="text-align:skip_to_justify;"><div style="height: 10px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-normal" href="stir1.html" >
+<span class="wsite-button-inner">← &nbsp;Previous Question</span>
+</a>
+<div style="height: 10px; overflow: hidden;"></div></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div style="text-align:right;"><div style="height: 10px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-normal" href="spair-v-spir.html" >
+<span class="wsite-button-inner">Next Question &nbsp;→</span>
+</a>
+<div style="height: 10px; overflow: hidden;"></div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div style="text-align:center;"><div style="height: 10px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-highlight" href="index.html" >
+<span class="wsite-button-inner">↑&nbsp;Complete List of Questions ↑</span>
+</a>
+<div style="height: 10px; overflow: hidden;"></div></div>
+</div></div>

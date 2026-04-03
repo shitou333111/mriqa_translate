@@ -1,0 +1,131 @@
+<div id="content"><div id="wsite-content" class="wsite-elements wsite-not-footer">
+	<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<h2 class="wsite-content-title" style="text-align:center;">MultiBand/Simultaneous Multi-Slice Imaging</h2>
+
+<div class="paragraph" style="text-align:center;"><font size="4"><strong style="color:rgb(135, 135, 135)"><em><font color="#0376be">How does Simultaneous Multi-Slice (SMS) imaging work?&nbsp;</font></em></strong><strong style="color:rgb(55, 138, 87)"><em>&nbsp;</em></strong></font></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-thin" style="padding-top:0px;padding-bottom:10px;margin-left:0px;margin-right:0px;text-align:center">
+<a href='uploads/3/4/5/7/34572113/screen-shot-2017-07-28-at-4-13-51-pm_orig.png' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/screen-shot-2017-07-28-at-4-13-51-pm_orig.png" alt="MultiBand SMS" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;"><em><strong><font color="#24678d">Simultaneous Multi-Slice (SMS) imaging</font></strong></em><font color="#2a2a2a">, also known as </font><em><strong><font color="#24678d">MultiBand (MB) imaging</font></strong></em><font color="#2a2a2a">, employs complex RF-pulses together with parallel imaging coil arrays to acquire several sections along the </font><em style="color: rgb(42, 42, 42);">z</em><font color="#2a2a2a">-axis simultaneously. This allows a significant reduction in image acquisition time with little signal-to-noise penalty.</font></div>
+
+<div class="paragraph"><font color="#2a2a2a">As described </font><a href="two-slices-at-once.html">in a prior Q&amp;A</a><font color="#2a2a2a">, the historical precursor to modern MB/SMS methods was </font><em><strong><font color="#24678d">POMP (Phase Offset MultiPlanar)</font></strong></em><font color="#2a2a2a"> imaging. The POMP technique used a composite RF-pulse to simultaneously excite two slices, each of which were phase-encoded over only one-half of the total field-of-view (FOV). Phase alternation allowed the two slices to be separately reconstructed without overlap. Unlike SMS, POMP does not utilize parallel imaging technology and is hence applicable to single-channel RF coils. </font></div>
+
+<div class="paragraph"><font color="#2a2a2a">MultiBand, like POMP, begins with a composite pulse that excites several slices simultaneously. MB pulses can be designed in several ways, but the most straightforward method is to sum several standard RF waveforms with different phase offsets together. The number of simultaneous slices is referred to as the </font><em><strong><font color="#24678d">MB or SMS acceleration factor</font></strong></em><font color="#2a2a2a">. In current commercial implementations (Siemens' </font><em><strong><font color="#24678d">SMS</font></strong></em><font color="#2a2a2a">, GE's </font><em><strong><font color="#24678d">HyperBand</font></strong></em><font color="#2a2a2a">, Philips' </font><em><strong><font color="#24678d">Multi-band SENSE</font></strong></em><font color="#2a2a2a">, and Canon's </font><font color="#24678d"><em><strong>Multi-band SPEEDER</strong></em></font><font color="#2a2a2a">) acceleration factors of 2-4 are typical.</font><br></div>
+
+<span class='imgPusher' style='float:left;height:0px'></span><span style='display: table;width:408px;position:relative;float:left;max-width:100%;;clear:left;margin-top:0px;*margin-top:0px'><a href='uploads/3/4/5/7/34572113/multiband-thinner-slices_orig.gif' rel='lightbox' onclick='if (!lightboxLoaded) return false'><img src="uploads/3/4/5/7/34572113/published/multiband-thinner-sliceseb40.gif?1501610265" style="margin-top: 0px; margin-bottom: 0px; margin-left: 0px; margin-right: 10px; border-width:1px;padding:3px; max-width:100%" alt="MultiBand (SMS) with coils" class="galleryImageBorder wsite-image" /></a><span style="display: table-caption; caption-side: bottom; font-size: 90%; margin-top: -0px; margin-bottom: 0px; text-align: center;" class="wsite-caption"></span></span>
+<div class="paragraph" style="display:block;"><span><font color="#2a2a2a">To take advantage of parallel imaging acceleration, MB uses coil encoding together with either gradient- or RF-encoding to resolve data along the slice-select (<em>z</em>)-axis. Because modern coil arrays typically have only a few coil elements in the <em>z</em>-direction, coil sensitivity differences along that axis are rather poor. Accordingly the simultaneously excited slices must be spaced widely apart (typically at least 25&minus;30 mm) as shown in the diagram. An interleaving technique is then used to excite missing slices in the gaps.</font></span><br /><span></span></div>
+<hr style="width:100%;clear:both;visibility:hidden;"></hr>
+
+<div class="paragraph" style="text-align:skip_to_justify;"><font color="#2a2a2a">To overcome the limitations of coil-encoding, the </font><em><strong><font color="#24678d">CAIPIRINHA</font></strong></em><font color="#2a2a2a"> technique was developed. CAIPIRINHA stands for "Controlled Aliasing In Parallel Imaging Results In Higher Acceleration" and is the subject of <a href="caipirinha.html">a later Q&amp;A</a>. The underlying idea is that to avoid overlap in reconstruction, simultaneously excited slices can be shifted within the phase encoding direction in a "controlled" fashion. Hence slices very close together can be separated, even when a coil has little encoding power in the </font><em style="color:rgb(42, 42, 42)">z</em><font color="#2a2a2a">-direction.</font><span style="color:rgb(42, 42, 42)">&nbsp; </span><font color="#2a2a2a">Currently the most widely used method for BOLD and diffusion-weighted SMS imaging is called </font><em><strong><font color="#24678d">blipped-CAIPI</font></strong></em><font color="#2a2a2a">, so named because of the use of blipped rewinder gradients to keep phase accumulation within the range of &plusmn;180&ordm; while imparting a constant phase shift between adjacent lines of </font><em style="color:rgb(42, 42, 42)">k</em><font color="#2a2a2a">-space. Reconstruction of the SMS data can be performed using either SENSE, GRAPPA, or hybrid techniques. Because of the large amount of data rapidly acquired, computation demand is high and image reconstruction times can be long.</font></div>
+
+<div><div class="wsite-image wsite-image-border-none" style="padding-top:10px;padding-bottom:10px;margin-left:0px;margin-right:0px;text-align:center">
+<a href='uploads/3/4/5/7/34572113/multiband-pulse-blipped-caipi_orig.gif' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/editor/multiband-pulse-blipped-caipicabe.gif?1501268669" alt="Blipped-CAIPI SMS" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%"><b>The blipped-CAIPI method for echo-planar imaging.</b> A MB pulse simultaneously excites three (3) slices defined together with the slice-select gradient. In-plane <i>k</i>-space is traversed by oscillation of the frequency (readout) gradient with stepping along the phase-encode direction. "Blipped" gradients pulses (red) are applied along the slice-select direction during the readout gradient switching and simultaneously with the phase encoding pulses. This creates the constant required phase modulation between the simultaneously excited slices. Every third blipped pulse is of larger magnitude and opposite polarity serving to rewind the net phase and normalize the gradient moment. The end result is "controlled" aliasing over FOV/3.
+</div>
+</div></div>
+
+<div class="paragraph"><span><font color="#2a2a2a">Unlike standard parallel imaging acceleration techniques, MB/SMS&nbsp;acceleration results in little to no penalty in signal-to-noise. This is because neither the echo train length, number of phase-encoding steps, nor number of </font><em style="color:rgb(42, 42, 42)">k</em><font color="#2a2a2a">-space samples has been reduced as occurs in conventional parallel imaging acceleration methods. Eddy currents due to rapid gradient switching may still create Nyquist-like ghosts that affect SMS images. Another artifact resulting in decreased imaging quality in SMS imaging is known as </font><em><strong><font color="#24678d">residual aliasing</font></strong></em><font color="#2a2a2a"> or </font><em><strong><font color="#24678d">slice leakage</font></strong></em><font color="#2a2a2a">. This reconstruction artifact can be very insidious, manifest only as hazy noise on certain images. It is especially problematic for fMRI studies that depend on the same expected signal from adjacent slices in an acquisition.&nbsp;</font></span></div>
+
+<div><div id="516268848544212623" align="left" style="width: 100%; overflow-y: hidden;" class="wcustomhtml"><html> <head><script src="gdpr/gdprscript6f19.js?buildTime=1774025472"></script> <script type="text/javascript" 
+></script> 
+<script type="text/javascript">
+		$(function() {$('#Q').click(function() {$('.Q').toggle(500); return false;});});</script></head><body>
+<a href="#" id=Q><h3><font color="#378a57">Advanced Discussion (show/hide)»</font></h3></a><div class=Q style="display:none;">
+
+<!--content goes below here-->
+
+<p>Design of MultiBand pulses can be challenging. As the number of simultaneous slices increases, the peak amplitude of the the RF amplifier may be exceeded and total pulse power may surpass <font color="#0376be"><b><i>specific absorption rate (SAR)</b></i></font> limitations. Methods to reduce peak RF-pulse amplitude include time- and phase-shifting of the overlapping pulses. Power scaling and reduction techniques include <font color="#0376be"><b><i>Variable Rate Excitation (VERSE)</b></i></font> and <font color="#0376be"><b><i>Power Independent of the Number of Slices (PINS)</b></i></font> excitation. Both VERSE and PINS limit RF-power deposition by dynamically adjusting the slice-selection gradient during <i>k</i>-space traversal. Parallel transmission methods may also be used to minimize RF amplitude and power requirements.</p>
+
+<p>Although not as widely used as single-echo MultiBand, SMS imaging may also be accelerated by using <font color="#0376be"><b><i>simultaneous echo (image) refocusing (SER/SIR)</b></i></font>. In this method, two RF-pulses are applied very close together in time, and with each oscillation of the readout gradient two echoes are acquired instead of one. This allows for doubling the number of simultaneously acquired slices, but does have limitations in that sampling windows for each echo are shorter (reducing SNR) while the total sampling window is prolonged (allowing for T2 decay effects to affect the signal.) As originally proposed SER does not utilize parallel imaging. However, SMS and SER can be used together, a technique referred to as <font color="#0376be"><b><i>multiplexed EPI</b></i></font>. Significant increases in acceleration can thus be obtained. For example, with an SMS factor of 4 and an SER factor of 2, a total acceleration of 4 x 2 = 8 could theoretically be achieved.</p>
+
+<!--content goes above here-->
+</div></body>
+<!-- Mirrored from mriquestions.com/simultaneous-multi-slice.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 21 Mar 2026 06:02:34 GMT -->
+</html></div>
+
+
+
+</div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;"><strong>References</strong><br /><font color="#878787">&nbsp; &nbsp; &nbsp;</font>Barth M, Breuer F, Koopmans PJ, et al. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/sms_review_2016_barth_et_al-2016-magnetic_resonance_in_medicine.pdf">Simultaneous Multislice (SMS) imaging techniques</a>. Magn Reson Med 2016; 75:63-81. (Excellent recent review).<br />&nbsp;&nbsp; &nbsp; Feinberg DA, Setsompop K. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/feinberg_multiband.pdf">Ultra-fast MRI of the human brain with simultaneous multi-slice imaging</a>. J Magn Reson 2013; 229:90-100.<br />&nbsp; &nbsp; &nbsp;Hargreaves BA, Cunningham CH. Nishimura DG, Conolly SM. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/versehargreaves_et_al-2004-magnetic_resonance_in_medicine.pdf">Variable-rate selective excitation for rapid MRI sequences</a>. Magn Reson Med 2004; 52:590-597.<br />&nbsp;&nbsp; &nbsp; Setsompop K, Gagoski BA, Polimeni JR, et al. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/blipped_cipirinha_setsompop_et_al-2012-magnetic_resonance_in_medicine.pdf">Blipped-controlled aliasing in parallel imaging for simultaneous multislice echo planar imaging with reduced <em>g</em>-factor penalty</a>. Magn Reson Med 2012; 67:1210-1224.</div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;"><strong>Related Questions</strong><br /><em><strong><a href="two-slices-at-once.html">&nbsp; &nbsp; &nbsp;Can you excite two slices at once?&nbsp;&nbsp;</a></strong></em><br /><em><strong>&nbsp; &nbsp; &nbsp;<a href="caipirinha.html">What is CAIPIRINHA? Isn't it some sort of a drink?&nbsp;&nbsp;&#8203;</a></strong></em></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div style="text-align:skip_to_justify;"><div style="height: 10px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-normal" href="two-slices-at-once.html" >
+<span class="wsite-button-inner">← &nbsp;Previous Question</span>
+</a>
+<div style="height: 10px; overflow: hidden;"></div></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div style="text-align:right;"><div style="height: 10px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-normal" href="phase-encoding-gradient.html" >
+<span class="wsite-button-inner">Next Question &nbsp;→</span>
+</a>
+<div style="height: 10px; overflow: hidden;"></div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div style="text-align:center;"><div style="height: 10px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-highlight" href="complete-list-of-questions.html" >
+<span class="wsite-button-inner">↑&nbsp;Complete List of Questions ↑</span>
+</a>
+<div style="height: 10px; overflow: hidden;"></div></div>
+</div></div>

@@ -1,0 +1,134 @@
+<div id="content"><div id="wsite-content" class="wsite-elements wsite-not-footer">
+	<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<h2 class="wsite-content-title" style="text-align:center;">Gradient Descent and Back-Propagation</h2>
+
+<div class="paragraph" style="text-align:center;"><font color="#0376be" size="4"><strong><em>I still don't understand how machines optimize themselves to solve a problem.&nbsp;&nbsp;</em></strong></font></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-thin" style="padding-top:0px;padding-bottom:10px;margin-left:0px;margin-right:0px;text-align:center">
+<a href='uploads/3/4/5/7/34572113/screen-shot-2022-06-25-at-12-40-22-pm_orig.png' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/screen-shot-2022-06-25-at-12-40-22-pm_orig.png" alt="Picture" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div class="paragraph"><span style="color:rgb(55, 65, 81)">Machines "optimize themselves" by updating the weights and biases of neural network components during training through the following steps:</span></div>
+
+<div class="paragraph"><ol><li>&#8203;<font color="#2a2a2a"><u><strong>Forward Pass:</strong></u> Training input data is fed through the neural network, passing though in a forward direction while undergoing a set of linear transformations and non-linear activations&nbsp;to produce one or more outputs.</font></li><li><font color="#2a2a2a"><u><strong>Loss Calculation</strong></u>:&nbsp;</font><span style="color:rgb(55, 65, 81)">The difference between the ideal predicted and measured value of each output&nbsp;is quantified by&nbsp;</span><span style="color:rgb(0, 0, 0)">the&nbsp;</span><em style="color:rgb(0, 0, 0)"><strong><font color="#24678d">Loss Function</font></strong></em><span style="color:rgb(0, 0, 0)">,</span><span style="color:rgb(55, 65, 81)">&nbsp;introduced&nbsp;<a href="data-prep-and-fitting.html">in a prior Q&amp;A</a>.&nbsp;</span></li><li><span style="color:rgb(55, 65, 81)"><u><strong>Gradient Descent and Back-Propagation</strong></u>. </span><span style="color:rgb(42, 42, 42)">The gradient of the loss function with respect to each weight in the network is computed using the chain rule of calculus. This gradient represents the steepest slope of the loss function at each node.&nbsp;The gradient is calculated by propagating the error backwards through the network, layer by layer, starting from the output layer to the input layer.</span>&#8203;</li><li><font color="#2a2a2a"><u><strong>Weight Update:</strong></u>&nbsp; The weights and biases in the network are adjusted by moving them in the opposite direction of the gradient of the loss function. This is done by subtracting a small fraction of the gradient from the current values of the weights and biases. The fraction of the gradient that is subtracted is known as the </font><em><strong><font color="#24678d">learning rate</font></strong></em><font color="#2a2a2a">, which determines how large the weight updates are.</font></li><li><font color="#2a2a2a"><u><strong>Repeat</strong></u>: Steps 1 to 4 are repeated for multiple epochs or iterations until the network converges to</font><span style="color:rgb(55, 65, 81)">&nbsp;a minimum value of the loss function.</span></li></ol></div>
+
+<div class="paragraph"><strong><font color="#8d5024" size="4">Gradient Descent&nbsp;</font></strong></div>
+
+<div class="paragraph">The third step in the optimization procedure, <em><strong><font color="#24678d">Gradient Descent</font></strong></em>, involves planning the most efficient path to <em>minimize the loss function</em> after each set of training data has been input into the system. <em><strong><font color="#24678d">&nbsp;</font></strong></em>This procedure has been likened to finding one's way down a mountain in the fog. At each point you search locally to see where the slope downward is steepest, then take a step in that direction and repeat.&nbsp; Eventually you will hopefully find your way to the bottom of the mountain and obtain the lowest global value for the loss function.&nbsp; Occasionally, however, you may get stuck on a flat part of the mountain (where the slope is zero in all directions) or settle into an intermediate valley (a local minimum).<br /><br />&#8203;To reduce computational burden several variations of the method have been developed, the most popular being <em><strong><font color="#24678d">stochastic gradient descent</font></strong></em> (that uses a randomly selected regional subset of the data rather than computing an exact slope/derivative at every point) and its variant <em><strong><font color="#24678d">Adam</font></strong></em> (that includes <u>Ada</u>ptive <u>m</u>oment estimation).&nbsp;</div>
+
+<div><div class="wsite-image wsite-image-border-none" style="padding-top:10px;padding-bottom:10px;margin-left:0px;margin-right:0px;text-align:center">
+<a href='uploads/3/4/5/7/34572113/steepest-descent-loss-funciton_orig.png' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/steepest-descent-loss-funciton_orig.png" alt="Loss function and gradient descent" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%"><b>Loss function</b> represented in 3 dimensions. The network begins at the solid black circle with a relatively high error rate (loss). Numerical differentiation (ie, calculation of gradient/slope) of the loss function with respect to various parameter weights identifies the local path of steepest descent. At each point along the descent a new steepest gradient is calculated and the descent path modified until a minimum is reached.</div>
+</div></div>
+
+<div class="paragraph">A specific algorithm, <em style="color:rgb(0, 0, 0)"><strong><font color="#24678d">back-propagation, </font></strong></em>updates network weights and biases sequentially from back to front. The details of this process are somewhat complicated, but involve use of the chain rule (from calculus) to allow gradient weights to calculated and updated<span style="color:rgb(32, 33, 34)">&nbsp;one layer at a time. </span><font color="#2a2a2a">Once the output layer errors are calculated, the errors are propagated backward through the network. At each layer, the error is multiplied by the derivative of the activation function with respect to the weighted sum of the inputs. This gives the error at the weighted sum of the inputs to each node.</font></div>
+
+<div class="paragraph">The following video serves as a useful introduction to this process.</div>
+
+<div class="wsite-youtube" style="margin-bottom:10px;margin-top:10px;"><div class="wsite-youtube-wrapper wsite-youtube-size-auto wsite-youtube-align-center">
+<div class="wsite-youtube-container">
+
+<iframe src="http://www.youtube.com/embed/Ilg3gGewQ5U?wmode=opaque" frameborder="0" allowfullscreen></iframe>
+</div>
+</div></div>
+
+<div><div id="813170666826417160" align="left" style="width: 100%; overflow-y: hidden;" class="wcustomhtml"><html> <head><script src="gdpr/gdprscript6f19.js?buildTime=1774025472"></script> <script type="text/javascript" 
+></script> 
+<script type="text/javascript">
+		$(function() {$('#Q').click(function() {$('.Q').toggle(500); return false;});});</script></head><body>
+<a href="#" id=Q><h3><font color="#378a57">Advanced Discussion (show/hide)»</font></h3></a><div class=Q style="display:none;">
+
+<!--content goes below here-->
+
+No supplementary material yet.  Check back soon!
+
+
+<!--content goes above here-->
+</div></body>
+<!-- Mirrored from mriquestions.com/back-propagation.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 21 Mar 2026 06:49:59 GMT -->
+</html></div>
+
+
+
+</div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;"><strong>References</strong><br /><font color="#878787">&nbsp; &nbsp; &nbsp;</font><a href="https://en.wikipedia.org/wiki/Backpropagation" target="_blank">Backpropagation</a>. Wikipaedia, The Free Encyclopedia. (downloaded 3 Feb 2022)<br />&nbsp; &nbsp; &nbsp;<span>Kingma DP, Ba JL. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/adam.pdf">Adam: a method for stochastic optimization</a>. arXIV:1412.6980v9 2017.</span>&nbsp;<font color="#878787">&nbsp;</font><br />&nbsp; &nbsp; &nbsp;Le Cun Y. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/lecun-88_back_projection_famous_paper.pdf">A theoretical framework for back-propagation</a>. In: Touretzky D, Hinton G, Sejnowski T (eds). <em>Proceedings of the 1988 Connectionist Models Summer School</em>, Carnegie Mellon University,&nbsp;<span style="color:rgb(0, 0, 0)">Pittsburgh PA,</span>&nbsp;Morgan Kaufmann, 1988: pp 21-28.<br />&nbsp; &nbsp; &nbsp;Meeden L. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/backprop.dvi.pdf">Derivation of backpropagation</a>. Course notes for CS81 - Adaptive Robotics 2010: 1-4. <a href="https://www.cs.swarthmore.edu/~meeden/cs81/s10/BackPropDeriv.pdf" target="_blank">[Downloaded from this link 6-25-22]<br />&nbsp; &nbsp; &nbsp;<span style="color:rgb(0, 0, 0)">Rumelhart DE, Hinton GE, Williams RJ. Learning representations by back-propagating errors. Nature (letters) 1986;323:533-5.</span></a><br />&nbsp; &nbsp; Sebatian. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/an_introduction_to_neural_network_loss_functions.pdf">An introduction to neural network loss functions</a>. Blog post on Programmathically 28 Sept 2021. <a href="https://programmathically.com/an-introduction-to-neural-network-loss-functions/" target="_blank">[available at this link]</a></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;"><strong>Related Questions</strong><br /><a href="index.html"><strong>&nbsp; </strong><span style="color:rgb(0, 0, 0)">&nbsp; &nbsp;&nbsp;</span><strong style="color:rgb(0, 0, 0)"><em><font color="#0376be">Is deep learning (DL) the same as machine learning (ML)?</font></em></strong></a></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div style="text-align:skip_to_justify;"><div style="height: 0px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-normal" href="data-prep-and-fitting.html" >
+<span class="wsite-button-inner">← &nbsp;Previous Question</span>
+</a>
+<div style="height: 0px; overflow: hidden;"></div></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div style="text-align:right;"><div style="height: 0px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-normal" href="dl-playground.html" >
+<span class="wsite-button-inner">Next Question &nbsp;→</span>
+</a>
+<div style="height: 0px; overflow: hidden;"></div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div style="text-align:center;"><div style="height: 0px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-highlight" href="complete-list-of-questions.html" >
+<span class="wsite-button-inner">↑&nbsp;Complete List of Questions ↑</span>
+</a>
+<div style="height: 10px; overflow: hidden;"></div></div>
+</div></div>

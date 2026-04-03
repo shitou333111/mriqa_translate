@@ -1,0 +1,153 @@
+<div id="content"><div id="wsite-content" class="wsite-elements wsite-not-footer">
+	<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<h2 class="wsite-content-title" style="text-align:center;">零插值填充&nbsp;<br /></h2>
+
+<div class="paragraph" style="text-align:center;"><strong style="color: rgb(135, 135, 135); font-size: large; line-height: 1.5;"><em><font color="#0376be">某些序列中有一个名为 ZIP 的选项。这是一种文件压缩技术吗？&nbsp;</font></em></strong><strong style="color: rgb(55, 138, 87); font-size: large; line-height: 1.5;"><em>&nbsp;</em></strong><br /></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-thin" style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
+<a href='uploads/3/4/5/7/34572113/14101_orig.png' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/1410153c3.png?293" alt="零插值填充 (ZIP)" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:52.228412256267%; padding:0 15px;">
+					
+						
+
+<div class="paragraph" style="text-align:skip_to_justify;">MRI 数据的处理通常在阵列处理器中使用<strong><em><font color="#24678d">快速傅里叶变换 (FFT)</font></em></strong>算法完成。这些计算要求通常需要输入数据位于一个维度为 2 的幂次方的矩阵中，例如 128x128、256x256 或 512x512。如果采集到的<em>k</em>空间数据未能填满此矩阵，通常会用零来填充缺失的单元，这种技术称为<strong><em><font color="#24678d">零填充</font></em></strong>或<strong><em><font color="#24678d">零插值填充 (ZIP)</font></em></strong>。&nbsp;<br /><br />MRI 中的 ZIP 与 *.zip 文件压缩技术无关。与邮政编码也毫无关系！<br /><span></span></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:47.771587743733%; padding:0 15px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-thin" style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
+<a href='uploads/3/4/5/7/34572113/7015770_orig.gif' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/701577016a5.gif?286" alt="零插值填充 (ZIP)" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;">零填充通常用于在相位编码方向上扩展图像矩阵尺寸。对于 2D 成像，这种矩阵尺寸的增加是“层面内”的（例如，从 256 像素增加到 512 像素）。对于 3D 成像，ZIP 可以“跨层面”使用，以增加层块选择方向上的表观分辨率（例如，从 64 层增加到 128 层）。这种增益仅在矩阵尺寸首次翻倍时出现；此后，便无法获得更多益处。<br /><span></span></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;">尽管零填充并未向输入的原始数据添加任何信息，但由于减少了部分容积效应，它仍能改善图像的<em><u>表观</u></em>空间分辨率。零填充作为一种插值方法，对来自相邻体素的信号进行插值，使图像外观更平滑，减少“像素感”。<br /><span></span></div>
+
+<div><div class="wsite-image wsite-image-border-thin" style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
+<a href='uploads/3/4/5/7/34572113/8121028_orig.jpg' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/8121028.jpg" alt="MRA 中的零插值填充 (ZIP)" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%"><b>未使用与使用零插值填充 (ZIP) 的颅脑 MRA 示例。</b><br>左侧图像使用完整数据在 128x128 和 256x256 矩阵中采集。<br>右侧图像已执行 ZIP 填充，分别将矩阵尺寸增加到 256x256 和 512x512。<br>注意图像质量的改善，尤其是对于 128x128 数据集。</div>
+</div></div>
+
+<div><div id="742562971508282500" align="left" style="width: 100%; overflow-y: hidden;" class="wcustomhtml"><html> <head><script src="gdpr/gdprscript6f19.js?buildTime=1774025472"></script> <script type="text/javascript" 
+></script> 
+<script type="text/javascript">
+		$(function() {$('#Q').click(function() {$('.Q').toggle(500); return false;});});</script></head><body>
+<a href="#" id=Q><h3><font color="#378a57">进阶讨论 (显示/隐藏)»</font></h3></a><div class=Q style="display:none;">
+
+<!--content goes below here-->
+
+
+
+<p>为什么<em>k</em>空间零填充类似于图像空间中的像素插值？其背后的数学原理有些复杂，感兴趣的读者可以参考下面列出的各种参考文献（尤其是 Bartholdi-Ernst 的论文）作为起点。</p>
+
+<p>简而言之，无论选择多大的矩阵，它总是小于物体理论上无限的<em>k</em>空间表示，并且必须在某处被截断。截断相当于将<em>k</em>空间数据乘以一个“矩形”函数。这反过来又相当于在图像空间与一个 SINC 函数（矩形函数的傅里叶变换）进行卷积。零填充会在显示矩阵中产生额外的 SINC 插值像素。</p>
+
+<p>一个有趣的结果是，通过零填充首次将数据点数量翻倍，实际上确实增加了超越简单插值的“新信息”。但额外的零如何能构成“新”数据呢？它们之所以有帮助，是因为普通的 FFT 无法提取 FID 中所有可用的信息。通过将点数翻倍，FFT 在提取所有“真实”数据方面变得更高效。与其说 ZIP 创造了新信息，不如说标准 FFT 在挖掘所有可用信息方面能力不足。超过首次翻倍后，便不再有优势，因为傅里叶系数现在变得完全相互关联。因此，在数据处理中通常只使用一次 ZIP 步骤。</p>
+
+
+<p>如上所述，在 2D 成像中，ZIP 应用于“层面内”。在 3D 成像中，ZIP 可以应用于“层面内”、“跨层面”或两者兼用。不同厂商对这两种 ZIP 有不同的命名。例如，GE Healthcare 将层面内 ZIP 称为“ZIP 512”或“ZIP 1024”，而将跨层面 ZIP 称为“ZIP x 2”或“ZIP x 4”。</p>
+
+<!--content goes above here-->
+</div></body>
+<!-- Mirrored from mriquestions.com/zip.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 21 Mar 2026 06:16:33 GMT -->
+</html></div>
+
+
+
+</div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div><div class="paragraph" style="text-align:skip_to_justify;"><strong>参考文献</strong><br />&nbsp; &nbsp; &nbsp;Bartholdi E, Ernst RR. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/bartholdi_ernst_ft_causality_main.pdf">Fourier spectroscopy and the causality principle</a>. J Magn Reson 1973; 11:9-19. &nbsp;&nbsp;<br />&nbsp; &nbsp; &nbsp;Bernstein MA, Fain SB, Riederer SJ. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/bernstein_windowing_zip.pdf">Effect of windowing and zero-filled reconstruction of MRI data on spatial resolution and acquisition strategy</a>. J Magn Reson Imaging 2001;14:270-280.<br />&nbsp; &nbsp; &nbsp;Du YP, Parker DL, Davis WL, Cao G. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/du___zip_magnetic_resonance_imaging_-_september_october_1994_-_du_-_reduction_of_partial-volume_artifacts_with_zero-filled.pdf">Reduction of partial volume artifacts with zero-filled interpolation in three dimensional MR angiography</a>. J Magn Reson Imaging 1994; 4:733-741<span><font color="#878787">&nbsp; &nbsp; &nbsp;</font></span><br />&nbsp; &nbsp; &nbsp;Ebel A, Dreher W, Leibfritz D. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/zip_ac.els-cdn.com_s1090780706001911_1-s2.0-s1090780706001911-main.pdf">Effects of zero-filling and apodization on spectral integrals in discrete Fourier-transform spectroscopy of noisy data</a>. J Magn Reson 2006;182:330-338.<br />&nbsp;&nbsp; &nbsp;&nbsp;Lindon JC, Ferrige AG. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/zip_fourier.pdf">Digitisation and data processing in Fourier transform NMR</a>. Prog NMR Spect 1980; 14:27-66. (Although adding zero interpolation filling beyond the first FT step does not provide independent information, it can occasionally be useful in spectroscopy to better define a line or peak position more precisely)<br />&nbsp;&nbsp; &nbsp;&nbsp;Zhu X, Tomanek B, Sharp J. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/zip_zhu_et_al-2013-concepts_in_magnetic_resonance_part_a.pdf">A pixel is an artifact: on the necessity of zero-filling in Fourier imaging</a>. Concepts Magn Reson 2013; 42A:32-44. (Interesting paper showing how constraining images into pixels attenuates high spatial frequencies and introduces high frequency artifactual structure.)</div><div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;"><strong>相关问题</strong><br /><strong><em><a href="k-space-grid.html">&nbsp; &nbsp; &nbsp;<span style="text-align: center;">为什么 k-空间被绘制成网格？k-空间中的坐标轴代表什么？&nbsp;</span><span style="text-align: center;">&nbsp;</span></a></em></strong></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div style="text-align:skip_to_justify;"><div style="height: 10px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-normal" href="why-not-use-both.html" >
+<span class="wsite-button-inner">← &nbsp;上一问题</span>
+</a>
+<div style="height: 10px; overflow: hidden;"></div></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div style="text-align:right;"><div style="height: 10px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-normal" href="what-is-fsetse.html" >
+<span class="wsite-button-inner">下一问题 &nbsp;→</span>
+</a>
+<div style="height: 10px; overflow: hidden;"></div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div style="text-align:center;"><div style="height: 10px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-highlight" href="complete-list-of-questions.html" >
+<span class="wsite-button-inner">↑&nbsp;问题完整列表 ↑</span>
+</a>
+<div style="height: 10px; overflow: hidden;"></div></div>
+</div></div>

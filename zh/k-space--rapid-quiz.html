@@ -1,0 +1,1841 @@
+<div id="content"><div id="wsite-content" class="wsite-elements wsite-not-footer">
+	<div><div id="262090759384548911" align="left" style="width: 100%; overflow-y: hidden;" class="wcustomhtml"><!--############NEW MASTER HEADER AND INDEX##############-->
+<!--THIS IS THE MASTER HEADER SECTION FOR QUIZZES ON EACH SUPER TAB-->
+<!-- Each super tab in the regular Q&A part of the website corresponds to  a set of review QUIZZES on a single web page. This single web page must begin with the html script included below (which must be appropriately renamed). -->
+
+<!--After the title there is an index that identifies ~5 subsections each with 10-20 quiz questions. The html script for each section of questions is in a separate document titled 20 EMPTY QUESTIONS.  Instructions for filling these out are provided in that document. -->
+
+<html>
+<head><script src="gdpr/gdprscript6f19.js?buildTime=1774025472"></script>
+<title>k空间与快速成像测验</title>
+<!--All Yellow highlighted items need to be replaced-->
+<meta name="keywords" content="放射学物理, 复习题, 磁共振物理">
+<meta name="description" content="来自MRIquestions.com的复习测验题集">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="mr_styles.html">
+<style>
+.explan {
+	display: none;
+	font-style: italic;
+	margin-top: 2px;
+	margin-bottom: 6px;
+}
+</style>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','../www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-52206512-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+<script>
+function showAnswer(q_string) {
+	var button = document.getElementById('show_'+q_string);
+	var shown = button.value == "Hide Answer";
+	if(!shown) {
+		document.getElementById('a_'+q_string).style.display = "block";
+		
+		document.getElementById('correct_'+q_string).style.fontWeight = "bold";
+		if(document.getElementById('c_'+q_string).checked) {
+			document.getElementById('correct_'+q_string).style.color = "Green";
+		} else {
+			document.getElementById('correct_'+q_string).style.color = "Red";
+		}
+		
+		button.value = "Hide Answer";
+	} else {
+		document.getElementById('a_'+q_string).style.display = "none";
+		button.value = "Show Answer";
+	}
+}
+
+function showAllAnswers(topic) {
+	var button = document.getElementById('show_all_'+topic);
+	var shown = button.value == "Hide All Answers for Section";
+	
+	var i = 0;
+	var correct = 0;
+	var ans_el;
+	while((ans_el=document.getElementById('a_'+topic+'_'+i)) != null) {
+		if(document.getElementById('c_'+topic+'_'+i).checked) {
+			correct++;
+		}
+		if(!shown) {
+			ans_el.style.display = "block";
+			document.getElementById('correct_'+topic+'_'+i).style.fontWeight = "bold";
+			if(document.getElementById('c_'+topic+'_'+i).checked) {
+				document.getElementById('correct_'+topic+'_'+i).style.color = "Green";
+			} else {
+				document.getElementById('correct_'+topic+'_'+i).style.color = "Red";
+			}
+		} else {
+			ans_el.style.display = "none";
+		}
+		i++;
+	}
+	
+	var scoretext = document.getElementById('scoretxt_'+topic);
+	scoretext.innerHTML = '你答对了 '+correct+'/'+i+' 题，得分 '+Math.round(correct/i*100)+'%';
+	
+	if(!shown) {
+		button.value = "Hide All Answers for Section";
+	} else {
+		button.value = "Show All Answers for Section";
+	}
+}
+
+function scoreAnswers(topic) {
+	var button = document.getElementById('score_'+topic);
+	
+	var i = 0;
+	var correct = 0;
+	var ans_el;
+	while((ans_el=document.getElementById('a_'+topic+'_'+i)) != null) {
+		if(document.getElementById('c_'+topic+'_'+i).checked) {
+			correct++;
+		}
+		i++;
+	}
+	
+	var scoretext = document.getElementById('scoretxt_'+topic);
+	scoretext.innerHTML = '你答对了 '+correct+'/'+i+' 题，得分 '+Math.round(correct/i*100)+'%';
+}
+
+function changeMode(button_value) {
+	if(button_value != 0) {
+		window.location = "review/mri_b3526.html?mode="+button_value;
+	}
+}
+</script>
+<style type="text/css">
+.button_unchecked {
+	border: 2px outset #3498db;
+	background: #3498db;
+	background-image: -webkit-linear-gradient(top, #3498db, #2980b9);
+	background-image: -moz-linear-gradient(top, #3498db, #2980b9);
+	background-image: -ms-linear-gradient(top, #3498db, #2980b9);
+	background-image: -o-linear-gradient(top, #3498db, #2980b9);
+	background-image: linear-gradient(to bottom, #3498db, #2980b9);
+	padding: 4px;
+	
+	font-size: 120%;
+	font-weight: bold;
+}
+.button_checked {
+	border: 2px inset #3498db;
+	background: #3498db;
+	background-image: -webkit-linear-gradient(top, #3498db, #2980b9);
+	background-image: -moz-linear-gradient(top, #3498db, #2980b9);
+	background-image: -ms-linear-gradient(top, #3498db, #2980b9);
+	background-image: -o-linear-gradient(top, #3498db, #2980b9);
+	background-image: linear-gradient(to bottom, #3498db, #2980b9);
+	padding: 4px;
+	
+	font-size: 120%;
+	font-weight: bold;
+}
+</style>
+</head>
+
+<!-- END OF MASTER HEADER -->
+
+<!--SECOND SECTION: Lists Subsections for Questions below-->
+<body style="background-color:white">
+<div class="main_div">
+<h1 style="color:black";><a name="top"></a>k空间与快速成像测验</h1>
+<div style="font-size: 140%; font-family: sans-serif">
+<ul>
+	<li><a href="#0">k空间</a></li>
+	<li><a href="#1">快速成像</a></li>
+              <li><a href="#2">并行成像</a></li>
+	
+</ul>
+
+<!-- Note the numbering of these subsections as they have a href values of #0, #1, #2, etc. These numbers are needed so that clicking on the index file takes you to the proper place in the web page identified on the 20 BLANK QUESTIONS script.-->
+
+
+
+</div>
+
+
+</div>
+
+
+
+</div>
+
+<div><div id="859550469302450784" align="left" style="width: 100%; overflow-y: hidden;" class="wcustomhtml"><!-- ###############NEW QUIZ SUBSECTION ##################-->
+
+<hr style="1px solid black">
+<!-- Creates optional line above new Quiz Subsection Title ---->
+
+<h1 style="color:black";><a name="0"></a>k空间</h1>
+
+<!-- The Section Name and its corresponding number (here 0) which has an href in the index must be changed/filled in.  Note that the first section is identified as “0” here only;  and the second section is denoted “2”, etc. 
+
+This is confusing because subsequently it is denoted as Section 1 and reference to all questions in this section begin with a 1.  However, the first question of Section 1 is called question 0, presumably to assist in scoring.
+
+Thus, the first question of Section 1 is denoted as q_1_0 and its second question is denoted q_1_1.	
+
+When a second section of Questions is added, this is called Section 2 with first and second questions denoted q_2_0 and q_2_1. 
+
+Each section has counting variables corresponding to each question. So the counting variables  are denoted c_1_0 for the Section 1/first question, while c_2_1 counts for Section 2/second question. -->
+
+<!-- FOR THE PURPOSES OF THIS DOCUMENT WE WILL CONSIDER ALL QUESTIONS TO REFER TO SECTION KQUIZ and are numbered consecutively. THE WORD DOCUMENT CAN THEN BE PUT INTO PROPER FORM BY “SEARCH AND REPLACE KQUIZ BY THE APPROPRIATE SECTION NUMBER”-->
+
+
+<!-- ################ SECTION M, QUIZ QUESTION  1############## -->
+
+<ol><li style="margin-top: 8px"> k空间中的一个点对应的是
+<ol type="a" id="q_KQUIZ_0">
+<li id="correct_KQUIZ_0"><input type=radio name="c_KQUIZ_0" id="c_KQUIZ_0"> 整个成像对象中某特定空间频率的量
+</li>
+
+<li ><input type=radio name="c_KQUIZ_0" > 成像对象中某特定点处某特定空间频率的量 
+</li>
+		
+<li ><input type=radio name="c_KQUIZ_0" > 成像对象中某特定点所产生信号的幅度和相位
+</li>
+
+		
+<li ><input type=radio name="c_KQUIZ_0" > 整个成像对象所产生信号的自旋密度
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_KQUIZ_0" onclick="showAnswer('KQUIZ_0')" value="显示答案"></p>
+				
+<p class="explan" id="a_KQUIZ_0"> k空间是一个代表MR图像中空间频率的数字数组。k空间中的单个点(kx,ky)并不与图像中的单个像素(x,y)一一对应。每个k空间点都包含最终图像中每个像素的空间频率和相位信息。 
+<a href="what-is-k-space.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+
+<!-- ################ SECTION KQUIZ, QUIZ QUESTION  2############## -->
+
+<li style="margin-top: 8px"> 关于k空间的以下哪项陈述是错误的？
+<ol type="a" id="q_KQUIZ_1">
+
+<li ><input type=radio name="c_KQUIZ_1" > k空间的k<sub>x</sub>轴和k<sub>y</sub>轴通常对应于图像的水平（x-）轴和垂直（y-）轴。
+</li>
+		
+<li ><input type=radio name="c_KQUIZ_1" > k空间中的每个点都包含最终图像中每个像素的空间频率和相位信息。
+</li>
+<li ><input type=radio name="c_KQUIZ_1" >  图像中的每个像素映射到k空间中的每个点。
+</li>
+
+<li id="correct_KQUIZ_1"><input type=radio name="c_KQUIZ_1" id="c_KQUIZ_1"> 靠近k空间中心的点对应于图像中心的点。
+</li>
+		
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_KQUIZ_1" onclick="showAnswer('KQUIZ_1')" value="显示答案"></p>
+				
+<p class="explan" id="a_KQUIZ_1"> k空间中的每个点都包含最终图像中每个像素的空间频率和相位信息。因此选项(d)是错误的。
+
+<a href="what-is-k-space.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION KQUIZ, QUIZ QUESTION  3############## -->
+
+<li style="margin-top: 8px"> 关于k空间的以下哪项陈述是正确的？
+<ol type="a" id="q_KQUIZ_2">
+
+<li ><input type=radio name="c_KQUIZ_2" > k空间的中心提供关于成像对象边缘和细节的信息。
+</li>
+		
+<li ><input type=radio name="c_KQUIZ_2" > k空间的外围提供关于对象整体形状和轮廓的信息。
+</li>
+
+<li id="correct_KQUIZ_2"><input type=radio name="c_KQUIZ_2" id="c_KQUIZ_2"> k空间正中心的原始数据总是比任何其他点的幅度大。
+</li>
+		
+<li ><input type=radio name="c_KQUIZ_2" >  k空间必须以特定的顺序填充数据。
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_KQUIZ_2" onclick="showAnswer('KQUIZ_2')" value="显示答案"></p>
+				
+<p class="explan" id="a_KQUIZ_2"> 只有(c)是正确的。k空间中心区域幅度最大的原因有两个。首先，中心行(ky = 0)是在无相位编码梯度的情况下采集的（因此没有相位编码步骤引起的破坏性波干涉）。其次，k空间的中心列(kx = 0)与MR回波的峰值重合。
+
+<a href="big-spot-in-middle.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION KQUIZ, QUIZ QUESTION  4############## -->
+<li style="margin-top: 8px"> 在常规解剖MR图像中，k空间的哪些点具有最低的幅度？
+<ol type="a" id="q_KQUIZ_3">
+<li id="correct_KQUIZ_3"><input type=radio name="c_KQUIZ_3" id="c_KQUIZ_3"> 四个角
+</li>
+		
+
+<li ><input type=radio name="c_KQUIZ_3" > 中心
+</li>
+		
+<li ><input type=radio name="c_KQUIZ_3" > 顶部和底部边缘的中点
+</li>
+
+<li ><input type=radio name="c_KQUIZ_3" >  左侧和右侧边缘的中点
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_KQUIZ_3" onclick="showAnswer('KQUIZ_3')" value="显示答案"></p>
+				
+<p class="explan" id="a_KQUIZ_3"> 四个角上的信号在两个方向上都具有最高的空间频率，并且对应于MR信号最弱的数据位置。为了节省螺旋成像的时间，通常会将四个角从数据采集中排除，而分辨率损失很小。
+<a href="parts-of-k-space.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+
+
+
+ 
+<!-- ################ SECTION KQUIZ, QUIZ QUESTION  5############## -->
+
+<li style="margin-top: 8px"> k空间中的“k”指的是“波数”，是空间频率的指标，即每单位距离的波数或周期数。因此，“k”可接受的单位是
+<ol type="a" id="q_KQUIZ_4">
+
+<li ><input type=radio name="c_KQUIZ_4" > 周期每秒
+</li>
+		
+
+<li id="correct_KQUIZ_4"><input type=radio name="c_KQUIZ_4" id="c_KQUIZ_4"> mm<sup>−1</sup>
+</li>
+		
+<li ><input type=radio name="c_KQUIZ_4" >  cm/秒
+</li>
+<li ><input type=radio name="c_KQUIZ_4" > 线对
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_KQUIZ_4" onclick="showAnswer('KQUIZ_4')" value="显示答案"></p>
+				
+<p class="explan" id="a_KQUIZ_4"> 波数(k)简单来说是波长的倒数。由于波长以距离为单位测量，波数的单位是(1/距离)，例如1/mm = mm<sup>−1</sup>。其他可接受的单位包括每毫米线对数和每毫米周期数。
+
+<a href="what-does-k-stand-for.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION KQUIZ, QUIZ QUESTION  6############## -->
+
+<li style="margin-top: 8px"> 关于k空间中空间频率位置的哪项陈述是正确的？
+<ol type="a" id="q_KQUIZ_5">
+
+<li ><input type=radio name="c_KQUIZ_5" > 沿k<sub>x</sub>轴的点对应于图像中的水平条纹
+</li>
+		
+<li ><input type=radio name="c_KQUIZ_5" > 沿k<sub>y</sub>轴的点对应于图像中的垂直条纹
+</li>
+
+<li id="correct_KQUIZ_5"><input type=radio name="c_KQUIZ_5" id="c_KQUIZ_5"> 与k<sub>x</sub>轴成45°角的点对应于图像中45°的条纹
+</li>
+		
+<li ><input type=radio name="c_KQUIZ_5" >  如果成像对象相对于视野较小，其k空间频率表示将主要局限于中心。
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_KQUIZ_5" onclick="showAnswer('KQUIZ_5')" value="显示答案"></p>
+				
+<p class="explan" id="a_KQUIZ_5"> 选项(c)是正确的。选项(a)和(b)颠倒了。关于不正确的选项(d)，成像对象的物理尺寸与其在k空间中的频率范围成反比。换句话说，小物体在k空间外围有波纹延伸，而大物体的频谱能量更集中在中心。 
+<a href="locations-in-k-space.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION KQUIZ, QUIZ QUESTION  7############## -->
+
+<li style="margin-top: 8px"> 考虑一个常规的2DFT自旋回波脉冲序列，频率编码沿x轴，相位编码沿y轴。哪项陈述是错误的？
+<ol type="a" id="q_KQUIZ_6">
+
+<li ><input type=radio name="c_KQUIZ_6" > 对于给定的相位编码步(ky)，回波早期的数字化数据放置在k空间的左侧（负kx值）。
+</li>
+		
+<li ><input type=radio name="c_KQUIZ_6" > 对于给定的相位编码步(ky)，回波早期的数字化数据放置在k空间的右侧（正kx值）。
+</li>
+
+<li id="correct_KQUIZ_6"><input type=radio name="c_KQUIZ_6" id="c_KQUIZ_6"> 对于给定的相位编码步(ky)，回波峰值的数字化数据放置在点(kx=0, ky=0)。
+</li>
+		
+<li ><input type=radio name="c_KQUIZ_6" >  对于给定的相位编码步(ky)，回波峰值的数字化数据放置在点(kx=0, ky)。
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_KQUIZ_6" onclick="showAnswer('KQUIZ_6')" value="显示答案"></p>
+				
+<p class="explan" id="a_KQUIZ_6"> 选项(c)是错误的，而选项(d)是正确的。 
+<a href="spin-warp-imaging.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+	
+<!-- ################ SECTION KQUIZ, QUIZ QUESTION  8############## -->
+
+<li style="margin-top: 8px"> 关于常规2DFT自旋回波脉冲序列填充k空间（频率编码沿x轴，相位编码沿y轴），哪项陈述是错误的？
+<ol type="a" id="q_KQUIZ_7">
+
+<li ><input type=radio name="c_KQUIZ_7" > k空间中心点(kx=0, ky=0)对应于图像傅里叶表示中的常数项。
+</li>
+<li id="correct_KQUIZ_7"><input type=radio name="c_KQUIZ_7" id="c_KQUIZ_7"> 除了中心行(ky=0)之外，k空间的每一行都是用相同恒定值的相位编码梯度采集的。
+</li>
+
+
+<li ><input type=radio name="c_KQUIZ_7" >  k空间的中心行(ky=0)是在无相位编码梯度的情况下采集的。 
+</li>
+		
+<li ><input type=radio name="c_KQUIZ_7" > k空间的中心列(kx=0)与每个相位编码步的MR回波峰值重合。
+</li>
+
+		
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_KQUIZ_7" onclick="showAnswer('KQUIZ_7')" value="显示答案"></p>
+				
+<p class="explan" id="a_KQUIZ_7"> 选项(b)是错误的。在2DFT自旋回波成像中，相位编码梯度的大小在每个周期中步进变化，而不是保持恒定。其他陈述是正确的。
+<a href="big-spot-in-middle.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION KQUIZ, QUIZ QUESTION  9############## -->
+
+<li style="margin-top: 8px"> 常规2DFT自旋回波脉冲序列逐行填充k空间通常被称为哪种轨迹？
+<ol type="a" id="q_KQUIZ_8">
+<li id="correct_KQUIZ_8"><input type=radio name="c_KQUIZ_8" id="c_KQUIZ_8"> 笛卡尔
+</li>
+
+<li ><input type=radio name="c_KQUIZ_8" > 径向
+</li>
+		
+<li ><input type=radio name="c_KQUIZ_8" > 之字形
+</li>
+
+		
+<li ><input type=radio name="c_KQUIZ_8" >  梯度脉冲
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_KQUIZ_8" onclick="showAnswer('KQUIZ_8')" value="显示答案"></p>
+				
+<p class="explan" id="a_KQUIZ_8"> 传统上，笛卡尔（逐行）方法几乎专门用于所有脉冲序列，但如今许多不同的模式被广泛使用。 
+<a href="k-space-trajectories.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+<!-- ################ SECTION KQUIZ, QUIZ QUESTION  10############## -->
+
+<li style="margin-top: 8px">  
+径向采样方法的缺点包括以下所有，除了
+<ol type="a" id="q_KQUIZ_9">
+<li id="correct_KQUIZ_9"><input type=radio name="c_KQUIZ_9" id="c_KQUIZ_9"> 对运动伪影的敏感性。
+</li>
+
+<li ><input type=radio name="c_KQUIZ_9" > 排除k空间的角部。
+</li>
+		
+<li ><input type=radio name="c_KQUIZ_9" > 需要运行校准扫描以估计梯度延迟和失真。
+</li>
+
+		
+<li ><input type=radio name="c_KQUIZ_9" >  采集的数据点不是适合快速傅里叶变换的格式。 
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_KQUIZ_9" onclick="showAnswer('KQUIZ_9')" value="显示答案"></p>
+				
+<p class="explan" id="a_KQUIZ_9"> 在径向采集中，由于重叠的“辐条”反复穿过该区域，k空间中心被过采样并持续更新。如果k空间中心的信号在视图之间发生变化，这种冗余可用于检测和校正运动。此外，所有径向辐条对图像的贡献相等（与笛卡尔采样不同，笛卡尔采样中只有穿过k空间中心的几条线决定了整体图像对比度和噪声水平）。因此，仅一个或几个径向视图上的运动不太可能严重降低图像质量。
+<a href="radial-sampling.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+<!-- ################ SECTION KQUIZ, QUIZ QUESTION  11############## -->
+
+<li style="margin-top: 8px"> 来自径向或螺旋采集的非均匀原始数据必须放入矩形（笛卡尔）矩阵格式以便高效计算。这个过程被称为
+<ol type="a" id="q_KQUIZ_10">
+
+<li ><input type=radio name="c_KQUIZ_10" > 变形
+</li>
+		
+
+<li id="correct_KQUIZ_10"><input type=radio name="c_KQUIZ_10" id="c_KQUIZ_10"> 网格化
+</li>
+<li ><input type=radio name="c_KQUIZ_10" > 鸽巢式放置
+</li>
+		
+<li ><input type=radio name="c_KQUIZ_10" >  压缩
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_KQUIZ_10" onclick="showAnswer('KQUIZ_10')" value="显示答案"></p>
+				
+<p class="explan" id="a_KQUIZ_10"> “网格化”是该过程的常用术语。尽管存在多种方法，但典型的网格化算法首先将原始数据乘以一组密度补偿权重，并与网格化核进行卷积。然后将所得数据插值并放入均匀间隔的矩阵（“网格”）中，执行离散傅里叶变换。最后，修剪视野，并将变换后的数据乘以变迹校正函数。
+<a href="radial-sampling.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+		
+
+
+
+
+
+<!-- ################ SECTION KQUIZ, QUIZ QUESTION  12############## -->
+
+<li style="margin-top: 8px"> 需要多少个相位周期才能在图像中唯一区分沿某个方向的每个像素？
+<ol type="a" id="q_KQUIZ_11">
+
+<li ><input type=radio name="c_KQUIZ_11" > 0.5
+</li>
+		
+
+<li id="correct_KQUIZ_11"><input type=radio name="c_KQUIZ_11" id="c_KQUIZ_11"> 1.0
+</li>
+<li ><input type=radio name="c_KQUIZ_11" > 1</li>
+		
+<li ><input type=radio name="c_KQUIZ_11" >  2.0
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_KQUIZ_11" onclick="showAnswer('KQUIZ_11')" value="显示答案"></p>
+				
+<p class="explan" id="a_KQUIZ_11"> 需要一个完整的相位周期来唯一区分每个像素。如果视野上有N个宽度为Δw的像素，则需要N个相位周期。 
+
+<a href="field-of-view-fov.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+<!-- ################ SECTION KQUIZ, QUIZ QUESTION  13############## -->
+
+<li style="margin-top: 8px"> 如果频率编码方向(x)的数据采样率减半，k空间中点之间的间距(Δk<sub>x</sub>)会发生什么？
+<ol type="a" id="q_KQUIZ_12">
+
+<li ><input type=radio name="c_KQUIZ_12" > 保持不变。
+</li>
+		
+<li ><input type=radio name="c_KQUIZ_12" > 减半。
+</li>
+
+<li id="correct_KQUIZ_12"><input type=radio name="c_KQUIZ_12" id="c_KQUIZ_12"> 加倍。
+</li>
+		
+<li ><input type=radio name="c_KQUIZ_12" >  变成四倍。
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_KQUIZ_12" onclick="showAnswer('KQUIZ_12')" value="显示答案"></p>
+				
+<p class="explan" id="a_KQUIZ_12"> 这相当于每隔一个k<sub>x</sub>值采样一次，因此与原始模式相比，间距Δk<sub>x</sub>将加倍 <a href="field-of-view-fov.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION KQUIZ, QUIZ QUESTION  14############## -->
+
+<li style="margin-top: 8px"> 如果频率编码方向(x)的数据采样率减半，该方向的视野会发生什么？
+<ol type="a" id="q_KQUIZ_13">
+
+<li ><input type=radio name="c_KQUIZ_13" > 保持不变。</li>
+		
+
+<li id="correct_KQUIZ_13"><input type=radio name="c_KQUIZ_13" id="c_KQUIZ_13"> 减半。
+</li>
+<li ><input type=radio name="c_KQUIZ_13" > 加倍。
+</li>
+		
+<li ><input type=radio name="c_KQUIZ_13" >  变成四倍。
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_KQUIZ_13" onclick="showAnswer('KQUIZ_13')" value="显示答案"></p>
+				
+<p class="explan" id="a_KQUIZ_13"> 我们使用公式Δk = 1/视野。因此Δk加倍意味着视野减半。
+<a href="field-of-view-fov.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION KQUIZ, QUIZ QUESTION  15############## -->
+
+<li style="margin-top: 8px"> 如果频率编码方向(x)的数据采样率减半，该方向的像素尺寸会发生什么？
+<ol type="a" id="q_KQUIZ_14">
+<li id="correct_KQUIZ_14"><input type=radio name="c_KQUIZ_14" id="c_KQUIZ_14"> 保持不变。
+</li>
+
+<li ><input type=radio name="c_KQUIZ_14" > 减半。
+</li>
+		
+<li ><input type=radio name="c_KQUIZ_14" > 加倍。
+</li>
+
+		
+<li ><input type=radio name="c_KQUIZ_14" >  变成四倍。
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_KQUIZ_14" onclick="showAnswer('KQUIZ_14')" value="显示答案"></p>
+				
+<p class="explan" id="a_KQUIZ_14"> 像素宽度Δw = 1/ k<sub>FOV</sub>。只要k<sub>FOV</sub> = 2k<sub>max</sub>不变，像素宽度也将保持不变。 
+<a href="field-of-view-fov.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+<!-- ################ SECTION KQUIZ, QUIZ QUESTION 16############## -->
+
+<li style="margin-top: 8px"> 假设频率编码方向(x)的数据采样率不变，但采样时间减少，使得仅采样k空间的中心1/3。该方向的像素宽度和视野会发生什么？
+<ol type="a" id="q_KQUIZ_15">
+<li id="correct_KQUIZ_15"><input type=radio name="c_KQUIZ_15" id="c_KQUIZ_15"> 像素尺寸变为三倍，视野不变。
+</li>
+
+<li ><input type=radio name="c_KQUIZ_15" > 像素尺寸不变，视野变为三倍。
+</li>
+		
+<li ><input type=radio name="c_KQUIZ_15" > 像素尺寸和视野均减少1/3。
+</li>
+
+		
+<li ><input type=radio name="c_KQUIZ_15" >  像素尺寸和视野均变为三倍。
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_KQUIZ_15" onclick="showAnswer('KQUIZ_15')" value="显示答案"></p>
+				
+<p class="explan" id="a_KQUIZ_15"> 因为数据采样率不变，Δk<sub>x</sub>不变，点之间的间距与之前相同。所以由于Δk = 1/视野，视野<sub>x</sub>不变。通过仅采样k空间中心1/3，k<sub>FOV</sub>现在只有原来的1/3。而由于像素宽度Δw = 1/ k<sub>FOV</sub>，这意味着像素宽度变为三倍。因此答案(a)正确。
+<a href="field-of-view-fov.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION KQUIZ, QUIZ QUESTION  17############## -->
+
+<li style="margin-top: 8px"> 假设2D自旋扭曲成像的频率编码部分保持不变，但相位编码步数减半（同时保持相位编码梯度的最大和最小幅度不变）。相位编码方向(y)上点之间的间距(Δk<sub>y</sub>)会发生什么？
+<ol type="a" id="q_KQUIZ_16">
+
+<li ><input type=radio name="c_KQUIZ_16" > 保持不变。
+</li>
+		
+<li ><input type=radio name="c_KQUIZ_16" > 减半。
+</li>
+
+<li id="correct_KQUIZ_16"><input type=radio name="c_KQUIZ_16" id="c_KQUIZ_16"> 加倍。
+</li>
+		
+<li ><input type=radio name="c_KQUIZ_16" >  变成四倍。
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_KQUIZ_16" onclick="showAnswer('KQUIZ_16')" value="显示答案"></p>
+				
+<p class="explan" id="a_KQUIZ_16"> 在此场景下，将相位编码步数(N<sub>y</sub>)减半会使连续步之间的增量加倍，因此Δk<sub>y</sub>加倍。
+
+<a href="rectangular-fov.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+<!-- ################ SECTION KQUIZ, QUIZ QUESTION  18############## -->
+
+<li style="margin-top: 8px"> 在上面的问题中，“保持相位编码梯度的最大和最小幅度不变”这句话在y方向的k<sub>FOV</sub>方面意味着什么？
+<ol type="a" id="q_KQUIZ_17">
+<li id="correct_KQUIZ_17"><input type=radio name="c_KQUIZ_17" id="c_KQUIZ_17"> 保持不变。
+</li>
+
+<li ><input type=radio name="c_KQUIZ_17" > 减半。
+</li>
+		
+<li ><input type=radio name="c_KQUIZ_17" > 加倍。
+</li>
+
+		
+<li ><input type=radio name="c_KQUIZ_17" >  变成四倍。
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_KQUIZ_17" onclick="showAnswer('KQUIZ_17')" value="显示答案"></p>
+				
+<p class="explan" id="a_KQUIZ_17"> 这句话基本上规定了k<sub>FOV</sub>不变。
+<a href="rectangular-fov.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+		
+
+<!-- ################ SECTION KQUIZ, QUIZ QUESTION  19############## -->
+
+<li style="margin-top: 8px"> 继续问题17和18中的相同场景，像素宽度和相位视野会发生什么？
+<ol type="a" id="q_KQUIZ_18">
+
+<li ><input type=radio name="c_KQUIZ_18" > 像素尺寸加倍，视野不变。
+</li>
+		
+<li ><input type=radio name="c_KQUIZ_18" > 像素尺寸不变，视野加倍。
+</li>
+<li ><input type=radio name="c_KQUIZ_18" >  像素尺寸和视野均减半。
+</li>
+
+<li id="correct_KQUIZ_18"><input type=radio name="c_KQUIZ_18" id="c_KQUIZ_18"> 像素尺寸不变，视野减半。
+</li>
+		
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_KQUIZ_18" onclick="showAnswer('KQUIZ_18')" value="显示答案"></p>
+				
+<p class="explan" id="a_KQUIZ_18"> 最后这三个问题中的场景是创建一个频率:相位比为1:2的矩形视野。由于Δk<sub>y</sub>加倍，视野<sub>y</sub>减半。此外，由于视野<sub>y</sub>和N<sub>y</sub>均减少一半，相位编码方向的像素尺寸（视野<sub>y</sub>/N<sub>y</sub>）和图像的整体空间分辨率也保持不变。  
+<a href="rectangular-fov.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+<!-- ################ SECTION KQUIZ, QUIZ QUESTION  20############## -->
+
+<li style="margin-top: 8px"> 关于通过如上所述减少相位编码步数来获得矩形视野，以下哪项陈述是错误的？
+<ol type="a" id="q_KQUIZ_19">
+
+<li ><input type=radio name="c_KQUIZ_19" > 该选项在脊柱和四肢成像时最有益。
+</li>
+		
+<li ><input type=radio name="c_KQUIZ_19" > 空间分辨率不变。
+</li>
+
+<li id="correct_KQUIZ_19"><input type=radio name="c_KQUIZ_19" id="c_KQUIZ_19"> 信噪比不变。
+</li>
+		
+<li ><input type=radio name="c_KQUIZ_19" >  相位编码方向更可能出现卷褶伪影。
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_KQUIZ_19" onclick="showAnswer('KQUIZ_19')" value="显示答案"></p>
+				
+<p class="explan" id="a_KQUIZ_19"> 选项(c)是错误的。因为采集的相位编码步数更少，从而采集的回波信号更少，信噪比相比全视野成像成比例降低。
+<a href="rectangular-fov.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+		
+<!-- ################ SECTION KQUIZ, QUIZ QUESTION  21############## -->
+
+<li style="margin-top: 8px"> 假设数据采集期间未发生相位误差，k空间呈现何种对称性？
+<ol type="a" id="q_KQUIZ_20">
+
+<li ><input type=radio name="c_KQUIZ_20" > x轴对称
+</li>
+		
+<li ><input type=radio name="c_KQUIZ_20" > y轴对称
+</li>
+<li ><input type=radio name="c_KQUIZ_20" >  z轴对称
+</li>
+
+<li id="correct_KQUIZ_20"><input type=radio name="c_KQUIZ_20" id="c_KQUIZ_20"> 共轭对称
+</li>
+		
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_KQUIZ_20" onclick="showAnswer('KQUIZ_20')" value="显示答案"></p>
+				
+<p class="explan" id="a_KQUIZ_20"> 假设数据采集期间未发生相位误差，k空间具有一种特殊的镜像特性，称为共轭（或厄米特）对称。共轭对称适用于位于k空间原点对角线上的点对（如P和Q）。如果P处的数据是复数[a+bi]，则Q处的数据立即已知为P的复共轭[a−bi]。 
+<a href="partial-fourier.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+
+
+		
+<!-- ################ SECTION KQUIZ, QUIZ QUESTION  22############## -->
+
+<li style="margin-top: 8px"> 关于相位共轭对称（部分傅里叶）成像，哪项陈述是错误的？
+<ol type="a" id="q_KQUIZ_21">
+<li id="correct_KQUIZ_21"><input type=radio name="c_KQUIZ_21" id="c_KQUIZ_21"> 使用该技术可以实现超过50%的成像时间节省。
+</li>
+
+<li ><input type=radio name="c_KQUIZ_21" > 必须采样超过一半的相位编码线以校正相位误差。
+</li>
+		
+<li ><input type=radio name="c_KQUIZ_21" > 空间分辨率得以保持。
+</li>
+
+		
+<li ><input type=radio name="c_KQUIZ_21" >  对于半傅里叶成像，信噪比降低约30%。
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_KQUIZ_21" onclick="showAnswer('KQUIZ_21')" value="显示答案"></p>
+				
+<p class="explan" id="a_KQUIZ_21"> 相位共轭对称技术使用k空间上半部分的数据来估计下半部分的数据。理论上，相位共轭对称允许仅使用正常相位编码步数的一半来采集数据，从而可能将成像时间减少一半。然而，为了校正相位误差，必须采样超过一半的相位编码线，因此实际节省的时间少于50%。   
+<a href="phase-symmetry.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+
+
+
+
+		
+<!-- ################ SECTION KQUIZ, QUIZ QUESTION  23############## -->
+
+<li style="margin-top: 8px"> 关于读出共轭对称成像，哪项陈述是错误的？
+<ol type="a" id="q_KQUIZ_22">
+
+<li ><input type=radio name="c_KQUIZ_22" > 没有直接的时间节省。
+</li>
+		
+<li ><input type=radio name="c_KQUIZ_22" > 频率编码方向的流动和运动伪影减少。
+</li>
+
+<li id="correct_KQUIZ_22"><input type=radio name="c_KQUIZ_22" id="c_KQUIZ_22"> 仅采样回波的第一部分。
+</li>
+		
+<li ><input type=radio name="c_KQUIZ_22" >  该技术允许更短的TE值。
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_KQUIZ_22" onclick="showAnswer('KQUIZ_22')" value="显示答案"></p>
+				
+<p class="explan" id="a_KQUIZ_22"> 读出共轭对称的方向是沿读出（频率编码）轴。仅采样回波的<u>最后</u>部分，因此选项(c)是错误的。其他陈述是正确的。
+<a href="read-symmetry.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+
+
+
+		
+<!-- ################ SECTION KQUIZ, QUIZ QUESTION  24############## -->
+
+<li style="margin-top: 8px"> 关于零填充，以下哪项陈述是错误的？
+<ol type="a" id="q_KQUIZ_23">
+
+<li ><input type=radio name="c_KQUIZ_23" > 可用于2D或3D成像
+</li>
+		
+
+<li id="correct_KQUIZ_23"><input type=radio name="c_KQUIZ_23" id="c_KQUIZ_23"> 用于在频率编码方向扩展成像矩阵
+</li>
+<li ><input type=radio name="c_KQUIZ_23" > 提高图像的视在空间分辨率。
+</li>
+		
+<li ><input type=radio name="c_KQUIZ_23" >  在第一次用零将矩阵尺寸加倍后，没有额外的益处。
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_KQUIZ_23" onclick="showAnswer('KQUIZ_23')" value="显示答案"></p>
+				
+<p class="explan" id="a_KQUIZ_23"> 零填充通常用于在<u>相位</u>编码方向扩展图像矩阵尺寸，该方向可以是层内（2D）或层间/容积选择（3D）。零填充作为对相邻体素信号进行插值的方法，使图像看起来更平滑，减少“像素化”外观。
+<a href="zip.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+
+
+
+
+
+
+
+
+
+
+<!--##################################################-->
+<!--############SCORING SECTION Needs to go at end of each subsection-->
+
+</ol><p><input type=button id="show_all_KQUIZ" onclick="showAllAnswers('KQUIZ')" value="显示本节所有答案"><span style="font-weight: bold" id="scoretxt_KQUIZ"></span></p>
+<p><a href="#top">返回页首</a></p></div>
+<!--END OF SCORING SECTION-->
+
+
+
+</div>
+
+
+
+</div>
+
+<div><div id="204660531973148861" align="left" style="width: 100%; overflow-y: hidden;" class="wcustomhtml"><!-- ###############NEW QUIZ SUBSECTION ##################-->
+
+<hr style="1px solid black">
+<!-- Creates optional line above new Quiz Subsection Title ---->
+
+<h1 style="color:black";><a name="1"></a>快速成像（快速自旋回波/回波平面成像）</h1>
+
+<!-- The Section Name and its corresponding number (here 0) which has an href in the index must be changed/filled in.  Note that the first section is identified as “0” here only;  and the second section is denoted “2”, etc. 
+
+This is confusing because subsequently it is denoted as Section 1 and reference to all questions in this section begin with a 1.  However, the first question of Section 1 is called question 0, presumably to assist in scoring.
+
+Thus, the first question of Section 1 is denoted as q_1_0 and its second question is denoted q_1_1.	
+
+When a second section of Questions is added, this is called Section 2 with first and second questions denoted q_2_0 and q_2_1. 
+
+Each section has counting variables corresponding to each question. So the counting variables  are denoted c_1_0 for the Section 1/first question, while c_2_1 counts for Section 2/second question. -->
+
+<!-- FOR THE PURPOSES OF THIS DOCUMENT WE WILL CONSIDER ALL QUESTIONS TO REFER TO SECTION RAPIDQ and are numbered consecutively. THE WORD DOCUMENT CAN THEN BE PUT INTO PROPER FORM BY “SEARCH AND REPLACE RAPIDQ BY THE APPROPRIATE SECTION NUMBER”-->
+
+
+<!-- ################ SECTION M, QUIZ QUESTION  1############## -->
+
+<ol><li style="margin-top: 8px"> 快速/涡轮自旋回波成像是哪种原始技术的商业应用？
+<ol type="a" id="q_RAPIDQ_0">
+<li id="correct_RAPIDQ_0"><input type=radio name="c_RAPIDQ_0" id="c_RAPIDQ_0"> RARE
+</li>
+
+<li ><input type=radio name="c_RAPIDQ_0" > MEDIUM
+</li>
+		
+<li ><input type=radio name="c_RAPIDQ_0" > ROAST
+</li>
+
+		
+<li ><input type=radio name="c_RAPIDQ_0" > SMASH
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_RAPIDQ_0" onclick="showAnswer('RAPIDQ_0')" value="显示答案"></p>
+				
+<p class="explan" id="a_RAPIDQ_0"> 快速自旋回波成像，也称为涡轮自旋回波成像，是Hennig等人在1986年首次描述的RARE（弛豫增强快速采集）技术的商业实现。
+
+<a href="what-is-fsetse.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+
+<!-- ################ SECTION RAPIDQ, QUIZ QUESTION  2############## -->
+
+<li style="margin-top: 8px"> 以下哪种表示最能描述FSE/TSE技术？
+<ol type="a" id="q_RAPIDQ_1">
+
+<li ><input type=radio name="c_RAPIDQ_1" > 90°−180°−回波−90°−180°−回波−90°−180°−回波−…..
+</li>
+		
+
+<li id="correct_RAPIDQ_1"><input type=radio name="c_RAPIDQ_1" id="c_RAPIDQ_1"> 90°−180°−回波−180°−回波−180°−回波−180°−回波−…..
+</li>
+<li ><input type=radio name="c_RAPIDQ_1" > 90°−180°−回波−回波−回波−回波−…..
+</li>
+		
+<li ><input type=radio name="c_RAPIDQ_1" >  90°−180°−回波−90°−回波−180°−回波−90°−回波−180°−回波−…..
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_RAPIDQ_1" onclick="showAnswer('RAPIDQ_1')" value="显示答案"></p>
+				
+<p class="explan" id="a_RAPIDQ_1"> FSE/TSE脉冲序列在单个90°脉冲后使用一系列180°重聚焦脉冲来产生一连串回波。
+<a href="what-is-fsetse.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION RAPIDQ, QUIZ QUESTION  3############## -->
+
+<li style="margin-top: 8px"> FSE/TSE相对于常规自旋回波成像的优点包括除了
+<ol type="a" id="q_RAPIDQ_2">
+<li id="correct_RAPIDQ_2"><input type=radio name="c_RAPIDQ_2" id="c_RAPIDQ_2"> 降低组织能量沉积
+</li>
+
+<li ><input type=radio name="c_RAPIDQ_2" > 减少磁敏感性伪影
+</li>
+		
+<li ><input type=radio name="c_RAPIDQ_2" > 减少成像时间
+</li>
+
+		
+<li ><input type=radio name="c_RAPIDQ_2" >  相同成像时间内提高分辨率或信噪比
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_RAPIDQ_2" onclick="showAnswer('RAPIDQ_2')" value="显示答案"></p>
+				
+<p class="explan" id="a_RAPIDQ_2"> FSE/TSE通过几乎同时扫描多条k空间线，显著缩短了成像时间。节省的时间可用于延长TR，使纵向磁化强度有更多时间恢复，从而提高信噪比。可以使用更多的相位编码步数，从而提高空间分辨率。磁敏感性引起的信号损失减少。然而，多个180°脉冲在组织中沉积大量能量，导致比吸收率较高。
+<a href="what-is-fsetse.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION RAPIDQ, QUIZ QUESTION  4############## -->
+<li style="margin-top: 8px"> FSE/TSE与多回波常规自旋回波序列之间的主要概念结构差异是什么？
+<ol type="a" id="q_RAPIDQ_3">
+
+<li ><input type=radio name="c_RAPIDQ_3" > TR间隔内90°脉冲的数量
+</li>
+		
+<li ><input type=radio name="c_RAPIDQ_3" > TR间隔内90°和180°射频脉冲的模式
+</li>
+
+<li id="correct_RAPIDQ_3"><input type=radio name="c_RAPIDQ_3" id="c_RAPIDQ_3"> TR间隔内相位编码梯度的模式
+</li>
+		
+<li ><input type=radio name="c_RAPIDQ_3" >  TR间隔内频率编码梯度的模式
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_RAPIDQ_3" onclick="showAnswer('RAPIDQ_3')" value="显示答案"></p>
+				
+<p class="explan" id="a_RAPIDQ_3"> FSE/TSE技术为这些回波中的每一个改变相位编码梯度（多回波CSE序列以相同的相位编码采集一连串中的所有回波）。
+<a href="what-is-fsetse.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+
+
+ 
+<!-- ################ SECTION RAPIDQ, QUIZ QUESTION  5############## -->
+
+<li style="margin-top: 8px"> 什么是有效回波时间？
+<ol type="a" id="q_RAPIDQ_4">
+
+<li ><input type=radio name="c_RAPIDQ_4" > 90°脉冲和第一个回波之间的时间
+</li>
+		
+<li ><input type=radio name="c_RAPIDQ_4" > 90°脉冲和最后一个回波之间的时间
+</li>
+<li ><input type=radio name="c_RAPIDQ_4" >  回波串中连续回波之间的时间
+</li>
+
+<li id="correct_RAPIDQ_4"><input type=radio name="c_RAPIDQ_4" id="c_RAPIDQ_4"> 90°脉冲与在k空间中心采集的回波之间的时间
+</li>
+		
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_RAPIDQ_4" onclick="showAnswer('RAPIDQ_4')" value="显示答案"></p>
+				
+<p class="explan" id="a_RAPIDQ_4"> 有效回波时间是填充k空间中心线(ky = 0)的时间。  
+
+<a href="fse-parameters.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION RAPIDQ, QUIZ QUESTION  6############## -->
+
+<li style="margin-top: 8px"> 什么是回波间隔？
+<ol type="a" id="q_RAPIDQ_5">
+
+<li ><input type=radio name="c_RAPIDQ_5" > 90°脉冲和第一个180°脉冲之间的时间
+</li>
+		
+<li ><input type=radio name="c_RAPIDQ_5" > 90°脉冲和最后一个回波之间的时间
+</li>
+
+<li id="correct_RAPIDQ_5"><input type=radio name="c_RAPIDQ_5" id="c_RAPIDQ_5"> 回波串中连续回波之间的时间
+</li>
+		
+<li ><input type=radio name="c_RAPIDQ_5" >  90°脉冲与在k空间中心采集的回波之间的时间
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_RAPIDQ_5" onclick="showAnswer('RAPIDQ_5')" value="显示答案"></p>
+				
+<p class="explan" id="a_RAPIDQ_5"> 回波间隔是任意两个连续回波之间的时间。
+<a href="fse-parameters.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION RAPIDQ, QUIZ QUESTION  7############## -->
+
+<li style="margin-top: 8px"> 什么是回波链长度或涡轮因子？
+<ol type="a" id="q_RAPIDQ_6">
+<li id="correct_RAPIDQ_6"><input type=radio name="c_RAPIDQ_6" id="c_RAPIDQ_6"> 一个TR间隔内的回波数
+</li>
+
+<li ><input type=radio name="c_RAPIDQ_6" > 一个TR间隔内回波之间的时间
+</li>
+		
+<li ><input type=radio name="c_RAPIDQ_6" > 一个TR间隔内的射频脉冲数
+</li>
+
+		
+<li ><input type=radio name="c_RAPIDQ_6" >  到达k空间中心所需的射频脉冲数
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_RAPIDQ_6" onclick="showAnswer('RAPIDQ_6')" value="显示答案"></p>
+				
+<p class="explan" id="a_RAPIDQ_6"> ETL或TF简单地是在连续90°脉冲之间FSE链中的回波数。成像时间按此因子成比例减少。
+<a href="fse-parameters.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+	
+<!-- ################ SECTION RAPIDQ, QUIZ QUESTION  8############## -->
+
+<li style="margin-top: 8px"> 如果具有特定TR/TE/空间分辨率的常规自旋回波序列需要8分钟完成，而其他方面相同的FSE序列具有8的回波链长度（涡轮因子），需要多长时间？
+<ol type="a" id="q_RAPIDQ_7">
+<li id="correct_RAPIDQ_7"><input type=radio name="c_RAPIDQ_7" id="c_RAPIDQ_7"> 1分钟
+</li>
+
+<li ><input type=radio name="c_RAPIDQ_7" > 2分钟
+</li>
+		
+<li ><input type=radio name="c_RAPIDQ_7" > 4分钟
+</li>
+
+		
+<li ><input type=radio name="c_RAPIDQ_7" >  8分钟
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_RAPIDQ_7" onclick="showAnswer('RAPIDQ_7')" value="显示答案"></p>
+				
+<p class="explan" id="a_RAPIDQ_7"> 当ETL/TF = 8时，每个TR间隔填充8条k空间线，将成像时间减少为1/8。
+<a href="fse-parameters.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION RAPIDQ, QUIZ QUESTION  9############## -->
+
+<li style="margin-top: 8px"> 随着回波链长度或涡轮因子的增加，<u>不会</u>发生哪种图像变化？
+<ol type="a" id="q_RAPIDQ_8">
+
+<li ><input type=radio name="c_RAPIDQ_8" > 更强的T2加权
+</li>
+		
+
+<li id="correct_RAPIDQ_8"><input type=radio name="c_RAPIDQ_8" id="c_RAPIDQ_8"> 信噪比增加
+</li>
+<li ><input type=radio name="c_RAPIDQ_8" > 空间模糊
+</li>
+		
+<li ><input type=radio name="c_RAPIDQ_8" >  脂肪信号增高
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_RAPIDQ_8" onclick="showAnswer('RAPIDQ_8')" value="显示答案"></p>
+				
+<p class="explan" id="a_RAPIDQ_8"> 更长的ETL与整体信噪比和对比噪声比的降低相关，因为链中较晚的回波幅度较小。 
+<a href="fse-parameters.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+<!-- ################ SECTION RAPIDQ, QUIZ QUESTION  10############## -->
+
+<li style="margin-top: 8px"> 随着回波间隔的增加，<u>不会</u>观察到哪种图像变化？
+<ol type="a" id="q_RAPIDQ_9">
+
+<li ><input type=radio name="c_RAPIDQ_9" > 运动伪影增加
+</li>
+		
+<li ><input type=radio name="c_RAPIDQ_9" > 磁敏感性伪影增加
+</li>
+<li ><input type=radio name="c_RAPIDQ_9" >  边缘相关伪影增加
+</li>
+
+<li id="correct_RAPIDQ_9"><input type=radio name="c_RAPIDQ_9" id="c_RAPIDQ_9"> 信噪比增加
+</li>
+		
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_RAPIDQ_9" onclick="showAnswer('RAPIDQ_9')" value="显示答案"></p>
+				
+<p class="explan" id="a_RAPIDQ_9"> 增加回波间隔允许使用更长的TE，但对信噪比和对比噪声比产生负面影响。运动、磁敏感性和边缘相关伪影增加。通常，增加的ESP对图像质量主要产生有害后果；因此在大多数应用中应选择允许的最短ESP<a href="fse-parameters.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+<!-- ################ SECTION RAPIDQ, QUIZ QUESTION  11############## -->
+
+<li style="margin-top: 8px"> 为什么脂肪在FSE/TSE上看起来比常规自旋回波图像更亮？
+<ol type="a" id="q_RAPIDQ_10">
+
+<li ><input type=radio name="c_RAPIDQ_10" > FSE/TSE具有更多的内在T1加权
+</li>
+		
+
+<li id="correct_RAPIDQ_10"><input type=radio name="c_RAPIDQ_10" id="c_RAPIDQ_10"> 多个FSE/TSE 180°脉冲破坏了脂肪分子中的J耦合
+</li>
+<li ><input type=radio name="c_RAPIDQ_10" > FSE/TSE中快速的相位编码梯度切换破坏了脂肪酸的扩散
+</li>
+		
+<li ><input type=radio name="c_RAPIDQ_10" >  仅仅是视觉错觉；绝对脂肪信号不变。
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_RAPIDQ_10" onclick="showAnswer('RAPIDQ_10')" value="显示答案"></p>
+				
+<p class="explan" id="a_RAPIDQ_10"> 尽管多种因素可能导致FSE“脂肪高信号”现象，但主要机制被认为是由于J耦合相互作用的破坏导致的T2延长，这种相互作用通常发生在相邻脂肪质子之间。
+<a href="bright-fat.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+		
+
+
+
+
+
+<!-- ################ SECTION RAPIDQ, QUIZ QUESTION  12############## -->
+
+<li style="margin-top: 8px"> 比较FSE/TSE和CSE，哪项陈述是错误的？
+<ol type="a" id="q_RAPIDQ_11">
+<li id="correct_RAPIDQ_11"><input type=radio name="c_RAPIDQ_11" id="c_RAPIDQ_11"> FSE/TSE对磁敏感性变化的敏感性增加。
+</li>
+		
+
+<li ><input type=radio name="c_RAPIDQ_11" > FSE/TSE表现出增加的磁化传递效应。
+</li>
+		
+<li ><input type=radio name="c_RAPIDQ_11" > FSE/TSE表现出空间模糊
+</li>
+
+<li ><input type=radio name="c_RAPIDQ_11" >  FSE/TSE表现出伪边缘增强
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_RAPIDQ_11" onclick="showAnswer('RAPIDQ_11')" value="显示答案"></p>
+				
+<p class="explan" id="a_RAPIDQ_11"> FSE/TSE序列对磁敏感性变化的敏感性<u>较低</u>，因为以非常短的间隔发生的180°重聚焦脉冲使得磁敏感性诱导的散相时间相对较少。 
+<a href="other-fse-differences.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+<!-- ################ SECTION RAPIDQ, QUIZ QUESTION  13############## -->
+
+<li style="margin-top: 8px"> 如果在MR序列结束时播放，哪种脉冲可被视为<i>驱动平衡</i>脉冲？
+<ol type="a" id="q_RAPIDQ_12">
+
+<li ><input type=radio name="c_RAPIDQ_12" > +90°
+</li>
+		
+<li ><input type=radio name="c_RAPIDQ_12" > +180°
+</li>
+
+<li id="correct_RAPIDQ_12"><input type=radio name="c_RAPIDQ_12" id="c_RAPIDQ_12"> −90°
+</li>
+		
+<li ><input type=radio name="c_RAPIDQ_12" >  −180°
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_RAPIDQ_12" onclick="showAnswer('RAPIDQ_12')" value="显示答案"></p>
+				
+<p class="explan" id="a_RAPIDQ_12"> 驱动平衡，也称为快速恢复，是一种在MR序列结束时使用−90°“回翻”脉冲来帮助恢复纵向磁化强度的技术。
+<a href="driven-equilibrium.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION RAPIDQ, QUIZ QUESTION  14############## -->
+
+<li style="margin-top: 8px"> 比较射频脉冲的组织能量沉积，哪项是正确的？
+<ol type="a" id="q_RAPIDQ_13">
+
+<li ><input type=radio name="c_RAPIDQ_13" > 90°和180°脉冲沉积的能量大致相同
+</li>
+		
+<li ><input type=radio name="c_RAPIDQ_13" > 180°脉冲沉积的能量是90°脉冲的两倍。
+</li>
+<li ><input type=radio name="c_RAPIDQ_13" >  180°脉冲沉积的能量是90°脉冲的一半。
+</li>
+
+<li id="correct_RAPIDQ_13"><input type=radio name="c_RAPIDQ_13" id="c_RAPIDQ_13"> 180°脉冲沉积的能量是90°脉冲的四倍。
+</li>
+		
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_RAPIDQ_13" onclick="showAnswer('RAPIDQ_13')" value="显示答案"></p>
+				
+<p class="explan" id="a_RAPIDQ_13"> 射频脉冲的能量沉积与翻转角平方（α²）成正比。因此，180°脉冲沉积的能量是90°脉冲的4倍。 
+<a href="reduced-flip-angle-fse.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION RAPIDQ, QUIZ QUESTION  15############## -->
+
+<li style="margin-top: 8px"> 以下哪项脉冲序列功能在3D-FSE序列（如CUBE/SPACE/VISTA）中通常未按所述方式实现？
+<ol type="a" id="q_RAPIDQ_14">
+
+<li ><input type=radio name="c_RAPIDQ_14" > 非常短的TE（2-4 ms）
+</li>
+		
+
+<li id="correct_RAPIDQ_14"><input type=radio name="c_RAPIDQ_14" id="c_RAPIDQ_14"> 中等长度的回波链（涡轮因子8-16） 
+</li>
+<li ><input type=radio name="c_RAPIDQ_14" > 减小翻转角
+</li>
+		
+<li ><input type=radio name="c_RAPIDQ_14" >  具有零插值填充的部分傅里叶成像。
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_RAPIDQ_14" onclick="showAnswer('RAPIDQ_14')" value="显示答案"></p>
+				
+<p class="explan" id="a_RAPIDQ_14">3D-FSE序列使用极长的回波链，可能有100-200个回波。其他特性包括非选择性射频脉冲、并行成像和优化的k空间轨迹。
+<a href="spacecubevista.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+<!-- ################ SECTION RAPIDQ, QUIZ QUESTION 16############## -->
+
+<li style="margin-top: 8px"> 为什么回波平面成像通常使用之字形k空间轨迹，而不是像自旋回波成像中那样使用一致的笛卡尔（从左到右）轨迹？
+<ol type="a" id="q_RAPIDQ_15">
+
+<li ><input type=radio name="c_RAPIDQ_15" > 提供更好的空间分辨率。
+</li>
+		
+<li ><input type=radio name="c_RAPIDQ_15" > 伪影更少。
+</li>
+
+<li id="correct_RAPIDQ_15"><input type=radio name="c_RAPIDQ_15" id="c_RAPIDQ_15"> 执行速度更快。
+</li>
+		
+<li ><input type=radio name="c_RAPIDQ_15" >  在相位编码方向而非频率编码方向上进行。
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_RAPIDQ_15" onclick="showAnswer('RAPIDQ_15')" value="显示答案"></p>
+				
+<p class="explan" id="a_RAPIDQ_15"> 之字形轨迹很受欢迎，因为它易于编程且速度更快，因为它不需要在每个回波后将读出梯度重新绕回−k<sub>max</sub>。空间分辨率相同，但之字形更容易产生伪影，如奈奎斯特N/2鬼影。
+<a href="echo-planar-imaging.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION RAPIDQ, QUIZ QUESTION  17############## -->
+
+<li style="margin-top: 8px"> 关于单次激发FSE（HASTE）的以下所有陈述都是正确的，除了
+<ol type="a" id="q_RAPIDQ_16">
+<li id="correct_RAPIDQ_16"><input type=radio name="c_RAPIDQ_16" id="c_RAPIDQ_16"> 使用梯度回波信号生成以实现速度。
+</li>
+
+<li ><input type=radio name="c_RAPIDQ_16" > 总回波数可能超过200。
+</li>
+		
+<li ><input type=radio name="c_RAPIDQ_16" > 利用相位共轭对称来限制相位编码步数。
+</li>
+
+		
+<li ><input type=radio name="c_RAPIDQ_16" >  常见应用包括磁共振胆管成像和磁共振脊髓成像。
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_RAPIDQ_16" onclick="showAnswer('RAPIDQ_16')" value="显示答案"></p>
+				
+<p class="explan" id="a_RAPIDQ_16"> 其名称SS-FSE/HASTE中隐含了快速自旋回波技术，意味着记录的是自旋回波，而不是梯度回波。
+<a href="hastess-fse.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+
+
+
+
+
+
+
+
+<!--##################################################-->
+<!--############SCORING SECTION Needs to go at end of each subsection-->
+
+</ol><p><input type=button id="show_all_RAPIDQ" onclick="showAllAnswers('RAPIDQ')" value="显示本节所有答案"><span style="font-weight: bold" id="scoretxt_RAPIDQ"></span></p>
+<p><a href="#top">返回页首</a></p></div>
+<!--END OF SCORING SECTION-->
+
+
+
+</div>
+
+
+
+</div>
+
+<div><div id="262718201302943437" align="left" style="width: 100%; overflow-y: hidden;" class="wcustomhtml"><!-- ###############NEW QUIZ SUBSECTION ##################-->
+
+<hr style="1px solid black">
+<!-- Creates optional line above new Quiz Subsection Title ---->
+
+<h1 style="color:black";><a name="2"></a>并行成像</h1>
+
+<!-- The Section Name and its corresponding number (here 0) which has an href in the index must be changed/filled in.  Note that the first section is identified as “0” here only;  and the second section is denoted “2”, etc. 
+
+This is confusing because subsequently it is denoted as Section 1 and reference to all questions in this section begin with a 1.  However, the first question of Section 1 is called question 0, presumably to assist in scoring.
+
+Thus, the first question of Section 1 is denoted as q_1_0 and its second question is denoted q_1_1.	
+
+When a second section of Questions is added, this is called Section 2 with first and second questions denoted q_2_0 and q_2_1. 
+
+Each section has counting variables corresponding to each question. So the counting variables  are denoted c_1_0 for the Section 1/first question, while c_2_1 counts for Section 2/second question. -->
+
+<!-- FOR THE PURPOSES OF THIS DOCUMENT WE WILL CONSIDER ALL QUESTIONS TO REFER TO SECTION PIQUIZ and are numbered consecutively. THE WORD DOCUMENT CAN THEN BE PUT INTO PROPER FORM BY “SEARCH AND REPLACE PIQUIZ BY THE APPROPRIATE SECTION NUMBER”-->
+
+
+<!-- ################ SECTION M, QUIZ QUESTION  1############## -->
+
+<ol><li style="margin-top: 8px"> 关于并行成像的以下哪项陈述是错误的？
+<ol type="a" id="q_PIQUIZ_0">
+
+<li ><input type=radio name="c_PIQUIZ_0" > 它几乎可以与所有脉冲序列一起使用。
+</li>
+		
+<li ><input type=radio name="c_PIQUIZ_0" > 它需要多个接收线圈。
+</li>
+
+<li id="correct_PIQUIZ_0"><input type=radio name="c_PIQUIZ_0" id="c_PIQUIZ_0"> 它可以在任何方向上进行。
+</li>
+		
+<li ><input type=radio name="c_PIQUIZ_0" > 其主要目的是减少所需的相位编码步数。
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_PIQUIZ_0" onclick="showAnswer('PIQUIZ_0')" value="显示答案"></p>
+				
+<p class="explan" id="a_PIQUIZ_0"> 允许进行并行成像的方向取决于阵列中线圈的布置。具体来说，线圈必须沿为并行成像选择的方向具有不同的灵敏度分布。并行成像不能与仅有一对正交输出通道的单个表面线圈、头线圈、膝线圈或大体线圈一起使用。
+
+<a href="pi-coils-and-sequences.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+
+<!-- ################ SECTION PIQUIZ, QUIZ QUESTION  2############## -->
+
+<li style="margin-top: 8px"> 以下哪项<u>不是</u>并行成像的缺点？
+<ol type="a" id="q_PIQUIZ_1">
+<li id="correct_PIQUIZ_1"><input type=radio name="c_PIQUIZ_1" id="c_PIQUIZ_1"> 磁敏感性伪影增加。
+</li>
+
+<li ><input type=radio name="c_PIQUIZ_1" > 混叠伪影增加。
+</li>
+		
+<li ><input type=radio name="c_PIQUIZ_1" > 线圈校准伪影。
+</li>
+
+		
+<li ><input type=radio name="c_PIQUIZ_1" >  非均匀方式的噪声增加，信噪比降低。 
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_PIQUIZ_1" onclick="showAnswer('PIQUIZ_1')" value="显示答案"></p>
+				
+<p class="explan" id="a_PIQUIZ_1"> 由磁敏感性引起的MR信号中的相位相关失真通过并行成像采集和重建过程减少（而不是增加）。这在回波平面序列中尤其有利。
+<a href="why-and-when-to-use.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION PIQUIZ, QUIZ QUESTION  3############## -->
+
+<li style="margin-top: 8px"> 比较图像域并行成像技术（如SENSE/ASSET）和k空间并行成像技术（如GRAPPA/ARC），哪项陈述是错误的？
+<ol type="a" id="q_PIQUIZ_2">
+
+<li ><input type=radio name="c_PIQUIZ_2" > 对于高R（加速）值，图像域并行成像技术提供稍高的信噪比。
+</li>
+		
+
+<li id="correct_PIQUIZ_2"><input type=radio name="c_PIQUIZ_2" id="c_PIQUIZ_2"> 图像域并行成像在异质身体区域（如胸部）表现更好
+</li>
+<li ><input type=radio name="c_PIQUIZ_2" > k空间并行成像技术显示更少的混叠，并且在需要小视野时更有用。
+</li>
+		
+<li ><input type=radio name="c_PIQUIZ_2" >  k空间并行成像技术在最小化磁敏感性失真方面更有效。
+
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_PIQUIZ_2" onclick="showAnswer('PIQUIZ_2')" value="显示答案"></p>
+				
+<p class="explan" id="a_PIQUIZ_2"> 图像域并行成像技术如SENSE/ASSET在异质身体区域表现不佳。这是因为可能难以获得准确的线圈灵敏度图。肺是一个典型的例子。 
+<a href="two-types-of-pi.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION PIQUIZ, QUIZ QUESTION  4############## -->
+<li style="margin-top: 8px"> 获取图像域并行成像图像的正确步骤顺序是什么？缩写：A = 采集部分k空间数据；G = 生成线圈灵敏度图；R = 重建单个线圈图像；U = 展开/组合部分视野图像。
+<ol type="a" id="q_PIQUIZ_3">
+
+<li ><input type=radio name="c_PIQUIZ_3" > A — G — R — U
+</li>
+		
+<li ><input type=radio name="c_PIQUIZ_3" > G — A — U — R
+</li>
+
+<li id="correct_PIQUIZ_3"><input type=radio name="c_PIQUIZ_3" id="c_PIQUIZ_3"> G — A — R — U
+</li>
+		
+<li ><input type=radio name="c_PIQUIZ_3" >  A — G — U — R
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_PIQUIZ_3" onclick="showAnswer('PIQUIZ_3')" value="显示答案"></p>
+				
+<p class="explan" id="a_PIQUIZ_3"> 正确的顺序是生成/采集/重建/展开 (c)。
+<a href="senseasset.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+
+
+
+ 
+<!-- ################ SECTION PIQUIZ, QUIZ QUESTION  5############## -->
+
+<li style="margin-top: 8px"> 获取k空间并行成像图像的正确步骤顺序是什么？缩写：A = 采集部分k空间数据；C = 将数据组合成幅度图像；E = 估计缺失的k空间线；G = 生成单个线圈图像
+<ol type="a" id="q_PIQUIZ_4">
+
+<li ><input type=radio name="c_PIQUIZ_4" > A — C — E — G
+</li>
+		
+
+<li id="correct_PIQUIZ_4"><input type=radio name="c_PIQUIZ_4" id="c_PIQUIZ_4"> A — E — G — C
+</li>
+<li ><input type=radio name="c_PIQUIZ_4" > E — A — G — C
+</li>
+		
+<li ><input type=radio name="c_PIQUIZ_4" >  E — A — C — G
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_PIQUIZ_4" onclick="showAnswer('PIQUIZ_4')" value="显示答案"></p>
+				
+<p class="explan" id="a_PIQUIZ_4"> 正确的顺序是采集/估计/生成/组合 (b)。
+<a href="grappaarc.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION PIQUIZ, QUIZ QUESTION  6############## -->
+
+<li style="margin-top: 8px"> 关于CAIPIRINHA序列的以下哪项陈述是错误的？
+<ol type="a" id="q_PIQUIZ_5">
+<li id="correct_PIQUIZ_5"><input type=radio name="c_PIQUIZ_5" id="c_PIQUIZ_5"> 它可以归类为图像域并行成像技术。
+</li>
+		
+
+<li ><input type=radio name="c_PIQUIZ_5" > 加速因子（R）通常为4。
+</li>
+		
+<li ><input type=radio name="c_PIQUIZ_5" > 最常用于3D动态肝脏成像。
+</li>
+
+<li ><input type=radio name="c_PIQUIZ_5" >  它使用移位的k空间采样模式来减少像素混叠和重叠。
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_PIQUIZ_5" onclick="showAnswer('PIQUIZ_5')" value="显示答案"></p>
+				
+<p class="explan" id="a_PIQUIZ_5"> CAIPIRINHA显然是一种k空间（而非图像域）并行成像技术，因为它依赖于重建前的k空间数据采样和处理。
+ 
+<a href="caipirinha.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION PIQUIZ, QUIZ QUESTION  7############## -->
+
+<li style="margin-top: 8px"> 当加速因子（R）从2增加到8时，并行成像研究中的成像时间会发生什么？
+<ol type="a" id="q_PIQUIZ_6">
+<li id="correct_PIQUIZ_6"><input type=radio name="c_PIQUIZ_6" id="c_PIQUIZ_6"> 减少为原来的1/4
+</li>
+
+<li ><input type=radio name="c_PIQUIZ_6" > 减少为原来的1/2
+</li>
+		
+<li ><input type=radio name="c_PIQUIZ_6" > 减少为原来的1/√2
+</li>
+
+		
+<li ><input type=radio name="c_PIQUIZ_6" >  减少为原来的1/√2
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_PIQUIZ_6" onclick="showAnswer('PIQUIZ_6')" value="显示答案"></p>
+				
+<p class="explan" id="a_PIQUIZ_6"> 成像时间与R成反比，因此如果R变为四倍（从2到8），成像时间减少为原来的1/4<a href="noise-in-pi.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+	
+<!-- ################ SECTION PIQUIZ, QUIZ QUESTION  8############## -->
+
+<li style="margin-top: 8px"> 当加速因子（R）从2增加到8时，并行成像研究中的信噪比会发生什么？
+<ol type="a" id="q_PIQUIZ_7">
+
+<li ><input type=radio name="c_PIQUIZ_7" > 减少为原来的1/4
+</li>
+		
+
+<li id="correct_PIQUIZ_7"><input type=radio name="c_PIQUIZ_7" id="c_PIQUIZ_7"> 减少为原来的1/2
+</li>
+<li ><input type=radio name="c_PIQUIZ_7" > 减少为原来的1/√2
+</li>
+		
+<li ><input type=radio name="c_PIQUIZ_7" >  减少为原来的1/√2
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_PIQUIZ_7" onclick="showAnswer('PIQUIZ_7')" value="显示答案"></p>
+				
+<p class="explan" id="a_PIQUIZ_7"> 信噪比与√R成反比，因此如果R变为四倍（从2到8），信噪比减少为原来的√4 = 2的倒数，即1/2。 
+<a href="noise-in-pi.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION PIQUIZ, QUIZ QUESTION  9############## -->
+
+<li style="margin-top: 8px"> 关于g因子的哪项陈述是错误的？
+<ol type="a" id="q_PIQUIZ_8">
+
+<li ><input type=radio name="c_PIQUIZ_8" > 它取决于线圈的数量和位置。
+</li>
+		
+<li ><input type=radio name="c_PIQUIZ_8" > 它取决于相位编码的方向
+</li>
+
+<li ><input type=radio name="c_PIQUIZ_8" >  它随图像中的位置而变化。 
+</li>
+<li id="correct_PIQUIZ_8"><input type=radio name="c_PIQUIZ_8" id="c_PIQUIZ_8"> 典型值范围约为10到100。
+</li>
+		
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_PIQUIZ_8" onclick="showAnswer('PIQUIZ_8')" value="显示答案"></p>
+				
+<p class="explan" id="a_PIQUIZ_8"> g因子取决于1)表面线圈的数量和位置，2)线圈负载，3)成像平面，4)扫描平面内相位编码的方向，以及5)成像区域内体素的位置。对于常用的典型线圈设计，在整个成像体积中测得的g因子通常在1.0到2.0之间。
+<a href="noise-in-pi.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+<!-- ################ SECTION PIQUIZ, QUIZ QUESTION  10############## -->
+
+<li style="margin-top: 8px"> 在并行成像下采集的均质模体中心处的g因子为2.0，而靠近其边缘处为1.0。中心和外周的信噪比如何比较？
+<ol type="a" id="q_PIQUIZ_9">
+<li id="correct_PIQUIZ_9"><input type=radio name="c_PIQUIZ_9" id="c_PIQUIZ_9"> 中心信噪比是外周信噪比的一半。
+</li>
+
+<li ><input type=radio name="c_PIQUIZ_9" > 中心信噪比等于外周信噪比。
+</li>
+		
+<li ><input type=radio name="c_PIQUIZ_9" > 中心信噪比是外周信噪比的两倍。
+</li>
+
+		
+<li ><input type=radio name="c_PIQUIZ_9" >  中心信噪比是外周信噪比的四倍。
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_PIQUIZ_9" onclick="showAnswer('PIQUIZ_9')" value="显示答案"></p>
+				
+<p class="explan" id="a_PIQUIZ_9"> 信噪比与g因子成反比，因此如果g因子加倍，信噪比只有原来的一半。
+<a href="noise-in-pi.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+<!-- ################ SECTION PIQUIZ, QUIZ QUESTION  11############## -->
+
+<li style="margin-top: 8px"> 并行成像特有的伪影包括以下所有，除了
+<ol type="a" id="q_PIQUIZ_10">
+
+<li ><input type=radio name="c_PIQUIZ_10" > 线圈灵敏度伪影
+</li>
+		
+<li ><input type=radio name="c_PIQUIZ_10" > 折叠（SENSE）鬼影
+</li>
+
+<li id="correct_PIQUIZ_10"><input type=radio name="c_PIQUIZ_10" id="c_PIQUIZ_10"> 化学位移
+</li>
+		
+<li ><input type=radio name="c_PIQUIZ_10" >  空间依赖性噪声
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_PIQUIZ_10" onclick="showAnswer('PIQUIZ_10')" value="显示答案"></p>
+				
+<p class="explan" id="a_PIQUIZ_10"> 化学位移伪影不受并行成像重建过程的影响，因此不是独特的。
+<a href="artifacts-in-pi.html" target="_blank"> 链接至问答讨论</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+		
+
+
+
+
+
+
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--##################################################-->
+<!--############SCORING SECTION Needs to go at end of each subsection-->
+
+</ol><p><input type=button id="show_all_PIQUIZ" onclick="showAllAnswers('PIQUIZ')" value="显示本节所有答案"><span style="font-weight: bold" id="scoretxt_PIQUIZ"></span></p>
+<p><a href="#top">返回页首</a></p></div>
+<!--END OF SCORING SECTION-->
+
+
+
+</div>
+
+
+
+</div>

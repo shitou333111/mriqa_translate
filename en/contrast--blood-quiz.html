@@ -1,0 +1,1774 @@
+<div id="content"><div id="wsite-content" class="wsite-elements wsite-not-footer">
+	<div><div id="703122346609075027" align="left" style="width: 100%; overflow-y: hidden;" class="wcustomhtml"><!--############NEW MASTER HEADER AND INDEX##############-->
+<!--THIS IS THE MASTER HEADER SECTION FOR QUIZZES ON EACH SUPER TAB-->
+<!-- Each super tab in the regular Q&A part of the website corresponds to  a set of review QUIZZES on a single web page. This single web page must begin with the html script included below (which must be appropriately renamed). -->
+
+<!--After the title there is an index that identifies ~5 subsections each with 10-20 quiz questions. The html script for each section of questions is in a separate document titled 20 EMPTY QUESTIONS.  Instructions for filling these out are provided in that document. -->
+
+<html>
+<head><script src="gdpr/gdprscript6f19.js?buildTime=1774025472"></script>
+<title>MR Contrast Agents and Blood</title>
+<!--All Yellow highlighted items need to be replaced-->
+<meta name="keywords" content="radiology physics, review questions, MRI physics">
+<meta name="description" content="Collection of review quiz questions from MRIquestions.com">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="mr_styles.html">
+<style>
+.explan {
+	display: none;
+	font-style: italic;
+	margin-top: 2px;
+	margin-bottom: 6px;
+}
+</style>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','../www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-52206512-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+<script>
+function showAnswer(q_string) {
+	var button = document.getElementById('show_'+q_string);
+	var shown = button.value == "Hide Answer";
+	if(!shown) {
+		document.getElementById('a_'+q_string).style.display = "block";
+		
+		document.getElementById('correct_'+q_string).style.fontWeight = "bold";
+		if(document.getElementById('c_'+q_string).checked) {
+			document.getElementById('correct_'+q_string).style.color = "Green";
+		} else {
+			document.getElementById('correct_'+q_string).style.color = "Red";
+		}
+		
+		button.value = "Hide Answer";
+	} else {
+		document.getElementById('a_'+q_string).style.display = "none";
+		button.value = "Show Answer";
+	}
+}
+
+function showAllAnswers(topic) {
+	var button = document.getElementById('show_all_'+topic);
+	var shown = button.value == "Hide All Answers for Section";
+	
+	var i = 0;
+	var correct = 0;
+	var ans_el;
+	while((ans_el=document.getElementById('a_'+topic+'_'+i)) != null) {
+		if(document.getElementById('c_'+topic+'_'+i).checked) {
+			correct++;
+		}
+		if(!shown) {
+			ans_el.style.display = "block";
+			document.getElementById('correct_'+topic+'_'+i).style.fontWeight = "bold";
+			if(document.getElementById('c_'+topic+'_'+i).checked) {
+				document.getElementById('correct_'+topic+'_'+i).style.color = "Green";
+			} else {
+				document.getElementById('correct_'+topic+'_'+i).style.color = "Red";
+			}
+		} else {
+			ans_el.style.display = "none";
+		}
+		i++;
+	}
+	
+	var scoretext = document.getElementById('scoretxt_'+topic);
+	scoretext.innerHTML = 'You answered '+correct+'/'+i+' correct, for a score of '+Math.round(correct/i*100)+'%';
+	
+	if(!shown) {
+		button.value = "Hide All Answers for Section";
+	} else {
+		button.value = "Show All Answers for Section";
+	}
+}
+
+function scoreAnswers(topic) {
+	var button = document.getElementById('score_'+topic);
+	
+	var i = 0;
+	var correct = 0;
+	var ans_el;
+	while((ans_el=document.getElementById('a_'+topic+'_'+i)) != null) {
+		if(document.getElementById('c_'+topic+'_'+i).checked) {
+			correct++;
+		}
+		i++;
+	}
+	
+	var scoretext = document.getElementById('scoretxt_'+topic);
+	scoretext.innerHTML = 'You answered '+correct+'/'+i+' correct, for a score of '+Math.round(correct/i*100)+'%';
+}
+
+function changeMode(button_value) {
+	if(button_value != 0) {
+		window.location = "review/mri_b3526.html?mode="+button_value;
+	}
+}
+</script>
+<style type="text/css">
+.button_unchecked {
+	border: 2px outset #3498db;
+	background: #3498db;
+	background-image: -webkit-linear-gradient(top, #3498db, #2980b9);
+	background-image: -moz-linear-gradient(top, #3498db, #2980b9);
+	background-image: -ms-linear-gradient(top, #3498db, #2980b9);
+	background-image: -o-linear-gradient(top, #3498db, #2980b9);
+	background-image: linear-gradient(to bottom, #3498db, #2980b9);
+	padding: 4px;
+	
+	font-size: 120%;
+	font-weight: bold;
+}
+.button_checked {
+	border: 2px inset #3498db;
+	background: #3498db;
+	background-image: -webkit-linear-gradient(top, #3498db, #2980b9);
+	background-image: -moz-linear-gradient(top, #3498db, #2980b9);
+	background-image: -ms-linear-gradient(top, #3498db, #2980b9);
+	background-image: -o-linear-gradient(top, #3498db, #2980b9);
+	background-image: linear-gradient(to bottom, #3498db, #2980b9);
+	padding: 4px;
+	
+	font-size: 120%;
+	font-weight: bold;
+}
+</style>
+</head>
+
+<!-- END OF MASTER HEADER -->
+
+<!--SECOND SECTION: Lists Subsections for Questions below-->
+<body style="background-color:white">
+<div class="main_div">
+<h1 style="color:black";><a name="top"></a>MR Contrast Agents and Blood Quiz</h1>
+<div style="font-size: 140%; font-family: sans-serif">
+<ul>
+	<li><a href="#0">MR Contrast Agents: Physics and Clinical</a></li>
+	<li><a href="#1">MR Contrast Agents: Safety </a></li>
+              <li><a href="#2">Paramagnetic Blood Products </a></li>
+	
+</ul>
+
+<!-- Note the numbering of these subsections as they have a href values of #0, #1, #2, etc. These numbers are needed so that clicking on the index file takes you to the proper place in the web page identified on the 20 BLANK QUESTIONS script.-->
+
+
+
+</div>
+
+
+</div>
+
+
+
+</div>
+
+<div><div id="731770455541229677" align="left" style="width: 100%; overflow-y: hidden;" class="wcustomhtml"><!-- ###############NEW QUIZ SUBSECTION ##################-->
+
+<hr style="1px solid black">
+<!-- Creates optional line above new Quiz Subsection Title ---->
+
+<h1 style="color:black";><a name="0"></a>MR Contrast: Physics & Clinical</h1>
+
+<!-- The Section Name and its corresponding number (here 0) which has an href in the index must be changed/filled in.  Note that the first section is identified as “0” here only;  and the second section is denoted “2”, etc. 
+
+This is confusing because subsequently it is denoted as Section 1 and reference to all questions in this section begin with a 1.  However, the first question of Section 1 is called question 0, presumably to assist in scoring.
+
+Thus, the first question of Section 1 is denoted as q_1_0 and its second question is denoted q_1_1.	
+
+When a second section of Questions is added, this is called Section 2 with first and second questions denoted q_2_0 and q_2_1. 
+
+Each section has counting variables corresponding to each question. So the counting variables  are denoted c_1_0 for the Section 1/first question, while c_2_1 counts for Section 2/second question. -->
+
+<!-- FOR THE PURPOSES OF THIS DOCUMENT WE WILL CONSIDER ALL QUESTIONS TO REFER TO SECTION GDCLINQZ and are numbered consecutively. THE WORD DOCUMENT CAN THEN BE PUT INTO PROPER FORM BY “SEARCH AND REPLACE GDCLINQZ BY THE APPROPRIATE SECTION NUMBER”-->
+
+
+<!-- ################ SECTION M, QUIZ QUESTION  1############## -->
+
+<ol><li style="margin-top: 8px"> The element gadolinium is part of which periodic table group?
+<ol type="a" id="q_GDCLINQZ_0">
+<li id="correct_GDCLINQZ_0"><input type=radio name="c_GDCLINQZ_0" id="c_GDCLINQZ_0"> Lanthanides
+</li>
+		
+
+<li ><input type=radio name="c_GDCLINQZ_0" > Actinides
+</li>
+		
+<li ><input type=radio name="c_GDCLINQZ_0" > Alkaline-earth metals
+</li>
+
+<li ><input type=radio name="c_GDCLINQZ_0" > Transition metals
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_GDCLINQZ_0" onclick="showAnswer('GDCLINQZ_0')" value="Show Answer"></p>
+				
+<p class="explan" id="a_GDCLINQZ_0"> Gadolinium, element number 64, is located in the exact middle of the lanthanide series of rare-earth elements.
+<a href="why-gadolinium.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+
+<!-- ################ SECTION GDCLINQZ, QUIZ QUESTION  2############## -->
+
+<li style="margin-top: 8px"> The paramagnetic properties of gadolinium that make it suitable for a contrast agent derive from its
+<ol type="a" id="q_GDCLINQZ_1">
+
+<li ><input type=radio name="c_GDCLINQZ_1" > Odd number of protons 
+</li>
+		
+<li ><input type=radio name="c_GDCLINQZ_1" > Odd number of protons and neutrons together
+</li>
+
+<li id="correct_GDCLINQZ_1"><input type=radio name="c_GDCLINQZ_1" id="c_GDCLINQZ_1"> Unpaired inner shell electrons
+</li>
+		
+<li ><input type=radio name="c_GDCLINQZ_1" >  Paired electrons in bonding orbitals
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_GDCLINQZ_1" onclick="showAnswer('GDCLINQZ_1')" value="Show Answer"></p>
+				
+<p class="explan" id="a_GDCLINQZ_1"> Although all elements with odd numbers of nucleons possess nuclear paramagnetism, (responsible for the NMR phenomenon), this is extremely weak except in the immediate vicinity of the nucleus. Because electrons have the same spin (½) but a much smaller size than protons, their gyromagnetic ratios are 657 times larger, giving them powerful magnetic moments. It is unpaired inner shell electrons that give gadolinium its paramagnetic properties.
+<a href="why-gadolinium.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION GDCLINQZ, QUIZ QUESTION  3############## -->
+
+<li style="margin-top: 8px"> In its 4f shell, gadolinium has
+<ol type="a" id="q_GDCLINQZ_2">
+
+<li ><input type=radio name="c_GDCLINQZ_2" > 4 unpaired electrons
+</li>
+		<li id="correct_GDCLINQZ_2"><input type=radio name="c_GDCLINQZ_2" id="c_GDCLINQZ_2"> 7 unpaired electrons
+</li>
+
+<li ><input type=radio name="c_GDCLINQZ_2" > 4 paired and 3 unpaired electrons
+</li>
+
+		
+<li ><input type=radio name="c_GDCLINQZ_2" >  7 paired electrons
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_GDCLINQZ_2" onclick="showAnswer('GDCLINQZ_2')" value="Show Answer"></p>
+				
+<p class="explan" id="a_GDCLINQZ_2"> The 4f electron shell has seven available positions, each of which may potentially be occupied by a lone electron or an electron pair. According to Hund’s rule of maximum multiplicity, electrons will occupy each position singly before filling them in pairs. Gadolinium has seven electrons available to fill the 4f shell, and they are all unpaired.
+
+<a href="why-gadolinium.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION GDCLINQZ, QUIZ QUESTION  4############## -->
+<li style="margin-top: 8px"> How many of gadolinium’s unpaired 4f shell electrons participate in bonding/chelation when made into a contrast agent?
+<ol type="a" id="q_GDCLINQZ_3">
+<li id="correct_GDCLINQZ_3"><input type=radio name="c_GDCLINQZ_3" id="c_GDCLINQZ_3"> 0 </li>
+		
+
+<li ><input type=radio name="c_GDCLINQZ_3" > 1</li>
+		
+<li ><input type=radio name="c_GDCLINQZ_3" > 4 </li>
+
+<li ><input type=radio name="c_GDCLINQZ_3" >  7 </li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_GDCLINQZ_3" onclick="showAnswer('GDCLINQZ_3')" value="Show Answer"></p>
+				
+<p class="explan" id="a_GDCLINQZ_3"> None of gadolinium’s 4f shell electrons are directly involved in bonding, thus retaining its powerful paramagnetic properties when formulated as a contrast agent.
+
+<a href="why-gadolinium.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+
+
+
+ 
+<!-- ################ SECTION GDCLINQZ, QUIZ QUESTION  5############## -->
+
+<li style="margin-top: 8px"> If gadolinium is chelated with a very large molecule (like albumin), what happens to its T1 relaxation time?
+<ol type="a" id="q_GDCLINQZ_4">
+
+<li ><input type=radio name="c_GDCLINQZ_4" > It remains unchanged
+</li>
+		
+
+<li id="correct_GDCLINQZ_4"><input type=radio name="c_GDCLINQZ_4" id="c_GDCLINQZ_4"> It shortens
+</li>
+<li ><input type=radio name="c_GDCLINQZ_4" > It lengthens
+</li>
+		
+<li ><input type=radio name="c_GDCLINQZ_4" >  It becomes shorter than T2
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_GDCLINQZ_4" onclick="showAnswer('GDCLINQZ_4')" value="Show Answer"></p>
+				
+<p class="explan" id="a_GDCLINQZ_4"> Smaller aqueous contrast agents (like Gd-DTPA) tumble too quickly to be highly efficient at T1 relaxation. If the contrast agent attaches to a very large molecule (such as albumin), its motion slows to a range much closer to the Larmor frequency and its T1 relaxation time shortens dramatically. Note that choice (d) is impossible, as T1 is always greater than or equal to T2.
+<a href="paramagnetic-relaxation.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION GDCLINQZ, QUIZ QUESTION  6############## -->
+
+<li style="margin-top: 8px"> Which of the following statements about inner sphere and outer sphere relaxation effects is false?
+<ol type="a" id="q_GDCLINQZ_5">
+
+<li ><input type=radio name="c_GDCLINQZ_5" > On a molecule-by-molecule basis, inner sphere relaxation is much more powerful than outer sphere relaxation.
+</li>
+		
+<li ><input type=radio name="c_GDCLINQZ_5" > Inner sphere relaxation requires very close approach of a water molecules to the gadolinium metallic center.
+</li>
+<li ><input type=radio name="c_GDCLINQZ_5" >  Although weaker on a per molecule basis, outer sphere effects are important because they involve larger numbers of water molecules.
+</li>
+
+<li id="correct_GDCLINQZ_5"><input type=radio name="c_GDCLINQZ_5" id="c_GDCLINQZ_5"> Most gadolinium contrast agents have multiple coordination sites available for inner sphere relaxation to take place.
+</li>
+		
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_GDCLINQZ_5" onclick="showAnswer('GDCLINQZ_5')" value="Show Answer"></p>
+				
+<p class="explan" id="a_GDCLINQZ_5"> A consequence of its electron structure is that the Gd<sup>+3</sup> ion typically exhibits nine coordination sites for bonding and chemical interactions. In all MR contrast agents now commercially available, a ligand group occupies eight of these sites while the ninth is available for transient bonding by a solvent water molecule for an inner sphere effect to occur. So choice (d) is false.
+<a href="paramagnetic-relaxation.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION GDCLINQZ, QUIZ QUESTION  7############## -->
+
+<li style="margin-top: 8px"> The T1- and T2-relaxivities of a contrast agent are given in what units?
+<ol type="a" id="q_GDCLINQZ_6">
+<li id="correct_GDCLINQZ_6"><input type=radio name="c_GDCLINQZ_6" id="c_GDCLINQZ_6"> L/mmol-s
+</li>
+		
+
+<li ><input type=radio name="c_GDCLINQZ_6" > mmol/s
+</li>
+		
+<li ><input type=radio name="c_GDCLINQZ_6" > L/mmol
+</li>
+
+<li ><input type=radio name="c_GDCLINQZ_6" >  unitless </li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_GDCLINQZ_6" onclick="showAnswer('GDCLINQZ_6')" value="Show Answer"></p>
+				
+<p class="explan" id="a_GDCLINQZ_6"> The relaxivity of an MR contrast agent reflects how the relaxation rates of a solution change as a function of concentration [C]. Since a contrast agent may affect the two relaxation rates (1/T1 and 1/T2) individually, there are two corresponding relaxivities, denoted r<sub>1</sub> and r<sub>2</sub>.  By definition, 1/ΔT1 = r<sub>1</sub> [C] and 1/ΔT2 = r<sub>2</sub> [C]. Since ΔT1 and ΔT2 are given in seconds and [C] is measured in millimoles per liter, r<sub>1</sub> and r<sub>2</sub> have units of L/mmol-s.
+<a href="what-is-relaxivity.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+	
+<!-- ################ SECTION GDCLINQZ, QUIZ QUESTION  8############## -->
+
+<li style="margin-top: 8px"> In which of the following scenarios would the T2-shortening effects of gadolinium not be expected to be seen?
+<ol type="a" id="q_GDCLINQZ_7">
+
+<li ><input type=radio name="c_GDCLINQZ_7" > MR of the bladder
+</li>
+		
+<li ><input type=radio name="c_GDCLINQZ_7" > MR arthography
+</li>
+
+<li id="correct_GDCLINQZ_7"><input type=radio name="c_GDCLINQZ_7" id="c_GDCLINQZ_7"> Late enhancement phase cardiac MRI </li>
+		
+<li ><input type=radio name="c_GDCLINQZ_7" >  MR venography
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_GDCLINQZ_7" onclick="showAnswer('GDCLINQZ_7')" value="Show Answer"></p>
+				
+<p class="explan" id="a_GDCLINQZ_7"> In routine MR imaging, the mild T2-shortening effects of low doses of gadolinium (which decrease signal intensity) are usually overwhelmed by the more dominant T1-shortening effects (which increase signal intensity) and are therefore not normally observed. When high concentrations of contrast are present, low-T2 effects may predominate. This is seen routinely in MRI of the urinary tract, occasionally in MR arthrograms and venograms (where high concentrations of gadolinium are injected directly into joints or vessels); and in the "first pass" of gadolinium contrast through the vascular system on dynamic contrast enhanced (DCE) studies or time-resolved MR angiography. It would not be seen in late phase imaging of the myocardium.
+<a href="does-gd-affect-t2.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION GDCLINQZ, QUIZ QUESTION  9############## -->
+
+<li style="margin-top: 8px"> Concerning gadolinium enhancement as a function of field strength, which statement is true?
+<ol type="a" id="q_GDCLINQZ_8">
+
+<li ><input type=radio name="c_GDCLINQZ_8" > All currently used contrast agents demonstrate a slight increase in T1-relaxivity with increasing field strength.
+</li>
+		
+<li ><input type=radio name="c_GDCLINQZ_8" > Contrast agents with lower T1 relaxivities (r<sub>1</sub>) values produce stronger  enhancement.
+</li>
+
+<li id="correct_GDCLINQZ_8"><input type=radio name="c_GDCLINQZ_8" id="c_GDCLINQZ_8"> The same dose of contrast will typically generate more enhancement at 1.5T than 0.5T.
+</li>
+		
+<li ><input type=radio name="c_GDCLINQZ_8" >  Lower doses of contrast agents are needed at low-field compared to high-field.
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_GDCLINQZ_8" onclick="showAnswer('GDCLINQZ_8')" value="Show Answer"></p>
+				
+<p class="explan" id="a_GDCLINQZ_8">Only (c) is true. Because tissue T1 values increase while contrast agent relaxivities are about the same or decrease only slightly with increasing field strength, the net effect is an increase in relative contrast enhancement as field strength increases<a href="gd--field-strength.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+<!-- ################ SECTION GDCLINQZ, QUIZ QUESTION  10############## -->
+
+<li style="margin-top: 8px"> Why do magnetization-transfer preparation pulses increase the visibility of gadolinium enhancement?
+<ol type="a" id="q_GDCLINQZ_9">
+
+<li ><input type=radio name="c_GDCLINQZ_9" > They do not. This is a myth.
+</li>
+		
+
+<li id="correct_GDCLINQZ_9"><input type=radio name="c_GDCLINQZ_9" id="c_GDCLINQZ_9"> They suppress the signal from background tissues.
+</li>
+<li ><input type=radio name="c_GDCLINQZ_9" > They shorten tissue T1.
+</li>
+		
+<li ><input type=radio name="c_GDCLINQZ_9" >  They interfere with gadolinium-water inner sphere relaxation.
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_GDCLINQZ_9" onclick="showAnswer('GDCLINQZ_9')" value="Show Answer"></p>
+				
+<p class="explan" id="a_GDCLINQZ_9"> Because gadolinium (Gd) enhancement is caused by a water-Gd ion interaction (not macromolecular cross-relaxation), MT pulses suppress the signal from background tissues and render Gd-enhanced areas more conspicuous.
+<a href="triple-dose-and-mt.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+<!-- ################ SECTION GDCLINQZ, QUIZ QUESTION  11############## -->
+
+<li style="margin-top: 8px"> The first commercially marketed gadolinium-based MR contrast agent was
+<ol type="a" id="q_GDCLINQZ_10">
+
+<li ><input type=radio name="c_GDCLINQZ_10" > Dotarem®
+</li>
+		
+
+<li id="correct_GDCLINQZ_10"><input type=radio name="c_GDCLINQZ_10" id="c_GDCLINQZ_10"> Magnevist®
+</li>
+<li ><input type=radio name="c_GDCLINQZ_10" > MultiHance®
+</li>
+		
+<li ><input type=radio name="c_GDCLINQZ_10" >  Omniscan®
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_GDCLINQZ_10" onclick="showAnswer('GDCLINQZ_10')" value="Show Answer"></p>
+				
+<p class="explan" id="a_GDCLINQZ_10"> Magnevist®, marketed by Berlex Imaging (and subsequently acquired by Bayer), first received FDA approval in 1988.
+<a href="so-many-gd-agents.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+		
+
+
+
+
+
+<!-- ################ SECTION GDCLINQZ, QUIZ QUESTION  12############## -->
+
+<li style="margin-top: 8px"> Which of the following agents is macrocyclic?
+<ol type="a" id="q_GDCLINQZ_11">
+<li id="correct_GDCLINQZ_11"><input type=radio name="c_GDCLINQZ_11" id="c_GDCLINQZ_11"> Dotarem®
+</li>
+
+<li ><input type=radio name="c_GDCLINQZ_11" > Magnevist®
+</li>
+		
+<li ><input type=radio name="c_GDCLINQZ_11" > MultiHance®
+</li>
+
+		
+<li ><input type=radio name="c_GDCLINQZ_11" >  Omniscan®
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_GDCLINQZ_11" onclick="showAnswer('GDCLINQZ_11')" value="Show Answer"></p>
+				
+<p class="explan" id="a_GDCLINQZ_11"> Dotarem®, along with ProHance® and Gadavist®, are all macrocyclic. The others are linear in structure.
+<a href="so-many-gd-agents.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+<!-- ################ SECTION GDCLINQZ, QUIZ QUESTION  13############## -->
+
+<li style="margin-top: 8px"> Concerning gadoxetic acid constrast (Eovist®/Primovist®), which statement is false?
+<ol type="a" id="q_GDCLINQZ_12">
+
+<li ><input type=radio name="c_GDCLINQZ_12" > Transient dyspnea after injection occurs in about 10% of patients.
+</li>
+		
+
+<li id="correct_GDCLINQZ_12"><input type=radio name="c_GDCLINQZ_12" id="c_GDCLINQZ_12"> At least 90% of the administered dose is taken up by hepatocytes.
+</li>
+<li ><input type=radio name="c_GDCLINQZ_12" > Elimination is by both biliary excretion and glomerular filtration.
+</li>
+		
+<li ><input type=radio name="c_GDCLINQZ_12" >  Hepatic uptake and enhancement is decreased when bilirubin levels are elevated.
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_GDCLINQZ_12" onclick="showAnswer('GDCLINQZ_12')" value="Show Answer"></p>
+				
+<p class="explan" id="a_GDCLINQZ_12"> Only about half of the administered dose is taken up by hepatocytes. The remainder behaves as other nonspecific extracelleular gadolinium contrast agents.
+<a href="gd-liver-agents-eovist.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION GDCLINQZ, QUIZ QUESTION  14############## -->
+
+<li style="margin-top: 8px"> Although no longer in production, what was unique about the liver contrast agent Teslascan™ sold in the 1990s and early 2000s?
+<ol type="a" id="q_GDCLINQZ_13">
+<li id="correct_GDCLINQZ_13"><input type=radio name="c_GDCLINQZ_13" id="c_GDCLINQZ_13"> It was based on manganese.
+</li>
+
+<li ><input type=radio name="c_GDCLINQZ_13" > It was based on iron.
+</li>
+		
+<li ><input type=radio name="c_GDCLINQZ_13" > It was based on copper.
+</li>
+
+		
+<li ><input type=radio name="c_GDCLINQZ_13" >  It was based on magnesium.
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_GDCLINQZ_13" onclick="showAnswer('GDCLINQZ_13')" value="Show Answer"></p>
+				
+<p class="explan" id="a_GDCLINQZ_13"> To date the only manganese-based contrast agent ever approved for worldwide sales and clinical use was mangafodipir trisodium (Mn-DPDP), marketed in the 1990's under the tradename Teslascan™. Due to low sales, poor clinical performance, and concerns over toxicity, Teslascan™ was withdrawn from the US market in 2003 and from the EU in 2010.
+
+<a href="mn-agents-teslascan.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION GDCLINQZ, QUIZ QUESTION  15############## -->
+
+<li style="margin-top: 8px"> And speaking of MR contrast agents no longer in production, what was unique about Ablavar®?
+<ol type="a" id="q_GDCLINQZ_14">
+
+<li ><input type=radio name="c_GDCLINQZ_14" > It was based on manganese.
+</li>
+		
+<li ><input type=radio name="c_GDCLINQZ_14" > It was based on iron oxide.
+</li>
+
+<li id="correct_GDCLINQZ_14"><input type=radio name="c_GDCLINQZ_14" id="c_GDCLINQZ_14"> It attached to albumin and served as a blood pool agent.
+</li>
+		
+<li ><input type=radio name="c_GDCLINQZ_14" >  It was taken up by the reticuloendothelial system.
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_GDCLINQZ_14" onclick="showAnswer('GDCLINQZ_14')" value="Show Answer"></p>
+				
+<p class="explan" id="a_GDCLINQZ_14"> Withdrawn as a product in 2017 by its manufacturer due to poor sales, Ablavar® had been designed specifically for vascular imaging. The drug underwent reversible bonding to plasma proteins (principally albumin) when injected into the blood, allowing it to be confined intravascularly for several hours.
+<a href="blood-pool-ablavar.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+<!-- ################ SECTION GDCLINQZ, QUIZ QUESTION 16############## -->
+
+<li style="margin-top: 8px"> Concerning superparamagnetic iron oxides (SPIOs) and <u>ultra-small</u> superparamagnetic iron oxides (US-SPIOs), which statement is false?
+
+<ol type="a" id="q_GDCLINQZ_15">
+
+<li ><input type=radio name="c_GDCLINQZ_15" > US-SPIOs may be injected intravascularly, intradermally, or subcutaneously.
+</li>
+		
+
+<li id="correct_GDCLINQZ_15"><input type=radio name="c_GDCLINQZ_15" id="c_GDCLINQZ_15"> The larger SPIOs are especially useful for lymph node imaging.
+</li>
+<li ><input type=radio name="c_GDCLINQZ_15" > Their T1 and T2 relaxivities are 10-20 x greater than gadolinium contrast agents.
+</li>
+		
+<li ><input type=radio name="c_GDCLINQZ_15" >  Their accumulation in the liver, spleen, and bone marrow can be mistaken for hemochromatosis.
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_GDCLINQZ_15" onclick="showAnswer('GDCLINQZ_15')" value="Show Answer"></p>
+				
+<p class="explan" id="a_GDCLINQZ_15"> Option (b) is false. The largest of these SPIO nanoparticles (50-100 nm) undergo rapid uptake by the liver. Smaller US-SPIO particles (5-50 nm), remain in the circulation and are cleared by lymphatics, draining into lymph nodes where they are captured and retained by macrophages/histiocytes (and potentially other sinus-lining endothelial cells).
+
+<a href="lymph-node-agents.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION GDCLINQZ, QUIZ QUESTION  17############## -->
+
+<li style="margin-top: 8px"> Concerning ferumoxytol (Feraheme®/Rienso®) which statement is false?
+<ol type="a" id="q_GDCLINQZ_16">
+<li id="correct_GDCLINQZ_16"><input type=radio name="c_GDCLINQZ_16" id="c_GDCLINQZ_16"> It is now sold and marketed worldwide as an MR contrast agent.
+</li>
+
+<li ><input type=radio name="c_GDCLINQZ_16" > It has a long intravascular half-life after intravenous injection, behaving as a blood pool agent.
+</li>
+		
+<li ><input type=radio name="c_GDCLINQZ_16" > It reduces both T1 and T2 relaxation times of the tissues wherein it accumulates.
+</li>
+
+		
+<li ><input type=radio name="c_GDCLINQZ_16" >  It must be given diluted and by slow intravenous injection.
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_GDCLINQZ_16" onclick="showAnswer('GDCLINQZ_16')" value="Show Answer"></p>
+				
+<p class="explan" id="a_GDCLINQZ_16"> Although ferumoxytol was originally developed as an MR contrast agent, it was instead marketed and approved for intravenous treatment of iron-deficiency anemia associated with chronic renal disease. It has not yet received indications for use as an MR contrast agent. It’s use in this form is considered “off label”.
+<a href="ferumoxytol.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+<!-- ################ SECTION GDCLINQZ, QUIZ QUESTION  18############## -->
+
+<li style="margin-top: 8px"> Concerning bowel contrast materials, a large volume, water-based solution like VoLumen® would be classified as what type of contrast agent?
+<ol type="a" id="q_GDCLINQZ_17">
+
+<li ><input type=radio name="c_GDCLINQZ_17" > Positive 
+</li>
+		
+<li ><input type=radio name="c_GDCLINQZ_17" > Negative 
+</li>
+
+<li id="correct_GDCLINQZ_17"><input type=radio name="c_GDCLINQZ_17" id="c_GDCLINQZ_17"> Biphasic
+</li>
+		
+<li ><input type=radio name="c_GDCLINQZ_17" >  Neutral
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_GDCLINQZ_17" onclick="showAnswer('GDCLINQZ_17')" value="Show Answer"></p>
+				
+<p class="explan" id="a_GDCLINQZ_17"> Biphasic contrast agents are all water-based, appearing dark on T1-weighted and bright on T2-weighted images. Biphasic enteric contrast agents like VoLumen® contain nonabsorbable additives (resins, polyethylene glycol, mannitol, sorbitol, or other sugar alcohols) that help draw in and retain intraluminal water. 
+<a href="bowel-contrast-agents.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+		
+
+<!-- ################ SECTION GDCLINQZ, QUIZ QUESTION  19############## -->
+
+<li style="margin-top: 8px"> Concerning bowel contrast materials, a suspension of magnetite-based particles like GastroMARK® (ferumoxsil) would be classified as what type of contrast agent?
+<ol type="a" id="q_GDCLINQZ_18">
+
+<li ><input type=radio name="c_GDCLINQZ_18" > Positive 
+</li>
+		
+
+<li id="correct_GDCLINQZ_18"><input type=radio name="c_GDCLINQZ_18" id="c_GDCLINQZ_18"> Negative 
+</li>
+<li ><input type=radio name="c_GDCLINQZ_18" > Biphasic
+</li>
+		
+<li ><input type=radio name="c_GDCLINQZ_18" >  Neutral
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_GDCLINQZ_18" onclick="showAnswer('GDCLINQZ_18')" value="Show Answer"></p>
+				
+<p class="explan" id="a_GDCLINQZ_18"> Negative contrast agents are designed to make the intraluminal contents dark, especially on T2-weighted images. GastroMARK® causes a remarkable drop in signal within the bowel lumen on both T1 and T2-weighted images. The darkening on T1-weighted images allows visualization of mucosal enhancement. 
+
+<a href="bowel-contrast-agents.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--##################################################-->
+<!--############SCORING SECTION Needs to go at end of each subsection-->
+
+</ol><p><input type=button id="show_all_GDCLINQZ" onclick="showAllAnswers('GDCLINQZ')" value="Show All Answers for Section"><span style="font-weight: bold" id="scoretxt_GDCLINQZ"></span></p>
+<p><a href="#top">Back to top of page</a></p></div>
+<!--END OF SCORING SECTION-->
+
+
+
+</div>
+
+
+
+</div>
+
+<div><div id="473599237268766543" align="left" style="width: 100%; overflow-y: hidden;" class="wcustomhtml"><!-- ###############NEW QUIZ SUBSECTION ##################-->
+
+<hr style="1px solid black">
+<!-- Creates optional line above new Quiz Subsection Title ---->
+
+<h1 style="color:black";><a name="1"></a>MR Contrast Agents: Safety</h1>
+
+<!-- The Section Name and its corresponding number (here 0) which has an href in the index must be changed/filled in.  Note that the first section is identified as “0” here only;  and the second section is denoted “2”, etc. 
+
+This is confusing because subsequently it is denoted as Section 1 and reference to all questions in this section begin with a 1.  However, the first question of Section 1 is called question 0, presumably to assist in scoring.
+
+Thus, the first question of Section 1 is denoted as q_1_0 and its second question is denoted q_1_1.	
+
+When a second section of Questions is added, this is called Section 2 with first and second questions denoted q_2_0 and q_2_1. 
+
+Each section has counting variables corresponding to each question. So the counting variables  are denoted c_1_0 for the Section 1/first question, while c_2_1 counts for Section 2/second question. -->
+
+<!-- FOR THE PURPOSES OF THIS DOCUMENT WE WILL CONSIDER ALL QUESTIONS TO REFER TO SECTION GDSAFEQZ and are numbered consecutively. THE WORD DOCUMENT CAN THEN BE PUT INTO PROPER FORM BY “SEARCH AND REPLACE GDSAFEQZ BY THE APPROPRIATE SECTION NUMBER”-->
+
+
+<!-- ################ SECTION M, QUIZ QUESTION  1############## -->
+
+<ol><li style="margin-top: 8px"> Compared to non-ionic iodine-based contrast agents, the frequency of acute adverse reactions to gadolinium-based contrast agents is
+<ol type="a" id="q_GDSAFEQZ_0">
+
+<li ><input type=radio name="c_GDSAFEQZ_0" > About the same
+</li>
+		
+
+<li id="correct_GDSAFEQZ_0"><input type=radio name="c_GDSAFEQZ_0" id="c_GDSAFEQZ_0"> Slightly less
+</li>
+<li ><input type=radio name="c_GDSAFEQZ_0" > Slightly more
+</li>
+		
+<li ><input type=radio name="c_GDSAFEQZ_0" > Much more
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_GDSAFEQZ_0" onclick="showAnswer('GDSAFEQZ_0')" value="Show Answer"></p>
+				
+<p class="explan" id="a_GDSAFEQZ_0"> Compared to many other drugs gadolinium contrast agents possess a very low incidence (<2.5%) of acute adverse reactions, mostly minor. Such rates are not too much higher than those occurring during placebo injection of saline and are about one-third as common as reaction rates recorded with nonionic iodine-based contrast media.
+<a href="gadolinium-safety.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+
+<!-- ################ SECTION GDSAFEQZ, QUIZ QUESTION  2############## -->
+
+<li style="margin-top: 8px"> Considering gadolinium-based contrast agents as a whole, what is the approximate rate of <u>severe</u> allergic reaction (e.g., facial edema, bronchospasm, hypotension, arrhythmias, widespread uticaria) expected?
+<ol type="a" id="q_GDSAFEQZ_1">
+
+<li ><input type=radio name="c_GDSAFEQZ_1" > 1 in 500 patients
+</li>
+		
+
+<li id="correct_GDSAFEQZ_1"><input type=radio name="c_GDSAFEQZ_1" id="c_GDSAFEQZ_1"> 1 in 5000 patients
+</li>
+<li ><input type=radio name="c_GDSAFEQZ_1" > 1 in 50,000 patients
+</li>
+		
+<li ><input type=radio name="c_GDSAFEQZ_1" >  1 in 500,000 patients
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_GDSAFEQZ_1" onclick="showAnswer('GDSAFEQZ_1')" value="Show Answer"></p>
+				
+<p class="explan" id="a_GDSAFEQZ_1"> Moderately severe hypersensitivity reactions (including bronchospasm, laryngospasm, facial edema, tachycardia, arrhythmias, or widespread urticaria) occur in about 1 in 5000 cases.
+<a href="gadolinium-safety.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION GDSAFEQZ, QUIZ QUESTION  3############## -->
+
+<li style="margin-top: 8px"> Considering gadolinium-based contrast agents as a whole, what is the approximate risk of death from a severe allergic reaction?
+<ol type="a" id="q_GDSAFEQZ_2">
+
+<li ><input type=radio name="c_GDSAFEQZ_2" > 1 in 4,000 patients
+</li>
+		
+<li ><input type=radio name="c_GDSAFEQZ_2" > 1 in 40,000 patients
+</li>
+
+<li id="correct_GDSAFEQZ_2"><input type=radio name="c_GDSAFEQZ_2" id="c_GDSAFEQZ_2"> 1 in 400,000 patients
+</li>
+		
+<li ><input type=radio name="c_GDSAFEQZ_2" >  1 in 4,000,000 patients
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_GDSAFEQZ_2" onclick="showAnswer('GDSAFEQZ_2')" value="Show Answer"></p>
+				
+<p class="explan" id="a_GDSAFEQZ_2"> Worldwide, a number of severe anaphylactoid reactions to gadolinium-based MR contrast agents, including death, have been reported. The incidence of severe reactions is about 1 in 20,000 and the risk of death about 1 in 400,000. 
+<a href="gadolinium-safety.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION GDSAFEQZ, QUIZ QUESTION  4############## -->
+<li style="margin-top: 8px"> Which one of the following rare reactions to gadolinium has <u>not</u> been reported?
+<ol type="a" id="q_GDSAFEQZ_3">
+<li id="correct_GDSAFEQZ_3"><input type=radio name="c_GDSAFEQZ_3" id="c_GDSAFEQZ_3"> Rhabdomyolysis
+</li>
+
+<li ><input type=radio name="c_GDSAFEQZ_3" > Pancreatitis
+</li>
+		
+<li ><input type=radio name="c_GDSAFEQZ_3" > Encephalopathy
+</li>
+
+		
+<li ><input type=radio name="c_GDSAFEQZ_3" >  Acute renal failure
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_GDSAFEQZ_3" onclick="showAnswer('GDSAFEQZ_3')" value="Show Answer"></p>
+				
+<p class="explan" id="a_GDSAFEQZ_3"> To my knowledge, acute rhabdomyolysis has never occurred following gadolinium administration. The other three have been rarely reported.
+<a href="gadolinium-safety.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+
+
+
+ 
+<!-- ################ SECTION GDSAFEQZ, QUIZ QUESTION  5############## -->
+
+<li style="margin-top: 8px"> Comparing “true” anaphylaxis and “anaphylactoid” reactions to gadolinium contrast, which statement is correct?
+<ol type="a" id="q_GDSAFEQZ_4">
+
+<li ><input type=radio name="c_GDSAFEQZ_4" > They can be distinguished based on their clinical presentation.
+</li>
+		
+<li ><input type=radio name="c_GDSAFEQZ_4" > Both are IgE-mediated.
+</li>
+
+<li id="correct_GDSAFEQZ_4"><input type=radio name="c_GDSAFEQZ_4" id="c_GDSAFEQZ_4"> Both cause release of vasoactive amines and inflammatory mediators from mast cells.
+</li>
+		
+<li ><input type=radio name="c_GDSAFEQZ_4" >  Both are dose-related.
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_GDSAFEQZ_4" onclick="showAnswer('GDSAFEQZ_4')" value="Show Answer"></p>
+				
+<p class="explan" id="a_GDSAFEQZ_4">"True" anaphylaxis is an IgE-mediated type 1 hypersensitivity reaction and is not dose-related. Anaphylactoid reactions have an identical clinical pattern to "true" anaphylaxis but are not IgE-mediated. The two cannot be distinguished clinically. Both cause the same effect on basophils and mast cells to release histamine and other contents.
+<a href="allergic-reactions.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION GDSAFEQZ, QUIZ QUESTION  6############## -->
+
+<li style="margin-top: 8px"> Which of the following statements about the clinical features of nephrogenic systemic fibrosis (NSF) is incorrect?
+<ol type="a" id="q_GDSAFEQZ_5">
+
+<li ><input type=radio name="c_GDSAFEQZ_5" > Nearly all reported cases have been in patients with severe renal disease or insufficiency.
+</li>
+		
+<li ><input type=radio name="c_GDSAFEQZ_5" > Skin thickening and joint contractures are characteristic.
+</li>
+<li ><input type=radio name="c_GDSAFEQZ_5" >  Involvement of the liver, lungs, muscles and heart also occurs.
+</li>
+
+<li id="correct_GDSAFEQZ_5"><input type=radio name="c_GDSAFEQZ_5" id="c_GDSAFEQZ_5"> Although painful and disfiguring, the disease is seldom fatal.
+</li>
+		
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_GDSAFEQZ_5" onclick="showAnswer('GDSAFEQZ_5')" value="Show Answer"></p>
+				
+<p class="explan" id="a_GDSAFEQZ_5"> Nephrogenic systemic fibrosis (NSF) is a rare, progressive, usually fatal disease characterized by skin thickening, painful joint contractures, and fibrosis of multiple organs including the lungs, liver, muscles, and heart. Nearly all documented cases have occurred in patients with chronic severe renal insufficiency who have received gadolinium contrast.
+<a href="what-is-nsf.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION GDSAFEQZ, QUIZ QUESTION  7############## -->
+
+<li style="margin-top: 8px"> Which one of the following gadolinium-based contrast agents is less likely than the others to be associated with NSF?
+<ol type="a" id="q_GDSAFEQZ_6">
+
+<li ><input type=radio name="c_GDSAFEQZ_6" > Magnevist® 
+</li>
+		
+
+<li id="correct_GDSAFEQZ_6"><input type=radio name="c_GDSAFEQZ_6" id="c_GDSAFEQZ_6"> Dotarem®
+</li>
+<li ><input type=radio name="c_GDSAFEQZ_6" > OpitMARK™
+</li>
+		
+<li ><input type=radio name="c_GDSAFEQZ_6" >  Omniscan™
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_GDSAFEQZ_6" onclick="showAnswer('GDSAFEQZ_6')" value="Show Answer"></p>
+				
+<p class="explan" id="a_GDSAFEQZ_6"> Except for the macrocyclic agent Dotarem®, the other three agents are all linear in structure and have been associated with the greatest number of reported cases of NSF. These have been classified by the ACR as Group I agents, and are no longer advertised in the US and have been withdrawn from the market in many other countries.
+
+<a href="nsf-by-agent.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+	
+<!-- ################ SECTION GDSAFEQZ, QUIZ QUESTION  8############## -->
+
+<li style="margin-top: 8px"> Which gadolinium-based contrast agents has to date not been associated with any nonconfounded cases of NSF?
+<ol type="a" id="q_GDSAFEQZ_7">
+
+<li ><input type=radio name="c_GDSAFEQZ_7" > Dotarem®
+</li>
+		
+<li ><input type=radio name="c_GDSAFEQZ_7" > ProHance®
+</li>
+<li ><input type=radio name="c_GDSAFEQZ_7" >  MultiHance®
+</li>
+
+<li id="correct_GDSAFEQZ_7"><input type=radio name="c_GDSAFEQZ_7" id="c_GDSAFEQZ_7"> Eovist®
+</li>
+		
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_GDSAFEQZ_7" onclick="showAnswer('GDSAFEQZ_7')" value="Show Answer"></p>
+				
+<p class="explan" id="a_GDSAFEQZ_7"> No cases of NSF have been reported with the newest gadolinium agent, Eovist® (gadoxetate). However, Eovist® is primarily intended for hepatic imaging and thus there is only limited worldwide experience with it compared to the more general purpose agents. Furthermore, Eovist® (and any future new contrast agents) are being given in an “NSF-conscious” era, where high doses of gadolinium are avoided and careful scrutiny of renal function is undertaken prior to contrast administration.
+
+<a href="nsf-by-agent.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION GDSAFEQZ, QUIZ QUESTION  9############## -->
+
+<li style="margin-top: 8px"> Below what level of glomerular filtration rate (GFR) does the American Kidney Foundation consider Stage 3 (moderately reduced function) kidney disease?
+<ol type="a" id="q_GDSAFEQZ_8">
+
+<li ><input type=radio name="c_GDSAFEQZ_8" > 90 mL/min/1.73 m²
+</li>
+		
+
+<li id="correct_GDSAFEQZ_8"><input type=radio name="c_GDSAFEQZ_8" id="c_GDSAFEQZ_8"> 60 mL/min/1.73 m²
+</li>
+<li ><input type=radio name="c_GDSAFEQZ_8" > 30 mL/min/1.73 m²
+</li>
+		
+<li ><input type=radio name="c_GDSAFEQZ_8" >  15 mL/min/1.73 m²
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_GDSAFEQZ_8" onclick="showAnswer('GDSAFEQZ_8')" value="Show Answer"></p>
+				
+<p class="explan" id="a_GDSAFEQZ_8"> Stage 3 chronic kidney disease is generally diagnosed for GFRs in the range of 30-60 mL/min/1.73 m². This is about half the normal kidney function level of 90 mL/min/1.73 m².
+<a href="gd-protocol.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+<!-- ################ SECTION GDSAFEQZ, QUIZ QUESTION  10############## -->
+
+<li style="margin-top: 8px"> Which one of the following statements about the use of gadolinium in neonates and infants is false?
+<ol type="a" id="q_GDSAFEQZ_9">
+
+<li ><input type=radio name="c_GDSAFEQZ_9" > The half-life of gadolinium contrast in a normal newborn is at least 4 times longer than in an adult.
+</li>
+		
+
+<li id="correct_GDSAFEQZ_9"><input type=radio name="c_GDSAFEQZ_9" id="c_GDSAFEQZ_9"> The per kilogram dose of contrast should be lower than that in adults.
+</li>
+<li ><input type=radio name="c_GDSAFEQZ_9" > Neonates have a lower renal excretion rate of gadolinium contrast than adults.
+</li>
+		
+<li ><input type=radio name="c_GDSAFEQZ_9" >  No cases of NSF in neonates or infants have been reported.
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_GDSAFEQZ_9" onclick="showAnswer('GDSAFEQZ_9')" value="Show Answer"></p>
+				
+<p class="explan" id="a_GDSAFEQZ_9"> Renal excretion rates aside, neonates have twice the volume of extracellular fluid than adults have in proportion to their body weights. Therefore, neonates and young infants who receive gadolinium contrast on a dose-per-kilogram basis will have blood gadolinium concentrations of only one-half that in adults after equilibration. This fact argues against using a lower dose per kilogram in infants than in adults, even though the serum half-life is prolonged.  Clinical experience by our group and others has demonstrated that the adult dose of gadolinium contrast (0.1 mmol/kg for most extracellular agents) is also appropriate in infants and children.
+<a href="reduced-dose-in-infants.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+<!-- ################ SECTION GDSAFEQZ, QUIZ QUESTION  11############## -->
+
+<li style="margin-top: 8px"> Concerning the administration of gadolinium contrast to lactating women, which statement is false?
+<ol type="a" id="q_GDSAFEQZ_10">
+
+<li ><input type=radio name="c_GDSAFEQZ_10" > Peak excretion into breast milk occurs at about 50 minutes after injection.
+</li>
+		
+<li ><input type=radio name="c_GDSAFEQZ_10" > Only a tiny fraction (0.01%-0.04%) of the administered dose is excreted in breast milk.
+</li>
+<li ><input type=radio name="c_GDSAFEQZ_10" >  Only 1% of orally ingested contrast gadolinium contrast is absorbed by the infant.
+</li>
+
+<li id="correct_GDSAFEQZ_10"><input type=radio name="c_GDSAFEQZ_10" id="c_GDSAFEQZ_10"> Current scientific evidence shows that breast feeding <u>must</u> be avoided for at least 24 hrs.
+</li>
+		
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_GDSAFEQZ_10" onclick="showAnswer('GDSAFEQZ_10')" value="Show Answer"></p>
+				
+<p class="explan" id="a_GDSAFEQZ_10"> Because (b) and (c) are true, the dose entering the infant's circulation is extremely small (1/1,000,000 of the maternal dose) and the potential toxic effects are thought to be miniscule. Only out of an abundance of safety, many centers recommend (but do not require) suspending breast feeding for 24 hours after a gadolinium-enhanced MR study. 
+<a href="gd-in-breast-milk.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+		
+
+
+
+
+
+<!-- ################ SECTION GDSAFEQZ, QUIZ QUESTION  12############## -->
+
+<li style="margin-top: 8px"> Concerning the administration of gadolinium contrast during pregnancy, which statement is false?
+<ol type="a" id="q_GDSAFEQZ_11">
+<li id="correct_GDSAFEQZ_11"><input type=radio name="c_GDSAFEQZ_11" id="c_GDSAFEQZ_11"> An increased number of congenital malformations have been observed in infants of mothers receiving gadolinium contrast during pregnancy.
+</li>
+
+<li ><input type=radio name="c_GDSAFEQZ_11" > Gadolinium contrast easily passes through the placenta and into the fetal circulation.
+</li>
+		
+<li ><input type=radio name="c_GDSAFEQZ_11" > Gadolinium contrast absorbed by the fetus is excreted into the urine and subsequently into the amniotic fluid.
+</li>
+
+		
+<li ><input type=radio name="c_GDSAFEQZ_11" >  Some gadolinium contrast in the amniotic fluid will be swallowed and resorbed through the fetal GI tract.
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_GDSAFEQZ_11" onclick="showAnswer('GDSAFEQZ_11')" value="Show Answer"></p>
+				
+<p class="explan" id="a_GDSAFEQZ_11"> In the only controlled human study to date of MRI and gadolinium exposure in pregnancy, a slightly higher incidence of stillbirths and early neonatal deaths (but not congenital malformations) was observed in the gadolinium-exposed group.  More worrisome, however, was an increased number of rheumatologic, inflammatory, and infiltrative skin conditions, including some resembling nephrogenic systemic fibrosis (NSF). 
+<a href="gd-in-pregnancy.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+<!-- ################ SECTION GDSAFEQZ, QUIZ QUESTION  13############## -->
+
+<li style="margin-top: 8px"> Which of the following statements concerning gadolinium deposition in the brain is false?
+<ol type="a" id="q_GDSAFEQZ_12">
+
+<li ><input type=radio name="c_GDSAFEQZ_12" > Accumulation occurs primarily in the basal ganglia, brainstem, and dentate nuclei.
+</li>
+		
+<li ><input type=radio name="c_GDSAFEQZ_12" > Several exposures are usually necessary before visible changes are seen.
+</li>
+
+<li id="correct_GDSAFEQZ_12"><input type=radio name="c_GDSAFEQZ_12" id="c_GDSAFEQZ_12"> Changes are most visible on T2*-weighted images.
+</li>
+		
+<li ><input type=radio name="c_GDSAFEQZ_12" >  The incidence of accumulation is less with macrocyclic contrast agents than linear ones.
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_GDSAFEQZ_12" onclick="showAnswer('GDSAFEQZ_12')" value="Show Answer"></p>
+				
+<p class="explan" id="a_GDSAFEQZ_12"> All are true except (b). High signal due to accumulated gadolinium is noted on T1-weighted images.
+<a href="gd-accumulation.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION GDSAFEQZ, QUIZ QUESTION  14############## -->
+
+<li style="margin-top: 8px"> Concerning “gadolinium deposition disease” which statement is false?
+<ol type="a" id="q_GDSAFEQZ_13">
+
+<li ><input type=radio name="c_GDSAFEQZ_13" > The FDA has determined there is no convincing current evidence for this diagnosis.
+</li>
+		
+
+<li id="correct_GDSAFEQZ_13"><input type=radio name="c_GDSAFEQZ_13" id="c_GDSAFEQZ_13"> One important piece of clinical evidence for it is the increased incidence of Parkinson’s disease in patients receiving gadolinium contrast.
+</li>
+<li ><input type=radio name="c_GDSAFEQZ_13" > No tissue injury or morphologic changes in gadolinium-accumulating brain areas can be detected by microscopy. 
+</li>
+		
+<li ><input type=radio name="c_GDSAFEQZ_13" >  Celebrity Chuck Norris withdrew his lawsuit against Bracco where he claimed they “poisoned” his wife with gadolinium.
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_GDSAFEQZ_13" onclick="showAnswer('GDSAFEQZ_13')" value="Show Answer"></p>
+				
+<p class="explan" id="a_GDSAFEQZ_13"> The incidence of Parkinson’s disease is <u>not</u> increased in patients who received gadolinium contrast.
+<a href="gd-deposition-disease.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--##################################################-->
+<!--############SCORING SECTION Needs to go at end of each subsection-->
+
+</ol><p><input type=button id="show_all_GDSAFEQZ" onclick="showAllAnswers('GDSAFEQZ')" value="Show All Answers for Section"><span style="font-weight: bold" id="scoretxt_GDSAFEQZ"></span></p>
+<p><a href="#top">Back to top of page</a></p></div>
+<!--END OF SCORING SECTION-->
+
+
+
+</div>
+
+
+
+</div>
+
+<div><div id="519562869632146345" align="left" style="width: 100%; overflow-y: hidden;" class="wcustomhtml"><!-- ###############NEW QUIZ SUBSECTION ##################-->
+
+<hr style="1px solid black">
+<!-- Creates optional line above new Quiz Subsection Title ---->
+
+<h1 style="color:black";><a name="2"></a>Paramagnetic Blood Products</h1>
+
+<!-- The Section Name and its corresponding number (here 0) which has an href in the index must be changed/filled in.  Note that the first section is identified as “0” here only;  and the second section is denoted “2”, etc. 
+
+This is confusing because subsequently it is denoted as Section 1 and reference to all questions in this section begin with a 1.  However, the first question of Section 1 is called question 0, presumably to assist in scoring.
+
+Thus, the first question of Section 1 is denoted as q_1_0 and its second question is denoted q_1_1.	
+
+When a second section of Questions is added, this is called Section 2 with first and second questions denoted q_2_0 and q_2_1. 
+
+Each section has counting variables corresponding to each question. So the counting variables  are denoted c_1_0 for the Section 1/first question, while c_2_1 counts for Section 2/second question. -->
+
+<!-- FOR THE PURPOSES OF THIS DOCUMENT WE WILL CONSIDER ALL QUESTIONS TO REFER TO SECTION HEMQUIZ and are numbered consecutively. THE WORD DOCUMENT CAN THEN BE PUT INTO PROPER FORM BY “SEARCH AND REPLACE HEMQUIZ BY THE APPROPRIATE SECTION NUMBER”-->
+
+
+<!-- ################ SECTION M, QUIZ QUESTION  1############## -->
+
+<ol><li style="margin-top: 8px"> How many iron atoms are in a hemoglobin molecule?
+<ol type="a" id="q_HEMQUIZ_0">
+
+<li ><input type=radio name="c_HEMQUIZ_0" >1</li>
+		
+<li ><input type=radio name="c_HEMQUIZ_0" >2 </li>
+<li ><input type=radio name="c_HEMQUIZ_0" > 3 </li>
+
+<li id="correct_HEMQUIZ_0"><input type=radio name="c_HEMQUIZ_0" id="c_HEMQUIZ_0">4 </li>
+		
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_HEMQUIZ_0" onclick="showAnswer('HEMQUIZ_0')" value="Show Answer"></p>
+				
+<p class="explan" id="a_HEMQUIZ_0"> Hemoglobin is comprised of four subunits, each containing a heme group with an iron (Fe) atom nestled at its center. 
+
+<a href="hematoma-overview.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+
+<!-- ################ SECTION HEMQUIZ, QUIZ QUESTION  2############## -->
+
+<li style="margin-top: 8px"> How many sites on each heme group are available for binding oxygen or another small molecule?
+<ol type="a" id="q_HEMQUIZ_1">
+<li id="correct_HEMQUIZ_1"><input type=radio name="c_HEMQUIZ_1" id="c_HEMQUIZ_1"> 1 </li>
+
+<li ><input type=radio name="c_HEMQUIZ_1" > 2</li>
+		
+<li ><input type=radio name="c_HEMQUIZ_1" > 3 </li>
+
+		
+<li ><input type=radio name="c_HEMQUIZ_1" >  4 </li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_HEMQUIZ_1" onclick="showAnswer('HEMQUIZ_1')" value="Show Answer"></p>
+				
+<p class="explan" id="a_HEMQUIZ_1"> The Fe center of each heme group has 6 potential coordination sites, four of which are occupied by porphyrin nitrogens (N). The fifth coordination site (below the plane of the ring) covalently bonds with a histidine (His) residue from the F8 position of its respective globin chain. This leaves one free coordination site to which oxygen and other small molecules may transiently bind. 
+<a href="types-of-hemoglobin.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION HEMQUIZ, QUIZ QUESTION  3############## -->
+
+<li style="margin-top: 8px">TEXTFORquestion3<ol type="a" id="q_HEMQUIZ_2">
+
+<li ><input type=radio name="c_HEMQUIZ_2" > Oxyhemoglobin → Deoxyhemoglobin → Methemoglobin → Ferritin
+</li>
+		
+
+<li id="correct_HEMQUIZ_2"><input type=radio name="c_HEMQUIZ_2" id="c_HEMQUIZ_2"> Deoxyhemoglobin → Oxyhemoglobin → Methemoglobin → Ferritin
+</li>
+<li ><input type=radio name="c_HEMQUIZ_2" > Oxyhemoglobin → Methemoglobin → Deoxyhemoglobin → Ferritin
+</li>
+		
+<li ><input type=radio name="c_HEMQUIZ_2" >  Oxyhemoglobin → Deoxyhemoglobin → Ferritin → Methemoglobin
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_HEMQUIZ_2" onclick="showAnswer('HEMQUIZ_2')" value="Show Answer"></p>
+				
+<p class="explan" id="a_HEMQUIZ_2"> Answer (b) shows the correct order.
+<a href="hematoma-overview.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION HEMQUIZ, QUIZ QUESTION  4############## -->
+<li style="margin-top: 8px"> Which one of the hemoglobin derivatives listed below is diamagnetic?
+<ol type="a" id="q_HEMQUIZ_3">
+<li id="correct_HEMQUIZ_3"><input type=radio name="c_HEMQUIZ_3" id="c_HEMQUIZ_3"> Oxyhemoglobin
+</li>
+		
+
+<li ><input type=radio name="c_HEMQUIZ_3" > Deoxyhemoglobin
+</li>
+		
+<li ><input type=radio name="c_HEMQUIZ_3" > Methemoglobin
+</li>
+
+<li ><input type=radio name="c_HEMQUIZ_3" >  Ferritin
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_HEMQUIZ_3" onclick="showAnswer('HEMQUIZ_3')" value="Show Answer"></p>
+				
+<p class="explan" id="a_HEMQUIZ_3"> Oxyhemoglobin has no unpaired electrons and is therefore diamagnetic.
+<a href="types-of-hemoglobin.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+
+
+
+ 
+<!-- ################ SECTION HEMQUIZ, QUIZ QUESTION  5############## -->
+
+<li style="margin-top: 8px"> In <i>arterial</i> blood from a healthy patient, what is the expected proportion of deoxyhemoglobin?
+<ol type="a" id="q_HEMQUIZ_4">
+
+<li ><input type=radio name="c_HEMQUIZ_4" > 0 %
+</li>
+		<li id="correct_HEMQUIZ_4"><input type=radio name="c_HEMQUIZ_4" id="c_HEMQUIZ_4"> Less than 5%
+</li>
+
+<li ><input type=radio name="c_HEMQUIZ_4" > 10 – 20 %
+</li>
+
+		
+<li ><input type=radio name="c_HEMQUIZ_4" >  Greater than 25 %
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_HEMQUIZ_4" onclick="showAnswer('HEMQUIZ_4')" value="Show Answer"></p>
+				
+<p class="explan" id="a_HEMQUIZ_4"> In arterial blood, the fraction of oxyhemoglobin is about 95%, while deoxyhemoglobin constitutes less than 5% (but not zero). A tiny amount of methemoglobin (<< 1%) may also be detected.
+<a href="hyperacuteoxy-hb.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION HEMQUIZ, QUIZ QUESTION  6############## -->
+
+<li style="margin-top: 8px"> In <i>venous</i> blood from a healthy patient, what is the expected proportion of deoxyhemoglobin?
+<ol type="a" id="q_HEMQUIZ_5">
+
+<li ><input type=radio name="c_HEMQUIZ_5" > 0 %
+</li>
+		
+<li ><input type=radio name="c_HEMQUIZ_5" > Less than 5%
+</li>
+<li ><input type=radio name="c_HEMQUIZ_5" >  10 – 20 %
+</li>
+
+<li id="correct_HEMQUIZ_5"><input type=radio name="c_HEMQUIZ_5" id="c_HEMQUIZ_5"> Greater than 25 %
+</li>
+		
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_HEMQUIZ_5" onclick="showAnswer('HEMQUIZ_5')" value="Show Answer"></p>
+				
+<p class="explan" id="a_HEMQUIZ_5"> In venous blood, oxy-Hb still predominates, though in a smaller ratio (venous oxy:deoxy ≈ 70:30.)  
+
+<a href="hyperacuteoxy-hb.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION HEMQUIZ, QUIZ QUESTION  7############## -->
+
+<li style="margin-top: 8px"> Which of the following effects on the MR signal does <u>not</u> result from local increased hematocrit during blood clotting?
+<ol type="a" id="q_HEMQUIZ_6">
+
+<li ><input type=radio name="c_HEMQUIZ_6" > Decreased free water content, reducing T1, T2, and spin density.
+</li>
+		
+<li ><input type=radio name="c_HEMQUIZ_6" > Decreased extracellular space, restricting diffusion.
+</li>
+
+<li id="correct_HEMQUIZ_6"><input type=radio name="c_HEMQUIZ_6" id="c_HEMQUIZ_6"> Increased concentration of phospholipids in red blood cell membranes, shortening T1.
+</li>
+		
+<li ><input type=radio name="c_HEMQUIZ_6" >  Increased concentration of hemoglobin, potentiating T2/T2* effects as transition to deoxy-hemoglobin occurs.
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_HEMQUIZ_6" onclick="showAnswer('HEMQUIZ_6')" value="Show Answer"></p>
+				
+<p class="explan" id="a_HEMQUIZ_6"> All are true except (c). Phospholipid cell membranes have ultrashort T2 values and do not generate a fatty signal on MRI.
+<a href="hyperacuteoxy-hb.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+	
+<!-- ################ SECTION HEMQUIZ, QUIZ QUESTION  8############## -->
+
+<li style="margin-top: 8px"> Which of the following imaging findings at 1.5T would <u>not</u> be expected to be seen in a hyperacute (< 12 hrs old) cerebral hematoma?
+<ol type="a" id="q_HEMQUIZ_7">
+
+<li ><input type=radio name="c_HEMQUIZ_7" > Restricted diffusion
+</li>
+		
+<li ><input type=radio name="c_HEMQUIZ_7" > T1 signal isointense to brain
+</li>
+
+<li id="correct_HEMQUIZ_7"><input type=radio name="c_HEMQUIZ_7" id="c_HEMQUIZ_7"> T2 signal moderately hypointense to brain
+</li>
+		
+<li ><input type=radio name="c_HEMQUIZ_7" >  At least a rim of hypointensity on GRE/SWI images
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_HEMQUIZ_7" onclick="showAnswer('HEMQUIZ_7')" value="Show Answer"></p>
+				
+<p class="explan" id="a_HEMQUIZ_7"> In a hyperacute hematoma, oxyhemoglobin still predominates, except perhaps at the periphery, and the imaging findings suggest a relatively high-water content lesion that is moderately hyperintense on T2-weighted images.
+<a href="hyperacuteoxy-hb.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION HEMQUIZ, QUIZ QUESTION  9############## -->
+
+<li style="margin-top: 8px"> Which of the following imaging findings at 1.5T would <u>not</u> be expected to be seen in an acute (12–48 hrs old) cerebral hematoma?
+<ol type="a" id="q_HEMQUIZ_8">
+
+<li ><input type=radio name="c_HEMQUIZ_8" > Restricted diffusion
+</li>
+		
+
+<li id="correct_HEMQUIZ_8"><input type=radio name="c_HEMQUIZ_8" id="c_HEMQUIZ_8"> T1 signal hyperintense to brain
+</li>
+<li ><input type=radio name="c_HEMQUIZ_8" > T2 signal markedly hypointense to brain
+</li>
+		
+<li ><input type=radio name="c_HEMQUIZ_8" >  GRE/SWI images hypointense to brain
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_HEMQUIZ_8" onclick="showAnswer('HEMQUIZ_8')" value="Show Answer"></p>
+				
+<p class="explan" id="a_HEMQUIZ_8"> This phase of hematoma formation is dominated by intracellular deoxyhemoglobin, which shortens T2/T2* significantly. The hematoma becomes markedly hypointense on T2-weighted images.
+<a href="acutedeoxy-hb.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+<!-- ################ SECTION HEMQUIZ, QUIZ QUESTION  10############## -->
+
+<li style="margin-top: 8px"> Which of the following imaging findings at 1.5T would <u>not</u> be expected to be seen in an early subacute (2 days – 1 week old) cerebral hematoma?
+<ol type="a" id="q_HEMQUIZ_9">
+
+<li ><input type=radio name="c_HEMQUIZ_9" > Restricted diffusion
+</li>
+		
+<li ><input type=radio name="c_HEMQUIZ_9" > T1 signal hyperintense to brain
+</li>
+
+<li id="correct_HEMQUIZ_9"><input type=radio name="c_HEMQUIZ_9" id="c_HEMQUIZ_9"> T2 signal hyperintense to brain
+</li>
+		
+<li ><input type=radio name="c_HEMQUIZ_9" >  GRE/SWI images hypointense to brain
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_HEMQUIZ_9" onclick="showAnswer('HEMQUIZ_9')" value="Show Answer"></p>
+				
+<p class="explan" id="a_HEMQUIZ_9"> This is the phase of hematoma formation where intracellular methemoglobin predominates. This hemoglobin derivative is highly paramagnetic. Because it is still contained within red blood cells, T2/T2* shortening effects still occur, so T2 signal is low, not high. Access of water molecules close to the iron center due to a conformational change in the globin moiety result in T1 shortening and a bright T1 signal.
+<a href="subacutemet-hb.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+<!-- ################ SECTION HEMQUIZ, QUIZ QUESTION  11############## -->
+
+<li style="margin-top: 8px"> Which of the following imaging findings at 1.5T would <u>not</u> be expected to be seen in a late subacute (1 week – 2 months old) cerebral hematoma?
+<ol type="a" id="q_HEMQUIZ_10">
+
+<li ><input type=radio name="c_HEMQUIZ_10" > Minimal to no restricted diffusion
+</li>
+		
+
+<li id="correct_HEMQUIZ_10"><input type=radio name="c_HEMQUIZ_10" id="c_HEMQUIZ_10"> T1 signal hypointense to brain
+</li>
+<li ><input type=radio name="c_HEMQUIZ_10" > T2 signal hyperintense to brain
+</li>
+		
+<li ><input type=radio name="c_HEMQUIZ_10" >  GRE/SWI images show central hyperintensity
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_HEMQUIZ_10" onclick="showAnswer('HEMQUIZ_10')" value="Show Answer"></p>
+				
+<p class="explan" id="a_HEMQUIZ_10"> This phase of hematoma formation is dominated by extracellular methemoglobin, released from red blood cells that have ruptured. Methemoglobin is no longer concentrated into multiple intracellular compartments, but becomes uniformly dispersed throughout the hematoma cavity that is now bright on <i>both</i> T1- and T2-weighted images. 
+
+<a href="extracellular-met-hb.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+		
+
+
+
+
+
+<!-- ################ SECTION HEMQUIZ, QUIZ QUESTION  12############## -->
+
+<li style="margin-top: 8px"> Which of the following imaging findings at 1.5T would <u>not</u> be expected to be seen in the center of a chronic (> 2 months old) cerebral hematoma?
+<ol type="a" id="q_HEMQUIZ_11">
+
+<li ><input type=radio name="c_HEMQUIZ_11" > Minimal to no restricted diffusion
+</li>
+		
+<li ><input type=radio name="c_HEMQUIZ_11" > T1 signal hypointense to brain
+</li>
+<li ><input type=radio name="c_HEMQUIZ_11" >  T2 signal hyperintense to brain
+</li>
+
+<li id="correct_HEMQUIZ_11"><input type=radio name="c_HEMQUIZ_11" id="c_HEMQUIZ_11"> GRE/SWI central hypointensity to brain
+</li>
+		
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_HEMQUIZ_11" onclick="showAnswer('HEMQUIZ_11')" value="Show Answer"></p>
+				
+<p class="explan" id="a_HEMQUIZ_11"> The imaging characteristics of the center of a chronic hematoma reflects its high water content. As such this region is typically hyperintense to brain on T2-weighted images and hypointense on T1-weighted images with no or minimally restricted diffusion. GRE/SWI signal centrally is also high, but may be dark along the rim of the hematoma cavity due to ferritin/hemosiderin deposition. 
+
+<a href="chronic-hematomas.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+<!-- ################ SECTION HEMQUIZ, QUIZ QUESTION  13############## -->
+
+<li style="margin-top: 8px"> Which of the following statements about ferritin is <u>incorrect</u>?
+<ol type="a" id="q_HEMQUIZ_12">
+
+<li ><input type=radio name="c_HEMQUIZ_12" > It is the principal iron storage molecule found in animal cells.
+</li>
+		
+<li ><input type=radio name="c_HEMQUIZ_12" > It consists of a hollow protein shell into which iron atoms are packed.
+</li>
+<li ><input type=radio name="c_HEMQUIZ_12" >  A typical ferritin molecule contains about 2000 iron atoms.
+</li>
+
+<li id="correct_HEMQUIZ_12"><input type=radio name="c_HEMQUIZ_12" id="c_HEMQUIZ_12"> It is ferromagnetic.
+</li>
+		
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_HEMQUIZ_12" onclick="showAnswer('HEMQUIZ_12')" value="Show Answer"></p>
+				
+<p class="explan" id="a_HEMQUIZ_12"> The ferritin core acts as a solid piece of metal with a single magnetic domain, exhibiting superparamagnetism. Ferromagnetic materials, by contrast, consist of <i>multiple</i> erritinhemosiderin.html domains and retain some residual magnetization after an external magnetic field is removed.
+<a href="ferritinhemosiderin.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION HEMQUIZ, QUIZ QUESTION  14############## -->
+
+<li style="margin-top: 8px"> Concerning ferritin and hemosiderin, which statement is true?
+<ol type="a" id="q_HEMQUIZ_13">
+<li id="correct_HEMQUIZ_13"><input type=radio name="c_HEMQUIZ_13" id="c_HEMQUIZ_13"> The iron in hemosiderin is insoluble; the iron in ferritin is soluble.
+</li>
+
+<li ><input type=radio name="c_HEMQUIZ_13" > Both are visible by light microscopy.
+</li>
+		
+<li ><input type=radio name="c_HEMQUIZ_13" > Ferritin is paramagnetic, but hemosiderin is ferromagnetic.
+</li>
+
+		
+<li ><input type=radio name="c_HEMQUIZ_13" >  Both hemosiderin and ferritin have a fixed structure and composition.
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_HEMQUIZ_13" onclick="showAnswer('HEMQUIZ_13')" value="Show Answer"></p>
+				
+<p class="explan" id="a_HEMQUIZ_13"> Only (a) is true. Ferritin is much smaller than hemosiderin and can only be visualized at electron microscopy. Both are paramagnetic. Ferritin has a fixed structure and composition; hemosiderin is an amorphous conglomeration of ferritin particles, proteins, and lipids.
+
+<a href="ferritinhemosiderin.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION HEMQUIZ, QUIZ QUESTION  15############## -->
+
+<li style="margin-top: 8px"> Which of the following processes does <u>not</u> affect the appearance of subarachnoid hemorrhage (SAH) as compared to intraparenchymal brain hemorrhage? 
+<ol type="a" id="q_HEMQUIZ_14">
+
+<li ><input type=radio name="c_HEMQUIZ_14" > SAH clots are small.
+</li>
+		
+<li ><input type=radio name="c_HEMQUIZ_14" > SAH clots are readily dispersed.
+</li>
+<li ><input type=radio name="c_HEMQUIZ_14" >  SAH mixes with cerebrospinal fluid.
+</li>
+
+<li id="correct_HEMQUIZ_14"><input type=radio name="c_HEMQUIZ_14" id="c_HEMQUIZ_14"> Ambient oxygen levels in the subarachnoid space are low, resulting in faster aging of the hematoma.
+</li>
+		
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_HEMQUIZ_14" onclick="showAnswer('HEMQUIZ_14')" value="Show Answer"></p>
+				
+<p class="explan" id="a_HEMQUIZ_14"> Only (d) is false.  Ambient oxygen levels in the subarachnoid space are high, resulting in slower aging of the hematoma. For example, methemoglobin formation is rare until at least 1 week after ictus.
+<a href="subarachnoid-blood.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+<!-- ################ SECTION HEMQUIZ, QUIZ QUESTION 16############## -->
+
+<li style="margin-top: 8px"> Concerning CT and MRI of subarachnoid hemorrhage (SAH), which statement is false?
+<ol type="a" id="q_HEMQUIZ_15">
+
+<li ><input type=radio name="c_HEMQUIZ_15" > Acute SAH is better seen on CT than on MRI.
+</li>
+		
+
+<li id="correct_HEMQUIZ_15"><input type=radio name="c_HEMQUIZ_15" id="c_HEMQUIZ_15"> The best MR sequence for identifying acute SAH is T1-FLAIR.
+</li>
+<li ><input type=radio name="c_HEMQUIZ_15" > Subacute SAH may be better seen on MRI than CT.
+</li>
+		
+<li ><input type=radio name="c_HEMQUIZ_15" >  Evidence for remote SAH is much better seen on MRI than CT.
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_HEMQUIZ_15" onclick="showAnswer('HEMQUIZ_15')" value="Show Answer"></p>
+				
+<p class="explan" id="a_HEMQUIZ_15"> Option (b) is false. The best sequences for identifying SAH on MRI are T2-FLAIR, GRE/SWI, and DWI.
+<a href="subarachnoid-blood.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION HEMQUIZ, QUIZ QUESTION  17############## -->
+
+<li style="margin-top: 8px"> Which of the following statements concerning the appearance of hemorrhage at very low fields (<0.15 T) is true?
+<ol type="a" id="q_HEMQUIZ_16">
+
+<li ><input type=radio name="c_HEMQUIZ_16" > Intracellular deoxyhemoglobin is noticeably dark on T2-weighted images.
+</li>
+		
+<li ><input type=radio name="c_HEMQUIZ_16" > Intracellular methemoglobin is noticeably dark on T2-weighted images.
+</li>
+
+<li id="correct_HEMQUIZ_16"><input type=radio name="c_HEMQUIZ_16" id="c_HEMQUIZ_16"> Extracellular methemoglobin is bright on T1-weighted images.
+</li>
+		
+<li ><input type=radio name="c_HEMQUIZ_16" >  The center of a hyperacute hematoma is dark on T1-weighted images.
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_HEMQUIZ_16" onclick="showAnswer('HEMQUIZ_16')" value="Show Answer"></p>
+				
+<p class="explan" id="a_HEMQUIZ_16"> Only (c) is true. Neither intracellular deoxy- and met-Hb are dark on T2 weighted images as they are at high fields. This is because the dephasing is due to susceptibility which scales with the square of the magnetic field. The center of an acute clot is bright on T1-weighted images due to hemoconcentration and protein effect.
+<a href="blood-at-lower-fields.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+
+
+		
+		
+
+
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+
+
+
+
+
+
+
+<!--##################################################-->
+<!--############SCORING SECTION Needs to go at end of each subsection-->
+
+</ol><p><input type=button id="show_all_HEMQUIZ" onclick="showAllAnswers('HEMQUIZ')" value="Show All Answers for Section"><span style="font-weight: bold" id="scoretxt_HEMQUIZ"></span></p>
+<p><a href="#top">Back to top of page</a></p></div>
+<!--END OF SCORING SECTION-->
+
+
+
+</div>
+
+
+
+</div>

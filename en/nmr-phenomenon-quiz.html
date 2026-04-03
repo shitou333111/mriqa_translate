@@ -1,0 +1,2668 @@
+<div id="content"><div id="wsite-content" class="wsite-elements wsite-not-footer">
+	<div><div id="574773821330301327" align="left" style="width: 100%; overflow-y: hidden;" class="wcustomhtml"><!--############NEW MASTER HEADER AND INDEX##############-->
+<!--THIS IS THE MASTER HEADER SECTION FOR QUIZZES ON EACH SUPER TAB-->
+<!-- Each super tab in the regular Q&A part of the website corresponds to  a set of review QUIZZES on a single web page. This single web page must begin with the html script included below (which must be appropriately renamed). -->
+
+<!--After the title there is an index that identifies ~5 subsections each with 10-20 quiz questions. The html script for each section of questions is in a separate document titled 20 EMPTY QUESTIONS.  Instructions for filling these out are provided in that document. -->
+
+<html>
+<head><script src="/gdpr/gdprscript.js?buildTime=1774025472"></script>
+<title>QUIZ QUESTIONS ON NMR PHENOMENON</title>
+<!--All Yellow highlighted items need to be replaced-->
+<meta name="keywords" content="radiology physics, review questions, MRI physics">
+<meta name="description" content="Collection of review quiz questions from MRIquestions.com">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="/mr_styles.css">
+<style>
+.explan {
+	display: none;
+	font-style: italic;
+	margin-top: 2px;
+	margin-bottom: 6px;
+}
+</style>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-52206512-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+<script>
+function showAnswer(q_string) {
+	var button = document.getElementById('show_'+q_string);
+	var shown = button.value == "Hide Answer";
+	if(!shown) {
+		document.getElementById('a_'+q_string).style.display = "block";
+		
+		document.getElementById('correct_'+q_string).style.fontWeight = "bold";
+		if(document.getElementById('c_'+q_string).checked) {
+			document.getElementById('correct_'+q_string).style.color = "Green";
+		} else {
+			document.getElementById('correct_'+q_string).style.color = "Red";
+		}
+		
+		button.value = "Hide Answer";
+	} else {
+		document.getElementById('a_'+q_string).style.display = "none";
+		button.value = "Show Answer";
+	}
+}
+
+function showAllAnswers(topic) {
+	var button = document.getElementById('show_all_'+topic);
+	var shown = button.value == "Hide All Answers for Section";
+	
+	var i = 0;
+	var correct = 0;
+	var ans_el;
+	while((ans_el=document.getElementById('a_'+topic+'_'+i)) != null) {
+		if(document.getElementById('c_'+topic+'_'+i).checked) {
+			correct++;
+		}
+		if(!shown) {
+			ans_el.style.display = "block";
+			document.getElementById('correct_'+topic+'_'+i).style.fontWeight = "bold";
+			if(document.getElementById('c_'+topic+'_'+i).checked) {
+				document.getElementById('correct_'+topic+'_'+i).style.color = "Green";
+			} else {
+				document.getElementById('correct_'+topic+'_'+i).style.color = "Red";
+			}
+		} else {
+			ans_el.style.display = "none";
+		}
+		i++;
+	}
+	
+	var scoretext = document.getElementById('scoretxt_'+topic);
+	scoretext.innerHTML = 'You answered '+correct+'/'+i+' correct, for a score of '+Math.round(correct/i*100)+'%';
+	
+	if(!shown) {
+		button.value = "Hide All Answers for Section";
+	} else {
+		button.value = "Show All Answers for Section";
+	}
+}
+
+function scoreAnswers(topic) {
+	var button = document.getElementById('score_'+topic);
+	
+	var i = 0;
+	var correct = 0;
+	var ans_el;
+	while((ans_el=document.getElementById('a_'+topic+'_'+i)) != null) {
+		if(document.getElementById('c_'+topic+'_'+i).checked) {
+			correct++;
+		}
+		i++;
+	}
+	
+	var scoretext = document.getElementById('scoretxt_'+topic);
+	scoretext.innerHTML = 'You answered '+correct+'/'+i+' correct, for a score of '+Math.round(correct/i*100)+'%';
+}
+
+function changeMode(button_value) {
+	if(button_value != 0) {
+		window.location = "/review/mri_b.html?mode="+button_value;
+	}
+}
+</script>
+<style type="text/css">
+.button_unchecked {
+	border: 2px outset #3498db;
+	background: #3498db;
+	background-image: -webkit-linear-gradient(top, #3498db, #2980b9);
+	background-image: -moz-linear-gradient(top, #3498db, #2980b9);
+	background-image: -ms-linear-gradient(top, #3498db, #2980b9);
+	background-image: -o-linear-gradient(top, #3498db, #2980b9);
+	background-image: linear-gradient(to bottom, #3498db, #2980b9);
+	padding: 4px;
+	
+	font-size: 120%;
+	font-weight: bold;
+}
+.button_checked {
+	border: 2px inset #3498db;
+	background: #3498db;
+	background-image: -webkit-linear-gradient(top, #3498db, #2980b9);
+	background-image: -moz-linear-gradient(top, #3498db, #2980b9);
+	background-image: -ms-linear-gradient(top, #3498db, #2980b9);
+	background-image: -o-linear-gradient(top, #3498db, #2980b9);
+	background-image: linear-gradient(to bottom, #3498db, #2980b9);
+	padding: 4px;
+	
+	font-size: 120%;
+	font-weight: bold;
+}
+</style>
+</head>
+
+<!-- END OF MASTER HEADER -->
+
+<!--SECOND SECTION: Lists Subsections for Questions below-->
+<body style="background-color:white">
+<div class="main_div">
+<h1 style="color:black";><a name="top"></a>The NMR Phenomenon Quiz </h1>
+<div style="font-size: 140%; font-family: sans-serif">
+<ul>
+	<li><a href="#0">Spin</a></li>
+	<li><a href="#1">Precession</a></li>
+	<li><a href="#2">Resonance</a></li>
+	<li><a href="#3">Relaxation I - Physics</a></li>
+	<li><a href="#4">Relaxation II - Clinical</a></li>
+	
+</ul>
+
+<!-- Note the numbering of these subsections as they have a href values of #0, #1, #2, etc. These numbers are needed so that clicking on the index file takes you to the proper place in the web page identified on the 20 BLANK QUESTIONS script.-->
+<p>
+
+
+</div>
+
+ 
+<!--QUIZ QUESTIONS BEGIN HERE ------------------------------------------------------------>
+<!-- ###############NEW QUIZ SUBSECTION ##################-->
+
+<hr style="1px solid black">
+<!-- Creates optional line above new Quiz Subsection Title ---->
+
+<h1 style="color:black";><a name="0"></a>SPIN</h1>
+
+<!-- The Section Name and its corresponding number (here 0) which has an href in the index must be changed/filled in.  Note that the first section is identified as “0” here only;  and the second section is denoted “2”, etc. 
+
+This is confusing because subsequently it is denoted as Section 1 and reference to all questions in this section begin with a 1.  However, the first question of Section 1 is called question 0, presumably to assist in scoring.
+
+Thus, the first question of Section 1 is denoted as q_1_0 and its second question is denoted q_1_1.	
+
+When a second section of Questions is added, this is called Section 2 with first and second questions denoted q_2_0 and q_2_1. 
+
+Each section has counting variables corresponding to each question. So the counting variables  are denoted c_1_0 for the Section 1/first question, while c_2_1 counts for Section 2/second question. -->
+
+<!-- FOR THE PURPOSES OF THIS DOCUMENT WE WILL CONSIDER ALL QUESTIONS TO REFER TO SECTION 1 and are numbered consecutively. THE WORD DOCUMENT CAN THEN BE PUT INTO PROPER FORM BY “SEARCH AND REPLACE 1 BY THE APPROPRIATE SECTION NUMBER”-->
+
+
+<!-- ################ SECTION M, QUIZ QUESTION  1############## -->
+
+<ol><li style="margin-top: 8px">Concerning nuclear spin (<b><i>I</i></b>), which of the following is true?<ol type="a" id="q_1_0">
+
+<li ><input type=radio name="c_1_0" > Spin is due to rotation of the nucleus about its axis.
+</li>
+		
+<li ><input type=radio name="c_1_0" > Protons have spin, but neutrons do not.
+</li>
+
+<li id="correct_1_0"><input type=radio name="c_1_0" id="c_1_0"> Spin can only have integer or half-integer values.
+</li>
+		
+<li ><input type=radio name="c_1_0" > Another name for spin is "precession".
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_1_0" onclick="showAnswer('1_0')" value="Show Answer"></p>
+				
+<p class="explan" id="a_1_0">Spin is a fundamental quantum property of subatomic particles and does not result from their physical rotation. Many subatomic particles besides the proton have spin, including the neutrons and electrons. Spin is quantized and can take on a limited number of discrete values, so c) is true. When placed in an external magnetic field, nuclear spin results in precession, but spin and precession are not the same.
+<a href="/what-is-spin.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+
+<!-- ################ SECTION 1, QUIZ QUESTION  2############## -->
+
+<li style="margin-top: 8px">Which of the following spins (<b><i>I</i></b>) could a nucleus <u>not</u> possess? 
+<ol type="a" id="q_1_1">
+
+<li ><input type=radio name="c_1_1" >  0</li>
+		
+<li ><input type=radio name="c_1_1" > 1/2 </li>
+
+<li id="correct_1_1"><input type=radio name="c_1_1" id="c_1_1">  3/4 </li>
+		
+<li ><input type=radio name="c_1_1" >  9/2 </li>
+<li ><input type=radio name="c_1_1" >  5 </li>
+
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_1_1" onclick="showAnswer('1_1')" value="Show Answer"></p>
+				
+<p class="explan" id="a_1_1">Quantum mechanics restricts nuclear spin to only integer or half-integer (1/2, 3/2, 5/2, etc) values, so <i>I</i> = 3/4 is not permitted. <a href="/why-i--frac12-1-etc.htm" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION 1, QUIZ QUESTION  3############## -->
+
+<li style="margin-top: 8px">Concerning nuclear spin (<b><i>I</i></b>), which of the following statements is false?
+<ol type="a" id="q_1_2">
+
+<li ><input type=radio name="c_1_2" > A longer but equivalent name for "spin" is "spin angular momentum".
+</li>
+		
+<li ><input type=radio name="c_1_2" > For hydrogen (¹H) MRI it is common and acceptable to use the terms "nucleus", "spin", and "proton" interchangeably.
+
+</li>
+<li ><input type=radio name="c_1_2" >  Routine clinical MRI measures signal from hydrogen (¹H) nuclei only.
+</li>
+
+<li id="correct_1_2"><input type=radio name="c_1_2" id="c_1_2"> The hydrogen (¹H) nucleus contains one proton and one electron.
+</li>
+		
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_1_2" onclick="showAnswer('1_2')" value="Show Answer"></p>
+				
+<p class="explan" id="a_1_2"> The hydrogen (¹H) nucleus contains only a single proton surrounded by an electron cloud, so d) is false. The other statements are all true.
+<a href="/ proton--nucleus--spin.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION 1, QUIZ QUESTION  4############## -->
+<li style="margin-top: 8px"> Concerning nuclear spin (<b><i>I</i></b>), which of the following statements is false?
+<ol type="a" id="q_1_3">
+
+<li ><input type=radio name="c_1_3" > Protons and neutrons each have spin = ½.
+</li>
+		
+
+<li id="correct_1_3"><input type=radio name="c_1_3" id="c_1_3"> To determine net nuclear spin (<b><i>I</i></b>), you simply add up the number of protons and neutrons and divide by 2.
+</li>
+<li ><input type=radio name="c_1_3" > Different isotopes of the same element commonly have different nuclear spins.
+</li>
+		
+<li ><input type=radio name="c_1_3" >  Every element has at least one isotope with non-zero spin.
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_1_3" onclick="showAnswer('1_3')" value="Show Answer"></p>
+				
+<p class="explan" id="a_1_3">Net nuclear spin (<b><i>I</i></b>) does depend on the total number of protons and neutrons, but no simple formula for <b><i>I</i></b> exists as interactions between more elementary components (quarks and gluons) must be considered. The other statements — a), c) and d) — are all true.
+<a href="/predict-nuclear-spin-i.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+
+
+
+ 
+<!-- ################ SECTION 1, QUIZ QUESTION  5############## -->
+
+<li style="margin-top: 8px">Concerning nuclear spin (<b><i>I</i></b>) and NMR, which of the following statements is false?
+<ol type="a" id="q_1_4">
+
+<li ><input type=radio name="c_1_4" > All nuclei can undergo NMR except those containing even numbers of <u>both</u> protons and neutrons.
+</li>
+		
+<li ><input type=radio name="c_1_4" > Every element in the periodic table has at least one isotope that can undergo NMR.
+</li>
+<li ><input type=radio name="c_1_4" >  Across the periodic table nuclear spins (<i>I</i>) with values ranging from 0 to 8 can be found.
+</li>
+
+<li id="correct_1_4"><input type=radio name="c_1_4" id="c_1_4"> Nuclei with <i>I</i> = 0 readily undergo NMR.
+ </li>
+		
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_1_4" onclick="showAnswer('1_4')" value="Show Answer"></p>
+				
+<p class="explan" id="a_1_4"> Only nuclei with non-zero spins can undergo NMR, so d) is false. The other statements are all true.
+ <a href="/ predict-nuclear-spin-i.html " target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION 1, QUIZ QUESTION  6############## -->
+
+<li style="margin-top: 8px"> Which of the following statements concerning the magnetic dipole moment is false?
+ <ol type="a" id="q_1_5">
+
+<li ><input type=radio name="c_1_5" > It is a representation of the nucleus modeled as a tiny bar magnet with north and south poles.
+</li>
+		
+<li ><input type=radio name="c_1_5" > An alternative representation is a vector (<b>μ</b>) arising from a small current loop.
+</li>
+
+<li ><input type=radio name="c_1_5" >  Like a compass needle, a dipole moment will tend to align with an externally applied magnetic field to assume its lowest energy state.
+</li>
+
+
+<li id="correct_1_5"><input type=radio name="c_1_5" id="c_1_5"> The dipole moment will precess when placed in an external magnetic field.
+</li>
+		
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_1_5" onclick="showAnswer('1_5')" value="Show Answer"></p>
+				
+<p class="explan" id="a_1_5">The magnetic dipole moment (<b>μ</b>) will experience a torque causing it to align with an externally applied magnetic field, but will not precess around the field.
+<a href="/magnetic-dipole-moment.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION 1, QUIZ QUESTION  7############## -->
+
+<li style="margin-top: 8px">Which of the following statements about a magnetic dipole placed in an external magnetic field is false?
+<ol type="a" id="q_1_6">
+
+<li id="correct_1_6"><input type=radio name="c_1_6" id="c_1_6"> The dipole is at its lowest energy state when pointing in a direction opposite the field.
+</li>
+
+
+<li ><input type=radio name="c_1_6" > The torque (twisting force) experienced by the dipole is directly proportional to the strength of the external field.
+</li>
+		
+<li ><input type=radio name="c_1_6" > The torque (twisting force) experienced by the dipole depends on the angle between the dipole and the external field.
+</li>
+
+		
+<li ><input type=radio name="c_1_6" >  The energy of the dipole-external field system depends on the angle between the dipole and the external field.
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_1_6" onclick="showAnswer('1_6')" value="Show Answer"></p>
+				
+<p class="explan" id="a_1_6">The dipole (<b>μ</b>) experiences a torque (<b>τ</b>) given by the vector cross-product <b>τ</b> =  <b>μ x B<sub>0</sub></b>. In terms of scalar magnitudes: ||<i>τ</i>|| = ||<i>μ</i>||  ||<i>B<sub>0</sub></i>|| <i>sin θ</i>, where <i>θ</i> is the angle between them. The energy (<i>E</i>) is defined by the dot product, E =  −<b>μ • B<sub>0</sub></b> =  −||<i>μ</i>||  ||<i>B<sub>0</sub></i>|| <i>cos θ</i>. The energy is at its maximum (not a minimum), when the dipole points opposite the field (<i>θ</i> = 180°), so answer a) is false, .
+<a href="/magnetic-dipole-moment.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+	
+<!-- ################ SECTION 1, QUIZ QUESTION  8############## -->
+
+<li style="margin-top: 8px">The dipole magnetic moment (<i><b>μ</b></i>) is directly proportional to nuclear spin (<i><b>I</b></i>), connected by a constant called the
+<ol type="a" id="q_1_7">
+<li id="correct_1_7"><input type=radio name="c_1_7" id="c_1_7"> Gyromagnetic ratio (<i>γ</i>)
+</li>
+
+<li ><input type=radio name="c_1_7" > Planck's constant (<i>h</i>)
+ </li>
+		
+<li ><input type=radio name="c_1_7" > Nuclear susceptibility (<i>χ</i>)
+ </li>
+
+		
+<li ><input type=radio name="c_1_7" >  Chemical shift (<i>δ</i>)
+ </li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_1_7" onclick="showAnswer('1_7')" value="Show Answer"></p>
+				
+<p class="explan" id="a_1_7"> The two are connected by the gyromagnetic ratio (<i>γ</i>), described through the relationship: <b>μ</b> = <i>γ</i><b>I</b>
+ <a href="/gyromagnetic-ratio-gamma.html " target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION 1, QUIZ QUESTION  9############## -->
+
+<li style="margin-top: 8px"> Which of the following statements about the gyromagnetic ratio (<i>γ</i>) is false?
+ <ol type="a" id="q_1_8">
+
+<li ><input type=radio name="c_1_8" > It can be expressed in units of MHz/Tesla.
+</li>
+		
+<li ><input type=radio name="c_1_8" > It may have a negative value.
+</li>
+
+		
+<li ><input type=radio name="c_1_8" >  It is different for each element.
+</li>
+
+<li id="correct_1_8"><input type=radio name="c_1_8" id="c_1_8"> It is the same for all isotopes of a given element.
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_1_8" onclick="showAnswer('1_8')" value="Show Answer"></p>
+				
+<p class="explan" id="a_1_8">The gyromagnetic ratio (<i>γ</i>) is a constant of proportionality between the dipole magnetic moment (<b>μ</b>) and nuclear spin (<b>I</b>). It is commonly expressed in units of MHz/T. Although usually a positive number, it may be negative. A negative value for <i>γ</i> means that the magnetic moment and spin point in opposite directions. The gyromagnetic ratio (<i>γ</i>) is different for every isotope of every element, so answer d) is false. 
+<a href="/gyromagnetic-ratio-gamma.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+<!-- ################ SECTION 1, QUIZ QUESTION  10############## -->
+
+<li style="margin-top: 8px">The ¹H nucleus has a spin (<b><i>I</i></b>) = ½. When placed in an external magnetic field, its number of measurable spin states (eigenstates) will be
+<ol type="a" id="q_1_9">
+
+<li ><input type=radio name="c_1_9" > 0</li>
+		
+<li ><input type=radio name="c_1_9" > ½ </li>
+
+		
+<li ><input type=radio name="c_1_9" >  1 </li>
+<li id="correct_1_9"><input type=radio name="c_1_9" id="c_1_9"> 2 </li>
+
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_1_9" onclick="showAnswer('1_9')" value="Show Answer"></p>
+				
+<p class="explan" id="a_1_9">The number of observable spin states for a nucleus with spin <b><i>I</i></b> equals 2<b><i>I</i></b> +1. So the ¹H nucleus has 2(½) + 1 = 2 possible spin states.
+<a href="/spin-vs-spin-state.html " target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+<!-- ################ SECTION 1, QUIZ QUESTION  11############## -->
+
+<li style="margin-top: 8px">Besides ¹H, two nuclei commonly studied by NMR spectroscopy are ³¹P and ¹³C. The fact that all three isotopes have identical nuclear spins (<b><i>I</i></b>) = ½ means that when placed in an external magnetic field
+<ol type="a" id="q_1_10">
+
+<li ><input type=radio name="c_1_10" > They will have exactly the same resonant frequencies.
+</li>
+		
+
+<li id="correct_1_10"><input type=radio name="c_1_10" id="c_1_10"> They will each exhibit two discrete measurable energy states.
+</li>
+
+<li ><input type=radio name="c_1_10" > The difference in energy states will be the same for each isotope.
+</li>
+
+		
+<li ><input type=radio name="c_1_10" >  They will have the same gyromagnetic ratio (<i>γ</i>). 
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_1_10" onclick="showAnswer('1_10')" value="Show Answer"></p>
+				
+<p class="explan" id="a_1_10">All spin-½ particles will exhibit two discrete energy states when placed in an external magnetic field, so answer b) is true. The isotopes will have different gyromagnetic ratios (<i>γ</i>), different resonant frequencies, and different energy levels, however.
+<a href="/spin-vs-spin-state.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+		
+
+
+
+
+
+<!-- ################ SECTION 1, QUIZ QUESTION  12############## -->
+
+<li style="margin-top: 8px">²³Na is another NMR active isotope used for imaging research. It has a nuclear spin (<b><i>I</i></b>) = 3/2. Compared to the ¹H nucleus with <b><i>I</i></b> = 1/2, in an external magnetic field 
+<ol type="a" id="q_1_11">
+
+<li ><input type=radio name="c_1_11" > ²³Na will have a higher gyromagnetic ratio (<i>γ</i>) than ¹H.
+</li>
+		
+<li ><input type=radio name="c_1_11" > ²³Na will have a higher resonance frequency than ¹H.
+</li>
+		
+<li ><input type=radio name="c_1_11" >  ²³Na will manifest 3 discrete energy states.
+</li>
+<li id="correct_1_11"><input type=radio name="c_1_11" id="c_1_11"> ²³Na will manifest 4 discrete energy states.
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_1_11" onclick="showAnswer('1_11')" value="Show Answer"></p>
+				
+<p class="explan" id="a_1_11">The number of observable energy states for a nucleus with spin <b><i>I</i></b> equals 2<b><i>I</i></b> +1. The ²³Na nucleus therefore has 2(3/2) + 1 = 4 possible spin states, so answer d) is correct. The gyromagnetic ratio (<i>γ</i>) and hence resonance frequency do not depend on <b><i>I</i></b>.
+<a href="/spin-vs-spin-state.html " target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+<!-- ################ SECTION 1, QUIZ QUESTION  13############## -->
+
+<li style="margin-top: 8px">The famous experiment demonstrating how spin-½ particles can be physically separated into two groups by a magnetic field was performed in 1922 by
+<ol type="a" id="q_1_12">
+
+<li ><input type=radio name="c_1_12" > Einstein</li>
+		
+<li ><input type=radio name="c_1_12" > Heisenberg</li>
+
+<li id="correct_1_12"><input type=radio name="c_1_12" id="c_1_12"> Stern and Gerlach
+</li>
+		
+<li ><input type=radio name="c_1_12" >  Planck and Dirac
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_1_12" onclick="showAnswer('1_12')" value="Show Answer"></p>
+				
+<p class="explan" id="a_1_12">This is a description of the Stern-Gerlach experiment, often provided as tangible proof for the quantization of nuclear angular momentum visible in the macroscopic world.
+<a href="/spin-vs-spin-state.html " target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION 1, QUIZ QUESTION  14############## -->
+
+<li style="margin-top: 8px">Which of the following names refers to the highest energy spin state of an ¹H nucleus in a magnetic field?
+<ol type="a" id="q_1_13">
+
+<li ><input type=radio name="c_1_13" > Spin-up</li>
+		
+
+<li id="correct_1_13"><input type=radio name="c_1_13" id="c_1_13"> Spin-down
+</li>
+		
+<li ><input type=radio name="c_1_13" >  Parallel</li>
+<li ><input type=radio name="c_1_13" > |+½>
+</li>
+
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_1_13" onclick="showAnswer('1_13')" value="Show Answer"></p>
+				
+<p class="explan" id="a_1_13">The highest energy state occurs when the spin has a direction opposite that of the main magnetic field and is denoted spin-down (correct answer), anti-parallel, or  |−½>.
+<a href="/energy-splitting.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION 1, QUIZ QUESTION  15############## -->
+
+<li style="margin-top: 8px">Why don't all the nuclear spins simply fall to their lowest energy states to minimize total system energy?
+<ol type="a" id="q_1_14">
+
+<li ><input type=radio name="c_1_14" > They actually do. The above statement is false.
+</li>
+		
+<li ><input type=radio name="c_1_14" > Such a highly skewed distribution of energy states is prohibited by quantum mechanics.
+</li>
+
+<li id="correct_1_14"><input type=radio name="c_1_14" id="c_1_14"> Thermal molecular collisions tend to equalize the distribution of nuclei between lower- and higher-energy states.
+</li>
+		
+<li ><input type=radio name="c_1_14" >  The distribution of energy states cannot be known due to the Heisenberg Uncertainty Principle.
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_1_14" onclick="showAnswer('1_14')" value="Show Answer"></p>
+				
+<p class="explan" id="a_1_14">The natural tendency for spins to fall to lower energy states is offset by thermal collisions that tend to equalize the two energy levels. The result is a compromise predicted by the Boltzmann distribution.
+<a href="/ fall-to-lowest-state.html " target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+<!-- ################ SECTION 1, QUIZ QUESTION 16############## -->
+
+<li style="margin-top: 8px"> According to quantum mechanical (QM) theory and experiment, which statement is true?
+ <ol type="a" id="q_1_15">
+
+<li ><input type=radio name="c_1_15" > A spin-½ particle like the proton must exist exclusively in either the spin-up or spin-down state.
+ </li>
+		
+<li ><input type=radio name="c_1_15" > Conclusive evidence for the QM restriction described in part a) is provided by the Stern-Gerlach experiment.
+ </li>
+
+<li id="correct_1_15"><input type=radio name="c_1_15" id="c_1_15"> Scientists have been able to trap and manipulate spins in a superposition between their up- and down-states.
+ </li>
+		
+<li ><input type=radio name="c_1_15" >  There is nearly universal agreement among scientists that the Copenhagen Interpretation of QM is correct.
+ </li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_1_15" onclick="showAnswer('1_15')" value="Show Answer"></p>
+				
+<p class="explan" id="a_1_15"> Quantum mechanics does not require a proton to exist exclusively in one of its two primary (eigen)states, only a linear combination of the two. Thus answer a) is false. The Stern Gerlach experiment only shows that when a measurement is made a group of spin-½ particles that one of two results becomes physically manifest. This does not speak to the underlying quantum reality prior to measurement, however, so b) is also false.  Haroche and Weinland, working independently, were awarded the Nobel Prize for Physics in 2012 for their experiments trapping and manipulating spins in superposition states, so c) is true.  The Copenhagen Interpretation of QM, while still the most popular, is far from being universally accepted, so d) is false. Recent polls of quantum physicists found the Many Worlds Interpretation gaining significant ground.  Of course, neither may be correct!
+ <a href="/quantum-reality.html " target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+		
+	
+
+<!--##################################################-->
+<!--############SCORING SECTION Needs to go at end of each subsection-->
+
+</ol><p><input type=button id="show_all_1" onclick="showAllAnswers('1')" value="Show All Answers for Section"><span style="font-weight: bold" id="scoretxt_1"></span></p>
+<p><a href="#top">Back to top of page</a></p></div>
+<!--END OF SCORING SECTION-->
+
+
+<!-- ###############NEW QUIZ SUBSECTION ##################-->
+
+<hr style="1px solid black">
+<!-- Creates optional line above new Quiz Subsection Title ---->
+
+<h1 style="color:black";><a name="1"></a>PRECESSION</h1>
+
+<!-- The Section Name and its corresponding number (here 0) which has an href in the index must be changed/filled in.  Note that the first section is identified as “0” here only;  and the second section is denoted “2”, etc. 
+
+This is confusing because subsequently it is denoted as Section 1 and reference to all questions in this section begin with a 1.  However, the first question of Section 1 is called question 0, presumably to assist in scoring.
+
+Thus, the first question of Section 1 is denoted as q_1_0 and its second question is denoted q_1_1.	
+
+When a second section of Questions is added, this is called Section 2 with first and second questions denoted q_2_0 and q_2_1. 
+
+Each section has counting variables corresponding to each question. So the counting variables  are denoted c_1_0 for the Section 1/first question, while c_2_1 counts for Section 2/second question. -->
+
+<!-- FOR THE PURPOSES OF THIS DOCUMENT WE WILL CONSIDER ALL QUESTIONS TO REFER TO SECTION 2 and are numbered consecutively. THE WORD DOCUMENT CAN THEN BE PUT INTO PROPER FORM BY “SEARCH AND REPLACE 2 BY THE APPROPRIATE SECTION NUMBER”-->
+
+
+<!-- ################ SECTION M, QUIZ QUESTION  1############## -->
+
+<ol><li style="margin-top: 8px">Nuclear precession can be considered the result of a "twisting force" or torque (<b><i>τ</i></b>) on a spin's angular momentum as it interacts with an externally applied magnetic field. The orientation of this torque is 
+<ol type="a" id="q_2_0">
+
+<li ><input type=radio name="c_2_0" > Collinear with the spin.
+</li>
+		
+<li ><input type=radio name="c_2_0" > Collinear with the spin but in the opposite direction.
+</li>
+<li ><input type=radio name="c_2_0" > Collinear with the magnetic field.
+</li>
+
+
+<li id="correct_2_0"><input type=radio name="c_2_0" id="c_2_0"> Perpendicular to both the spin and magnetic field.
+</li>
+		
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_2_0" onclick="showAnswer('2_0')" value="Show Answer"></p>
+				
+<p class="explan" id="a_2_0">The torque (<b><i>τ</i></b>) is perpendicular to both the spin angular momentum and the magnetic field. This creates a "twisting force" that can be thought of as "pushing the spin from the side" resulting in nuclear precession rather than alignment with the field.<a href="/why-precession.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+
+<!-- ################ SECTION 2, QUIZ QUESTION  2############## -->
+
+<li style="margin-top: 8px">Precession may be expressed in either angular (<i>ω<sub>0</sub></i>) or cyclic (<i>f<sub>0</sub></i>) frequency. The two are are related by the equation<ol type="a" id="q_2_1">
+
+<li id="correct_2_1"><input type=radio name="c_2_1" id="c_2_1"> <i>ω<sub>0</sub></i> = <i>2 π </i><i>f<sub>0</sub></i>
+</li>
+
+<li ><input type=radio name="c_2_1" > <i>f<sub>0</sub></i> = <i>2 π </i><i>ω<sub>0</sub></i>
+</li>
+		
+<li ><input type=radio name="c_2_1" > <i>ω<sub>0</sub></i> = <i> π </i><i>f<sub>0</sub></i>
+</li>
+
+		
+<li ><input type=radio name="c_2_1" >  <i>f<sub>0</sub></i> = <i>π </i><i>ω<sub>0</sub></i>
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_2_1" onclick="showAnswer('2_1')" value="Show Answer"></p>
+				
+<p class="explan" id="a_2_1">The correct equation is a). Angular frequency (<i>ω<sub>0</sub></i>) is measured in radians per second, where 2 π radians/sec = 360°/sec = 1 cycle (or revolution) per second = 1 Hertz (Hz). Thus the cyclic frequency (<i>f<sub>0</sub></i>) must be multiplied by 2 π  to obtain angular frequency (<i>ω<sub>0</sub></i>).
+<a href="/why-precession.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION 2, QUIZ QUESTION  3############## -->
+
+<li style="margin-top: 8px">The conventional units for angular frequency (<i>ω<sub>0</sub></i>) are 
+<ol type="a" id="q_2_2">
+
+<li ><input type=radio name="c_2_2" > Cycles per second (cps)
+</li>
+		
+<li ><input type=radio name="c_2_2" > Hertz (Hz)
+</li>
+
+<li id="correct_2_2"><input type=radio name="c_2_2" id="c_2_2"> Radians/sec
+</li>
+		
+<li ><input type=radio name="c_2_2" >  Revolutions per minute (rpm)</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_2_2" onclick="showAnswer('2_2')" value="Show Answer"></p>
+				
+<p class="explan" id="a_2_2">The correct answer is c), radians per second. The other options are used to express cyclic frequency (<i>f<sub>0</sub></i>).
+<a href="/ why-precession.html " target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION 2, QUIZ QUESTION  4############## -->
+<li style="margin-top: 8px"> Which of the following is the correct form of the Larmor equation?
+ <ol type="a" id="q_2_3">
+
+<li id="correct_2_3"><input type=radio name="c_2_3" id="c_2_3"> <i>f<sub>0</sub> =  γ B<sub>0</sub></i> 
+</li>
+
+
+<li ><input type=radio name="c_2_3" > <i>f<sub>0</sub> =  γ / B<sub>0</sub></i>
+</li>
+		
+<li ><input type=radio name="c_2_3" > <i>f<sub>0</sub> =  B<sub>0</sub> /  γ </i>
+</li>
+
+		
+<li ><input type=radio name="c_2_3" >  None of these equations is correct.
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_2_3" onclick="showAnswer('2_3')" value="Show Answer"></p>
+				
+<p class="explan" id="a_2_3">The correct answer is a), <i>f<sub>0</sub> =  γ B<sub>0</sub></i>.
+<a href="/who-was-larmor.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+
+
+
+ 
+<!-- ################ SECTION 2, QUIZ QUESTION  5############## -->
+
+<li style="margin-top: 8px">What is the approximate gyromagnetic ratio (<i>γ</i>) of the ¹H nucleus?
+<ol type="a" id="q_2_4">
+
+<li ><input type=radio name="c_2_4" > 10.7 MHz/Tesla
+</li>
+<li id="correct_2_4"><input type=radio name="c_2_4" id="c_2_4"> 42.6 MHz/Tesla
+</li>
+		
+<li ><input type=radio name="c_2_4" > 64.0 MHz/Tesla
+</li>
+
+		
+<li ><input type=radio name="c_2_4" > 128 MHz/Tesla
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_2_4" onclick="showAnswer('2_4')" value="Show Answer"></p>
+				
+<p class="explan" id="a_2_4">The correct answer is b), 42.6 MHz/Tesla. I don't think you need to memorize this number, but it can easily be retrieved as I do believe everyone involved with MRI should know that a 1.5T scanner has a resonance frequency of about 64 MHz. Thus <i>γ</i> ≈ 64 MHz ÷ 1.5 Tesla, giving a <i>γ</i> of about 42.6 MHz/T.
+<a href="/who-was-larmor.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION 2, QUIZ QUESTION  6############## -->
+
+<li style="margin-top: 8px">If the ¹H resonance frequency in a 1.5T scanner is about 64 MHz, what is the approximate ¹H resonance frequency at 7T?
+<ol type="a" id="q_2_5">
+
+<li ><input type=radio name="c_2_5" > 128 MHz</li>
+		
+<li ><input type=radio name="c_2_5" > 256 MHz</li>
+
+<li id="correct_2_5"><input type=radio name="c_2_5" id="c_2_5"> 298 MHz</li>
+		
+<li ><input type=radio name="c_2_5" >  426 MHz</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_2_5" onclick="showAnswer('2_5')" value="Show Answer"></p>
+				
+<p class="explan" id="a_2_5">Resonance frequency is directly proportional to field strength. So the ¹H resonant frequency at 7.0T can be calculated as 64 MHz x (7.0/1.5) ≈ 298 MHz. <a href="/who-was-larmor.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION 2, QUIZ QUESTION  7############## -->
+
+<li style="margin-top: 8px">The gyromagnetic ratio (<i>γ</i>) of the ¹³C nucleus is about 10.7 MHz/T. What is the ¹³C
+resonance frequency at 3.0T?<ol type="a" id="q_2_6">
+
+<li ><input type=radio name="c_2_6" > 10.7 MHz
+</li>
+		
+<li ><input type=radio name="c_2_6" > 21.4 MHz</li>
+
+<li id="correct_2_6"><input type=radio name="c_2_6" id="c_2_6"> 32.1 MHz</li>
+		
+<li ><input type=radio name="c_2_6" >  64.2 MHz</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_2_6" onclick="showAnswer('2_6')" value="Show Answer"></p>
+				
+<p class="explan" id="a_2_6">By the Larmor equation: <i>f<sub>0</sub> =  γ B<sub>0</sub></i> = (10.7 MHz/T) x 3.0T = 32.1 MHz.
+<a href="/who-was-larmor.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+	
+<!-- ################ SECTION 2, QUIZ QUESTION  8############## -->
+
+<li style="margin-top: 8px">Sir Joseph Larmor developed his famous equation to allow calculation of NMR resonance frequencies in different magnetic fields. <ol type="a" id="q_2_7">
+
+<li ><input type=radio name="c_2_7" > True</li>
+
+<li id="correct_2_7"><input type=radio name="c_2_7" id="c_2_7"> False </li>
+		
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_2_7" onclick="showAnswer('2_7')" value="Show Answer"></p>
+				
+<p class="explan" id="a_2_7">False. Larmor developed his equation in the late 19th Century before NMR was even discovered. He was investigating the splitting of optical spectra by magnetic fields, and his equation described the precession of orbital electrons. In the 20th Century the Larmor equation was found to apply to any particle with spin angular momentum and was hence fully applicable to NMR.<a href="/who-was-larmor.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION 2, QUIZ QUESTION  9############## -->
+
+<li style="margin-top: 8px">Which of the following statements about nuclear precession is true?
+<ol type="a" id="q_2_8">
+
+<li ><input type=radio name="c_2_8" > Nuclear precession will not begin until a radiofrequency pulse is applied.
+</li>
+		
+<li ><input type=radio name="c_2_8" > Sustaining nuclear precession requires the continual input of energy from the environment.
+</li>
+
+<li id="correct_2_8"><input type=radio name="c_2_8" id="c_2_8"> Protons in every drop of water in the ocean and in every snowflake at the north pole are precessing right now. 
+</li>
+		
+<li ><input type=radio name="c_2_8" >  It is impossible to obtain MR images using the earth's magnetic field because it is so small.
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_2_8" onclick="showAnswer('2_8')" value="Show Answer"></p>
+				
+<p class="explan" id="a_2_8">Nuclear precession occurs spontaneously when protons are placed in any magnetic field.  No energy input is required to start or sustain precession. Precession occurs even in the tiniest magnetic fields, including that of the earth, so answer c) is true. In fact, crude MR images using the earth's magnetic field alone have been obtained.
+
+<a href="/energy-for-precession.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+<!-- ################ SECTION 2, QUIZ QUESTION  10############## -->
+
+<li style="margin-top: 8px">The slight difference in resonant frequencies noted between ¹H-nuclei in different molecular environments is due to
+<ol type="a" id="q_2_9">
+
+<li ><input type=radio name="c_2_9" > Different gyromagnetic ratios
+</li>
+		
+
+<li id="correct_2_9"><input type=radio name="c_2_9" id="c_2_9"> Different local magnetic fields
+</li>
+		
+<li ><input type=radio name="c_2_9" > Different relaxation times
+</li>
+
+<li ><input type=radio name="c_2_9" >  Different spin quantum numbers
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_2_9" onclick="showAnswer('2_9')" value="Show Answer"></p>
+				
+<p class="explan" id="a_2_9">This question concerns the origin of <b>chemical shift</b>. Variable shielding and deshielding of ¹H-nuclei by molecular electron clouds results in slightly different local magnetic fields that each nucleus experiences. These different local fields alter resonance frequencies slightly.  <a href="/chemical-shift.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+<!-- ################ SECTION 2, QUIZ QUESTION  11############## -->
+
+<li style="margin-top: 8px">Chemical shifts (<i>δ</i>) are typically reported in units of
+<ol type="a" id="q_2_10">
+
+<li ><input type=radio name="c_2_10" > Gauss (G)
+</li>
+		
+<li ><input type=radio name="c_2_10" > Millitesla per meter (mT/m)
+</li>
+
+<li id="correct_2_10"><input type=radio name="c_2_10" id="c_2_10"> Parts per million (ppm)
+</li>
+		
+<li ><input type=radio name="c_2_10" >  Percent (%)</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_2_10" onclick="showAnswer('2_10')" value="Show Answer"></p>
+				
+<p class="explan" id="a_2_10">Chemical shifts are typically reported in ppm, which is independent of field strength. Note that ppm, like %, is dimensionless. <a href="/chemical-shift.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+		
+
+
+
+
+
+<!-- ################ SECTION 2, QUIZ QUESTION  12############## -->
+
+<li style="margin-top: 8px">The abbreviation "ppm" stands for
+<ol type="a" id="q_2_11">
+
+<li ><input type=radio name="c_2_11" > Proton paramagnetic moment</li>
+		
+<li ><input type=radio name="c_2_11" > Proton-proton magnetization
+</li>
+<li ><input type=radio name="c_2_11" >  Precession per minute
+</li>
+
+
+<li id="correct_2_11"><input type=radio name="c_2_11" id="c_2_11"> Parts per million
+</li>
+		
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_2_11" onclick="showAnswer('2_11')" value="Show Answer"></p>
+				
+<p class="explan" id="a_2_11">The correct answer is d), "parts per million", the commonly used field-independent method to report chemical shifts.
+<a href="/chemical-shift.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+<!-- ################ SECTION 2, QUIZ QUESTION  13############## -->
+
+<li style="margin-top: 8px">The chemical shift (<i>δ</i>) between water and fat protons measured at 1.5T is approximately 3.5 ppm. What would their chemical shift be at 3.0T?<ol type="a" id="q_2_12">
+
+<li ><input type=radio name="c_2_12" > 1.75 ppm</li>
+
+<li id="correct_2_12"><input type=radio name="c_2_12" id="c_2_12"> 3.5 ppm</li>
+
+		
+<li ><input type=radio name="c_2_12" > 7.0 ppm
+</li>
+		
+<li ><input type=radio name="c_2_12" >  10.5 ppm</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_2_12" onclick="showAnswer('2_12')" value="Show Answer"></p>
+				
+<p class="explan" id="a_2_12">The chemical shift (<i>δ</i>) in ppm is independent of field strength, so b) is correct.
+<a href="/chemical-shift.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION 2, QUIZ QUESTION  14############## -->
+
+<li style="margin-top: 8px">The methyl protons of two brain metabolites, N-acetyl aspartate (NAA) and Creatine (Cr), have a chemical shift difference of 1.0 ppm. At a field strength of 1.5 T (where the water Larmor frequency is 64 MHz), their difference in frequency would be about<ol type="a" id="q_2_13">
+
+
+<li ><input type=radio name="c_2_13" > 64 MHz</li>
+		
+<li ><input type=radio name="c_2_13" > 1.0 MHz</li>
+
+		
+<li ><input type=radio name="c_2_13" >  64 kHz
+
+<li id="correct_2_13"><input type=radio name="c_2_13" id="c_2_13"> 64 Hz</li>
+
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_2_13" onclick="showAnswer('2_13')" value="Show Answer"></p>
+				
+<p class="explan" id="a_2_13">The frequency difference is just the Larmor frequency x the chemical shift = 64 MHz x 1 ppm = (64 x 10<sup>6</sup> Hz) x (1.0 x 10<sup>−6</sup>) = 64 Hz. <a href="/chemical-shift.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION 2, QUIZ QUESTION  15############## -->
+
+<li style="margin-top: 8px">At 1.5 T the chemical shift between water and fat protons results in a frequency difference of approximately 220 Hz. What would be their frequency difference at 3.0T?<ol type="a" id="q_2_14">
+
+<li ><input type=radio name="c_2_14" > 110 Hz
+</li>
+		
+<li ><input type=radio name="c_2_14" > 220 Hz
+</li>
+
+<li id="correct_2_14"><input type=radio name="c_2_14" id="c_2_14"> 440 Hz
+</li>
+		
+<li ><input type=radio name="c_2_14" >  660 Hz
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_2_14" onclick="showAnswer('2_14')" value="Show Answer"></p>
+				
+<p class="explan" id="a_2_14">Field strength is doubled, so Larmor frequency is doubled, and frequency difference due to chemical shift is also doubled. The correct answer is therefore c).
+<a href="/chemical-shift.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+<!-- ################ SECTION 2, QUIZ QUESTION 16############## -->
+
+<li style="margin-top: 8px">Which of the following statements concerning the net magnetization (<b>M</b>) is false?
+<ol type="a" id="q_2_15">
+
+<li ><input type=radio name="c_2_15" > <b>M</b> can be considered the vector sum or average millions of individual nuclear spins.
+</li>
+		
+<li ><input type=radio name="c_2_15" > Using <b>M</b> allows the NMR phenomenon to be analyzed using classical (rather than quantum) physics.
+</li>
+
+		
+<li ><input type=radio name="c_2_15" >  At equilibrium, <b>M</b> is aligned with the external magnetic field.
+</li>
+
+<li id="correct_2_15"><input type=radio name="c_2_15" id="c_2_15"> At equilibrium, <b>M</b> precesses around the direction of the external magnetic field.
+</li>
+
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_2_15" onclick="showAnswer('2_15')" value="Show Answer"></p>
+				
+<p class="explan" id="a_2_15">All statements are true except d). At equilibrium, <b>M</b> is stationary and aligned with the external magnetic field. Application of an RF-pulse is required to tip <b>M</b> out of alignment with <b>B<sub>0</sub></b> at which time it will begin to precess.
+<a href="/net-magnetization-m.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION 2, QUIZ QUESTION  17############## -->
+
+<li style="margin-top: 8px">In an unmagnetized sample of material far away from strong external magnetic fields, the net magnetization (<b>M</b>)
+<ol type="a" id="q_2_16">
+
+<li id="correct_2_16"><input type=radio name="c_2_16" id="c_2_16"> Is effectively zero in all directions.
+</li>
+
+
+<li ><input type=radio name="c_2_16" > Has a significant non-zero longitudinal component. 
+</li>
+		
+<li ><input type=radio name="c_2_16" > Has significant non-zero transverse components.
+</li>
+
+		
+<li ><input type=radio name="c_2_16" >  Spontaneously precesses. 
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_2_16" onclick="showAnswer('2_16')" value="Show Answer"></p>
+				
+<p class="explan" id="a_2_16">In the absence of a strong external magnetic field, individual proton spins are randomly oriented in space and their vector sum is essentially zero in all directions. In reality, however, some small external magnetic field is always present, if only from the earth itself. Thus <b>M</b> is only effectively (but never completely zero) in all directions.
+<a href="/does-m-instantly-appear.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+<!-- ################ SECTION 2, QUIZ QUESTION  18############## -->
+
+<li style="margin-top: 8px">Why does the net magnetization (<b>M</b>) of an unmagnetized sample of material placed in a magnetic field not initially develop transverse components?<ol type="a" id="q_2_17">
+
+<li ><input type=radio name="c_2_17" > This premise of the question is false; <b>M</b> develops transverse components from the very beginning.
+</li>
+		
+<li ><input type=radio name="c_2_17" > The transverse components are not seen at first because they take several seconds to develop.
+</li>
+
+<li ><input type=radio name="c_2_17" >  The transverse components are neutralized by the precession of <b>M</b>.
+
+</li>
+
+
+<li id="correct_2_17"><input type=radio name="c_2_17" id="c_2_17"> The individual spins contributing to <b>M</b> have randomly dispersed transverse components lacking phase coherence.
+</li>
+		
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_2_17" onclick="showAnswer('2_17')" value="Show Answer"></p>
+				
+<p class="explan" id="a_2_17">Answer d) is correct because the spins have random transverse components of angular momentum. An RF-pulse or energy input near the Larmor frequency will be necessary to generate some phase coherence and transverse components. <a href="/does-m-instantly-appear.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+		
+
+<!-- ################ SECTION 2, QUIZ QUESTION  19############## -->
+
+<li style="margin-top: 8px">What intrinsic tissue parameter determines the rate at which the longitudinal component of the net magnetization (<b>M</b>) initially develops?
+<ol type="a" id="q_2_18">
+
+<li ><input type=radio name="c_2_18" > Spin density (<i>ρ</i>)
+</li>
+		
+
+<li id="correct_2_18"><input type=radio name="c_2_18" id="c_2_18"> T1</li>
+
+<li ><input type=radio name="c_2_18" > T2</li>
+
+		
+<li ><input type=radio name="c_2_18" >  T2*</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_2_18" onclick="showAnswer('2_18')" value="Show Answer"></p>
+				
+<p class="explan" id="a_2_18">The initial growth of longitudinal magnetization (M<sub>z</sub>) is a simple exponential with time constant T1.
+<a href="/does-m-instantly-appear.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+<!-- ################ SECTION 2, QUIZ QUESTION  20############## -->
+
+<li style="margin-top: 8px">Which of the following statements concerning net magnetization (<b>M</b>) is false?
+<ol type="a" id="q_2_19">
+
+<li ><input type=radio name="c_2_19" > Net magnetization (<b>M</b>) develops when an unmagnetized sample of tissue is placed in an external magnetic field.
+</li>
+		
+<li ><input type=radio name="c_2_19" > Initially <b>M</b> grows in the longitudinal direction as the individual spins seek to align with <b>B<sub>0</sub></b>.
+</li>
+
+<li ><input type=radio name="c_2_19" >  When tipped out of alignment with <b>B<sub>0</sub></b>, <b>M</b> will precess at the same resonance frequency as the individual nuclei comprising it. 
+</li>
+
+
+<li id="correct_2_19"><input type=radio name="c_2_19" id="c_2_19"> <b>M</b> will continue to precess even when completely inverted and pointing in the −<i>z</i> direction (i.e. opposite to <b>B<sub>0</sub></b>).
+ </li>
+		
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_2_19" onclick="showAnswer('2_19')" value="Show Answer"></p>
+				
+<p class="explan" id="a_2_19"> Only d) is false. Even though the individual spins comprising <b>M</b> are always precessing, <b>M</b> itself does not precess unless tipped out of alignment with <b>B<sub>0</sub></b> allowing it to develop nonzero transverse components. Once <b>M</b> is completely inverted 180° with respect to <b>B<sub>0</sub></b>, it no longer has transverse components and is no longer precessing. If left alone after such an inversion, <b>M</b> will simply regrow along the <i>z-</i>axis to return to its initial orientation and magnitude aligned with <b>B<sub>0</sub></b>.
+
+ <a href="/ does-m-also-precess.html " target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+		
+<!-- ################ SECTION 2, QUIZ QUESTION  21############## -->
+
+<li style="margin-top: 8px"> Which of the following statements about nuclear magnetic resonance is false?
+ <ol type="a" id="q_2_20">
+
+<li ><input type=radio name="c_2_20" > Tipping the net magnetization (<b>M</b>) out of initial alignment with <b>B<sub>0</sub></b> requires absorption of energy by the spin system.
+</li>
+		
+<li ><input type=radio name="c_2_20" > In MRI, the source of energy required to initiated NMR is typically provided by a rotating/oscillating radiofrequency field named <b>B<sub>1</sub></b>.
+</li>
+
+<li ><input type=radio name="c_2_20" >  This tipping of (<b>M</b>) is a manifestation of the NMR phenomenon.
+</li>
+
+<li id="correct_2_20"><input type=radio name="c_2_20" id="c_2_20"> Nuclear precession and resonance are essentially the same.
+</li>
+		
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_2_20" onclick="showAnswer('2_20')" value="Show Answer"></p>
+				
+<p class="explan" id="a_2_20">All statements are true except d). Nuclear precession is experienced by all non-zero spin particles when placed in an external magnetic field and requires no input of energy. NMR is a special condition of a spin system requiring the absorption and release of energy over a narrow range of frequencies.
+<a href="/does-precession--nmr.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+
+
+		
+
+<!--##################################################-->
+<!--############SCORING SECTION Needs to go at end of each subsection-->
+
+</ol><p><input type=button id="show_all_2" onclick="showAllAnswers('2')" value="Show All Answers for Section"><span style="font-weight: bold" id="scoretxt_2"></span></p>
+<p><a href="#top">Back to top of page</a></p></div>
+<!--END OF SCORING SECTION-->
+
+<!-- ###############NEW QUIZ SUBSECTION ##################-->
+
+<hr style="1px solid black">
+<!-- Creates optional line above new Quiz Subsection Title ---->
+
+<h1 style="color:black";><a name="2"></a>RESONANCE</h1>
+
+<!-- The Section Name and its corresponding number (here 0) which has an href in the index must be changed/filled in.  Note that the first section is identified as “0” here only;  and the second section is denoted “2”, etc. 
+
+This is confusing because subsequently it is denoted as Section 1 and reference to all questions in this section begin with a 1.  However, the first question of Section 1 is called question 0, presumably to assist in scoring.
+
+Thus, the first question of Section 1 is denoted as q_1_0 and its second question is denoted q_1_1.	
+
+When a second section of Questions is added, this is called Section 2 with first and second questions denoted q_2_0 and q_2_1. 
+
+Each section has counting variables corresponding to each question. So the counting variables  are denoted c_1_0 for the Section 1/first question, while c_2_1 counts for Section 2/second question. -->
+
+<!-- FOR THE PURPOSES OF THIS DOCUMENT WE WILL CONSIDER ALL QUESTIONS TO REFER TO SECTION 3 and are numbered consecutively. THE WORD DOCUMENT CAN THEN BE PUT INTO PROPER FORM BY “SEARCH AND REPLACE 3 BY THE APPROPRIATE SECTION NUMBER”-->
+
+
+<!-- ################ SECTION 3, QUIZ QUESTION  1############## -->
+
+<ol><li style="margin-top: 8px">Which of scientist first experimentally demonstrated the NMR phenomenon in the 1930's and gave it its name? 
+<ol type="a" id="q_3_0">
+
+<li ><input type=radio name="c_3_0" > Felix Bloch
+</li>
+		
+
+<li id="correct_3_0"><input type=radio name="c_3_0" id="c_3_0"> Isidor Rabi
+</li>
+
+<li ><input type=radio name="c_3_0" > Edward Purcell
+</li>
+		
+<li ><input type=radio name="c_3_0" > Peter Mansfield
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_3_0" onclick="showAnswer('3_0')" value="Show Answer"></p>
+				
+<p class="explan" id="a_3_0">Isidor Rabi is credited with naming NMR and being the first to demonstrate its existence experimentally in a molecular beam of LiCl.
+<a href="/who-discovered-nmr.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+
+<!-- ################ SECTION 3, QUIZ QUESTION  2############## -->
+
+<li style="margin-top: 8px">Which of the following statements about the NMR discoveries of Felix Bloch and Edward Purcell is true?
+<ol type="a" id="q_3_1">
+
+<li ><input type=radio name="c_3_1" > The two worked together in adjacent labs at Harvard.
+</li>
+		
+<li ><input type=radio name="c_3_1" > Their experimental setups were nearly identical.
+</li>
+
+<li id="correct_3_1"><input type=radio name="c_3_1" id="c_3_1"> Their initial reports were published simultaneously in 1946.
+</li>
+		
+<li ><input type=radio name="c_3_1" >  Only Bloch received the Nobel Prize for his research.
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_3_1" onclick="showAnswer('3_1')" value="Show Answer"></p>
+				
+<p class="explan" id="a_3_1">Bloch performed his research at Stanford at the same time Purcell was working independently at MIT. Their experimental setups were quite different, Bloch detecting an induction signal from water and Purcell measuring energy absorption in solid paraffin wax. Their initial reports were published simultaneously in the January, 1946 issue of the journal <u>Physical Review</u>, so answer c) is true. Bloch and Purcell jointly received the Nobel Prize for Physics in 1952.
+<a href="/who-discovered-nmr.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION 3, QUIZ QUESTION  3############## -->
+
+<li style="margin-top: 8px">The radiofrequency (RF) field used to inject energy into a spin system to induce nuclear resonance is called
+<ol type="a" id="q_3_2">
+
+<li ><input type=radio name="c_3_2" > <b>B<sub>0</sub></b>
+</li>
+<li id="correct_3_2"><input type=radio name="c_3_2" id="c_3_2"> <b>B<sub>1</sub></b>
+</li>
+
+		
+<li ><input type=radio name="c_3_2" > <b>B<sub>2</sub></b>
+</li>
+
+		
+<li ><input type=radio name="c_3_2" >  <b>M<sub>xy</sub></b>
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_3_2" onclick="showAnswer('3_2')" value="Show Answer"></p>
+				
+<p class="explan" id="a_3_2">The correct answer is <b>B<sub>1</sub></b>. <b>B<sub>0</sub></b> is the main magnetic field and <b>M<sub>xy</sub></b> are the transverse components of net magnetization induced by <b>B<sub>1</sub></b>. There is no field called <b>B<sub>2</sub></b>.
+<a href="/how-does-b1-tip-m.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION 3, QUIZ QUESTION  4############## -->
+<li style="margin-top: 8px">For resonance to occur, <b>B<sub>1</sub></b> must be applied exactly at the Larmor frequency.
+<ol type="a" id="q_3_3">
+
+<li ><input type=radio name="c_3_3" > True</li>
+		
+
+<li id="correct_3_3"><input type=radio name="c_3_3" id="c_3_3"> False </li>
+		
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_3_3" onclick="showAnswer('3_3')" value="Show Answer"></p>
+				
+<p class="explan" id="a_3_3">The <b>B<sub>1</sub></b> must only be applied reasonably close to the Larmor frequency, not exactly. Energy transfer is optimized when <b>B<sub>1</sub></b> is precisely on resonance, but appreciable tipping of <b>M</b> will still occur even if the frequency is not perfect.
+<a href="/why-at-larmor-frequency.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+
+
+
+ 
+<!-- ################ SECTION 3, QUIZ QUESTION  5############## -->
+
+<li style="margin-top: 8px">For resonance to occur, <b>B<sub>1</sub></b> must be applied exactly perpendicularly to <b>B<sub>0</sub></b>.
+<ol type="a" id="q_3_4">
+
+<li ><input type=radio name="c_3_4" > True</li>
+		
+
+<li id="correct_3_4"><input type=radio name="c_3_4" id="c_3_4"> False </li>
+		
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_3_4" onclick="showAnswer('3_4')" value="Show Answer"></p>
+				
+<p class="explan" id="a_3_4">The only requirement is that <b>B<sub>1</sub></b> not be collinear with <b>B<sub>0</sub></b> and have have some perpendicular components. Energy transfer is optimized when <b>B<sub>1</sub></b> is perfectly orthogonal to <b>B<sub>0</sub></b>, however.
+<a href="/why-at-larmor-frequency.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION 3, QUIZ QUESTION  6############## -->
+
+<li style="margin-top: 8px">Which of the following statements about flip angle using conventional RF-pulses is false?
+<ol type="a" id="q_3_5">
+
+<li ><input type=radio name="c_3_5" > Flip angle depends on the strength of the RF-pulse.
+</li>
+		
+<li ><input type=radio name="c_3_5" > Flip angle depends on the duration of the RF-pulse.
+</li>
+
+<li id="correct_3_5"><input type=radio name="c_3_5" id="c_3_5"> Flip angle is measured relative to the direction of <b>B<sub>1</sub></b>.
+</li>
+		
+<li ><input type=radio name="c_3_5" >  More energy is injected into the system by a 180°- than a 90°-pulse.
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_3_5" onclick="showAnswer('3_5')" value="Show Answer"></p>
+				
+<p class="explan" id="a_3_5">Flip angle is measured relative to the direction of <b>B<sub>0</sub></b>, not <b>B<sub>1</sub></b>. The other statements are all true.
+<a href="/what-is-flip-angle.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION 3, QUIZ QUESTION  7############## -->
+
+<li style="margin-top: 8px">(Advanced) Which of the following statements concerning the spin-system immediately after a 90°-pulse is true?
+<ol type="a" id="q_3_6">
+<li id="correct_3_6"><input type=radio name="c_3_6" id="c_3_6"> If the <i>z</i>-component of angular momentum were measured for all protons, an equal number of spin-up and spin-down states would be observed.
+</li>
+
+<li ><input type=radio name="c_3_6" > The 90°-pulse causes the spins to precess around <b>B<sub>1</sub></b>.
+</li>
+		
+<li ><input type=radio name="c_3_6" > The spins all become locked into phase coherence with one another.
+</li>
+
+		
+<li ><input type=radio name="c_3_6" >  The spin angular momentum for each proton is turned so that it points horizontally in the direction of <b>B<sub>1</sub></b>.
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_3_6" onclick="showAnswer('3_6')" value="Show Answer"></p>
+				
+<p class="explan" id="a_3_6">This is a pretty tricky question that really probes one's understanding of the NMR phenomenon. <b>Only a) is true</b>. If the longitudinal angular momentum of all spins were measured (by passing them through all Stern-Gerlach device, for example), an equal distribution of spin-up and spin-down states would be observed. Remember that spins do not exist in pure eigenstates, so it is not correct to say there are an equal number of spin-up and spin-down protons (though that statement is commonly found in textbooks). But the idea is much the same. <b>Option b) is false</b>, but only barely so. Precession <u>after</u> a 90°-pulse occurs around the direction of <b>B<sub>0</sub></b>, just as it did prior to the RF-pulse. <u>During</u> the application of the RF-pulse, however, procession occurs around <u>both</u> <b>B<sub>0</sub></b> <u>and</u> <b>B<sub>1</sub></b>, described in more detail in the Q&A's about the rotating frame.  <b>Option c) is false</b>, as no "magical" locking together of spins occurs. What we call "phase coherence" is simply the same initially skewed longitudinal distribution of spin energies that have been rotated into the transverse plane by the RF-pulse. Finally, <b>option d) is false</b>. By the Heisenberg uncertainty principle we cannot know the direction a spin is "pointing", so the statement is meaningless. But I'm pretty sure the spins would not all be "pointing" horizontally if we were able to know!
+
+
+
+<a href="/phase-coherence" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+	
+<!-- ################ SECTION 3, QUIZ QUESTION  8############## -->
+
+<li style="margin-top: 8px">When stimulated to higher energy levels by RF-excitation, protons spontaneously release this energy and fall back to lower levels.
+<ol type="a" id="q_3_7">
+
+<li ><input type=radio name="c_3_7" > True</li>
+		
+
+<li id="correct_3_7"><input type=radio name="c_3_7" id="c_3_7"> False </li>
+		
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_3_7" onclick="showAnswer('3_7')" value="Show Answer"></p>
+				
+<p class="explan" id="a_3_7"><u>Spontaneous</u> emission of absorbed energy is extremely improbable at the (MHz) frequencies where NMR occurs. Virtually all energy release by an NMR spin system must be <u>induced</u> by direct interaction with its external environment. This is the principle underlying T1 relaxation.
+<a href="/ release-of-rf-energy.html " target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION 3, QUIZ QUESTION  9############## -->
+
+<li style="margin-top: 8px"> The complex motion of the net magnetization vector (<b>M</b>) when acted upon by both <b>B<sub>0</sub></b> and <b>B<sub>1</sub></b> can be simplified by considering the system in the
+ <ol type="a" id="q_3_8">
+
+<li ><input type=radio name="c_3_8" > Laboratory frame of reference.
+</li>
+		
+
+<li id="correct_3_8"><input type=radio name="c_3_8" id="c_3_8"> Rotating frame of reference.
+</li>
+
+<li ><input type=radio name="c_3_8" > Earth's frame of reference.
+</li>
+
+		
+<li ><input type=radio name="c_3_8" >  Adiabatic frame of reference.
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_3_8" onclick="showAnswer('3_8')" value="Show Answer"></p>
+				
+<p class="explan" id="a_3_8">The rotating frame of reference allows the motion of (<b>M</b>) to be simplified by removing the simple Larmor precession around <b>B<sub>0</sub></b>. It's like riding on a merry-go-round instead of watching it from stationary ground nearby.
+<a href="/rotating-frame.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+<!-- ################ SECTION 3, QUIZ QUESTION  10############## -->
+
+<li style="margin-top: 8px">(Advanced) What happens if the <b>B<sub>1</sub></b> field is not applied exactly at the Larmor frequency?
+<ol type="a" id="q_3_9">
+
+<li ><input type=radio name="c_3_9" > Spins will not be affected and will continue to precess only around <b>B<sub>0</sub></b>.
+</li>
+		
+<li ><input type=radio name="c_3_9" > Spins will stop precessing around <b>B<sub>0</sub></b> and begin to precess around <b>B<sub>1</sub></b>. 
+
+</li>
+
+<li id="correct_3_9"><input type=radio name="c_3_9" id="c_3_9"> Spins will precess around an effective field <b>B<sub>eff</sub></b> in the rotating frame that takes into account of off-resonance <b>B<sub>1</sub></b> and <b>B<sub>0</sub></b> effects.
+</li>
+		
+<li ><input type=radio name="c_3_9" >  The spin system will experience random and unpredictable fluctuations in energy levels.
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_3_9" onclick="showAnswer('3_9')" value="Show Answer"></p>
+				
+<p class="explan" id="a_3_9">The correct answer is c). It describes the "off-resonance" condition which is commonly encountered in MR imaging where a span of RF-frequencies is transmitted and gradients affect Larmor frequencies across the object being imaged.
+<a href="/off-resonance.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+<!-- ################ SECTION 3, QUIZ QUESTION  11############## -->
+
+<li style="margin-top: 8px">(Advanced) Which of the following statements about adiabatic excitation is false?
+<ol type="a" id="q_3_10">
+
+<li ><input type=radio name="c_3_10" > Unlike "conventional" RF-pulses that are purely amplitude-modulated, adiabatic RF-pulses are also frequency-modulated.
+</li>
+		
+<li ><input type=radio name="c_3_10" > The fat-suppression technique SPAIR uses adiabatic inversion.
+</li>
+
+<li ><input type=radio name="c_3_10" >  Adiabatic pulses are relatively insensitive to <b>B<sub>1</sub></b> field inhomogeneities.
+</li>
+
+
+<li id="correct_3_10"><input type=radio name="c_3_10" id="c_3_10"> Doubling the duration of a 90°-adiabatic pulse creates a 180°-adiabatic pulse. 
+</li>
+		
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_3_10" onclick="showAnswer('3_10')" value="Show Answer"></p>
+				
+<p class="explan" id="a_3_10">All statements are true except d). Unlike "conventional" RF-pulses, the flip angle of an adiabatic pulse is NOT proportional to its magnitude and duration. An adiabatic pulse cannot be easily scaled or stretched to change its effect.
+<a href="/adiabatic-pulses.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+		
+
+
+
+
+
+<!--##################################################-->
+<!--############SCORING SECTION Needs to go at end of each subsection-->
+
+</ol><p><input type=button id="show_all_3" onclick="showAllAnswers('3')" value="Show All Answers for Section"><span style="font-weight: bold" id="scoretxt_3"></span></p>
+<p><a href="#top">Back to top of page</a></p></div>
+<!--END OF SCORING SECTION-->
+
+<!-- ###############NEW QUIZ SUBSECTION ##################-->
+
+<hr style="1px solid black">
+<!-- Creates optional line above new Quiz Subsection Title ---->
+
+<h1 style="color:black";><a name="3"></a>Relaxation I - Physics</h1>
+
+<!-- The Section Name and its corresponding number (here 0) which has an href in the index must be changed/filled in.  Note that the first section is identified as “0” here only;  and the second section is denoted “2”, etc. 
+
+This is confusing because subsequently it is denoted as Section 1 and reference to all questions in this section begin with a 1.  However, the first question of Section 1 is called question 0, presumably to assist in scoring.
+
+Thus, the first question of Section 1 is denoted as q_1_0 and its second question is denoted q_1_1.	
+
+When a second section of Questions is added, this is called Section 2 with first and second questions denoted q_2_0 and q_2_1. 
+
+Each section has counting variables corresponding to each question. So the counting variables  are denoted c_1_0 for the Section 1/first question, while c_2_1 counts for Section 2/second question. -->
+
+<!-- FOR THE PURPOSES OF THIS DOCUMENT WE WILL CONSIDER ALL QUESTIONS TO REFER TO SECTION 4 and are numbered consecutively. THE WORD DOCUMENT CAN THEN BE PUT INTO PROPER FORM BY “SEARCH AND REPLACE 4 BY THE APPROPRIATE SECTION NUMBER”-->
+
+
+<!-- ################ SECTION 4, QUIZ QUESTION  1############## -->
+
+<ol><li style="margin-top: 8px"> Which of the following is not a synonym for T1 relaxation?
+<ol type="a" id="q_4_0">
+
+<li id="correct_4_0"><input type=radio name="c_4_0" id="c_4_0"> Spin-spin relaxation</li>
+
+
+<li ><input type=radio name="c_4_0" > Spin-lattice relaxation</li>
+		
+<li ><input type=radio name="c_4_0" > Longitudinal relaxation
+</li>
+
+		
+<li ><input type=radio name="c_4_0" > Thermal relaxation
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_4_0" onclick="showAnswer('4_0')" value="Show Answer"></p>
+				
+<p class="explan" id="a_4_0">Spin-spin relaxation is a synonym for T2 relaxation.
+<a href="/what-is-t1.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+
+<!-- ################ SECTION 4, QUIZ QUESTION  2############## -->
+
+<li style="margin-top: 8px">Which of the following is/are synonyms for T2 relaxation?
+<ol type="a" id="q_4_1">
+
+<li ><input type=radio name="c_4_1" > Spin-spin relaxation
+</li>
+		
+<li ><input type=radio name="c_4_1" > Transverse relaxation
+</li>
+
+		
+<li ><input type=radio name="c_4_1" > Thermal relaxation</li>
+<li id="correct_4_1"><input type=radio name="c_4_1" id="c_4_1"> Both a) and b)</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_4_1" onclick="showAnswer('4_1')" value="Show Answer"></p>
+				
+<p class="explan" id="a_4_1">Thermal relaxation is a synonym for T1.
+<a href="/what-is-t2.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION 4, QUIZ QUESTION  3############## -->
+
+<li style="margin-top: 8px">Which of the following statements about T1 relaxation is false?
+<ol type="a" id="q_4_2">
+
+<li ><input type=radio name="c_4_2" > T1 is the time constant for regrowth of longitudinal magnetization (<i>M<sub>z</sub></i>).
+</li>
+		
+<li ><input type=radio name="c_4_2" > T1 relaxation requires an energy transfer between spins and their environment ("lattice").
+</li>
+
+<li ><input type=radio name="c_4_2" >  T1 relaxation results in a net energy loss from the spin system. 
+</li>
+
+
+<li id="correct_4_2"><input type=radio name="c_4_2" id="c_4_2"> This energy loss occurs by spontaneous emission of photons from the protons. 
+</li>
+		
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_4_2" onclick="showAnswer('4_2')" value="Show Answer"></p>
+				
+<p class="explan" id="a_4_2">All are true except d). T1 relaxation requires release of absorbed energy from the spin system to the external environment, but this such energy transfer must be stimulated by interaction with a fluctuating field near the Larmor frequency arising from a nearby proton or molecule.
+<a href="/release-of-rf-energy.html " target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION 4, QUIZ QUESTION  4############## -->
+<li style="margin-top: 8px">When an unmagnetized sample is placed in a magnetic field, an internal magnetization (<b>M</b>) will develop and grow to a maximum value in the longitudinal direction (<i>M<sub>0</sub></i>). The first order exponential time constant for this growth is defined as
+<ol type="a" id="q_4_3">
+
+
+<li id="correct_4_3"><input type=radio name="c_4_3" id="c_4_3"> T1</li>
+
+<li ><input type=radio name="c_4_3" > T1*</li>
+		
+<li ><input type=radio name="c_4_3" > T2 </li>
+		
+<li ><input type=radio name="c_4_3" >  T2* </li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_4_3" onclick="showAnswer('4_3')" value="Show Answer"></p>
+				
+<p class="explan" id="a_4_3">This is the definition of T1 as described by Felix Bloch.
+<a href="/what-is-t1.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+
+
+
+ 
+<!-- ################ SECTION 4, QUIZ QUESTION  5############## -->
+
+<li style="margin-top: 8px">T1 is the time required for the longitudinal magnetization <i>M<sub>z</sub></i> to grow from zero to about ____ of its maximum value (<i>M<sub>0</sub></i>)
+<ol type="a" id="q_4_4">
+
+<li ><input type=radio name="c_4_4" > 37%</li>
+		
+<li ><input type=radio name="c_4_4" > 50% </li>
+
+<li id="correct_4_4"><input type=radio name="c_4_4" id="c_4_4"> 63% </li>
+		
+<li ><input type=radio name="c_4_4" >  100% </li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_4_4" onclick="showAnswer('4_4')" value="Show Answer"></p>
+				
+<p class="explan" id="a_4_4">The equation for exponential regrowth is <i>M<sub>z</sub> = M<sub>0</sub> (1 − e<sup>−t/T1</sup>)</i>. After one time constant (i.e., at <i>t</i> = T1), <i>M<sub>z</sub></i> will have reached <i>(1 − e<sup>−1</sup>)</i> or about 63% of its maximum value (<i>M<sub>0</sub></i>).<a href="/what-is-t1.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION 4, QUIZ QUESTION  6############## -->
+
+<li style="margin-top: 8px">T2 is the time required for the transverse components of magnetization <i>M<sub>0</sub></i> to decay to approximately ____ from their maximum initial value after a 90°-pulse.
+<ol type="a" id="q_4_5">
+
+<li id="correct_4_5"><input type=radio name="c_4_5" id="c_4_5"> 37% </li>
+
+<li ><input type=radio name="c_4_5" > 50%</li>
+		
+<li ><input type=radio name="c_4_5" > 63% </li>
+
+		
+<li ><input type=radio name="c_4_5" >  100% </li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_4_5" onclick="showAnswer('4_5')" value="Show Answer"></p>
+				
+<p class="explan" id="a_4_5">The equation for exponential decay of transverse magnetization immediately after a 90°-pulse where the initial magnetization (<i>M<sub>0</sub></i>) has been tipped into the transverse plane is given by: <i>M<sub>xy</sub> = M<sub>0</sub> e<sup>−t/T2</sup></i>. After one time constant (i.e., at <i>t</i> = T2), <i>M<sub>xy</sub></i> will have decayed by <i>(e<sup>−1</sup>)</i> or to about 37% of its initial value.
+<a href="/what-is-t2.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION 4, QUIZ QUESTION  7############## -->
+
+<li style="margin-top: 8px">Which of the following statements concerning T2 relaxation is false?
+<ol type="a" id="q_4_6">
+
+<li id="correct_4_6"><input type=radio name="c_4_6" id="c_4_6"> Any process causing T2 relaxation also results in T1 relaxation.
+</li>
+
+<li ><input type=radio name="c_4_6" > A major cause of T2 relaxation is dephasing of spins by static local field inhomogeneities.
+</li>
+		
+<li ><input type=radio name="c_4_6" > Another major cause of T2 relaxation is spin-spin "flip-flop" interactions.
+</li>
+
+		
+<li ><input type=radio name="c_4_6" >  T2 relaxation may occur with or without energy transfer/loss from the spin system.
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_4_6" onclick="showAnswer('4_6')" value="Show Answer"></p>
+				
+<p class="explan" id="a_4_6">Only a) is false, but its converse is true, "Any process causing T1 relaxation also results in T2 relaxation". The other options are correct.
+<a href="/what-is-t2.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+	
+<!-- ################ SECTION 4, QUIZ QUESTION  8############## -->
+
+<li style="margin-top: 8px">If the T1 relaxation time for brain tissue is 1000 ms, what is its relaxation rate (R1)?
+<ol type="a" id="q_4_7">
+
+<li ><input type=radio name="c_4_7" > 1000 msec
+</li>
+		
+<li ><input type=radio name="c_4_7" > 1 sec
+</li>
+
+<li id="correct_4_7"><input type=radio name="c_4_7" id="c_4_7"> 1 sec<sup>−1</sup>
+</li>
+		
+<li ><input type=radio name="c_4_7" >  1 msec<sup>−1</sup>
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_4_7" onclick="showAnswer('4_7')" value="Show Answer"></p>
+				
+<p class="explan" id="a_4_7">Relaxation <u>rate</u> is merely the inverse of relaxation <u>time</u>. So R1 = 1/T1 = 1/1000 msec = 1/(1 sec) = 1 sec<sup>−1</sup>
+<a href="/relaxation-rate-vs-time.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION 4, QUIZ QUESTION  9############## -->
+
+<li style="margin-top: 8px">Which of the following statements concerning T1 and T2 relaxation times in tissues at 1.5T are correct?
+<ol type="a" id="q_4_8">
+
+<li ><input type=radio name="c_4_8" > Liquids (like CSF and urine) have the longest T1 and T2 values.
+</li>
+		
+<li ><input type=radio name="c_4_8" > For most solid organs (like the brain and liver) T1 values are about 10x longer than T2 values.
+</li>
+
+<li ><input type=radio name="c_4_8" > Dense fibrous tissues (like tendons and cartilage) have very short T2 values.
+</li>
+		
+<li ><input type=radio name="c_4_8" >  Fat has a relatively short T1 value compared to most other tissues.
+</li>
+
+<li id="correct_4_8"><input type=radio name="c_4_8" id="c_4_8"> All are true.
+</li>
+
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_4_8" onclick="showAnswer('4_8')" value="Show Answer"></p>
+				
+<p class="explan" id="a_4_8">These basic facts and relationships about tissue T1 and T2 values should be known by anyone involved with MR imaging. 
+<a href="/why-is-t1--t2.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+<!-- ################ SECTION 4, QUIZ QUESTION  10############## -->
+
+<li style="margin-top: 8px">Which of the following relaxation time pairs for tissue is impossible?
+<ol type="a" id="q_4_9">
+
+<li ><input type=radio name="c_4_9" > T1 = 4000 ms, T2= 2000 ms
+</li>
+		
+<li ><input type=radio name="c_4_9" > T1 = 1000 ms, T2 = 100 ms
+</li>
+
+<li ><input type=radio name="c_4_9" >  T1 = 500 ms, T2 = 20 ms
+</li>
+
+
+<li id="correct_4_9"><input type=radio name="c_4_9" id="c_4_9"> T1 = 500 ms. T2 = 600 ms
+</li>
+		
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_4_9" onclick="showAnswer('4_9')" value="Show Answer"></p>
+				
+<p class="explan" id="a_4_9">Because every process that causes T1 relaxation also causes T2 relaxation, but T2 relaxation can occur without T1 relaxation, T2 is always less than or equal to T1. Thus the combination in choice d) is impossible.
+<a href="/why-is-t1--t2.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+<!-- ################ SECTION 4, QUIZ QUESTION  11############## -->
+
+<li style="margin-top: 8px">Which of the following biological materials would be expected to have the shortest T2 values?
+<ol type="a" id="q_4_10">
+
+<li ><input type=radio name="c_4_10" > Urine</li>
+		
+
+<li id="correct_4_10"><input type=radio name="c_4_10" id="c_4_10"> Achilles tendon
+</li>
+<li ><input type=radio name="c_4_10" > Spleen</li>
+		
+<li ><input type=radio name="c_4_10" >  Liver</li>
+<li ><input type=radio name="c_4_10" >  Quadriceps muscle
+</li>
+
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_4_10" onclick="showAnswer('4_10')" value="Show Answer"></p>
+				
+<p class="explan" id="a_4_10">T2 relaxation occurs most quickly when local static magnetic fields are present that dephase the spins. The more "solid" and "drier" the tissue, the shorter is its T2 value. Of the choices above, tendon has the shortest T2.
+<a href="/why-is-t1--t2.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+		
+
+
+
+
+
+<!-- ################ SECTION 4, QUIZ QUESTION  12############## -->
+
+<li style="margin-top: 8px">Which of the following biological materials would be expected to have the shortest T1 values?
+<ol type="a" id="q_4_11">
+<li id="correct_4_11"><input type=radio name="c_4_11" id="c_4_11"> Scalp fat
+</li>
+
+<li ><input type=radio name="c_4_11" > Pus</li>
+		
+<li ><input type=radio name="c_4_11" > Liver</li>
+<li ><input type=radio name="c_4_11" > Spleen</li>
+
+		
+<li ><input type=radio name="c_4_11" >  Red bone marrow
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_4_11" onclick="showAnswer('4_11')" value="Show Answer"></p>
+				
+<p class="explan" id="a_4_11">Because of their size and shape, triglycerides (the main component of adipose tissue as in scalp fat) have a relatively large fraction of molecular motions near the Larmor frequency, making them efficient at T1 relaxation. So the correct answer is a). <u>Yellow</u> bone marrow has relatively short T1 due to fat deposition, but <u>red</u> marrow has much less fat and is filled with water-containing hematopoietic cells.
+<a href="/why-is-t1--t2.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+<!-- ################ SECTION 4, QUIZ QUESTION  13############## -->
+
+<li style="margin-top: 8px">Which of the following biological materials would be expected to have the longest T2 values?
+<ol type="a" id="q_4_12">
+
+<li ><input type=radio name="c_4_12" > Colloid cyst in the thyroid
+</li>
+		
+<li ><input type=radio name="c_4_12" > Pus</li>
+
+<li id="correct_4_12"><input type=radio name="c_4_12" id="c_4_12"> Urine in the bladder
+</li>
+		
+<li ><input type=radio name="c_4_12" >  Kidney </li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_4_12" onclick="showAnswer('4_12')" value="Show Answer"></p>
+				
+<p class="explan" id="a_4_12"> "Free" or "unbound" water molecules tumble most rapidly averaging out static dipolar interactions and hence have the longest T2 values. So pure liquids like spinal fluid and urine have the longest T2 values.
+ <a href="/ why-is-t1--t2.html " target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION 4, QUIZ QUESTION  14############## -->
+
+<li style="margin-top: 8px"> Which of the following statements about T2* is false?
+ <ol type="a" id="q_4_13">
+<li id="correct_4_13"><input type=radio name="c_4_13" id="c_4_13"> T2* is always longer than T2.
+</li>
+
+<li ><input type=radio name="c_4_13" > T2 is always longer than T2*.
+</li>
+		
+<li ><input type=radio name="c_4_13" > T2* includes not only "true" T2 effects but also effects of magnetic field inhomogeneities.
+</li>
+
+		
+<li ><input type=radio name="c_4_13" >  T2* includes not only "true" T2 effects but also effects of magnetic field inhomogeneities.
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_4_13" onclick="showAnswer('4_13')" value="Show Answer"></p>
+				
+<p class="explan" id="a_4_13">T2* includes not only "true" T2 effects but also effects of magnetic field inhomogeneities.
+<a href="/t2-vs-t2.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION 4, QUIZ QUESTION  15############## -->
+
+<li style="margin-top: 8px">Which of the following molecular mechanisms is the most important for causing T1 and T2 relaxation in ¹H NMR?
+<ol type="a" id="q_4_14">
+<li id="correct_4_14"><input type=radio name="c_4_14" id="c_4_14"> Dipole-dipole interactions
+</li>
+
+<li ><input type=radio name="c_4_14" > Chemical shift anisotropy
+</li>
+		
+<li ><input type=radio name="c_4_14" > Chemical shift anisotropy
+</li>
+
+		
+<li ><input type=radio name="c_4_14" >  Molecular translation/diffusion
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_4_14" onclick="showAnswer('4_14')" value="Show Answer"></p>
+				
+<p class="explan" id="a_4_14">All these mechanisms make contributions, but the dipole-dipole interaction is the most important. Dipole-dipole interactions are "through space" magnetic field disturbances typically occurring between nuclear or electron spins on the same or closely apposed molecules.
+<a href="/causes-of-relaxation.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+<!-- ################ SECTION 4, QUIZ QUESTION 16############## -->
+
+<li style="margin-top: 8px">Because they each have spin = ½, electrons and protons are equally effective at producing dipole-dipole interactions.
+<ol type="a" id="q_4_15">
+
+		
+<li ><input type=radio name="c_4_15" > True </li>
+
+<li id="correct_4_15"><input type=radio name="c_4_15" id="c_4_15"> False </li>
+		
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_4_15" onclick="showAnswer('4_15')" value="Show Answer"></p>
+				
+<p class="explan" id="a_4_15">Due to its small size, the electron has a much greater charge to mass ratio and hence a much larger gyromagnetic ratio (<i>γ</i>). The electron is thus many thousand times more powerful than the proton at dipole-dipole interactions.
+<a href="/dipole-dipole-interactions.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION 4, QUIZ QUESTION  17############## -->
+
+<li style="margin-top: 8px">Intramolecular dipole-dipole interactions are more powerful than intermolecular ones.
+<ol type="a" id="q_4_16">
+
+
+<li id="correct_4_16"><input type=radio name="c_4_16" id="c_4_16"> True </li>
+		
+<li ><input type=radio name="c_4_16" >  False </li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_4_16" onclick="showAnswer('4_16')" value="Show Answer"></p>
+				
+<p class="explan" id="a_4_16">The strength of the dipolar interaction is inversely proportional to the sixth power of the distance between spins (1/r<sup>6</sup>). Thus dipole-dipole interactions between spins on the same molecule (<u>intra</u>molecular) are more powerful than more distantly spaced spins on different molecules (<u>inter</u>molecular).
+<a href="/ dipole-dipole-interactions.html " target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+<!-- ################ SECTION 4, QUIZ QUESTION  18############## -->
+
+<li style="margin-top: 8px"> In dipole-dipole interactions, T1 relaxation is most efficient (and T1 values are shortest) for
+ <ol type="a" id="q_4_17">
+
+<li ><input type=radio name="c_4_17" > Small, rapidly tumbling molecules
+</li>
+<li id="correct_4_17"><input type=radio name="c_4_17" id="c_4_17"> Molecules tumbling near the Larmor frequency
+</li>
+		
+<li ><input type=radio name="c_4_17" > Large, slowly moving molecules
+</li>
+
+		
+<li ><input type=radio name="c_4_17" >  Macromolecules bound to a rigid biologic scaffold or matrix
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_4_17" onclick="showAnswer('4_17')" value="Show Answer"></p>
+				
+<p class="explan" id="a_4_17">Since T1 relaxation requires stimulated energy exchange at the Larmor frequency, spins on molecules tumbling at near the Larmor frequency are most efficient at T1 relaxation.
+<a href="/dipole-dipole-interactions.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+		
+
+<!-- ################ SECTION 4, QUIZ QUESTION  19############## -->
+
+<li style="margin-top: 8px">In dipole-dipole interactions, T2 relaxation is most efficient (and T2 values are shortest) for
+<ol type="a" id="q_4_18">
+
+<li ><input type=radio name="c_4_18" > Small, rapidly tumbling molecules.
+</li>
+		
+<li ><input type=radio name="c_4_18" > Molecules tumbling near the Larmor frequency.
+</li>
+
+<li ><input type=radio name="c_4_18" >  Large, slowly moving molecules.
+</li>
+
+
+<li id="correct_4_18"><input type=radio name="c_4_18" id="c_4_18"> Macromolecules bound to a rigid biologic scaffold or matrix
+</li>
+		
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_4_18" onclick="showAnswer('4_18')" value="Show Answer"></p>
+				
+<p class="explan" id="a_4_18">Stationary local magnetic fields are most effective at inducing T2 relaxation, so nearly immobile macromolecules (especially those bound to bones, cell membrane, or collagen) have the shortest relaxation times of all. Small, rapidly tumbling molecules have very long T2 values.
+<a href="/dipole-dipole-interactions.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+<!-- ################ SECTION 4, QUIZ QUESTION  20############## -->
+
+<li style="margin-top: 8px">Considering the effects of macromolecules on relaxation times, which of the following is false
+<ol type="a" id="q_4_19">
+
+<li ><input type=radio name="c_4_19" > Macromolecules themselves often have extremely short T2 values and their signal may decay too quickly to be detected using conventional MRI techniques.
+</li>
+		
+<li ><input type=radio name="c_4_19" > A "bound" or "hydration" layer of water molecules with restricted motion is generally found adjacent to macromolecules.
+</li>
+
+<li id="correct_4_19"><input type=radio name="c_4_19" id="c_4_19"> These "bound" water protons interact exclusively with macromolecules and not with the "free water" pool.
+ </li>
+		
+<li ><input type=radio name="c_4_19" >  Bound water molecules tumble more slowly, producing shortening of T1 and T2. This partially explains the reduced T1 and T2 values of tissues compared to free water.
+ </li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_4_19" onclick="showAnswer('4_19')" value="Show Answer"></p>
+				
+<p class="explan" id="a_4_19"> Only c) is false. The bound water molecules interact and exchange magnetization both with the macromolecules <u>and</u> the free water pool.
+ <a href="/ macromolecule-effects.html " target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+		
+<!-- ################ SECTION 4, QUIZ QUESTION  21############## -->
+
+<li style="margin-top: 8px"> Which of the following ¹H-containing molecules account for nearly 100% of the signal recorded within the brain parenchyma using routine MRI sequences?
+ <ol type="a" id="q_4_20">
+
+<li id="correct_4_20"><input type=radio name="c_4_20" id="c_4_20"> Water</li>
+
+
+<li ><input type=radio name="c_4_20" > Triglycerides</li>
+		
+<li ><input type=radio name="c_4_20" > Myelin</li>
+
+		
+<li ><input type=radio name="c_4_20" >  N-acetyl aspartate (NAA)
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_4_20" onclick="showAnswer('4_20')" value="Show Answer"></p>
+				
+<p class="explan" id="a_4_20">Triglcerides are present in scalp fat, but not in the brain parenchyma itself. Myelin is  present in the brain, but as an immobile macromolecule has an extremely short T2 and whose signal thus decays too rapidly to be detected using conventional MRI sequences. NAA is the brain metabolite with the largest peak seen on MR spectroscopy of the brain, but its concentration is many thousand times lower than that of water. 
+<a href="/which-hs-produce-signal.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+
+
+		
+<!-- ################ SECTION 4, QUIZ QUESTION  22############## -->
+
+<li style="margin-top: 8px">By irradiating tissue with an off-resonance RF-pulse it is possible to affect image contrast by transferring energy between macromolecular and free-water pools. This process is known as
+<ol type="a" id="q_4_21">
+
+<li ><input type=radio name="c_4_21" > T1 exchange
+</li>
+		
+
+<li id="correct_4_21"><input type=radio name="c_4_21" id="c_4_21"> Magnetization transfer
+</li>
+<li ><input type=radio name="c_4_21" > Chemical shift
+</li>
+		
+<li ><input type=radio name="c_4_21" >  Energy swap
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_4_21" onclick="showAnswer('4_21')" value="Show Answer"></p>
+				
+<p class="explan" id="a_4_21">This is a brief description of MT. <a href="/magnetization-transfer1.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+
+
+
+
+		
+<!-- ################ SECTION 4, QUIZ QUESTION  23############## -->
+
+<li style="margin-top: 8px">As field strength increases from 0.5T to 3.0T, the T1 of most tissues
+<ol type="a" id="q_4_22">
+<li id="correct_4_22"><input type=radio name="c_4_22" id="c_4_22"> Increases</li>
+
+<li ><input type=radio name="c_4_22" > Decreases</li>
+		
+<li ><input type=radio name="c_4_22" > Remains about the same
+</li>
+
+		
+<li ><input type=radio name="c_4_22" >  Decreases then increases
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_4_22" onclick="showAnswer('4_22')" value="Show Answer"></p>
+				
+<p class="explan" id="a_4_22">For most biological tissues, empirical measurements suggest that T1 increases approximately as B<sub>0</sub><sup>⅓</sup>. Therefore, measured T1 values of most tissues will approximately double as field strength is raised from 0.3 T to 3.0 T.
+<a href="/bo-effect-on-t1--t2.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+
+
+
+		
+<!-- ################ SECTION 4, QUIZ QUESTION  24############## -->
+
+<li style="margin-top: 8px">As field strength increase from 0.5T to 3.0T, the T2 of most tissues
+<ol type="a" id="q_4_23">
+
+<li ><input type=radio name="c_4_23" > Increases</li>
+		
+<li ><input type=radio name="c_4_23" > Decreases</li>
+
+<li id="correct_4_23"><input type=radio name="c_4_23" id="c_4_23"> Remains about the same
+</li>
+		
+<li ><input type=radio name="c_4_23" >  Decreases then increases
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_4_23" onclick="showAnswer('4_23')" value="Show Answer"></p>
+				
+<p class="explan" id="a_4_23">The effect varies depending on tissue type, but generally there is relatively little change in T2 values over the 0.5T to 3.0T range. T2 definitely shortens for fields > 3.0T, however.
+
+<a href="/bo-effect-on-t1--t2.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+<!-- ################ SECTION 4, QUIZ QUESTION  25############## -->
+
+<li style="margin-top: 8px">NMR relaxation theory from basic science nearly completely explains T1 and T2 values observed in tissues.
+<ol type="a" id="q_4_24">
+
+<li ><input type=radio name="c_4_24" > True</li>
+		
+
+<li id="correct_4_24"><input type=radio name="c_4_24" id="c_4_24"> False </li>
+		
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_4_24" onclick="showAnswer('4_24')" value="Show Answer"></p>
+				
+<p class="explan" id="a_4_24">Basic science relaxation theory adequately explains the T1 and T2 behavior of simple homogenous materials and solutions, but is far from explaining the observed relaxation times observed in biological tissues. Multi-compartment models may give some insights, but no fully comprehensive description yet exists.
+<a href="/how-to-predict-t1--t2.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+
+
+
+
+
+
+
+
+
+
+
+<!--##################################################-->
+<!--############SCORING SECTION Needs to go at end of each subsection-->
+
+</ol><p><input type=button id="show_all_4" onclick="showAllAnswers('4')" value="Show All Answers for Section"><span style="font-weight: bold" id="scoretxt_4"></span></p>
+<p><a href="#top">Back to top of page</a></p></div>
+<!--END OF SCORING SECTION-->
+
+<div id="352397338460048840" align="left" style="width: 100%; overflow-y: hidden;" class="wcustomhtml"><!-- ###############NEW QUIZ SUBSECTION ##################-->
+
+<hr style="1px solid black">
+<!-- Creates optional line above new Quiz Subsection Title ---->
+
+<h1 style="color:black";><a name="4"></a>Relaxation II - Clinical</h1>
+
+<!-- The Section Name and its corresponding number (here 0) which has an href in the index must be changed/filled in.  Note that the first section is identified as “0” here only;  and the second section is denoted “2”, etc. 
+
+This is confusing because subsequently it is denoted as Section 1 and reference to all questions in this section begin with a 1.  However, the first question of Section 1 is called question 0, presumably to assist in scoring.
+
+Thus, the first question of Section 1 is denoted as q_1_0 and its second question is denoted q_1_1.	
+
+When a second section of Questions is added, this is called Section 2 with first and second questions denoted q_2_0 and q_2_1. 
+
+Each section has counting variables corresponding to each question. So the counting variables  are denoted c_1_0 for the Section 1/first question, while c_2_1 counts for Section 2/second question. -->
+
+<!-- FOR THE PURPOSES OF THIS DOCUMENT WE WILL CONSIDER ALL QUESTIONS TO REFER TO SECTION RELAXCLIN and are numbered consecutively. THE WORD DOCUMENT CAN THEN BE PUT INTO PROPER FORM BY “SEARCH AND REPLACE RELAXCLIN BY THE APPROPRIATE SECTION NUMBER”-->
+
+
+<!-- ################ SECTION M, QUIZ QUESTION  1############## -->
+
+<ol><li style="margin-top: 8px"> The MR signal in adipose tissue comes primarily from hydrogen protons in
+<ol type="a" id="q_RELAXCLIN_0">
+
+<li ><input type=radio name="c_RELAXCLIN_0" > Free fatty acids
+</li>
+		
+
+<li id="correct_RELAXCLIN_0"><input type=radio name="c_RELAXCLIN_0" id="c_RELAXCLIN_0"> Long-chain triglycerides
+</li>
+		
+<li ><input type=radio name="c_RELAXCLIN_0" > Short-chain triglycerides
+</li>
+<li ><input type=radio name="c_RELAXCLIN_0" > Cholesterol 
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_RELAXCLIN_0" onclick="showAnswer('RELAXCLIN_0')" value="Show Answer"></p>
+				
+<p class="explan" id="a_RELAXCLIN_0"> The major MR signal in adipose tissue comes from long-chain aliphatic triglycerides, 16-20 carbon atoms in length, that are mostly saturated (−(CH<sub>2</sub>)<sub><i>n</i></sub>−).
+
+<a href="/t1-bright---fat.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+
+<!-- ################ SECTION RELAXCLIN, QUIZ QUESTION  2############## -->
+
+<li style="margin-top: 8px"> Protons in which lipid elements do not contribute significantly to the bright MR signal of fat on routine T1-weighted imaging?
+<ol type="a" id="q_RELAXCLIN_1">
+<li id="correct_RELAXCLIN_1"><input type=radio name="c_RELAXCLIN_1" id="c_RELAXCLIN_1"> Cell membrane phospholipids
+</li>
+
+<li ><input type=radio name="c_RELAXCLIN_1" > Liquid forms of cholesterol
+</li>
+		
+<li ><input type=radio name="c_RELAXCLIN_1" > Free fatty acids
+</li>
+
+		
+<li ><input type=radio name="c_RELAXCLIN_1" >  Triglyceride methyl groups
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_RELAXCLIN_1" onclick="showAnswer('RELAXCLIN_1')" value="Show Answer"></p>
+				
+<p class="explan" id="a_RELAXCLIN_1"> Phospholipids and sphingolipids, present in cell membranes and myelin respectively, have exceedingly short T2 values and their MR signal is not directly recorded using<i> routine </i>MR sequences. They can be recorded using ultrashort TE (UTE) methods.
+<a href="/t1-bright---fat.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION RELAXCLIN, QUIZ QUESTION  3############## -->
+
+<li style="margin-top: 8px"> Examples of bright T1 signal due to exogenous lipids include all of the following except
+<ol type="a" id="q_RELAXCLIN_2">
+
+<li ><input type=radio name="c_RELAXCLIN_2" > Intrathecal Pantopaque™ from myelography in the 1980s
+</li>
+		
+
+<li id="correct_RELAXCLIN_2"><input type=radio name="c_RELAXCLIN_2" id="c_RELAXCLIN_2"> A commercial MR skin marker
+</li>
+<li ><input type=radio name="c_RELAXCLIN_2" > A vitamin E capsule skin marker
+</li>
+		
+<li ><input type=radio name="c_RELAXCLIN_2" >  Vaseline (petroleum jelly) on the skin 
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_RELAXCLIN_2" onclick="showAnswer('RELAXCLIN_2')" value="Show Answer"></p>
+				
+<p class="explan" id="a_RELAXCLIN_2">Although vitamin E capsules, fish oil capsules, and bath oil beads may be used as skin markers in MRI, they cannot be seen on fat-suppressed images. Commercial MR skin markers contain a dilute paramagnetic solution visible on all pulse sequences.<a href="/t1-bright---other-oils.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION RELAXCLIN, QUIZ QUESTION  4############## -->
+<li style="margin-top: 8px"> T1 shortening due to cholesterol substantially explains the MR signal seen in which of the following diseases?
+<ol type="a" id="q_RELAXCLIN_3">
+
+<li ><input type=radio name="c_RELAXCLIN_3" > Cholesterol granuloma of the petrous apex
+</li>
+		
+<li ><input type=radio name="c_RELAXCLIN_3" > Cholesterol gallstones
+</li>
+<li ><input type=radio name="c_RELAXCLIN_3" >  Craniopharyngioma
+</li>
+<li ><input type=radio name="c_RELAXCLIN_3" >  All of the above
+</li>
+
+<li id="correct_RELAXCLIN_3"><input type=radio name="c_RELAXCLIN_3" id="c_RELAXCLIN_3"> None of the above
+</li>
+		
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_RELAXCLIN_3" onclick="showAnswer('RELAXCLIN_3')" value="Show Answer"></p>
+				
+<p class="explan" id="a_RELAXCLIN_3"> Cholesterol in all its states has a short T1 value and range of chemical shifts similar to other lipids. The T2 values of cholesterol, however, differ significantly according to state.
+Liquid cholesterol esters have fairly short T2 values (~5-10 msec), but these times are long enough to be detectable/imageable by routine MRI. By contrast, the solid and crystalline forms of cholesterol associated with cell membranes have extremely short T2 times (measured in microseconds); their signals decay too quickly for detection using routine MR techniques. In craniopharyngiomas and cholesterol granulomas, cholesterol is in a solid/crystalline state and bright signal is likely due to blood products. Cholesterol gallstones are also in solid state and do not typically have bright MR signals.
+
+<a href="/t1-bright---cholesterol.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+
+
+
+ 
+<!-- ################ SECTION RELAXCLIN, QUIZ QUESTION  5############## -->
+
+<li style="margin-top: 8px"> Why do areas of microcalcification sometimes appear bright on T1-weighted images?
+<ol type="a" id="q_RELAXCLIN_4">
+
+<li ><input type=radio name="c_RELAXCLIN_4" > The calcium nucleus also undergoes NMR and mixes with the ¹H signal
+</li>
+		
+<li ><input type=radio name="c_RELAXCLIN_4" > You are seeing a susceptibility artifact, not a true change in relaxation time
+</li>
+
+<li id="correct_RELAXCLIN_4"><input type=radio name="c_RELAXCLIN_4" id="c_RELAXCLIN_4"> Interaction with salts on porous calcium surfaces slows rotation of water molecules
+</li>
+		
+<li ><input type=radio name="c_RELAXCLIN_4" >  Microcalcifications often have fat-containing bone marrow within them
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_RELAXCLIN_4" onclick="showAnswer('RELAXCLIN_4')" value="Show Answer"></p>
+				
+<p class="explan" id="a_RELAXCLIN_4"> The high signal is not coming from the calcium itself, as Ca is an even-numbered element with zero spin and no intrinsic MR signal.  The signal is coming from water protons, whose molecular rotation rates have been slowed to near the Larmor frequency by surface interactions with the calcium salts.  This rotational slowing results in short T1 and hence brightness on T1-weighted images.
+<a href="/t1-bright---calcifications.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION RELAXCLIN, QUIZ QUESTION  6############## -->
+
+<li style="margin-top: 8px"> The T1-bright signal of meconium is primarily due to
+<ol type="a" id="q_RELAXCLIN_5">
+<li id="correct_RELAXCLIN_5"><input type=radio name="c_RELAXCLIN_5" id="c_RELAXCLIN_5"> Paramagnetic minerals
+</li>
+
+<li ><input type=radio name="c_RELAXCLIN_5" > Free fatty acids
+</li>
+		
+<li ><input type=radio name="c_RELAXCLIN_5" > Carbohydrates
+</li>
+
+		
+<li ><input type=radio name="c_RELAXCLIN_5" >  Mucin
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_RELAXCLIN_5" onclick="showAnswer('RELAXCLIN_5')" value="Show Answer"></p>
+				
+<p class="explan" id="a_RELAXCLIN_5"> Although several physical properties contribute to the relaxation times of meconium, the dominant process is likely the accumulation of paramagnetic (Fe, Mn, Mg) minerals within it.  Meconium also contains free fatty acids, carbohydrates, and mucin, but their effects on T1 relaxation are thought to be minor.
+<a href="/t1-bright---meconium.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION RELAXCLIN, QUIZ QUESTION  7############## -->
+
+<li style="margin-top: 8px"> The “magic angle” effect takes place when two magnetic dipoles form an angle of about how many degrees with each other?
+<ol type="a" id="q_RELAXCLIN_6">
+
+<li ><input type=radio name="c_RELAXCLIN_6" > 30º
+</li>
+		
+<li ><input type=radio name="c_RELAXCLIN_6" > 45º
+</li>
+
+<li id="correct_RELAXCLIN_6"><input type=radio name="c_RELAXCLIN_6" id="c_RELAXCLIN_6"> 55º
+</li>
+		
+<li ><input type=radio name="c_RELAXCLIN_6" >  60º
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_RELAXCLIN_6" onclick="showAnswer('RELAXCLIN_6')" value="Show Answer"></p>
+				
+<p class="explan" id="a_RELAXCLIN_6"> The dipolar interaction due to the static field vanishes at the magic angle of approximately 54.7º. 
+<a href="/magic-angle.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+	
+<!-- ################ SECTION RELAXCLIN, QUIZ QUESTION  8############## -->
+
+<li style="margin-top: 8px"> Interaction of two dipoles at the magic angle affects
+<ol type="a" id="q_RELAXCLIN_7">
+
+<li ><input type=radio name="c_RELAXCLIN_7" > T1 only
+</li>
+		
+
+<li id="correct_RELAXCLIN_7"><input type=radio name="c_RELAXCLIN_7" id="c_RELAXCLIN_7"> T2 only
+</li>
+<li ><input type=radio name="c_RELAXCLIN_7" > T1 and T2
+</li>
+		
+<li ><input type=radio name="c_RELAXCLIN_7" >  Neither T1 nor T2
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_RELAXCLIN_7" onclick="showAnswer('RELAXCLIN_7')" value="Show Answer"></p>
+				
+<p class="explan" id="a_RELAXCLIN_7"> The magic angle effect lengthens T2 with theoretically no effect on T1.
+<a href="/magic-angle.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION RELAXCLIN, QUIZ QUESTION  9############## -->
+
+<li style="margin-top: 8px"> Which tissue in the list below does <u>not</u> normally demonstrate signal changes on MRI due to the magic angle effect?
+<ol type="a" id="q_RELAXCLIN_8">
+<li id="correct_RELAXCLIN_8"><input type=radio name="c_RELAXCLIN_8" id="c_RELAXCLIN_8"> Liver
+</li>
+
+<li ><input type=radio name="c_RELAXCLIN_8" > Tendon
+</li>
+		
+<li ><input type=radio name="c_RELAXCLIN_8" > Cartilage
+</li>
+
+		
+<li ><input type=radio name="c_RELAXCLIN_8" >  Peripheral nerve
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_RELAXCLIN_8" onclick="showAnswer('RELAXCLIN_8')" value="Show Answer"></p>
+				
+<p class="explan" id="a_RELAXCLIN_8"> The magic angle effect is important in the clinical MR imaging of certain tissues that are highly structured and are oriented obliquely to the main magnetic field (especially tendons, cartilage, and peripheral nerves). The MR signal may spuriously increase near the magic angle mimicking pathology. Liver has no single direction anatomic structure and would not display a magic angle effect.
+<a href="/magic-angle.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+
+
+
+
+
+
+
+
+
+
+
+<!--##################################################-->
+<!--############SCORING SECTION Needs to go at end of each subsection-->
+
+</ol><p><input type=button id="show_all_RELAXCLIN" onclick="showAllAnswers('RELAXCLIN')" value="Show All Answers for Section"><span style="font-weight: bold" id="scoretxt_RELAXCLIN"></span></p>
+<p><a href="#top">Back to top of page</a></p></div>
+<!--END OF SCORING SECTION-->
+
+</div>

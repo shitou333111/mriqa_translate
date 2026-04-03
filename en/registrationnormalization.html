@@ -1,0 +1,155 @@
+<div id="content"><div id="wsite-content" class="wsite-elements wsite-not-footer">
+	<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:58.472222222222%; padding:0 15px;">
+					
+						
+
+<h2 class="wsite-content-title" style="text-align:center;">Co-Registration/Normalization&nbsp;</h2>
+
+<div class="paragraph" style="text-align:center;"><strong><em><font color="#0376be"><font size="4">What is the difference between co-registration and normalization? How are these performed?&nbsp;</font></font></em></strong><strong><em>&nbsp;</em></strong></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:41.527777777778%; padding:0 15px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-thin" style="padding-top:10px;padding-bottom:10px;margin-left:0px;margin-right:0px;text-align:center">
+<a href='uploads/3/4/5/7/34572113/screen-shot-2016-07-12-at-6-29-04-pm_orig.png' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/screen-shot-2016-07-12-at-6-29-04-pm3666.png?262" alt="coregistration fmri" style="width:262;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;"><em><strong><font color="#24678d">Co-Registration</font></strong></em><font color="#2a2a2a">&nbsp;(or simply&nbsp;</font><em><strong><font color="#24678d">registration</font></strong></em><font color="#2a2a2a">) refers to the alignment and overlay of fMRI data </font><em style="color:rgb(42, 42, 42)">from a <u>single</u> subject</em><font color="#2a2a2a"> with that subject's own but separately acquired anatomic imaging study. The anatomic study is usually derived from another MRI series obtained at the same session, but could be from an entirely different imaging modality (PET, CT, etc).</font></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;"><em><strong><font color="#24678d">Normalization</font></strong></em> is a similar process that aligns and warps fMRI data into a generic anatomic template. The two most widely used templates are the Talairach and MNI atlases. While co-registration is performed on data from a single subject, normalization is usually performed on data from<em>&nbsp;<u>multiple</u> subjects</em>.&nbsp;</div>
+
+<span class='imgPusher' style='float:right;height:0px'></span><span style='display: table;width:auto;position:relative;float:right;max-width:100%;;clear:right;margin-top:11px;*margin-top:22px'><a href='uploads/3/4/5/7/34572113/6136054_1_orig.gif' rel='lightbox' onclick='if (!lightboxLoaded) return false'><img src="uploads/3/4/5/7/34572113/6136054_16c98.gif?250" style="margin-top: 10px; margin-bottom: 10px; margin-left: 10px; margin-right: 10px; border-width:1px;padding:3px; max-width:100%" alt="Picture" class="galleryImageBorder wsite-image" /></a><span style="display: table-caption; caption-side: bottom; font-size: 90%; margin-top: -10px; margin-bottom: 10px; text-align: center;" class="wsite-caption">Co-registration of BOLD activation area on<br>3D brain image (Courtesy Siemens)</span></span>
+<div class="paragraph" style="text-align:skip_to_justify;display:block;"><font color="#2a2a2a"><strong style="color:rgb(0, 0, 0)"><font color="#8d5024"><font size="4">Co-Registration Overview</font></font></strong><br /><br />&#8203;For co-registration single subject fMRI data are commonly overlaid on MR anatomic images acquired during the same session. The anatomic reference is typically from a 3D MR sequence (e.g., MP-RAGE) acquired with high-resolution voxels (e.g., 1mm x 1mm x 1mm). The voxels should be </font><em><strong><font color="#24678d">isotropic</font></strong></em><font color="#2a2a2a"> (perfect cubes, equal in each dimension) to allow the data to be rotated, re-sliced, and manipulated.<br /><br />&#8203;Many of the same image correction and alignment techniques for data pre-processing are also used to perform co-registration. <span style="color:rgb(0, 0, 0)">These are more fully described in the reference by Klein et al (2009) and the textbook chapters by Ashburner and Friston below. Nearly all of these methods begin with image resampling using interpolation techniques followed by rigid body transformations (translations, rotations, zooms, and shears). An optimization protocol is then employed, typically by minimizing a&nbsp;</span><font color="#0376be"><strong><em>cost function</em></strong></font><span style="color:rgb(0, 0, 0)">&nbsp;which measures the degree of disparity between the fMRI and anatomic data after each iteration.</span></font></div>
+<hr style="width:100%;clear:both;visibility:hidden;"></hr>
+
+<div class="paragraph" style="text-align:skip_to_justify;"><strong><font size="4" color="#8d5024">Normalization Overview</font></strong></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;"><font color="#2a2a2a">Normalization is more complicated than co-registration because data from multiple subjects must be aligned. Considerable image warping and deformations must occur to squeeze different brain shapes into a common template or reference space.&nbsp;</font></div>
+
+<div><div class="wsite-image wsite-image-border-none" style="padding-top:0px;padding-bottom:10px;margin-left:0px;margin-right:0px;text-align:center">
+<a href='uploads/3/4/5/7/34572113/normalization-from-rorden_orig.jpg' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/normalization-from-rorden_orig.jpg" alt="Normalization fMRI" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%">Normalization warps fMRI data from one or more subjects into a common anatomic template. (Adapted from Chris Rorden)</div>
+</div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;">Normalization may begin with co-registration of each person's fMRI data to his/her own anatomic images as in the single subject case. More frequently, however, this step is bypassed in favor of direct transformation into the required coordinate system. <em><strong><font color="#24678d">Affine transforms</font></strong></em> (that include displacement, rotation, reflection, zooming, and shearing) are frequently employed in this process as are nonlinear methods. These can be made more robust through regularization (i.e., imposing penalties for excessive stretching or shrinking) or tissue segmentation (i.e., separating gray and white matter).<span style="color:rgb(135, 135, 135)">&nbsp;</span>More recently finite element techniques employing Bayesian statistics have been developed to obtain maximum a posteriori (MAP) estimates of deformation fields that can be optimized.</div>
+
+<span class='imgPusher' style='float:left;height:0px'></span><span style='display: table;width:283px;position:relative;float:left;max-width:100%;;clear:left;margin-top:0px;*margin-top:0px'><a href='uploads/3/4/5/7/34572113/7157406_orig.gif' rel='lightbox' onclick='if (!lightboxLoaded) return false'><img src="uploads/3/4/5/7/34572113/71574064734.gif?273" style="margin-top: 15px; margin-bottom: 0px; margin-left: 0px; margin-right: 20px; border-width:0; max-width:100%" alt="Talaraich atlas" class="galleryImageBorder wsite-image" /></a><span style="display: table-caption; caption-side: bottom; font-size: 90%; margin-top: -0px; margin-bottom: 0px; text-align: center;" class="wsite-caption">Image from Talaraich Atlas (1988)</span></span>
+<div class="paragraph" style="text-align:skip_to_justify;display:block;">Two different template systems have been overwhelmingly used for most fMRI studies. The<span style="color:rgb(0, 0, 0)">&nbsp;</span><em style="color:rgb(0, 0, 0)"><strong><font color="#24678d">Talaraich Atlas</font></strong></em><span style="color:rgb(0, 0, 0)">&nbsp;is the oldest (1988), based on photographs of thick sagittal anatomic sections taken from autopsy of a single woman's brain. Hand-drawn tracings of these photographs were then created and placed on rectangular coordinate system whose reference was the anterior commissure-posterior commissure (AC-PC) line. More widely used today are templates from the&nbsp;</span><em style="color:rgb(0, 0, 0)"><font color="#24678d"><strong>Montreal Neurologic Institute (MNI)</strong></font></em>. These were derived from MRI scans of several hundred healthy young adults. The two spaces can be converted into one another, albeit with some difficulty, as the Talaraich brain has larger temporal lobes than the MNI. The <font color="#24678d"><em><strong>International Consortium for Brain Mapping (</strong></em><em><em><strong>ICBM</strong></em></em><em><strong>)</strong></em></font> has adopted the MNI data as the basis for its multiple recommended brain templates for fMRI cortical mapping.&nbsp;A currently popular template is ICBM152 using data from MRI scans of 152 normal adult brains.</div>
+<hr style="width:100%;clear:both;visibility:hidden;"></hr>
+
+<div><div class="wsite-image wsite-image-border-none" style="padding-top:10px;padding-bottom:10px;margin-left:0px;margin-right:0px;text-align:center">
+<a href='uploads/3/4/5/7/34572113/8421896_orig.jpg' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/8421896b5dc.jpg?667" alt="ICBM template" style="width:667;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%">International Consortium for Brain Mapping (ICBM) 2009a Nonlinear Symmetric 1x1x1mm template based on MNI data sets</div>
+</div></div>
+
+<div><div id="172229211810233951" align="left" style="width: 100%; overflow-y: hidden;" class="wcustomhtml"><html> <head><script src="gdpr/gdprscript6f19.js?buildTime=1774025472"></script> <script type="text/javascript" 
+></script> 
+<script type="text/javascript">
+		$(function() {$('#Q').click(function() {$('.Q').toggle(500); return false;});});</script></head><body>
+<a href="#" id=Q><h3><font color="#378a57">Advanced Discussion (show/hide)»</font></h3></a><div class=Q style="display:none;">
+
+<!--content goes below here-->
+
+<h3>Image Corrections Applied to Anatomic Images in Co-registration</h3>
+
+<p>Just as the raw fMRI data can be distorted, so can the T1- or T2-anatomic images used for co-registration. These anatomic images typically must also undergo pre-acquisition or pre-processing corrections steps. Examples include:</p>
+
+<p>     <b>1.  <u>Gradient non-linearity compensation</u>.</b> A method such as "Gradwarp" is commonly used to correct for image distortion secondary to gradient non-linearities. This is done as part of routine imaging processing by many commercial scanners automatically.</p>
+
+<p>     <b>2.  <u>B1-non-uniformity correction</u>.</b> This refers to signal intensity differences caused due to variations in the <b>B<sub>1</sub></b> transmit field or RF-signal reception by a non-uniform head coil. Calibration scans may be performed to account for these spatially dependent changes in signal during the image acquisition phase. </p> 
+
+<p>     <b>3.  <u>Dielectric effect non-uniformity correction</u>.</b> This refers to signal intensity variations due to standing waves and dielectric effects that become increasingly problematic at 3T and above. These may be reduced by intensity correction filters or histogram peak-sharpening algorithms such as the N3 technique.</p> 
+
+<h3>Considerations for Multimodality Co-registration</h3>
+
+<p>If the anatomic MR images have been acquired during the same session as the fMRI study, then header information in the data will allow fully automated initial alignment to be performed. If the anatomic data comes from a different modality such as CT, or if the patient has moved significantly between the functional and anatomic MR sequences, a manual adjustment may be required to make sure that the image sets are in gross correspondence. In some cases initial alignment between data sets is performed by manual matching of specified points on the images. These points may be an easily recognized anatomic structure (such as the midline anterior commissure) or an external landmark (such as a fiducial marker attached to the scalp).</p>
+
+<h3>The Talairach Patient</h3>
+
+<p>Virtually nothing is known about the woman whose brain was used for the Talairach atlas. Anectdotal published references from the 1990's suggest that she may have been French, 60-69 years old, right-handed, and possibly an alcoholic. I have tried trace down these statements from various authors, and to date have been unable to verify any of their demographic statements. The T&T Atlas of 1988 says nothing except the subject was female, and unfortunately both Talariach and Tournoux are no longer alive to comment further. I suspect that because T&T worked in Paris the woman was merely assumed to be French, and the reference to alcoholism was likely just a slur on the French who do love their wine. I also question that she was in her 60's, as her sulci and ventricles seem rather small to me for an average person in this age group. If any readers have direct knowledge about this subject, please let me know!</p>
+
+<!--content goes above here-->
+</div></body>
+<!-- Mirrored from mriquestions.com/registrationnormalization.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 21 Mar 2026 06:43:01 GMT -->
+</html></div>
+
+
+
+</div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;"><strong>References</strong><br /><font color="#2a2a2a">&nbsp; &nbsp; &nbsp;Ashburner J, Friston KJ. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/ch2.pdf">Rigid body registration</a>. In: Frackowiak RSJ (ed). <em>Human Brain Function</em>, 2nd ed. London: Academic Press, 2004. (pdf made available on-line by the authors at </font><a href="http://www.fil.ion.ucl.ac.uk/spm/doc/books/hbf2/">http://www.fil.ion.ucl.ac.uk/spm/doc/books/hbf2/</a>)<br /><font color="#2a2a2a">&nbsp; &nbsp; &nbsp;Ashburner J, Friston KJ. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/ch3.pdf">Spatial normalization using basis functions</a>. In: Frackowiak RSJ (ed). <em>Human Brain Function</em>, 2nd ed. London: Academic Press, 2004. (pdf made available on-line by the authors at </font><a href="http://www.fil.ion.ucl.ac.uk/spm/doc/books/hbf2/">http://www.fil.ion.ucl.ac.uk/spm/doc/books/hbf2/</a>)<br />&nbsp;&nbsp; &nbsp;&nbsp;<font color="#2a2a2a">Ashburner J, Friston KJ. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/ch4.pdf">High-dimensional image warping</a>. In: Frackowiak RSJ (ed).&nbsp;<em>Human Brain Function</em>, 2nd ed. London: Academic Press, 2004. (pdf made available on-line by the authors at&nbsp;</font><a href="http://www.fil.ion.ucl.ac.uk/spm/doc/books/hbf2/">http://www.fil.ion.ucl.ac.uk/spm/doc/books/hbf2/</a><span>)</span><br />&nbsp; &nbsp; &nbsp;Brett M, Christoff K, Cusack R, Lancaster JL. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/talairachversusmni.pdf">Using the Talairach atlas with the MNI template</a>. Medical Research Council, 1997. (Downloaded from brainmap.org 5/20/16)<br />&nbsp;&nbsp; &nbsp; Greve DN, Fischl B. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/greve_bbr_1-s2.0-s1053811909006752-main.pdf">Accurate and robust brain image alignment using boundary-based registration</a>. NeuroImage 2009; 48:63-73.&nbsp; &nbsp; &nbsp;<font color="#2a2a2a">&nbsp;<br />&nbsp; &nbsp; &nbsp;Klein A, Andersson J, Ardekani BA, et al. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/klein_registration_algorithms_1-s2.0-s1053811908012974-main.pdf">Evaluation of 14 nonlinear deformation algorithms applied to human brain MRI registration</a>. NeuroImage 2009; 46:786-802. (Good review of various functional-structural co-registration and spatial normalization algorithms)<br />&nbsp;&nbsp; &nbsp;&nbsp;</font>Lancaster JL, Woldorff MG, Parsons LM, et al. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/taileraich_lancaster_hbm_00.pdf">Automated Talairach atlas labels for functional brain mapping</a>. Hum Brain Mapp 2000; 10:120-131.<br /><span>&nbsp; &nbsp; &nbsp;Talairach J, Tournoux P. <em>Co-planar Stereotaxic Atlas of the Human Brain: 3-Dimensional Proportional System - an Approach to Cerebral Imaging</em>. New York: Thieme Medical Publishers,1988.</span></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;"><strong>Related Questions</strong><br /><em><strong>&nbsp; &nbsp; &nbsp;<a href="data-pre-processing.html">What are the steps for preprocessing fMRI data?&nbsp;<br /></a>&nbsp; &nbsp; &nbsp;</strong></em><strong style="color:rgb(3, 118, 190)"><em><a href="activation-blobs.html">How are those activation "blobs" on an fMRI image created, and what exactly do they represent?</a></em></strong><em></em><br /></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div style="text-align:skip_to_justify;"><div style="height: 0px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-normal" href="data-pre-processing.html" >
+<span class="wsite-button-inner">← &nbsp;Previous Question</span>
+</a>
+<div style="height: 0px; overflow: hidden;"></div></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div style="text-align:right;"><div style="height: 0px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-normal" href="fmri-statistical-analysis.html" >
+<span class="wsite-button-inner">Next Question &nbsp;→</span>
+</a>
+<div style="height: 0px; overflow: hidden;"></div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div style="text-align:center;"><div style="height: 0px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-highlight" href="complete-list-of-questions.html" >
+<span class="wsite-button-inner">↑&nbsp;Complete List of Questions ↑</span>
+</a>
+<div style="height: 10px; overflow: hidden;"></div></div>
+</div></div>

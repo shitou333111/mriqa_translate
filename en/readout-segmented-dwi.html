@@ -1,0 +1,151 @@
+<div id="content"><div id="wsite-content" class="wsite-elements wsite-not-footer">
+	<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<h2 class="wsite-content-title" style="text-align:center;">Readout-segmented DWI</h2>
+
+<div class="paragraph" style="text-align:center;"><strong style="color:rgb(135, 135, 135)"><em><font color="#0376be" size="4">Why does readout-segmented DWI produce better looking images?&nbsp;</font></em></strong><strong style="color:rgb(55, 138, 87)"><em><font size="4">&nbsp;</font></em></strong></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-thin" style="padding-top:0px;padding-bottom:10px;margin-left:0px;margin-right:0px;text-align:center">
+<a href='uploads/3/4/5/7/34572113/screen-shot-2017-04-19-at-9-59-06-am_orig.png' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/published/screen-shot-2017-04-19-at-9-59-06-am1743.png?1492612423" alt="readout segmented DWI (RESOLVE)" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;"><font color="#2a2a2a">Conventional diffusion-weighted imaging (DWI) is typically performed using a single-shot echo-planar (ss-EPI) sequence. This has the advantage of speed but suffers from susceptibility artifacts/distortions, low signal-to-noise, and spatial blurring. To improve image quality (at the expense of increased imaging time) </font><em><strong><font color="#24678d">readout-segmented echo-planar diffusion methods (rs-DWI) </font></strong></em><font color="#2a2a2a">have been developed. Siemens currently markets one such sequence under the trade name </font><em><strong><font color="#24678d">RESOLVE (REadout Segmentation Of Long Variable Echo trains)</font></strong></em><font color="#2a2a2a">.</font></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;"><font color="#2a2a2a">In rs-DWI <em>k</em>-space sampling occurs in a&nbsp;small number (3-6) of "shots". Each shot has limited transversal of <em>k</em>-space in the readout direction, but full resolution along the phase-encode axis. Because motion artifacts between segments can create substantial artifacts, 2D navigator&nbsp;readout segments are acquired during the second and subsequent echoes. At <em>k</em>-space center, the navigator is repeatedly acquired to account for shot-dependent nonlinear phase differences that arise from non-rigid motion of the head or other imaged body part. As shown in the example below, improved signal-to-noise, spatial resolution, and decreased susceptibility artifacts are noted using this strategy</font></div>
+
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:42.361111111111%; padding:0 15px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-none" style="padding-top:10px;padding-bottom:10px;margin-left:0px;margin-right:0px;text-align:center">
+<a href='uploads/3/4/5/7/34572113/read-segmented-epi_orig.gif' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/editor/read-segmented-epid8bc.gif?1492601872" alt="readout segmented DWI RESOLVE" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%"><br><i>K</i>-space sampling strategy for readout-segmented DWI</div>
+</div></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:57.638888888889%; padding:0 15px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-none" style="padding-top:10px;padding-bottom:10px;margin-left:0px;margin-right:0px;text-align:center">
+<a href='uploads/3/4/5/7/34572113/single-vs-multishot-dwi_orig.png' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/single-vs-multishot-dwi_orig.png" alt="readout segmented multi-shot dwi" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%">Comparison of single-shot echo-planar DWI with multi-shot DWI. Note decreased susceptibility distortion at the skull base on multi-shot image. Better signal-to-noise and spatial resolution is also observed on the multi-shot image, a result of longer imaging time. </div>
+</div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div class="paragraph">A variation called <em><strong><font color="#24678d">MUSE (MUltiplexed Sensitivity Encoding)</font></strong></em>, now a GE product, was designed to correct the motion-induced phase errors in segmented EPI without the need to acquire 2D navigators. After each shot, MUSE calculates a low-resolution phase map, which together with the known<span style="color:rgb(10, 10, 10); font-weight:400">&nbsp;receiver coil sensitivity profiles, allows</span>&nbsp;a first-order phase correction to be made for that segment.&nbsp; A final full-resolution,&nbsp;<span style="color:rgb(10, 10, 10); font-weight:400">phase-corrected image is then generated by performing a more comprehensive SENSE reconstruction that jointly integrates the data from<span>&nbsp;</span><em>all</em><span>&nbsp;</span>segments simultaneously. Modifications of MUSE include 3D-acquisition, small-FOV imaging, multi-band stimulation, and artificial intelligence reconstruction.&nbsp;</span><br></div>
+
+<div class="paragraph"><strong style="color:rgb(0, 0, 0)"><em><font color="#24678d">PROPELLER/BLADE diffusion methods</font></em></strong><span style="color:rgb(0, 0, 0)">&nbsp;may also be used to reduce susceptibility artifacts and improve spatial resolution compared to ss-EPI methods. These employ fast (turbo) spin echoes and sample&nbsp;</span><em style="color:rgb(0, 0, 0)">k</em>-space in a radial fashion. Image quality is significantly improved and motion artifacts reduced. These sequences may be superior to rs-DWI-EPI methods where susceptibility artifacts are most problematic, such as in evaluating temporal bone cholesteatomas. Notwithstanding these advantages, image acquisition time may be comparatively longer compared to rs-DWI and imaging artifacts may limit acquisition to primarily the axial plane. Additionally, the use of turbo spin echoes increases <em><strong><font color="#24678d">specific absorption rate (SAR)</font></strong></em> and produces more tissue heating compared to gradient echo EPI methods.</div>
+
+<div><div id="492922416247900424" align="left" style="width: 100%; overflow-y: hidden;" class="wcustomhtml"><html> <head><script src="gdpr/gdprscript6f19.js?buildTime=1774025472"></script> <script type="text/javascript" 
+></script> 
+<script type="text/javascript">
+		$(function() {$('#Q').click(function() {$('.Q').toggle(500); return false;});});</script></head><body>
+<a href="#" id=Q><h3><font color="#378a57">Advanced Discussion (show/hide)»</font></h3></a><div class=Q style="display:none;">
+
+<!--content goes below here-->
+
+<p><b><i><font color="#24678d">Phase-encode segmented DWI </font></b></i> has also been tested, where all readout <i>k</i>-space data are sampled at each shot, but at a limited number of phase encoding points. Such sequences can provide higher spatial resolution and imaging in all orientations. However, this sampling scheme cannot be easily combined with 2D, non-linear, navigator phase correction. Accordingly, phase-encode segmented DW images are more prone to motion-induced aliasing artifacts than readout-segmented ones.</p>
+
+
+<!--content goes above here-->
+</div></body>
+<!-- Mirrored from mriquestions.com/readout-segmented-dwi.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 21 Mar 2026 06:12:08 GMT -->
+</html></div>
+
+
+
+</div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;"><strong>References</strong><br />&nbsp; &nbsp; &nbsp;Chen NK, Guidon A, Chang HC, Song AW.&nbsp;<a href="https://mriquestions.com/uploads/3/4/5/7/34572113/nihms440026.pdf"> A robust multi-shot scan strategy for high-resolution diffusion weighted MRI enabled by multiplexed sensitivity-encoding (MUSE)</a>, Neuroimage 2013; 72:41&ndash;47.&nbsp; [<a href="https://doi.org/10.1016/j.neuroimage.2013.01.038" target="_blank">DOI LINK</a>]<br />&nbsp;<span><font color="#878787">&nbsp; &nbsp; &nbsp;</font></span>Morelli JN, Saettele MR, Rangaswamy RA, et al. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/jclinimagingsci2131-2581722_071017.pdf">Echo planar diffusion-weighted imaging: possibilities and considerations with 12- and 32-channel head coils</a>. J Clin Imaging Sci 2012;2:31.<br />&nbsp;&nbsp; &nbsp;&nbsp;Pipe JG, Farthing VG, Forbes KP. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/propeller_dwi_pipe_et_al-2002-magnetic_resonance_in_medicine.pdf">Multishot diffusion-weighted FSE using PROPELLER MRI</a>. Magn Reson Med 2002; 47:42-52.<br />&nbsp; &nbsp; &nbsp;Porter DA, Heidemann RM. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/readout_segmented_porter_et_al-2009-magnetic_resonance_in_medicine.pdf">High resolution diffusion&#8209;weighted&nbsp;imaging using readout&#8209;segmented echo&#8209;planar imaging, parallel&nbsp;imaging and a two&#8209;dimensional navigator&#8209;based reacquisition</a>. Magn&nbsp;Reson Med 2009;62:468&#8209;75.<br />&nbsp; &nbsp; &nbsp;<font size="4" color="#f70a0a">&#10026;&nbsp;</font>Wu W, Miller KL.<a href="https://mriquestions.com/uploads/3/4/5/7/34572113/jmri-46-646.pdf"> Image formation in diffusion MRI: a review of recent technical developments</a>. J Magn Reson Imaging 2017; 46:646-662.&nbsp; [<a href="https://doi.org/10.1002/jmri.25664" target="_blank">DOI LINK</a>]</div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;"><strong>Related Questions</strong><br /><em><strong><a href="echo-planar-imaging.html">&nbsp; &nbsp; &nbsp;What is echo-planar imaging (EPI)? Is this the same as Fast Spin Echo (FSE)?</a></strong></em><br /><em><strong><a href="k-space-trajectories.html">&nbsp; &nbsp; &nbsp;You alluded to different trajectories for filling k-space. What are they?&nbsp;&nbsp;</a></strong></em><br /><em><strong><a href="propellerblade.html">&nbsp; &nbsp; &nbsp;How does PROPELLER reduce motion artifacts?&nbsp;&#8203;&#8203;</a></strong></em></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div style="text-align:skip_to_justify;"><div style="height: 0px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-normal" href="whole-body-dwi.html" >
+<span class="wsite-button-inner">← &nbsp;Previous Question</span>
+</a>
+<div style="height: 0px; overflow: hidden;"></div></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div style="text-align:right;"><div style="height: 0px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-normal" href="small-fov-dwi.html" >
+<span class="wsite-button-inner">Next Question &nbsp;→</span>
+</a>
+<div style="height: 0px; overflow: hidden;"></div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div style="text-align:center;"><div style="height: 0px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-highlight" href="complete-list-of-questions.html" >
+<span class="wsite-button-inner">↑&nbsp;Complete List of Questions ↑</span>
+</a>
+<div style="height: 10px; overflow: hidden;"></div></div>
+</div></div>

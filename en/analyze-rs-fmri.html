@@ -1,0 +1,172 @@
+<div id="content"><div id="wsite-content" class="wsite-elements wsite-not-footer">
+	<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<h2 class="wsite-content-title" style="text-align:center;">RS-fMRI Analysis</h2>
+
+<div class="paragraph" style="text-align:center;"><strong style="color:rgb(135, 135, 135)"><em><font color="#0376be" size="4">How do you process and analyze resting state fMRI data?&nbsp;</font></em></strong><strong style="color:rgb(55, 138, 87)"><em><font size="4">&nbsp;</font></em></strong></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-thin" style="padding-top:0px;padding-bottom:0px;margin-left:0px;margin-right:0px;text-align:center">
+<a href='uploads/3/4/5/7/34572113/screen-shot-2016-10-16-at-6-03-16-pm_orig.png' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/screen-shot-2016-10-16-at-6-03-16-pm_orig.png" alt="Picture" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div class="paragraph"><strong><font size="4" color="#8d5024">Data Pre-Processing</font></strong></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;">Pre-processing of RS-fMRI images is similar to that of standard fMRI studies as described in <a href="data-pre-processing.html">a prior Q&amp;A.</a> These steps include slice-timing correction, motion compensation, spatial filtering, and normalization. Temporal filtering to remove noise must be done judiciously so as not to remove relevant low-frequency resting state signals.&nbsp;</div>
+
+<div class="paragraph"><font color="#2a2a2a">Noise levels from motion and physiologic sources in RS-fMRI are very high; less that 5% of total signal derives from neuronal activity. Respiratory and cardiac pulsations contain frequencies close to those of resting state networks and are much more problematic for RS-fMRI than for task-based studies. Simultaneous recording of physiologic data such as heart rate, respiratory rate, or end-tidal pCO2 values may be built into the regression models. Masking of signal from ventricles, skull and white matter may also be performed. More controversial techniques applied to RS-fMRI include denoising by autocorrelation methods and removal of the average whole brain signal from the data set (global signal regression). These latter two techniques potentially may introduce or obscure anti-correlations (deactivations) in an experiment. &nbsp;</font></div>
+
+<div class="paragraph"><font size="4" color="#8d5024"><strong>Correlation Analysis</strong></font></div>
+
+<div class="paragraph">The degree of temporal synchrony between time-series data obtained from two voxels or brain regions (<em style="color:rgb(0, 0, 0)">X = x<font size="1">1</font>, x<font size="1">2</font>, x<font size="1">3</font></em><span style="color:rgb(0, 0, 0)">,&nbsp;&hellip; and&nbsp;</span><em style="color:rgb(0, 0, 0)">Y = y<font size="1">1</font>, y<font size="1">2</font>, y<font size="1">3</font>,</em><span style="color:rgb(0, 0, 0)">&nbsp;&hellip;) can be expressed by the</span>&nbsp;<em><font color="#24678d" style="font-weight:bold">correlation coefficient (r)</font></em>&nbsp;</div>
+
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:47.5%; padding:0 15px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-none" style="padding-top:0px;padding-bottom:0px;margin-left:0px;margin-right:0px;text-align:center">
+<a href='uploads/3/4/5/7/34572113/resting-state-fmri-01_3_orig.png' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/resting-state-fmri-01_3_orig.png" alt="resting state fmri correlation matrix" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%">Correlation matrix for pairs of 30 different brain regions in RS-fMRI experiment. Shades of red are positive correlations, blues represent negative <i>r</i>-values or anti-correlations. (From nipy.org under CC license)</div>
+</div></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:52.5%; padding:0 15px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-none" style="padding-top:10px;padding-bottom:10px;margin-left:0px;margin-right:0px;text-align:center">
+<a href='uploads/3/4/5/7/34572113/correlation-coefficient-r_3_orig.png' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/correlation-coefficient-r_3.png" alt="Picture" style="width:191;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+<div class="paragraph"><span>.&#65279;</span><span style="color:rgb(0, 0, 0)">where&nbsp;</span><em style="color:rgb(0, 0, 0)">r = 0</em><span style="color:rgb(0, 0, 0)">&nbsp;implies no correlation,&nbsp;</span><em style="color:rgb(0, 0, 0)">r = 1</em><span style="color:rgb(0, 0, 0)">&nbsp;perfect correlation, and</span><em style="color:rgb(0, 0, 0)">&nbsp;=&nbsp;&minus;1</em><span style="color:rgb(0, 0, 0)">&nbsp;perfect anti-correlation.&nbsp;</span>&#8203;<br /><br />&#8203;It is possible to perform this calculation for all pairs of voxels in the data set, resulting in over 200,000 comparisons. More frequently a "<em><strong><font color="#24678d">seed</font></strong></em>" is chosen (a predetermined voxel, cluster, or small anatomic region) and comparison made to similar seeds in the data set. A seed correlation matrix (shown left) may be constructed, where<span style="color:rgb(0, 0, 0)">&nbsp;higher&nbsp;</span><em style="color:rgb(0, 0, 0)">r</em><span style="color:rgb(0, 0, 0)">-values&nbsp;reflect greater connectivity between paired regions. High-correlation areas can also be displayed as "blobs" overlaid on co-registered anatomic images.</span></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;"><strong><font size="4" color="#8d5024">Independent Component Analysis</font></strong></div>
+
+<div class="paragraph"><font color="#2a2a2a">The goal of&nbsp;</font><em><strong><font color="#24678d">Independent Component Analysis (ICA)</font></strong></em><font color="#2a2a2a">&nbsp;is to detect underlying patterns present in the fMRI signal without prior knowledge of the experimental task or shape of the hemodynamic response function. ICA is thus considered a &ldquo;model free&rdquo; method for&nbsp;</font><em><strong><font color="#24678d">blind source signal separation</font></strong></em><font color="#2a2a2a">, allowing identification of unknown independent source signals that have been linearly mixed together. For example, ICA methods could be used extract individual voices, music, and noise elements from an audio mixture recorded at a cocktail party without prior knowledge of their sources or locations.</font></div>
+
+<span class='imgPusher' style='float:right;height:0px'></span><span style='display: table;width:327px;position:relative;float:right;max-width:100%;;clear:right;margin-top:2px;*margin-top:4px'><a href='uploads/3/4/5/7/34572113/ica_orig.gif' rel='lightbox' onclick='if (!lightboxLoaded) return false'><img src="uploads/3/4/5/7/34572113/icab2eb.gif?306" style="margin-top: 10px; margin-bottom: 10px; margin-left: 0px; margin-right: 20px; border-width:0; max-width:100%" alt="independent component analysis" class="galleryImageBorder wsite-image" /></a><span style="display: table-caption; caption-side: bottom; font-size: 90%; margin-top: -10px; margin-bottom: 10px; text-align: center;" class="wsite-caption">Spatial ICA separates signals from visual cortex into three components.</span></span>
+<div class="paragraph" style="display:block;"><font color="#2a2a2a">As applied to fMRI data, ICA may distinguish meaningful areas of correlated brain activation from random and semi-periodic physiological noise. Although ICA can be used in conjunction with GLM methods for task-based experiments, it has found its most widespread application for the analysis of resting-state fMRI data.&nbsp;</font><br /><br />&#8203;The ICA algorithm begins by constructing a matrix (<strong>Y</strong>) of all the observed fMRI data. Each column of <strong>Y</strong> contains sequential time points for a single voxel; each row of <strong>Y</strong> is the fMRI signal at a certain time point for organized by space (all the voxels). After some pre-processing to&nbsp;normalize means and variances,&nbsp;<strong>Y</strong>&nbsp;is decomposed into the product of two matrices (<strong>T</strong>&nbsp;and&nbsp;<strong>S</strong>),<span><strong>&nbsp;</strong></span>where&nbsp;<strong>T</strong>&nbsp;is a matrix of time courses and&nbsp;<strong>S</strong>&nbsp;is a matrix of spatial components. The values in <strong>T</strong> and <strong>S</strong> are iteratively adjusted to determine a decomposition that maximizes statistical independence (typically between rows of <strong>S</strong>). The resultant independent component signals can then be color-coded and overlaid on an anatomic image (above).</div>
+<hr style="width:100%;clear:both;visibility:hidden;"></hr>
+
+<div class="paragraph"><strong><font size="4" color="#8d5024">Other Methods</font></strong></div>
+
+<div class="paragraph"><ul><li><strong><font color="#24678d">Regional Homogeneity (ReHo)</font></strong><span style="color:oklch(0.304 0.04 213.681)">&nbsp;measures the similarity of the time series of a given voxel to those of its nearest neighbors, providing information about local connectivity</span></li><li><strong><font color="#24678d">Amplitude of Low-Frequency Fluctuations (ALFF)</font></strong><span style="color:oklch(0.304 0.04 213.681)">&nbsp;quantifies the intensity of spontaneous low-frequency oscillations in the BOLD signal, which are thought to reflect spontaneous neural activity</span></li><li><strong><font color="#24678d">Graph Theory Analysis</font></strong>&nbsp;<span style="color:oklch(0.304 0.04 213.681)">models the brain as a network of nodes (brain regions) and edges (functional connections), allowing for the calculation of various network metrics such as centrality, clustering, and efficiency</span>&#8203;<span style="color:oklch(0.304 0.04 213.681)"><span>.</span></span></li></ul></div>
+
+<div class="paragraph"><strong><font size="4" color="#8d5024">Software Tools</font></strong></div>
+
+<div class="paragraph"><span style="color:rgb(0, 0, 0)">Several software packages are available for RS-fMRI analysis, including:</span></div>
+
+<div class="paragraph"><ul><li><strong style="color:rgb(0, 0, 0)"><font color="#24678d"><a href="https://web.conn-toolbox.org/home" target="_blank">CONN (Functional Connectivity Toolbox)</a>: </font></strong><font color="#2a2a2a"><span>&nbsp;</span>MATLAB-based</font><strong style="color:rgb(0, 0, 0)"><font color="#24678d">.&nbsp;</font></strong>Probably the most widely used.&nbsp;Includes preprocessing, denoising, functional connectivity measures, general linear model, and cluster-level inferences modules. [<a href="https://web.conn-toolbox.org/" target="_blank">LINK</a>]</li><li><strong><font color="#24678d">REST (Resting State fMRI Data Analysis Toolkit): </font></strong>From China, original use was for calculating ReHo and ALFF measures; has not been updated in at least 8 years <a href="https://rfmri.org/REST" target="_blank">[LINK]</a><br /></li><li><strong style=""><font color="#24678d">BRANT (BRAinNetome fmri Toolkit):</font></strong><font color="#282828"> MATLAB-based, also from China, offers a wide range of image analysis and fMRI processing algorithms. <a href="https://www.frontiersin.org/journals/neuroinformatics/articles/10.3389/fninf.2018.00052/full" target="_blank">[LINK]</a></font></li><li><strong style=""><font color="#24678d">SPM, FSL, and AFNI: </font></strong><font color="oklch(0.304 0.04 213.681)">General neuroimaging software packages that include tools for rs-fMRI analysis as well as for task-based fMRI</font></li></ul></div>
+
+<div><div id="526136911571085223" align="left" style="width: 100%; overflow-y: hidden;" class="wcustomhtml"><html> <head><script src="gdpr/gdprscript6f19.js?buildTime=1774025472"></script> <script type="text/javascript" 
+></script> 
+<script type="text/javascript">
+		$(function() {$('#Q').click(function() {$('.Q').toggle(500); return false;});});</script></head><body>
+<a href="#" id=Q><h3><font color="#378a57">Advanced Discussion (show/hide)»</font></h3></a><div class=Q style="display:none;">
+
+<!--content goes below here-->
+
+<p>Meaningful resting-state fMRI data lies in the frequency range of approximately 0.01 − 0.1 Hz. By comparison, respiratory fluctuations produce aliased signals in the range of 0.1 − 0.3 Hz, while cardiac pulsations produce signals in the range of 0.8 − 1.3 Hz. Thus physiological noise is a much greater problem for RS-fMRI than for task-based studies.</p>
+
+<!--content goes above here-->
+</div></body>
+<!-- Mirrored from mriquestions.com/analyze-rs-fmri.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 21 Mar 2026 06:43:59 GMT -->
+</html></div>
+
+
+
+</div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;"><strong>References</strong><br /><strong>&nbsp;</strong><span>&nbsp; &nbsp;Amenmiya S, Takao H, Abe O. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/magnetic_resonance_imaging_-_2023_-_amemiya_-_resting-state_fmri__emerging_concepts_for_future_clinical_application.pdf">Resting-state fMRI: emerging concepts for future clinical application</a>. J Magn Reson Imaging 2024; 59:1135-1148. [<a href="https://doi.org/10.1002/jmri.28894" target="_blank">DOI LINK</a>]</span><br /><strong>&nbsp; &nbsp; &nbsp;</strong><span>Arabshahi S, Chung S, Alivar A, et al. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/resting_state_fmri.pdf">A comprehensive and broad approach to resting-state functional connectivity in adult patients with mild traumatic brain injury.</a> </span><span>AJNR Am J Neuroradiol 2024; 45:637-646.&nbsp; [<a href="https://doi.org/10.3174/ajnr.A8193" target="_blank">DOI LINK</a>]</span><font color="#878787">&nbsp;&nbsp;</font><br />&nbsp;&nbsp; &nbsp;&nbsp;Beckman CF. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/ica_beckman_1-s2.0-s1053811912001978-main.pdf">Modelling with independent components</a>. NeuroImage 2012; 62: 891-901.<br />&nbsp; &nbsp; &nbsp;Biswal BB, Uddin LQ. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/s41586-025-08953-9.pdf">The history and future of resting-state functional magnetic resonance imaging</a>. Nature 2025; 641:1121-1131.&nbsp; <a href="https://doi.org/10.1038/s41586-025-08953-9" target="_blank">[DOI LINK]</a><br /><span style="color:rgb(135, 135, 135)">&nbsp; &nbsp; &nbsp;</span>Bright MG, Murphy K. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/bright_murphy_noise_removal_bold1-s2.0-s1053811912009536-main.pdf">Removing motion and physiological artifacts from intrinsic BOLD fluctuations using&nbsp;short echo data</a>. NeuroImage 2013; 64:526-537.<br />&nbsp;&nbsp; &nbsp;&nbsp;Calhoun VD, Adali T, Hasen LK, et al. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/ica_2003_ica_overview.pdf">ICA of functional MRI data: an overview</a>. 4th International Symposium on Independent Component Analysis and Blind Signal Separation, Nara, Japan, 2003:281-288.<br />&nbsp; &nbsp; &nbsp;<span style="color:rgb(0, 0, 0)">Chen JE, Glover GH.&nbsp;</span><a href="http://mriquestions.com/uploads/3/4/5/7/34572113/chen_glover_fmri_review_2015art3a10.10072fs11065-015-9294-9.pdf">Functional magnetic imaging methods</a><span style="color:rgb(0, 0, 0)">. Neuropsychol Rev 2015; 25:289-313.&#8203;<br />&nbsp;&nbsp; &nbsp;&nbsp;</span>Hyv&auml;rinen A, Oja E. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/ica_math.pdf">Independent component analysis: algorithms and applications</a>. Neural Networks 2000; 13:411-413. (provides mathematical details of matrix decomposition and optimization for ICA)&nbsp;<br />&#8203;&nbsp; &nbsp; &nbsp;Lee MH, Smyser CD, Shimony JS. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/resting_state_fmri.pdf">Resting-state fMRI: a review of methods and clinical applications</a>. AJNR Am J Neuroradiol 2013; 34:1866-72. (good review)<br />&nbsp; &nbsp; &nbsp;Lv H, Wang Z, Tong E, et al. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/1390.full.pdf">Resting-state functional MRI: everything that non experts have always wanted to know.</a> AJNR Am J Neuroradiol 2018; 39:1390-1399.&nbsp;<a href="https://doi.org/10.3174/ajnr.A5527" target="_blank"> [DOI LINK]</a><br />&nbsp;&nbsp; &nbsp;&nbsp;McKeown MJ, Makeig S, Brown GG, et al. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/ica_mckeown_ica_paper_1998_ada460194.pdf">Analysis of fMRI data by blind separation into independent spatial components</a>. Hum Brain Mapping 1998; 6:160-188 (first use of ICA for fMRI data, actually a task-based experiment, not RS-fMRI)<br />&nbsp; &nbsp; &nbsp;<span style="color:rgb(21, 21, 21)">Nieto-Castanon, A. (2020).&nbsp;</span><a href="https://mriquestions.com/uploads/3/4/5/7/34572113/nieto-castanon_2020_handbookoffcmrimethodsinconn.pdf">Handbook of functional connectivity Magnetic Resonance Imaging methods in CONN. </a><span style="color:rgb(21, 21, 21)">Hilbert Press, 2020. <a href="https://doi.org/10.56441/hilbertpress.2207.6598" target="_blank">[DOI LINK]</a>&nbsp;</span><br />&nbsp; &nbsp; &nbsp;Power JD, Schlaggar BL, Petersen SE. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/resting_state_fmri_2015_review1-s2.0-s0896627314007958-main.pdf">Studying brain organization via spontaneous fMRI signal</a>. Neuron 2014; 84:681-696. (Good recent review)<span style="color:rgb(0, 0, 0)">&nbsp;</span><br />&nbsp; &nbsp; &nbsp;Rosazza C, Minati L, Ghielmetti F, et al. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/rosazza_ajnr.pdf">Functional connectivity&nbsp;during resting-state functional MR imaging: study of the correspondence&nbsp;between independent component analysis and region-of-<br />interest-based methods</a>. AJNR Am J Neuroradiol 2012; 33:180&ndash;87. (little difference between correlation and ICA methods for normal adults RS-fMRI analysis)<br />&nbsp; &nbsp; &nbsp;Van Dijk et al. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/van_dijk_297.full.pdf" target="_blank">Intrinsic functional connectivity as a tool for human connectomics: theory, properties, and optimization</a>. J Neurophysiol. 2010; 103:297-321.&nbsp;&nbsp;<br></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;"><strong>Related Questions</strong><br /><em><strong><a href="fmri-statistical-analysis.html">&nbsp; &nbsp; &nbsp;How do you statistically analyze fMRI data?&nbsp;&nbsp;</a></strong></em><br /><em><strong><a href="resting-state-fmri.html">&#8203;</a>&nbsp; &nbsp; &nbsp;<a href="resting-state-fmri.html">What is meant by resting state fMRI? How is it used?</a>&nbsp;</strong></em></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div style="text-align:skip_to_justify;"><div style="height: 0px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-normal" href="resting-state-fmri.html" >
+<span class="wsite-button-inner">← &nbsp;Previous Question</span>
+</a>
+<div style="height: 0px; overflow: hidden;"></div></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div style="text-align:right;"><div style="height: 0px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-normal" href="networkgraphs.html" >
+<span class="wsite-button-inner">Next Question &nbsp;→</span>
+</a>
+<div style="height: 0px; overflow: hidden;"></div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div style="text-align:center;"><div style="height: 0px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-highlight" href="complete-list-of-questions.html" >
+<span class="wsite-button-inner">↑&nbsp;Complete List of Questions ↑</span>
+</a>
+<div style="height: 10px; overflow: hidden;"></div></div>
+</div></div>

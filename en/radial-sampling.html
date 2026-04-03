@@ -1,0 +1,168 @@
+<div id="content"><div id="wsite-content" class="wsite-elements wsite-not-footer">
+	<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<h2 class="wsite-content-title" style="text-align:center;">Radial sampling</h2>
+
+<div class="paragraph" style="text-align:center;"><font size="4"><strong style="color:rgb(135, 135, 135)"><em><font color="#0376be">Why would you want to use a radial &nbsp;k-space sampling method?&nbsp;</font></em></strong><strong style="color:rgb(55, 138, 87)"><em>&nbsp;</em></strong></font></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-thin" style="padding-top:0px;padding-bottom:0px;margin-left:0px;margin-right:0px;text-align:center">
+<a href='uploads/3/4/5/7/34572113/screen-shot-2017-08-04-at-3-05-25-pm_orig.png' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/published/screen-shot-2017-08-04-at-3-05-25-pmd09e.png?1501873572" alt="radial sampling mri outline" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:34.305555555556%; padding:0 15px;">
+					
+						
+
+<div class="paragraph" style="text-align:skip_to_justify;"><font color="#2a2a2a">Radial sampling of <em>k</em>-space data, one of the earliest methods for image reconstruction, was largely supplanted in the 1980's by the "spin-warp" technique that employed rectilinear (Cartesian) data acquisition. To this day, Cartesian methods remain dominant, but radial (and spiral) approaches are fast gaining ground.</font></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:33.333333333333%; padding:0 15px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-none" style="padding-top:10px;padding-bottom:10px;margin-left:0px;margin-right:0px;text-align:center">
+<a href='uploads/3/4/5/7/34572113/kspace-cartesian_orig.gif' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/editor/kspace-cartesian935c.gif?1501763922" alt="Cartesian sampling of k-space" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%">Rectilinear (Cartesian) sampling of <i>k</i>-space</div>
+</div></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:32.361111111111%; padding:0 15px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-none" style="padding-top:10px;padding-bottom:10px;margin-left:0px;margin-right:0px;text-align:center">
+<a href='uploads/3/4/5/7/34572113/kspace-radial-filling_orig.gif' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/kspace-radial-filling_orig.gif" alt="Radial Sampling of k-space" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%">Radial sampling of <i>k</i>-space</div>
+</div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;">The principal advantage of Cartesian sampling is that the data elements are regularly spaced and can be placed directly into standard array processors designed for efficient <em><strong><font color="#24678d">Fast Fourier Transformation (FFT) </font></strong></em>computations. Radial methods generate data points that do not fall into a rectangular matrix.&nbsp;<span style="color:rgb(0, 0, 0)">To efficiently process such non-uniformly acquired data, these points must be morphed into a Cartesian format, an iterative process commonly referred to as "</span><strong style="color:rgb(0, 0, 0)"><em><font color="#24678d">gridding</font></em></strong><span style="color:rgb(0, 0, 0)">".</span></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;">The major benefit of radial sampling (leading to its now widespread adoption) is relative insensitivity to motion artifacts. Unlike Cartesian methods, radial sampling does not have unique frequency- and phase-encode directions. Noise from moving anatomic structures thus does not propagate as discrete ghosts along a single phase-encode direction, but is distributed more diffusely across the entire image.&nbsp;</div>
+
+<div class="paragraph">In radial acquisition the center of <em>k</em>-space is oversampled and continuously updated due to the overlapping "spokes" that repeatedly pass through this region. This redundancy can be exploited to detect and correct for movement if the signal from the <em>k</em>-space center changes between views.&nbsp;<span style="color:rgb(0, 0, 0)">Additionally, all radial spokes make equal contributions to the image (unlike Cartesian sampling where just a few lines through the center of <em>k</em>-space set overall image contrast and noise levels). So motion on just one or a few radial views is not likely to severely degrade image quality.</span></div>
+
+<span class='imgPusher' style='float:left;height:0px'></span><span style='display: table;width:auto;position:relative;float:left;max-width:100%;;clear:left;margin-top:0px;*margin-top:0px'><a href='uploads/3/4/5/7/34572113/edited/propeller-dirctions.png' rel='lightbox' onclick='if (!lightboxLoaded) return false'><img src="uploads/3/4/5/7/34572113/published/propeller-dirctions174e.png?1501781799" style="margin-top: 10px; margin-bottom: 0px; margin-left: 0px; margin-right: 20px; border-width:1px;padding:3px; max-width:100%" alt="Propeller/blade mri" class="galleryImageBorder wsite-image" /></a><span style="display: table-caption; caption-side: bottom; font-size: 90%; margin-top: -0px; margin-bottom: 0px; text-align: center;" class="wsite-caption">PROPELLER sequence sampling "blades" of data<br>in a rotating fashion around the center of <i>k</i>-space</span></span>
+<div class="paragraph" style="display:block;">&#8203;Today's most widely used radial sampling method is GE's <em><strong><font color="#24678d">PROPELLER</font></strong></em> (<strong>P</strong>eriodically <strong>R</strong>otated <strong>O</strong>verlapping <strong>P</strong>aral<strong>EL</strong> <strong>L</strong>ines with <strong>E</strong>nhanced <strong>R</strong>econstruction) or one of its variants: <span style="color:rgb(0, 0, 0)">Siemens' (</span><strong style="color:rgb(0, 0, 0)"><em><font color="#24678d">BLADE</font></em></strong><span style="color:rgb(0, 0, 0)">), Philips' (</span><strong style="color:rgb(0, 0, 0)"><em><font color="#24678d">MulitVane</font></em></strong><span style="color:rgb(0, 0, 0)">), Hitachi's (</span><strong style="color:rgb(0, 0, 0)"><em><font color="#24678d">RADAR</font></em></strong><span style="color:rgb(0, 0, 0)">), and Canon's (</span><strong style="color:rgb(0, 0, 0)"><em><font color="#24678d">JET</font></em></strong><span style="color:rgb(0, 0, 0)">).</span>&nbsp; Instead of a single radial line, a group of several (typically 8-32) parallel lines (called "blades") are collected in a multi-echo acquisition. In clinical practice this is most commonly a 2D Fast/Turbo spin echo (FSE/TSE) sequence. The blades are then rotated about 10&deg;&minus;20&deg; at which time a second set of data are acquired. The process continues until imaging data from the entire&nbsp;<em>k</em>-space circle has been collected. Further information and examples of PROPELLER can be found<a href="propellerblade.html"> in this related Q&amp;A</a>.</div>
+<hr style="width:100%;clear:both;visibility:hidden;"></hr>
+
+<span class='imgPusher' style='float:right;height:0px'></span><span style='display: table;width:139px;position:relative;float:right;max-width:100%;;clear:right;margin-top:0px;*margin-top:0px'><a href='uploads/3/4/5/7/34572113/stack-of-stars_orig.gif' rel='lightbox' onclick='if (!lightboxLoaded) return false'><img src="uploads/3/4/5/7/34572113/published/stack-of-starsb6df.gif?1501792182" style="margin-top: 0px; margin-bottom: 10px; margin-left: 0px; margin-right: 10px; border-width:1px;padding:3px; max-width:100%" alt="Picture" class="galleryImageBorder wsite-image" /></a><span style="display: table-caption; caption-side: bottom; font-size: 90%; margin-top: -10px; margin-bottom: 10px; text-align: center;" class="wsite-caption">"Stack of Stars"</span></span>
+<div class="paragraph" style="display:block;">Primary radial acquisition by sampling of individual lines (rather than groups/blades) is now offered by at least one major vendor. Siemens' <em><strong><font color="#24678d">StarVIBE</font></strong></em>&nbsp;product combines in-plane radial sampling using a fat-suppressd spoiled-GRE core sequence. &nbsp;The process can be extended to 3D, using rectilinear (Cartesian) sampling in the <em>z</em>-direction while maintaining radial sampling in the <em>xy</em>-plane. This 3D implementation is known as <em><strong><font color="#24678d">Stack of Stars</font></strong></em>.&nbsp;</div>
+<hr style="width:100%;clear:both;visibility:hidden;"></hr>
+
+<div><div id="363052671687685718" align="left" style="width: 100%; overflow-y: hidden;" class="wcustomhtml"><html> <head><script src="gdpr/gdprscript6f19.js?buildTime=1774025472"></script> <script type="text/javascript" 
+></script> 
+<script type="text/javascript">
+		$(function() {$('#Q').click(function() {$('.Q').toggle(500); return false;});});</script></head><body>
+<a href="#" id=Q><h3><font color="#378a57">Advanced Discussion (show/hide)»</font></h3></a><div class=Q style="display:none;">
+
+<!--content goes below here-->
+
+<p>An additional advantage of radial acquisition is that it allows oversampling (512 or greater) in all directions without a time penalty. In conventional (Cartesian) imaging, oversampling is confined to a single direction (frequency-encode or readout). Because radial acquisition occurs in all directions, oversampling is not confined to a single axis. Accordingly, the field of view (FOV) can be smaller than the imaged object in radial sampling scheme without aliasing/wrap-around artifacts.</p>
+
+<p>In addition to the gridding problem, another disadvantage of radial acquisition is uncertainty about the exact location of samples due to gradient delays and distortions. These gradient effects may shift the apparent positions of objects in different directions. To overcome this, a brief calibration scan is typically run prior to performing a radial sequence.</p>
+
+<p>An fascinating mathematical question is how to choose the optimal angles for the radial spokes and in what order to acquire them. One elegant solution is to increment each spoke by approximately 111.25º, which is 180º divided by the golden ratio (Φ =  ½(√5+1) ≈ 1.62) from classical geometry. The <font color="#0376be"><b><i>golden ratio</b></i></font> has a variety of interesting properties that explains its presence in nature, including determining the shapes of sea shells and distribution of leaves on plant stems. When the golden angle is selected for a radial acquisition, each successive spoke divides the largest remaining angular gap in half. As the process continues a uniform sampling of <i>k-</i>space is approached in the limit. Symmetrical distribution of spokes occurs when the number of spokes matches one of the Fibonacci numbers (5, 8, 13, 21, 34, 55, etc). A promising application of this method is known as <font color="#0376be"><b><i>GRASP (Golden-angle RAdial Sparse Parallel)</b></i></font> MRI.</p> 
+
+<!--content goes above here-->
+</div></body>
+<!-- Mirrored from mriquestions.com/radial-sampling.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 21 Mar 2026 06:15:35 GMT -->
+</html></div>
+
+
+
+</div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;"><strong>References<br />&nbsp; &nbsp; &nbsp;</strong>Block KT, Chandarana H, Milla S, et al. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/stack_of_stars_open_jksmrm-18-87.pdf">Toward routine clinical use of radial stack-of-stars 3D gradient-echo sequences for reducing motion sensitivity</a>. J Korean Soc Magn Reson Med 2014; 18:87-106.&nbsp; <a href="http://dx.doi.org/10.13104/jksmrm.2014.18.2.87" target="_blank">[DOI LINK]</a><br />&nbsp; &nbsp; &nbsp;Chandarana H, Block TK, Rosenkrantz AB, et al. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/star_vibe.pdf">Free-breathing radial 3D fat-suppressed T1-weighted gradient echo sequence: a viable alternative for contrast-enhanced liver imaging in patients unable to suspend respiration</a>. Invest Radiol. 2011;46:648&ndash;653. (StarVIBE and Stack of Stars implementation for liver imaging).<br />&nbsp; &nbsp; &nbsp;<span style="background-color: transparent;">Coggins BE, Venters RA, Zhou P. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/1-s2.0-s0079656510000877-main.pdf">Radial sampling for fast NMR: Concepts and practices over three decades</a>. Prog NMR Spectroscopy 2010; 57:381-419.</span><span style="background-color: transparent;">&nbsp; </span><span style="background-color: transparent;">[<a href="https://doi.org/10.1016/j.pnmrs.2010.07.001" target="_blank">DOI LINK</a>]<br /></span><strong>&nbsp;&nbsp; &nbsp;</strong><span style="color:rgb(135, 135, 135)">&nbsp;</span><font color="#2a2a2a">Feng L, Grimm R, Block KT, et al. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/grasp_feng_et_al-2014-magnetic_resonance_in_medicine.pdf">Golden-angle radial sparse parallel MRI: combination of compressed sensing, parallel imaging, and golden-angle radial sampling for fast and flexible dynamic volumetric MRI</a>. Magn Reson Med 2014; 72:707-717. (The "GRASP" technique)</font><br /><span style="color:rgb(0, 0, 0)">&nbsp; &nbsp; &nbsp;Lauterbur PC.</span><a href="http://mriquestions.com/uploads/3/4/5/7/34572113/lauterbur_nature_1973.pdf">&nbsp;Image formation by induced local interactions: examples employing nuclear magnetic resonance</a><span style="color:rgb(0, 0, 0)">. Nature 1973; 242:190-1. (Historic paper where radial reconstruction was used to produce the world's first MR image).<br />&nbsp; &nbsp; &nbsp;Pipe JG.&nbsp;</span><a href="http://mriquestions.com/uploads/3/4/5/7/34572113/pipej_mrm_1999_42_953_959_propeller.pdf">Motion correction with PROPELLER MRI: application to head motion and free-breathing cardiac imaging</a><span style="color:rgb(0, 0, 0)">. Magn Reson Med 1999; 42:963-969.</span></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;"><strong>Related Questions</strong><br /><em><strong><a href="spiralradial-artifacts.html">&nbsp; &nbsp; &nbsp;What about wrap-around artifacts on radial or spiral imaging? it seems like they should always be present because phase-encode goes in every direction.&nbsp;<br /></a></strong></em><em><strong>&nbsp; &nbsp; &nbsp;<a href="propellerblade.html">How does PROPELLER reduce motion artifacts?&nbsp;</a></strong></em><em><strong></strong></em><br /></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div style="text-align:skip_to_justify;"><div style="height: 0px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-normal" href="k-space-trajectories.html" >
+<span class="wsite-button-inner">← &nbsp;Previous Question</span>
+</a>
+<div style="height: 0px; overflow: hidden;"></div></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div style="text-align:right;"><div style="height: 0px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-normal" href="k-space-grid.html" >
+<span class="wsite-button-inner">Next Question &nbsp;→</span>
+</a>
+<div style="height: 0px; overflow: hidden;"></div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div style="text-align:center;"><div style="height: 0px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-highlight" href="complete-list-of-questions.html" >
+<span class="wsite-button-inner">↑&nbsp;Complete List of Questions ↑</span>
+</a>
+<div style="height: 10px; overflow: hidden;"></div></div>
+</div></div>

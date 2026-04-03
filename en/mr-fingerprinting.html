@@ -1,0 +1,134 @@
+<div id="content"><div id="wsite-content" class="wsite-elements wsite-not-footer">
+	<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<h2 class="wsite-content-title" style="text-align:center;">MR Fingerprinting<br></h2>
+
+<div class="paragraph" style="text-align:center;"><font size="4"><strong style="color:rgb(135, 135, 135)"><em><br /></em></strong></font><font size="5"><strong style="color:rgb(135, 135, 135)"><em><font color="#0376be">What is MR Fingerprinting (MRF)?</font></em></strong><strong style="color:rgb(55, 138, 87)"><em>&nbsp;</em></strong></font><br></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-thin" style="padding-top:0px;padding-bottom:10px;margin-left:0px;margin-right:0px;text-align:center">
+<a href='uploads/3/4/5/7/34572113/screenshot-2025-11-03-at-11-07-54-am_orig.png' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/screenshot-2025-11-03-at-11-07-54-am_orig.png" alt="MR Fingerprinting" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div class="paragraph"><span><span><em><strong><font color="#24678d">MR fingerprinting (MRF)</font></strong></em> is<span>&nbsp;</span>a quantitative approach to MRI diagnosis based on the rapid and simultaneous measurement of</span></span>&nbsp;multiple tissue properties, such as T1 and T2 relaxation times. <span><span>Instead of traditional sequences, MRF rapidly acquires a series of several hundred images with semi-randomly varying parameters like TR, TE, and flip angle and then compares the signal evolution of each pixel to a pre-built database (or "dictionary") to generate a unique "fingerprint" for each tissue.</span></span>&nbsp;The potential (not yet fully realized) is to produce&nbsp;<span><span>more objective and quantitative&nbsp;differentiation between healthy and diseased&nbsp;tissue than that based purely on visual analysis.&nbsp;&nbsp;</span></span></div>
+
+<div class="paragraph">MRF is still in evolution and no commercially distributed products are available (although major vendors like Siemens offer prototype sequences and development kits), Although no universally agreed-upon single MRF method is available, most share several common features.&nbsp;</div>
+
+<div class="paragraph"><strong><font color="#8d7824" size="4">Image Acquisition</font></strong><ul><li>Core pulse sequence is usually a multislice-2D SSFP-GRE acquiring several hundred images in each anatomic partition simultaneously. For 3D acquisitions, EPI is often used.&nbsp;&nbsp;</li><li>The core sequence is punctuated by semi-random variation of TR values (10-100 ms); low (~1&deg;) to moderate (~70&deg;)&nbsp;flip angles (arranged in characteristic &ldquo;humps&rdquo; to optimize image contrast); 1-2 second pauses (TR "spikes"); intermittent application of dephasing gradients, preparation, and inversion pulses; TE's are usually kept constant and short (2-5 ms), but sometimes varied&nbsp;</li><li>Non-Cartesian <em>k</em>-space trajectories (like spiral, radial, or stack-of-stars)&nbsp;are usually employed to allow fast, undersampled acquisitions.</li><li>Total scan time of seconds (for a single 2D slice) up to 5-10 min for multislice 2D and 3D.</li><li><span><span>This semi-randomized approach creates a unique, time-resolved signal evolution, or "fingerprint," for each voxel based on its specific physical properties.</span><span><span>&nbsp;</span></span></span><br></li></ul></div>
+
+<div class="paragraph"><font color="#8d7824" size="4"><strong>The MRF "Dictionary"</strong></font><ul><li>The MRF "dictionary" is a large database of signal time courses (fingerprints) based on combinations of tissue parameters (e.g. T1, T2), pulse sequence variations, and k-space trajectories&nbsp;using Bloch equation simulations.</li><li>For each set of parameters, the resulting signal time course is stored as a vector in the dictionary, forming a large multidimensional lookup table.</li></ul></div>
+
+<div class="paragraph"><font color="#8d7824" size="4"><strong>Pattern Matching</strong></font><ul><li>After acquiring the MRF images, the time-dependent signal evolution is extracted voxel-wise.<br></li><li>Each voxel&rsquo;s measured signal is then compared to every entry in the dictionary.&nbsp;A similarity metric such as the inner product or normalized correlation is used to find the best matching dictionary element. This is a lengthy process that requires special computing resources and may take hours for large data sets.<br></li><li>To speed up matching, strategies like averaging or filtering methods, grouping dictionary entries, principal component analysis, tree-based searches, or deep learning methods are now being used.<br></li><li>A quantitative parameter map for each entire image may be created using the best match assigned to each voxel.&nbsp;</li></ul></div>
+
+<div><div class="wsite-image wsite-image-border-none" style="padding-top:10px;padding-bottom:0px;margin-left:0px;margin-right:0px;text-align:center">
+<a href='uploads/3/4/5/7/34572113/mrf1-bioengineering-11-00236_orig.jpg' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/mrf1-bioengineering-11-00236_orig.jpg" alt="MR Fingerprinting" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+<div><div class="wsite-image wsite-image-border-none" style="padding-top:0px;padding-bottom:10px;margin-left:0px;margin-right:0px;text-align:center">
+<a href='uploads/3/4/5/7/34572113/mrf2-bioengineering-11-00236_orig.jpg' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/mrf2-bioengineering-11-00236_orig.jpg" alt="Picture" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%">Steps in procedure for cardiac MRF. (From Velasco et al under CC-BY)</div>
+</div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;"><span style="color:rgb(10, 10, 10); font-weight:400"><span>Although MR Fingerprinting (MRF)</span><span>&nbsp;</span>offers significant advantages for multiparametric quantitative imaging, it remains primarily a research technique facing several challenges limiting its widespread clinical implementation</span><span style="color:rgb(10, 10, 10); font-weight:400">. Key problems include<span>&nbsp;</span></span>susceptibility to motion artifacts, limited spatial resolution (due to undersampling acquisition), partial volume effects (in voxels at tissue boundaries), demanding computational requirements (dictionary size and processing time), and lack of clinical validation.<br></div>
+
+<div><div id="411437627605443609" align="left" style="width: 100%; overflow-y: hidden;" class="wcustomhtml"><html> <head><script src="gdpr/gdprscript6f19.js?buildTime=1774025472"></script> <script type="text/javascript" 
+></script> 
+<script type="text/javascript">
+		$(function() {$('#Q').click(function() {$('.Q').toggle(500); return false;});});</script></head><body>
+<a href="#" id=Q><h3><font color="#378a57">Advanced Discussion (show/hide)»</font></h3></a><div class=Q style="display:none;">
+
+<!--content goes below here-->
+
+No supplementary material yet.  Check back soon!
+
+
+<!--content goes above here-->
+</div></body>
+<!-- Mirrored from mriquestions.com/mr-fingerprinting.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 21 Mar 2026 06:55:05 GMT -->
+</html></div>
+
+
+
+</div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;"><strong>References</strong><br />&nbsp; &nbsp; &nbsp;&nbsp;<font color="#8d2424" size="4">&#10026;&nbsp;</font>Cloos MA, Knoll F, Zhao T, et al. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/cloos_fingerprint_open_ncomms12445.pdf">Multiparametric imaging with heterogeneous&nbsp;radiofrequency fields</a>. Nature communications 2016;17:12445&nbsp; [<a href="https://doi.org/10.1038/ncomms12445" target="_blank">DOI LINK</a>]<br />&nbsp; &nbsp; &nbsp;Coppo S,Mehta BB, McGivney D, <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/gulani_mrf_magnetom_flash_ismrm_2016_1800000003041101.pdf">Overview of magnetic resonance fingerprinting</a>. MAGNETOM Flash 2016;65(2):11-21.<br />&nbsp; &nbsp; &nbsp;K&ouml;rzd&ouml;rfer G, Jiang Y, Pang J, et al. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/magnetom-flash-70_magnetic-resonance-field-fingerprinting_nittka_1800000005401382.pdf">Magnetic Resonance Field Fingerprinting (MRF&sup2;)</a>. MAGNETOM Flash 2018; 70:120-123.<br />&nbsp; &nbsp; &nbsp;Ma D, Fulani V, Seiberlich N, et al. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/mr_fingerprinting_nature11971.pdf">Magnetic resonance fingerprinting</a>. Nature 2013; 495:187-192.&nbsp; [<a href="https://doi.org/10.1038/nature11971" target="_blank">DOi LINK</a>]<br />&nbsp; &nbsp; &nbsp;<font color="#8d2424" size="4">&#10026;&nbsp;</font>McGivney DF, Boyac&#305;oglu R, Jiang Y, et al. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/fingerprinting_ii_2020jmri.26877.pdf">Magnetic Resonance Fingerprinting Part 2:<br />Technique and directions</a>.&nbsp; J Magn Reson Imaging 2020;51:993-1007.&nbsp; [<a href="https://doi.org/10.1002/jmri.26877" target="_blank">DOI LINK</a>]<br />&nbsp; &nbsp; &nbsp;<font color="#8d2424" size="4">&#10026;&nbsp;</font>Mehta BB,Coppo S, McGiveney DF. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/fingerprint_mehta_et_al-2019-magnetic_resonance_in_medicine.pdf">Magnetic resonance fingerprinting: a technical review</a>.&nbsp; Magn Reson Med . 2019;81:25&ndash;46..&nbsp; [<a href="https://doi.org/10.1002/mrm.27403" target="_blank">DOi LINK</a>]<br />&nbsp; &nbsp; &nbsp;Monga A, Singh D, de Moura HL, et al. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/bioengineering-11-00236.pdf">Emerging trends in magnetic resonance fingerprinting for quantitative biomedical imaging applications: a review</a>. Bioengineering 2024; 11:236.&nbsp; [<a href="https://doi.org/10.3390/bioengineering11030236" target="_blank">DOI LINK]</a><br />&nbsp; &nbsp; &nbsp;<font color="#8d2424" size="4">&#10026;&nbsp;</font>Poorman ME, Martin MN, Ma D, et al. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/fingerprinting_i_2020_jmri.26836.pdf">Magnetic Resonance Fingerprinting Part 1: Potential uses, current challenges,and recommendations</a>.&nbsp; J Magn Reson Imaging 2020;51:675&ndash;692.&nbsp; [<a href="https://doi.org/0.1002/jmri.26836" target="_blank">DOI LINK</a>]<br />&nbsp; &nbsp; &nbsp;Velasco C, Fletcher TJ, Botnar RM, Prieto C. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/fcvm-09-1009131.pdf">Artificial intelligence in cardiac magnetic resonance fingerprinting</a>.&nbsp; Front Cardiovasc Med 2022; 9:1009131.&nbsp; [<a href="https://doi.org/10.3389/fcvm.2022.1009131" target="_blank">DOI LINK</a>]<br></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;"><strong>Related Questions</strong><br /><strong>&nbsp; &nbsp; &nbsp;</strong><strong style="color:rgb(0, 0, 0)"><em>&nbsp;<a href="what-is-t2.html">What is T2 relaxation?</a></em></strong><br /><strong style="color:rgb(0, 0, 0)"><em>&nbsp; &nbsp; &nbsp;<a href="bloch-equations.html">&nbsp;What are the Bloch equations?&nbsp;</a></em></strong><br></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div style="text-align:skip_to_justify;"><div style="height: 0px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-normal" href="javascript:;" >
+<span class="wsite-button-inner">← &nbsp;Previous Question</span>
+</a>
+<div style="height: 0px; overflow: hidden;"></div></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div style="text-align:right;"><div style="height: 0px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-normal" href="javascript:;" >
+<span class="wsite-button-inner">Next Question &nbsp;→</span>
+</a>
+<div style="height: 0px; overflow: hidden;"></div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div style="text-align:center;"><div style="height: 0px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-highlight" href="complete-list-of-questions.html" >
+<span class="wsite-button-inner">↑&nbsp;Complete List of Questions ↑</span>
+</a>
+<div style="height: 10px; overflow: hidden;"></div></div>
+</div></div>

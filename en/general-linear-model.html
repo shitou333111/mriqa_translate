@@ -1,0 +1,270 @@
+<div id="content"><div id="wsite-content" class="wsite-elements wsite-not-footer">
+	<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<h2 class="wsite-content-title" style="text-align:center;">General Linear Model (GLM)</h2>
+
+<div class="paragraph" style="text-align:center;"><strong style="color:rgb(135, 135, 135)"><em><font color="#0376be" size="4">I don't really understand how GLM works. Can you explain it more completely? </font></em></strong><strong style="color:rgb(55, 138, 87)"><em><font size="4">&nbsp;</font></em></strong></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-thin" style="padding-top:0px;padding-bottom:10px;margin-left:0px;margin-right:0px;text-align:center">
+<a>
+<img src="uploads/3/4/5/7/34572113/screen-shot-2016-07-14-at-8-13-02-amad13.png?315" alt="Picture" style="width:315;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div class="paragraph">Don't be discouraged. The <em><strong><font color="#24678d">General Linear Model (GLM)</font></strong></em> can be daunting to those with little background in statistics or matrix algebra, but I'll try to make it more understandable here. This is a worthwhile endeavor, as GLM has been the most widely used technique for analyzing task-based fMRI experiments for the past 25 years and is&nbsp;<span style="color:rgb(0, 0, 0)">the default method provided by vendors for their clinical fMRI packages.&nbsp;</span></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;">GLM can be thought of as an extension of a more familiar statistical technique:&nbsp;<em><strong><font color="#24678d">linear regression</font></strong></em>. Linear regression, sometimes called <em><strong><font color="#24678d">trend-line analysis</font></strong></em>, is a method used <span style="color:rgb(0, 0, 0)">to calculate the "best fitting" line for a set of experimental data.</span>&nbsp;Linear regression software is widely available in popular graphics and spreadsheet packages such as Microsoft Excel.&nbsp;</div>
+
+<span class='imgPusher' style='float:left;height:14px'></span><span style='display: table;width:329px;position:relative;float:left;max-width:100%;;clear:left;margin-top:20px;*margin-top:40px'><a href='uploads/3/4/5/7/34572113/6822689_orig.jpg' rel='lightbox' onclick='if (!lightboxLoaded) return false'><img src="uploads/3/4/5/7/34572113/6822689ef0d.jpg?299" style="margin-top: 20px; margin-bottom: 10px; margin-left: 0px; margin-right: 30px; none; max-width:100%" alt="linear regression" class="galleryImageBorder wsite-image" /></a><span style="display: table-caption; caption-side: bottom; font-size: 90%; margin-top: -10px; margin-bottom: 10px; text-align: center;" class="wsite-caption"><br><br>Simplified linear regression example, adapted from<br>data of Hansen et al (2004)</span></span>
+<div class="paragraph" style="text-align:skip_to_justify;display:block;">As an application of linear regression, let us examine how the mean fMRI signal (<em><strong>Y</strong></em>) of a voxel in the visual cortex responds to increasing levels of retinal illumination (<em><strong>X</strong></em>). Plotting our data on a graph (left) we discern a fairly linear relationship between <em><strong>X</strong></em> and <em><strong>Y</strong></em>. Linear regression software computes the &ldquo;best fitting&rdquo; straight line for this data. For each data point (<em>x<font size="1">i</font></em>, <em>y<font size="1">i</font></em>) the relationship can be written <em>y<font size="1">i</font> = x<font size="1">i</font></em><em style="color:rgb(0, 0, 0)">&beta;</em><em> +&nbsp;<em>&epsilon;<font size="1">i</font></em>,&nbsp;</em>where <em>&beta;<strong>&nbsp;</strong></em>is the calculated slope of the line and <em>&epsilon;<font size="1">i&nbsp;</font></em>&nbsp;is the calculated <em><strong><font color="#24678d">error</font></strong><em><em>&#8203;</em></em></em> (or <em><strong><font color="#24678d">residual</font></strong></em>) distance between the line and corresponding data point.&nbsp;&nbsp;Note that the <em style="color:rgb(0, 0, 0)">x<font size="1">i</font></em> values are determined by the design of the experiment, the&nbsp;<em style="color:rgb(0, 0, 0)">y<font size="1">i</font></em><span style="color:rgb(0, 0, 0)"> values are measured,&nbsp;</span>while&nbsp;<em style="color:rgb(0, 0, 0)">&beta; </em>and the<em style="color:rgb(0, 0, 0)">&nbsp;<em>&epsilon;<font size="1">i</font></em>'</em><em style="color:rgb(0, 0, 0)">s </em>are calculated by the software.</div>
+<hr style="width:100%;clear:both;visibility:hidden;"></hr>
+
+<div class="paragraph" style="text-align:skip_to_justify;">A required assumption for linear regression is that the errors (<em>&epsilon;<font size="1">i</font></em>) are random and independent, following a Gaussian distribution with mean of zero.&nbsp;The &ldquo;best fitting&rdquo; line is defined to be the one that minimizes the sum of the squared errors (<em>&epsilon;<font size="1">1</font>&sup2; + &epsilon;<font size="1">2</font>&sup2;&nbsp;+ &nbsp;&epsilon;<font size="1">3</font>&sup2;</em>&nbsp;+ &hellip;) between the points and the chosen line. Note that although the calculated slope (<em style="color:rgb(0, 0, 0)">&beta;)&nbsp;</em>is the same for each data point&nbsp;<span style="color:rgb(0, 0, 0)">(</span><em style="color:rgb(0, 0, 0)">x<font size="1">i</font></em><span style="color:rgb(0, 0, 0)">,&nbsp;</span><em style="color:rgb(0, 0, 0)">y<font size="1">i</font></em><span style="color:rgb(0, 0, 0)">), the individual errors&nbsp;(</span><em style="color:rgb(0, 0, 0)">&epsilon;<font size="1">i</font></em><span style="color:rgb(0, 0, 0)">) will differ.&nbsp;</span></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;">Our simple linear regression example has actually produced&nbsp;<em>n</em> separate equations, each of the form &nbsp;<em style="color:rgb(0, 0, 0)">y<font size="1">i</font>&nbsp;= x<font size="1">i</font></em><em style="color:rgb(0, 0, 0)">&beta;</em><em style="color:rgb(0, 0, 0)">&nbsp;+&nbsp;<em>&epsilon;<font size="1">i</font></em></em>, where <em>n</em> is the number of data points acquired for each time interval<em>&nbsp;i</em>. Matrix algebra allows us to condense this set of equations into a more manageable form. We do this by defining <strong>Y</strong>, <strong>X</strong>, and <strong>&epsilon;</strong> as "column vectors", each containing a list of individual measured or calculated values. Specifically,</div>
+
+<div><div class="wsite-image wsite-image-border-none" style="padding-top:10px;padding-bottom:10px;margin-left:0px;margin-right:0px;text-align:center">
+<a href='uploads/3/4/5/7/34572113/3073630_orig.gif' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/3073630_orig.gif" alt="linear regression matrix" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+<div class="paragraph" style="text-align:center;">If you are not familiar with matrix algebra or need a simple review, check out <a href="http://www.coolmath.com/algebra/24-matrices" target="_blank">Coolmath.com</a></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;"><span style="color:rgb(0, 0, 0)">The General Linear Model (GLM) representation</span><span style="color:rgb(0, 0, 0)">&nbsp;of an fMRI experiment retains the same basic form </span><font color="#2a2a2a">(<font size="3"><strong>Y&nbsp;</strong>=<strong>&nbsp;X</strong><strong><em>&beta;</em>&nbsp;</strong>+</font><font size="3"><strong>&nbsp;&epsilon;</strong>)</font></font><span style="color:rgb(0, 0, 0)">&nbsp;as does our simple linear regression example. Stated in words, the GLM says that <strong>Y</strong> (the measured fMRI signal from a single voxel as a function of time) can be</span><span style="color:rgb(0, 0, 0)">&nbsp;expressed as the sum of one or more experimental design variables (</span><strong><font color="#2a2a2a">X</font></strong><span style="color:rgb(0, 0, 0)">), each multiplied by a weighting factor (</span><em><strong><font color="#2a2a2a">&beta;</font></strong></em><span style="color:rgb(0, 0, 0)">), plus random error (</span><a title=""><strong><font color="#2a2a2a">&epsilon;</font></strong></a><span style="color:rgb(0, 0, 0)">).<br /><br />In GLM both&nbsp;</span><strong style="color:rgb(0, 0, 0)">Y</strong><span style="color:rgb(0, 0, 0)">&nbsp;&#8203;</span><span style="color:rgb(0, 0, 0)">and<strong>&nbsp;</strong></span><font color="#2a2a2a"><strong>&epsilon;&nbsp;</strong>remain as single column vectors&nbsp;containing fMRI signal data (<em>y<font size="1">i</font></em>)&nbsp;or error estimates (<em style="color:rgb(0, 0, 0)">&epsilon;<font size="1">i</font></em>) respectively for a single voxel&nbsp;<span style="color:rgb(0, 0, 0)">at successive time points (</span><em style="color:rgb(0, 0, 0)">i = 1 </em></font>to <em>n</em>). The <em style="color:rgb(0, 0, 0)"><strong><font color="#24678d">experimental design matrix (X)</font></strong></em><span style="color:rgb(0, 0, 0)">, however, is typically much more complex, consisting of perhaps 5-10 columns instead of only one. Each new column of&nbsp;</span><strong style="color:rgb(0, 0, 0)">X</strong><span style="color:rgb(0, 0, 0)">&nbsp;would be constructed by the investigator to reflect a specific factor (&ldquo;</span><em style="color:rgb(0, 0, 0)"><strong><font color="#24678d">regressor</font></strong></em><span style="color:rgb(0, 0, 0)">&rdquo;) thought to influence the outcome of the experiment.</span></div>
+
+<span class='imgPusher' style='float:right;height:0px'></span><span style='display: table;width:auto;position:relative;float:right;max-width:100%;;clear:right;margin-top:0px;*margin-top:0px'><a href='uploads/3/4/5/7/34572113/modeled-hrf-for-glm_orig.jpg' rel='lightbox' onclick='if (!lightboxLoaded) return false'><img src="uploads/3/4/5/7/34572113/glm-predicted-hrf.jpg" style="margin-top: 10px; margin-bottom: 10px; margin-left: 10px; margin-right: 10px; none; max-width:100%" alt="modeled HRF for a task in GLM" class="galleryImageBorder wsite-image" /></a><span style="display: table-caption; caption-side: bottom; font-size: 90%; margin-top: -10px; margin-bottom: 10px; text-align: center;" class="wsite-caption"></span></span>
+<div class="paragraph" style="text-align:skip_to_justify;display:block;"><em><strong><font color="#24678d"><u>Essential</u> regressors</font></strong></em>&nbsp;(also known as <em><strong><font color="#24678d">regressors of interest</font></strong></em>) are a set of idealized predictions of what the <em><strong><font color="#24678d">hemodynamic response function (HRF)</font></strong></em> should look like if a voxel of interest became activated due to a task or stimulus. For example, consider a simple event-related fMRI experiment where a subject is given three tasks (A, B, and C) &mdash; such as listening to sounds at three different frequencies presented in random order. if the stimuli for Task A were applied at times denoted by the red arrows above, the predicted response of a receptive voxel in the auditory cortex might be a train of slightly-delayed, short-duration HRFs as illustrated. Numerical values (<em style="color:rgb(0, 0, 0)">X&nbsp;<font size="1">i,1</font></em>) corresponding time points of this predicted response pattern to Task A would then be transferred to and listed vertically in the first column of the GLM design matrix (illustrated below). The predicted responses to tasks B and C would likewise be created and used to fill the second and third columns of the design matrix (<strong>X</strong>).</div>
+<hr style="width:100%;clear:both;visibility:hidden;"></hr>
+
+<div class="paragraph" style="text-align:skip_to_justify;">The last 7 columns of our design matrix example are considered&nbsp;<em><strong><font color="#24678d">covariates</font></strong></em> or <em><strong><font color="#24678d"><u>nuisance</u> regressors</font></strong></em> &ndash; experimental factors that confound the analysis (such as head motion or signal drifts) but which are of no particular interest by themselves. The data filling these columns may be empirically determined (e.g., actual measurements of head translations and rotations obtained during the experiment) or modeled (e.g., by a linear trend or oscillating basis functions).&nbsp;</div>
+
+<div class="paragraph" style="text-align:skip_to_justify;"><span style="color:rgb(0, 0, 0)">Because the design matrix (<strong>X</strong>) now contains multiple columns, the weighting parameter (</span><em style="color:rgb(0, 0, 0)">&beta;</em>) will no longer be a single number as it was in the simple linear regression example. Fitting data in a full&nbsp;<span style="color:rgb(0, 0, 0)">GLM experiment means that</span><span style="color:rgb(0, 0, 0)">&nbsp;<em><strong>&beta;</strong></em> will now become a column vector with values (<em>&beta;<font size="1">1</font>, &beta;<font size="1">2</font>, &hellip;, &beta;<font size="1">p</font></em>), each reflecting the relative contribution of each design factor (<em>X<font size="1"><span>i</span></font></em>) to the fMRI signal. Hence the amplitude vector (<em><strong>&beta;</strong></em>) must have the same number of rows as the design matrix (<strong>X</strong>) has columns. </span><span style="color:rgb(0, 0, 0)">&#8203;&#8203;</span></div>
+
+<div><div class="wsite-image wsite-image-border-none" style="padding-top:10px;padding-bottom:20px;margin-left:0px;margin-right:0px;text-align:center">
+<a href='uploads/3/4/5/7/34572113/9355842_orig.jpg' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/9355842_orig.jpg" alt="General Linear model" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%"><br>Depiction of the General Linear Model (GLM) for a voxel with time-series <b>Y</b> predicted by a design matrix <b>X</b> including 10 effects (three
+regressors of interest – e.g., tasks A,B,C – and seven nuisance
+regressors – e.g., six motion parameters and one linear drift). Calculated weighting factors (<i>β<sub>1</sub></i> − <i>β<sub>10</sub></i>) corresponding to each regressor are placed in amplitude vector <b>β</b> while column vector <b>ε</b> contains calculated error terms (<i>ε<sub>i</sub></i>) for the model corresponding to each time point <i>i</i>. (From Monti, 2011, under CC BY license)</div>
+</div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;">Two major assumptions are inherent to basic GLM analysis, either one of which may be rightfully challenged. First, GLM is a <em><strong><font color="#24678d">univariate</font></strong></em> approach, calculating statistics on a voxel-by-voxel basis and assuming that signals from each voxel are independent of one another. Secondly, the model assumes that the errors are random and independent, following a Gaussian distribution with mean of zero.&nbsp;</div>
+
+<span class='imgPusher' style='float:left;height:0px'></span><span style='display: table;width:227px;position:relative;float:left;max-width:100%;;clear:left;margin-top:0px;*margin-top:0px'><a href='uploads/3/4/5/7/34572113/sentence-completion1_orig.jpg' rel='lightbox' onclick='if (!lightboxLoaded) return false'><img src="uploads/3/4/5/7/34572113/sentence-completion163dc.jpg?217" style="margin-top: 10px; margin-bottom: 10px; margin-left: 0px; margin-right: 20px; border-width:0; max-width:100%" alt="SPM" class="galleryImageBorder wsite-image" /></a><span style="display: table-caption; caption-side: bottom; font-size: 90%; margin-top: -10px; margin-bottom: 10px; text-align: center;" class="wsite-caption">Statistical Parametic Map (SPM)<br>overlaid on anatomic image</span></span>
+<div class="paragraph" style="text-align:skip_to_justify;display:block;">With fMRI data collected and stored in the <strong>Y</strong> vector and experimental design factors specified in the <strong>X</strong> matrix, <span style="color:rgb(0, 0, 0)">components of the&nbsp;</span><em style="color:rgb(0, 0, 0)"><strong>&beta;</strong></em><em style="color:rgb(0, 0, 0)">&nbsp;</em><em style="color:rgb(0, 0, 0)">and</em><em style="color:rgb(0, 0, 0)"><strong>&nbsp;</strong></em><strong style="color:rgb(42, 42, 42)">&epsilon;</strong><span style="color:rgb(0, 0, 0)">&nbsp;vectors are then computed using&nbsp;</span>classical or Bayesian approaches. These results can then be statistically interrogated, testing various hypotheses about the regressors alone or in combination. The final output is usually a <em><strong><font color="#24678d">Statistical Parametric Map (SPM)</font></strong></em> or <em><strong><font color="#24678d">Posterior Probability Map (PPM)</font></strong></em> that is overlaid on an anatomic image or template.<br /><br />Needless to say, GLM analysis and processing is very complex, and the interested reader should refer to the references provided below as well as to material in the <strong><font color="#508d24">Advanced Discussion</font></strong>.</div>
+<hr style="width:100%;clear:both;visibility:hidden;"></hr>
+
+<div><div id="102972223451611482" align="left" style="width: 100%; overflow-y: hidden;" class="wcustomhtml"><html> <head><script src="gdpr/gdprscript6f19.js?buildTime=1774025472"></script> <script type="text/javascript" 
+></script> 
+<script type="text/javascript">
+		$(function() {$('#Q').click(function() {$('.Q').toggle(500); return false;});});</script></head><body>
+<a href="#" id=Q><h3><font color="#378a57">Advanced Discussion (show/hide)»</font></h3></a><div class=Q style="display:none;">
+
+<!--content goes below here-->
+
+<div class="paragraph"><strong><font size="4" color="#8d5024">Modeling the Hemodynamic Response Function (HRF)</font></strong></div>
+
+
+
+<span class='imgPusher' style='float:left;height:0px'></span><span style='display: table;width:220px;position:relative;float:left;max-width:100%;;clear:left;margin-top:0px;*margin-top:0px'><a href='uploads/3/4/5/7/34572113/hrf-models-revised_orig6f3e.png?210' rel='lightbox' onclick='if (!lightboxLoaded) return false'><img src="uploads/3/4/5/7/34572113/hrf-models-revised6f3e.png?210" style="margin-top: 5px; margin-bottom: 10px; margin-left: 0px; margin-right: 10px; none; max-width:100%" alt="models for the hemodynamic response function (HRF) in fMRI" class="galleryImageBorder wsite-image" /></a><span style="display: table-caption; caption-side: bottom; font-size: 90%; margin-top: -10px; margin-bottom: 10px; text-align: center;" class="wsite-caption">HRF Models</span></span>
+
+<div class="paragraph" style="display:block;"><span style="color:rgb(0, 0, 0)">How, exactly should the shape of the HRF be determined for a given fMRI experiment? The term&nbsp;</span><strong style="color:rgb(0, 0, 0)"><em><font color="#24678d">"canonical" HRF</font></em>&nbsp;</strong><span style="color:rgb(0, 0, 0)">&#8203;refers to the default shape selected by an investigator prior to data collection. Choices include&nbsp;a simple gamma function, a difference of two gamma functions (to allow for post-stimulus undershoot), Fourier basis sets, basis sets consisting of "plausible" HRF shapes, and finite impulse response functions. For improved accuracy the 1st and 2nd time derivatives of the HRF (commonly referred to as the "temporal" and "dispersion" derivatives respectively) may be added to the model. Use of these derivatives is equivalent to performing a second order Taylor series approximation of the HRF function. Including the 1st derivative allows timing of the peak response to be adjusted while the 2nd derivative allows the width of the HRF to vary.</span><span>&#65279;</span><br /><br /><span style="color:rgb(0, 0, 0)">To create a regressor, the chosen shape of the HRF is convolved with ("multiplied by") the experimental design. Nonlinear interactions among events that distort the expected HRF (such as two stimuli applied in a very short time frame where the total response may be less than the sum of the individual responses) may also be modeled using Volterra kernels or other methods.&nbsp;</span><span style="color:rgb(0, 0, 0)">&#8203;&#8203;</span></div>
+
+<hr style="width:100%;clear:both;visibility:hidden;"></hr>
+
+
+
+<div><div class="wsite-image wsite-image-border-none" style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center"> 
+
+<a> 
+
+<img src="uploads/3/4/5/7/34572113/convolution-of-3-events_orig.gif" alt="Picture" style="width:auto;max-width:100%" /> 
+
+</a> 
+
+<div style="display:block;font-size:90%"></div> 
+
+</div></div>
+
+
+
+<div class="paragraph"><strong><font size="4" color="#8d5024">Testing for Statistical Significance</font></strong></div>
+
+<div class="paragraph"><span>&#65279;</span><span>&#65279;</span>The ultimate purpose of most fMRI experiments is to determine how the brain responds to various stimuli and conditions. For task-based fMRI studies the calculated amplitude vector <em><strong>&beta;</strong></em> from GLM provides estimates (<em>&beta;<font size="1">i</font></em>) of the relative weights ("importance") for each component (<em>X<font size="1">i</font></em>) in the experimental design.<br /><br />We begin with one of the simplest of all fMRI experiments: finger tapping. Here the subject alternately cycles between tapping her fingers and resting while BOLD responses over the entire brain are recorded. In this example the design matrix might contain just a single essential regressor denoted:&nbsp;<em>X<font size="2">1</font></em> = "finger tapping". After data collection, GLM analysis produces an estimate (<em>&beta;<font size="1">1</font></em>) of<span style="color:rgb(0, 0, 0)">&nbsp;the amplitude</span>&nbsp;response to finger tapping for each voxel. Voxels near the motor cortex would demonstrate strong responses with relatively large values of <em style="color:rgb(0, 0, 0)">&beta;<font size="1">1</font></em>, while far-away voxels might only contain resting state "noise". So what criteria could we use to determine when we consider a voxel to be truly activated?&nbsp;</div>
+
+
+
+<div class="paragraph">The formal/classical method of t<span style="color:rgb(0, 0, 0)">esting for statistical significance involves constructing a&nbsp;</span><em style="color:rgb(0, 0, 0)"><strong><font color="#24678d">null hypothesis (H<font size="2">o</font>)</font></strong></em><span style="color:rgb(0, 0, 0)">, which in this case might be written in words as&nbsp;</span><span style="color:rgb(0, 0, 0)">"There is no net BOLD signal effect in a voxel during finger tapping compared to rest." In mathematical terms, this could be expressed as:<br />&#8203;<em><strong>H<font size="2">o</font></strong>: &nbsp;</em></span><em>&beta;<font size="1">1</font> = 0.</em></div>
+
+
+
+<div class="paragraph"><span>&#65279;</span><span style="color:rgb(0, 0, 0)">Typically null hypotheses are constructed in a negative/perverse way &mdash; i.e., that <u>no</u> fMRI effect is produced by a given event or action. In reality, however, we secretly wish to be surprised and find a result so unlikely to occur by chance that we can reject the null hypothesis.</span></div>
+
+
+
+<div class="paragraph">By "statistically significant" we usually mean that the <em><strong><font color="#24678d">Type I (false positive) error</font></strong></em>&nbsp;of rejecting the null hypothesis is less than a certain arbitrary level of probability (<em><strong><font color="#24678d">p-value</font></strong></em>), perhaps <em>p</em> &le;&nbsp;0.05. In other words, we might call a result "significant" only when the probability of such an event happening by chance occurs less than 5% of the time.&nbsp;</div>
+
+
+
+<span class='imgPusher' style='float:left;height:0px'></span><span style='display: table;width:332px;position:relative;float:left;max-width:100%;;clear:left;margin-top:0px;*margin-top:0px'><a href='uploads/3/4/5/7/34572113/t-vs-z_orig5737.png?322' rel='lightbox' onclick='if (!lightboxLoaded) return false'><img src="uploads/3/4/5/7/34572113/t-vs-z5737.png?322" style="margin-top: 10px; margin-bottom: 10px; margin-left: 0px; margin-right: 10px; border-width:0; max-width:100%" alt="t vs z distribution" class="galleryImageBorder wsite-image" /></a><span style="display: table-caption; caption-side: bottom; font-size: 90%; margin-top: -10px; margin-bottom: 10px; text-align: center;" class="wsite-caption">Comparison between <i>t-</i> and <i>z-</i>distributions. As degrees of freedom (df) increase, the two converge.</span></span>
+
+<div class="paragraph" style="display:block;">The GLM calculation produces both an estimate for&nbsp;<em>&beta;<font size="1">1</font></em>&nbsp;and a standard deviation (<em>SD</em>) of this estimate. The <em>SD</em> depends on the sum of the mean squared errors as well as the structure and size of the design matrix (<strong>X</strong>).&nbsp;To test the null hypothesis, we form the test statistic&nbsp;<em><strong><font color="#8d5024">T = </font></strong></em><em><font color="#8d5024"><strong>&beta;</strong><font size="1"><strong>1</strong></font></font></em><em><strong><font color="#8d5024">/SD</font></strong></em>. Provided the assumptions of the GLM are maintained (i.e., errors are independent and Gaussian with mean zero), the statistic <em><font color="#8d5024"><strong>T</strong></font></em> follows a <em><strong><font color="#24678d">Student's t-distribution</font></strong></em>&nbsp;from which <em>p</em>-value percentiles can be determined. The precise shape of the <em>t</em>-distribution depends on the&nbsp;<em><strong><font color="#24678d">degrees of freedom (df)</font></strong></em>, defined to be the number time points analyzed minus the number of independent regressors. The <em>t</em>-distribution is closely related to the <em><strong><font color="#24678d">Gaussian or standard normal (z-) distribution</font></strong></em>, converging to the latter as the &nbsp;df &rarr;&nbsp;<font size="3">&infin;</font>. &nbsp;In experiments with more than 100 observations, <em>Z-</em>values and percentiles are often reported instead of <em>T</em>-values, since the two are very close.</div>
+
+<hr style="width:100%;clear:both;visibility:hidden;"></hr>
+
+
+<div class="paragraph"><font color="#8d5024" size="4"><span><strong>Multiple Regressors: Contrasts and <em>F</em>-tests</strong></span></font></div>
+
+
+
+<div class="paragraph">The finger-tapping example above contained only a single covariate of interest (<em>X<font size="1">1</font></em> = "finger tapping") and its corresponding estimated amplitude (<em style="color:rgb(0, 0, 0)">&beta;<font size="1">1</font></em>). Most interesting fMRI studies, however, include several regressors of interest. Let us&nbsp;consider a more complicated fMRI experiment wherein a subject is alternately shown red, blue, and green lights, alone or in combination. Three essential regressors of the design might be: <em>X<font size="1">1</font></em> = "red light on", &nbsp;<em>X<font size="1">2</font></em> = "blue light on", and <em>X<font size="1">3&nbsp;</font></em>= "green light on". After data collection, the GLM would generate three amplitude estimates (<em style="color:rgb(0, 0, 0)">&beta;<font size="1">1</font></em>,&nbsp;<em style="color:rgb(0, 0, 0)">&beta;<font size="1">2</font></em>, and<em style="color:rgb(0, 0, 0)"><font size="1">&nbsp;</font>&beta;<font size="1">3</font></em>) corresponding to the three conditions that could be tested for statistical significance.</div>
+
+
+
+<div class="paragraph" style="text-align:skip_to_justify;">Multiple design variables allow combination effects to be investigated. For example, we might want to know whether a voxel was equally activated by the red light and blue light (<em style="color:rgb(0, 0, 0)">&beta;<font size="1">1</font></em><span style="color:rgb(0, 0, 0)">=&nbsp;</span><em style="color:rgb(0, 0, 0)">&beta;<font size="1">2</font></em>), or equivalently (<em style="color:rgb(0, 0, 0)">&beta;<font size="1">1&nbsp;</font></em>&minus;<span style="color:rgb(0, 0, 0)">&nbsp;</span><em style="color:rgb(0, 0, 0)">&beta;<font size="1">2&nbsp;</font></em>= <em>0</em>). Or perhaps whether the average of red and blue illumination has the same effect as green illumination alone (<span style="color:rgb(0, 0, 0)">&frac12; [</span><em style="color:rgb(0, 0, 0)">&beta;<font size="1">1&nbsp;</font></em><span style="color:rgb(0, 0, 0)">+&nbsp;</span><em style="color:rgb(0, 0, 0)">&beta;<font size="1">2 </font></em><span style="color:rgb(0, 0, 0)">] = </span><em style="color:rgb(0, 0, 0)">&beta;<font size="1">3</font></em>) , or equivalently (<span style="color:rgb(0, 0, 0)">&frac12;</span><em>&beta;<font size="1">1</font></em> +&nbsp;&frac12;<em>&beta;<font size="1">2</font></em>&nbsp;&minus;&nbsp;<em>&beta;<font size="1">3</font></em> = 0).</div>
+
+
+
+<div><div id="127577980906607825" align="left" style="width: 100%; overflow-y: hidden;" class="wcustomhtml"><p>These combinations are difficult to express in words, but can handily be represented in matrix form, multiplying each calculated amplitude vector <b><i>β</i></b> by a linear <b><i><font color="#24678d">contrast vector c<sup>T</sup></font></b></i>. The two contrasts described above can be written as:</p></div> 
+
+
+
+
+
+
+
+</div>
+
+<div><div class="wsite-image wsite-image-border-none" style="padding-top:0px;padding-bottom:0px;margin-left:0px;margin-right:10px;text-align:center"> 
+
+<a href='uploads/3/4/5/7/34572113/contrast-vectors-3_orig25dd.png?474' rel='lightbox' onclick='if (!lightboxLoaded) return false'> 
+
+<img src="uploads/3/4/5/7/34572113/contrast-vectors-325dd.png?474" alt="contrast vector GLM" style="width:474;max-width:100%" /> 
+
+</a> 
+
+<div style="display:block;font-size:90%"></div> 
+
+</div></div>
+
+
+
+<div class="paragraph">Even more complex hypothesis tests involving these multiple regressors could be imagined. For example, are the three means all equal to zero <em>simultaneously</em>?&nbsp;Or does a certain combination of lights lead to a significantly higher activity than another combination? In these cases, the contrast vector becomes a full matrix rather than a linear array of numbers, and the GLM procedure blossoms into a full&nbsp;<em><strong><font color="#24678d">analysis of variance (ANOVA)</font></strong></em>. The applicable test statistic now becomes <em><strong><font color="#8d5024">F</font></strong></em> instead of <em>T</em>, where <em><strong><font color="#8d5024">F</font></strong></em> is formed by dividing the sum of squared residuals under a reduced model (without regressors) by the sum of squared residuals under the full model. Provided the usual GLM assumptions of identical and independent distribution of errors are preserved, the statistic <em><strong><font color="#8d5024">F</font></strong></em> is distributed as according to the <em><strong><font color="#24678d">F-distribution</font></strong></em> which may used to test for statistical significance of hypotheses.&nbsp;</div>
+
+
+
+<div class="paragraph" style="text-align:skip_to_justify;"><strong><font size="4" color="#8d5024">Autocorrelation of Data</font></strong></div>
+
+
+
+<div class="paragraph" style="text-align:skip_to_justify;"><font color="#2a2a2a">One of the basic tenets of GLM &mdash; statistical independence of errors from point to point &mdash; is nearly always violated in an fMRI experiment. Functional MRI studies are not random collections of data but time series, with high values more likely to follow high values and low values more likely to follow low values. Quasi-periodic noise sources (such as cardiac and respiratory pulsations) also contribute to this phenomenon.</font><br /><br /><font color="#2a2a2a">Fortunately, the presence of serial correlation does not affect estimates of the weighting parameters (</font><em style="color:rgb(42, 42, 42)">&beta;<font size="2">i).</font></em><font color="#2a2a2a">&nbsp;However, it does produce an underestimation of the error variance because the number of truly independent observations (the "effective" </font><em><strong><font color="#24678d">degrees of freedom, df</font></strong></em><font color="#2a2a2a">) will be lower than the actual number of observations made. Thus&nbsp;</font><em style="color:rgb(42, 42, 42)">t-</em><font color="#2a2a2a"> or </font><em style="color:rgb(42, 42, 42)">F-</em><font color="#2a2a2a">statistics, the shapes of whose distributions depend on <em>df,</em>&nbsp;</font><font color="#2a2a2a">will be artificially inflated, potentially resulting in <span style="color:rgb(42, 42, 42)">elevated false positive rates and</span>&nbsp;spurious inferences. &nbsp;</font><br /><br /><font color="#2a2a2a">The most common method to control for autocorrelations is known as </font><em><strong><font color="#24678d">pre-whitening</font></strong></em><font color="#2a2a2a">. The term "</font><em><font color="#2a2a2a">pre-whitening"</font></em><font color="#2a2a2a"> refers to removing serial correlations in time series data so that its residuals have a more uniform distribution of frequencies similar to "white noise". Pre-whitening is performed through an iterative process. An initial GLM solution is first generated and the autocorrelation structure of the residuals is fit to a first or second order </font><em><strong><font color="#24678d">Auto-Regressive Model</font></strong></em><font color="#2a2a2a"> [AR(1) or AR(2)]. The original raw data is then adjusted by removing the estimated covariance structure and a second GLM performed on the "whitened" data. &nbsp;</font></div>
+
+<div class="paragraph"><font size="4" color="#8d5024"><strong>Multi-Subject Analysis</strong></font><br /><span></span></div>
+
+
+
+<div class="paragraph"><font color="#2a2a2a">Up to now we have discussed the GLM analysis of data from individual subjects only. To make fMRI conclusions more generalizable, individual results are often aggregated across multiple subjects or groups. Before statistical analysis is performed, however, the data from the multiple subjects must be warped into a common anatomic space (such as Talairach or MNI templates). This process is called </font><em><strong><font color="#24678d">normalization</font></strong></em><font color="#2a2a2a"> and has been described <a href="registrationnormalization.html">in a prior Q&amp;A</a>.</font></div>
+
+
+
+<div class="paragraph"><font color="#2a2a2a">One of the earliest approaches for group analysis was simply to warp the data from all subjects into a normalized space and then concatenate it into one gigantic time series (as though the data were all recorded from a single "super" subject). This so-called </font><em><strong><font color="#24678d">fixed effects analysis</font></strong></em><font color="#2a2a2a"> has been largely abandoned because it does not adequately account for individual differences and cannot cleanly be used for making population inferences.&nbsp;</font></div>
+
+
+
+<div class="paragraph"><font color="#2a2a2a">Multi-subject fMRI data is intrinsically hierarchical with at least two levels that must be considered: the individual and the group. A </font><em><strong><font color="#24678d">mixed-effect analysis</font></strong></em><font color="#2a2a2a"> is therefore more appropriate where errors are measured and considered both within and between subjects.&nbsp;</font></div>
+
+
+
+<div class="paragraph"><span>&#65279;</span>One method for doing this is a <em><strong><font color="#24678d">two-level GLM </font></strong></em>analysis. At the first level a standard GLM is performed separately for each subject. For the second level, however, only the <em><strong>&beta;<font size="1">i</font></strong></em> values (not the full fMRI response data) are carried through where they become dependent variables.&nbsp;Second-level inferences can be difficult because the <em style="color:rgb(0, 0, 0)"><strong>&beta;<font size="1">i</font></strong></em>'s are only estimates and their values are "contaminated" by variance from the first-level analysis.&nbsp;Several methods to handle this problem exist, one of the most popular being&nbsp;the restricted maximum likelihood technique using an expectation-maximization algorithm.</div>
+
+
+
+
+
+<!--content goes above here-->
+</div></body>
+<!-- Mirrored from mriquestions.com/general-linear-model.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 21 Mar 2026 06:43:32 GMT -->
+</html></div>
+
+
+
+</div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;"><strong>References</strong><br /><span style="color:rgb(42, 42, 42)">&nbsp;&nbsp; &nbsp;&nbsp;</span><span style="color:rgb(42, 42, 42)">Hansen KA, David SV, Gallant JL. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/hansenk_ni_2004_23_233_241.pdf">Parametric reverse correlation reveals spatial linearity of retinotopic human V1 BOLD response</a>. NeuroImage 2004; 23:233-241. (This experiment is the model used for our simplified linear regression example above)<br />&nbsp;&nbsp; &nbsp;&nbsp;</span><span style="color:rgb(42, 42, 42)">Monti MM. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/monti_fnhum-05-00028.pdf">Statistical analysis of fMRI time-series: a critical review of the GLM approach</a>. Front Hum Neurosci 2011; 5(28):1-13, doi: 10.3389/fnhum.2011.00028<br />&nbsp;&nbsp; &nbsp;&nbsp;</span>Poline J-B, Brett M. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/_glm_does_love_last_forever_1-s2.0-s1053811912001607-main.pdf">The general linear model and fMRI: Does love last forever?</a> Neuroimage 2012; 62:871-880.<br />&nbsp;&nbsp; &nbsp; Student. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/student_paper_1908.pdf">The probable error of a mean</a>. Biometrika 1908; 6:1-25. (The original paper by "Student", a pseudonym used by William Sealy Gosset who wished to remain anonymous due to his work in quality assurance of small samples at the Guinness Brewery in Dublin. The letter "<em>t</em>" associated with Student's distribution was supplied by English statistician R. A. Fisher in 1925).<br />&nbsp; &nbsp; &nbsp;<span style="color:rgb(0, 0, 0)">The FIL Methods Group.&nbsp;</span><a href="https://mriquestions.com/uploads/3/4/5/7/34572113/spm12_manual.pdf">SPM12 Manual</a><span style="color:rgb(0, 0, 0)">. Wellcome Trust Center for Neuroimaging, London, 2014.</span></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;"><strong>Related Questions</strong><br /><strong style="color:rgb(3, 118, 190)"><em>&nbsp; &nbsp; &nbsp;<a href="activation-blobs.html">How are those activation "blobs" on an fMRI image created, and what exactly do they represent?</a></em></strong></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div style="text-align:skip_to_justify;"><div style="height: 0px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-normal" href="fmri-statistical-analysis.html" >
+<span class="wsite-button-inner">← &nbsp;Previous Question</span>
+</a>
+<div style="height: 0px; overflow: hidden;"></div></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div style="text-align:right;"><div style="height: 0px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-normal" href="activation-blobs.html" >
+<span class="wsite-button-inner">Next Question &nbsp;→</span>
+</a>
+<div style="height: 0px; overflow: hidden;"></div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div style="text-align:center;"><div style="height: 0px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-highlight" href="complete-list-of-questions.html" >
+<span class="wsite-button-inner">↑&nbsp;Complete List of Questions ↑</span>
+</a>
+<div style="height: 10px; overflow: hidden;"></div></div>
+</div></div>

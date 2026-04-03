@@ -1,0 +1,405 @@
+<div id="content"><div id="wsite-content" class="wsite-elements wsite-not-footer">
+	<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:50.416666666667%; padding:0 15px;">
+					
+						
+
+<h2 class="wsite-content-title" style="text-align:center;">&nbsp; fMRI Data Preprocessing&nbsp;</h2>
+
+<div class="paragraph" style="text-align:center;"><strong><em><font color="#0376be" size="4">What are the steps for preprocessing fMRI data?&nbsp;</font></em></strong><strong><em><font size="4">&nbsp;</font></em></strong></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:49.583333333333%; padding:0 15px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-thin" style="padding-top:20px;padding-bottom:10px;margin-left:0px;margin-right:0px;text-align:center">
+<a href='uploads/3/4/5/7/34572113/screen-shot-2016-07-05-at-7-03-14-pm_orig.png' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/screen-shot-2016-07-05-at-7-03-14-pm3207.png?320" alt="Picture" style="width:320;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;">Prior to subjecting raw fMRI data to any type of statistical analysis, most of the following pre-processing steps are commonly performed.</div>
+
+<span class='imgPusher' style='float:right;height:0px'></span><span style='display: table;width:354px;position:relative;float:right;max-width:100%;;clear:right;margin-top:5px;*margin-top:10px'><a href='uploads/3/4/5/7/34572113/9650319_orig.jpg' rel='lightbox' onclick='if (!lightboxLoaded) return false'><img src="uploads/3/4/5/7/34572113/965031989f0.jpg?325" style="margin-top: 20px; margin-bottom: 10px; margin-left: 20px; margin-right: 10px; border-width:0; max-width:100%" alt="fMRI source images" class="galleryImageBorder wsite-image" /></a><span style="display: table-caption; caption-side: bottom; font-size: 90%; margin-top: -10px; margin-bottom: 10px; text-align: center;" class="wsite-caption">Montage view of source data from an fMRI series<br>allowing recognition and exclusion of aberrant individual slices</span></span>
+<div class="paragraph" style="text-align:skip_to_justify;display:block;"><strong><u>Quality Assurance:&nbsp;Inspection of source images</u>.</strong><strong>&nbsp;</strong>Individual slices in an fMRI acquisition commonly&nbsp;<span>suffer from random variations in average signal intensity, noise spikes, ghosts, and data glitches. These may result from physiological sources (patient motion, respiration, cardiac pulsations, anxiety, drowsiness, drugs) or from the scanner itself (field inhomogeneities, eddy currents, gradient heating, electronics). If unrecognized and included in the data analysis, these may spoil the entire experiment. A quick visual review of all source images together in montage mode is highly recommended to search for and exclude ("<em><strong><font color="#24678d">scrub</font></strong></em>") aberrant slices that appear too bright, too dark, or contain artifacts. More sophisticated graphical and semi-automated methods to identify outlier data are also available.&nbsp;</span></div>
+<hr style="width:100%;clear:both;visibility:hidden;"></hr>
+
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:26.25%; padding:0 15px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-none" style="padding-top:10px;padding-bottom:20px;margin-left:0px;margin-right:0px;text-align:center">
+<a href='uploads/3/4/5/7/34572113/epi-distortion_orig.jpg' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/epi-distortion140f.jpg?159" alt="epi distortion" style="width:159;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:73.75%; padding:0 15px;">
+					
+						
+
+<div class="paragraph" style="text-align:skip_to_justify;"><u><strong>Distortion correction</strong></u>. Common fMRI/BOLD sequences acquire gradient echoes and hence are sensitive to magnetic inhomogeneity (T2*) effects. These cause spatial distortions and signal dropout especially near the skull base, typically affecting the anterior frontal and temporal lobes.<br /><em><strong><font color="#24678d">Field mapping</font></strong></em> and "<em><strong><font color="#24678d">unwarping</font></strong></em>" methods (described in the <strong><font color="#508d24">Advanced Discussion</font></strong>) are available to reduce these distortions. Although these techniques may be required for sophisticated neuropsychological experiments, they are not commonly used for basic eloquent cortex mapping in clinical fMRI studies.&nbsp;</div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;"><span><u><strong>Slice timing correction</strong></u>. Most fMRI studies acquire one slice at a time, meaning that the signal recorded from one slice may be offset in time by up to several seconds when compared to another. The situation is even further complicated depending on whether the slices have been acquired in sequential (1,2,3,4,5,6...) or in interleaved (1,3,5,..2,4,6...) order and whether simultaneous multi-slice imaging has been employed.&nbsp;&nbsp;Although slice timing differences may not be important for simple block design experiments, they can impart considerable errors in rapid, event-related fMRI studies if not accounted for.&nbsp;</span></div>
+
+<span class='imgPusher' style='float:left;height:0px'></span><span style='display: table;width:294px;position:relative;float:left;max-width:100%;;clear:left;margin-top:0px;*margin-top:0px'><a href='uploads/3/4/5/7/34572113/7446126_orig.jpg' rel='lightbox' onclick='if (!lightboxLoaded) return false'><img src="uploads/3/4/5/7/34572113/744612607cd.jpg?278" style="margin-top: 5px; margin-bottom: 10px; margin-left: 0px; margin-right: 20px; none; max-width:100%" alt="Slice timing correction fMRI" class="galleryImageBorder wsite-image" /></a><span style="display: table-caption; caption-side: bottom; font-size: 90%; margin-top: -10px; margin-bottom: 10px; text-align: center;" class="wsite-caption"></span></span>
+<div class="paragraph" style="text-align:skip_to_justify;display:block;"><font color="#2a2a2a">Two basic strategies have been developed for slice timing correction. </font><em><strong><font color="#24678d">Data shifting</font></strong></em><font color="#2a2a2a"> is the most commonly used method, where recorded points are moved to reflect their proper offset from the time of the stimulus. This method requires interpolation of points to fit the fixed,&nbsp;</font><em>TR</em><font color="#2a2a2a">-based timing grid and thus produces some blurring and degradation of the data. An alternate (post-processing) strategy is </font><em><strong><font color="#24678d">model shifting</font></strong></em><font color="#2a2a2a">, where the expected location of the </font><em><strong><font color="#24678d">hemodynamic response function (HRF)</font></strong></em><font color="#2a2a2a">&nbsp;is varied, treating slice location as an additional independent variable in the subsequent statistical analysis. Sometimes temporal derivatives of the HRF are also incorporated in the model to improve accuracy.&nbsp;</font></div>
+<hr style="width:100%;clear:both;visibility:hidden;"></hr>
+
+<span class='imgPusher' style='float:right;height:0px'></span><span style='display: table;width:177px;position:relative;float:right;max-width:100%;;clear:right;margin-top:0px;*margin-top:0px'><a href='uploads/3/4/5/7/34572113/8517437_orig.jpg' rel='lightbox' onclick='if (!lightboxLoaded) return false'><img src="uploads/3/4/5/7/34572113/851743707e1.jpg?119" style="margin-top: 0px; margin-bottom: 10px; margin-left: 20px; margin-right: 20px; border-width:1px;padding:3px; max-width:100%" alt="mean squared error motion correction fmri" class="galleryImageBorder wsite-image" /></a><span style="display: table-caption; caption-side: bottom; font-size: 90%; margin-top: -10px; margin-bottom: 10px; text-align: center;" class="wsite-caption">Residual mean-squared error<br>after motion correction</span></span>
+<div class="paragraph" style="text-align:skip_to_justify;display:block;"><u><strong>Motion Correction</strong></u>. &nbsp;<span>Head motion is the largest source of error in fMRI studies, and a variety of strategies have been developed to cope with this problem. Immobilization of the head using padding and straps is essential; even more rigid restrictions using bite bars and masks are occasionally employed. Proper coaching and training of the subject prior to imaging is important. Prospective motion correction using navigator echoes may be performed but more commonly motion correction is done retrospectively.</span></div>
+<hr style="width:100%;clear:both;visibility:hidden;"></hr>
+
+<span class='imgPusher' style='float:left;height:0px'></span><span style='display: table;width:479px;position:relative;float:left;max-width:100%;;clear:left;margin-top:0px;*margin-top:0px'><a href='uploads/3/4/5/7/34572113/3031857_orig.gif' rel='lightbox' onclick='if (!lightboxLoaded) return false'><img src="uploads/3/4/5/7/34572113/3031857d18f.gif?479" style="margin-top: 10px; margin-bottom: 0px; margin-left: 0px; margin-right: 20px; border-width:0; max-width:100%" alt="motion fmri" class="galleryImageBorder wsite-image" /></a><span style="display: table-caption; caption-side: bottom; font-size: 90%; margin-top: -0px; margin-bottom: 0px; text-align: center;" class="wsite-caption">Rotation and translation plots of the 6 parameters in a motion correction algorithm<br>Note sudden head movement jump at acquisition #245. (Courtesy Chris Rorden)</span></span>
+<div class="paragraph" style="text-align:skip_to_justify;display:block;">The standard retrospective motion correction method considers the head as a <em><strong><font color="#24678d">rigid body</font></strong></em> with three directions of translation (displacement) and three axes of rotation. A single functional volume of a run is chosen as the reference to which runs in all other volumes are aligned. An iterative procedure is performed in which each volume is rotated and aligned with the reference, with the goal to minimize a cost function (such as the mean-squared difference). This iterative adjustment terminates once no further improvement can be achieved.&nbsp;All major fMRI analysis packages produce line plots allowing visual inspection of how translation and rotation parameters change from volume to volume (see figure above).</div>
+<hr style="width:100%;clear:both;visibility:hidden;"></hr>
+
+<span class='imgPusher' style='float:right;height:0px'></span><span style='display: table;width:388px;position:relative;float:right;max-width:100%;;clear:right;margin-top:5px;*margin-top:10px'><a href='uploads/3/4/5/7/34572113/228643_orig.gif' rel='lightbox' onclick='if (!lightboxLoaded) return false'><img src="uploads/3/4/5/7/34572113/2286438bf1.gif?378" style="margin-top: 0px; margin-bottom: 0px; margin-left: 10px; margin-right: 10px; border-width:0; max-width:100%" alt="fmri temporal filtering" class="galleryImageBorder wsite-image" /></a><span style="display: table-caption; caption-side: bottom; font-size: 90%; margin-top: -0px; margin-bottom: 0px; text-align: center;" class="wsite-caption"></span></span>
+<div class="paragraph" style="text-align:skip_to_justify;display:block;"><u><font color="#2a2a2a"><strong>Temporal Filtering</strong></font></u><font color="#2a2a2a"><strong>.</strong>&nbsp;</font><font color="#2a2a2a">fMRI data nearly always exhibit slow wandering of the baseline signal over time as well as rapid fluctuations due to noise.&nbsp;</font><font color="#2a2a2a">The removal of low frequency drifts is known as </font><em><strong><font color="#24678d">detrending</font></strong></em><font color="#2a2a2a">. Detrending may be accomplished using either</font>&nbsp;<em><strong><font color="#24678d">high-pass filtering</font></strong></em><font color="#2a2a2a">&nbsp;after Fourier transformation or by time-domain averaging methods. Alternatively, gradual drifts can be removed later in the data analysis pipeline by adding a set of confound predictors (such as a discrete cosine transform basis set) to account for low-frequency fluctuations.&nbsp;</font><font color="#2a2a2a">High-frequency signal fluctuations (AKA "noise") can be removed by </font><em><strong><font color="#24678d">low-pass filtering</font></strong></em><font color="#2a2a2a">. Low-pass filtering is generally not recommended for most studies, however, since it may distort estimation of individual&nbsp;</font><span><font color="#2a2a2a">HRFs and reduce the fMRI signals of interest.</font></span></div>
+<hr style="width:100%;clear:both;visibility:hidden;"></hr>
+
+<span class='imgPusher' style='float:right;height:55px'></span><span style='display: table;width:401px;position:relative;float:right;max-width:100%;;clear:right;margin-top:20px;*margin-top:40px'><a href='uploads/3/4/5/7/34572113/875557_orig.jpg' rel='lightbox' onclick='if (!lightboxLoaded) return false'><img src="uploads/3/4/5/7/34572113/gaussian-filter-3-images00ec.jpg?381" style="margin-top: 0px; margin-bottom: 0px; margin-left: 20px; margin-right: 10px; border-width:0; max-width:100%" alt="spatial smoothing fMRI" class="galleryImageBorder wsite-image" /></a><span style="display: table-caption; caption-side: bottom; font-size: 90%; margin-top: -0px; margin-bottom: 0px; text-align: center;" class="wsite-caption">Spatial smoothing using Gaussian filters with various kernel widths<br>(FWHM = full width half maximum)</span></span>
+<div class="paragraph" style="text-align:skip_to_justify;display:block;"><u><strong><font color="#2a2a2a">Spatial Smoothing</font></strong></u><strong><font color="#2a2a2a">. &nbsp;</font></strong><font color="#2a2a2a">Spatial smoothing is the averaging of signals from adjacent voxels. This improves the signal-to-noise ratio (SNR) </font><span style="color: rgb(42, 42, 42);">but decreases spatial resolution, blurs the image, and smears activated areas into adjacent voxels. The process can be justified because&nbsp;</span><font color="#2a2a2a">closely neighboring brain voxels are usually inherently correlated in their function and blood supply. The standard method is to convolve ("multiply") the fMRI data with a 3D Gaussian kernel ("filter") that averages signals from neighboring voxels with weights that decrease with increasing distance from the target voxel. The optimal kernel size is disputed, depending on factors such as slice thickness and in-plane resolution and the need for spatial separation of small activation regions. In practice, the </font><em><strong><font color="#24678d">full width half maximum (FWHM)</font></strong></em><font color="#2a2a2a"> value of the Gaussian spatial filter is typically set to about 4-6 mm for single subject studies and to about 6-8 mm for multi-subject analyses.&nbsp;</font></div>
+<hr style="width:100%;clear:both;visibility:hidden;"></hr>
+
+<div><div id="597224722410730634" align="left" style="width: 100%; overflow-y: hidden;" class="wcustomhtml"><html> <head><script src="gdpr/gdprscript6f19.js?buildTime=1774025472"></script> <script type="text/javascript" 
+></script> 
+<script type="text/javascript">
+		$(function() {$('#Q').click(function() {$('.Q').toggle(500); return false;});});</script></head><body>
+<a href="#" id=Q><h3><font color="#378a57">Advanced Discussion (show/hide)»</font></h3></a><div class=Q style="display:none;">
+
+<!--content goes below here-->
+
+<div class="paragraph" style="text-align:center;"><strong><font color="#8d5024"><font size="5">Additional Comments About fMRI Pre-Processing</font></font></strong></div>
+
+
+
+<div class="paragraph" style="text-align:skip_to_justify;"><u><strong><font size="4">Quality Assurance</font></strong></u></div>
+
+
+
+<div class="paragraph" style="text-align:skip_to_justify;"><span style="color:rgb(0, 0, 0)">&#8203;Although all slices should be quickly assessed visually, the <em>initial</em> slices of an fMRI acquisition should be especially scrutinized. This is the time when tissue magnetization may not have not yet reached a steady-state equilibrium and signal intensity may appear artificially high. Most scanners perform one or more &ldquo;dummy scans&rdquo; and discard the first 3-5 slices, but this is worth checking. For some experiments it may be desirable to censor even more initial slices (e.g., to allow a subject to acclimatize to loud scanner sounds). Graphical methods (illustrated below) permit rapid identification of outlier data. High-signal outliers result in false areas of activation; low-signal outliers create false areas of deactivation. Additional time series diagnostics include mean voxel intensity, variance of voxel intensity, and temporal signal-to-noise per slice.</span></div>
+
+
+
+<div><div class="wsite-image wsite-image-border-none" style="padding-top:0px;padding-bottom:10px;margin-left:0px;margin-right:0px;text-align:center"> 
+
+<a href='uploads/3/4/5/7/34572113/4144755_orig6c98.jpg?250' rel='lightbox' onclick='if (!lightboxLoaded) return false'> 
+
+<img src="uploads/3/4/5/7/34572113/414475558d4.jpg?615" alt="fMRI data spikes" style="width:615;max-width:100%" /> 
+
+</a> 
+
+<div style="display:block;font-size:90%"><br><b>Above:</b> Plot of mean signal per slice allows quick identification of outlier points<br><br><b>Below:</b> Percent of outlier data points by slice and experiment</div> 
+
+</div></div>
+
+
+
+<div><div class="wsite-image wsite-image-border-none" style="padding-top:0px;padding-bottom:10px;margin-left:0px;margin-right:0px;text-align:center"> 
+
+<a href='uploads/3/4/5/7/34572113/7757601_orig076a.png?594' rel='lightbox' onclick='if (!lightboxLoaded) return false'> 
+
+<img src="uploads/3/4/5/7/34572113/7757601076a.png?594" alt="fmri data outliers" style="width:594;max-width:100%" /> 
+
+</a> 
+
+<div style="display:block;font-size:90%"></div> 
+
+</div></div>
+
+
+
+<div class="paragraph" style="text-align:skip_to_justify;">An option called "Mean Intensity Adjustment" (or one with similar wording) is available in most fMRI software. Its purpose is to remove global fluctuations in average background signal from slice to slice. Before the current era of fully digital RF multi-transmit and receiver chains, this option was more widely used, but is now largely unnecessary for modern scanners operating at 3T or below. Intensity normalization may still be needed for fMRI studies at 7T or higher where RF-inhomogeneities can be more problematic.</div>
+
+
+
+<div class="paragraph" style="text-align:skip_to_justify;"><u><strong><font size="4">Distortion Correction</font></strong></u></div>
+<div class="paragraph" style="text-align:skip_to_justify;"><u><strong>Field mapping and unwarping</strong></u>. Basic rapid field mapping is commonly performed as a normal part of automated prescan procedures. In the simplest case a low-resolution dual echo sequence with relatively short <em>TE's</em>&nbsp;is first performed, with computation of magnitude and phase-difference images. The phase-difference images require&nbsp;<em><strong><font color="#24678d">unwrapping</font></strong></em>&nbsp;as all phase measurements (however large) are "wrapped" (compressed) over the range of 0&deg;&minus;360&deg;. After phase unwrapping field map values are used to calculate corrective pixel shifts in the phase-encode direction, a process known as <em><strong><font color="#24678d">unwarping</font></strong></em> (not to be confused with unwrapping above!). Because field map artifacts and noise create problems, some spatial smoothing (often Gaussian) is typically performed as well as masking to exclude voxels outside of the brain. More sophisticated field mapping and unwarping techniques include those that continuously update during data acquisition.</div>
+
+
+
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+
+<table class="wsite-multicol-table">
+
+<tbody class="wsite-multicol-tbody">
+
+<tr class="wsite-multicol-tr">
+
+<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+
+
+
+
+
+
+
+<div><div class="wsite-image wsite-image-border-medium" style="padding-top:5px;padding-bottom:10px;margin-left:0px;margin-right:10px;text-align:center"> 
+
+<a href='uploads/3/4/5/7/34572113/field-maps-rorden_orig077e.jpg?249' rel='lightbox' onclick='if (!lightboxLoaded) return false'> 
+
+<img src="uploads/3/4/5/7/34572113/field-maps-rordeneda8.jpg?267" alt="Picture" style="width:267;max-width:100%" /> 
+
+</a> 
+
+<div style="display:block;font-size:90%">Field mapping (magnitude images on left, unwrapped<br>phase images on right). Courtesy of Chris Rorden.</div> 
+
+</div></div>
+
+
+
+
+
+
+
+</td> <td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+
+
+
+
+
+
+
+<div><div class="wsite-image wsite-image-border-none" style="padding-top:10px;padding-bottom:10px;margin-left:0px;margin-right:0px;text-align:center"> 
+
+<a href='uploads/3/4/5/7/34572113/warped-unwarped-from-rorden_orig.jpg' rel='lightbox' onclick='if (!lightboxLoaded) return false'> 
+
+<img src="uploads/3/4/5/7/34572113/warped-unwarped-from-rorden_orig.jpg" alt="unwarping fMRI" style="width:auto;max-width:100%" /> 
+
+</a> 
+
+<div style="display:block;font-size:90%">Image unwarping after phase mapping (Modified from figure courtesy of Chris Rorden)</div> 
+
+</div></div>
+
+
+</td> </tr>
+
+</tbody>
+
+</table>
+
+</div></div></div>
+
+
+
+<div class="paragraph" style="text-align:skip_to_justify;"><font color="#2a2a2a"><u><strong><em>Z</em>-shimming</strong></u>.&nbsp;T2*-dephasing creates inhomogeneity in the <em>z-</em>(slice-select)-direction as well as in plane (<em>xy</em>-direction). To restore the signal a compensating gradient along the <em>z</em>-axis is applied to be sure the <em>k</em>-space trajectory returns to the origin at time <em>TE</em>. As commonly implemented, images are collected using 3-4 different positive and negative&nbsp;<em>z</em>-gradients applied immediately after the RF-pulse and then combined using a square root sum of squares approach. The method may also be applied to reduce in-plane artifacts in the phase-encode&nbsp;direction, and a 3D-implementation&nbsp;has also been developed. A major disadvantage of <em>z</em>-shimming is the time penalty, meaning a longer <em>TR</em> with fewer slices and decreased temporal resolution. Additionally,&nbsp;portions of the original image not suffering from susceptibility-induced signal loss can be dephased by the z-shimming gradients and potentially made worse.</font></div>
+
+
+
+<div class="paragraph" style="text-align:skip_to_justify;">It should be noted that distortion correction techniques such as field mapping, unwarping, and <em>z</em>-shimming cannot restore fMRI signals lost due to dephasing. These techniques merely attempt to reassign recorded signals to the proper points in space from which they arose.</div>
+
+
+
+<div class="paragraph" style="text-align:skip_to_justify;"><u><strong><font size="4">Slice-Timing Correction</font></strong></u></div>
+<div class="paragraph" style="text-align:skip_to_justify;">Interpolation of the time-shifted data points may be performed by nearest neighbor, tri-linear, multipoint spline, or sinc approximations. Nearest neighbor and linear interpolation are the fastest, but introduce more smoothing artifacts; cubic/multipoint B-spline or (Hanning-windowed) sinc methods are generally preferred. These latter techniques tend to spread the artifact out over a wider range of nearby voxels. Whether to do slice time-correction as a pre-processing step vs post-processing HRF model shifting remains in dispute. Likewise, if the pre-processing option is chosen, whether to do slice-timing correction before or after motion correction is also not agreed upon, and may depend on the expected degree of motion as well as slice order.</div>
+
+
+
+<div class="paragraph" style="text-align:skip_to_justify;"><u><strong><font size="4">Motion Correction</font></strong></u></div>
+
+
+
+<div class="paragraph" style="text-align:skip_to_justify;">The iterative minimization procedure used for fMRI motion correction schemes is typically a nonlinear least squares routine (e.g., Levenberg-Marquardt). Possible errors in this process may result from finding only a local (rather than global) minimum of the cost function, leading to suboptimal results. Once motion parameters for realignment have been determined, they are applied to create a new 3D motion-corrected data set. Creation of the corrected data set requires spatial interpolation, as the new data points typically fall in between the original uncorrected data points. This process may be computationally-intensive, so usually some combination of (fast) linear interpolation is used during the initial motion correction steps, followed by a more time-consuming interpolation method (such as windowed sinc) for the final spatial transformation.<br /><br />Typically head motions are relatively small (&lt;2 mm) during normal fMRI experiments, so the assumptions underlying this rigid body approach are justified. However, sudden abrupt head motion (as seen near volume 245 in the figure above) will violate these conditions and may not produce an appropriate correction for motion.<br /><br />Rigid body transformations cannot compensate for non-linear effects. These include field inhomogeneity effects, motion during slice acquisition, interpolation artifacts, and spin-excitation history effects. Field inhomogeneity effects may be the most important. Even though rigid head motion can be corrected in image space, head displacements affect magnetic field homogeneity and shimming, so even with perfect realignment some motion-related errors persist. These additional sources of residual motion error are often referred to as the <em><strong><font color="#24678d">residual variance</font></strong></em> and may be addressed in part by unwarping (described above).<br /></div>
+
+
+
+<div class="paragraph" style="text-align:skip_to_justify;"><u><strong><font size="4">Temporal Filtering</font></strong></u></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;"><span style="color:rgb(0, 0, 0)">Low frequency drifts in fMRI data are very common, and if not accounted for, will severely reduce the power of the statistical analysis. They will also invalidate event-related averaging, which assumes a stationary level of signal over the course of an experiment. Accordingly, removing these drifts is a mandated step for every fMRI study. This must be done carefully, however, as true condition-related signal changes may be inadvertently removed by this process if improperly applied.</span><br /><br /><span style="color:rgb(0, 0, 0)">Typically, low frequency drifts are removed as part of the preprocessing pipeline. They may also be removed during the post-processing/statistical analysis phase by incorporating them as &ldquo;nuisance predictors&rdquo; in the&nbsp;</span><em style="color:rgb(0, 0, 0)"><strong><font color="#24678d">General Linear Model (GLM)</font></strong></em><span style="color:rgb(0, 0, 0)">. Both approaches are commonly used (although not together) with generally similar results.</span><br />&#8203;<br /><span style="color:rgb(0, 0, 0)">If the pre-processing route is chosen, then a Fourier frequency filtering method is typically employed. Here, the fMRI signal time course for a voxel is transformed into the frequency domain using a&nbsp;</span><em style="color:rgb(0, 0, 0)"><strong><font color="#24678d">Fast Fourier Transform (FFT)</font></strong></em><span style="color:rgb(0, 0, 0)">. A certain group of low frequencies (say 1-3 cycles) is removed, and the filtered data retransformed back into the time domain.</span></div>
+
+
+
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+
+<table class="wsite-multicol-table">
+
+<tbody class="wsite-multicol-tbody">
+
+<tr class="wsite-multicol-tr">
+
+<td class="wsite-multicol-col" style="width:58.472222222222%; padding:0 15px;">
+
+
+
+
+
+
+
+<div class="paragraph" style="text-align:skip_to_justify;">Because FFT frequency filtering does not work well with purely linear trends, several fMRI software packages first remove linear trends in the time domain with a simple regression tool before transforming into the frequency domain. Additionally Fourier-based filtering techniques may also introduce spurious autocorrelations into the data.<br /><br />Accounting for low frequency drifts can also be done as a post-processing step, including them as confound predictors in the GLM. Some investigators prefer this approach. In brief, 3-5 additional columns are added to the GLM design matrix (<strong>X</strong>) composed of low-frequency waves. These may be a low frequency Fourier basis set of sines and cosines plus a constant linear trend term or a slightly more sophisticated (but closely related) <em><strong><font color="#24678d">discrete cosine transform (DCT)</font></strong></em> set.</div>
+
+
+
+
+
+
+
+</td> <td class="wsite-multicol-col" style="width:41.527777777778%; padding:0 15px;">
+
+
+<div><div class="wsite-image wsite-image-border-none" style="padding-top:10px;padding-bottom:10px;margin-left:0px;margin-right:0px;text-align:center"> 
+
+<a href='uploads/3/4/5/7/34572113/dct-basis_1_orig.jpg' rel='lightbox' onclick='if (!lightboxLoaded) return false'> 
+
+<img src="uploads/3/4/5/7/34572113/dct-basis_1.jpg" alt="Discrete Cosine Transform Basis Set" style="width:auto;max-width:100%" /> 
+
+</a> 
+
+<div style="display:block;font-size:90%"></div> 
+
+</div></div>
+
+
+
+
+
+
+
+</td> </tr>
+
+</tbody>
+
+</table>
+
+</div></div></div>
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+
+<table class="wsite-multicol-table">
+
+<tbody class="wsite-multicol-tbody">
+
+<tr class="wsite-multicol-tr">
+
+<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+
+
+
+
+
+
+
+<div class="wsite-spacer" style="height:50px;"></div>
+
+
+
+
+
+
+
+</td> <td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+
+
+
+
+
+
+
+<div class="wsite-spacer" style="height:50px;"></div>
+
+
+
+
+
+
+
+</td> </tr>
+
+</tbody>
+
+</table>
+
+</div></div></div>
+
+
+<!--content goes above here-->
+</div></body>
+<!-- Mirrored from mriquestions.com/data-pre-processing.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 21 Mar 2026 06:42:50 GMT -->
+</html></div>
+
+
+
+</div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;"><strong>References</strong><br /><font color="#878787"><font color="#2a2a2a">&nbsp; &nbsp; &nbsp;Ashburner J, Friston KJ.&nbsp;<a href="https://mriquestions.com/uploads/3/4/5/7/34572113/ch2.pdf">Rigid body registration</a>. In: Frackowiak RSJ (ed).&nbsp;<em>Human Brain Function</em>, 2nd ed. London: Academic Press, 2004. (pdf made available on-line by the authors at&nbsp;</font><a href="http://www.fil.ion.ucl.ac.uk/spm/doc/books/hbf2/">http://www.fil.ion.ucl.ac.uk/spm/doc/books/hbf2/</a><span style="color:rgb(0, 0, 0)">)</span>&nbsp;<br />&nbsp; &nbsp;&nbsp;</font>Berman H, Mulders J, Goebel R. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/anatabacus_v11_manual.pdf">Anatabacus v1.1: Calculator for image distortions for Brain Voyager QX</a>, 2014. (Detailed manual describing procedures for distortion correction using Brain Voyager, <a href="http://support.brainvoyager.com/documents/Available_Tools/Available_Plugins/anatabacus/anatabacus_v11_manual.pdf" target="_blank">available from this link</a>.&nbsp; Includes useful information about how to compute field maps and other practical measures for reducing susceptibility distortions.)<br /><font color="#2a2a2a">&nbsp; &nbsp; &nbsp;Chen JE, Glover GH.</font><font color="#878787">&nbsp;</font><a href="http://mriquestions.com/uploads/3/4/5/7/34572113/chen_glover_fmri_review_2015art3a10.10072fs11065-015-9294-9.pdf"><font color="#24678d">Functional magnetic imaging methods</font></a><font color="#878787">. </font><font color="#2a2a2a">Neuropsychol Rev 2015; 25:289-313.</font><br /><span style="color:rgb(135, 135, 135)">&nbsp; &nbsp; &nbsp;</span>Friston KJ, Josephs O, Zarahn E, et al. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/karl_to_smooth.pdf">To smooth or not to smooth? Bias and efficiency in fMRI time-series analysis</a>. NeuroImage 2000; 12: 196-208. (discussion of temporal smoothing, including bandpass filtering and whitening).<br /><span style="color:rgb(135, 135, 135)">&nbsp;&nbsp; &nbsp;&nbsp;</span><span style="color:rgb(0, 0, 0)">Maclaren J, Herbst M, Speck O, Zaitsev M. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/maclaren_prospective_motion_correction.pdf">Prospective&nbsp;</a></span><span style="color:rgb(0, 0, 0)"><a href="https://mriquestions.com/uploads/3/4/5/7/34572113/maclaren_prospective_motion_correction.pdf">motion correction in brain imaging: a review</a>. Magn Reson Med 2013; 69:</span><span style="color:rgb(0, 0, 0)">&nbsp;621</span><span style="color:rgb(0, 0, 0)">&ndash;636.<br />&nbsp;&nbsp; &nbsp;&nbsp;</span><font color="#2a2a2a"><span>Mikl M, Mara</span><span>&#269;</span><span>ek R, Hlu</span><span>&scaron;t&iacute;</span><span>k P, et al. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/miki_spatial_smoothing.pdf">Effects of spatial smoothing on fMRI group inferences</a>. Magn Reson Imaging 2008; 26:490-503.</span></font><br />&nbsp; &nbsp; Nieto-Castanon A. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/2210.13564v1.pdf">Preparing fMRI data for statistical analysis</a>. In: fMRI Techniques and Protocols. ed. M. Filippi (Springer, 2025).<br /><span style="color:rgb(0, 0, 0)">&nbsp; &nbsp; &nbsp;</span>Sladky R, Friston KJ, Tr&ouml;stl J, et al. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/slice_tming_correction_1-s2.0-s1053811911007245-main.pdf">Slice-timing effects and their correction in functional MRI</a>. Neuroimage 2011; 58:588-594.<br />&nbsp; &nbsp; &nbsp;<font color="#2a2a2a">Tanabe J Miller&nbsp;D, Tregellas&nbsp;J, et al.&nbsp;<a href="https://mriquestions.com/uploads/3/4/5/7/34572113/tanabe_detrending.pdf">Comparison of detrending methods for optimal fMRI preprocessing</a>.&nbsp;NeuroImage 2002;&nbsp;15:902&ndash;907.</font><br /><span style="color:rgb(0, 0, 0)">&nbsp; &nbsp; &nbsp;The FIL Methods Group.&nbsp;</span><a href="https://mriquestions.com/uploads/3/4/5/7/34572113/spm12_manual.pdf">SPM12 Manual</a><span style="color:rgb(0, 0, 0)">. Welcome Trust Center for Neuroimaging, London, 2016. (describes preprocessing steps available in the SPM program).</span><br></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;"><strong>Related Questions</strong><br /><em><strong><a href="processanalyze-fmri.html">&nbsp; &nbsp; &nbsp;How is fMRI data processed and analyzed?&nbsp;</a></strong></em><em></em></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div style="text-align:skip_to_justify;"><div style="height: 0px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-normal" href="best-fmri-software.html" >
+<span class="wsite-button-inner">← &nbsp;Previous Question</span>
+</a>
+<div style="height: 0px; overflow: hidden;"></div></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div style="text-align:right;"><div style="height: 0px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-normal" href="registrationnormalization.html" >
+<span class="wsite-button-inner">Next Question &nbsp;→</span>
+</a>
+<div style="height: 0px; overflow: hidden;"></div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div style="text-align:center;"><div style="height: 0px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-highlight" href="complete-list-of-questions.html" >
+<span class="wsite-button-inner">↑&nbsp;Complete List of Questions ↑</span>
+</a>
+<div style="height: 10px; overflow: hidden;"></div></div>
+</div></div>

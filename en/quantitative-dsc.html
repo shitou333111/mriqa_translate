@@ -1,0 +1,455 @@
+<div id="content"><div id="wsite-content" class="wsite-elements wsite-not-footer">
+	<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<h2 class="wsite-content-title" style="text-align:center;">Advanced DSC Processing</h2>
+
+<div class="paragraph" style="text-align:center;"><strong style="color: rgb(135, 135, 135); font-size: large; line-height: 1.5;"><em><font color="#0376be">How is the arterial input function used to extract more quantitative flow information from the DSC data?</font></em></strong><br /></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-thin" style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
+<a href='uploads/3/4/5/7/34572113/235069_orig.png' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/235069_orig.png" alt="DSC deconvolution" style="width:100%;max-width:1100px" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;">Conversion of raw DSC imaging data into quantitative blood flow measurements takes place in three steps:&nbsp;<br /><ol><li><font color="#2a2a2a"><span style="line-height: 1.5; background-color: initial;">Translation of tissue MR signal <em>s(t)</em> into gadolinium concentration&nbsp;</span><em style="line-height: 1.5; background-color: initial;">c(t)</em><span style="line-height: 1.5; background-color: initial;">;&nbsp;</span></font></li><li><font color="#2a2a2a"><span style="line-height: 1.5; background-color: initial;">Selection of an appropriate arterial input function&nbsp;</span><em style="line-height: 1.5; background-color: initial;">a(t)</em><span style="line-height: 1.5; background-color: initial;">; and&nbsp;</span></font></li><li><span style="line-height: 1.5; background-color: initial;"><font color="#2a2a2a">Mathematical modeling and computation.&nbsp;</font></span><br /></li></ol></div>
+
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:72.284122562674%; padding:0 15px;">
+					
+						
+
+<div class="paragraph" style="text-align:skip_to_justify;">The first two steps have been described in prior Q&amp;As. This section addresses mathematical methods to quantify blood flow knowing only&nbsp;<em>c(t)</em> and <em>a(t)</em>. The analysis comes from from linear systems theory and requires several important assumptions:<br /><ol><li><font color="#2a2a2a"><span style="line-height: 1.5; background-color: initial;">Blood flow (</span><em style="line-height: 1.5; background-color: initial;">F</em><span style="line-height: 1.5; background-color: initial;">) and blood volume (</span><em style="line-height: 1.5; background-color: initial;">V</em><span style="line-height: 1.5; background-color: initial;">) remain constant during the measurement period.</span></font></li><li><span style="line-height: 1.5; background-color: initial;"><font color="#2a2a2a">All injected tracer molecules eventually flow out of the system. In other words, there is no permanent trapping, pooling, or loss of tracer within the tissue.</font></span></li><li><span style="line-height: 1.5; background-color: initial;"><font color="#2a2a2a">The system has a linear response to inputs and follows the principle of superposition. This means that the total output response from two independent inputs is the same as the sum of responses from those inputs considered separately.</font></span></li></ol><span></span></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:27.715877437326%; padding:0 15px;">
+					
+						
+
+<blockquote style="text-align:skip_to_justify;"><font size="3" color="#24678d">The reader will immediately recognize how easily this simple model may fail in practice. For example, a brain tumor accumulating gadolinium contrast through a leaky blood-brain-barrier would not meet assumption #2.&nbsp;</font><br /><span></span></blockquote>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;"><strong><em><font color="#2a2a2a">Blood volume (V)</font></em></strong> is the first and easiest parameter to extract. Assuming no leakage or recirculation effects, <em>V</em> is proportional to the area under the tissue concentration curve <em>c(t)</em> during the first pass of contrast. Theoretically this relationship can be made quantitative by dividing by the gadolinium concentration a voxel containing only blood. Typically such a reference voxel is chosen to lie within a feeding artery, and the arterial input function curve,&nbsp;<em>a(t)</em>, is convenient to use. (A voxel from a large vein can also be chosen, a common practice in CT perfusion studies). &nbsp;In mathematical form&nbsp;<br /></div>
+
+<div><div class="wsite-image wsite-image-border-none" style="padding-top:0;padding-bottom:0;margin-left:0;margin-right:0;text-align:center">
+<a href='uploads/3/4/5/7/34572113/9722550_orig.png' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/9722550a4a0.png?171" alt="blood volume equation dsc" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;"><strong><em>Blood flow (F)</em></strong> is the next parameter to be calculated, but the process for doing so is somewhat "convoluted". (Please forgive the old physics pun). Understanding the method requires a brief introduction to linear systems theory.</div>
+
+<span class='imgPusher' style='float:right;height:0px'></span><span style='display: table;width:auto;position:relative;float:right;max-width:100%;;clear:right;margin-top:0px;*margin-top:0px'><a href='uploads/3/4/5/7/34572113/2297065_orig.png' rel='lightbox' onclick='if (!lightboxLoaded) return false'><img src="uploads/3/4/5/7/34572113/2297065352f.png?399" style="margin-top: 0px; margin-bottom: 0px; margin-left: 0px; margin-right: 0px; none; max-width:100%" alt="Dirac and residue function" class="galleryImageBorder wsite-image" /></a><span style="display: table-caption; caption-side: bottom; font-size: 90%; margin-top: -0px; margin-bottom: 0px; text-align: center;" class="wsite-caption"></span></span>
+<div class="paragraph" style="text-align:skip_to_justify;display:block;">A linear system (e.g., the tissue capillary bed) can be analyzed by considering its response to a hypothetical infinitely high intensity, infinitely short duration impulse called the&nbsp;<strong><em><font color="#24678d">Dirac delta function&nbsp;&delta;(t)</font></em></strong>. For our system&nbsp;<em>&delta;(t)&nbsp;</em>could be viewed as the&nbsp;<em>instantaneous</em> injection of&nbsp;a bolus of contrast particles into the tissue through an arterial port at time&nbsp;<em>t=0</em>. &nbsp;After injection, some of these particles will find relatively direct pathways to the venous port; others will choose more circuitous routes and take longer to traverse the capillary bed. This results in a dispersion of the injected contrast bolus within tissue and a range of particle transit times.&nbsp;<br /></div>
+<hr style="width:100%;clear:both;visibility:hidden;"></hr>
+
+<div class="paragraph" style="text-align:skip_to_justify;">The fraction of injected contrast particles remaining in the tissue at time&nbsp;<em>t</em>&nbsp;after such an impulse injection is known as the&nbsp;<strong><em><font color="#24678d">residue</font></em></strong>, described by the dimensionless function&nbsp;<em><strong><font color="#24678d">R(t)</font></strong>. </em>Immediately after injection (before any particles have left the system)&nbsp;<em>R(t)</em>&nbsp;is at its maximum with value&nbsp;<em>R(0)</em>&nbsp;=&nbsp;<em>1.</em>&nbsp;As particles flow out of the system, <em>R(t)</em> decreases, eventually reaching final value&nbsp;<em>R(</em>&infin;<em>)</em>&nbsp;=&nbsp;<em>0</em>&nbsp;when no contrast remains in the tissue.<span style="display:none;"></span></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;">The width of the residue function reflects the distribution of particle transit times through a tissue. Tissues with rapid transit times have sharp, narrow residue curves, while tissues with prolonged transit times have wide ones. The area under the residue function reflects the average time a particle spends transitioning through the tissue vascular bed, an important physiological parameter known as the <strong><em><font color="#24678d">mean transit time (MTT)</font></em></strong>. In mathematical form<br /><span></span></div>
+
+<div><div class="wsite-image wsite-image-border-none" style="padding-top:0;padding-bottom:0;margin-left:0;margin-right:0;text-align:center">
+<a href='uploads/3/4/5/7/34572113/4357256_orig.png' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/4357256e00d.png?139" alt="Picture" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:56.545961002786%; padding:0 15px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-none" style="padding-top:0;padding-bottom:0;margin-left:0;margin-right:0;text-align:center">
+<a href='uploads/3/4/5/7/34572113/8142532_orig.png' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/8142532352f.png?399" alt="Picture" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%">Upper figures: a real-life arterial input function (AIF) with corresponding resultant tissue concentration curve <i>c(t)</i>
+<br>Lower figures: modeling the tissue response by a set of Dirac delta functions</div>
+</div></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:43.454038997214%; padding:0 15px;">
+					
+						
+
+<div class="paragraph"><!--[if gte mso 9]>
+ 
+  0
+  0
+  1
+  70
+  404
+  ELSTER LLC
+  3
+  1
+  473
+  14.0
+ 
+ 
+  
+ 
+<![endif]-->
+
+<!--[if gte mso 9]>
+ 
+  Normal
+  0
+  
+  
+  
+  
+  false
+  false
+  false
+  
+  EN-US
+  JA
+  X-NONE
+  
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+  
+  
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+  
+<![endif]--><!--[if gte mso 9]>
+ 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ 
+<![endif]-->
+
+<!--[if gte mso 10]>
+
+ /* Style Definitions */
+table.MsoNormalTable
+	{mso-style-name:"Table Normal";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-parent:"";
+	mso-padding-alt:0in 5.4pt 0in 5.4pt;
+	mso-para-margin:0in;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:Cambria;
+	mso-ascii-font-family:Cambria;
+	mso-ascii-theme-font:minor-latin;
+	mso-hansi-font-family:Cambria;
+	mso-hansi-theme-font:minor-latin;}
+
+<![endif]-->In real life it is impossible to deliver an
+arterial bolus of contrast to tissue instantaneously. The arterial input function, <em>a(t),</em> is thus always dispersed in time as shown in the figure. This broad arterial input, however, can be represented as a set of Dirac delta functions at different time delays (<em>&tau;</em>), each producing an independent response. The mathematical operation of scaling and summing these individual impulse responses to generate the tissue contrast concentration curve&nbsp;<em>c(t)</em> is known as <strong><em><font color="#24678d">convolution</font></em></strong>. In mathematical notation</div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div><div class="wsite-image wsite-image-border-none" style="padding-top:0;padding-bottom:0;margin-left:0;margin-right:0;text-align:center">
+<a href='uploads/3/4/5/7/34572113/3401680_orig.png' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/3401680b396.png?344" alt="convolution equation" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;">where <em>F</em> is blood flow and the "circle/x" symbol is the convolution operator. The convolution process sums together ("integrates") the individual arterial inputs weighted ("multiplied") by the residue function at various time delays (<em>&tau;</em>) after injection. To account for the fact that gadolinium contrast distributes only in the extracellular space of blood vessels, some versions of this equation contain a constant factor (<em>&rho;</em>/<em>h</em>) preceding <em>F</em>, where&nbsp;<em>&rho;</em> is the tissue density in g/mL and<em> h</em>&nbsp;is a fraction accounting for the difference in hematocrit between capillaries and larger vessels.<span></span></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;">In a DSC perfusion experiment we measure <em>a(t)</em> and <em>c(t)</em> directly, but do not know either the blood flow (<em>F</em>) nor the residue function, <em>R(t)</em>. Because there are more unknowns than knowns in this equation, a unique solution does not exist. Nevertheless, various mathematical techniques can extract reasonable estimates for these parameters, especially blood flow (<em>F</em>).</div>
+
+<div class="paragraph" style="text-align:skip_to_justify;">Three general strategies for performing mathematical&nbsp;<strong><em><font color="#24678d">deconvolution</font></em></strong> exist.&nbsp;The most common method converts the equation into matrix form and perform iterative calculations with a procedure known as&nbsp;<em><strong><font color="#24678d">singular value decomposition (SVD)</font></strong>.&nbsp;</em>A second approach, less widely&nbsp;used, is called "parametric", because it assumes a predetermined shape for the residue function such as a decaying exponential. Other deconvolution techniques involve Fourier transformation or stochastic estimation.&nbsp;</div>
+
+<div class="paragraph" style="text-align:skip_to_justify;">The end result of all the deconvolution methods is a quantitative estimate for blood flow (F). Since blood volume (V) has already been calculated, the final step is to compute the mean transit time (MTT) on a voxel-by-voxel basis using the <strong><em><font color="#24678d">central volume theorem</font></em></strong>&nbsp;(<em><strong><font color="#24678d">MTT = V/F)</font></strong></em>.&nbsp;</div>
+
+<div class="paragraph" style="text-align:skip_to_justify;">It should be noted that significantly different results may be obtained depending on the choice of the AIF as well as which commercial software product for calculation is used. Even software claiming to use identical methods may give different results when applied to the same raw data. Caution is advised in relying too heavily on the absolute numbers obtained from such quantitative methods.&nbsp;</div>
+
+<div><div id="638653557388881859" align="left" style="width: 100%; overflow-y: hidden;" class="wcustomhtml"><html> <head><script src="gdpr/gdprscript6f19.js?buildTime=1774025472"></script> <script type="text/javascript" 
+></script> 
+<script type="text/javascript">
+		$(function() {$('#Q').click(function() {$('.Q').toggle(500); return false;});});</script></head><body>
+<a href="#" id=Q><h3><font color="#378a57">Advanced Discussion (show/hide)»</font></h3></a><div class=Q style="display:none;">
+
+<!--content goes below here-->
+
+<p><b>Fourier methods for deconvolution</b> begin by taking the Fourier Transform (<i>FT</i>) of each side of the convolution equation for blood flow. This relies on the well-known Convolution Theorem that the Fourier Transform of a product of two functions is the convolution between the Fourier Transforms of each function. In mathematical terms</p>
+
+<p align=center><i>F • R(t) = FT<sup>−1</sup>{FT[c(t)] / FT[a(t)]}</i></p>
+
+<p>Noting that the initial value of the residue function is <i>1</i> (i.e. <i>R(0) = 1</i>), the magnitude of the first time point of the solution equals blood flow (<i>F</i>). Although conceptually straightforward, this method is not frequently used because of instability and noise issues.</p>
+
+<p>Many variations of the most popular technique, <b><i>singular value decomposition (SVD) </b></i> exist. SVD is a factorization method commonly used in matrix algebra to solve inverse problems. Because SVD is potentially ill-posed (unstable) due to round-off errors and noise, some constraints (regularization) must be applied. The most straightforward regularization method (truncation) treats all singular matrix values below a certain level as zeros. A second method (Tikhonov regularization) stabilizes the algorithm by manipulating the diagonal elements, resulting in a smoother truncation of singular values.</p>
+
+<p>Another problem with the standard SVD method is that its results are sensitive to delays in contrast arrival between different parts of the tissue. Variations such as reformulated SVD and block-recirculant SVD largely overcome this limitation and are gradually being implemented by vendors in their software.</p>
+
+<p>Several newer statistical methods focus more on improving estimations of the residue function and reducing its oscillations. Which method, if any, will prevail is not easily predictable at present</br>.</p>
+
+
+<p><b><large>T<sub>max</sub> and Why I Don't Like It</b></LARGE></p>
+
+<p>A number of clinical trials in the stroke literature have used a calculated perfusion metric known as <b><font color="#24678d">T<sub>max</sub></font></b>. T<sub>max</sub> is defined to be the time at which the residue function, <i>R(t)</i>, calculated from deconvolution, reaches its maximum value. In theory, therefore, T<sub>max</sub> is the time between the peak of the arterial input function (AIF) and the peak of the residue function.</p>
+
+<p>T<sub>max</sub> is not the same as MTT. MTT reflects the transit of contrast through the capillary bed once it arrives at the tissue of interest. Conversely, T<sub>max</sub> reflects the time delay and dispersion of contrast between where the AIF is measured <i>en route</i> to the capillary system.</p>
+
+<p>T<sub>max</sub> is thus highly dependent on the chosen location of the AIF. The farther away from the tissue of interest, the larger will be the T<sub>max</sub> value calculated. Additionally, regularization (filtering) of the SVD matrix to reduce noise effects in deconvolution will alter <i>R(t)</i> by inducing oscillations and peak shifting, also affecting T<sub>max</sub>.
+
+<p>Notwithstanding these methodological issues, many stroke neurologists seem to love T<sub>max</sub> and have recommended its use in a number of clinical trials.  One reason I believe it is so favored is that T<sub>max</sub> maps display relatively "flat" image contrast in normal regions of brain but dramatic differences in regions with poor or marginal perfusion.</p>
+
+<p>In summary, T<sub>max</sub> does provide some information that is complementary to MTT and CBF. However, it is a "messy" parameter that reflects primarily contrast delay and dispersion between the site chosen for AIF measurement and the tissue of interest. As such, it is very AIF-dependent and should be used with caution in comparing different patients in stroke research protocols.</p>
+
+
+
+<!--content goes above here-->
+</div></body>
+<!-- Mirrored from mriquestions.com/quantitative-dsc.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 21 Mar 2026 06:38:40 GMT -->
+</html></div>
+
+
+
+</div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;"><strong>References</strong><br /><span><font color="#878787">&nbsp; &nbsp; &nbsp;</font></span><font size="4" color="#fb0101">&#10026;&nbsp;</font><span>Bammer R, Amukotuwa SA. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/1-s2.0-s1064968923000892.pdf">Dynamic susceptibility contrast perfusion, Part 1: The fundamentals</a>. Magn Reson Imaging Clin N Am 2024; 32:1&ndash;23. <a href="https://doi.org/10.1016/j.mric.2023.09.010" target="_blank">[DOI LINK]</a><br />&nbsp; &nbsp; &nbsp;</span><font size="4" color="#fb0101">&#10026;&nbsp;</font><span>Bammer R, Amukotuwa SA. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/1-s2.0-s1064968923000909.pdf">Dynamic susceptibility contrast perfusion, Part 2: Deployment with and without contrast leakage present</a>. Magn Reson Imaging Clin N Am 2024; 32:25-45. <a href="https://doi.org/10.1016/j.mric.2023.09.011" target="_blank">[DOI LINK]<br /><font color="#2a2a2a">&nbsp; &nbsp; &nbsp;</font></a></span><a href="https://mriquestions.com/uploads/3/4/5/7/34572113/boxerman_jmri_1997.pdf"><font color="#2a2a2a">Boxerman JL, Rosen BR, Weisskoff RM.</font> Signal-to-noise analysis of cerebral blood volume maps from dynamic NMR imaging studies</a>. J Magn Reson Imaging 1997; 7:528-37.<br />&nbsp; &nbsp; &nbsp;Calamante F, Christensen S, Desmond PM, et al. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/stroke_tmax-2010-calamante-1169-74.pdf">The physiological significance of the time-to-maximum (Tmax) parameter in perfusion MRI</a>. Stroke 2010; 41:1169-1174. (See Advanced Discussion tab for why I don't favor this parameter in practice.)<br />&nbsp; &nbsp; &nbsp;Fieselmann A, Kowarschik M, Ganguly A, et al. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/review_perfusion_467563.pdf">Deconvolution-based CT and MR brain perfusion measurement: theoretical model revisited and practical implementation details</a>. Int J Biomed Imag 2011; doi:10/1155/2011/467563<br />&nbsp; &nbsp; &nbsp;Orsingher L, Piccinini S, Crisi G. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/differences_in_dynamic_susceptibility_contrast_mr.4.pdf">Differences in dynamic susceptibility contrast MR perfusion maps generated by different methods implemented in commercial software</a>. J Comput Assist Tomogr 2014; 38:647-654. (different software gives different results, even when methods are said to be the same!)<br />&nbsp; &nbsp; &nbsp;&Oslash;stergaard L, Weisskoff RM, Chesler DA, et al. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/ostergaard_svd.pdf">High resolution measurement of cerebral blood flow using intravascular tracer bolus passages. Part I. Mathematical approach and statistical analysis</a>. Magn Reson Med 1996; 36:715-725. (good description of deconvolution techniques including Fourier and SVD).<br />&nbsp; &nbsp; &nbsp;Zaharchuk G.&nbsp;<a href="https://mriquestions.com/uploads/3/4/5/7/34572113/ajnr_zharchuk_perfusion_review.pdf">Theoretical basis of hemodynamic MR imaging techniques to measure cerebral blood volume, cerebral blood flow, and permeability</a>.&nbsp;AJNR Am J Neuroradiol 2007; 28:1850-8.<br></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;"><strong>Related Questions</strong><br /><strong><em><a href="arterial-input-aif.html" title="">&nbsp; &nbsp; &nbsp;<span style="text-align: center;">What is the arterial input function (AIF) and why do you need to measure it?</span><span style="text-align: center;">&nbsp;</span></a></em></strong><br /><strong>&nbsp; &nbsp; &nbsp;</strong><strong><em><a href="quantitative-dsc.html"><span style="text-align: center;">How are parameters like BF, BV, and MTT defined and used in perfusion imaging?&nbsp;</span><span style="text-align: center;">&nbsp;</span></a></em></strong></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div style="text-align:skip_to_justify;"><div style="height: 0px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-normal" href="arterial-input-aif.html" >
+<span class="wsite-button-inner">← &nbsp;Previous Question</span>
+</a>
+<div style="height: 0px; overflow: hidden;"></div></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div style="text-align:right;"><div style="height: 0px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-normal" href="what-is-dce.html" >
+<span class="wsite-button-inner">Next Question &nbsp;→</span>
+</a>
+<div style="height: 0px; overflow: hidden;"></div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div style="text-align:center;"><div style="height: 0px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-highlight" href="complete-list-of-questions.html" >
+<span class="wsite-button-inner">↑&nbsp;Complete List of Questions ↑</span>
+</a>
+<div style="height: 10px; overflow: hidden;"></div></div>
+</div></div>

@@ -1,0 +1,208 @@
+<div id="content"><div id="wsite-content" class="wsite-elements wsite-not-footer">
+	<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<h2 class="wsite-content-title" style="text-align:center;">Artifacts in PI<br /></h2>
+
+<div class="paragraph" style="text-align:center;"><strong style="color: rgb(135, 135, 135); font-size: large; line-height: 1.5;"><em><font color="#0376be">Are there any artifacts specific to parallel imaging?&nbsp;</font></em></strong><strong style="color: rgb(55, 138, 87); font-size: large; line-height: 1.5;"><em>&nbsp;</em></strong><br /></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-thin" style="padding-top:0;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
+<a href='uploads/3/4/5/7/34572113/3989357_orig.png' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/3989357_orig.png" alt="Parallel imaging artifacts" style="width:100%;max-width:661px" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;">Parallel imaging (PI) is beset by the same types of artifacts that affect "regular" MR imaging: noise, motion, aliasing, chemical shift, Gibbs, susceptibility, RF-interference, etc. However, these artifacts may have slightly different appearances because they are acted upon by the complex PI reconstruction process, including&nbsp;generation of coil sensitivity maps, thresholding/masking, polynomial fitting, and estimation of spatial harmonics or weighting factors for image unfolding.</div>
+
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:55.153203342618%; padding:0 15px;">
+					
+						
+
+<div class="paragraph" style="text-align:skip_to_justify;"><strong><em><font color="#f97415">Aliasing</font></em></strong> is a well-recognized cause of artifact in all types of MR imaging. Aliasing occurs whenever a signal is sampled at a rate that is not at least 2x greater than the band of frequencies contained within that signal. The usual type of aliasing artifact seen in non-PI MRI is a "wraparound" of anatomic structures, typically in the phase-encoding direction. The standard aliasing artifact and its remedies are described in several&nbsp;<a href="aliasing.html" title="">later Q&amp;A's</a>.&nbsp;</div>
+
+<div class="paragraph" style="text-align:skip_to_justify;">&nbsp;The <strong><em><font color="#24678d">SENSE ghost</font></em></strong> is a particular type of aliasing artifact that occurs when the reconstructed field-of-view (FOV) is smaller than the imaged object. The SENSE ghost is a fold-over type artifact appearing in the middle (and sometimes edges) of the image along the phase-encoding direction.&nbsp;</div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:44.846796657382%; padding:0 15px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-none" style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
+<a href='uploads/3/4/5/7/34572113/9279128_orig.jpg' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/92791288f12.jpg?268" alt="SENSE ghost" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%">The SENSE Ghost</div>
+</div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;">The SENSE algorithm must consider all contributions to a reduced FOV pixel before the unfolding step is performed. When the FOV is too small, this amounts to ignoring signal contributions from outside the FOV with "contamination" of the imaged pixels.&nbsp;The SENSE algorithm is thus unable to unwrap this additional fold-over.&nbsp;Ghosts of the excluded peripheral&nbsp;tissue are replicated across the reconstructed image, equidistantly-spaced at a distance equal to the reduced FOV of the single-coil data.&nbsp;</div>
+
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:49.1643454039%; padding:0 15px;">
+					
+						
+
+<div class="paragraph" style="text-align:skip_to_justify;"><strong><em><font color="#f97415">Motion artifacts</font></em></strong> in SENSE-type PI sequences may occur between the time of the calibration scan and image acquisition proper. The resultant artifact appears as a group of replicated edges in the phase-encode direction while the rest of the image has an unremarkable appearance. The replicated edges come from the brightest parts of the image -- typically subcutaneous fat whose signals dominate the calibration scan.&nbsp;If problematic, the solution is to repeat the calibration scan and imaging sequence after coaching the patient and better securing the offending body part. The use of autocalibrating PI sequences (like mSENSE) will also eliminate this particular motion artifact.</div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:50.8356545961%; padding:0 15px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-thin" style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
+<a href='uploads/3/4/5/7/34572113/1271440_orig.jpg' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/1271440_orig.jpg" alt="PI motion artifact" style="width:100%;max-width:426px" />
+</a>
+<div style="display:block;font-size:90%">Motion occurring between calibration phase and imaging in SENSE</div>
+</div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:47.214484679666%; padding:0 15px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-thin" style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
+<a href='uploads/3/4/5/7/34572113/5475630_orig.jpg' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/54756308f12.jpg?268" alt="Parallel imaging noise" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%">Noise in PI is often non-uniformly distributed</div>
+</div></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:52.785515320334%; padding:0 15px;">
+					
+						
+
+<div class="paragraph" style="text-align:skip_to_justify;"><strong><em><font color="#f97415">Noise</font></em></strong> in parallel imaging is directly related to the use of higher acceleration factors (R). The unique feature about PI noise is that it is not uniformly distributed or constant across the image, but depends on a spatially dependent parameter known as the <strong><em><font color="#24678d">geometric (g) factor</font></em></strong>. &nbsp;This phenomenon is well demonstrated in the knee image (left) where bands of noise are projected across the anterior and posterior aspects of the image but spare the middle portion. This nonuniform noise distribution is more common with SENSE/ASSET than with GRAPPA/ARC methods.</div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;">Several methods are available to minimize residual aliasing artifacts and noise enhancement in PI. The calibration can be readjusted (by repeating the coil sensitivity mapping for SENSE or acquiring more ACS lines for GRAPPA). &nbsp;If possible, try changing the phase-encoding axis to the direction along which there are the largest number of coil elements.&nbsp;</div>
+
+<div class="paragraph" style="text-align:skip_to_justify;">Downward adjustment of the <strong><em><font color="#24678d">acceleration factor (R)</font></em></strong> will always help, albeit at the expense of increased imaging time. If 3D scanning is being used, it is generally better to accelerate in both phase- and slab (partition)-encoding directions. For example, if a total acceleration factor <em>R</em>=4 is desired, it is better to break this up by using <em>R</em>=2 in two directions than to use&nbsp;<em>R</em>=4 along a single axis. Advanced PI acquisition techniques such as <strong><em><font color="#24678d">CAIPIRINHA</font></em></strong> may also improve image quality by reducing the number of pixels that alias on top of one another.</div>
+
+<div><div id="544330072914930107" align="left" style="width: 100%; overflow-y: hidden;" class="wcustomhtml"><html> <head><script src="gdpr/gdprscript6f19.js?buildTime=1774025472"></script> <script type="text/javascript" 
+></script> 
+<script type="text/javascript">
+		$(function() {$('#Q').click(function() {$('.Q').toggle(500); return false;});});</script></head><body>
+<a href="#" id=Q><h3><font color="#378a57">Advanced Discussion (show/hide)»</font></h3></a><div class=Q style="display:none;">
+
+<!--content goes below here-->
+
+<p>SENSE ghosts and motion artifacts may be difficult to distinguish. One method that may be useful is to divide the the distance between the ghost and main image (Δx) by the field of view in the phase-encode direction (FOV<sub>PE</sub>).  If this ratio (Δx/FOV<sub>PE</sub>) is approximately equal to the acceleration factor (R), you are likely dealing with a SENSE ghost rather than a motion artifact.</p>
+
+
+<!--content goes above here-->
+</div></body>
+<!-- Mirrored from mriquestions.com/artifacts-in-pi.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 21 Mar 2026 06:19:16 GMT -->
+</html></div>
+
+
+
+</div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;"><strong>References</strong><br /><span style="line-height: 1.5;"><font color="#878787">&nbsp; &nbsp; &nbsp;</font></span>Breuer F. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/artifacts_in_parallel_imaging.pdf" title="">Artifacts and pitfalls in parallel imaging</a>. European Society for Magnetic Resonance in Medicine and Biology (ESMRMB) Teaching Session, Leipzig, 6 Oct 2011.<br />&nbsp; &nbsp; &nbsp;Goldfarb JW. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/20204_ftp.pdf" title="">The SENSE ghost: field-of-view restrictions for SENSE imaging</a>. J Magn Reson Imaging 2004; 20:1046-1051.<br />&nbsp; &nbsp; &nbsp;Yanasak NE, Kelly MJ. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/rg2e342135051_-_pi_artifacts.pdf" title="">MR imaging artifacts and parallel imaging techniques with calibration scanning: a new twist on old problems</a>. Radiographics 2014; 34:532-548.<br /><span></span></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;"><strong>Related Questions</strong><br /><strong><em><a href="noise-in-pi.html">&nbsp; &nbsp; &nbsp;<span style="text-align: center;">Why do parallel imaging studies look so noisy?&nbsp;</span><span style="text-align: center;">&nbsp;</span></a></em></strong><br /><strong><em><a href="caipirinha.html">&nbsp; &nbsp; &nbsp;<span style="text-align: center;">What is CAIPIRINHA? Isn't it some sort of a drink?&nbsp;</span><span style="text-align: center;">&nbsp;</span></a></em></strong></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div style="text-align:skip_to_justify;"><div style="height: 10px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-normal" href="noise-in-pi.html" >
+<span class="wsite-button-inner">← &nbsp;Previous Question</span>
+</a>
+<div style="height: 10px; overflow: hidden;"></div></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div style="text-align:right;"><div style="height: 10px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-normal" href="why-gadolinium.html" >
+<span class="wsite-button-inner">Next Question &nbsp;→</span>
+</a>
+<div style="height: 10px; overflow: hidden;"></div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div style="text-align:center;"><div style="height: 10px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-highlight" href="complete-list-of-questions.html" >
+<span class="wsite-button-inner">↑&nbsp;Complete List of Questions ↑</span>
+</a>
+<div style="height: 10px; overflow: hidden;"></div></div>
+</div></div>

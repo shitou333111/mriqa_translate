@@ -1,0 +1,140 @@
+<div id="content"><div id="wsite-content" class="wsite-elements wsite-not-footer">
+	<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<h2 class="wsite-content-title" style="text-align:center;">定量磁化率成像 (QSM)</h2>
+
+<div class="paragraph" style="text-align:center;"><strong style="color:rgb(135, 135, 135)"><em><font color="#0376be" size="4">磁化率差异能否被精确量化？&nbsp;</font></em></strong><strong style="color:rgb(55, 138, 87)"><em><font size="4">&nbsp;</font></em></strong></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-thin" style="padding-top:0px;padding-bottom:10px;margin-left:0px;margin-right:0px;text-align:center">
+<a href='uploads/3/4/5/7/34572113/screen-shot-2017-03-28-at-4-29-31-pm_orig.png' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/screen-shot-2017-03-28-at-4-29-31-pm_orig.png" alt="定量磁化率成像 (QSM)" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;"><em><strong><font color="#24678d">定量磁化率成像 (QSM)</font></strong></em>&nbsp;包含一系列主要处于实验阶段的方法，这些方法基于局部磁化率的变化，可以测量组织中铁、钙和其他物质的绝对浓度。</div>
+
+<div class="paragraph" style="text-align:skip_to_justify;">QSM 的采集序列通常是一种 3D 梯度回波序列，类似于常规 SWI 所使用的序列，但会使用多个回波以检测微弱的磁化率变化并校正多指数&nbsp;<span>T2* 衰减。在我们的西门子 3.0T 扫描仪上，我们使用 6 个回波，<em>TE</em> 范围在 10-44 ms 之间，并在读出方向施加了流动补偿。</span></div>
+
+<div class="paragraph">简单地计算一个区域内的总相位偏移不足以生成准确的 QS 图。&nbsp;<span style="color:rgb(0, 0, 0)">局部磁化率效应高度依赖于产生这些偏移的物体的形状和方向。例如，圆柱形结构（如静脉）引起的相位（或频率）变化具有&nbsp;</span><span style="color:rgb(42, 42, 42)">sin&sup2;</span><span style="color:rgb(42, 42, 42)"><em>&theta;</em>&nbsp;</span><span style="color:rgb(42, 42, 42)">依赖性，该角度是其方向与主磁场方向的夹角。理论上，对于完全平行于主磁场方向走行的血管，尽管它们含有顺磁性的脱氧血红蛋白，也不应观察到相位偏移；当它们垂直于磁场方向走行时（即，在轴位图像平面内），将出现最大的相位偏移。另一个问题涉及同时包含抗磁性物质（钙）和顺磁性物质（铁）区域的 QSM。这在基底节区以及某些血管畸形和肿瘤中很常见。在这种情况下，正负相位偏移可能相互抵消，导致在一个体素内可能看起来两者都不存在。&nbsp;</span></div>
+
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-none" style="padding-top:10px;padding-bottom:10px;margin-left:0px;margin-right:0px;text-align:center">
+<a href='uploads/3/4/5/7/34572113/qsm-alzheimer_orig.jpg' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/published/qsm-alzheimer4bcd.jpg?1490732783" alt="定量磁化率成像 (QSM)" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%">基底节区铁沉积的 QSM 图像（来自 Acosta-Cabronero 等人，采用 CC BY 许可）</div>
+</div></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div class="paragraph">目前已开发出多种模型来分析 QSM 数据。大多数模型基于这样一个概念：一个小的顺磁性或抗磁性物质焦点可以被表示为一个磁偶极子，该偶极子与该物质相互作用，产生局部磁化率场扰动 <em>&delta;B</em>。&nbsp;这些局部场扰动通常会被大得多的背景场变化所淹没，必须将其去除。目前流行的背景场去除方法之一称为&nbsp;<em><strong><font color="#24678d">偶极场投影法 (PDF)</font></strong></em>。在适当去除背景场后，存在一个极其困难的数学反演问题，即计算产生这些局部场扰动总和的各个偶极子源。在这方面，<em><strong><font color="#24678d">形态学辅助偶极子反演法 (MEDI)</font></strong></em> 是最常用的方法之一。<br /></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div><div id="428085671926607595" align="left" style="width: 100%; overflow-y: hidden;" class="wcustomhtml"><html> <head><script src="gdpr/gdprscript6f19.js?buildTime=1774025472"></script> <script type="text/javascript" 
+></script> 
+<script type="text/javascript">
+		$(function() {$('#Q').click(function() {$('.Q').toggle(500); return false;});});</script></head><body>
+<a href="#" id=Q><h3><font color="#378a57">进阶讨论（显示/隐藏）»</font></h3></a><div class=Q style="display:none;">
+
+<!--content goes below here-->
+
+暂无补充材料。请稍后再来查看！
+
+
+<!--content goes above here-->
+</div></body>
+<!-- Mirrored from mriquestions.com/quantitative-susceptibility.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 21 Mar 2026 06:09:37 GMT -->
+</html></div>
+
+
+
+</div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div><div class="paragraph" style="text-align:skip_to_justify;"><strong><font color="#2a2a2a">参考文献</font></strong><br /><strong>&nbsp; &nbsp; &nbsp;</strong>Acosta-Cabronero J, Milovic C, Mattern H, et al. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/qsm_neuroimage.pdf">A robust multi-scale approach to quantitative susceptibility mapping</a>. NeuroImaging 2018; 183:7-24.<br /><strong>&nbsp;&nbsp; &nbsp;</strong>&nbsp;Chen W, Zhu W, Kovanilkaya I, et al. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/qsm_radiol_2e13122640.pdf">Intracranial calcifications and hemorrhages: characterization with quantitative susceptibility mapping</a>. Radiology 2014; 270:496-505.<br />&nbsp; &nbsp; &nbsp;<span style="background-color: transparent;">Dimov AV, Li J, Nguyen TD, et al. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/magnetic_resonance_imaging_-_2023_-_dimov_-_qsm_throughout_the_body.pdf">QSM throughout the body</a>. J Magn Reson Imaging 2023; 57:1621-1640.</span><span style="background-color: transparent;">&nbsp; </span><span style="background-color: transparent;"><a href="https://doi.org/10.1002/jmri.28624" target="_blank">[DOI LINK]</a></span><br />&nbsp; &nbsp; &nbsp;Harada T, Kudo K, Fujima N, et al. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/qsm_harada_2022_rg.pdf">Quantitative susceptibility mapping: basic methods and clinical applications</a>. RadioGraphics 2022; 42: (in press) <a href="https://doi.org/10.1148/rg.210054" target="_blank">[DOI Link]</a><br /><span style="color:rgb(0, 0, 0)">&nbsp; &nbsp; &nbsp;Labranche R, Gilbert G, Corny M, et al.&nbsp;</span><a href="https://mriquestions.com/uploads/3/4/5/7/34572113/iron_mapping_reviewrg.2018170079.pdf">Liver iron quantification with MR imaging: a primer for radiologists</a><span style="color:rgb(0, 0, 0)">. RadioGraphics 2018; 38:392-412. (Describes conventional T2* mapping techniques for the liver as well as QSM methods).</span><br />&nbsp; &nbsp; &nbsp;Liu C, Li W, Tong KA, Yeom KW, Kuzminski S. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/liu_et_al-2015-journal_of_magnetic_resonance_imaging.pdf">Susceptibility-weighted imaging and quantitative susceptibility mapping in the brain</a>. J Magn Reson Imaging 2015; 42:23-41 (good recent review).&nbsp;<br />&nbsp; &nbsp; &nbsp;Robinson SD, Bredies K, Khabipova D, et al. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/qsm_technique_2016nbm.3601.pdf">An illustrated comparison of processing methods for MR phase imaging and QSM: combining array coil signals and phase unwrapping</a>. NMR Biomed 2017; 30:3601. (good recent review of different methods)<br />&nbsp;&nbsp; &nbsp;&nbsp;Wang Y, Liu T. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/wang_et_al-2015-magnetic_resonance_in_medicine.pdf">Quantitative susceptibility mapping (QSM): decoding MRI data for a tissue magnetic biomarker.</a> Magn Reson Med 2015; 73:82-101.</div><div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;"><strong>相关问题</strong><br /><em><strong>&nbsp; &nbsp; &nbsp;<a href="making-an-sw-image.html">如何获取和处理磁敏感加权成像？&nbsp;&nbsp;</a></strong></em></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div style="text-align:skip_to_justify;"><div style="height: 0px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-normal" href="phase-of-blood-v-ca.html" >
+<span class="wsite-button-inner">← &nbsp;上一问题</span>
+</a>
+<div style="height: 0px; overflow: hidden;"></div></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div style="text-align:right;"><div style="height: 0px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-normal" href="what-is-diffusion.html" >
+<span class="wsite-button-inner">下一问题 &nbsp;→</span>
+</a>
+<div style="height: 0px; overflow: hidden;"></div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div style="text-align:center;"><div style="height: 0px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-highlight" href="complete-list-of-questions.html" >
+<span class="wsite-button-inner">↑&nbsp;问题完整列表 ↑</span>
+</a>
+<div style="height: 10px; overflow: hidden;"></div></div>
+</div></div>

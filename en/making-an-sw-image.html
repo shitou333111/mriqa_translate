@@ -1,0 +1,127 @@
+<div id="content"><div id="wsite-content" class="wsite-elements wsite-not-footer">
+	<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<h2 class="wsite-content-title" style="text-align:center;">Making an SW image</h2>
+
+<div class="paragraph" style="text-align:center;"><strong style="color:rgb(135, 135, 135)"><em><font color="#0376be" size="4">How are susceptibility-weighted images obtained and processed?&nbsp;</font></em></strong><strong style="color:rgb(55, 138, 87)"><em><font size="4">&nbsp;</font></em></strong></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-thin" style="padding-top:0px;padding-bottom:10px;margin-left:0px;margin-right:0px;text-align:center">
+<a href='uploads/3/4/5/7/34572113/screen-shot-2017-03-28-at-12-22-14-pm_orig.png' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/screen-shot-2017-03-28-at-12-22-14-pm_orig.png" alt="making a susceptibility weighted image (swi)" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div class="paragraph"><em><strong><font color="#24678d">Susceptibility-weighted images (SWI)</font></strong></em> are generated from <em><strong><font color="#24678d">gradient-echo (GRE)&nbsp;</font></strong></em>pulse sequences. GRE sequences are sensitive to differences in tissue susceptibility because they lack the ability to refocus spins dephased by magnetic field inhomogeneities.</div>
+
+<div class="paragraph">Although simple T2*-weighted GRE sequences have traditionally been used <span style="color:rgb(0, 0, 0)">for the detection of iron/blood products and calcifications</span>, modern SWI sequences incorporate several features and enhancements making them superior. SWI sequences are typically acquired in 3D (rather than 2D) mode, allowing thinner slices and smaller voxel sizes to be obtained. Flow compensation in all three directions is used to reduce artifacts and parallel imaging is employed to reduce imaging time. Either single or multiple echoes may be acquired in a given <em>TR</em> interval. &nbsp;A key feature of SWI is that magnitude and phase information are independently processed/displayed as well as combined for diagnostic purposes.&nbsp;</div>
+
+<div class="paragraph">Typical imaging parameters include <em>TR</em> = 25-50 ms, <em>TE</em> = 20-40 ms, and flip angles = 15-20&ordm;. Shorter times and smaller flip angles are used as field strength increases.</div>
+
+<div class="paragraph">The precise methods employed by major MR vendors differ and are proprietary, but are largely based on strategies similar to those first described by Haacke et al (2004) and illustrated below. Using quadrature detection, both magnitude and phase data are separately reconstructed. The <em><strong><font color="#24678d">magnitude image</font></strong></em> is saved for diagnostic purposes, displaying background tissue with spin-density-like contrast.&nbsp;<br /><br />Phase data must undergo further processing to be clinically useful, however. &nbsp;The <em><strong><font color="#24678d">raw phase image</font></strong></em> is dominated by large but slowly changing "macro"-susceptibility gradients due to generalized field inhomogeneities as well as distortions due to air and bone at the skull base. Digital high-pass filtering can be used to remove these low-frequency fluctuations, and additional local phase correction algorithms may be employed to reduce artifacts at the skull base. The end result is a <em><strong><font color="#24678d">filtered phase image</font></strong></em> that is saved and used for diagnostic purposes, as described <a href="phase-of-blood-v-ca.html">in the following Q&amp;A</a>. &nbsp;</div>
+
+<div class="paragraph">A <em><strong><font color="#24678d">phase mask</font></strong></em> is next created that scales data from the filtered phase images over a 0-1 range to accentuate tissues with different susceptibilities. The magnitude image is digitally multiplied by this phase mask several times until the desired mix of phase information is imparted (denoted by the exponent "<em>n"</em> in the diagram below). In practice, <em>n = 4</em> complex multiplications are typically performed. The end result is a <em><strong><font color="#24678d">susceptibility-weighted (SW) image</font></strong></em>, which simultaneously contains both magnitude and phase information and is used for clinical diagnosis. <em><strong><font color="#24678d">Minimum intensity projections (mIPs) </font></strong></em>of the SW image are typically displayed, which vary in thickness depending on how many of the original 3D source images are stacked together.</div>
+
+<div><div class="wsite-image wsite-image-border-medium" style="padding-top:5px;padding-bottom:10px;margin-left:0px;margin-right:10px;text-align:skip_to_justify">
+<a href='uploads/3/4/5/7/34572113/swi-processing-with-mip_orig.jpg' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/swi-processing-with-mip_orig.jpg" alt="SWI (susceptibility-weighted imaging) processing" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;"><span style="color:rgb(0, 0, 0)">All major MR vendors offer susceptibility-based sequences under their own trade names. Siemens calls theirs simply&nbsp;</span><em style="color:rgb(0, 0, 0)"><strong><font color="#24678d">SWI</font></strong></em><span style="color:rgb(0, 0, 0)">&nbsp;and uses a method most akin to Haacke's. GE offers&nbsp;</span><em style="color:rgb(0, 0, 0)"><strong><font color="#24678d">SWAN (Susceptibility Weighted ANgiography),&nbsp;</font></strong></em><span style="color:rgb(0, 0, 0)">Philips offers&nbsp;</span><em style="color:rgb(0, 0, 0)"><strong><font color="#24678d">SWIp</font></strong></em><span style="color:rgb(0, 0, 0)">&nbsp;(</span><em style="color:rgb(0, 0, 0)"><strong><font color="#24678d">SWI-phase</font></strong></em><span style="color:rgb(0, 0, 0)">, formerly called&nbsp;</span><em style="color:rgb(0, 0, 0)"><strong><font color="#24678d">VenoBOLD</font></strong></em><span style="color:rgb(0, 0, 0)">), </span>Fujifilm<span style="color:rgb(0, 0, 0)"> has&nbsp;</span><em style="color:rgb(0, 0, 0)"><strong><font color="#24678d">BSI (Blood Sensitive Imaging)</font></strong></em><span style="color:rgb(0, 0, 0)">, and Canon offers&nbsp;</span><em style="color:rgb(0, 0, 0)"><strong><font color="#24678d">FSBB (Flow Sensitive Black Blood)</font></strong></em><span style="color:rgb(0, 0, 0)">.&nbsp;</span>&#8203;<br></div>
+
+<div><div id="838948472131142313" align="left" style="width: 100%; overflow-y: hidden;" class="wcustomhtml"><html> <head><script src="gdpr/gdprscript6f19.js?buildTime=1774025472"></script> <script type="text/javascript" 
+></script> 
+<script type="text/javascript">
+		$(function() {$('#Q').click(function() {$('.Q').toggle(500); return false;});});</script></head><body>
+<a href="#" id=Q><h3><font color="#378a57">Advanced Discussion (show/hide)»</font></h3></a><div class=Q style="display:none;">
+
+<!--content goes below here-->
+
+No supplementary material yet.  Check back soon!
+
+
+<!--content goes above here-->
+</div></body>
+<!-- Mirrored from mriquestions.com/making-an-sw-image.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 21 Mar 2026 06:09:28 GMT -->
+</html></div>
+
+
+
+</div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;"><strong>References<br />&nbsp;&nbsp; &nbsp;&nbsp;</strong>Chavhan GB., Babyn PS, Thomas B, Shroff MM, Haacke EM. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/t2__gre_radiographics.pdf">Principles, techniques, and applications of T2*-based MR imaging and its special applications</a>. Radiographics 2009; 29:1433-1449. (good review of traditional GRE T2*-weighted imaging with a lead-in to SWI)<br /><span><font color="#878787">&nbsp; &nbsp; &nbsp;</font></span><span style="color:rgb(0, 0, 0)">Duyn J.&nbsp;</span><a href="https://mriquestions.com/uploads/3/4/5/7/34572113/duyn_susceptibiltity.pdf">MR susceptibility imaging</a><span style="color:rgb(0, 0, 0)">. J Magn Reson 2013; 229:198-207. (good historical review)</span><br /><span style="color:rgb(0, 0, 0)">&nbsp;&nbsp; &nbsp;&nbsp;Haacke EM, Xu Y, Cheng Y-C, Reichenbach JR.&nbsp;</span><a href="https://mriquestions.com/uploads/3/4/5/7/34572113/haacke_et_al-2004-magnetic_resonance_in_medicine.pdf">Susceptibility weighted imaging (SWI)</a><span style="color:rgb(0, 0, 0)">. Magn Reson Med 2004; 52:612-618. (Describes processing method now used for most commercial SWI sequences)</span><br /><span style="color:rgb(0, 0, 0)">&nbsp;&nbsp; &nbsp;&nbsp;Haacke EM, Mittal S, Wu Z, Neelavalli J, Cheng Y-CN.&nbsp;</span><a href="https://mriquestions.com/uploads/3/4/5/7/34572113/haacke_asnr_part_1.pdf">Susceptibility-weighted imaging: technical aspects and clinical applications, part 1</a><span style="color:rgb(0, 0, 0)">. AJNR Am J Neuroradiol 2009; 30:19-30. (technical features)</span><br /><span style="color:rgb(0, 0, 0)">&nbsp;&nbsp; &nbsp;&nbsp;Mittal S, Wu Z, Neelavalli J, Haacke EM.&nbsp;</span><a href="https://mriquestions.com/uploads/3/4/5/7/34572113/haacke_asnr_part_2.pdf">Susceptibility-weighted imaging: technical aspects and clinical applications, part 2</a><span style="color:rgb(0, 0, 0)">. AJNR Am J Neuroradiol 2009; 30:232-252. (clinical applications)<br />&nbsp;&nbsp; &nbsp;&nbsp;</span>Young IR, Khenia S, Thomas DGT, et al. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/clinical_magnetic_susceptibility_mapping_of_the.2.pdf">Clinical magnetic susceptibility mapping of the brain</a>. J Comput Assist Tomogr 1987; 11:2-6. (First demonstration of clinical SWI)</div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;"><strong>Related Questions</strong><br /><em><strong>&nbsp; &nbsp; &nbsp;<a href="phase-of-blood-v-ca.html">How do you distinguish blood from calcifications on SWI phase maps?</a></strong></em></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div style="text-align:skip_to_justify;"><div style="height: 0px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-normal" href="whats-wrong-with-gre.html" target="_blank">
+<span class="wsite-button-inner">← &nbsp;Previous Question</span>
+</a>
+<div style="height: 0px; overflow: hidden;"></div></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div style="text-align:right;"><div style="height: 0px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-normal" href="phase-of-blood-v-ca.html" >
+<span class="wsite-button-inner">Next Question &nbsp;→</span>
+</a>
+<div style="height: 0px; overflow: hidden;"></div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div style="text-align:center;"><div style="height: 0px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-highlight" href="complete-list-of-questions.html" >
+<span class="wsite-button-inner">↑&nbsp;Complete List of Questions ↑</span>
+</a>
+<div style="height: 10px; overflow: hidden;"></div></div>
+</div></div>

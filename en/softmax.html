@@ -1,0 +1,128 @@
+<div id="content"><div id="wsite-content" class="wsite-elements wsite-not-footer">
+	<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:42.361111111111%; padding:0 15px;">
+					
+						
+
+<h2 class="wsite-content-title" style="text-align:center;">Softmax</h2>
+
+<div class="paragraph" style="text-align:center;"><font color="#0376be" size="4"><strong><em>What is the Softmax function and why is it needed?</em></strong></font></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:57.638888888889%; padding:0 15px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-thin" style="padding-top:0px;padding-bottom:0px;margin-left:0px;margin-right:0px;text-align:center">
+<a href='uploads/3/4/5/7/34572113/screen-shot-2023-01-19-at-4-20-46-pm_orig.png' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/published/screen-shot-2023-01-19-at-4-20-46-pmff1d.png?1674166870" alt="Picture" style="width:303;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<span class='imgPusher' style='float:right;height:0px'></span><span style='display: table;width:auto;position:relative;float:right;max-width:100%;;clear:right;margin-top:0px;*margin-top:0px'><a href='uploads/3/4/5/7/34572113/softmax-example_orig.png' rel='lightbox' onclick='if (!lightboxLoaded) return false'><img src="uploads/3/4/5/7/34572113/editor/softmax-example15ff.png?1674147906" style="margin-top: 10px; margin-bottom: 0px; margin-left: 20px; margin-right: 0px; border-width:0; max-width:100%" alt="Softmax function" class="galleryImageBorder wsite-image" /></a><span style="display: table-caption; caption-side: bottom; font-size: 90%; margin-top: -0px; margin-bottom: 0px; text-align: center;" class="wsite-caption"></span></span>
+<div class="paragraph" style="display:block;">The purpose of <em><strong><font color="#24678d">Softmax function</font></strong></em> is to adjust the outputs of a <em><strong><font color="#24678d">convolutional neural network (CNN)</font></strong></em> so that they sum to 1. This means the model output values are scaled so they can be thought of as relative "probabilities" that a certain category was predicted by the network.<br /><br />The figure on the right demonstrates the use of Softmax in the final stage of a brain tumor classification CNN illustrated in the <a href="convolutional-network.html">previous Q&amp;A</a>.&nbsp;&nbsp;<br />Here, the raw output data [&minus;0.1, 3.8, 1.1,&nbsp;&minus;0.3] has been transformed into relative "probabilities" by Softmax.</div>
+<hr style="width:100%;clear:both;visibility:hidden;"></hr>
+
+<div><div id="709759218133119325" align="left" style="width: 100%; overflow-y: hidden;" class="wcustomhtml"><p>In brief, the Softmax functions uses exponentials (<i>e<sup>z<sub>i</sub></sup></i>) to convert individual components of the output vector into positive numbers. For a given vector element (<i>z<sub>i</sub></i>), Softmax transforms this value into a probability by first raising it to an exponential, then dividing by the summed exponentials of all the elements in the original output vector. As an example, the Softmax value for the second vector element <i>z<sub>2</sub></i> = 3.8 is calculated as</div>
+
+
+
+</div>
+
+<div><div class="wsite-image wsite-image-border-none" style="padding-top:0px;padding-bottom:0px;margin-left:0px;margin-right:0px;text-align:center">
+<a href='uploads/3/4/5/7/34572113/screen-shot-2023-01-19-at-11-32-56-am_orig.png' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/published/screen-shot-2023-01-19-at-11-32-56-amcbf9.png?1674149626" alt="Softmax calculation" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+<div class="paragraph">and so forth for the other elements in the vector. The Softmax function is highly nonlinear in that it tends to push the higher raw data values toward 1 and the smaller values toward 0.</div>
+
+<div><div id="233111872664908849" align="left" style="width: 100%; overflow-y: hidden;" class="wcustomhtml"><html> <head><script src="gdpr/gdprscript6f19.js?buildTime=1774025472"></script> <script type="text/javascript" 
+></script> 
+<script type="text/javascript">
+		$(function() {$('#Q').click(function() {$('.Q').toggle(500); return false;});});</script></head><body>
+<a href="#" id=Q><h3><font color="#378a57">Advanced Discussion (show/hide)»</font></h3></a><div class=Q style="display:none;">
+
+<!--content goes below here-->
+
+<p>The Softmax function is essentially the same as the <font color="#0376be"><b><i>Boltzmann distribution</b></i></font> from statistical mechanics. As you may recall, the Boltzmann distribution is a probability measure that a system will be in a certain state as a function of energy and temperature of its particles.</p>
+
+<p>The question naturally arises as to why to go to the trouble of using exponentials rather than just using the actual raw output data. One obvious problem occurs when the raw data contains negative numbers and the denominator may be zero. Using a ratio of raw data <u>absolute values</u> could be done, but such a function is not differentiable.</p>
+
+<!--content goes above here-->
+</div></body>
+<!-- Mirrored from mriquestions.com/softmax.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 21 Mar 2026 06:50:43 GMT -->
+</html></div>
+
+
+
+</div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;"><strong>References</strong><br /><span><font color="#878787">&nbsp; &nbsp; &nbsp;</font></span>Keisan Online Softmax Calculator. <a href="https://keisan.casio.com/exec/system/15168444286206" target="_blank">Available at this website</a>.<span><font color="#878787">&nbsp; &nbsp; &nbsp;</font></span>&#8203;<br />&nbsp; &nbsp; &nbsp;<a href="https://en.wikipedia.org/wiki/Softmax_function" target="_blank">Softmax Function</a>.&nbsp; Wikipedia. The Free Encyclopedia.<br /></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;"><strong>Related Questions</strong><br /><strong>&nbsp; &nbsp; &nbsp;</strong><strong style="color:rgb(3, 118, 190)"><em><a href="convolutional-network.html">What is a convolutional neural network (CNN) and how does it work?</a></em></strong><em></em></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div style="text-align:skip_to_justify;"><div style="height: 10px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-normal" href="convolutional-network.html" >
+<span class="wsite-button-inner">← &nbsp;Previous Question</span>
+</a>
+<div style="height: 10px; overflow: hidden;"></div></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div style="text-align:right;"><div style="height: 10px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-normal" href="upsampling.html" >
+<span class="wsite-button-inner">Next Question &nbsp;→</span>
+</a>
+<div style="height: 10px; overflow: hidden;"></div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div style="text-align:center;"><div style="height: 10px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-highlight" href="complete-list-of-questions.html" >
+<span class="wsite-button-inner">↑&nbsp;Complete List of Questions ↑</span>
+</a>
+<div style="height: 10px; overflow: hidden;"></div></div>
+</div></div>

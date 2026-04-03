@@ -1,0 +1,202 @@
+<div id="content"><div id="wsite-content" class="wsite-elements wsite-not-footer">
+	<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:50.696378830084%; padding:0 15px;">
+					
+						
+
+<h2 class="wsite-content-title" style="text-align:center;">Signal and Spatial Frequency</h2>
+
+<div class="paragraph" style="text-align:center;"><strong style="color: rgb(135, 135, 135); font-size: large; line-height: 1.5;"><em><font color="#0376be">I don't understand how you can simply plug the digitized MR signal data directly into k-space. How are these points the same as spatial frequency?&nbsp;</font></em></strong><br /></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:49.303621169916%; padding:0 15px;">
+					
+						
+
+<div class="paragraph" style="text-align:skip_to_justify;">&nbsp;</div>
+
+<div><div class="wsite-image wsite-image-border-thin" style="padding-top:0;padding-bottom:0;margin-left:0;margin-right:0;text-align:center">
+<a href='uploads/3/4/5/7/34572113/9635542_orig.png' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/9635542_orig.png" alt="k-space data" style="width:100%;max-width:677px" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:35.097493036212%; padding:0 15px;">
+					
+						
+
+<div class="paragraph" style="text-align:skip_to_justify;">When a frequency-encoding gradient is applied during evolution of the MR signal, successive data points in the echo (or FID) reflect progressively increasing spatial frequencies. This allows the sampled raw data from the MR signal to be plugged directly into the <em>k</em>-space matrix.<br /></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:64.902506963788%; padding:0 15px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-thin" style="padding-top:10px;padding-bottom:15px;margin-left:0;margin-right:0;text-align:center">
+<a href='uploads/3/4/5/7/34572113/8323914_orig.gif' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/8323914019d.gif?433" alt="k-space real and imaginary data" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<span class='imgPusher' style='float:left;height:0px'></span><span style='display: table;width:auto;position:relative;float:left;max-width:100%;;clear:left;margin-top:0px;*margin-top:0px'><a href='uploads/3/4/5/7/34572113/5141013_orig.jpg' rel='lightbox' onclick='if (!lightboxLoaded) return false'><img src="uploads/3/4/5/7/34572113/51410134c56.jpg?121" style="margin-top: 10px; margin-bottom: 0px; margin-left: 0px; margin-right: 15px; border-width:0; max-width:100%" alt="k-space" class="galleryImageBorder wsite-image" /></a><span style="display: table-caption; caption-side: bottom; font-size: 90%; margin-top: -0px; margin-bottom: 0px; text-align: center;" class="wsite-caption">The "Miracle"<br>of <i>k-</i>space</span></span>
+<div class="paragraph" style="text-align:skip_to_justify;display:block;">In other words, each data point of the MR signal is already in "Fourier format." I call this surprising fact the "Miracle" of <em>k</em>-space! Why this miracle occurs is not&nbsp;intuitively obvious and will require some&nbsp;explanation.<br /><br />The diagram below shows a hypothetical FID obtained from an MR slice through the upper abdomen. The FID has undergone accelerated decay due to the action of a dephasing gradient&nbsp;<em>G(x)</em>&nbsp;that is directed along the horizontal axis.&nbsp;<em>G(x)</em>&nbsp;might serve as either a frequency- or phase-encoding gradient.&nbsp;For simplicity we assume&nbsp;<em>G(x)</em>&nbsp;varies linearly with position (<em>x</em>), having the form&nbsp;<em>G(x)</em>&nbsp;=&nbsp;<em>G&nbsp;&bull;&nbsp;x,&nbsp;</em>where <em>G</em> is expressed in mT/meter or equivalent units.<em>&nbsp;&nbsp;</em></div>
+<hr style="width:100%;clear:both;visibility:hidden;"></hr>
+
+<div class="paragraph" style="text-align:skip_to_justify;">While <em>G(x)</em> is being applied, the total magnetic field at a given location is <em>B(x) = B<font size="1">o</font> + G(x)</em>. The corresponding resonance frequency at location <em>x</em> is therefore&nbsp;<br /></div>
+
+<div class="paragraph" style="text-align:center;"><font color="#2a2a2a"><em><font size="4">f(x) =&nbsp;&gamma;B(x) =&nbsp;&gamma;B</font><font size="2">o</font><font size="4">&nbsp;+&nbsp;&gamma;G(x) =&nbsp;</font></em><em style="font-size: large;">f</em><em><font size="2">o</font></em><em style="font-size: large;">&nbsp;+&nbsp;</em><em style="font-size: large;">&gamma;Gx.</em></font></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;">where&nbsp;<span style="line-height: 22.5px;"><em style="font-size: 15px;">&gamma;</em><span style="font-size: 15px;">&nbsp;is the gyromagnetic ratio and </span><em><span style="font-size: 15px;">f</span><font size="1">o</font></em><span style="font-size: 15px;"> is the Larmor frequency of the main magnetic field (</span><em><span style="font-size: 15px;">B</span><font size="1">o</font></em><span style="font-size: 15px;">). Under action of the gradient, the resonant frequencies increase</span></span>&nbsp;from left-to-right across the image as long as the gradient is being applied. Once the gradient is turned off, the resonant frequencies all revert to&nbsp;<em>f<font size="1">o</font></em>.</div>
+
+<div><div class="wsite-image wsite-image-border-none" style="padding-top:0;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
+<a href='uploads/3/4/5/7/34572113/934486_orig.gif' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/934486eb6f.gif?618" alt="imaging gradients and phase" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;">While the gradient is applied, protons in the higher parts of the field will precess more rapidly and gain phase compared to those in lower parts of the field. This phase shift persists even after the gradient has been turned off. Because phase = frequency x time, the phase gain is directly proportional to the length of time (<em>t</em>) the gradient is applied. As a function of position (<em>x</em>), the phase gain is given by<br /></div>
+
+<div class="paragraph" style="text-align:center;"><font color="#2a2a2a"><font size="4"><em>&#981;</em>(<em>x,t</em>) = (</font><span style="font-size: large; text-align: center;"><em>&gamma;Gx</em>)&nbsp;</span><em style="font-size: large;">&bull;&nbsp;t =&nbsp;</em><font size="4">(</font><em style="font-size: large;">&gamma;Gt</em><font size="4">)&nbsp;</font><font style="font-size: large; font-style: italic;">&bull;&nbsp;</font><em style="font-size: large;">x = k</em><font style="font-style: italic;" size="1">x</font><font size="4">(</font><em style="font-size: large;">t</em><font size="4">)</font><em style="font-size: large;">&nbsp;</em><em style="font-size: large;">&bull;&nbsp;x</em></font></div>
+
+<div class="paragraph">where <em>k<font size="1">x</font></em>(<em>t</em>) =&nbsp;<span style="text-align: center;"><em>&gamma;Gt. </em>This is the same "<em>k<font size="1">x</font></em>" of <em>k</em>-space fame, expressing phase cycles per unit distance along the <em>x</em>-direction.&nbsp;</span><br /></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;">Another way to think of&nbsp;<em>k</em>(<em>t</em>) is as the gyromagnetic ratio (<em>&gamma;</em>)<em>&nbsp;</em>times the area under the gradient (<em>G</em>) curve at time (<em>t</em>). Even though we have assumed a linear, rectangular gradient waveform varying along the&nbsp;<em>x</em>-axis in our simplified example above, the same definition holds for any arbitrary gradient shape and direction (<em>r</em>). &nbsp;Specifically,&nbsp;</div>
+
+<div><div class="wsite-image wsite-image-border-none" style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
+<a>
+<img src="uploads/3/4/5/7/34572113/62700156f3e.png?210" alt="equation for k-space" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;">When<em> t = t<font size="1">early</font>, k<font size="1">x</font> </em>is small and the spread of phases across the image is very small. When&nbsp;<em>&nbsp;t = t<font size="1"><span style="line-height: 16.666667938232422px;">late</span></font>, k<font size="1">x</font>&nbsp;</em>is large and many phase cycles encompass the image. The resultant MR signal at each point in time (<em>t</em>) thus reflects increasing spatial frequencies and the summed phase angles from all locations in the image. Hence each successive point along the MR signal reflects progressively higher spatial frequencies whose values can be used to "miraculously" fill <em>k</em>-space cells directly.</div>
+
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-none" style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
+<a href='uploads/3/4/5/7/34572113/9888010_orig.gif' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/9888010_orig.gif" alt="imaging gradients and phase" style="width:100%;max-width:500px" />
+</a>
+<div style="display:block;font-size:90%">Gradient applied to 2 objects - one uniform/solid (blue) and the other periodic (red). When phase encoding matches period of red object, a strong signal is recorded.</div>
+</div></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div class="paragraph" style="text-align:skip_to_justify;">If the above discussion was too mathematical, perhaps the example left will provide some additional insight. Here two objects, one of uniform density (blue) and the other of periodic density (red, like a fence), have been subjected to the same gradient field. We assume this gradient has induced a set of phase shifts (green) across both objects, whose spatial frequency happens to match that of the red object.</div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;">Because the uniform (blue) object extends over multiple phase cycles, no signal would be observed as magnetization vectors would all cancel. In other words, for each pixel in the uniform object with phase shift&nbsp;&phi;, it would be easy to find another pixel with phase shift&nbsp;&minus;&phi;. Conversely, the red object would generate a strong signal at this phase encoding, as the spatial frequency inherent in the object would exactly match that produced by the gradient.&nbsp;</div>
+
+<div><div id="130679373258243500" align="left" style="width: 100%; overflow-y: hidden;" class="wcustomhtml"><html> <head><script src="gdpr/gdprscript6f19.js?buildTime=1774025472"></script> <script type="text/javascript" 
+></script> 
+<script type="text/javascript">
+		$(function() {$('#Q').click(function() {$('.Q').toggle(500); return false;});});</script></head><body>
+<a href="#" id=Q><h3><font color="#378a57">Advanced Discussion (show/hide)»</font></h3></a><div class=Q style="display:none;">
+
+<!--content goes below here-->
+
+No supplementary material yet.  Check back soon!
+
+
+<!--content goes above here-->
+</div></body>
+<!-- Mirrored from mriquestions.com/why-signal-harr-k-space.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 21 Mar 2026 06:14:55 GMT -->
+</html></div>
+
+
+
+</div>
+
+<div class="paragraph"><strong>References</strong><br /><span style="line-height: 1.5;"><font color="#878787">&nbsp; &nbsp; &nbsp;&nbsp;</font></span><span style="font-size: 15px; line-height: 1.5;"><font color="#2a2a2a">Mezrich R</font></span><span style="color: rgb(135, 135, 135); font-size: 15px; line-height: 1.5;">.&nbsp;</span><a href="http://mri-q.com/uploads/3/4/5/7/34572113/fourier.kspace.mezrich.1995.pdf" title="" style="font-size: 15px; line-height: 1.5;">A perspective on k-space</a><span style="color: rgb(135, 135, 135); font-size: 15px; line-height: 1.5;">. </span>Radiology 1995; 195: 297-315 [review].<br />&nbsp; &nbsp; &nbsp;&nbsp;<span style="font-size: 15px; line-height: 22.5px;"><font color="#2a2a2a">Wald L.</font></span><a href="http://mri-q.com/uploads/3/4/5/7/34572113/imageencoding_mit_courseware_wald.pdf" title="" style="font-size: 15px; line-height: 22.5px;">&nbsp;MR image encoding</a><span style="color: rgb(135, 135, 135); font-size: 15px; line-height: 22.5px;">. </span><span style="font-size: 15px; line-height: 22.5px;"><font color="#2a2a2a">(From MIT OpenCourseWare</font></span><span style="color: rgb(135, 135, 135); font-size: 15px; line-height: 22.5px;">&nbsp;</span><a href="http://ocw.mit.edu/" title="" style="font-size: 15px; line-height: 22.5px;">http://ocw.mit.edu</a><span style="font-size: 15px; line-height: 22.5px;"><font color="#2a2a2a">)</font></span><span style="color: rgb(135, 135, 135); font-size: 15px; line-height: 22.5px;">&nbsp;</span></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;"><strong>Related Questions</strong><br /><strong><em><a href="data-for-k-space.html">&nbsp; &nbsp; &nbsp;<span style="text-align: center;">Where do you get the data to fill k-space? How does this relate to MR signals and echoes?&nbsp;</span><span style="text-align: center;">&nbsp;</span></a></em></strong></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div style="text-align:skip_to_justify;"><div style="height: 10px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-normal" href="data-for-k-space.html" >
+<span class="wsite-button-inner">← &nbsp;Previous Question</span>
+</a>
+<div style="height: 10px; overflow: hidden;"></div></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div style="text-align:right;"><div style="height: 10px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-normal" href="spin-warp-imaging.html" >
+<span class="wsite-button-inner">Next Question &nbsp;→</span>
+</a>
+<div style="height: 10px; overflow: hidden;"></div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div style="text-align:center;"><div style="height: 10px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-highlight" href="complete-list-of-questions.html" >
+<span class="wsite-button-inner">↑&nbsp;Complete List of Questions ↑</span>
+</a>
+<div style="height: 10px; overflow: hidden;"></div></div>
+</div></div>

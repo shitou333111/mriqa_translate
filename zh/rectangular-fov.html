@@ -1,0 +1,174 @@
+<div id="content"><div id="wsite-content" class="wsite-elements wsite-not-footer">
+	<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<h2 class="wsite-content-title" style="text-align:center;">矩形视野</h2>
+
+<div class="paragraph" style="text-align:center;"><strong style="color: rgb(135, 135, 135); font-size: large; line-height: 1.5;"><em><font color="#0376be">如何获得矩形视野？为何要使用它？&nbsp;</font></em></strong><strong style="color: rgb(55, 138, 87); font-size: large; line-height: 1.5;"><em>&nbsp;</em></strong><br /></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-thin" style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
+<a href='uploads/3/4/5/7/34572113/6819383_orig.png' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/6819383_orig.png" alt="矩形视野" style="width:100%;max-width:942px" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:38.300835654596%; padding:0 15px;">
+					
+						
+
+<div class="paragraph" style="text-align:skip_to_justify;">在<a href="field-of-view-fov.html" title="">之前的问答</a>中，我们展示了视野与 <em>k</em> 空间中采样点间距之间的反比关系。为简化解释，我们假设了每个方向具有相同视野的正方形像素。然而，通过改变沿频率编码轴和相位编码轴的采样率，可以独立地改变每个图像维度上的视野。</div>
+
+<div class="paragraph" style="text-align:center;"><em>FOV<font size="1">f</font></em> = 1 /<font size="1">&nbsp;</font><em>&Delta;k<font size="1">f</font></em><br /><em>FOV<font size="1">p</font></em>&nbsp;= 1 /<font size="1">&nbsp;</font><em>&Delta;k<font size="1">p</font></em><br /></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:61.699164345404%; padding:0 15px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-thin" style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
+<a href='uploads/3/4/5/7/34572113/8388995_orig.gif' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/838899570c6.gif?393" alt="矩形视野" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%">通过在 <i>k<sub>p</sub></i> 方向隔行采样获得的矩形（1:2）视野</div>
+</div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;">对于二维自旋回波成像，通过保持相位编码梯度的最大和最小幅度不变，在 <em>k</em> 空间中隔行采样相位编码线，即可获得 1:2 比例的矩形视野。这一过程将相位编码步数减半，但使连续步之间的增量加倍。</div>
+
+<div class="paragraph" style="text-align:skip_to_justify;">频率编码方向的采样率以及由此决定的视野保持不变。此外，由于相位编码方向的视野和相位编码步数均减少了一半，相位编码方向的像素尺寸以及图像的整体空间分辨率也保持不变。<br /></div>
+
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:70.473537604457%; padding:0 15px;">
+					
+						
+
+<div class="paragraph" style="text-align:skip_to_justify;">所有磁共振制造商都将矩形视野作为适用于大多数脉冲序列的标准选项提供。各厂商的名称略有不同："Rectangular FOV"（西门子、飞利浦、富士胶片、佳能）和 "Asymmetric FOV"（通用电气）。<br></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;">矩形视野选项在脊柱和四肢成像中最为有益，因为这些部位的解剖结构在一个维度上远长于另一个维度。大多数扫描仪允许在大范围内调整相位采样比例；因此，矩形视野的大小和形状可能有相当大的调整空间。</div>
+
+<div class="paragraph" style="text-align:skip_to_justify;">然而，矩形视野技术有两个主要缺点。首先，由于采集的相位编码步数较少，与全视野成像相比，信噪比成比例降低。其次，如果物体尺寸超过了设定的相位编码方向视野，则可能在相位编码方向发生<strong><em><font color="#24678d">卷褶伪影</font></em></strong> <strong><font color="#24678d">（<em>混叠</em>）</font></strong>。可能需要仔细摆位患者并使用饱和带来消除此伪影。</div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:29.526462395543%; padding:0 15px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-thin" style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
+<a href='uploads/3/4/5/7/34572113/2989454_orig.jpg' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/2989454_orig.jpg" alt="矩形视野" style="width:100%;max-width:300px" />
+</a>
+<div style="display:block;font-size:90%">带有来自下巴的卷褶（混叠）伪影的矩形视野（红色箭头）</div>
+</div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div><div id="891746177658991591" align="left" style="width: 100%; overflow-y: hidden;" class="wcustomhtml"><html> <head><script src="gdpr/gdprscript6f19.js?buildTime=1774025472"></script> <script type="text/javascript" 
+></script> 
+<script type="text/javascript">
+		$(function() {$('#Q').click(function() {$('.Q').toggle(500); return false;});});</script></head><body>
+<a href="#" id=Q><h3><font color="#378a57">进阶讨论（显示/隐藏）»</font></h3></a><div class=Q style="display:none;">
+
+<!--content goes below here-->
+
+暂无补充材料。请稍后再来查看！
+
+
+<!--content goes above here-->
+</div></body>
+<!-- Mirrored from mriquestions.com/rectangular-fov.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 21 Mar 2026 06:16:06 GMT -->
+</html></div>
+
+
+
+</div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div><div class="paragraph" style="text-align:skip_to_justify;"><strong>参考文献</strong><br /><span style="line-height: 1.5;"><font color="#878787">&nbsp; &nbsp; &nbsp;</font></span>Mezrich R.&nbsp;<a href="http://mriquestions.com/uploads/3/4/5/7/34572113/fourier.kspace.mezrich.1995.pdf" title="">A perspective on k-space</a>. Radiology 1995; 195: 297-315. [review].<br />&nbsp; &nbsp; &nbsp;Miller K.&nbsp;<a href="uploads/3/4/5/7/34572113/miler-image_formation.ppt" title="">MRI image formation (ppt)</a>. On-line lecture notes available at<a href="http://users.fmrib.ox.ac.uk/~karla/teaching/image_formation.ppt" target="_blank" title="">users.fmrib.ox.ac.uk/~karla/teaching/image_formation.ppt</a><br /></div><div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;"><strong>相关问题</strong><br /><strong><em><a href="rectangular-fov.html" title="">&nbsp; &nbsp; &nbsp;</a></em></strong><strong><em><a href="field-of-view-fov.html" title="">k 空间与视野 (FOV) 及像素宽度有何关系？&nbsp;&nbsp;<br /></a></em></strong><strong><em><span style="text-align: center;">&nbsp; &nbsp; &nbsp;<a href="wrap-around-artifact.html">为何会发生相位卷叠伪影？</a></span><a href="rectangular-fov.html" title=""><span style="text-align: center;">&nbsp;</span><span style="text-align: center;">&nbsp;</span></a></em></strong></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div style="text-align:skip_to_justify;"><div style="height: 10px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-normal" href="field-of-view-fov.html" >
+<span class="wsite-button-inner">← &nbsp;上一问题</span>
+</a>
+<div style="height: 10px; overflow: hidden;"></div></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div style="text-align:right;"><div style="height: 10px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-normal" href="partial-fourier.html" >
+<span class="wsite-button-inner">下一问题 &nbsp;→</span>
+</a>
+<div style="height: 10px; overflow: hidden;"></div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div style="text-align:center;"><div style="height: 10px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-highlight" href="index.html" >
+<span class="wsite-button-inner">↑&nbsp;问题完整列表 ↑</span>
+</a>
+<div style="height: 10px; overflow: hidden;"></div></div>
+</div></div>

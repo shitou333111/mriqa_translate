@@ -1,0 +1,182 @@
+<div id="content"><div id="wsite-content" class="wsite-elements wsite-not-footer">
+	<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<h2 class="wsite-content-title" style="text-align:center;">The MR Signal: Details</h2>
+
+<div class="paragraph" style="text-align:center;"><strong style="color: rgb(135, 135, 135); font-size: large; line-height: 1.5;"><em><font color="#0376be">The MRI signal just looks like a "squiggle". How does it contain all the information needed for imaging?</font></em></strong><br /></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-thin" style="padding-top:0;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
+<a href='uploads/3/4/5/7/34572113/5001406_orig.png' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/5001406e379.png?281" alt="MR signal" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;">Up until now the MR signal has been treated rather informally, appearing as just a "squiggle" in most of our diagrams. For simplicity, I have purposely neglected dissecting the MR signal in detail. . . until now.<br /></div>
+
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:61.00278551532%; padding:0 15px;">
+					
+						
+
+<div class="paragraph" style="text-align:skip_to_justify;">In prior Q&amp;A's we illustrated how the MR signal is an electrical current induced in a receiver coil following stimulation of a spin system by an RF-pulse. The recorded signal from such a pulse experiment has the form of either a<strong><em><font color="#24678d">&nbsp;free induction decay (FID)</font></em></strong>&nbsp;or&nbsp;<strong><em><font color="#24678d">echo</font></em></strong>. Both types of signals are high frequency oscillations at the Larmor frequency, whose amplitudes rise or fall as a result of T2 effects and magnetic field inhomogeneities. In our simple examples we tacitly considered the MR signals to have arisen from a single large voxel in a homogeneous sample without spatial encoding.</div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:38.99721448468%; padding:0 15px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-thin" style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
+<a href='uploads/3/4/5/7/34572113/__904892_orig.gif' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/__904892.gif" alt="FID" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;">The signals in MR imaging arise from multiple voxels, often from an entire slice (or slab of tissue containing many slices) recorded all at once. These voxels contain different materials with different spin densities and relaxation times. Furthermore, the main magnetic field (<strong>B<font size="1">o</font></strong>) has often been purposely distorted by the use of gradients to change the frequency and phase of protons as a function of spatial position. The resulting total MR signal is thus the sum of thousands of FIDs and echoes arising from individual voxels with different amplitudes, frequencies, and phases. &nbsp;</div>
+
+<div class="paragraph" style="text-align:skip_to_justify;">Sorting out this huge array of overlapping and interfering signals might seem impossible, but a number of very clever techniques have been developed to do just that. Such methods (discussed in a<a href="how-to-locate-signals.html" title=""> later Q&amp;A</a>) include frequency-encoding, phase-encoding, variations of signal timing, and exploiting knowledge of coil location and sensitivity. Fourier transform methods also allow the data to be sorted out according to differences in frequency and accumulated phase.</div>
+
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-none" style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
+<a href='uploads/3/4/5/7/34572113/9534325_orig.gif' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/9534325_orig.gif" alt="AM and FM" style="width:100%;max-width:437px" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div class="paragraph" style="text-align:skip_to_justify;">Although the baseline frequency of the MR signal is very high (~64 MHz for a 1.5T scanner), the vital spatial, spectral, and relaxation information is encoded over a much smaller range, typically less than 50-100 kHz. The baseline oscillation near the Larmor frequency acts only as a <strong><em><font color="#24678d">carrier wave&nbsp;</font></em></strong>for the much lower frequency imaging information, equivalent to the way commercial radio signals are transmitted. AM stations use <strong><em><font color="#24678d">amplitude modulation</font></em></strong>, where the amplitude of the carrier changes with with sound level. FM stations use <strong><em><font color="#24678d">frequency modulation</font></em></strong>, where wave spacing encodes the audio information. <strong><em><font color="#24678d">Phase modulation</font></em></strong>&nbsp;of the MR signal also occurs and is closely related to frequency modulation.</div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div><div id="730190377618510859" align="left" style="width: 100%; overflow-y: hidden;" class="wcustomhtml"><p>The FID pictured at the top of this Q&A is an example of a simple, amplitude modulated wave. It is composed of a carrier of the form { sin <i>ω<sub>o</sub>t</i> } modulated by a decaying exponential <i>e<sup>−t/T2*</sup></i>.  </p>   </div>
+
+
+
+</div>
+
+<div class="paragraph" style="text-align:skip_to_justify;">At a relatively early stage of MR signal processing, the high frequency carrier waves are filtered out, a process known as <strong><em><font color="#24678d">demodulation</font></em></strong>. This removal of the high frequency information doesn't solve the problem of figuring out what signal comes from where, but it does make the situation more manageable. After demodulation, we only need to decode spatial and spectral information where the frequencies lie in the range of a few thousand Hz (rather than across millions of Hz).</div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div><div id="299222780998688128" align="left" style="width: 100%; overflow-y: hidden;" class="wcustomhtml"><html> <head><script src="gdpr/gdprscript6f19.js?buildTime=1774025472"></script> <script type="text/javascript" 
+></script> 
+<script type="text/javascript">
+		$(function() {$('#Q').click(function() {$('.Q').toggle(500); return false;});});</script></head><body>
+<a href="#" id=Q><h3><font color="#378a57">Advanced Discussion (show/hide)»</font></h3></a><div class=Q style="display:none;">
+
+<!--content goes below here-->
+
+No supplementary material yet.  Check back soon!
+
+
+<!--content goes above here-->
+</div></body>
+<!-- Mirrored from mriquestions.com/signal-squiggles.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 21 Mar 2026 05:57:23 GMT -->
+</html></div>
+
+
+
+</div>
+
+<div class="paragraph" style="text-align:skip_to_justify;"><strong>References</strong><br /><span style="line-height: 1.5;"><font color="#878787">&nbsp; &nbsp; &nbsp;</font></span>Kumar A, Welti D, Ernst RR. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/1-s2.0-0022236475902243-main.pdf">NMR Fourier Zeugmatography</a>. J Magn Reson 1975;18:69-83.<br /><span></span><br /><span></span></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;"><strong>Related Questions</strong><br /><strong><em>&nbsp; &nbsp; <a href="index.html" title="">&nbsp;What is a free induction decay (FID)?</a></em></strong><br /><strong><em><a href="how-to-locate-signals.html">&nbsp; &nbsp; &nbsp;<span style="text-align: center;">How does the scanner know the locations of all the MR signals?&nbsp;</span></a></em></strong></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div style="text-align:skip_to_justify;"><div style="height: 10px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-normal" href="index.html" >
+<span class="wsite-button-inner">← &nbsp;Previous Question</span>
+</a>
+<div style="height: 10px; overflow: hidden;"></div></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div style="text-align:right;"><div style="height: 10px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-normal" href="real-v-imaginary.html" >
+<span class="wsite-button-inner">Next Question &nbsp;→</span>
+</a>
+<div style="height: 10px; overflow: hidden;"></div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div style="text-align:center;"><div style="height: 10px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-highlight" href="complete-list-of-questions.html" >
+<span class="wsite-button-inner">↑&nbsp;Complete List of Questions ↑</span>
+</a>
+<div style="height: 10px; overflow: hidden;"></div></div>
+</div></div>

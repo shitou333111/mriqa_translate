@@ -1,0 +1,122 @@
+<div id="content"><div id="wsite-content" class="wsite-elements wsite-not-footer">
+	<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<h2 class="wsite-content-title" style="text-align:center;">MR Safety: SAR Measurements</h2>
+
+<div class="paragraph" style="text-align:center;"><font color="#0376be" size="4"><strong><em>How do MRI scanners measure SAR during a scan?&nbsp;</em></strong></font></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-none" style="padding-top:0px;padding-bottom:10px;margin-left:0px;margin-right:0px;text-align:center">
+<a href='uploads/3/4/5/7/34572113/screenshot-2026-02-10-at-11-27-07-pm_orig.png' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/screenshot-2026-02-10-at-11-27-07-pm_orig.png" alt="SAR measurements MRI" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div class="paragraph">&#8203;MRI scanners do not measure SAR directly in the patient. Instead, they estimate it in real time using a combination of RF power monitoring, electromagnetic models, and patient data. The result is a conservative prediction designed to stay within regulatory limits set by agencies like the <em><strong><font color="#24678d">International Electrotechnical Commission (IEC)</font></strong></em> and <em><strong><font color="#24678d">US Food and Drug Administration (FDA).&nbsp;&nbsp;</font></strong></em>Manufacturers must demonstrate that their scanners can predict and limit SAR according to these standards.</div>
+
+<span class='imgPusher' style='float:right;height:0px'></span><span style='display: table;width:auto;position:relative;float:right;max-width:100%;;clear:right;margin-top:0px;*margin-top:0px'><a href='uploads/3/4/5/7/34572113/teg-ae-5500-gemini_orig.jpg' rel='lightbox' onclick='if (!lightboxLoaded) return false'><img src="uploads/3/4/5/7/34572113/editor/teg-ae-5500-gemini97eb.jpg?1770783892" style="margin-top: 10px; margin-bottom: 10px; margin-left: 0px; margin-right: 0px; border-width:0; max-width:100%" alt="RF power meter MRI" class="galleryImageBorder wsite-image" /></a><span style="display: table-caption; caption-side: bottom; font-size: 90%; margin-top: -10px; margin-bottom: 10px; text-align: center;" class="wsite-caption">RF meter showing forward and reverse (reflected) power </span></span>
+<div class="paragraph" style="display:block;">The scanner continuously monitors both <em><strong><font color="#24678d">forward RF power</font></strong></em> (sent to the coil) and <em><strong><font color="#24678d">reverse RF power</font></strong></em> (reflected from coil due to impedance mismatch).&nbsp; Using directional couplers, the system computes the difference between forward and reflected power which is the actual RF power entering the coil-patient system.<br /><br /><span style="color:rgb(0, 0, 0)">Based on the MR pulse sequence selected or run, the scanner knows all the critical adjustable parameters (flip angle, TR/TE, duty cycle, RF-pulse magnitude/duration/shape, number of slices, etc) allowing it to calculate the RF energy administered per pulse.&nbsp;</span></div>
+<hr style="width:100%;clear:both;visibility:hidden;"></hr>
+
+<div class="paragraph">Built into the scanner's database are look-up tables that relate RF input power to local and global SAR. These tables are based on full-wave Maxwell simulations in thousands of scenarios involving human anatomy models with different sizes and positions using different coils and frequencies. When the tech enters the demographic information for a patient in the scanner (weight, height, exam region, coil type, etc), the scanner estimates effective body mass, coil loading, and coupling.&nbsp; It then selects the closest matching model from the database.&nbsp;</div>
+
+<div class="paragraph">A whole body SAR is then computed as the predicted absorbed RF power&nbsp;&divide; patient mass.&nbsp; This provides a global heating risk and is updated continuously during the scan. If the predicted SAR exceeds regulatory limits, then the scanner will not allow the sequence to be run and suggest parameter tradeoffs to keep SAR values within range.</div>
+
+<div class="paragraph">Because local SARs cannot be measured, the scanner makes a conservative estimate of local (10g) SARs by tracking coil sensitivity maps, B1 field patterns, and current sequence parameters. "Worst reasonable case" hot-spots are identified. Manufacturers deliberately overestimate SAR values for safety reasons.</div>
+
+<div class="paragraph">In scanners that utilize multi-channel (parallel) RF transmission, the calculation of SAR is more difficult. This is because each channel makes its own SAR contribution, interference patterns occur, and hot spots become highly unpredictable. Such systems utilize real-time SAR matrices, channel power tracking, and subject-specific calibration.&nbsp;</div>
+
+<div><div id="533061395963144923" align="left" style="width: 100%; overflow-y: hidden;" class="wcustomhtml"><html> <head><script src="gdpr/gdprscript6f19.js?buildTime=1774025472"></script> <script type="text/javascript" 
+></script> 
+<script type="text/javascript">
+		$(function() {$('#Q').click(function() {$('.Q').toggle(500); return false;});});</script></head><body>
+<a href="#" id=Q><h3><font color="#378a57">Advanced Discussion (show/hide)»</font></h3></a><div class=Q style="display:none;">
+
+<!--content goes below here-->
+
+No supplementary material yet.  Check back soon!
+
+
+<!--content goes above here-->
+</div></body>
+<!-- Mirrored from mriquestions.com/how-mris-measure-sar.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 21 Mar 2026 06:58:28 GMT -->
+</html></div>
+
+
+
+</div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;"><strong>References</strong><br /><span style="color:rgb(34, 30, 31)">&nbsp; &nbsp; &nbsp;</span><span>El-Sharkawy A-MM, Qian Q, Bottomley PA et al. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/mphya6-000039-002334_1.pdf">A multichannel, real-time MRI RF power monitor for independent SAR&nbsp;determination</a>. Med Phys 2012; 39:2334-41.</span><br /><span style="color:rgb(0, 0, 0)">&nbsp; &nbsp; &nbsp;International Electrotechnical Commission.&nbsp;</span><a href="http://mriquestions.com/uploads/3/4/5/7/34572113/safety_iec_60601-2-33previews_1897819_pre.pdf">IEC 60601-2-33:2010: Medical Electrical Equipment - Part 2-33: Particular Requirements for the Basic Safety and Essential Performance of Magnetic Resonance Equipment for Medical Diagnosis</a><span style="color:rgb(0, 0, 0)">. 3rd ed. with amendments. International Electrotechnical Commission; 2015. (accessed July 2020)</span><br /><span>&nbsp; &nbsp; &nbsp;Seo Y, Wang J.</span><span>&nbsp; </span><span><a href="https://mriquestions.com/uploads/3/4/5/7/34572113/acm2-18-224.pdf">MRI scanner-independent specific absorption rate&nbsp;</a></span><span><a href="https://mriquestions.com/uploads/3/4/5/7/34572113/acm2-18-224.pdf">measurements using diffusion coefficients.</a> J Appl Clin Med Phys 2917; 18:4:224-229.</span><span>&nbsp; </span><span>[<a href="https://doi.org/10.1002/acm2.12095" target="_blank">DOI LINK</a>]</span></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;"><strong>Related Questions</strong><br /><strong>&nbsp; &nbsp; &nbsp;</strong><strong style="color:rgb(0, 0, 0)"><em><font color="#0376be"><a href="how-to-reduce-sar.html">What practical steps can a technologist use to reduce SAR?&nbsp;</a></font></em></strong><br /><em style="color:rgb(0, 0, 0)"><strong><font color="#24678d">&nbsp; &nbsp; &nbsp;<a href="rf-biological-effects.html">How do radiofrequency fields affect biological tissues?</a></font></strong></em><br /><span style="color:rgb(0, 0, 0)">&nbsp; &nbsp; &nbsp;</span><em style="color:rgb(0, 0, 0)"><strong><font color="#24678d"><a href="what-is-sar.html">What is SAR?&nbsp;</a></font></strong></em><br /><strong style="color:rgb(0, 0, 0)"><em><font color="#0376be">&nbsp; &nbsp; &nbsp;<a href="operating-modes.html">What is meant by the term "operating mode" of an MR scanner?&nbsp;</a></font></em></strong><span style="color:rgb(0, 0, 0)">&nbsp;</span>&#8203;</div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div style="text-align:skip_to_justify;"><div style="height: 10px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-normal" href="sar-limits.html" >
+<span class="wsite-button-inner">← &nbsp;Previous Question</span>
+</a>
+<div style="height: 10px; overflow: hidden;"></div></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div style="text-align:right;"><div style="height: 10px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-normal" href="operating-modes.html" >
+<span class="wsite-button-inner">Next Question &nbsp;→</span>
+</a>
+<div style="height: 10px; overflow: hidden;"></div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div style="text-align:center;"><div style="height: 10px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-highlight" href="index.html" >
+<span class="wsite-button-inner">↑&nbsp;Complete List of Questions ↑</span>
+</a>
+<div style="height: 10px; overflow: hidden;"></div></div>
+</div></div>

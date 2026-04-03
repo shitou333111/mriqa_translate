@@ -1,0 +1,2713 @@
+<div id="content"><div id="wsite-content" class="wsite-elements wsite-not-footer">
+	<div><div id="299925795121526226" align="left" style="width: 100%; overflow-y: hidden;" class="wcustomhtml"><!--THIS IS THE MASTER HEADER SECTION FOR QUIZZES ON EACH BIG TAB-->
+<html>
+<head><script src="/gdpr/gdprscript.js?buildTime=1774025472"></script>
+<title>Magnets & Scanners Self Assessment</title>
+<meta name="keywords" content="radiology physics, review questions, MRI physics">
+<meta name="description" content="Collection of review quiz questions from MRIquestions.com">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="/mr_styles.css">
+<style>
+.explan {
+	display: none;
+	font-style: italic;
+	margin-top: 2px;
+	margin-bottom: 6px;
+}
+</style>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-52206512-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+<script>
+function showAnswer(q_string) {
+	var button = document.getElementById('show_'+q_string);
+	var shown = button.value == "Hide Answer";
+	if(!shown) {
+		document.getElementById('a_'+q_string).style.display = "block";
+		
+		document.getElementById('correct_'+q_string).style.fontWeight = "bold";
+		if(document.getElementById('c_'+q_string).checked) {
+			document.getElementById('correct_'+q_string).style.color = "Green";
+		} else {
+			document.getElementById('correct_'+q_string).style.color = "Red";
+		}
+		
+		button.value = "Hide Answer";
+	} else {
+		document.getElementById('a_'+q_string).style.display = "none";
+		button.value = "Show Answer";
+	}
+}
+
+function showAllAnswers(topic) {
+	var button = document.getElementById('show_all_'+topic);
+	var shown = button.value == "Hide All Answers for Section";
+	
+	var i = 0;
+	var correct = 0;
+	var ans_el;
+	while((ans_el=document.getElementById('a_'+topic+'_'+i)) != null) {
+		if(document.getElementById('c_'+topic+'_'+i).checked) {
+			correct++;
+		}
+		if(!shown) {
+			ans_el.style.display = "block";
+			document.getElementById('correct_'+topic+'_'+i).style.fontWeight = "bold";
+			if(document.getElementById('c_'+topic+'_'+i).checked) {
+				document.getElementById('correct_'+topic+'_'+i).style.color = "Green";
+			} else {
+				document.getElementById('correct_'+topic+'_'+i).style.color = "Red";
+			}
+		} else {
+			ans_el.style.display = "none";
+		}
+		i++;
+	}
+	
+	var scoretext = document.getElementById('scoretxt_'+topic);
+	scoretext.innerHTML = 'You answered '+correct+'/'+i+' correct, for a score of '+Math.round(correct/i*100)+'%';
+	
+	if(!shown) {
+		button.value = "Hide All Answers for Section";
+	} else {
+		button.value = "Show All Answers for Section";
+	}
+}
+
+function scoreAnswers(topic) {
+	var button = document.getElementById('score_'+topic);
+	
+	var i = 0;
+	var correct = 0;
+	var ans_el;
+	while((ans_el=document.getElementById('a_'+topic+'_'+i)) != null) {
+		if(document.getElementById('c_'+topic+'_'+i).checked) {
+			correct++;
+		}
+		i++;
+	}
+	
+	var scoretext = document.getElementById('scoretxt_'+topic);
+	scoretext.innerHTML = 'You answered '+correct+'/'+i+' correct, for a score of '+Math.round(correct/i*100)+'%';
+}
+
+function changeMode(button_value) {
+	if(button_value != 0) {
+		window.location = "/review/mri_b.html?mode="+button_value;
+	}
+}
+</script>
+<style type="text/css">
+.button_unchecked {
+	border: 2px outset #3498db;
+	background: #3498db;
+	background-image: -webkit-linear-gradient(top, #3498db, #2980b9);
+	background-image: -moz-linear-gradient(top, #3498db, #2980b9);
+	background-image: -ms-linear-gradient(top, #3498db, #2980b9);
+	background-image: -o-linear-gradient(top, #3498db, #2980b9);
+	background-image: linear-gradient(to bottom, #3498db, #2980b9);
+	padding: 4px;
+	
+	font-size: 120%;
+	font-weight: bold;
+}
+.button_checked {
+	border: 2px inset #3498db;
+	background: #3498db;
+	background-image: -webkit-linear-gradient(top, #3498db, #2980b9);
+	background-image: -moz-linear-gradient(top, #3498db, #2980b9);
+	background-image: -ms-linear-gradient(top, #3498db, #2980b9);
+	background-image: -o-linear-gradient(top, #3498db, #2980b9);
+	background-image: linear-gradient(to bottom, #3498db, #2980b9);
+	padding: 4px;
+	
+	font-size: 120%;
+	font-weight: bold;
+}
+</style>
+</head>
+
+<!-- END OF MASTER HEADER -->
+
+
+
+
+<!--SECOND SECTION: Lists Subsections for Questions below-->
+<body style="background-color:white">
+<div class="main_div">
+<h1 style="color:black";><a name="top"></a>Magnets & Scanners Quiz</h1>
+<div style="font-size: 140%; font-family: sans-serif">
+<ul>
+	<li><a href="#0">Basic Electromagnetism</a></li>
+	<li><a href="#1">MR Magnets</a></li>
+	<li><a href="#2">Gradients</a></li>
+	<li><a href="#3">RF and Coils</a></li>
+	<li><a href="#4">Site Planning</a></li>
+	
+</ul>
+
+<hr style="1px solid black">
+</div>
+
+
+
+<!-- THIRD Part CREATES TITLE OF QUIZ SUBSECTION -->
+		<h1 style="color:black";><a name="0"></a>Basic Electromagnetism</h1>
+		
+		
+<!--END of subsection NAME and back to top link-->
+
+
+<!-- START OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+<!--This is question 0 of  Section 1, so note that the value 1_0 must be placed in 9 locations. The second question in this section is denoted q1_1.  The first question of section 2 is denoted q2_0.  Note that the first <ol> should be left off of subsequent questions or indenting will be off. Also a final </div> is needed at the end of each section-->
+
+
+<ol><li style="margin-top: 8px">When the current flowing through a wire reverses direction, the magnetic field around the wire<ol type="a" id="q_1_0">
+
+<li ><input type=radio name="c_1_0" > Does not change</li>
+		
+<li ><input type=radio name="c_1_0" > Increases</li>
+		
+<li ><input type=radio name="c_1_0" > Disappears</li>
+
+<li id="correct_1_0"><input type=radio name="c_1_0" id="c_1_0"> Reverses direction </li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_1_0" onclick="showAnswer('1_0')" value="Show Answer"></p>
+				
+<p class="explan" id="a_1_0">Ampère’s Law states that a current (<i>i</i>) in a wire induces a magnetic field (<b>B</b>) around the wire. if the direction of current flow reverses, the direction of the field does also, so d) is correct. The magnitude of the field depends on the magnitude of the current, so b) and c) are false. <a href="/what-causes-magnetism.html" target="_blank">Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+<!-- START OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+<!--This is question 0 of  Section 1, so note that the value 1_0 must be placed in 9 locations. The second question in this section is denoted q1_1.  The first question of section 2 is denoted q2_0.  Note that the first <ol> should be left off of subsequent questions or indenting will be off. Also a final </div> is needed at the end of each section-->
+
+
+<li style="margin-top: 8px">The bulk magnetic properties of matter derive primarily from<ol type="a" id="q_1_1">
+
+<li ><input type=radio name="c_1_1" > Protons</li>
+		
+<li ><input type=radio name="c_1_1" > Neutrons</li>
+
+<li id="correct_1_1"><input type=radio name="c_1_1" id="c_1_1"> Electrons </li>
+		
+<li ><input type=radio name="c_1_1" > Whole nuclei</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_1_1" onclick="showAnswer('1_1')" value="Show Answer"></p>
+				
+<p class="explan" id="a_1_1">The combination of intrinsic electron spin and electron orbital angular momentum is primarily responsible for the bulk magnetic properties of matter. Protons, neutrons, and whole nuclei possess spin but the size of the magnetic effect is relatively small and limited to juxta-nuclear region of the atom only.  <a href="/what-causes-magnetism.html" target="_blank">Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+<li style="margin-top: 8px">If the current in a wire doubles, the induced magnetic field<ol type="a" id="q_1_2">
+<li id="correct_1_2"><input type=radio name="c_1_2" id="c_1_2"> Doubles </li>
+
+<li ><input type=radio name="c_1_2" > Quadruples</li>
+
+		
+<li ><input type=radio name="c_1_2" > Remains the same</li>
+		
+<li ><input type=radio name="c_1_2" > Is reduced by half</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_1_2" onclick="showAnswer('1_2')" value="Show Answer"></p>
+				
+<p class="explan" id="a_1_2">Ampère’s Law states that a current (<i>i</i>) in a wire induces a magnetic field (<b>B</b>) around the wire proportional to that current. If the current doubles, the magnitude of <b>B</b> also doubles. <a href="/what-causes-magnetism.html" target="_blank">Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+
+
+<li style="margin-top: 8px">The direction of magnetic field lines surrounding a wire can be determined using<ol type="a" id="q_1_3">
+
+<li id="correct_1_3"><input type=radio name="c_1_3" id="c_1_3"> The right-hand rule </li>
+
+<li ><input type=radio name="c_1_3" > The left-hand rule</li>
+		
+<li ><input type=radio name="c_1_3" > Faraday's Law</li>
+		
+<li ><input type=radio name="c_1_3" > Lenz' Law</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_1_3" onclick="showAnswer('1_3')" value="Show Answer"></p>
+				
+<p class="explan" id="a_1_3">Fleming developed the right hand rule in which if you grasp a wire carrying current with the right hand and point your thumb in the direction of the current, your fingers will curl around the wire in the direction of the induced magnetic field. <a href="/what-causes-magnetism.html" target="_blank">Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+<li style="margin-top: 8px">The voltage induced across a stationary conductor in an external static magnetic field<ol type="a" id="q_1_4">
+
+<li ><input type=radio name="c_1_4" > Depends on the angle of the conductor with the magnetic field</li>
+		
+<li ><input type=radio name="c_1_4" > Increases with time</li>
+
+<li id="correct_1_4"><input type=radio name="c_1_4" id="c_1_4"> Is zero </li>
+		
+<li ><input type=radio name="c_1_4" > Depends on the strength of the magnetic field</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_1_4" onclick="showAnswer('1_4')" value="Show Answer"></p>
+				
+<p class="explan" id="a_1_4">This is an example of the Faraday-Lenz Law, where the induced voltage is directly proportional to the rate of change of the magnetic field (<i>dB/dt</i>). In this case both the conductor and magnetic field are static, so <i>dB/dt = 0</i> an the induced voltage is zero. <a href="what-causes-magnetism.html" target="_blank">Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+
+
+<li style="margin-top: 8px">Concerning the relationship between electricity and magnetism, which of the following statements is false?<ol type="a" id="q_1_5">
+
+<li ><input type=radio name="c_1_5" > A constant current in a wire induces a constant magnetic field around the wire.</li>
+		
+<li ><input type=radio name="c_1_5" > A changing current in a wire induces a changing magnetic field around the wire.</li>
+
+<li id="correct_1_5"><input type=radio name="c_1_5" id="c_1_5"> A constant magnetic field induces voltage in a nearby stationary wire.</li>
+		
+<li ><input type=radio name="c_1_5" > A changing magnetic field induces voltage in a nearby wire.</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_1_5" onclick="showAnswer('1_5')" value="Show Answer"></p>
+				
+<p class="explan" id="a_1_5">Ampère’s Law states that a current (i) in a wire induces a magnetic field (B) around the wire. If the current is constant, the magnetic field is constant, but if the current fluctuates, so will the magnetic field. Thus (a) and (b) are true.
+
+The Faraday-Lenz Law states that a changing magnetic field can induce an electric potential (voltage) in a nearby wire. The magnitude of this voltage (<i>V</i>) is proportional to the rate of change of the magnetic field (<i>dB/dt</i>). Thus (d) is true. A constant magnetic field does not change with time (<i>dB/dt = 0</i>) and thus will not induce a voltage in a nearby wire. Hence (c) is false.  
+
+<a href="/what-causes-magnetism.html" target="_blank">Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+
+<li style="margin-top: 8px">Which question about the tesla (T) is correct?<ol type="a" id="q_1_6">
+
+
+<li ><input type=radio name="c_1_6" > It is the official unit for magnetic induction field strength in the cgs system.</li>
+		
+<li ><input type=radio name="c_1_6" > 1 tesla = 1,000 gauss (G)</li>
+		
+<li ><input type=radio name="c_1_6" > 1 G = 1 mT</li>
+
+<li id="correct_1_6"><input type=radio name="c_1_6" id="c_1_6"> It is one of the coolest cars on the road</li>
+
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_1_6" onclick="showAnswer('1_6')" value="Show Answer"></p>
+				
+<p class="explan" id="a_1_6">The tesla is the unit for magnetic induction field strength in the International System of Units (SI), formerly known as the mks (meter-kilogram-second) system. Gauss is the equivalent unit in the cgs (centimeter-gram-second) system, so a) is false. 1 tesla = 10,000 G, and 1 G = 0.1 mT, so both b) and c) are false. This leaves option d) as the correct answer, which everyone knows anyway! <a href="/what-is-a-tesla.html" target="_blank">Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+
+<li style="margin-top: 8px">Concerning magnetic field strengths, which statement is true?<ol type="a" id="q_1_7">
+
+<li id="correct_1_7"><input type=radio name="c_1_7" id="c_1_7"> The earth's magnetic field is about 0.5 G. </li>
+
+<li ><input type=radio name="c_1_7" > A junkyard electromagnet that picks up cars is much stronger than the main field of most MR scanners.</li>
+		
+<li ><input type=radio name="c_1_7" > Research MR scanners for humans now exist with field strengths exceeding 20 T.</li>
+		
+<li ><input type=radio name="c_1_7" > Higher field strength scanners have wider bores than lower field strength scanners to accommodate the extra flux lines</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_1_7" onclick="showAnswer('1_7')" value="Show Answer"></p>
+				
+<p class="explan" id="a_1_7">The earth’s magnetic field at the equator is about 0.5 G, so a) is the correct answer. Junkyard electromagnets generally have field strengths of about 1T, limited by the flux density of steel, so they are much weaker than most MR scanners, and thus b) is false. The largest current human scanners are 11.7T, so c) is false. Higher field strength scanners have smaller bores, not larger ones, so d) is false. <a href="/how-strong-is30t.html" target="_blank">Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+
+<li style="margin-top: 8px">Which of the following materials is paramagnetic?<ol type="a" id="q_1_8">
+
+		
+<li ><input type=radio name="c_1_8" > Water</li>
+		
+<li ><input type=radio name="c_1_8" > Fat</li>
+
+<li ><input type=radio name="c_1_8" > Bone</li>
+
+<li id="correct_1_8"><input type=radio name="c_1_8" id="c_1_8"> Air </li>
+
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_1_8" onclick="showAnswer('1_8')" value="Show Answer"></p>
+				
+<p class="explan" id="a_1_8">Most biological tissues (including water, fat, and bone) are weakly diamagnetic. Molecular O<sub>2</sub> is paramagnetic, overwhelming the weak diamagnetism of the other components of air N<sub>2</sub> and CO<sub>2</sub>. <a href="/what-is-susceptibility.html" target="_blank">Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+<li style="margin-top: 8px">A material that is weakly repulsed by a magnetic field is known as<ol type="a" id="q_1_9">
+
+<li ><input type=radio name="c_1_9" > Paramagnetic</li>
+
+<li id="correct_1_9"><input type=radio name="c_1_9" id="c_1_9"> Diamagnetic </li>
+		
+<li ><input type=radio name="c_1_9" > Superparamagnetic</li>
+		
+<li ><input type=radio name="c_1_9" > Ferromagnetic</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_1_9" onclick="showAnswer('1_9')" value="Show Answer"></p>
+				
+<p class="explan" id="a_1_9">Diamagnetic materials generate an internal polarization (<i>J</i>) that opposes the externally applied field, so b) is correct. The polarization of the other classes of materials is in the direction of the field and are attracted by the field. <a href="/what-is-susceptibility.html" target="_blank">Link to Q&A discussion</a> 
+</p>
+
+
+<!-- START OF 11-20 CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+<!--   -->
+
+
+<li style="margin-top: 8px">Susceptibility (<i>χ</i>) is negative for materials that are<ol type="a" id="q_1_10">
+
+<li ><input type=radio name="c_1_10" > Paramagnetic</li>
+		
+<li ><input type=radio name="c_1_10" > Superparamagnetic</li>
+
+<li id="correct_1_10"><input type=radio name="c_1_10" id="c_1_10"> Diamagnetic </li>
+		
+<li ><input type=radio name="c_1_10" > Ferromagnetic</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_1_10" onclick="showAnswer('1_10')" value="Show Answer"></p>
+				
+<p class="explan" id="a_1_10">Susceptibility (<i>χ</i>) is negative when the internal polarization (<i>J</i>) points opposite to the main magnetic field (<i>B</i>). By definition, only diamagnetic materials have negative susceptibilities. <a href="/what-is-susceptibility.html" target="_blank">Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+<!-- START OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+<!--This is question 0 of  Section 1, so note that the value 1_0 must be placed in 9 locations. The second question in this section is denoted q1_1.  The first question of section 2 is denoted q2_0.  Note that the first <ol> should be left off of subsequent questions or indenting will be off. Also a final </div> is needed at the end of each section-->
+
+
+<li style="margin-top: 8px">Ferromagnetic materials form magnetic ________ when arrays of electron spins become linked via quantum exchange interaction.<ol type="a" id="q_1_11">
+
+<li ><input type=radio name="c_1_11" > Flux lines</li>
+		
+<li ><input type=radio name="c_1_11" > Poles</li>
+		
+<li ><input type=radio name="c_1_11" > Vectors</li>
+
+<li id="correct_1_11"><input type=radio name="c_1_11" id="c_1_11"> Domains </li>
+
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_1_11" onclick="showAnswer('1_11')" value="Show Answer"></p>
+				
+<p class="explan" id="a_1_11">Exchange interaction is a quantum effect in which unpaired electrons link together to form individual magnetic domains which behave as individual small "magnets". <a href="/what-is-ferromagnetism.html" target="_blank">Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+<li style="margin-top: 8px">Comparing superparamagnetic and ferromagnetic materials, which statement is false?<ol type="a" id="q_1_12">
+
+<li ><input type=radio name="c_1_12" > Ferromagnetism is usually more powerful than superparamagnetism.</li>
+		
+<li ><input type=radio name="c_1_12" > Ferromagnetism persists when the magnetizing field is removed.</li>
+
+<li id="correct_1_12"><input type=radio name="c_1_12" id="c_1_12"> Superparamagnetism persists once the external field is removed. </li>
+		
+<li ><input type=radio name="c_1_12" > Superparamagnetism can be thought of as a single-domain particle.</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_1_12" onclick="showAnswer('1_12')" value="Show Answer"></p>
+				
+<p class="explan" id="a_1_12">Ferromagnetic materials retain memory (remenance) of prior magnetization, while superparamagnetic particles are single domain but whose magnetization disappears once the the magnetizing field is removed. <a href="/what-is-superparamagnetism.html" target="_blank">Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+
+<!--SCORING SECTION Needs to go at end of each subsection-->
+</ol><p><input type=button id="show_all_1" onclick="showAllAnswers('1')" value="Show All Answers for Section"><span style="font-weight: bold" id="scoretxt_1"></span></p>
+<p><a href="#top">Back to top of page</a></p></div>
+<!--END OF SCORING SECTION-->
+
+
+<!--SECTION 2 STARTS HERE ####################################################-->
+
+
+<!-- THIRD Part CREATES TITLE OF QUIZ SUBSECTION -->
+<hr style="1px solid black">
+
+		<h1 style="color:black";><a name="1"></a>MR Magnets</h1>
+		
+		
+<!--END of subsection NAME and back to top link-->
+
+
+<!-- START OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+<!--This is question 0 of  Section 1, so note that the value 1_0 must be placed in 9 locations. The second question in this section is denoted q_1_1.  The first question of section 2 is denoted q_2_0.  Note that the first <ol> should be left off of subsequent questions or indenting will be off. Also a final </div> is needed at the end of each section-->
+
+
+<ol><li style="margin-top: 8px">The most common design configuration for clinical MR scanners is<ol type="a" id="q_2_0">
+
+<li ><input type=radio name="c_2_0" > Open bore superconducting</li>
+
+<li id="correct_2_0"><input type=radio name="c_2_0" id="c_2_0"> Closed bore superconducting</li>
+		
+
+		
+<li ><input type=radio name="c_2_0" > Open bore permanent</li>
+
+<li ><input type=radio name="c_2_0" > Dipolar electromagnet</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_2_0" onclick="showAnswer('2_0')" value="Show Answer"></p>
+				
+<p class="explan" id="a_2_0">Over 90% of MR scanners sold today are of the closed bore (cylindrical) superconducting type. The second most common is open bore permanent.
+<a href="/types-of-magnets.html" target="_blank">Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+<!-- START OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+<!--This is question 0 of  Section 1, so note that the value 1_0 must be placed in 9 locations. The second question in this section is denoted q_1_1.  The first question of section 2 is denoted q2_0.  Note that the first <ol> should be left off of subsequent questions or indenting will be off. Also a final </div> is needed at the end of each section-->
+
+
+<li style="margin-top: 8px">The highest field strength permitted for adults in routine clinical practice by the United States Food and Drug Administration (FDA) is
+<ol type="a" id="q_2_1">
+
+<li ><input type=radio name="c_2_1" > 3.0 tesla</li>
+		
+<li ><input type=radio name="c_2_1" > 7.0 tesla</li>
+
+<li id="correct_2_1"><input type=radio name="c_2_1" id="c_2_1"> 8.0 tesla</li>
+		
+<li ><input type=radio name="c_2_1" > 11.7 tesla</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_2_1" onclick="showAnswer('2_1')" value="Show Answer"></p>
+				
+<p class="explan" id="a_2_1">The current FDA limit for clinical MR scanners is 8.0 T for adults and children older than 1 month; it is 4.0 T for children younger than 1 month. The highest field strength clinical scanner commercially manufactured are 7.0 T, although human-sized research scanners of up to 11.7 T exist. <a href="/brands-of-scanners.html" target="_blank">Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+<li style="margin-top: 8px">The first company to produce a clinical whole-body MRI scanner for commercial use was
+<ol type="a" id="q_2_2">
+
+<li ><input type=radio name="c_2_2" > GE</li>
+
+<li id="correct_2_2"><input type=radio name="c_2_2" id="c_2_2"> Fonar</li>
+		
+<li ><input type=radio name="c_2_2" > Siemens</li>
+		
+<li ><input type=radio name="c_2_2" > Technicare</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_2_2" onclick="showAnswer('2_2')" value="Show Answer"></p>
+				
+<p class="explan" id="a_2_2">Raymond Damadian formed the first company FONAR to manufacture MR scanners for clinical use in 1982.
+<a href="/who-invented-mri.html" target="_blank">Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+
+
+<li style="margin-top: 8px">The direction of the main magnetic field (B<sub>o</sub>) in a cylindrical closed bore scanner is<ol type="a" id="q_2_3">
+
+<li id="correct_2_3"><input type=radio name="c_2_3" id="c_2_3"> Longitudinal (along the main axis) of the cylinder
+</li>
+
+<li ><input type=radio name="c_2_3" > Horizontal (cross-wise to the cylinder and parallel to the floor)
+</li>
+		
+<li ><input type=radio name="c_2_3" > Vertical (cross-wise to the cylinder and perpendicular to the floor)</li>
+		
+<li ><input type=radio name="c_2_3" > Can be at any angle depending on which gradients are turned on</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_2_3" onclick="showAnswer('2_3')" value="Show Answer"></p>
+				
+<p class="explan" id="a_2_3">The main magnetic field of cylindrical scanners is along the long axis of the cylinder (solenoid). Answer d) is patently false as gradients do not alter the direction of the (B<sub>o</sub>) field.
+<a href="/which-way-does-field-point.html" target="_blank">Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+<li style="margin-top: 8px">Which of the following is <u>not</u> an advantage of low- and intermediate-field (< 1.0 T) MR scanners?
+<ol type="a" id="q_2_4">
+
+<li ><input type=radio name="c_2_4" > Lower price</li>
+		
+<li ><input type=radio name="c_2_4" > Lower fringe field</li>
+
+<li id="correct_2_4"><input type=radio name="c_2_4" id="c_2_4"> Improved detection of gadolinium enhancement</li>
+		
+<li ><input type=radio name="c_2_4" > Lower energy deposition in tissues</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_2_4" onclick="showAnswer('2_4')" value="Show Answer"></p>
+				
+<p class="explan" id="a_2_4">Gadolinium enhancement relative to tissues is reduced at lower fields, a disadvantage.
+<a href="/advantages-to-low-field.html" target="_blank">Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+
+
+<li style="margin-top: 8px">Which of the following is <u>not</u> an advantage of high-field (≥ 1.0 T) MR scanners?
+<ol type="a" id="q_2_5">
+
+<li ><input type=radio name="c_2_5" > Higher signal-to-noise</li>
+		
+<li ><input type=radio name="c_2_5" > Better detection of calcifications and hemorrhage</li>
+
+<li id="correct_2_5"><input type=radio name="c_2_5" id="c_2_5"> Smaller artifacts around metallic implants </li>
+		
+<li ><input type=radio name="c_2_5" > Better magnetic field homogeneity</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_2_5" onclick="showAnswer('2_5')" value="Show Answer"></p>
+				
+<p class="explan" id="a_2_5">Susceptibility artifacts around metal objects are worse at high fields than at lower fields. 
+<a href="/advantages-to-low-field.html" target="_blank">Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+
+<li style="margin-top: 8px">Quoted specifications for four different magnets are given below. Which one has the best homogeneity?<ol type="a" id="q_2_6">
+
+<li id="correct_2_6"><input type=radio name="c_2_6" id="c_2_6"> <1 ppm over a 40 cm DSV</li>
+
+<li ><input type=radio name="c_2_6" > <1 ppm over a 20 cm DSV</li>
+		
+<li ><input type=radio name="c_2_6" > >1 ppm over a 40 cm DSV </li>
+		
+<li ><input type=radio name="c_2_6" > >1 ppm over a 20 cm DSV </li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_2_6" onclick="showAnswer('2_6')" value="Show Answer"></p>
+				
+<p class="explan" id="a_2_6">Homogeneity specifications are typically quoted as magnetic field deviation in parts per million (ppm) over a defined spherical volume (DSV). So a magnet with the smallest ppm over the largest DSV would be the most homogeneous — answer a). <a href="/what-is-homogeneity.html " target="_blank">Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+
+<li style="margin-top: 8px">Poor magnetic field homogeneity may affect image quality in the following ways
+ <ol type="a" id="q_2_7">
+
+
+<li ><input type=radio name="c_2_7" > Shading artifacts</li>
+		
+<li ><input type=radio name="c_2_7" > Spatial distortion</li>
+		
+<li ><input type=radio name="c_2_7" > Poor fat suppression</li>
+<li ><input type=radio name="c_2_7" > Only a) and b)</li>
+
+<li id="correct_2_7"><input type=radio name="c_2_7" id="c_2_7"> All of the above </li>
+
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_2_7" onclick="showAnswer('2_7')" value="Show Answer"></p>
+				
+<p class="explan" id="a_2_7">Poor magnet homogeneity may affect multiple aspects of image quality, including all of the above plus blurring, intensity loss, curved slice profiles, and banding artifacts.
+<a href="/why-homogeneity.html" target="_blank">Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+
+<li style="margin-top: 8px">Which of the following statements about passive shimming is true?
+<ol type="a" id="q_2_8">
+
+		
+<li ><input type=radio name="c_2_8" > Its primary purpose is to correct for field distortions produced by a patient's body.
+</li>
+		
+<li ><input type=radio name="c_2_8" > Ferromagnetic materials cannot be used for passive shimming.</li>
+<li id="correct_2_8"><input type=radio name="c_2_8" id="c_2_8"> Passive shimming is affected by room temperature.</li>
+
+<li ><input type=radio name="c_2_8" > Once the field is calibrated and magnetic homogeneity achieved, the passive shim materials can be removed.  
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_2_8" onclick="showAnswer('2_8')" value="Show Answer"></p>
+				
+<p class="explan" id="a_2_8">Passive shimming involves the placement of <u>ferromagnetic</u> elements (typically plates or rods to correct for static field inhomogeneities in an <u>empty</u> magnet, not one containing a patient. Thus a) and b) are both false. The shim elements are made of metal and hence the quality of shimming depends upon scanner and room temperature, so answer c) is true.  The shim elements are not removed, but remain in the magnet after shimming is completed, so d) is false. <a href="/passive-shimming.html" target="_blank">Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+<li style="margin-top: 8px">Which of the following statements about superconductivity is correct?
+<ol type="a" id="q_2_9">
+
+<li ><input type=radio name="c_2_9" > All elements can become superconducting if the temperature is low enough.</li>
+
+<li ><input type=radio name="c_2_9" > Only metals can become superconductors.</li>
+
+<li id="correct_2_9"><input type=radio name="c_2_9" id="c_2_9"> The magnetic field is zero inside the center of a superconducting wire. </li>
+		
+
+		
+<li ><input type=radio name="c_2_9" > The resistance of a wire linearly decreases toward zero as the temperature falls below the transition temperature (T<sub>C</sub>). 
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_2_9" onclick="showAnswer('2_9')" value="Show Answer"></p>
+				
+<p class="explan" id="a_2_9">Only about half of the known elements can become superconductive at low temperatures, so a) is incorrect. Most of these are metals or metal alloys, but some non-metal ceramics may also possess superconductivity. The onset of superconductivity is immediate, with resistance dropping to zero once the transition temperature is crossed; thus answer d) is false. The correct answer is c), which describes the <b>Meissner effect</b>, the complete expulsion of all magnetic fields from the interior of the superconductor with creation of a state of perfect diamagnetism. 
+<a href="/superconductivity.html " target="_blank">Link to Q&A discussion</a> 
+</p>
+
+
+<!-- START OF 11-20 CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+<!--   -->
+
+
+<li style="margin-top: 8px"> The superconducting component in the main windings of nearly all clinical MR scanners is an alloy of
+ <ol type="a" id="q_2_10">
+
+<li id="correct_2_10"><input type=radio name="c_2_10" id="c_2_10"> Niobium (Nb) and Titanium (Ti) </li>
+
+
+<li ><input type=radio name="c_2_10" > Niobium (Nb) and Copper (Cu)</li>
+		
+<li ><input type=radio name="c_2_10" > Nickel (Ni) and Titanium (Ti)</li>
+
+		
+<li ><input type=radio name="c_2_10" > Nickel (Ni) and Copper (Cu)</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_2_10" onclick="showAnswer('2_10')" value="Show Answer"></p>
+				
+<p class="explan" id="a_2_10">The main windings of nearly all clinical superconducting scanners use Niobium (Nb) - Titanium (Ti) alloy microfilaments embedded in a copper core. The copper core is not superconducting but serves to support the microfilaments and serve as a current shunt in the event of a quench.
+<a href="/superconductive-design.html" target="_blank">Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+<!-- START OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+<!--This is question 0 of  Section 1, so note that the value 1_0 must be placed in 9 locations. The second question in this section is denoted q_1_1.  The first question of section 2 is denoted q2_0.  Note that the first <ol> should be left off of subsequent questions or indenting will be off. Also a final </div> is needed at the end of each section-->
+
+
+<li style="margin-top: 8px">The cryostat of a typical superconducting MR scanner contains all of the following except
+<ol type="a" id="q_2_11">
+
+<li ><input type=radio name="c_2_11" > Liquid helium</li>
+
+<li id="correct_2_11"><input type=radio name="c_2_11" id="c_2_11"> Liquid nitrogen </li>
+
+		
+<li ><input type=radio name="c_2_11" > Main magnet windings</li>
+		
+<li ><input type=radio name="c_2_11" >superconducting shim coils</li>
+
+
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_2_11" onclick="showAnswer('2_11')" value="Show Answer"></p>
+				
+<p class="explan" id="a_2_11">Although common in the past, modern refrigeration systems have obviated the need for liquid nitrogen, so only liquid helium is present within the cryostat of today's MR scanners. 
+<a href="/liquid-helium-use.html " target="_blank">Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+<li style="margin-top: 8px">The temperature of liquid helium is approximately
+<ol type="a" id="q_2_12">
+<li id="correct_2_12"><input type=radio name="c_2_12" id="c_2_12"> 4 °K
+</li>
+
+<li ><input type=radio name="c_2_12" > 0 °K </li>
+		
+<li ><input type=radio name="c_2_12" > −4 °K </li>
+
+		
+<li ><input type=radio name="c_2_12" > −400 °C </li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_2_12" onclick="showAnswer('2_12')" value="Show Answer"></p>
+				
+<p class="explan" id="a_2_12">The temperature of liquid helium used to cool the magnet main windings is just a few degrees above absolute zero, about 4 °K. This is several degrees less than the transition temperature needed to maintain superconductivity in the NbTi alloy wires. No temperature equal or below absolute zero (0 °K or −273.15 °C) is possible, so answers b), c) and d) are all false.   
+ <a href="/superconductive-design.html" target="_blank">Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+
+
+<li style="margin-top: 8px">MRI facilities often display a sign on the door that says: "Warning! The magnet is always on." This sign would not strictly apply to a 
+
+ <ol type="a" id="q_2_13">
+<li id="correct_2_13"><input type=radio name="c_2_13" id="c_2_13"> Resistive magnet scanner </li>
+
+<li ><input type=radio name="c_2_13" > Permanent magnet scanner</li>
+		
+
+<li ><input type=radio name="c_2_13" > Superconducting magnet scanner</li>
+		
+<li ><input type=radio name="c_2_13" > The sign is applicable to all types of scanners, always.</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_2_13" onclick="showAnswer('2_13')" value="Show Answer"></p>
+				
+<p class="explan" id="a_2_13">Only FONAR still make still makes a resistive (electromagnet-type) MR scanner for human use, which can be turned off when not in use.  All permanent magnet and superconductive scanners remain at full field strength at all times, however, so the sign applies to <u>nearly</u> all MR facilities. <a href="/is-field-ever-turned-off.html" target="_blank">Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+<li style="margin-top: 8px">Pushing the "big red button" near the door to a room housing an MRI scanner
+<ol type="a" id="q_2_14">
+
+<li ><input type=radio name="c_2_14" > Immediately opens the door even if scanning is in progress</li>
+<li id="correct_2_14"><input type=radio name="c_2_14" id="c_2_14"> Initiates a controlled quench of the magnetic field </li>
+
+<li ><input type=radio name="c_2_14" > Turns off all electric power to the scanner and room</li>
+
+		
+<li ><input type=radio name="c_2_14" > Calls emergency providers (911) and sounds an alarm</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_2_14" onclick="showAnswer('2_14')" value="Show Answer"></p>
+				
+<p class="explan" id="a_2_14">The "big red button" is often labeled "Magnet Stop" or "Emergency Run Down" and when pressed, initiates a controlled quench of the magnetic field. It should be used only in a life-threatening emergency, such as a patient pinned in the scanner by a metal object. 
+<a href="/emergency-stop-button.html" target="_blank">Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+
+
+<li style="margin-top: 8px">During a magnetic quench, why should patients and employees be evacuated from the scan room?
+<ol type="a" id="q_2_15">
+
+<li ><input type=radio name="c_2_15" > Even in small quantities gaseous helium causes burning and irritation to the eyes.
+</li>
+
+<li id="correct_2_15"><input type=radio name="c_2_15" id="c_2_15"> Asphyxiation may occur.</li>
+		
+<li ><input type=radio name="c_2_15" > Severe frostbite would be likely.
+</li>
+		
+<li ><input type=radio name="c_2_15" >The released helium may catch fire or explode.
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_2_15" onclick="showAnswer('2_15')" value="Show Answer"></p>
+				
+<p class="explan" id="a_2_15">Helium is odorless and colorless, but can potentially fill the scanner room resulting in asphyxiation. Fortunately, quench pipes typically vent nearly all released helium out of the room so death from a quench has never occurred in a medical setting to my knowledge. Direct contact with liquid helium would cause burns, but a mist of helium gas would not likely cause eye injury or frostbite (although this could occur in theory with high concentrations of gas in the room). <a href="/what-is-a-quench.html" target="_blank">Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+
+
+
+<!--SCORING SECTION Needs to go at end of each subsection-->
+</ol><p><input type=button id="show_all_2" onclick="showAllAnswers('2')" value="Show All Answers for Section"><span style="font-weight: bold" id="scoretxt_2"></span></p>
+<p><a href="#top">Back to top of page</a></p></div>
+<!--END OF SCORING SECTION-->
+
+
+<!-- ###############NEW QUIZ SUBSECTION ##################-->
+
+<hr style="1px solid black">
+<!-- Creates optional line above new Quiz Subsection Title ---->
+
+<h1 style="color:black";><a name="2"></a>Gradients</h1>
+
+<!-- The Section Name and its corresponding number (here 0) which has an href in the index must be changed/filled in.  Note that the first section is identified as “0” here only;  and the second section is denoted “2”, etc. 
+
+This is confusing because subsequently it is denoted as Section 1 and reference to all questions in this section begin with a 1.  However, the first question of Section 1 is called question 0, presumably to assist in scoring.
+
+Thus, the first question of Section 1 is denoted as q_1_0 and its second question is denoted q_1_1.	
+
+When a second section of Questions is added, this is called Section 2 with first and second questions denoted q_2_0 and q_2_1. 
+
+Each section has counting variables corresponding to each question. So the counting variables  are denoted c_1_0 for the Section 1/first question, while c_2_1 counts for Section 2/second question. -->
+
+<!-- FOR THE PURPOSES OF THIS DOCUMENT WE WILL CONSIDER ALL QUESTIONS TO REFER TO SECTION 3 and are numbered consecutively. THE WORD DOCUMENT CAN THEN BE PUT INTO PROPER FORM BY “SEARCH AND REPLACE 3 BY THE APPROPRIATE SECTION NUMBER”-->
+
+
+<!-- ################ SECTION M, QUIZ QUESTION  1############## -->
+
+<ol><li style="margin-top: 8px">Magnetic field gradients for imaging are typically measured in units of
+<ol type="a" id="q_3_0">
+<li id="correct_3_0"><input type=radio name="c_3_0" id="c_3_0"> Millitesla per meter (mT/m)</li>
+
+
+<li ><input type=radio name="c_3_0" > Gauss per second (G/s)
+</li>
+		
+<li ><input type=radio name="c_3_0" > Tesla (T)
+
+</li>
+
+		
+<li ><input type=radio name="c_3_0" > Tesla per meter per second (T/m-s)
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_3_0" onclick="showAnswer('3_0')" value="Show Answer"></p>
+				
+<p class="explan" id="a_3_0">A magnetic field gradient is defined as the change in magnetic field measured over a certain distance, so the only appropriate unit is answer a), millitesla per meter= [magnetic field strength]/distance. Gradient strength is also reported in Gauss/cm (G/cm).
+<a href="/what-is-a-gradient.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+
+<!-- ################ SECTION 3, QUIZ QUESTION  2############## -->
+
+<li style="margin-top: 8px">For a supine patient, enabling the <i>z</i>-gradient alone to alter the magnetic field within a patient during slice selection would create a(n)
+<ol type="a" id="q_3_1">
+
+<li id="correct_3_1"><input type=radio name="c_3_1" id="c_3_1"> Axial slice</li>
+
+
+<li ><input type=radio name="c_3_1" > Coronal slice</li>
+		
+<li ><input type=radio name="c_3_1" > Sagittal slice</li>
+
+		
+<li ><input type=radio name="c_3_1" >  Oblique slice</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_3_1" onclick="showAnswer('3_1')" value="Show Answer"></p>
+				
+<p class="explan" id="a_3_1">Applying a single gradient causes a frequency variation of protons as a function of position along the direction of the gradient. This change in frequency can be used for spatial encoding. If the gradient is played out during slice selection and again during signal readout, a slice can be selected perpendicular to the gradient directio<a href="/gradient-coils.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION 3, QUIZ QUESTION  3############## -->
+
+<li style="margin-top: 8px">What is the effect of applying the <i>x</i>- and <i>z</i>-gradients simultaneously during slice selection?
+<ol type="a" id="q_3_2">
+
+<li ><input type=radio name="c_3_2" > The image will be distorted.
+</li>
+		
+<li ><input type=radio name="c_3_2" > Significant interslice cross-talk will occur.</li>
+
+<li id="correct_3_2"><input type=radio name="c_3_2" id="c_3_2"> An oblique slice will be created.</li>
+		
+<li ><input type=radio name="c_3_2" > The scanner will display a warning that such a combination is not allowed.
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_3_2" onclick="showAnswer('3_2')" value="Show Answer"></p>
+				
+<p class="explan" id="a_3_2">Applying a single gradient during slice selection creates a slice perpendicular to the axis of the gradient. Applying two (or three) gradients simultaneously produces single (or double) oblique slices respectively.
+<a href="/gradient-coils.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION 3, QUIZ QUESTION  4############## -->
+
+<li style="margin-top: 8px">When the <i>y</i>-gradient is turned on, what happens to the direction of the main (<b>B<sub>o</sub></b>) field?
+<ol type="a" id="q_3_3">
+
+<li ><input type=radio name="c_3_3" > The <b>B<sub>o</sub></b> field now points slightly to the right.
+</li>
+		
+<li ><input type=radio name="c_3_3" > The <b>B<sub>o</sub></b> field now points slightly toward the ceiling.
+</li>
+
+		
+<li ><input type=radio name="c_3_3" >  The <b>B<sub>o</sub></b> field is reversed.
+</li>
+
+<li id="correct_3_3"><input type=radio name="c_3_3" id="c_3_3"> The <b>B<sub>o</sub></b> field remains pointing in its original (<i>z</i>)-direction.
+</li>
+
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_3_3" onclick="showAnswer('3_3')" value="Show Answer"></p>
+				
+<p class="explan" id="a_3_3">Gradients do NOT generate transverse components that rotate/tip <b>Bo</b> from side-to-side or up-and-down.  They act only to create in-plane "skewing" of the <i>z</i>-components of <b>Bo</b>.
+<a href="/gradient-coils.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+
+
+
+ 
+<!-- ################ SECTION 3, QUIZ QUESTION  5############## -->
+
+<li style="margin-top: 8px">The basic coil configuration used to generate the <i>z</i>-gradient in a cylindrical MR scanner is known as
+<ol type="a" id="q_3_4">
+<li id="correct_3_4"><input type=radio name="c_3_4" id="c_3_4"> Maxwell pair.
+</li>
+
+
+<li ><input type=radio name="c_3_4" > Double saddle.</li>
+		
+<li ><input type=radio name="c_3_4" > Golay.</li>
+
+		
+<li ><input type=radio name="c_3_4" >  Fingerprint. </li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_3_4" onclick="showAnswer('3_4')" value="Show Answer"></p>
+				
+<p class="explan" id="a_3_4"><i>Z</i>-gradients are typically produced using two looped coils carrying current in opposite directions, a configuration known as the Maxwell pair. The other coil types listed are used primarily for <i>x</i>- and <i>y</i>-gradients. 
+<a href="/how-do-z-gradients-work.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION 3, QUIZ QUESTION  6############## -->
+
+<li style="margin-top: 8px">Which of the following statements about eddy currents is false?
+<ol type="a" id="q_3_5">
+
+<li ><input type=radio name="c_3_5" > They create a wide range of image artifacts, including ghosts and blurring.
+ </li>
+		
+<li ><input type=radio name="c_3_5" > They are a manifestation of Faraday's Law of induction.
+ </li>
+
+<li id="correct_3_5"><input type=radio name="c_3_5" id="c_3_5"> They especially affect traditional spin-echo sequences with long <i>TE's</i>.
+ </li>
+		
+<li ><input type=radio name="c_3_5" > They create tissue heating.
+ </li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_3_5" onclick="showAnswer('3_5')" value="Show Answer"></p>
+				
+<p class="explan" id="a_3_5">Eddy currents are produced rapidly changing magnetic fields (especially from the switching of imaging gradients) and are thus a manifestation of Faraday's Law. They are typically seen with rapid gradient echo or echo-planar sequences using short <i>TE's</i>; hence answer c) is false. They are uniformly undesirable, creating various artifacts and tissue heating problems.  
+ <a href="/eddy-current-problems.html " target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION 3, QUIZ QUESTION  7############## -->
+
+<li style="margin-top: 8px">Concerning actively shielded gradients, which statement is true?
+ <ol type="a" id="q_3_6">
+
+<li ><input type=radio name="c_3_6" > The are the most effective way to reduce eddy currents in superconducting systems.
+ </li>
+		
+<li ><input type=radio name="c_3_6" > The are the most effective way to reduce eddy currents in superconducting systems.
+ </li>
+<li ><input type=radio name="c_3_6" >  Current in these coils runs in a direction opposite to their associated imaging gradients.
+</li>
+
+<li id="correct_3_6"><input type=radio name="c_3_6" id="c_3_6"> All of the above are true.
+</li>
+		
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_3_6" onclick="showAnswer('3_6')" value="Show Answer"></p>
+				
+<p class="explan" id="a_3_6">Active shielded gradients are nearly universally used in superconducting scanners because of their high effectiveness in reducing eddy currents in the magnet itself. They do not affect eddy currents generated in tissues, however.
+<a href="/active-shielded-gradients.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+	
+<!-- ################ SECTION 3, QUIZ QUESTION  8############## -->
+
+<li style="margin-top: 8px">Which of the following methods is not used to reduce eddy currents:
+<ol type="a" id="q_3_7">
+
+<li ><input type=radio name="c_3_7" > Actively shielded gradients.
+</li>
+		
+<li ><input type=radio name="c_3_7" > Self-shielded gradients.
+</li>
+
+<li id="correct_3_7"><input type=radio name="c_3_7" id="c_3_7"> Active shimming coils.
+</li>
+		
+<li ><input type=radio name="c_3_7" >  Pre-compensation.
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_3_7" onclick="showAnswer('3_7')" value="Show Answer"></p>
+				
+<p class="explan" id="a_3_7">The terms “Actively shielded” and “self-shielded” gradients are synonymous, and are the most effective way to reduce eddy currents. Pre-compensation distortion of waveforms is also helpful. Active shimming coils are used to make the main magnetic field more homogeneous and have nothing to do with eddy currents or their correction.
+<a href="/active-shield-confusion.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION 3, QUIZ QUESTION  9############## -->
+
+<li style="margin-top: 8px"> Typical values for peak gradient strength in a modern 1.5 T scanner are in the range of
+<ol type="a" id="q_3_8">
+
+<li ><input type=radio name="c_3_8" > 1-10 mT/m.
+</li>
+<li id="correct_3_8"><input type=radio name="c_3_8" id="c_3_8"> 20-50 mT/m.
+</li>
+		
+<li ><input type=radio name="c_3_8" > 200-400 mT/m.
+</li>
+
+		
+<li ><input type=radio name="c_3_8" >  500-1000 mT/m.
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_3_8" onclick="showAnswer('3_8')" value="Show Answer"></p>
+				
+<p class="explan" id="a_3_8"> Lower field strength permanent magnets have peak gradients in the range of 15-25 mT/m.
+<a href="/gradient-specifications.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+<!-- ################ SECTION 3, QUIZ QUESTION  10############## -->
+
+<li style="margin-top: 8px">The time for a gradient to ramp from zero to its maximum value is known as its
+<ol type="a" id="q_3_9">
+
+<li id="correct_3_9"><input type=radio name="c_3_9" id="c_3_9"> Rise time.
+</li>
+
+
+<li ><input type=radio name="c_3_9" > Gradient time.
+</li>
+		
+<li ><input type=radio name="c_3_9" > Slew rate.
+</li>
+
+		
+<li ><input type=radio name="c_3_9" >  Duty cycle.
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_3_9" onclick="showAnswer('3_9')" value="Show Answer"></p>
+				
+<p class="explan" id="a_3_9">This is the definition of rise time.
+<a href="/gradient-specifications.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+<!-- ################ SECTION 3, QUIZ QUESTION  11############## -->
+
+<li style="margin-top: 8px">The definition of gradient slew rate is
+<ol type="a" id="q_3_10">
+
+<li ><input type=radio name="c_3_10" > Peak gradient strength ÷ main field strength (<i>Bo</i>).
+</li>
+		
+<li ><input type=radio name="c_3_10" > Peak gradient strength ÷ total time the gradient is on.
+</li>
+
+<li id="correct_3_10"><input type=radio name="c_3_10" id="c_3_10"> Peak gradient strength ÷ Rise time.
+</li>
+		
+<li ><input type=radio name="c_3_10" > The number of times a gradient is turned on and off per second.
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_3_10" onclick="showAnswer('3_10')" value="Show Answer"></p>
+				
+<p class="explan" id="a_3_10">Slew rate is defined to be Peak gradient strength ÷ Rise time.
+<a href="/gradient-specifications.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+		
+
+
+
+
+
+<!-- ################ SECTION 3, QUIZ QUESTION  12############## -->
+
+<li style="margin-top: 8px">The units for slew rate are given in
+<ol type="a" id="q_3_11">
+
+<li ><input type=radio name="c_3_11" > Millitesla per meter (mT/m).
+</li>
+<li id="correct_3_11"><input type=radio name="c_3_11" id="c_3_11"> Tesla per meter per second (T/m/s).
+</li>
+		
+<li ><input type=radio name="c_3_11" > Tesla per second (T/s).
+</li>
+
+		
+<li ><input type=radio name="c_3_11" >  Milliseconds (ms). 
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_3_11" onclick="showAnswer('3_11')" value="Show Answer"></p>
+				
+<p class="explan" id="a_3_11">Peak gradient strength is typically measured in mT/m and rise time is measured in ms. Their ratio, slew rate, therefore has units T/m/s.
+<a href="/gradient-specifications.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+<!-- ################ SECTION 3, QUIZ QUESTION  13############## -->
+
+<li style="margin-top: 8px">Typical maximum slew rate values quoted for modern 1.5 T scanners are in the range of
+<ol type="a" id="q_3_12">
+
+<li ><input type=radio name="c_3_12" > 1−2 T/m/s.
+</li>
+		
+<li ><input type=radio name="c_3_12" > 10−20 T/m/s.
+</li>
+
+<li id="correct_3_12"><input type=radio name="c_3_12" id="c_3_12"> 100−200 T/m/s.
+</li>
+		
+<li ><input type=radio name="c_3_12" >  1000−2000 T/m/s.
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_3_12" onclick="showAnswer('3_12')" value="Show Answer"></p>
+				
+<p class="explan" id="a_3_12">Answer c) is correct. Slew rates much higher than this can be obtained in research scanners but are limited due to the risk of peripheral nerve stimulation by the rapidly switching gradients.
+<a href="/gradient-specifications.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION 3, QUIZ QUESTION  14############## -->
+
+<li style="margin-top: 8px">A gradient that ramps from 0 to a peak amplitude of 30 mT/m in 0.25 ms has a slew rate of
+<ol type="a" id="q_3_13">
+
+<li ><input type=radio name="c_3_13" > 30 T/m/s.
+</li>
+		
+<li ><input type=radio name="c_3_13" > 60 T/m/s.
+</li>
+
+		
+<li ><input type=radio name="c_3_13" >  90 T/m/s.
+</li>
+<li id="correct_3_13"><input type=radio name="c_3_13" id="c_3_13"> 120 T/m/s.
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_3_13" onclick="showAnswer('3_13')" value="Show Answer"></p>
+				
+<p class="explan" id="a_3_13">Slew rate = [Peak gradient strength] ÷ [Rise time] = [30 mT/m] ÷ [0.25 ms] = 120 T/m/s.
+<a href="/gradient-specifications.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION 3, QUIZ QUESTION  15############## -->
+
+<li style="margin-top: 8px">Which gradient specification is generally the most important when assessing how well an MR system is capable of performing rapid, high-resolution imaging?
+<ol type="a" id="q_3_14">
+
+
+<li ><input type=radio name="c_3_14" > Peak gradient strength.
+</li>
+<li id="correct_3_14"><input type=radio name="c_3_14" id="c_3_14"> Slew rate.
+</li>
+		
+<li ><input type=radio name="c_3_14" > Rise time.
+</li>
+
+		
+<li ><input type=radio name="c_3_14" >  Magnetic field strength.
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_3_14" onclick="showAnswer('3_14')" value="Show Answer"></p>
+				
+<p class="explan" id="a_3_14">The slew rate incorporates both peak gradient strength and rise time into its definition and is the best single gradient specification to consider. Static magnetic field strength is an important consideration for high-resolution imaging but is not a gradient specification.
+<a href="/gradient-specifications.html " target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+<!-- ################ Gradient SECTION 3, QUIZ QUESTION  16############## -->
+
+<li style="margin-top: 8px">How many sets of paired physical gradients are present in an MR scanner?<ol type="a" id="q_3_15">
+
+<li ><input type=radio name="c_3_15" > 1</li>
+<li ><input type=radio name="c_3_15" >  2 </li>
+
+<li id="correct_3_15"><input type=radio name="c_3_15" id="c_3_15"> 3 </li>
+		
+<li ><input type=radio name="c_3_15" > 6 </li>
+	
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_3_15" onclick="showAnswer('3_15')" value="Show Answer"></p>
+				
+<p class="explan" id="a_3_15">Three sets of paired primary gradients are present in all MR scanners, producing field distortions along the three cardinal directions (x, y, and z).  <a href="/gradient-coils.html " target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+<!-- ################ Gradient SECTION 3, QUIZ QUESTION  17############## -->
+
+<li style="margin-top: 8px">Which of the following statements about gradient duty cycle is false<ol type="a" id="q_3_16">
+
+<li ><input type=radio name="c_3_16" > It is commonly measured in percent (%).</li>
+<li ><input type=radio name="c_3_16" > It represents the fraction of time that the gradient works at maximum amplitude.</li>
+<li ><input type=radio name="c_3_16" > Its value depends on the pulse sequence timing parameters and number of slices. </li>
+
+
+<li id="correct_3_16"><input type=radio name="c_3_16" id="c_3_16"> Its value is independent of the type of pulse sequence (SE, IR, etc). </li>
+		
+	
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_3_16" onclick="showAnswer('3_16')" value="Show Answer"></p>
+				
+<p class="explan" id="a_3_16">The duty cycle is defined as the percent time a gradient works at maximum amplitude during a pulse sequence. Its value will therefore vary with the pulse sequence and timing parameters, so d) is false. <a href="/gradient-specifications.html " target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+
+<!-- ################ Gradient SECTION 3, QUIZ QUESTION  18############## -->
+
+<li style="margin-top: 8px">Which of the following statements about the gradient subsystem is true<ol type="a" id="q_3_17">
+
+<li ><input type=radio name="c_3_17" > The gradient coils are located within the cryostat.</li>
+<li id="correct_3_17"><input type=radio name="c_3_17" id="c_3_17"> Gradient coils generate considerable heat during operation. </li>
+<li ><input type=radio name="c_3_17" > The gradient coils are cooled by liquid helium. </li>
+
+<li ><input type=radio name="c_3_17" >  Increasing power supplied to a gradient decreases the slope of the gradient. </li>
+
+		
+	
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_3_17" onclick="showAnswer('3_17')" value="Show Answer"></p>
+				
+<p class="explan" id="a_3_17">Gradient systems are not superconducting and are not located within the cryostat. They do generate considerable heat and typically require water and air cooling (though not cooling by liquid helium). Increasing power to a gradient increases (rather than decreases) its strength/slope. <a href="/gradient-heating.html " target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+
+<!--##################################################-->
+<!--############SCORING SECTION Needs to go at end of each subsection-->
+
+</ol><p><input type=button id="show_all_3" onclick="showAllAnswers('3')" value="Show All Answers for Section"><span style="font-weight: bold" id="scoretxt_3"></span></p>
+<p><a href="#top">Back to top of page</a></p></div>
+<!--END OF SCORING SECTION-->
+
+
+<!-- ###############NEW QUIZ SUBSECTION ##################-->
+
+<hr style="1px solid black">
+<!-- Creates optional line above new Quiz Subsection Title ---->
+
+<h1 style="color:black";><a name="3"></a>RF and Coils</h1>
+
+<!-- The Section Name and its corresponding number (here 0) which has an href in the index must be changed/filled in.  Note that the first section is identified as “0” here only;  and the second section is denoted “2”, etc. 
+
+This is confusing because subsequently it is denoted as Section 1 and reference to all questions in this section begin with a 1.  However, the first question of Section 1 is called question 0, presumably to assist in scoring.
+
+Thus, the first question of Section 1 is denoted as q_1_0 and its second question is denoted q_1_1.	
+
+When a second section of Questions is added, this is called Section 2 with first and second questions denoted q_2_0 and q_2_1. 
+
+Each section has counting variables corresponding to each question. So the counting variables  are denoted c_1_0 for the Section 1/first question, while c_2_1 counts for Section 2/second question. -->
+
+<!-- FOR THE PURPOSES OF THIS DOCUMENT WE WILL CONSIDER ALL QUESTIONS TO REFER TO SECTION 4 and are numbered consecutively. THE WORD DOCUMENT CAN THEN BE PUT INTO PROPER FORM BY “SEARCH AND REPLACE 4 BY THE APPROPRIATE SECTION NUMBER”-->
+
+
+<!-- ################ SECTION M, QUIZ QUESTION  1############## -->
+
+<ol><li style="margin-top: 8px"> Which coils are located closest to the patient in an MR scanner?
+ <ol type="a" id="q_4_0">
+
+<li ><input type=radio name="c_4_0" > Gradient coils.
+</li>
+
+
+<li id="correct_4_0"><input type=radio name="c_4_0" id="c_4_0"> RF-receiver coils.</li>
+
+<li ><input type=radio name="c_4_0" > Shim coils.
+</li>
+		
+		
+<li ><input type=radio name="c_4_0" > Body RF-transmit coils.
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_4_0" onclick="showAnswer('4_0')" value="Show Answer"></p>
+				
+<p class="explan" id="a_4_0">RF-receiver coils are placed closest to the patient so they may detect the MR signal with highest sensitivity.
+<a href="/many-kinds-of-coils.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+
+<!-- ################ SECTION 4, QUIZ QUESTION  2############## -->
+
+<li style="margin-top: 8px">In the construction of a superconducting MR magnet, which is the correct order of coils from outermost to innermost?
+<ol type="a" id="q_4_1">
+
+<li ><input type=radio name="c_4_1" > Main magnet windings, gradient coils, RF coils, shielding coils.
+</li>
+		
+<li ><input type=radio name="c_4_1" > Gradient coils, shield coils, main magnet windings, RF coils.
+</li>
+
+<li id="correct_4_1"><input type=radio name="c_4_1" id="c_4_1"> Shielding coils, main magnet windings, gradient coils, RF coils.
+</li>
+		
+<li ><input type=radio name="c_4_1" >  RF coils, shield coils, main magnet windings, gradient coils.
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_4_1" onclick="showAnswer('4_1')" value="Show Answer"></p>
+				
+<p class="explan" id="a_4_1">Shielding coils are the outermost coils. Their function is to reduce the external fringe fields from the main magnet windings, the next coil encountered. Next come resistive shim coils used to improve magnet homogeneity. Then the gradients, then the RF transmit coils, and finally the RF receiver coils (closest to the patient).
+<a href="/many-kinds-of-coils.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION 4, QUIZ QUESTION  3############## -->
+
+<li style="margin-top: 8px">Although most local RF coils are "receive only", some specially designed to operate in "transmit-receive (T/R)" mode. T/R coils commonly offered by MR vendors include all of the following except
+<ol type="a" id="q_4_2">
+
+<li ><input type=radio name="c_4_2" > Head coils.
+</li>
+		
+<li ><input type=radio name="c_4_2" > Knee coils.
+</li>
+
+		
+<li ><input type=radio name="c_4_2" >  Spectroscopy coils.
+</li>
+<li id="correct_4_2"><input type=radio name="c_4_2" id="c_4_2"> Spine coils.</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_4_2" onclick="showAnswer('4_2')" value="Show Answer"></p>
+				
+<p class="explan" id="a_4_2">Standard spine and body phased surface coil arrays are not offered for transmit/receive dual operation.
+<a href="/rf-coil-functions.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION 4, QUIZ QUESTION  4############## -->
+
+<li style="margin-top: 8px">A 1.5 T MR scanner has a base operating frequency of approximately 64 MHz. In the electromagnetic spectrum, this is considered to be in the range of
+<ol type="a" id="q_4_3">
+
+<li ><input type=radio name="c_4_3" > Infrared frequencies.
+</li>
+<li id="correct_4_3"><input type=radio name="c_4_3" id="c_4_3"> Radio frequencies.
+</li>		
+<li ><input type=radio name="c_4_3" > X-ray frequencies.
+</li>
+
+
+		
+<li ><input type=radio name="c_4_3" >  Microwave frequencies. 
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_4_3" onclick="showAnswer('4_3')" value="Show Answer"></p>
+				
+<p class="explan" id="a_4_3">MRI operates in the same frequency range as those used for radio and TV transmission.
+<a href="/radiofrequency-waves.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+
+
+
+ 
+<!-- ################ SECTION 4, QUIZ QUESTION  5############## -->
+
+<li style="margin-top: 8px">Use of a single element surface coil placed directly on the patient offers which advantages?
+<ol type="a" id="q_4_4">
+<li id="correct_4_4"><input type=radio name="c_4_4" id="c_4_4"> High signal-to-noise.
+</li>
+
+<li ><input type=radio name="c_4_4" > Increased depth of penetration.
+</li>
+		
+<li ><input type=radio name="c_4_4" > Capability for larger fields-of-view.
+</li>
+
+		
+<li ><input type=radio name="c_4_4" > All of the above.
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_4_4" onclick="showAnswer('4_4')" value="Show Answer"></p>
+				
+<p class="explan" id="a_4_4">A single element surface coil offers high signal-to-noise for receiving signals from voxels beneath the coil. The depth of penetration is limited, however, usually to less than 75% of the diameter of the coil. Larger FOV's are not possible, limited again by the size of the coil.
+<a href="/receive-only-coils.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION 4, QUIZ QUESTION  6############## -->
+
+<li style="margin-top: 8px">Comparing 10 cm and 20 cm diameter surface coils, which of the following is false?
+<ol type="a" id="q_4_5">
+
+<li ><input type=radio name="c_4_5" > The sensitive volume of the 20 cm coil is larger.
+</li>
+		
+<li ><input type=radio name="c_4_5" > The penetration depth of the 20 cm coil is greater.
+</li>
+
+<li id="correct_4_5"><input type=radio name="c_4_5" id="c_4_5"> The 20 cm coil has higher signal-to-noise for voxels immediately under the coil.
+</li>
+		
+<li ><input type=radio name="c_4_5" >  The 20 cm coil offers a larger field of view.
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_4_5" onclick="showAnswer('4_5')" value="Show Answer"></p>
+				
+<p class="explan" id="a_4_5">For voxels immediately under the coil, the 10 cm coil would have superior SNR than for the 20 cm one.  The other statements are all true. 
+<a href="/receive-only-coils.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION 4, QUIZ QUESTION  7############## -->
+
+<li style="margin-top: 8px">Comparing linear and quadrature coils
+<ol type="a" id="q_4_6">
+
+<li ><input type=radio name="c_4_6" > Quadrature coils offer twice the signal-to-noise.
+</li>
+		
+<li ><input type=radio name="c_4_6" > Quadrature coils offer four times the signal-to-noise.
+</li>
+
+<li id="correct_4_6"><input type=radio name="c_4_6" id="c_4_6"> Quadrature coils offer about 40% greater signal-to-noise.
+</li>
+		
+<li ><input type=radio name="c_4_6" >  Quadrature coils are about 40% larger.
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_4_6" onclick="showAnswer('4_6')" value="Show Answer"></p>
+				
+<p class="explan" id="a_4_6">Quadrature coils can be the same size as linear coils, but offer a signal-to-noise ratio of approximately √2  (≈ 1.41), or about 40% greater than that of linear coils.
+<a href="/lp-vs-cp-quadrature.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+	
+<!-- ################ SECTION 4, QUIZ QUESTION  8############## -->
+
+<li style="margin-top: 8px">A sinusoidal wave can be described by the equation <i>S(t) = A sin (ωt − φ)</i>. The constant <i>A</i> represents
+<ol type="a" id="q_4_7">
+
+<li ><input type=radio name="c_4_7" > Angular frequency.
+</li>
+		
+<li ><input type=radio name="c_4_7" > Difference in height between positive and negative peaks. 
+</li>
+
+<li id="correct_4_7"><input type=radio name="c_4_7" id="c_4_7"> Half the difference in height between positive and negative peaks.
+</li>
+		
+<li ><input type=radio name="c_4_7" >  Phase shift.
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_4_7" onclick="showAnswer('4_7')" value="Show Answer"></p>
+				
+<p class="explan" id="a_4_7">"A" is called the "amplitude" of the sinusoidal wave measured from zero to its maximum positive value. The full excursion between positive and negative peaks is 2A, so "A" is ½ this difference.
+<a href="/phase-v-frequency1.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION 4, QUIZ QUESTION  9############## -->
+
+<li style="margin-top: 8px">An MR scanner employs three different magnetic fields— the main field (<b>B<sub>0</sub></b>), gradient fields (<b>G</b>), and radiofrequency field (<b>B<sub>1</sub></b>). In terms of relative strength from weakest to strongest, the proper ranking is
+<ol type="a" id="q_4_8">
+<li id="correct_4_8"><input type=radio name="c_4_8" id="c_4_8"> <b>B<sub>1</sub></b> < <b>G</b> < <b>B<sub>0</sub></b>
+</li>
+
+<li ><input type=radio name="c_4_8" > <b>G</b> < <b>B<sub>0</sub></b> < <b>B<sub>1</sub></b>
+</li>
+		
+<li ><input type=radio name="c_4_8" > <b>G</b> < <b>B<sub>1</sub></b> < <b>B<sub>0</sub></b>
+</li>
+
+		
+<li ><input type=radio name="c_4_8" >  <b>B<sub>1</sub></b> < <b>B<sub>0</sub></b> < <b>G</b>
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_4_8" onclick="showAnswer('4_8')" value="Show Answer"></p>
+				
+<p class="explan" id="a_4_8">The main magnetic field  (<b>B<sub>0</sub></b>) is by far the strongest, typically larger than 1 Tesla. Gradient fields are of intermediate strength with values in the mT range. Radiofrequency fields are the smallest, with <b>B<sub>1</sub></b> values on the order of 10−50 μT.
+<a href="/radiofrequency-waves.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+<!-- ################ SECTION 4, QUIZ QUESTION  10############## -->
+
+<li style="margin-top: 8px">Which of the following is not an advantage of parallel (multi-)transmit RF?
+<ol type="a" id="q_4_9">
+
+<li ><input type=radio name="c_4_9" > Decreased RF-energy deposition in tissues.
+</li>
+		
+<li ><input type=radio name="c_4_9" > Reduced shading artifacts.
+</li>
+
+<li id="correct_4_9"><input type=radio name="c_4_9" id="c_4_9"> Increased standing waves due to dielectric effect.
+</li>
+		
+<li ><input type=radio name="c_4_9" >  More uniform excitation.
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_4_9" onclick="showAnswer('4_9')" value="Show Answer"></p>
+				
+<p class="explan" id="a_4_9">Parallel transmit RF excitation offers many advantages, particularly as field strength increases, including improved homogeneous excitation and artifact reduction. The incorrect answer a) standing waves due to dielectric effect are decreased, not increased with parallel transmission.
+<a href="/multi-transmit-rf.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+<!-- ################ SECTION 4, QUIZ QUESTION  11############## -->
+
+<li style="margin-top: 8px">Comparing phased array and parallel array coils, which of the following is true?
+<ol type="a" id="q_4_10">
+<li id="correct_4_10"><input type=radio name="c_4_10" id="c_4_10"> Both types of coils offer improved signal-to-noise and increased field-of-view.
+</li>
+
+<li ><input type=radio name="c_4_10" > Overlap of coil elements is avoided in both types.
+</li>
+		
+<li ><input type=radio name="c_4_10" > Phased array coils are also known as switchable arrays.
+</li>
+
+		
+<li ><input type=radio name="c_4_10" >  Both can be used equally well with parallel imaging acquisition methods.
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_4_10" onclick="showAnswer('4_10')" value="Show Answer"></p>
+				
+<p class="explan" id="a_4_10">Only answer a) is true. Overlap of coil elements is common design feature of phased array coil systems, but must be avoided in parallel arrays. Although some phased array coils are compatible with parallel imaging applications, most are not. Finally, phased and switchable arrays are not the same, the latter largely being abandoned 20+ years ago.
+<a href="/array-coils.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+		
+
+
+
+
+
+<!-- ################ SECTION 4, QUIZ QUESTION  12############## -->
+
+<li style="margin-top: 8px">Parallel imaging systems are composed of coil elements, segments, and channels. The proper transmission hierarchy beginning with the patient and proceeding upward through the processing chain is
+<ol type="a" id="q_4_11">
+
+<li ><input type=radio name="c_4_11" > Elements → channels → segments
+
+</li>
+<li id="correct_4_11"><input type=radio name="c_4_11" id="c_4_11"> Elements → segments → channels
+</li>
+		
+<li ><input type=radio name="c_4_11" > Elements → channels → segments
+</li>
+
+		
+<li ><input type=radio name="c_4_11" >  Channels → elements → channels
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_4_11" onclick="showAnswer('4_11')" value="Show Answer"></p>
+				
+<p class="explan" id="a_4_11">Proper order is given above.
+<a href="/array-coils.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+<!-- ################ SECTION 4, QUIZ QUESTION  13############## -->
+
+<li style="margin-top: 8px">Advantages of parallel receiver coil arrays include all of the following except
+<ol type="a" id="q_4_12">
+
+<li ><input type=radio name="c_4_12" > Increased signal-to-noise.
+</li>
+		
+<li ><input type=radio name="c_4_12" > Increased field-of-view.
+
+</li>
+
+<li id="correct_4_12"><input type=radio name="c_4_12" id="c_4_12"> Ease of design.
+</li>
+		
+<li ><input type=radio name="c_4_12" >  Reduced imaging time.
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_4_12" onclick="showAnswer('4_12')" value="Show Answer"></p>
+				
+<p class="explan" id="a_4_12">Parallel coil configurations offer all the advantages above, with the exception of ease of design. In fact, it is rather difficult to pack many small coils closely together in these arrays without significant magnetic interactions.
+<a href="/array-coils.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+<!-- ################ RF and COILS SECTION 4, QUIZ QUESTION  14############## -->
+
+<li style="margin-top: 8px">The effective depth of penetration for signal reception from a 20 cm diameter single loop surface coil is approximately<ol type="a" id="q_4_13">
+<li id="correct_4_13"><input type=radio name="c_4_13" id="c_4_13"> 10−15 cm </li>
+<li ><input type=radio name="c_4_13" > 20−25 cm</li>
+<li ><input type=radio name="c_4_13" > 30−40 cm </li>		
+<li ><input type=radio name="c_4_13" > 40−50 cm </li>		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_4_13" onclick="showAnswer('4_13')" value="Show Answer"></p>
+				
+<p class="explan" id="a_4_13">The penetration depth for reception from a simple loop RF surface coil is typically only about 50-75% of the coil's diameter. <a href="/receive-only-coils.html " target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+
+<!-- ################ RF and COILS SECTION 4, QUIZ QUESTION  15############## -->
+
+<li style="margin-top: 8px">Concerning the main transmit RF-body coil, which statement is false?<ol type="a" id="q_4_14">
+<li id="correct_4_14"><input type=radio name="c_4_14" id="c_4_14"> It is commonly used to receive the MR signal </li>
+<li ><input type=radio name="c_4_14" > It is built into the scanner gantry housing and cannot be seen by the patient</li>
+<li ><input type=radio name="c_4_14" > It is considered a transceiver coil, capable of both RF transmission and reception. </li>
+<li ><input type=radio name="c_4_14" > Its transmission field (<b>B<sub>1</sub></b>) is perpendicular to the main magnetic field (<b>B<sub>0</sub></b>). </li>		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_4_14" onclick="showAnswer('4_14')" value="Show Answer"></p>
+				
+<p class="explan" id="a_4_14"> The body coil is hidden within the scanner gantry housing. Its primary purpose is to transmit the <b>B<sub>1</sub></b> field which is perpendicular to <b>B<sub>0</sub></b>. It is a transceiver coil capable of both RF transmission and reception. However, it is seldom used for reception because better signal-to-noise is obtained using surface coils for this purpose. Hence, answer a) is false.  <a href="/receive-only-coils.html " target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->	
+
+
+
+
+
+<!--##################################################-->
+<!--############SCORING SECTION Needs to go at end of each subsection-->
+
+</ol><p><input type=button id="show_all_4" onclick="showAllAnswers('4')" value="Show All Answers for Section"><span style="font-weight: bold" id="scoretxt_4"></span></p>
+<p><a href="#top">Back to top of page</a></p></div>
+<!--END OF SCORING SECTION-->
+
+<!-- ###############NEW QUIZ SUBSECTION ##################-->
+
+<hr style="1px solid black">
+<!-- Creates optional line above new Quiz Subsection Title ---->
+
+<h1 style="color:black";><a name="4"></a>SITE PLANNING</h1>
+
+<!-- The Section Name and its corresponding number (here 0) which has an href in the index must be changed/filled in.  Note that the first section is identified as “0” here only;  and the second section is denoted “2”, etc. 
+
+This is confusing because subsequently it is denoted as Section 1 and reference to all questions in this section begin with a 1.  However, the first question of Section 1 is called question 0, presumably to assist in scoring.
+
+Thus, the first question of Section 1 is denoted as q_1_0 and its second question is denoted q_1_1.	
+
+When a second section of Questions is added, this is called Section 2 with first and second questions denoted q_2_0 and q_2_1. 
+
+Each section has counting variables corresponding to each question. So the counting variables  are denoted c_1_0 for the Section 1/first question, while c_2_1 counts for Section 2/second question. -->
+
+<!-- FOR THE PURPOSES OF THIS DOCUMENT WE WILL CONSIDER ALL QUESTIONS TO REFER TO SECTION 5 and are numbered consecutively. THE WORD DOCUMENT CAN THEN BE PUT INTO PROPER FORM BY “SEARCH AND REPLACE $ BY THE APPROPRIATE SECTION NUMBER”-->
+
+
+<!-- ################ SECTION 5, QUIZ QUESTION  1############## -->
+
+<ol><li style="margin-top: 8px"> Which of the following components of an MR system is typically not located in an adjoining equipment room?
+<ol type="a" id="q_5_0">
+
+<li ><input type=radio name="c_5_0" > RF-power amplifiers
+</li>
+		
+<li ><input type=radio name="c_5_0" > Gradient amplifiers
+</li>
+
+		
+<li ><input type=radio name="c_5_0" > Helium pump
+</li>
+<li id="correct_5_0"><input type=radio name="c_5_0" id="c_5_0"> Gradient coils
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_5_0" onclick="showAnswer('5_0')" value="Show Answer"></p>
+				
+<p class="explan" id="a_5_0"> Gradient coils are an integral part of the MR scanner itself and are not located in a separate equipment room.
+<a href="/mr-system-layout.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+
+<!-- ################ SECTION 5, QUIZ QUESTION  2############## -->
+
+<li style="margin-top: 8px"> Where is the master computer located that controls the MR scanner and processes data into images? 
+<ol type="a" id="q_5_1">
+
+<li ><input type=radio name="c_5_1" > In the MR scanner room
+</li>
+<li id="correct_5_1"><input type=radio name="c_5_1" id="c_5_1"> In the MR scanner control room
+</li>
+
+		
+<li ><input type=radio name="c_5_1" > In the nearby MR equipment room
+</li>
+
+		
+<li ><input type=radio name="c_5_1" >  At least 25 meters distant from the main scanner to avoid interference
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_5_1" onclick="showAnswer('5_1')" value="Show Answer"></p>
+				
+<p class="explan" id="a_5_1">The master computer is located in the scanner console in the control room immediately adjacent to the magnet room. Because of scanner shielding there is not need for it to be in a remote location (answer d is false).<a href="/mr-system-layout.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION 5, QUIZ QUESTION  3############## -->
+
+<li style="margin-top: 8px"> The function of the array processor is to
+<ol type="a" id="q_5_2">
+
+<li ><input type=radio name="c_5_2" > Generate triggers for the array of RF-pulses and gradient waveforms used for imaging
+</li>
+<li id="correct_5_2"><input type=radio name="c_5_2" id="c_5_2"> Reconstruct the raw NMR data into images
+</li>
+
+		
+<li ><input type=radio name="c_5_2" > Calculate RF frequency offsets and gradient strengths for desired slice selection and field-of-view
+</li>
+
+		
+<li ><input type=radio name="c_5_2" >  Activate and/or disable various coil elements in an array
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_5_2" onclick="showAnswer('5_2')" value="Show Answer"></p>
+				
+<p class="explan" id="a_5_2"> The array processor is a special board within the main computer that operates the MR scanner. It is responsible for performing Fast Fourier Transformation (FFT) of the raw data and constructing the data into images.
+<a href="/mr-system-layout.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION 5, QUIZ QUESTION  4############## -->
+<li style="margin-top: 8px"> Which scanner is the heaviest (and would thus require the most floor support)?
+<ol type="a" id="q_5_3">
+
+<li id="correct_5_3"><input type=radio name="c_5_3" id="c_5_3"> 0.35 T  Permanent magnet system
+</li>
+
+<li ><input type=radio name="c_5_3" > 0.6 T Resistive magnet system
+</li>
+		
+<li ><input type=radio name="c_5_3" > 1.5 T Superconductive system
+</li>
+
+		
+<li ><input type=radio name="c_5_3" >  3.0 T Superconductive system
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_5_3" onclick="showAnswer('5_3')" value="Show Answer"></p>
+				
+<p class="explan" id="a_5_3"> Permanent magnet systems may weigh over 35,000 pounds (16,000 kg), over 3 times more than a superconductive scanner.
+<a href="/mr-system-layout.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+
+
+
+ 
+<!-- ################ SECTION 5, QUIZ QUESTION  5############## -->
+
+<li style="margin-top: 8px"> Which scanner is would have the lowest overall siting and operational costs?
+<ol type="a" id="q_5_4">
+<li id="correct_5_4"><input type=radio name="c_5_4" id="c_5_4"> 0.35 T  Permanent magnet system
+</li>
+
+<li ><input type=radio name="c_5_4" > 0.6 T Resistive magnet system
+</li>
+		
+<li ><input type=radio name="c_5_4" > 1.5 T Superconductive system
+</li>
+
+		
+<li ><input type=radio name="c_5_4" >  3.0 T Superconductive system
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_5_4" onclick="showAnswer('5_4')" value="Show Answer"></p>
+				
+<p class="explan" id="a_5_4"> Notwithstanding additional siting costs regarding their weight as described in the previous question, permanent magnet scanners do not require cryogens nor a sophisticated chiller system, so their operational costs are extremely low. Their fringe fields are typically very small as well, allowing them to have much smaller room requirements. Resistive electromagnet scanners, by comparison, have high operational costs due to use of electricity and increased environmental cooling requirements. Superconducting scanners are the most expensive to site due to their size, fringe fields, and cooling requirements.
+<a href="/mr-system-layout.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION 5, QUIZ QUESTION  6############## -->
+
+<li style="margin-top: 8px"> Which component of a superconducting MR scanner does not require specialized cooling to maintain function?
+<ol type="a" id="q_5_5">
+
+<li ><input type=radio name="c_5_5" > Main coil windings
+</li>
+		
+<li ><input type=radio name="c_5_5" > Gradient coils
+</li>
+<li ><input type=radio name="c_5_5" >  Gradient amplifiers
+</li>
+<li id="correct_5_5"><input type=radio name="c_5_5" id="c_5_5"> Radiofrequency coils
+</li>
+
+<li ><input type=radio name="c_5_5" >  Radiofrequency amplifiers
+</li>
+
+		
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_5_5" onclick="showAnswer('5_5')" value="Show Answer"></p>
+				
+<p class="explan" id="a_5_5"> The main coil windings, of course maintained at superconducting temperatures by liquid helium. Both gradient coils and amplifiers get very hot and must be cooled by circulating water/antifreeze exchanged through chiller circuitry. Radiofrequency amplifiers are usually in the same cabinet as gradients and also require air and/or water cooling. The RF transmit coils themselves do get warm but require no separate cooling. The RF receive coils close to the patient do not heat up at all. 
+<a href="/mr-system-layout.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION 5, QUIZ QUESTION  7############## -->
+
+<li style="margin-top: 8px"> The <b>B<sub>0</sub></b> field of an MR scanner is most homogeneous at
+<ol type="a" id="q_5_6">
+
+<li ><input type=radio name="c_5_6" > At the opening (gantry) of the magnet
+</li>
+		
+<li ><input type=radio name="c_5_6" > At bore level about 1 meter directly in front of the magnet
+</li>
+
+<li id="correct_5_6"><input type=radio name="c_5_6" id="c_5_6"> In the middle of the bore at isocenter
+</li>
+		
+<li ><input type=radio name="c_5_6" >  On the outside of the magnet immediately against its wall
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_5_6" onclick="showAnswer('5_6')" value="Show Answer"></p>
+				
+<p class="explan" id="a_5_6"> The <b>B<sub>0</sub></b> field is most homogenous at magnet isocenter.
+<a href="/what-are-fringe-fields.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+	
+<!-- ################ SECTION 5, QUIZ QUESTION  8############## -->
+
+<li style="margin-top: 8px"> Which scanner would have the largest fringe field?
+<ol type="a" id="q_5_7">
+
+<li ><input type=radio name="c_5_7" > 0.35 T  Permanent magnet system
+</li>
+		
+<li ><input type=radio name="c_5_7" > 0.6 T Resistive magnet system
+</li>
+<li ><input type=radio name="c_5_7" >  1.5 T Superconductive system
+</li>
+
+
+<li id="correct_5_7"><input type=radio name="c_5_7" id="c_5_7"> 3.0 T Superconductive system
+</li>
+		
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_5_7" onclick="showAnswer('5_7')" value="Show Answer"></p>
+				
+<p class="explan" id="a_5_7"> Fringe fields are generally directly related to field strength, so the higher the main field, the greater the fringe. Thus the correct answer is d). Magnet configuration also is important.  Specifically, C-shaped magnets (the typical configuration for permanent scanners) have relatively low fringe fields.
+<a href="/ what-are-fringe-fields.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION 5, QUIZ QUESTION  9############## -->
+
+<li style="margin-top: 8px"> If one moves from 1 meter to 2 meters away from a magnet, the fringe field will be reduced by a factor of approximately
+<ol type="a" id="q_5_8">
+
+<li ><input type=radio name="c_5_8" > √2
+</li>
+		
+<li ><input type=radio name="c_5_8" > 2 </li>
+<li ><input type=radio name="c_5_8" >  4 </li>
+
+
+<li id="correct_5_8"><input type=radio name="c_5_8" id="c_5_8"> 8 </li>
+		
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_5_8" onclick="showAnswer('5_8')" value="Show Answer"></p>
+				
+<p class="explan" id="a_5_8"> In theory the strength of a magnetic fringe field is inversely related to the third power of the distance (1/r³) from the magnet isocenter. Thus moving twice as far away from the magnet, the fringe field should fall by a factor of approximately 1/2³ = 1/8.
+<a href="/what-are-fringe-fields.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+<!-- ################ SECTION 5, QUIZ QUESTION  10############## -->
+
+<li style="margin-top: 8px"> The fringe fields of cylindrical superconducting magnet are highest
+<ol type="a" id="q_5_9">
+
+<li ><input type=radio name="c_5_9" > In the <i>x-</i>direction (transverse and horizontal to the axis bore)
+</li>
+		
+<li ><input type=radio name="c_5_9" > In the <i>y-</i>direction (transverse and vertical to the axis bore)
+</li>
+
+<li id="correct_5_9"><input type=radio name="c_5_9" id="c_5_9"> In the <i>z-</i>direction (along the axis bore)
+</li>
+		
+<li ><input type=radio name="c_5_9" >  They are equal in all directions
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_5_9" onclick="showAnswer('5_9')" value="Show Answer"></p>
+				
+<p class="explan" id="a_5_9"> Fringe fields are significantly higher along the <i>z-</i>axis (the direction of <b>B<sub>0</sub></b>). 
+<a href="/what-are-fringe-fields.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+<!-- ################ SECTION 5, QUIZ QUESTION  11############## -->
+
+<li style="margin-top: 8px"> The primary purpose for passive magnetic shielding is 
+<ol type="a" id="q_5_10">
+
+<li id="correct_5_10"><input type=radio name="c_5_10" id="c_5_10"> To reduce fringe magnetic fields outside the scanner room.
+</li>
+
+
+<li ><input type=radio name="c_5_10" > To keep extraneous radiofrequency noise from entering the scanner room.
+</li>
+		
+<li ><input type=radio name="c_5_10" > To constrain the NMR signal to remain within the bore of the magnet for better reception.
+</li>
+
+		
+<li ><input type=radio name="c_5_10" >  To reduce the effects of moving equipment (such as cars and elevators) from distorting the magnetic field.
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_5_10" onclick="showAnswer('5_10')" value="Show Answer"></p>
+				
+<p class="explan" id="a_5_10"> Passive shielding typically involves placing iron posts or sheets of steel in selected places around scanner floor or wall to minimize fringe field extension outside the scanner room. Passive shielding is generally not necessary with modern self-shielded scanners unless they are closely space or near other sensitive equipment.
+<a href="/ how-to-reduce-fringe.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+		
+
+
+
+
+
+<!-- ################ SECTION 5, QUIZ QUESTION  12############## -->
+
+<li style="margin-top: 8px"> Concerning passive shielding, which statement is true?
+<ol type="a" id="q_5_11">
+
+<li ><input type=radio name="c_5_11" > It is performed by placing heavy copper plates along the walls of the scanner room.
+</li>
+		
+<li ><input type=radio name="c_5_11" > It is a method to reduce extraneous radiofrequency interference with the MR signal.
+</li>
+
+<li id="correct_5_11"><input type=radio name="c_5_11" id="c_5_11"> It is more commonly required for 7.0T than for 1.5 T installations.
+</li>
+		
+<li ><input type=radio name="c_5_11" >  Active shielding technology found in modern scanner design has not changed the need for it.
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_5_11" onclick="showAnswer('5_11')" value="Show Answer"></p>
+				
+<p class="explan" id="a_5_11"> Passive shielding is a method to reduce <u>fringe magnetic fields</u>, so a) copper lining of the walls to reduce b) RF-interference are incorrect. It is more needed for higher field strength installations, so c) is true. Active shielding technology in modern scanners has reduced the need for passive methods, so d) is false.
+<a href="/how-to-reduce-fringe.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+<!-- ################ SECTION 5, QUIZ QUESTION  13############## -->
+
+<li style="margin-top: 8px"> Passive magnetic shielding of the scanner room is typically achieved using sheets or rods made of
+<ol type="a" id="q_5_12">
+
+<li ><input type=radio name="c_5_12" > Copper
+</li>
+<li id="correct_5_12"><input type=radio name="c_5_12" id="c_5_12"> Iron
+</li>
+		
+<li ><input type=radio name="c_5_12" > Aluminum
+</li>
+
+		
+<li ><input type=radio name="c_5_12" >  Lead
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_5_12" onclick="showAnswer('5_12')" value="Show Answer"></p>
+				
+<p class="explan" id="a_5_12"> A ferromagnetic substance such as iron or steel is required to constrain the fringe field lines.
+<a href="/how-to-reduce-fringe.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION 5, QUIZ QUESTION  14############## -->
+
+<li style="margin-top: 8px"> The fringe magnetic field arising from an MR scanner
+<ol type="a" id="q_5_13">
+
+<li ><input type=radio name="c_5_13" > Can be eliminated by active shielding.
+</li>
+		
+<li ><input type=radio name="c_5_13" > Can be eliminated by passive shielding.
+</li>
+
+		
+<li ><input type=radio name="c_5_13" >  Can be reduced by radiofrequency shielding.
+</li>
+<li id="correct_5_13"><input type=radio name="c_5_13" id="c_5_13"> None of the above.
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_5_13" onclick="showAnswer('5_13')" value="Show Answer"></p>
+				
+<p class="explan" id="a_5_13"> Active and passive shielding can reduce, but not eliminate fringe fields. Radiofrequency shielding reduces noise but does not affect fringe fields <a href="/how-to-reduce-fringe.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION 5, QUIZ QUESTION  15############## -->
+
+<li style="margin-top: 8px"> What is the “5 Gauss Line”?
+<ol type="a" id="q_5_14">
+
+<li ><input type=radio name="c_5_14" > A place inside the scanner where <i>x-</i> and <i>y-</i>gradients differ in strength by less than 5 Gauss (5 mT).
+</li>
+		
+<li ><input type=radio name="c_5_14" > The boundary in an MRI center inside of which one’s credit cards will be erased.
+</li>
+
+<li id="correct_5_14"><input type=radio name="c_5_14" id="c_5_14"> A fringe field line that may pose danger to patients with certain pacemakers
+</li>
+		
+<li ><input type=radio name="c_5_14" >  A fringe field line in the scanner room safe for patients but which MR technologists should avoid crossing.
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_5_14" onclick="showAnswer('5_14')" value="Show Answer"></p>
+				
+<p class="explan" id="a_5_14"> The 5-Gauss Line was established by the US Food and Drug Administration (FDA) as a boundary to which the unsuspecting public should not be exposed. The value was based on the fact that the reed switch in older pacemakers could be flipped by exposure to this level of stray magnetic field, potentially converting a patient’s demand pacemaker into asynchrony mode. It should be recognized that it is not just a line, but a surface that extends outward from the scanner in 3 dimensions. Thus it can extend into the floors above and below the scanner as well as to the sides.
+
+<a href="/what-are-fringe-fields.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+<!-- ################ SECTION 5, QUIZ QUESTION 16############## -->
+
+<li style="margin-top: 8px"> Which statement about ACR Safety Zones 1 and 2 is correct?
+<ol type="a" id="q_5_15">
+
+<li id="correct_5_15"><input type=radio name="c_5_15" id="c_5_15"> Both Zones 1 and 2 lie outside the 5 Gauss line.
+</li>
+
+<li ><input type=radio name="c_5_15" > Patient safety screening is required before entering Zone 2
+</li>
+		
+<li ><input type=radio name="c_5_15" > The general public should not be admitted to Zone 1; it is only for MR patients and their families.
+</li>
+
+		
+<li ><input type=radio name="c_5_15" >  Patients with pacemakers can at risk if allowed to enter Zone 2.
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_5_15" onclick="showAnswer('5_15')" value="Show Answer"></p>
+				
+<p class="explan" id="a_5_15"> Zone 1 is for the general public. Entry is generally restricted beginning in Zone 2, as this is where safety screening takes place. Both lie outside the 5 Gauss line and are safe for everyone.
+<a href="/acr-safety-zones.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION 5, QUIZ QUESTION  17############## -->
+
+<li style="margin-top: 8px"> Which statement about ACR Safety Zone 3 is false?
+<ol type="a" id="q_5_16">
+
+<li ><input type=radio name="c_5_16" > Patients should not be admitted to Zone 3 unless they have undergone safety screening.
+</li>
+
+<li id="correct_5_16"><input type=radio name="c_5_16" id="c_5_16"> Ferromagnetic objects may not be brought into this area.
+</li>
+
+		
+<li ><input type=radio name="c_5_16" > The MR operator's console is located in this area.
+</li>
+
+		
+<li ><input type=radio name="c_5_16" >  Medical personnel should not be admitted to this area unless they have undergone MR safety training.
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_5_16" onclick="showAnswer('5_16')" value="Show Answer"></p>
+				
+<p class="explan" id="a_5_16"> Zone 3 includes areas within the 5-Gauss line, so all patients and family members need to be screened prior to entry. Zone 3 includes the area where the MR operator's console is located. The fringe fields in Zone 3 are sufficiently small that there is no risk for flying ferromagnetic objects to be propelled into the scanner. Nevertheless, there is generally easy direct access from Zone 3 into the scanner room (Zone 4) where dangerous flying objects can occur. Ferromagnetic objects in Zone 3 are discouraged but not forbidden; they certainly should not be brought near the door of the scanner room. For these reasons all medical personnel must be trained/educated in MR safety before being allowed into Zone 3.
+<a href="/acr-safety-zones.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+<!-- ################ SECTION 5, QUIZ QUESTION  18############## -->
+
+<li style="margin-top: 8px"> Which statement about ACR Safety Zone 4 is true?
+<ol type="a" id="q_5_17">
+
+<li ><input type=radio name="c_5_17" > Accompanying family members should never be allowed access to Zone 4.
+</li>
+<li id="correct_5_17"><input type=radio name="c_5_17" id="c_5_17"> Zone 4 is synonymous with the room containing the MR scanner.
+</li>
+
+		
+<li ><input type=radio name="c_5_17" > Zone 4 is includes the scanner, the operator's console, and equipment room (where gradient amplifiers are located).
+</li>
+
+		
+<li ><input type=radio name="c_5_17" >  A locked door requiring badge, key, or combination access must be present and remain closed between Zone 3 and Zone 4 except when moving patients.
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_5_17" onclick="showAnswer('5_17')" value="Show Answer"></p>
+				
+<p class="explan" id="a_5_17"> Zone 4 is the scanner room itself, so b) is true and c) is false. Family members may be allowed in the scanner room provided they have been appropriately screened, so a) is false. The door to the scanner room is not locked and is frequently left open when scanning is not in progress (though we recommend having a strap across it to prevent inadvertent entry). Ferromagnetic materials should not be brought into Zone 4 as the risk of them being propelled into the scanner is high.
+<a href="/ acr-safety-zones.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+		
+
+<!-- ################ SECTION 5, QUIZ QUESTION  19############## -->
+
+<li style="margin-top: 8px"> Why might large trucks on a road 20 meters away from an MR scanner be of potential concern for siting?
+<ol type="a" id="q_5_18">
+
+<li ><input type=radio name="c_5_18" > Their CB radios operate at the same frequencies as the MR signal.
+</li>
+		
+<li ><input type=radio name="c_5_18" > The scanner magnetic field can be affected by the dense iron in their chassis as they pass by.
+</li>
+
+<li id="correct_5_18"><input type=radio name="c_5_18" id="c_5_18"> The physical vibrations they produce can affect image quality.
+</li>
+		
+<li ><input type=radio name="c_5_18" >  At this distance heavy truck traffic should be of no concern at all.
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_5_18" onclick="showAnswer('5_18')" value="Show Answer"></p>
+				
+<p class="explan" id="a_5_18"> Environmental vibrations can significantly affect scanner performance, and sites should undergo vibration testing prior to installation of a scanner. The frequent passage of heavy trucks on a nearby road would be one possible cause. Other vibration sources include nearby air conditioning equipment, motors, and building elevators. RF-interference from CB radios should not be a special problem, as these frequencies would normally be filtered out by standard RF-shielding. At a distance of 20 meters, moving metal should not cause a static field disturbance; however, this could be of concern if the trucks passed as close as 10 meters by.
+<a href="/magnetic-shielding.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+<!-- ################ SECTION 5, QUIZ QUESTION  20############## -->
+
+<li style="margin-top: 8px"> The loud noise produced by an MR system during a scan is primarily due to
+<ol type="a" id="q_5_19">
+
+<li id="correct_5_19"><input type=radio name="c_5_19" id="c_5_19"> Vibrations of the gradient coils
+</li>
+
+<li ><input type=radio name="c_5_19" > Vibrations of the radiofrequency coils
+</li>
+		
+<li ><input type=radio name="c_5_19" > Vibrations of the main magnet windings
+</li>
+
+		
+<li ><input type=radio name="c_5_19" >  Vibrations from the chiller and helium pump
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_5_19" onclick="showAnswer('5_19')" value="Show Answer"></p>
+				
+<p class="explan" id="a_5_19"> The noise produced during a scan is primarily due to electromechanical vibrations generated by gradients as they are rapidly turned on and off during a pulse sequence. This is transmitted to other structures in the magnet housing that may also vibrate secondarily and amplify the noise.
+
+<a href="/whats-that-noise.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+		
+<!-- ################ SECTION 5, QUIZ QUESTION  21############## -->
+
+<li style="margin-top: 8px"> Which of the following sequences would likely generate the loudest noise during scanning?
+<ol type="a" id="q_5_20">
+
+<li ><input type=radio name="c_5_20" > T2-weighted Turbo spin-echo (TSE) imaging of the spine
+</li>
+		
+<li ><input type=radio name="c_5_20" > Dixon fat-water imaging of the liver
+</li>
+
+<li id="correct_5_20"><input type=radio name="c_5_20" id="c_5_20"> Echo-planar diffusion tensor imaging of the brain
+</li>
+		
+<li ><input type=radio name="c_5_20" >  MR spectroscopy of the prostate 
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_5_20" onclick="showAnswer('5_20')" value="Show Answer"></p>
+				
+<p class="explan" id="a_5_20"> The loudest sequences are those where gradients are switched on and off most rapidly, such as in echo-planar imaging and short <i>TE</i> gradient echo imaging.
+<a href="/ whats-that-noise.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+
+
+		
+<!-- ################ SECTION 5, QUIZ QUESTION  22############## -->
+
+<li style="margin-top: 8px"> Which of the following statements about MR scanner noise is false
+<ol type="a" id="q_5_21">
+
+<li ><input type=radio name="c_5_21" > Sound levels can reach up to 120 dB for some sequences.
+</li>
+
+<li id="correct_5_21"><input type=radio name="c_5_21" id="c_5_21"> Although potentially uncomfortable for the patient, there is no real risk to hearing.
+</li>
+
+		
+<li ><input type=radio name="c_5_21" > Ear protection is mandatory for all patients undergoing MR imaging.
+</li>
+
+		
+<li ><input type=radio name="c_5_21" >  New quiet pulse sequences can reduce noise levels to within 10 dB of background.
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_5_21" onclick="showAnswer('5_21')" value="Show Answer"></p>
+				
+<p class="explan" id="a_5_21"> Sound levels indeed can reach 120 dB for some sequences, especially echo-planar ones. This can result in damage to the inner ear and produce hearing loss, so option b) is false. Thus ear protection is mandatory for all patients.
+<a href="/ whats-that-noise.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+
+
+
+
+		
+<!-- ################ SECTION 5, QUIZ QUESTION  23############## -->
+
+<li style="margin-top: 8px"> Which of the following methods can reduce scanner noise?
+<ol type="a" id="q_5_22">
+
+<li ><input type=radio name="c_5_22" > Avoidance of echo-planar sequences
+</li>
+		
+<li ><input type=radio name="c_5_22" > Use of "soft" gradient pulses with longer rise times
+</li>
+
+
+		
+<li ><input type=radio name="c_5_22" >  Use of 3D ultrashort TE sequences
+</li>
+
+<li id="correct_5_22"><input type=radio name="c_5_22" id="c_5_22"> All of the above
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_5_22" onclick="showAnswer('5_22')" value="Show Answer"></p>
+				
+<p class="explan" id="a_5_22"> These strategies will all produce a reduction of noise levels during scanning.
+<a href="/ whats-that-noise.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+
+
+
+		
+<!-- ################ SECTION 5, QUIZ QUESTION  24############## -->
+
+<li style="margin-top: 8px"> Newer "quiet" MR sequences with longer gradient ramp times are now available. Which of the following statements about these sequences is true
+<ol type="a" id="q_5_23">
+
+<li id="correct_5_23"><input type=radio name="c_5_23" id="c_5_23"> They can reduce noise levels to within 10 dB of background.
+</li>
+
+
+<li ><input type=radio name="c_5_23" > This strategy can be applied to all pulse sequences.
+</li>
+		
+<li ><input type=radio name="c_5_23" > They can be employed with no signal-to-noise penalty.
+</li>
+
+		
+<li ><input type=radio name="c_5_23" >  They do not affect number of slices for a given <i>TR</i>.
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_5_23" onclick="showAnswer('5_23')" value="Show Answer"></p>
+				
+<p class="explan" id="a_5_23"> Newer quiet sequences can reduce noise levels to less than 10 dB of background, so answer a) is true. They can be used on many (but not all) pulse sequences. Because of the increasing rise and fall times there is a shorter sampling window and SNR is reduced. A penalty in the maximum number of slices may also occur at constant bandwidth due to the increased time spent in ramping gradients.
+<a href="/ whats-that-noise.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+<!-- ################ SECTION 5, QUIZ QUESTION  25############## -->
+
+<li style="margin-top: 8px"> Radiofrequency shielding of the scanner room is most commonly achieved by lining the walls with thin sheets of
+<ol type="a" id="q_5_24">
+
+<li ><input type=radio name="c_5_24" > Iron</li>
+		
+<li ><input type=radio name="c_5_24" > Aluminum </li>
+
+<li id="correct_5_24"><input type=radio name="c_5_24" id="c_5_24"> Copper </li>
+		
+<li ><input type=radio name="c_5_24" >  Lead </li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_5_24" onclick="showAnswer('5_24')" value="Show Answer"></p>
+				
+<p class="explan" id="a_5_24">A thin layer of copper around the entire room is most commonly used in scanner installations. It acts as a Faraday cage and is effective at reducing penetration of extraneous radiofrequencies. However, virtually any conductive metal could be used for this purpose, and both steel and aluminum cages are occasionally used.<a href="/why-rf-shielding.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+
+
+
+
+ 
+<!-- ################ SECTION 5, QUIZ QUESTION  26############## -->
+
+<li style="margin-top: 8px"> The primary purpose for radiofrequency shielding is 
+<ol type="a" id="q_5_25">
+
+<li ><input type=radio name="c_5_25" > To confine fringe fields to the scanner room itself.
+</li>
+		
+<li ><input type=radio name="c_5_25" > To constrain the NMR signal to remain within the bore of the magnet for better reception
+</li>
+
+<li id="correct_5_25"><input type=radio name="c_5_25" id="c_5_25"> To keep extraneous radiofrequency noise from entering the scanner room
+</li>
+		
+<li ><input type=radio name="c_5_25" >  To reduce the effects of moving equipment (such as cars and elevators) from distorting the magnetic field.
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_5_25" onclick="showAnswer('5_25')" value="Show Answer"></p>
+				
+<p class="explan" id="a_5_25"> RF-shielding primarily prevents extraneous radiofrequency noises from outside the scanner room from entering and contaminating the MR signal.  
+<a href="/ why-rf-shielding.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+
+
+
+<!-- ################ SECTION 5, QUIZ QUESTION  27############## -->
+
+<li style="margin-top: 8px"> In most clinical MR sites, the principal source RF-interference that needs to be excluded comes from cell phones, TV, and radio transmissions.
+<ol type="a" id="q_5_26">
+
+<li ><input type=radio name="c_5_26" > True</li>
+		
+
+<li id="correct_5_26"><input type=radio name="c_5_26" id="c_5_26"> False </li>
+		
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_5_26" onclick="showAnswer('5_26')" value="Show Answer"></p>
+				
+<p class="explan" id="a_5_26"> The most common form of RF interference comes from noise generated from nearby electrical equipment (transformers, motors, pumps) or electronic devices (computers, pulse oximeters, cardiac monitors).
+<a href="/ why-rf-shielding.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+
+
+
+<!-- ################ SECTION 5, QUIZ QUESTION  28############## -->
+
+<li style="margin-top: 8px"> A device that allows a plastic oxygen hose to be passed through the wall of an MR scanner room without disrupting the integrity of the RF-shielding is called a
+
+<ol type="a" id="q_5_27">
+
+<li ><input type=radio name="c_5_27" > Penetration panel
+</li>
+		
+<li ><input type=radio name="c_5_27" > Bandstop filter
+</li>
+
+<li id="correct_5_27"><input type=radio name="c_5_27" id="c_5_27"> Waveguide
+</li>
+		
+<li ><input type=radio name="c_5_27" >  Faraday cage
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_5_27" onclick="showAnswer('5_27')" value="Show Answer"></p>
+				
+<p class="explan" id="a_5_27"> The correct answer is waveguide (c). This looks like a pipe mounted within the wall and has a design that it blocks/traps radiofrequencies in the Larmor frequency range from passing through. This device is commonly part of the penetration panel, which also includes bandstop filters for wires. The Faraday cage is the entire enclosure around a scanner room to produce RF shielding.
+
+<a href="/ wirestubes-thru-wall.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+
+
+
+<!-- ################ SECTION 5, QUIZ QUESTION  29############## -->
+
+<li style="margin-top: 8px"> A common location for RF-leakage into the scanner room is
+<ol type="a" id="q_5_28">
+
+<li id="correct_5_28"><input type=radio name="c_5_28" id="c_5_28"> Around the door
+</li>
+
+
+<li ><input type=radio name="c_5_28" > Along seals of the scanner window
+</li>
+		
+<li ><input type=radio name="c_5_28" > At the penetration panel
+</li>
+
+		
+<li ><input type=radio name="c_5_28" >  Along the junction of copper plates in the scanner room’s walls
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_5_28" onclick="showAnswer('5_28')" value="Show Answer"></p>
+				
+<p class="explan" id="a_5_28"> Because of repetitive opening and closing, RF-seals around the door are frequently damaged and a common source of RF-leakage into the room. 
+<a href="/ why-rf-shielding.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+
+
+
+
+<!--##################################################-->
+<!--############SCORING SECTION Needs to go at end of each subsection-->
+
+</ol><p><input type=button id="show_all_5" onclick="showAllAnswers('5')" value="Show All Answers for Section"><span style="font-weight: bold" id="scoretxt_5"></span></p>
+<p><a href="#top">Back to top of page</a></p></div>
+<!--END OF SCORING SECTION-->

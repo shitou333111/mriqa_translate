@@ -1,0 +1,1385 @@
+<div id="content"><div id="wsite-content" class="wsite-elements wsite-not-footer">
+	<div><div id="547442964821315805" align="left" style="width: 100%; overflow-y: hidden;" class="wcustomhtml"><!--############NEW MASTER HEADER AND INDEX##############-->
+<!--THIS IS THE MASTER HEADER SECTION FOR QUIZZES ON EACH SUPER TAB-->
+<!-- Each super tab in the regular Q&A part of the website corresponds to  a set of review QUIZZES on a single web page. This single web page must begin with the html script included below (which must be appropriately renamed). -->
+
+<!--After the title there is an index that identifies ~5 subsections each with 10-20 quiz questions. The html script for each section of questions is in a separate document titled 20 EMPTY QUESTIONS.  Instructions for filling these out are provided in that document. -->
+
+<html>
+<head><script src="gdpr/gdprscript6f19.js?buildTime=1774025472"></script>
+<title>MRI Safety and Screening Quiz</title>
+<!--All Yellow highlighted items need to be replaced-->
+<meta name="keywords" content="radiology physics, review questions, MRI physics">
+<meta name="description" content="Collection of review quiz questions from MRIquestions.com">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="mr_styles.html">
+<style>
+.explan {
+	display: none;
+	font-style: italic;
+	margin-top: 2px;
+	margin-bottom: 6px;
+}
+</style>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','../www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-52206512-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+<script>
+function showAnswer(q_string) {
+	var button = document.getElementById('show_'+q_string);
+	var shown = button.value == "Hide Answer";
+	if(!shown) {
+		document.getElementById('a_'+q_string).style.display = "block";
+		
+		document.getElementById('correct_'+q_string).style.fontWeight = "bold";
+		if(document.getElementById('c_'+q_string).checked) {
+			document.getElementById('correct_'+q_string).style.color = "Green";
+		} else {
+			document.getElementById('correct_'+q_string).style.color = "Red";
+		}
+		
+		button.value = "Hide Answer";
+	} else {
+		document.getElementById('a_'+q_string).style.display = "none";
+		button.value = "Show Answer";
+	}
+}
+
+function showAllAnswers(topic) {
+	var button = document.getElementById('show_all_'+topic);
+	var shown = button.value == "Hide All Answers for Section";
+	
+	var i = 0;
+	var correct = 0;
+	var ans_el;
+	while((ans_el=document.getElementById('a_'+topic+'_'+i)) != null) {
+		if(document.getElementById('c_'+topic+'_'+i).checked) {
+			correct++;
+		}
+		if(!shown) {
+			ans_el.style.display = "block";
+			document.getElementById('correct_'+topic+'_'+i).style.fontWeight = "bold";
+			if(document.getElementById('c_'+topic+'_'+i).checked) {
+				document.getElementById('correct_'+topic+'_'+i).style.color = "Green";
+			} else {
+				document.getElementById('correct_'+topic+'_'+i).style.color = "Red";
+			}
+		} else {
+			ans_el.style.display = "none";
+		}
+		i++;
+	}
+	
+	var scoretext = document.getElementById('scoretxt_'+topic);
+	scoretext.innerHTML = 'You answered '+correct+'/'+i+' correct, for a score of '+Math.round(correct/i*100)+'%';
+	
+	if(!shown) {
+		button.value = "Hide All Answers for Section";
+	} else {
+		button.value = "Show All Answers for Section";
+	}
+}
+
+function scoreAnswers(topic) {
+	var button = document.getElementById('score_'+topic);
+	
+	var i = 0;
+	var correct = 0;
+	var ans_el;
+	while((ans_el=document.getElementById('a_'+topic+'_'+i)) != null) {
+		if(document.getElementById('c_'+topic+'_'+i).checked) {
+			correct++;
+		}
+		i++;
+	}
+	
+	var scoretext = document.getElementById('scoretxt_'+topic);
+	scoretext.innerHTML = 'You answered '+correct+'/'+i+' correct, for a score of '+Math.round(correct/i*100)+'%';
+}
+
+function changeMode(button_value) {
+	if(button_value != 0) {
+		window.location = "review/mri_b3526.html?mode="+button_value;
+	}
+}
+</script>
+<style type="text/css">
+.button_unchecked {
+	border: 2px outset #3498db;
+	background: #3498db;
+	background-image: -webkit-linear-gradient(top, #3498db, #2980b9);
+	background-image: -moz-linear-gradient(top, #3498db, #2980b9);
+	background-image: -ms-linear-gradient(top, #3498db, #2980b9);
+	background-image: -o-linear-gradient(top, #3498db, #2980b9);
+	background-image: linear-gradient(to bottom, #3498db, #2980b9);
+	padding: 4px;
+	
+	font-size: 120%;
+	font-weight: bold;
+}
+.button_checked {
+	border: 2px inset #3498db;
+	background: #3498db;
+	background-image: -webkit-linear-gradient(top, #3498db, #2980b9);
+	background-image: -moz-linear-gradient(top, #3498db, #2980b9);
+	background-image: -ms-linear-gradient(top, #3498db, #2980b9);
+	background-image: -o-linear-gradient(top, #3498db, #2980b9);
+	background-image: linear-gradient(to bottom, #3498db, #2980b9);
+	padding: 4px;
+	
+	font-size: 120%;
+	font-weight: bold;
+}
+</style>
+</head>
+
+<!-- END OF MASTER HEADER -->
+
+<!--SECOND SECTION: Lists Subsections for Questions below-->
+<body style="background-color:white">
+<div class="main_div">
+<h1 style="color:black";><a name="top"></a>Making an Image Quiz</h1>
+<div style="font-size: 140%; font-family: sans-serif">
+<ul>
+	<li><a href="#0">Frequency and Phase Encoding</a></li>
+	<li><a href="#1">Scanning and Quality Control</a></li>
+	
+</ul>
+
+<!-- Note the numbering of these subsections as they have a href values of #0, #1, #2, etc. These numbers are needed so that clicking on the index file takes you to the proper place in the web page identified on the 20 BLANK QUESTIONS script.-->
+
+
+
+</div>
+
+
+</div>
+
+
+
+</div>
+
+<div><div id="477952398672877204" align="left" style="width: 100%; overflow-y: hidden;" class="wcustomhtml"><!-- ###############NEW QUIZ SUBSECTION ##################-->
+
+<hr style="1px solid black">
+<!-- Creates optional line above new Quiz Subsection Title ---->
+
+<h1 style="color:black";><a name="0"></a>Frequency and Phase Encoding</h1>
+
+<!-- The Section Name and its corresponding number (here 0) which has an href in the index must be changed/filled in.  Note that the first section is identified as “0” here only;  and the second section is denoted “2”, etc. 
+
+This is confusing because subsequently it is denoted as Section 1 and reference to all questions in this section begin with a 1.  However, the first question of Section 1 is called question 0, presumably to assist in scoring.
+
+Thus, the first question of Section 1 is denoted as q_1_0 and its second question is denoted q_1_1.	
+
+When a second section of Questions is added, this is called Section 2 with first and second questions denoted q_2_0 and q_2_1. 
+
+Each section has counting variables corresponding to each question. So the counting variables  are denoted c_1_0 for the Section 1/first question, while c_2_1 counts for Section 2/second question. -->
+
+<!-- FOR THE PURPOSES OF THIS DOCUMENT WE WILL CONSIDER ALL QUESTIONS TO REFER TO SECTION FEPEQUIZ and are numbered consecutively. THE WORD DOCUMENT CAN THEN BE PUT INTO PROPER FORM BY “SEARCH AND REPLACE FEPEQUIZ BY THE APPROPRIATE SECTION NUMBER”-->
+
+
+<!-- ################ SECTION M, QUIZ QUESTION  1############## -->
+
+<ol><li style="margin-top: 8px"> What are the units for angular frequency (ω)?
+<ol type="a" id="q_FEPEQUIZ_0">
+
+<li ><input type=radio name="c_FEPEQUIZ_0" > Hertz (Hz)
+</li>
+		
+<li ><input type=radio name="c_FEPEQUIZ_0" > Cycles per second (cps)
+</li>
+
+		
+<li ><input type=radio name="c_FEPEQUIZ_0" > Radians per cycle
+</li>
+<li id="correct_FEPEQUIZ_0"><input type=radio name="c_FEPEQUIZ_0" id="c_FEPEQUIZ_0"> Radians per second
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_FEPEQUIZ_0" onclick="showAnswer('FEPEQUIZ_0')" value="Show Answer"></p>
+				
+<p class="explan" id="a_FEPEQUIZ_0"> Angular frequency (ω), also known as radial or circular frequency, measures angular displacement per unit time. Its units are therefore degrees (or radians) per second.
+<a href="angular-frequency-omega.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+
+<!-- ################ SECTION FEPEQUIZ, QUIZ QUESTION  2############## -->
+
+<li style="margin-top: 8px"> Approximately how many degrees are in one radian?
+<ol type="a" id="q_FEPEQUIZ_1">
+
+<li ><input type=radio name="c_FEPEQUIZ_1" > 30.0º
+</li>
+		
+<li ><input type=radio name="c_FEPEQUIZ_1" > 45.0º
+</li>
+
+<li id="correct_FEPEQUIZ_1"><input type=radio name="c_FEPEQUIZ_1" id="c_FEPEQUIZ_1"> 57.3º
+</li>
+		
+<li ><input type=radio name="c_FEPEQUIZ_1" >  71.7º
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_FEPEQUIZ_1" onclick="showAnswer('FEPEQUIZ_1')" value="Show Answer"></p>
+				
+<p class="explan" id="a_FEPEQUIZ_1"> By definition, 2π radians span the arc of one circle, or 360º. So 1 radian = 360/2π ≈ 57.3º
+<a href="angular-frequency-omega.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION FEPEQUIZ, QUIZ QUESTION  3############## -->
+
+<li style="margin-top: 8px"> A 180º-pulse is sometimes expressed using radians as a
+<ol type="a" id="q_FEPEQUIZ_2">
+<li ><input type=radio name="c_FEPEQUIZ_2" > π/2-pulse
+</li>
+
+<li id="correct_FEPEQUIZ_2"><input type=radio name="c_FEPEQUIZ_2" id="c_FEPEQUIZ_2"> π-pulse
+</li>
+
+		
+<li ><input type=radio name="c_FEPEQUIZ_2" > 3π/2-pulse
+</li>
+
+		
+<li ><input type=radio name="c_FEPEQUIZ_2" >  2π-pulse
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_FEPEQUIZ_2" onclick="showAnswer('FEPEQUIZ_2')" value="Show Answer"></p>
+				
+<p class="explan" id="a_FEPEQUIZ_2"> A 180º-pulse is half a circle, or a π-pulse.
+<a href="angular-frequency-omega.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION FEPEQUIZ, QUIZ QUESTION  4############## -->
+<li style="margin-top: 8px"> As gradients are turned on and off, the angular frequency (ω) of a spin changes with time (t), expressed by the function ω(t).   The area under the graph of ω(t) vs t between two time points (A and B) represents
+<ol type="a" id="q_FEPEQUIZ_3">
+<li id="correct_FEPEQUIZ_3"><input type=radio name="c_FEPEQUIZ_3" id="c_FEPEQUIZ_3"> The spin’s accumulated phase shift between A and B
+</li>
+
+<li ><input type=radio name="c_FEPEQUIZ_3" > The spin’s change in frequency between A and B
+</li>
+		
+<li ><input type=radio name="c_FEPEQUIZ_3" > The energy acquired by the spin between A and B
+</li>
+
+		
+<li ><input type=radio name="c_FEPEQUIZ_3" >  The change in field strength experienced by the spin between A and B
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_FEPEQUIZ_3" onclick="showAnswer('FEPEQUIZ_3')" value="Show Answer"></p>
+				
+<p class="explan" id="a_FEPEQUIZ_3"> The area under the ω(t) vs t curve represents the accumulated phase of the spin during a certain interval. From a unit perspective, frequency is measured in radians or degrees per second while time is measured in seconds, so their product [ω(t) x  t] will have units of radians (or degrees).
+<a href="phase-v-frequency.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+
+
+
+ 
+<!-- ################ SECTION FEPEQUIZ, QUIZ QUESTION  5############## -->
+
+<li style="margin-top: 8px"> The MR signal information received by the RF-coil can be classified as 
+<ol type="a" id="q_FEPEQUIZ_4">
+
+<li ><input type=radio name="c_FEPEQUIZ_4" > Frequency modulated
+</li>
+		
+
+<li id="correct_FEPEQUIZ_4"><input type=radio name="c_FEPEQUIZ_4" id="c_FEPEQUIZ_4"> Amplitude modulated
+</li>
+<li ><input type=radio name="c_FEPEQUIZ_4" > Phase modulated
+</li>
+<li ><input type=radio name="c_FEPEQUIZ_4" >  Pulse modulated
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_FEPEQUIZ_4" onclick="showAnswer('FEPEQUIZ_4')" value="Show Answer"></p>
+				
+<p class="explan" id="a_FEPEQUIZ_4"> MR signal information, typically encoded over a range of 50-100kHz, arrives at the receiver amplitude-modulated on the RF carrier wave (e.g. at 64 MHz). The first step in signal process is called demodulation, which removes the carrier.
+<a href="signal-squiggles.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION FEPEQUIZ, QUIZ QUESTION  6############## -->
+
+<li style="margin-top: 8px"> The real and imaginary components during of an MR signal in the I and Q channels of a receiver are measured at a specific time point to be 3.0 and 4.0 au (arbitrary units) respectively. What is the actual magnitude of the signal?
+<ol type="a" id="q_FEPEQUIZ_5">
+
+<li ><input type=radio name="c_FEPEQUIZ_5" > 3.5 au
+</li>
+		
+
+<li id="correct_FEPEQUIZ_5"><input type=radio name="c_FEPEQUIZ_5" id="c_FEPEQUIZ_5"> 5.0 au
+</li>
+<li ><input type=radio name="c_FEPEQUIZ_5" > 7.0 au
+</li>
+		
+<li ><input type=radio name="c_FEPEQUIZ_5" >  12.0 au
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_FEPEQUIZ_5" onclick="showAnswer('FEPEQUIZ_5')" value="Show Answer"></p>
+				
+<p class="explan" id="a_FEPEQUIZ_5"> The magnitude (M) = [Re² + Im²]<sup>½</sup> = [3² + 4²]<sup>½</sup>  [25]<sup>½</sup> = 5.0 au.
+<a href="real-v-imaginary.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION FEPEQUIZ, QUIZ QUESTION  7############## -->
+
+<li style="margin-top: 8px"> Concerning Fourier representation of the MR signal, which of the following statements is false?
+<ol type="a" id="q_FEPEQUIZ_6">
+
+<li ><input type=radio name="c_FEPEQUIZ_6" > The Fourier expansion of a signal can be written in either trigonometric or exponential form.
+</li>
+		
+<li ><input type=radio name="c_FEPEQUIZ_6" > To represent any real signal exactly, an infinite number of frequency components must be included in its Fourier representation.
+</li>
+
+<li id="correct_FEPEQUIZ_6"><input type=radio name="c_FEPEQUIZ_6" id="c_FEPEQUIZ_6"> The Fourier transformation converts a time-based signal into the frequency domain, but the change cannot be reversed.
+</li>
+		
+<li ><input type=radio name="c_FEPEQUIZ_6" >  The Fourier series representation of an MR image is always cut short (truncated).
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_FEPEQUIZ_6" onclick="showAnswer('FEPEQUIZ_6')" value="Show Answer"></p>
+				
+<p class="explan" id="a_FEPEQUIZ_6"> All are true except for (c).  Fourier transformation is the mathematical procedure connecting a time domain signal, s(t), and its frequency domain representation, S(ω). The <u>inverse</u> Fourier transform converts S(ω) back to s(t).
+
+<a href="fourier-transform-ft.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+	
+<!-- ################ SECTION FEPEQUIZ, QUIZ QUESTION  8############## -->
+
+<li style="margin-top: 8px"> The time domain signal, s(t), that corresponds to a uniform/rectangular band of frequencies in S(ω) is called a
+<ol type="a" id="q_FEPEQUIZ_7">
+
+<li ><input type=radio name="c_FEPEQUIZ_7" > Double exponential
+</li>
+		
+
+<li id="correct_FEPEQUIZ_7"><input type=radio name="c_FEPEQUIZ_7" id="c_FEPEQUIZ_7"> Sinc function
+</li>
+<li ><input type=radio name="c_FEPEQUIZ_7" > Gaussian
+</li>
+		
+<li ><input type=radio name="c_FEPEQUIZ_7" >  Lorentzian
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_FEPEQUIZ_7" onclick="showAnswer('FEPEQUIZ_7')" value="Show Answer"></p>
+				
+<p class="explan" id="a_FEPEQUIZ_7"> The sinc function, sinc(t) = [sin t]/t, Fourier transforms into a uniform band of frequencies, such as those used to define a slice profile in conventional 2D MR imaging <a href="fourier-transform-ft.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION FEPEQUIZ, QUIZ QUESTION  9############## -->
+
+<li style="margin-top: 8px"> Which of the following scientists did not win the Nobel Prize for their work in NMR?
+<ol type="a" id="q_FEPEQUIZ_8">
+
+<li ><input type=radio name="c_FEPEQUIZ_8" > Felix Bloch
+</li>
+		
+
+<li id="correct_FEPEQUIZ_8"><input type=radio name="c_FEPEQUIZ_8" id="c_FEPEQUIZ_8"> Raymond Damadian
+</li>
+<li ><input type=radio name="c_FEPEQUIZ_8" > Paul Lauterbur
+</li>
+		
+<li ><input type=radio name="c_FEPEQUIZ_8" >  Peter Mansfield
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_FEPEQUIZ_8" onclick="showAnswer('FEPEQUIZ_8')" value="Show Answer"></p>
+				
+<p class="explan" id="a_FEPEQUIZ_8"> Raymond Damadian did not win the Nobel Prize for his work and considered it a personal injustice. He placed full-page ads in several large world newspapers urging the Nobel committee to change their minds, which they never did. 
+<a href="who-invented-mri.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+<!-- ################ SECTION FEPEQUIZ, QUIZ QUESTION  10############## -->
+
+<li style="margin-top: 8px"> Which of the following is <u>not</u> a method for spatial localization of the MR signal?
+<ol type="a" id="q_FEPEQUIZ_9">
+
+<li ><input type=radio name="c_FEPEQUIZ_9" > Frequency encoding
+</li>
+		
+<li ><input type=radio name="c_FEPEQUIZ_9" > Phase encoding
+</li>
+<li ><input type=radio name="c_FEPEQUIZ_9" >  Location of receiver coils
+</li>
+
+<li id="correct_FEPEQUIZ_9"><input type=radio name="c_FEPEQUIZ_9" id="c_FEPEQUIZ_9"> Amplitude modulation
+</li>
+		
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_FEPEQUIZ_9" onclick="showAnswer('FEPEQUIZ_9')" value="Show Answer"></p>
+				
+<p class="explan" id="a_FEPEQUIZ_9"> Choice (d), amplitude modulation, refers to the shape of transmitted or received RF-pulses but is not by itself a method of spatial localization.
+<a href="how-to-locate-signals.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+<!-- ################ SECTION FEPEQUIZ, QUIZ QUESTION  11############## -->
+
+<li style="margin-top: 8px"> Which of the following statements about frequency encoding is incorrect?
+<ol type="a" id="q_FEPEQUIZ_10">
+
+<li ><input type=radio name="c_FEPEQUIZ_10" > It commonly used for in-plane localization for 2D imaging.
+</li>
+		
+
+<li id="correct_FEPEQUIZ_10"><input type=radio name="c_FEPEQUIZ_10" id="c_FEPEQUIZ_10"> It is commonly used for slice selection in 3D imaging.
+</li>
+<li ><input type=radio name="c_FEPEQUIZ_10" > Each voxel actually contains a range of frequencies, not just a single frequency.
+</li>
+		
+<li ><input type=radio name="c_FEPEQUIZ_10" >  For most applications a linear frequency encoding gradient is desired.
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_FEPEQUIZ_10" onclick="showAnswer('FEPEQUIZ_10')" value="Show Answer"></p>
+				
+<p class="explan" id="a_FEPEQUIZ_10"> All are correct except (b). Frequency encoding is commonly used for slice selection in 2D imaging, but phase encoding is typically used for slice selection in 3D.
+
+<a href="frequency-encoding.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+		
+
+
+
+
+
+<!-- ################ SECTION FEPEQUIZ, QUIZ QUESTION  12############## -->
+
+<li style="margin-top: 8px"> What is a typical total receiver bandwidth for a 1.5T MR scanner?
+<ol type="a" id="q_FEPEQUIZ_11">
+
+<li ><input type=radio name="c_FEPEQUIZ_11" > 1 kHz
+</li>
+		
+
+<li id="correct_FEPEQUIZ_11"><input type=radio name="c_FEPEQUIZ_11" id="c_FEPEQUIZ_11"> 50 kHz
+</li>
+		
+<li ><input type=radio name="c_FEPEQUIZ_11" >  250 kHz
+</li>
+<li ><input type=radio name="c_FEPEQUIZ_11" > 500 kHz
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_FEPEQUIZ_11" onclick="showAnswer('FEPEQUIZ_11')" value="Show Answer"></p>
+				
+<p class="explan" id="a_FEPEQUIZ_11"> Receiver bandwidth is an operator-selectable parameter, chosen by the technologist before the scan begins. Available values for total receiver BW range from about 5-100 kHz with 50kHz being typical.
+<a href="receiver-bandwidth.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+<!-- ################ SECTION FEPEQUIZ, QUIZ QUESTION  13############## -->
+
+<li style="margin-top: 8px"> What is the width of a pixel in the frequency encoding direction if the field-of-view is 25.6 cm and 512 frequency-encoding steps are used?
+<ol type="a" id="q_FEPEQUIZ_12">
+<li id="correct_FEPEQUIZ_12"><input type=radio name="c_FEPEQUIZ_12" id="c_FEPEQUIZ_12"> 0.5 mm
+</li>
+
+<li ><input type=radio name="c_FEPEQUIZ_12" > 1.0 mm
+</li>
+		
+<li ><input type=radio name="c_FEPEQUIZ_12" > 2.0 mm
+</li>
+
+		
+<li ><input type=radio name="c_FEPEQUIZ_12" >  5.0 mm
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_FEPEQUIZ_12" onclick="showAnswer('FEPEQUIZ_12')" value="Show Answer"></p>
+				
+<p class="explan" id="a_FEPEQUIZ_12"> Pixel width = FOV<sub>f</sub> ÷ # frequency encode steps = 256 mm ÷ 512 = 0.5 mm.
+
+<a href="receiver-bandwidth.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION FEPEQUIZ, QUIZ QUESTION  14############## -->
+
+<li style="margin-top: 8px"> If 256 complex measurements of a digitized MR signal are sampled in a period of 5.12 ms, what is the dwell time?
+<ol type="a" id="q_FEPEQUIZ_13">
+
+<li ><input type=radio name="c_FEPEQUIZ_13" > 5 μs
+</li>
+		
+<li ><input type=radio name="c_FEPEQUIZ_13" > 10 μs
+</li>
+
+<li id="correct_FEPEQUIZ_13"><input type=radio name="c_FEPEQUIZ_13" id="c_FEPEQUIZ_13"> 20 μs
+</li>
+		
+<li ><input type=radio name="c_FEPEQUIZ_13" >  200 μs
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_FEPEQUIZ_13" onclick="showAnswer('FEPEQUIZ_13')" value="Show Answer"></p>
+				
+<p class="explan" id="a_FEPEQUIZ_13"> The dwell time is the interval between digitized samples. So if 256 samples were obtained over a 5.12 ms period, the dwell time would be 5.12 ms/256 = 20 μs.
+
+<a href="receiver-bandwidth.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION FEPEQUIZ, QUIZ QUESTION  15############## -->
+
+<li style="margin-top: 8px"> What is the total receiver bandwidth if the interval between digitized samples (dwell time) is 25 μs?
+<ol type="a" id="q_FEPEQUIZ_14">
+
+<li ><input type=radio name="c_FEPEQUIZ_14" > 2,500 Hz
+</li>
+		
+<li ><input type=radio name="c_FEPEQUIZ_14" > 25,000 Hz
+</li>
+
+<li id="correct_FEPEQUIZ_14"><input type=radio name="c_FEPEQUIZ_14" id="c_FEPEQUIZ_14"> 40,000 Hz
+</li>
+		
+<li ><input type=radio name="c_FEPEQUIZ_14" >  50,000 Hz
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_FEPEQUIZ_14" onclick="showAnswer('FEPEQUIZ_14')" value="Show Answer"></p>
+				
+<p class="explan" id="a_FEPEQUIZ_14"> Total receiver BW is the same as the digitization <u>rate</u> of the MR signal. In equation form, BW = 1/t<sub>d</sub> = 1/(25 μs) = 40,000 Hz.
+<a href="receiver-bandwidth.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+<!-- ################ SECTION FEPEQUIZ, QUIZ QUESTION 16############## -->
+
+<li style="margin-top: 8px"> In clinical MR imaging at 1.5T, what frequency range would be typical for setting the receiver to  “narrow bandwidth”?
+<ol type="a" id="q_FEPEQUIZ_15">
+
+<li ><input type=radio name="c_FEPEQUIZ_15" > 1 – 5 kHz
+</li>
+		
+
+<li id="correct_FEPEQUIZ_15"><input type=radio name="c_FEPEQUIZ_15" id="c_FEPEQUIZ_15"> 5 – 20 kHz
+</li>
+<li ><input type=radio name="c_FEPEQUIZ_15" > 50 – 52 kHz
+</li>
+		
+<li ><input type=radio name="c_FEPEQUIZ_15" >  100 – 101 kHz
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_FEPEQUIZ_15" onclick="showAnswer('FEPEQUIZ_15')" value="Show Answer"></p>
+				
+<p class="explan" id="a_FEPEQUIZ_15"> A typical range for narrow receiver bandwidth would be choice (b), 5 – 20 kHz. 
+<a href="narrow-bandwidth.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION FEPEQUIZ, QUIZ QUESTION  17############## -->
+
+<li style="margin-top: 8px"> Which of the following statements about narrow bandwidth is incorrect?
+<ol type="a" id="q_FEPEQUIZ_16">
+<li id="correct_FEPEQUIZ_16"><input type=radio name="c_FEPEQUIZ_16" id="c_FEPEQUIZ_16"> Narrow BW implies reduced sampling time.
+</li>
+
+<li ><input type=radio name="c_FEPEQUIZ_16" > Narrow BW increases signal-to-noise.
+</li>
+		
+<li ><input type=radio name="c_FEPEQUIZ_16" > Narrow BW accentuates chemical shift artifacts.
+</li>
+
+		
+<li ><input type=radio name="c_FEPEQUIZ_16" >  Narrow BW accentuates susceptibility artifacts.
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_FEPEQUIZ_16" onclick="showAnswer('FEPEQUIZ_16')" value="Show Answer"></p>
+				
+<p class="explan" id="a_FEPEQUIZ_16"> Option (a) is false. Bandwidth is inversely proportional to sampling time. A synonym for "narrow bandwidth" is therefore "extended sampling time".
+<a href="narrow-bandwidth.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+<!-- ################ SECTION FEPEQUIZ, QUIZ QUESTION  18############## -->
+
+<li style="margin-top: 8px"> Which of the following statements about transmitter bandwidth is true?
+<ol type="a" id="q_FEPEQUIZ_17">
+
+<li ><input type=radio name="c_FEPEQUIZ_17" > It is automatically determined once receiver bandwidth is specified.
+</li>
+		
+
+<li id="correct_FEPEQUIZ_17"><input type=radio name="c_FEPEQUIZ_17" id="c_FEPEQUIZ_17"> Transmitter BW per se is not directly adjusted by the technologist when specifying scan parameters.
+</li>
+<li ><input type=radio name="c_FEPEQUIZ_17" > Typical values for transmit BW are 50-100 kHz.
+</li>
+		
+<li ><input type=radio name="c_FEPEQUIZ_17" >  Most modern RF-pulses for 2D slice-select are sinc-shaped.
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_FEPEQUIZ_17" onclick="showAnswer('FEPEQUIZ_17')" value="Show Answer"></p>
+				
+<p class="explan" id="a_FEPEQUIZ_17"> The transmit bandwidth is not usually user-adjustable, so choice (b) is true. Typical values are 1000-2000 Hz and are independent of receiver bandwidth. Simple sinc pulses are no longer used for slice select, being supplanted by more sophisticated designs using the SLR algorithm.
+
+<a href="slice-selective-excitation.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+		
+
+<!-- ################ SECTION FEPEQUIZ, QUIZ QUESTION  19############## -->
+
+<li style="margin-top: 8px"> Cross-talk can be reduced by all of the following methods except:
+<ol type="a" id="q_FEPEQUIZ_18">
+
+<li ><input type=radio name="c_FEPEQUIZ_18" > Increasing gaps between slices
+</li>
+		
+
+<li id="correct_FEPEQUIZ_18"><input type=radio name="c_FEPEQUIZ_18" id="c_FEPEQUIZ_18"> Increasing the strength of the slice-select gradient 
+</li>
+<li ><input type=radio name="c_FEPEQUIZ_18" > Performing slice interleaving
+</li>
+		
+<li ><input type=radio name="c_FEPEQUIZ_18" >  Improving the RF slice profile
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_FEPEQUIZ_18" onclick="showAnswer('FEPEQUIZ_18')" value="Show Answer"></p>
+				
+<p class="explan" id="a_FEPEQUIZ_18"> Increasing the strength of the slice-select gradient will only serve to produce thinner slices, not improve cross-talk.
+<a href="cross-talk.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+<!-- ################ SECTION FEPEQUIZ, QUIZ QUESTION  20############## -->
+
+<li style="margin-top: 8px"> The earliest commercial version of simultaneous slice excitation (offered by GE in the 1990s) applicable to single-channel RF coils was called
+<ol type="a" id="q_FEPEQUIZ_19">
+<li id="correct_FEPEQUIZ_19"><input type=radio name="c_FEPEQUIZ_19" id="c_FEPEQUIZ_19"> Phase Offset MultiPlanar (POMP)
+</li>
+
+<li ><input type=radio name="c_FEPEQUIZ_19" > MultiBand (MB)
+</li>
+		
+<li ><input type=radio name="c_FEPEQUIZ_19" > Simultaneous Multi-Slice (SMS)
+</li>
+
+		
+<li ><input type=radio name="c_FEPEQUIZ_19" >  HyperBand (HB)
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_FEPEQUIZ_19" onclick="showAnswer('FEPEQUIZ_19')" value="Show Answer"></p>
+				
+<p class="explan" id="a_FEPEQUIZ_19"> The historical precursor to modern MB/SMS methods was POMP (Phase Offset MultiPlanar) imaging. The POMP technique used a composite RF-pulse to simultaneously excite two slices, each of which were phase-encoded over only one-half of the total field-of-view (FOV). Phase alternation allowed the two slices to be separately reconstructed without overlap. Unlike SMS, POMP does not utilize parallel imaging technology and is hence applicable to single-channel RF coils.
+<a href="two-slices-at-once.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+		
+<!-- ################ SECTION FEPEQUIZ, QUIZ QUESTION  21############## -->
+
+<li style="margin-top: 8px"> Which of the following statements about MultiBand/Simultaneous Multi-Slice imaging is false?
+<ol type="a" id="q_FEPEQUIZ_20">
+
+<li ><input type=radio name="c_FEPEQUIZ_20" > Use of parallel imaging arrays is required.
+</li>
+		
+<li ><input type=radio name="c_FEPEQUIZ_20" > Acceleration factors of 2-4 are typical.
+</li>
+<li ><input type=radio name="c_FEPEQUIZ_20" >  The slices must be widely spaced apart (2-3 cm).
+</li>
+
+<li id="correct_FEPEQUIZ_20"><input type=radio name="c_FEPEQUIZ_20" id="c_FEPEQUIZ_20"> The technique imposes a significant penalty in terms of signal-to-noise.
+</li>
+		
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_FEPEQUIZ_20" onclick="showAnswer('FEPEQUIZ_20')" value="Show Answer"></p>
+				
+<p class="explan" id="a_FEPEQUIZ_20"> MB uses coil encoding together with either gradient- or RF-encoding to resolve data along the slice-select (z)-axis. Because modern coil arrays typically have only a few coil elements in the z-direction, coil sensitivity differences along that axis are rather poor. Accordingly the simultaneously excited slices must be spaced widely apart (typically at least 25−30 mm). Unlike standard parallel imaging acceleration techniques, MB/SMS acceleration results in little to no penalty in signal-to-noise. (Option <i>d</i> is false). This is because neither the echo train length, number of phase-encoding steps, nor number of k-space samples has been reduced as occurs in conventional parallel imaging acceleration methods. 
+<a href="simultaneous-multi-slice.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+
+
+		
+<!-- ################ SECTION FEPEQUIZ, QUIZ QUESTION  22############## -->
+
+<li style="margin-top: 8px"> What is the approximate in-plane pixel dimensions of a 25 x 25 cm FOV image acquired using 192 phase-encoding steps and 512 samples in the frequency direction <ol type="a" id="q_FEPEQUIZ_21">
+<li id="correct_FEPEQUIZ_21"><input type=radio name="c_FEPEQUIZ_21" id="c_FEPEQUIZ_21"> 1.3 x 0.5 mm
+</li>
+		
+
+<li ><input type=radio name="c_FEPEQUIZ_21" > 2.6 x 0.5 mm
+</li>
+		
+<li ><input type=radio name="c_FEPEQUIZ_21" > 1.3 x 5.0 mm
+</li>
+
+<li ><input type=radio name="c_FEPEQUIZ_21" >  2.6 x 5.0 mm
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_FEPEQUIZ_21" onclick="showAnswer('FEPEQUIZ_21')" value="Show Answer"></p>
+				
+<p class="explan" id="a_FEPEQUIZ_21"> The pixel width in the phase encode direction is 250 mm ÷ 192 ≈ 1.3 mm, while that in the frequency encode direction is 250 ÷ 512 ≈ 0.5 mm.
+<a href="pe-and-fe-together.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+
+
+
+
+		
+<!-- ################ SECTION FEPEQUIZ, QUIZ QUESTION  23############## -->
+
+<li style="margin-top: 8px"> Concerning 2D Fourier Transform imaging, which statement is false
+<ol type="a" id="q_FEPEQUIZ_22">
+
+<li ><input type=radio name="c_FEPEQUIZ_22" > The number of unique echo signals equals the number of phase-encoding steps.
+</li>
+		
+
+<li id="correct_FEPEQUIZ_22"><input type=radio name="c_FEPEQUIZ_22" id="c_FEPEQUIZ_22"> The phase shifts between successive echoes are multiples of 180º.
+</li>
+		
+<li ><input type=radio name="c_FEPEQUIZ_22" >  For low-amplitude phase-encodings the MR signal is strong but provides little information about spatial detail.
+</li>
+<li ><input type=radio name="c_FEPEQUIZ_22" > For high-amplitude phase-encodings the MR signal is weak and provides little information about image contrast.
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_FEPEQUIZ_22" onclick="showAnswer('FEPEQUIZ_22')" value="Show Answer"></p>
+				
+<p class="explan" id="a_FEPEQUIZ_22"> Choice (b) is false. The phase shifts between the rows are not simple multiples of 180°, but vary from echo to echo depending on the size of the phase-encoding step. The number of echo signals acquired equals the number of phase encode steps, which is usually 192 or 256.  For low order phase-encodings, the MR signal is strong. The frequency projection approximates the general shape of the object but lacks edge definition.  The higher order phase encode steps have smaller MR signals but provide more information about spatial detail, such as the location of edges.
+<a href="2dft-reconstruction.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+
+
+
+		
+<!-- ################ SECTION FEPEQUIZ, QUIZ QUESTION  24############## -->
+
+<li style="margin-top: 8px"> Why is the phase-encode direction often chosen along the shortest anatomic dimension?
+<ol type="a" id="q_FEPEQUIZ_23">
+<li id="correct_FEPEQUIZ_23"><input type=radio name="c_FEPEQUIZ_23" id="c_FEPEQUIZ_23"> This reduces wrap-around artifact.
+</li>
+
+<li ><input type=radio name="c_FEPEQUIZ_23" > This reduces flow-related artifact.
+</li>
+		
+<li ><input type=radio name="c_FEPEQUIZ_23" > This reduces artifacts from gross patient motion.
+</li>
+
+		
+<li ><input type=radio name="c_FEPEQUIZ_23" >  It is a requirement for parallel imaging.
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_FEPEQUIZ_23" onclick="showAnswer('FEPEQUIZ_23')" value="Show Answer"></p>
+				
+<p class="explan" id="a_FEPEQUIZ_23"> Wrap-around (also called aliasing) occurs when the size of the body part imaged exceeds the defined field-of-view (FOV) in the phase-encode direction. This causes anatomy outside the FOV to be folded in over the main part of the image. To avoid wrap-around the phase-encoding direction is usually chosen to be along the shortest anatomic dimension. Flow-related and other motion artifacts may be moved around by changing the phase-encode direction, but the best direction is based on the location and types of these artifacts, which may or may not be best along the shortest dimension.  For parallel imaging there may be some restrictions on possible phase-encode directions allowed, but setting phase-encode along the shortest axis is not necessarily required.
+<a href="choosing-pefe-direction.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+<!-- ################ SECTION FEPEQUIZ, QUIZ QUESTION  25############## -->
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+
+
+
+
+
+
+
+
+
+
+
+<!--##################################################-->
+<!--############SCORING SECTION Needs to go at end of each subsection-->
+
+</ol><p><input type=button id="show_all_FEPEQUIZ" onclick="showAllAnswers('FEPEQUIZ')" value="Show All Answers for Section"><span style="font-weight: bold" id="scoretxt_FEPEQUIZ"></span></p>
+<p><a href="#top">Back to top of page</a></p></div>
+<!--END OF SCORING SECTION-->
+
+
+
+</div>
+
+
+
+</div>
+
+<div><div id="280500443877646213" align="left" style="width: 100%; overflow-y: hidden;" class="wcustomhtml"><!-- ###############NEW QUIZ SUBSECTION ##################-->
+
+<hr style="1px solid black">
+<!-- Creates optional line above new Quiz Subsection Title ---->
+
+<h1 style="color:black";><a name="1"></a> Scanning and Quality Control
+</h1>
+
+<!-- The Section Name and its corresponding number (here 0) which has an href in the index must be changed/filled in.  Note that the first section is identified as “0” here only;  and the second section is denoted “2”, etc. 
+
+This is confusing because subsequently it is denoted as Section 1 and reference to all questions in this section begin with a 1.  However, the first question of Section 1 is called question 0, presumably to assist in scoring.
+
+Thus, the first question of Section 1 is denoted as q_1_0 and its second question is denoted q_1_1.	
+
+When a second section of Questions is added, this is called Section 2 with first and second questions denoted q_2_0 and q_2_1. 
+
+Each section has counting variables corresponding to each question. So the counting variables  are denoted c_1_0 for the Section 1/first question, while c_2_1 counts for Section 2/second question. -->
+
+<!-- FOR THE PURPOSES OF THIS DOCUMENT WE WILL CONSIDER ALL QUESTIONS TO REFER TO SECTION SCQUCON and are numbered consecutively. THE WORD DOCUMENT CAN THEN BE PUT INTO PROPER FORM BY “SEARCH AND REPLACE SCQUCON BY THE APPROPRIATE SECTION NUMBER”-->
+
+
+<!-- ################ SECTION M, QUIZ QUESTION  1############## -->
+
+<ol><li style="margin-top: 8px"> Which steps in setting up an MR scan are in the proper chronological order?
+<ol type="a" id="q_SCQUCON_0">
+
+<li ><input type=radio name="c_SCQUCON_0" > Set landmark → Perform prescan → Acquire localizer → Position slices 
+</li>
+		
+<li ><input type=radio name="c_SCQUCON_0" > Acquire localizer → Position slices → Set landmark → Perform prescan
+</li>
+
+<li id="correct_SCQUCON_0"><input type=radio name="c_SCQUCON_0" id="c_SCQUCON_0"> Set landmark → Acquire localizer → Position slices → Perform prescan
+</li>
+		
+<li ><input type=radio name="c_SCQUCON_0" > Perform prescan → Acquire localizer → Set landmark → Position slices 
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_SCQUCON_0" onclick="showAnswer('SCQUCON_0')" value="Show Answer"></p>
+				
+<p class="explan" id="a_SCQUCON_0"> Choice (c) shows the correct order.
+<a href="what-are-the-steps.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+
+<!-- ################ SECTION SCQUCON, QUIZ QUESTION  2############## -->
+
+<li style="margin-top: 8px"> Which process in the list below is <u>not</u> a part of automatic prescan?
+<ol type="a" id="q_SCQUCON_1">
+<li id="correct_SCQUCON_1"><input type=radio name="c_SCQUCON_1" id="c_SCQUCON_1"> Specific Absorption Rate (SAR) estimation
+</li>
+
+<li ><input type=radio name="c_SCQUCON_1" > Quick shimming
+</li>
+<li ><input type=radio name="c_SCQUCON_1" > Center frequency adjustment
+</li>
+		
+<li ><input type=radio name="c_SCQUCON_1" > Transmitter gain adjustment
+</li>
+
+		
+<li ><input type=radio name="c_SCQUCON_1" >  Receiver gain adjustment
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_SCQUCON_1" onclick="showAnswer('SCQUCON_1')" value="Show Answer"></p>
+				
+<p class="explan" id="a_SCQUCON_1"> Specific Absorption Rate (SAR) is estimated by the scanner based on the patient’s body weight, pulse sequence, and pulse sequence parameters selected. This occurs <i>before</i> automatic prescan, allowing the operator to adjust parameters to keep SAR within established limits. Automatic prescan is essentially the last step before the actual scan begins.
+
+<a href="automatic-prescan.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION SCQUCON, QUIZ QUESTION  3############## -->
+
+<li style="margin-top: 8px"> In which of the following situations is manual shimming (in addition to prescan quick shimming) nearly always required?
+<ol type="a" id="q_SCQUCON_2">
+
+<li ><input type=radio name="c_SCQUCON_2" > Diffusion-weighted imaging
+</li>
+		
+
+<li id="correct_SCQUCON_2"><input type=radio name="c_SCQUCON_2" id="c_SCQUCON_2"> MR Spectroscopy
+</li>
+<li ><input type=radio name="c_SCQUCON_2" > Fast-spin echo imaging
+</li>
+		
+<li ><input type=radio name="c_SCQUCON_2" >  Dixon fat-water imaging
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_SCQUCON_2" onclick="showAnswer('SCQUCON_2')" value="Show Answer"></p>
+				
+<p class="explan" id="a_SCQUCON_2"> Very detailed high-order shimming is mandatory for spectroscopy. Although spectroscopy shimming can be automated, the settings always require review and often tweaking by the MR technologist.
+<a href="routine-shimming.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION SCQUCON, QUIZ QUESTION  4############## -->
+<li style="margin-top: 8px"> In which of the following situations is center frequency adjustment most critical?
+<ol type="a" id="q_SCQUCON_3">
+
+<li ><input type=radio name="c_SCQUCON_3" > When using spatial saturation pulses
+</li>
+		
+<li ><input type=radio name="c_SCQUCON_3" > When using flow saturation pulses
+</li>
+<li ><input type=radio name="c_SCQUCON_3" >  When using arterial spin labeling pulses
+</li>
+
+<li id="correct_SCQUCON_3"><input type=radio name="c_SCQUCON_3" id="c_SCQUCON_3"> When using fat saturation pulses
+</li>
+		
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_SCQUCON_3" onclick="showAnswer('SCQUCON_3')" value="Show Answer"></p>
+				
+<p class="explan" id="a_SCQUCON_3"> The center frequency may be set on water protons, fat protons, or some average of the two.  Accurate center frequency setting is particularly important when spectral fat saturation pulses are employed to make sure the fat peak is adequately suppressed.
+
+<a href="center-frequency.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+
+
+
+ 
+<!-- ################ SECTION SCQUCON, QUIZ QUESTION  5############## -->
+
+<li style="margin-top: 8px"> What artifact will occur if the receiver attenuator value is set too low during prescan?
+<ol type="a" id="q_SCQUCON_4">
+<li id="correct_SCQUCON_4"><input type=radio name="c_SCQUCON_4" id="c_SCQUCON_4"> Data clipping
+</li>
+
+<li ><input type=radio name="c_SCQUCON_4" > Wrap around
+</li>
+		
+<li ><input type=radio name="c_SCQUCON_4" > Ghosts
+</li>
+
+		
+<li ><input type=radio name="c_SCQUCON_4" >  Diffuse noise
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_SCQUCON_4" onclick="showAnswer('SCQUCON_4')" value="Show Answer"></p>
+				
+<p class="explan" id="a_SCQUCON_4"> If the attenuator value is set too low (i.e., receiver gain is set too high), then the signal will overload the analog-to-digital converter, and data clipping will occur. Since the largest peaks of the MR signal typically are the low order phase-encode steps at the center of k-space, data clipping interferes with image contrast. The result is an image with an "eerie" appearance
+<a href="receiver-gain.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION SCQUCON, QUIZ QUESTION  6############## -->
+
+<li style="margin-top: 8px"> What is the purpose of dummy cycles during prescan?
+<ol type="a" id="q_SCQUCON_5">
+
+<li ><input type=radio name="c_SCQUCON_5" > To adjust RF-voltage to achieve a perfect 90º-pulse
+</li>
+		
+<li ><input type=radio name="c_SCQUCON_5" > To allow warm-up of the transmit and receive circuitry
+</li>
+<li ><input type=radio name="c_SCQUCON_5" >  To optimally match coil impedance with that of the patient
+</li>
+
+<li id="correct_SCQUCON_5"><input type=radio name="c_SCQUCON_5" id="c_SCQUCON_5"> To allow steady state longitudinal and transverse magnetization to be established
+</li>
+		
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_SCQUCON_5" onclick="showAnswer('SCQUCON_5')" value="Show Answer"></p>
+				
+<p class="explan" id="a_SCQUCON_5"> Once RF-excitation begins, the longitudinal and transverse magnetizations need time to reach their steady-state values. During prescan the scanner plays out several cycles of the sequence without recording a signal. These are called dummy cycles, disabled, or discarded acquisitions (DDA). The precise number of dummy cycles depends on the TR and the sequence chosen. Only once the system is near equilibrium does data collection begin.
+<a href="dummy-cycles.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION SCQUCON, QUIZ QUESTION  7############## -->
+
+<li style="margin-top: 8px"> To sell an MR scanner in the United States, a company must receive what kind of premarket clearance from the Food and Drug Administration?
+<ol type="a" id="q_SCQUCON_6">
+
+<li ><input type=radio name="c_SCQUCON_6" > 401(k)
+</li>
+		
+
+<li id="correct_SCQUCON_6"><input type=radio name="c_SCQUCON_6" id="c_SCQUCON_6"> 501(k)
+</li>
+<li ><input type=radio name="c_SCQUCON_6" > 1099
+</li>
+		
+<li ><input type=radio name="c_SCQUCON_6" >  457(b)
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_SCQUCON_6" onclick="showAnswer('SCQUCON_6')" value="Show Answer"></p>
+				
+<p class="explan" id="a_SCQUCON_6">In the United States the Food and Drug Administration (FDA) has statutory authority to regulate the sale and use of MRI equipment. MRI scanners are considered Class II devices, meaning that they have the potential for human harm and require pre-market 501(k) clearance prior to marketing. The FDA has issued guidance documents with non-binding (but strongly suggested) criteria — including those related to hardware, software, performance, site planning, and safety — to attain this premarket approval. The other numbers are all IRS forms and investment accounts unrelated to MRI<a href="who-regulates-mri.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+	
+<!-- ################ SECTION SCQUCON, QUIZ QUESTION  8############## -->
+
+<li style="margin-top: 8px"> Which of the following organizations does <u>not</u> offer MRI accreditation in the United States?
+<ol type="a" id="q_SCQUCON_7">
+
+<li ><input type=radio name="c_SCQUCON_7" > American College of Radiology (ACR)
+</li>
+		
+
+<li id="correct_SCQUCON_7"><input type=radio name="c_SCQUCON_7" id="c_SCQUCON_7"> Centers for Medicare & Medicaid Services (CMS) 
+</li>
+		
+<li ><input type=radio name="c_SCQUCON_7" >  RadSite
+</li>
+<li ><input type=radio name="c_SCQUCON_7" > The Joint Commission (TJC)
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_SCQUCON_7" onclick="showAnswer('SCQUCON_7')" value="Show Answer"></p>
+				
+<p class="explan" id="a_SCQUCON_7"> In the US there are four MRI accrediting organizations that are currently sanctioned by the Centers for Medicare & Medicaid Services (CMS) – the American College of Radiology (ACR), the Intersocietal Accreditation Commission (IAC), The Joint Commission (TJC), and RadSite.
+<a href="who-accredits.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION SCQUCON, QUIZ QUESTION  9############## -->
+
+<li style="margin-top: 8px"> Which of the following quality control measurements must be performed at least weekly on an MR scanner?
+<ol type="a" id="q_SCQUCON_8">
+<li id="correct_SCQUCON_8"><input type=radio name="c_SCQUCON_8" id="c_SCQUCON_8"> Center frequency
+</li>
+
+<li ><input type=radio name="c_SCQUCON_8" > Magnetic field homogeneity
+</li>
+		
+<li ><input type=radio name="c_SCQUCON_8" > Slice thickness accuracy
+</li>
+
+		
+<li ><input type=radio name="c_SCQUCON_8" >  Monitor resolution
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_SCQUCON_8" onclick="showAnswer('SCQUCON_8')" value="Show Answer"></p>
+				
+<p class="explan" id="a_SCQUCON_8"> Daily QC activities include visual inspection of all scanner hardware, the function of safety and communication devices, and general assessment of image quality including identification of artifacts. On at least a weekly basis, a special MR phantom is placed in the scanner and various measurements are made and recorded.  Such measurements include landmark accuracy (table position), center frequency, image uniformity, transmitter gain or attenuation, geometric distortion, spatial resolution, artifact evaluation, and signal-to-noise ratio. Other more sophisticated testing should be performed semiannually or yearly by a medical physicist.
+<a href="routine-quality-control.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+<!-- ################ SECTION SCQUCON, QUIZ QUESTION  10############## -->
+
+<li style="margin-top: 8px"> The most common cause of geometric errors is
+<ol type="a" id="q_SCQUCON_9">
+
+<li ><input type=radio name="c_SCQUCON_9" > Warping of the MR phantom
+</li>
+		
+<li ><input type=radio name="c_SCQUCON_9" > Abnormal RF-coil impedance
+</li>
+
+<li id="correct_SCQUCON_9"><input type=radio name="c_SCQUCON_9" id="c_SCQUCON_9"> Miscalibration of one or more imaging gradients
+</li>
+		
+<li ><input type=radio name="c_SCQUCON_9" >  Center frequency drift
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_SCQUCON_9" onclick="showAnswer('SCQUCON_9')" value="Show Answer"></p>
+				
+<p class="explan" id="a_SCQUCON_9"> The most common cause of geometric errors is miscalibration of one or more imaging gradients. Gradients tend to drift over time and require periodic re-calibration by service engineers. Occasionally the problem is caused by Bo inhomogeneity due to improper shim adjustments or an occult ferromagnetic object lodged in the scanner bore.
+
+<a href="geometric-accuracy.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+<!-- ################ SECTION SCQUCON, QUIZ QUESTION  11############## -->
+
+<li style="margin-top: 8px"> Detailed procedures and standards for the two most commonly used methods of measuring signal-to-noise in a phantom come from which organization?
+<ol type="a" id="q_SCQUCON_10">
+<li id="correct_SCQUCON_10"><input type=radio name="c_SCQUCON_10" id="c_SCQUCON_10"> The National Electrical Manufacturers Association (NEMA)
+</li>
+
+<li ><input type=radio name="c_SCQUCON_10" > The International Electrotechnical Commission (IEC)
+</li>
+		
+<li ><input type=radio name="c_SCQUCON_10" > The International Commission on Non-Ionizing Radiation Protection (ICNIRP)
+</li>
+
+		
+<li ><input type=radio name="c_SCQUCON_10" >  The American Society for Testing and Materials (ASTM International)
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_SCQUCON_10" onclick="showAnswer('SCQUCON_10')" value="Show Answer"></p>
+				
+<p class="explan" id="a_SCQUCON_10"> The National Electrical Manufacturers Association (NEMA) provides detailed methods and standards for evaluating all types of electrical devices. Those relating specifically to MRI quality include how to measure signal-to-noise (MS 1, 6, & 9), geometric distortion (MS 2 & 12), and uniformity (MS 3).
+<a href="signal-to-noise.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+		
+
+
+
+
+
+<!-- ################ SECTION SCQUCON, QUIZ QUESTION  12############## -->
+
+<li style="margin-top: 8px"> When complex-valued MR signal data is converted into a magnitude image, the noise statistics are best described using a
+
+<ol type="a" id="q_SCQUCON_11">
+
+<li ><input type=radio name="c_SCQUCON_11" > Gaussian (normal) distribution
+</li>
+		
+<li ><input type=radio name="c_SCQUCON_11" > Poisson distribution
+</li>
+<li ><input type=radio name="c_SCQUCON_11" >  Gamma distribution
+</li>
+
+<li id="correct_SCQUCON_11"><input type=radio name="c_SCQUCON_11" id="c_SCQUCON_11"> Rician distribution
+</li>
+		
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_SCQUCON_11" onclick="showAnswer('SCQUCON_11')" value="Show Answer"></p>
+				
+<p class="explan" id="a_SCQUCON_11"> Because region-of-interest (ROI) measurements are typically made on magnitude-reconstructed images, some correction to the statistics must take place. Recall that "raw" MR data is a complex number with real and imaginary parts. When converted to a magnitude only image, the pixel values corresponding to noise are no longer Gaussian, but skewed into a so-called Rician distribution. 
+<a href="signal-to-noise.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+<!-- ################ SECTION SCQUCON, QUIZ QUESTION  13############## -->
+
+<li style="margin-top: 8px"> The section of an MR phantom consisting of closely spaced lines or holes containing material with strong difference in signal intensity from the background is used to measure
+<ol type="a" id="q_SCQUCON_12">
+
+<li ><input type=radio name="c_SCQUCON_12" > Low-contrast object detectability
+</li>
+		
+<li ><input type=radio name="c_SCQUCON_12" > Geometric distortion
+</li>
+
+<li id="correct_SCQUCON_12"><input type=radio name="c_SCQUCON_12" id="c_SCQUCON_12"> High-contrast spatial resolution
+</li>
+		
+<li ><input type=radio name="c_SCQUCON_12" >  Image uniformity
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_SCQUCON_12" onclick="showAnswer('SCQUCON_12')" value="Show Answer"></p>
+				
+<p class="explan" id="a_SCQUCON_12"> The high-contrast portion of MR phantoms contains closely spaced lines, edges, or holes containing material with strong differences in signal intensity from background. Low-contrast resolution refers to the ability to identify small holes in the phantom with only slightly different relaxation times from background.
+
+
+<a href="image-resolution.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+<!-- ################ SECTION SCQUCON, QUIZ QUESTION  14############## -->
+
+<li style="margin-top: 8px"> The section of an MR phantom consisting of triangular ramps or wedges oriented at a known angle is used to measure
+<ol type="a" id="q_SCQUCON_13">
+<li id="correct_SCQUCON_13"><input type=radio name="c_SCQUCON_13" id="c_SCQUCON_13"> Slice thickness
+</li>
+
+<li ><input type=radio name="c_SCQUCON_13" > Slice position
+</li>
+		
+<li ><input type=radio name="c_SCQUCON_13" > Linear accuracy
+</li>
+
+		
+<li ><input type=radio name="c_SCQUCON_13" >  Low-contrast resolution
+</li>
+		
+</ol>
+		
+<p style="margin-top: 2px; margin-bottom: 2px"><input type=button id="show_SCQUCON_13" onclick="showAnswer('SCQUCON_13')" value="Show Answer"></p>
+				
+<p class="explan" id="a_SCQUCON_13"> The most common method to estimate slice thickness is to use a phantom containing triangular ramps or wedges whose surfaces are oriented at a known angle (θ) to the plane of the slice. When a slice passes through the ramp, it produces a stretched "shadow" image whose full width half maximum (FWHM) can be estimated.
+<a href="slice-parameters.html" target="_blank"> Link to Q&A discussion</a> 
+</p>
+
+<!-- END OF CODE FOR A SINGLE QUIZ QUESTION WITH ANSWER-->
+
+		
+
+		
+		
+
+
+
+
+
+
+
+
+<!--##################################################-->
+<!--############SCORING SECTION Needs to go at end of each subsection-->
+
+</ol><p><input type=button id="show_all_SCQUCON" onclick="showAllAnswers('SCQUCON')" value="Show All Answers for Section"><span style="font-weight: bold" id="scoretxt_SCQUCON"></span></p>
+<p><a href="#top">Back to top of page</a></p></div>
+<!--END OF SCORING SECTION-->
+
+
+
+</div>
+
+
+
+</div>
+</div>

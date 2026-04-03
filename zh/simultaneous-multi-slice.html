@@ -1,0 +1,127 @@
+<div id="content"><div id="wsite-content" class="wsite-elements wsite-not-footer">
+	<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<h2 class="wsite-content-title" style="text-align:center;">多频带/同步多层成像</h2>
+
+<div class="paragraph" style="text-align:center;"><font size="4"><strong style="color:rgb(135, 135, 135)"><em><font color="#0376be">同步多层成像如何工作？&nbsp;</font></em></strong><strong style="color:rgb(55, 138, 87)"><em>&nbsp;</em></strong></font></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-thin" style="padding-top:0px;padding-bottom:10px;margin-left:0px;margin-right:0px;text-align:center">
+<a href='uploads/3/4/5/7/34572113/screen-shot-2017-07-28-at-4-13-51-pm_orig.png' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/screen-shot-2017-07-28-at-4-13-51-pm_orig.png" alt="多频带同步多层成像" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;"><em><strong><font color="#24678d">同步多层成像</font></strong></em><font color="#2a2a2a">，也称为</font><em><strong><font color="#24678d">多频带成像</font></strong></em><font color="#2a2a2a">，它采用复杂的射频脉冲结合并行成像线圈阵列，沿</font><em style="color: rgb(42, 42, 42);">z</em><font color="#2a2a2a">轴同时采集多个层面。这可以在几乎不损失信噪比的情况下，显著缩短图像采集时间。</font></div>
+
+<div class="paragraph"><font color="#2a2a2a">如</font><a href="two-slices-at-once.html">先前问答所述</a><font color="#2a2a2a">，现代多频带/同步多层成像方法的历史前身是</font><em><strong><font color="#24678d">相位偏移多平面成像</font></strong></em><font color="#2a2a2a">。该技术使用复合射频脉冲同时激励两个层面，每个层面仅在总视野的一半范围内进行相位编码。相位交替使得两个层面能够被分别重建而不会重叠。与同步多层成像不同，相位偏移多平面成像不利用并行成像技术，因此适用于单通道射频线圈。</font></div>
+
+<div class="paragraph"><font color="#2a2a2a">与相位偏移多平面成像类似，多频带成像始于一个同时激励多个层面的复合脉冲。多频带脉冲可以通过多种方式设计，但最直接的方法是将几个具有不同相位偏移的标准射频波形叠加在一起。同时采集的层数被称为</font><em><strong><font color="#24678d">多频带或同步多层成像加速因子</font></strong></em><font color="#2a2a2a">。在当前的商业实现中（西门子的</font><em><strong><font color="#24678d">同步多层成像</font></strong></em><font color="#2a2a2a">、GE的</font><em><strong><font color="#24678d">超频带</font></strong></em><font color="#2a2a2a">、飞利浦的</font><em><strong><font color="#24678d">多频带 SENSE</font></strong></em><font color="#2a2a2a">以及佳能的</font><font color="#24678d"><em><strong>多频带 SPEEDER</strong></em></font><font color="#2a2a2a">），加速因子通常为 2-4。</font><br></div>
+
+<span class='imgPusher' style='float:left;height:0px'></span><span style='display: table;width:408px;position:relative;float:left;max-width:100%;;clear:left;margin-top:0px;*margin-top:0px'><a href='uploads/3/4/5/7/34572113/multiband-thinner-slices_orig.gif' rel='lightbox' onclick='if (!lightboxLoaded) return false'><img src="uploads/3/4/5/7/34572113/published/multiband-thinner-sliceseb40.gif?1501610265" style="margin-top: 0px; margin-bottom: 0px; margin-left: 0px; margin-right: 10px; border-width:1px;padding:3px; max-width:100%" alt="使用线圈的多频带成像" class="galleryImageBorder wsite-image" /></a><span style="display: table-caption; caption-side: bottom; font-size: 90%; margin-top: -0px; margin-bottom: 0px; text-align: center;" class="wsite-caption"></span></span>
+<div class="paragraph" style="display:block;"><span><font color="#2a2a2a">为了利用并行成像加速，多频带成像结合线圈编码与梯度或射频编码，以解析沿层面选择（<em>z</em>）轴的数据。由于现代线圈阵列通常在<em>z</em>方向上只有少数几个线圈单元，沿该轴的线圈灵敏度差异相当有限。因此，同时激励的层面必须间隔较远（通常至少 25&minus;30 mm），如图所示。然后使用交错技术来激励间隙中缺失的层面。</font></span><br /><span></span></div>
+<hr style="width:100%;clear:both;visibility:hidden;"></hr>
+
+<div class="paragraph" style="text-align:skip_to_justify;"><font color="#2a2a2a">为了克服线圈编码的限制，人们开发了</font><em><strong><font color="#24678d">CAIPIRINHA</font></strong></em><font color="#2a2a2a">技术。CAIPIRINHA 代表“并行成像中的受控混叠带来更高加速”，是<a href="caipirinha.html">后续问答的主题</a>。其基本思想是，为了避免重建中的重叠，可以以“受控”的方式在相位编码方向上偏移同时激励的层面。因此，即使线圈在</font><em style="color:rgb(42, 42, 42)">z</em><font color="#2a2a2a">方向上的编码能力很弱，非常接近的层面也能被分离。</font><span style="color:rgb(42, 42, 42)">&nbsp; </span><font color="#2a2a2a">目前用于血氧水平依赖和扩散加权同步多层成像最广泛使用的方法称为</font><em><strong><font color="#24678d">blipped-CAIPI</font></strong></em><font color="#2a2a2a">，其名称源于使用短促的梯度回绕脉冲，在赋予相邻<em>k</em>空间线之间恒定相位偏移的同时，将相位累积保持在 &plusmn;180&ordm; 范围内。同步多层成像数据的重建可以使用 SENSE、GRAPPA 或混合技术进行。由于快速采集的数据量巨大，计算需求很高，图像重建时间可能很长。</font></div>
+
+<div><div class="wsite-image wsite-image-border-none" style="padding-top:10px;padding-bottom:10px;margin-left:0px;margin-right:0px;text-align:center">
+<a href='uploads/3/4/5/7/34572113/multiband-pulse-blipped-caipi_orig.gif' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/4/5/7/34572113/editor/multiband-pulse-blipped-caipicabe.gif?1501268669" alt="Blipped-CAIPI 同步多层成像" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%"><b>用于平面回波成像的 blipped-CAIPI 方法。</b> 一个多频带脉冲与层面选择梯度一起同时激励三个层面。平面内的<em>k</em>空间通过频率（读出）梯度的振荡和沿相位编码方向的步进来遍历。在读出梯度切换期间，沿层面选择方向施加“短促”的梯度脉冲（红色），并与相位编码脉冲同时进行。这在同时激励的层面之间产生了所需的恒定相位调制。每第三个短促脉冲幅度更大且极性相反，用于回绕净相位并使梯度矩归一化。最终结果是在 FOV/3 范围内产生“受控”的混叠。
+</div>
+</div></div>
+
+<div class="paragraph"><span><font color="#2a2a2a">与标准的并行成像加速技术不同，多频带/同步多层成像加速几乎不会导致信噪比损失。这是因为回波链长度、相位编码步数或<em>k</em>空间采样点数都没有像传统并行成像加速方法那样减少。然而，快速梯度切换引起的涡流仍可能产生类似奈奎斯特的伪影，影响同步多层成像图像。另一种导致同步多层成像图像质量下降的伪影被称为</font><em><strong><font color="#24678d">残余混叠</font></strong></em><font color="#2a2a2a">或</font><em><strong><font color="#24678d">层间泄漏</font></strong></em><font color="#2a2a2a">。这种重建伪影可能非常隐蔽，仅在某些图像上表现为模糊的噪声。对于依赖于一次采集中相邻层面预期信号相同的功能磁共振成像研究来说，这尤其成问题。&nbsp;</font></span></div>
+
+<div><div id="516268848544212623" align="left" style="width: 100%; overflow-y: hidden;" class="wcustomhtml"><html> <head><script src="gdpr/gdprscript6f19.js?buildTime=1774025472"></script> <script type="text/javascript" 
+></script> 
+<script type="text/javascript">
+		$(function() {$('#Q').click(function() {$('.Q').toggle(500); return false;});});</script></head><body>
+<a href="#" id=Q><h3><font color="#378a57">进阶讨论（显示/隐藏）»</font></h3></a><div class=Q style="display:none;">
+
+<!--content goes below here-->
+
+<p>多频带脉冲的设计可能具有挑战性。随着同时采集层数的增加，射频放大器的峰值幅度可能被超过，总脉冲功率可能超过<font color="#0376be"><b><i>比吸收率</b></i></font>限制。降低射频脉冲峰值幅度的方法包括对重叠脉冲进行时间和相位偏移。功率缩放和降低技术包括<font color="#0376be"><b><i>可变速率激励</b></i></font>和<font color="#0376be"><b><i>与层数无关的功率激励</b></i></font>。可变速率激励和与层数无关的功率激励都通过在<em>k</em>空间遍历期间动态调整层面选择梯度来限制射频功率沉积。并行发射方法也可用于最小化射频幅度和功率需求。</p>
+
+<p>虽然不如单回波多频带成像使用广泛，但同步多层成像也可以通过使用<font color="#0376be"><b><i>同步回波（图像）重聚焦</b></i></font>来加速。在这种方法中，两个射频脉冲在时间上非常接近地施加，并且随着读出梯度的每次振荡，会采集到两个回波而不是一个。这使得同时采集的层数可以翻倍，但确实存在局限性，即每个回波的采样窗口更短（降低了信噪比），而总采样窗口延长（使得 T2 衰减效应可能影响信号）。最初提出的同步回波重聚焦并不利用并行成像。然而，同步多层成像和同步回波重聚焦可以结合使用，这种技术被称为<font color="#0376be"><b><i>多路复用平面回波成像</b></i></font>。从而可以获得显著的加速提升。例如，同步多层成像因子为 4，同步回波重聚焦因子为 2，理论上可以实现 4 x 2 = 8 的总加速。</p>
+
+<!--content goes above here-->
+</div></body>
+<!-- Mirrored from mriquestions.com/simultaneous-multi-slice.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 21 Mar 2026 06:02:34 GMT -->
+</html></div>
+
+
+
+</div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div><div class="paragraph" style="text-align:skip_to_justify;"><strong>参考文献</strong><br /><font color="#878787">&nbsp; &nbsp; &nbsp;</font>Barth M, Breuer F, Koopmans PJ, et al. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/sms_review_2016_barth_et_al-2016-magnetic_resonance_in_medicine.pdf">Simultaneous Multislice (SMS) imaging techniques</a>. Magn Reson Med 2016; 75:63-81. (Excellent recent review).<br />&nbsp;&nbsp; &nbsp; Feinberg DA, Setsompop K. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/feinberg_multiband.pdf">Ultra-fast MRI of the human brain with simultaneous multi-slice imaging</a>. J Magn Reson 2013; 229:90-100.<br />&nbsp; &nbsp; &nbsp;Hargreaves BA, Cunningham CH. Nishimura DG, Conolly SM. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/versehargreaves_et_al-2004-magnetic_resonance_in_medicine.pdf">Variable-rate selective excitation for rapid MRI sequences</a>. Magn Reson Med 2004; 52:590-597.<br />&nbsp;&nbsp; &nbsp; Setsompop K, Gagoski BA, Polimeni JR, et al. <a href="https://mriquestions.com/uploads/3/4/5/7/34572113/blipped_cipirinha_setsompop_et_al-2012-magnetic_resonance_in_medicine.pdf">Blipped-controlled aliasing in parallel imaging for simultaneous multislice echo planar imaging with reduced <em>g</em>-factor penalty</a>. Magn Reson Med 2012; 67:1210-1224.</div><div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:skip_to_justify;"><strong>相关问题</strong><br /><em><strong><a href="two-slices-at-once.html">&nbsp; &nbsp; &nbsp;能否同时激发两个层面？&nbsp;&nbsp;</a></strong></em><br /><em><strong>&nbsp; &nbsp; &nbsp;<a href="caipirinha.html">什么是 CAIPIRINHA？它不是一种饮料吗？&nbsp;&nbsp;&#8203;</a></strong></em></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div style="text-align:skip_to_justify;"><div style="height: 10px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-normal" href="two-slices-at-once.html" >
+<span class="wsite-button-inner">← &nbsp;上一问题</span>
+</a>
+<div style="height: 10px; overflow: hidden;"></div></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div style="text-align:right;"><div style="height: 10px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-normal" href="phase-encoding-gradient.html" >
+<span class="wsite-button-inner">下一问题 &nbsp;→</span>
+</a>
+<div style="height: 10px; overflow: hidden;"></div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div style="text-align:center;"><div style="height: 10px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-highlight" href="complete-list-of-questions.html" >
+<span class="wsite-button-inner">↑&nbsp;问题完整列表 ↑</span>
+</a>
+<div style="height: 10px; overflow: hidden;"></div></div>
+</div></div>

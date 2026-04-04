@@ -7,7 +7,7 @@ on:
 
 concurrency:
   group: deploy-server-${{ github.ref }}
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 jobs:
   deploy-server:
@@ -109,6 +109,7 @@ jobs:
           username: ${{ secrets.SSH_USER }}
           key: ${{ secrets.SSH_KEY }}
           port: ${{ secrets.SSH_PORT || 22 }}
+          command_timeout: 30m
           script: |
             set -e
             TARGET_DIR="${{ secrets.SSH_TARGET_DIR }}"
@@ -155,7 +156,7 @@ jobs:
             ln -sfn "$RELEASE_DIR" "${TARGET_DIR}/current"
 
             cd "${TARGET_DIR}/current/server"
-            npm ci --omit=dev
+            npm ci --omit=dev --no-audit --no-fund
 
             if command -v pm2 >/dev/null 2>&1; then
               if pm2 describe mriqa-api >/dev/null 2>&1; then

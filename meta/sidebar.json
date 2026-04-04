@@ -1,0 +1,6240 @@
+[
+  {
+    "id": "index",
+    "title": {
+      "en": "Home",
+      "zh": "首页"
+    },
+    "children": []
+  },
+  {
+    "id": "complete-list-of-questions",
+    "title": {
+      "en": "Complete List of Questions",
+      "zh": "问题完整列表"
+    },
+    "children": []
+  },
+  {
+    "id": "hellipmr-scanners--hardware",
+    "title": {
+      "en": "MR Scanners & Hardware",
+      "zh": "MR扫描仪与硬件"
+    },
+    "children": [
+      {
+        "id": "basic-electromagnetism",
+        "title": {
+          "en": "Basic Electromagnetism",
+          "zh": "基础电磁学"
+        },
+        "children": [
+          {
+            "id": "what-causes-magnetism",
+            "title": {
+              "en": "What causes magnetism?",
+              "zh": "磁性的成因是什么？"
+            },
+            "children": []
+          },
+          {
+            "id": "radiofrequency-waves",
+            "title": {
+              "en": "Radiofrequency waves?",
+              "zh": "射频波？"
+            },
+            "children": []
+          },
+          {
+            "id": "wave-properties",
+            "title": {
+              "en": "Wave properties?",
+              "zh": "波的特性？"
+            },
+            "children": []
+          },
+          {
+            "id": "what-is-a-tesla",
+            "title": {
+              "en": "What is a tesla?",
+              "zh": "什么是特斯拉？"
+            },
+            "children": []
+          },
+          {
+            "id": "who-was-tesla",
+            "title": {
+              "en": "Who was Tesla?",
+              "zh": "特斯拉是谁？"
+            },
+            "children": []
+          },
+          {
+            "id": "what-is-a-gauss",
+            "title": {
+              "en": "What is a gauss?",
+              "zh": "什么是高斯？"
+            },
+            "children": []
+          },
+          {
+            "id": "how-strong-is-30t",
+            "title": {
+              "en": "How strong is 3.0T?",
+              "zh": "3.0T有多强？"
+            },
+            "children": []
+          },
+          {
+            "id": "what-is-a-gradient",
+            "title": {
+              "en": "What is a gradient?",
+              "zh": "什么是梯度？"
+            },
+            "children": []
+          },
+          {
+            "id": "arent-gradients-coils",
+            "title": {
+              "en": "Aren't gradients coils?",
+              "zh": "梯度不是线圈吗？"
+            },
+            "children": []
+          },
+          {
+            "id": "what-is-susceptibility",
+            "title": {
+              "en": "What is susceptibility?",
+              "zh": "什么是磁化率？"
+            },
+            "children": []
+          },
+          {
+            "id": "susceptibility-causes",
+            "title": {
+              "en": "Susceptibility causes?",
+              "zh": "磁化率的成因？"
+            },
+            "children": []
+          },
+          {
+            "id": "how-to-levitate-a-frog",
+            "title": {
+              "en": "How to levitate a frog?",
+              "zh": "如何让青蛙悬浮？"
+            },
+            "children": []
+          },
+          {
+            "id": "what-is-ferromagnetism",
+            "title": {
+              "en": "What is ferromagnetism?",
+              "zh": "什么是铁磁性？"
+            },
+            "children": []
+          },
+          {
+            "id": "superparamagnetism",
+            "title": {
+              "en": "Superparamagnetism?",
+              "zh": "超顺磁性？"
+            },
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "mr-magnets---part-i",
+        "title": {
+          "en": "MR Magnets - Part I",
+          "zh": "MR磁体 - 第一部分"
+        },
+        "children": [
+          {
+            "id": "types-of-magnets",
+            "title": {
+              "en": "Types of magnets?",
+              "zh": "磁体的类型？"
+            },
+            "children": []
+          },
+          {
+            "id": "brands-of-scanners",
+            "title": {
+              "en": "Brands of scanners?",
+              "zh": "扫描仪的品牌？"
+            },
+            "children": []
+          },
+          {
+            "id": "direction-of-field",
+            "title": {
+              "en": "Direction of field?",
+              "zh": "磁场方向？"
+            },
+            "children": []
+          },
+          {
+            "id": "which-is-the-north-pole",
+            "title": {
+              "en": "Which is the north pole?",
+              "zh": "哪边是北极？"
+            },
+            "children": []
+          },
+          {
+            "id": "low-v-mid-v-high-field",
+            "title": {
+              "en": "Low v mid v high field?",
+              "zh": "低场、中场与高场？"
+            },
+            "children": []
+          },
+          {
+            "id": "advantages-to-low-field",
+            "title": {
+              "en": "Advantages to low-field?",
+              "zh": "低场的优势？"
+            },
+            "children": []
+          },
+          {
+            "id": "disadvantages",
+            "title": {
+              "en": "Disadvantages?",
+              "zh": "低场的劣势？"
+            },
+            "children": []
+          },
+          {
+            "id": "what-is-homogeneity",
+            "title": {
+              "en": "What is homogeneity?",
+              "zh": "什么是均匀性？"
+            },
+            "children": []
+          },
+          {
+            "id": "why-homogeneity",
+            "title": {
+              "en": "Why homogeneity?",
+              "zh": "为何需要均匀性？"
+            },
+            "children": []
+          },
+          {
+            "id": "why-shimming",
+            "title": {
+              "en": "Why shimming?",
+              "zh": "为何需要匀场？"
+            },
+            "children": []
+          },
+          {
+            "id": "passive-shimming",
+            "title": {
+              "en": "Passive shimming?",
+              "zh": "无源匀场？"
+            },
+            "children": []
+          },
+          {
+            "id": "active-shimming",
+            "title": {
+              "en": "Active shimming?",
+              "zh": "有源匀场？"
+            },
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "mr-magnets---part-ii",
+        "title": {
+          "en": "MR Magnets - Part II",
+          "zh": "MR磁体 - 第二部分"
+        },
+        "children": [
+          {
+            "id": "superconductivity",
+            "title": {
+              "en": "Superconductivity?",
+              "zh": "超导性？"
+            },
+            "children": []
+          },
+          {
+            "id": "perpetual-motion",
+            "title": {
+              "en": "Perpetual motion?",
+              "zh": "永动机？"
+            },
+            "children": []
+          },
+          {
+            "id": "how-to-ramp",
+            "title": {
+              "en": "How to ramp?",
+              "zh": "如何励磁？"
+            },
+            "children": []
+          },
+          {
+            "id": "superconductive-design",
+            "title": {
+              "en": "Superconductive design?",
+              "zh": "超导磁体设计？"
+            },
+            "children": []
+          },
+          {
+            "id": "room-temp-supercon",
+            "title": {
+              "en": "Room Temp supercon?",
+              "zh": "室温超导体？"
+            },
+            "children": []
+          },
+          {
+            "id": "liquid-helium-use",
+            "title": {
+              "en": "Liquid helium use?",
+              "zh": "液氦的使用？"
+            },
+            "children": []
+          },
+          {
+            "id": "what-is-a-quench",
+            "title": {
+              "en": "What is a quench?",
+              "zh": "什么是失超？"
+            },
+            "children": []
+          },
+          {
+            "id": "is-field-ever-turned-off",
+            "title": {
+              "en": "Is field ever turned off?",
+              "zh": "磁场能否关闭？"
+            },
+            "children": []
+          },
+          {
+            "id": "emergency-stop-button",
+            "title": {
+              "en": "Emergency stop button?",
+              "zh": "紧急停止按钮？"
+            },
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "gradients",
+        "title": {
+          "en": "Gradients",
+          "zh": "梯度"
+        },
+        "children": [
+          {
+            "id": "many-kinds-of-coils",
+            "title": {
+              "en": "Many kinds of coils?",
+              "zh": "线圈种类繁多？"
+            },
+            "children": []
+          },
+          {
+            "id": "gradient-coils",
+            "title": {
+              "en": "Gradient coils?",
+              "zh": "梯度线圈？"
+            },
+            "children": []
+          },
+          {
+            "id": "how-do-z-gradients-work",
+            "title": {
+              "en": "How do z-gradients work?",
+              "zh": "z梯度如何工作？"
+            },
+            "children": []
+          },
+          {
+            "id": "x--and-y--gradients",
+            "title": {
+              "en": "X- and Y- gradients?",
+              "zh": "X梯度和Y梯度？"
+            },
+            "children": []
+          },
+          {
+            "id": "open-scanner-gradients",
+            "title": {
+              "en": "Open scanner gradients?",
+              "zh": "开放式扫描仪的梯度？"
+            },
+            "children": []
+          },
+          {
+            "id": "eddy-current-problems",
+            "title": {
+              "en": "Eddy current problems?",
+              "zh": "涡流问题？"
+            },
+            "children": []
+          },
+          {
+            "id": "active-shielded-gradients",
+            "title": {
+              "en": "Active shielded gradients?",
+              "zh": "有源屏蔽梯度？"
+            },
+            "children": []
+          },
+          {
+            "id": "active-shield-confusion",
+            "title": {
+              "en": "Active shield confusion?",
+              "zh": "有源屏蔽的困惑？"
+            },
+            "children": []
+          },
+          {
+            "id": "what-is-pre-emphasis",
+            "title": {
+              "en": "What is pre-emphasis?",
+              "zh": "什么是预加重？"
+            },
+            "children": []
+          },
+          {
+            "id": "gradient-heating",
+            "title": {
+              "en": "Gradient heating?",
+              "zh": "梯度发热？"
+            },
+            "children": []
+          },
+          {
+            "id": "gradient-specifications",
+            "title": {
+              "en": "Gradient specifications?",
+              "zh": "梯度规格参数？"
+            },
+            "children": []
+          },
+          {
+            "id": "gradient-linearity",
+            "title": {
+              "en": "Gradient linearity?",
+              "zh": "梯度线性度？"
+            },
+            "children": []
+          },
+          {
+            "id": "insertable-gradients",
+            "title": {
+              "en": "Insertable gradients?",
+              "zh": "插入式梯度？"
+            },
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "radiofrequency-coils",
+        "title": {
+          "en": "Radiofrequency Coils?",
+          "zh": "射频线圈？"
+        },
+        "children": [
+          {
+            "id": "rf-coil-functions",
+            "title": {
+              "en": "RF Coil function(s)?",
+              "zh": "射频线圈的功能？"
+            },
+            "children": []
+          },
+          {
+            "id": "radiofrequency-waves1",
+            "title": {
+              "en": "Radiofrequency waves?",
+              "zh": "射频波？"
+            },
+            "children": []
+          },
+          {
+            "id": "rf-transmit-coils",
+            "title": {
+              "en": "RF-transmit coils?",
+              "zh": "射频发射线圈？"
+            },
+            "children": []
+          },
+          {
+            "id": "lp-vs-cp-quadrature",
+            "title": {
+              "en": "LP vs CP (Quadrature)?",
+              "zh": "线性极化与圆极化（正交）？"
+            },
+            "children": []
+          },
+          {
+            "id": "multi-transmit-rf",
+            "title": {
+              "en": "Multi-transmit RF?",
+              "zh": "多通道射频发射？"
+            },
+            "children": []
+          },
+          {
+            "id": "receive-only-coils",
+            "title": {
+              "en": "Receive-only coils?",
+              "zh": "仅接收线圈？"
+            },
+            "children": []
+          },
+          {
+            "id": "array-coils",
+            "title": {
+              "en": "Array coils?",
+              "zh": "阵列线圈？"
+            },
+            "children": []
+          },
+          {
+            "id": "air-coils",
+            "title": {
+              "en": "AIR Coils?",
+              "zh": "AIR线圈？"
+            },
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "site-planning",
+        "title": {
+          "en": "Site Planning",
+          "zh": "场地规划"
+        },
+        "children": [
+          {
+            "id": "mr-system-layout",
+            "title": {
+              "en": "MR system layout?",
+              "zh": "MR系统布局？"
+            },
+            "children": []
+          },
+          {
+            "id": "what-are-fringe-fields",
+            "title": {
+              "en": "What are fringe fields?",
+              "zh": "什么是边缘场？"
+            },
+            "children": []
+          },
+          {
+            "id": "how-to-reduce-fringe",
+            "title": {
+              "en": "How to reduce fringe?",
+              "zh": "如何减小边缘场？"
+            },
+            "children": []
+          },
+          {
+            "id": "magnetic-shielding",
+            "title": {
+              "en": "Magnetic shielding?",
+              "zh": "磁屏蔽？"
+            },
+            "children": []
+          },
+          {
+            "id": "need-for-vibration-testing",
+            "title": {
+              "en": "Need for vibration testing?",
+              "zh": "振动测试的必要性？"
+            },
+            "children": []
+          },
+          {
+            "id": "whats-that-noise",
+            "title": {
+              "en": "What's that noise?",
+              "zh": "噪音是什么？"
+            },
+            "children": []
+          },
+          {
+            "id": "why-rf-shielding",
+            "title": {
+              "en": "Why RF Shielding?",
+              "zh": "为何需要射频屏蔽？"
+            },
+            "children": []
+          },
+          {
+            "id": "wirestubes-thru-wall",
+            "title": {
+              "en": "Wires/tubes thru wall?",
+              "zh": "如何穿墙布设线/管？"
+            },
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "the-nmr-phenomenon",
+    "title": {
+      "en": "The NMR Phenomenon",
+      "zh": "核磁共振现象"
+    },
+    "children": [
+      {
+        "id": "spin",
+        "title": {
+          "en": "Spin",
+          "zh": "自旋"
+        },
+        "children": [
+          {
+            "id": "what-is-spin",
+            "title": {
+              "en": "What is spin?",
+              "zh": "什么是自旋？"
+            },
+            "children": []
+          },
+          {
+            "id": "why-i--frac12-1-etc",
+            "title": {
+              "en": "Why I = ½, 1, etc?",
+              "zh": "为何自旋量子数为1/2、1等？"
+            },
+            "children": []
+          },
+          {
+            "id": "proton--nucleus--spin",
+            "title": {
+              "en": "Proton = nucleus = spin?",
+              "zh": "质子=原子核=自旋？"
+            },
+            "children": []
+          },
+          {
+            "id": "predict-nuclear-spin-i",
+            "title": {
+              "en": "Predict nuclear spin (I)?",
+              "zh": "如何预测核自旋量子数（I）？"
+            },
+            "children": []
+          },
+          {
+            "id": "magnetic-dipoles",
+            "title": {
+              "en": "Magnetic dipoles?",
+              "zh": "磁偶极子？"
+            },
+            "children": []
+          },
+          {
+            "id": "gyromagnetic-ratio-gamma",
+            "title": {
+              "en": "Gyromagnetic ratio (γ)?",
+              "zh": "旋磁比（γ）？"
+            },
+            "children": []
+          },
+          {
+            "id": "spin-vs-spin-state",
+            "title": {
+              "en": "\"Spin\" vs \"Spin state\"?",
+              "zh": "“自旋”与“自旋态”？"
+            },
+            "children": []
+          },
+          {
+            "id": "misleading-diagrams",
+            "title": {
+              "en": "MIsleading diagrams?",
+              "zh": "易误解的图示？"
+            },
+            "children": []
+          },
+          {
+            "id": "quantum-reality",
+            "title": {
+              "en": "Quantum \"reality\"?",
+              "zh": "量子“现实”？"
+            },
+            "children": []
+          },
+          {
+            "id": "zeeman-splitting",
+            "title": {
+              "en": "Zeeman splitting?",
+              "zh": "塞曼分裂？"
+            },
+            "children": []
+          },
+          {
+            "id": "fall-to-lowest-state",
+            "title": {
+              "en": "Fall to lowest state?",
+              "zh": "是否跃迁至最低能态？"
+            },
+            "children": []
+          },
+          {
+            "id": "netbulk-magnetization",
+            "title": {
+              "en": "Net/Bulk magnetization?",
+              "zh": "净磁化/宏观磁化？"
+            },
+            "children": []
+          },
+          {
+            "id": "does-m-instantly-appear",
+            "title": {
+              "en": "Does M instantly appear?",
+              "zh": "M是否瞬间出现？"
+            },
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "precession",
+        "title": {
+          "en": "Precession",
+          "zh": "进动"
+        },
+        "children": [
+          {
+            "id": "why-precession",
+            "title": {
+              "en": "Why precession?",
+              "zh": "为何会发生进动？"
+            },
+            "children": []
+          },
+          {
+            "id": "but-nuclei-arent-tops",
+            "title": {
+              "en": "But nuclei aren't tops!",
+              "zh": "但原子核并非陀螺！"
+            },
+            "children": []
+          },
+          {
+            "id": "who-was-larmor",
+            "title": {
+              "en": "Who was Larmor?",
+              "zh": "拉莫尔是谁？"
+            },
+            "children": []
+          },
+          {
+            "id": "energy-for-precession",
+            "title": {
+              "en": "Energy for precession?",
+              "zh": "进动所需的能量？"
+            },
+            "children": []
+          },
+          {
+            "id": "chemical-shift",
+            "title": {
+              "en": "Chemical shift?",
+              "zh": "化学位移？"
+            },
+            "children": []
+          },
+          {
+            "id": "does-m-also-precess",
+            "title": {
+              "en": "Does M also precess?",
+              "zh": "M是否也进动？"
+            },
+            "children": []
+          },
+          {
+            "id": "does-precession--nmr",
+            "title": {
+              "en": "Does precession = NMR?",
+              "zh": "进动等于核磁共振吗？"
+            },
+            "children": []
+          },
+          {
+            "id": "rotating-frame",
+            "title": {
+              "en": "Rotating frame?",
+              "zh": "旋转坐标系？"
+            },
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "resonance",
+        "title": {
+          "en": "Resonance",
+          "zh": "共振"
+        },
+        "children": [
+          {
+            "id": "who-discovered-nmr",
+            "title": {
+              "en": "Who discovered NMR?",
+              "zh": "核磁共振是谁发现的？"
+            },
+            "children": []
+          },
+          {
+            "id": "mr-vs-mri-vs-nmr",
+            "title": {
+              "en": "MR vs MRI vs NMR?",
+              "zh": "MR与MRI、NMR的区别？"
+            },
+            "children": []
+          },
+          {
+            "id": "why-is-rf-input-needed",
+            "title": {
+              "en": "Why is RF input needed?",
+              "zh": "为何需要射频输入？"
+            },
+            "children": []
+          },
+          {
+            "id": "why-larmor-frequency",
+            "title": {
+              "en": "Why Larmor frequency?",
+              "zh": "为何是拉莫尔频率？"
+            },
+            "children": []
+          },
+          {
+            "id": "off-resonance",
+            "title": {
+              "en": "Off-resonance?",
+              "zh": "非共振？"
+            },
+            "children": []
+          },
+          {
+            "id": "cw-v-pulsed-nmr",
+            "title": {
+              "en": "CW v Pulsed NMR?",
+              "zh": "连续波与脉冲核磁共振？"
+            },
+            "children": []
+          },
+          {
+            "id": "how-does-rf-tip-m",
+            "title": {
+              "en": "How does RF tip M?",
+              "zh": "射频如何使M倾斜？"
+            },
+            "children": []
+          },
+          {
+            "id": "what-is-flip-angle",
+            "title": {
+              "en": "What is flip angle?",
+              "zh": "什么是翻转角？"
+            },
+            "children": []
+          },
+          {
+            "id": "phase-coherence",
+            "title": {
+              "en": "Phase coherence?",
+              "zh": "相位相干性？"
+            },
+            "children": []
+          },
+          {
+            "id": "rf-energy-absorption",
+            "title": {
+              "en": "RF-energy absorption?",
+              "zh": "射频能量吸收？"
+            },
+            "children": []
+          },
+          {
+            "id": "where-is-energy-stored",
+            "title": {
+              "en": "Where is energy stored?",
+              "zh": "能量储存在哪里？"
+            },
+            "children": []
+          },
+          {
+            "id": "effect-of-a-minus90deg-pulse",
+            "title": {
+              "en": "Effect of a −90° pulse?",
+              "zh": "-90°脉冲的作用？"
+            },
+            "children": []
+          },
+          {
+            "id": "rf-energy-release",
+            "title": {
+              "en": "RF Energy release?",
+              "zh": "射频能量释放？"
+            },
+            "children": []
+          },
+          {
+            "id": "180deg-and-360deg-pulses",
+            "title": {
+              "en": "180° and 360° pulses?",
+              "zh": "180°和360°脉冲？"
+            },
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "nmr-signals",
+        "title": {
+          "en": "NMR Signals",
+          "zh": "核磁共振信号"
+        },
+        "children": [
+          {
+            "id": "origin-of-mr-signal",
+            "title": {
+              "en": "Origin of MR signal?",
+              "zh": "MR信号的来源？"
+            },
+            "children": []
+          },
+          {
+            "id": "not-radio-waves",
+            "title": {
+              "en": "Not radio waves?",
+              "zh": "不是无线电波？"
+            },
+            "children": []
+          },
+          {
+            "id": "continuous-wave-nmr",
+            "title": {
+              "en": "Continuous wave NMR?",
+              "zh": "连续波核磁共振？"
+            },
+            "children": []
+          },
+          {
+            "id": "free-induction-decay-fidl",
+            "title": {
+              "en": "Free Induction Decay (FIDl?",
+              "zh": "自由感应衰减（FID）？"
+            },
+            "children": []
+          },
+          {
+            "id": "gradient-echo1",
+            "title": {
+              "en": "Gradient echo?",
+              "zh": "梯度回波？"
+            },
+            "children": []
+          },
+          {
+            "id": "partial-flip-angles",
+            "title": {
+              "en": "Partial flip angles?",
+              "zh": "小翻转角？"
+            },
+            "children": []
+          },
+          {
+            "id": "how-is-signal-higher",
+            "title": {
+              "en": "How is signal higher?",
+              "zh": "信号如何增强？"
+            },
+            "children": []
+          },
+          {
+            "id": "optimal-flip-angle",
+            "title": {
+              "en": "Optimal flip angle?",
+              "zh": "最佳翻转角？"
+            },
+            "children": []
+          },
+          {
+            "id": "tr-and-te",
+            "title": {
+              "en": "TR and TE?",
+              "zh": "重复时间与回波时间？"
+            },
+            "children": []
+          },
+          {
+            "id": "spin-echo1",
+            "title": {
+              "en": "Spin echo?",
+              "zh": "自旋回波？"
+            },
+            "children": []
+          },
+          {
+            "id": "90deg-90deg-hahn-echo",
+            "title": {
+              "en": "90°-90° Hahn Echo?",
+              "zh": "90°-90°哈恩回波？"
+            },
+            "children": []
+          },
+          {
+            "id": "stimulated-echoes",
+            "title": {
+              "en": "Stimulated echoes?",
+              "zh": "受激回波？"
+            },
+            "children": []
+          },
+          {
+            "id": "stes-for-imaging",
+            "title": {
+              "en": "STEs for imaging?",
+              "zh": "用于成像的受激回波？"
+            },
+            "children": []
+          },
+          {
+            "id": "4-or-more-rf-pulses",
+            "title": {
+              "en": "4 or more RF-pulses?",
+              "zh": "4个或更多射频脉冲？"
+            },
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "from-signals-to-images",
+        "title": {
+          "en": "From Signals to Images",
+          "zh": "从信号到图像"
+        },
+        "children": [
+          {
+            "id": "signal-squiggles",
+            "title": {
+              "en": "Signal squiggles?",
+              "zh": "信号波形？"
+            },
+            "children": []
+          },
+          {
+            "id": "real-v-imaginary",
+            "title": {
+              "en": "Real v Imaginary?",
+              "zh": "实部与虚部？"
+            },
+            "children": []
+          },
+          {
+            "id": "fourier-transform-ft",
+            "title": {
+              "en": "Fourier Transform (FT)?",
+              "zh": "傅里叶变换（FT）？"
+            },
+            "children": []
+          },
+          {
+            "id": "what-are-2d---3d-fts",
+            "title": {
+              "en": "What are 2D- & 3D-FTs?",
+              "zh": "什么是二维和三维傅里叶变换？"
+            },
+            "children": []
+          },
+          {
+            "id": "who-invented-mri",
+            "title": {
+              "en": "Who invented MRI?",
+              "zh": "磁共振成像是谁发明的？"
+            },
+            "children": []
+          },
+          {
+            "id": "how-to-locate-signals",
+            "title": {
+              "en": "How to locate signals?",
+              "zh": "如何定位信号？"
+            },
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "relaxation---physics",
+        "title": {
+          "en": "Relaxation - Physics",
+          "zh": "弛豫 - 物理"
+        },
+        "children": [
+          {
+            "id": "bloch-equations",
+            "title": {
+              "en": "Bloch equations?",
+              "zh": "布洛赫方程？"
+            },
+            "children": []
+          },
+          {
+            "id": "what-is-t1",
+            "title": {
+              "en": "What is T1?",
+              "zh": "什么是T1？"
+            },
+            "children": []
+          },
+          {
+            "id": "what-is-t2",
+            "title": {
+              "en": "What is T2?",
+              "zh": "什么是T2？"
+            },
+            "children": []
+          },
+          {
+            "id": "relaxation-rate-vs-time",
+            "title": {
+              "en": "Relaxation rate vs time?",
+              "zh": "弛豫率与时间的关系？"
+            },
+            "children": []
+          },
+          {
+            "id": "why-is-t1-ge-t2",
+            "title": {
+              "en": "Why is T1 ≥ T2?",
+              "zh": "为什么T1 ≥ T2？"
+            },
+            "children": []
+          },
+          {
+            "id": "t2-vs-t2",
+            "title": {
+              "en": "T2 vs T2*?",
+              "zh": "T2与T2*的区别？"
+            },
+            "children": []
+          },
+          {
+            "id": "causes-of-relaxation",
+            "title": {
+              "en": "Causes of Relaxation?",
+              "zh": "弛豫的成因？"
+            },
+            "children": []
+          },
+          {
+            "id": "dipole-dipole-relaxation",
+            "title": {
+              "en": "Dipole-dipole relaxation?",
+              "zh": "偶极-偶极弛豫？"
+            },
+            "children": []
+          },
+          {
+            "id": "chemical-exchange",
+            "title": {
+              "en": "Chemical Exchange?",
+              "zh": "化学交换？"
+            },
+            "children": []
+          },
+          {
+            "id": "spin-spin-interactions",
+            "title": {
+              "en": "Spin-Spin interactions?",
+              "zh": "自旋-自旋相互作用？"
+            },
+            "children": []
+          },
+          {
+            "id": "macromolecule-effects",
+            "title": {
+              "en": "Macromolecule effects?",
+              "zh": "大分子效应？"
+            },
+            "children": []
+          },
+          {
+            "id": "which-hs-produce-signal",
+            "title": {
+              "en": "Which H's produce signal?",
+              "zh": "哪些氢质子产生信号？"
+            },
+            "children": []
+          },
+          {
+            "id": "invisible-protons",
+            "title": {
+              "en": "\"Invisible\" protons?",
+              "zh": "“不可见”的质子？"
+            },
+            "children": []
+          },
+          {
+            "id": "magnetization-transfer1",
+            "title": {
+              "en": "Magnetization Transfer?",
+              "zh": "磁化传递？"
+            },
+            "children": []
+          },
+          {
+            "id": "t1-rho",
+            "title": {
+              "en": "T1-rho?",
+              "zh": "T1-rho？"
+            },
+            "children": []
+          },
+          {
+            "id": "bo-effect-on-t1--t2",
+            "title": {
+              "en": "Bo effect on T1 & T2?",
+              "zh": "主磁场对T1和T2的影响？"
+            },
+            "children": []
+          },
+          {
+            "id": "how-to-predict-t1--t2",
+            "title": {
+              "en": "How to predict T1 & T2?",
+              "zh": "如何预测T1和T2？"
+            },
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "relaxation---clincial",
+        "title": {
+          "en": "Relaxation - Clincial",
+          "zh": "弛豫 - 临床"
+        },
+        "children": [
+          {
+            "id": "t1-bright---fat",
+            "title": {
+              "en": "T1 bright? - fat",
+              "zh": "T1高信号？- 脂肪"
+            },
+            "children": []
+          },
+          {
+            "id": "t1-bright---other-oils",
+            "title": {
+              "en": "T1 bright? - other oils",
+              "zh": "T1高信号？- 其他油脂"
+            },
+            "children": []
+          },
+          {
+            "id": "t1-bright---cholesterol",
+            "title": {
+              "en": "T1 bright? - cholesterol",
+              "zh": "T1高信号？- 胆固醇"
+            },
+            "children": []
+          },
+          {
+            "id": "t1-bright---calcifications",
+            "title": {
+              "en": "T1 bright? - calcifications",
+              "zh": "T1高信号？- 钙化"
+            },
+            "children": []
+          },
+          {
+            "id": "t1-bright---meconium",
+            "title": {
+              "en": "T1 bright? - meconium",
+              "zh": "T1高信号？- 胎粪"
+            },
+            "children": []
+          },
+          {
+            "id": "t1-bright---melanin",
+            "title": {
+              "en": "T1 bright? - melanin",
+              "zh": "T1高信号？- 黑色素"
+            },
+            "children": []
+          },
+          {
+            "id": "t1-bright---proteinmucin",
+            "title": {
+              "en": "T1 bright? - protein/mucin",
+              "zh": "T1高信号？- 蛋白质/粘蛋白"
+            },
+            "children": []
+          },
+          {
+            "id": "t1-bright---myelin",
+            "title": {
+              "en": "T1 bright? - myelin",
+              "zh": "T1高信号？- 髓磷脂"
+            },
+            "children": []
+          },
+          {
+            "id": "magic-angle",
+            "title": {
+              "en": "Magic angle?",
+              "zh": "魔角效应？"
+            },
+            "children": []
+          },
+          {
+            "id": "mt-imagingcontrast",
+            "title": {
+              "en": "MT Imaging/Contrast?",
+              "zh": "磁化传递成像/对比？"
+            },
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "hellipmaking-an-image",
+    "title": {
+      "en": "Making an Image",
+      "zh": "图像生成"
+    },
+    "children": [
+      {
+        "id": "frequency-encoding1",
+        "title": {
+          "en": "Frequency Encoding",
+          "zh": "频率编码"
+        },
+        "children": [
+          {
+            "id": "frequency-encoding",
+            "title": {
+              "en": "Frequency encoding?",
+              "zh": "频率编码？"
+            },
+            "children": []
+          },
+          {
+            "id": "receiver-bandwidth",
+            "title": {
+              "en": "Receiver bandwidth?",
+              "zh": "接收带宽？"
+            },
+            "children": []
+          },
+          {
+            "id": "narrow-bandwidth",
+            "title": {
+              "en": "Narrow bandwidth?",
+              "zh": "窄带宽？"
+            },
+            "children": []
+          },
+          {
+            "id": "slice-selective-excitation",
+            "title": {
+              "en": "Slice-selective excitation?",
+              "zh": "层面选择性激发？"
+            },
+            "children": []
+          },
+          {
+            "id": "ss-gradient-lobes",
+            "title": {
+              "en": "SS gradient lobes?",
+              "zh": "选层梯度波瓣？"
+            },
+            "children": []
+          },
+          {
+            "id": "cross-talk",
+            "title": {
+              "en": "Cross-talk?",
+              "zh": "层间串扰？"
+            },
+            "children": []
+          },
+          {
+            "id": "frequency-encode-all",
+            "title": {
+              "en": "Frequency encode all?",
+              "zh": "频率编码所有层面？"
+            },
+            "children": []
+          },
+          {
+            "id": "mixing-of-slices",
+            "title": {
+              "en": "Mixing of slices?",
+              "zh": "层面混合？"
+            },
+            "children": []
+          },
+          {
+            "id": "two-slices-at-once",
+            "title": {
+              "en": "Two slices at once?",
+              "zh": "同时激发两个层面？"
+            },
+            "children": []
+          },
+          {
+            "id": "simultaneous-multi-slice",
+            "title": {
+              "en": "Simultaneous Multi-Slice?",
+              "zh": "同步多层采集？"
+            },
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "phase-encoding",
+        "title": {
+          "en": "Phase Encoding",
+          "zh": "相位编码"
+        },
+        "children": [
+          {
+            "id": "phase-encoding-gradient",
+            "title": {
+              "en": "Phase-encoding gradient?",
+              "zh": "相位编码梯度？"
+            },
+            "children": []
+          },
+          {
+            "id": "single-pe-step",
+            "title": {
+              "en": "Single PE step?",
+              "zh": "单次相位编码步骤？"
+            },
+            "children": []
+          },
+          {
+            "id": "what-is-phase-encoding",
+            "title": {
+              "en": "What is phase-encoding?",
+              "zh": "什么是相位编码？"
+            },
+            "children": []
+          },
+          {
+            "id": "pe-and-fe-together",
+            "title": {
+              "en": "PE and FE together?",
+              "zh": "相位编码与频率编码的结合？"
+            },
+            "children": []
+          },
+          {
+            "id": "2dft-reconstruction",
+            "title": {
+              "en": "2DFT reconstruction?",
+              "zh": "二维傅里叶重建？"
+            },
+            "children": []
+          },
+          {
+            "id": "choosing-pefe-direction",
+            "title": {
+              "en": "Choosing PE/FE direction?",
+              "zh": "选择相位编码/频率编码方向？"
+            },
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "performing-an-mr-scan",
+        "title": {
+          "en": "Performing an MR Scan",
+          "zh": "执行MR扫描"
+        },
+        "children": [
+          {
+            "id": "what-are-the-steps",
+            "title": {
+              "en": "What are the steps?",
+              "zh": "扫描步骤？"
+            },
+            "children": []
+          },
+          {
+            "id": "automatic-prescan",
+            "title": {
+              "en": "Automatic prescan?",
+              "zh": "自动预扫描？"
+            },
+            "children": []
+          },
+          {
+            "id": "routine-shimming",
+            "title": {
+              "en": "Routine shimming?",
+              "zh": "常规匀场？"
+            },
+            "children": []
+          },
+          {
+            "id": "coil-tuningmatching",
+            "title": {
+              "en": "Coil tuning/matching?",
+              "zh": "线圈调谐/匹配？"
+            },
+            "children": []
+          },
+          {
+            "id": "center-frequency",
+            "title": {
+              "en": "Center frequency?",
+              "zh": "中心频率？"
+            },
+            "children": []
+          },
+          {
+            "id": "transmitter-gain",
+            "title": {
+              "en": "Transmitter gain?",
+              "zh": "发射增益？"
+            },
+            "children": []
+          },
+          {
+            "id": "receiver-gain",
+            "title": {
+              "en": "Receiver gain?",
+              "zh": "接收增益？"
+            },
+            "children": []
+          },
+          {
+            "id": "dummy-cycles",
+            "title": {
+              "en": "Dummy cycles?",
+              "zh": "空转周期？"
+            },
+            "children": []
+          },
+          {
+            "id": "wheres-my-data",
+            "title": {
+              "en": "Where's my data?",
+              "zh": "我的数据在哪？"
+            },
+            "children": []
+          },
+          {
+            "id": "mr-tech-qualifications",
+            "title": {
+              "en": "MR Tech qualifications?",
+              "zh": "MR技师资质？"
+            },
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "image-quality-control",
+        "title": {
+          "en": "Image Quality Control",
+          "zh": "图像质量控制"
+        },
+        "children": [
+          {
+            "id": "who-regulates-mri",
+            "title": {
+              "en": "Who regulates MRI?",
+              "zh": "MRI的监管机构？"
+            },
+            "children": []
+          },
+          {
+            "id": "who-accredits",
+            "title": {
+              "en": "Who accredits?",
+              "zh": "认证机构？"
+            },
+            "children": []
+          },
+          {
+            "id": "mandatory-accreditation",
+            "title": {
+              "en": "Mandatory accreditation?",
+              "zh": "强制认证？"
+            },
+            "children": []
+          },
+          {
+            "id": "routine-quality-control",
+            "title": {
+              "en": "Routine quality control?",
+              "zh": "常规质量控制？"
+            },
+            "children": []
+          },
+          {
+            "id": "mr-phantoms",
+            "title": {
+              "en": "MR phantoms?",
+              "zh": "MR模体？"
+            },
+            "children": []
+          },
+          {
+            "id": "geometric-accuracy",
+            "title": {
+              "en": "Geometric accuracy?",
+              "zh": "几何精度？"
+            },
+            "children": []
+          },
+          {
+            "id": "image-uniformity",
+            "title": {
+              "en": "Image uniformity?",
+              "zh": "图像均匀性？"
+            },
+            "children": []
+          },
+          {
+            "id": "slice-parameters",
+            "title": {
+              "en": "Slice parameters?",
+              "zh": "层面参数？"
+            },
+            "children": []
+          },
+          {
+            "id": "image-resolution",
+            "title": {
+              "en": "Image resolution?",
+              "zh": "图像分辨率？"
+            },
+            "children": []
+          },
+          {
+            "id": "signal-to-noise",
+            "title": {
+              "en": "Signal-to-noise?",
+              "zh": "信噪比？"
+            },
+            "children": []
+          },
+          {
+            "id": "ghosting",
+            "title": {
+              "en": "Ghosting?",
+              "zh": "鬼影？"
+            },
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "rf--gradient-details",
+        "title": {
+          "en": "RF & Gradient Details",
+          "zh": "射频与梯度细节"
+        },
+        "children": [
+          {
+            "id": "timing-diagram-basic",
+            "title": {
+              "en": "Timing Diagram: Basic",
+              "zh": "时序图：基础"
+            },
+            "children": []
+          },
+          {
+            "id": "timing-diagram-advanced",
+            "title": {
+              "en": "Timing Diagram: Advanced",
+              "zh": "时序图：进阶"
+            },
+            "children": []
+          },
+          {
+            "id": "pulse-sequence-modules",
+            "title": {
+              "en": "Pulse Sequence Modules",
+              "zh": "脉冲序列模块"
+            },
+            "children": []
+          },
+          {
+            "id": "pulse-sequence-families",
+            "title": {
+              "en": "Pulse sequence families?",
+              "zh": "脉冲序列家族？"
+            },
+            "children": []
+          },
+          {
+            "id": "crushers-vs-spoilers",
+            "title": {
+              "en": "Crushers vs spoilers?",
+              "zh": "损毁与扰相？"
+            },
+            "children": []
+          },
+          {
+            "id": "adiabatic-excitation",
+            "title": {
+              "en": "Adiabatic excitation?",
+              "zh": "绝热激发？"
+            },
+            "children": []
+          },
+          {
+            "id": "adiabatic-pulses",
+            "title": {
+              "en": "Adiabatic pulses?",
+              "zh": "绝热脉冲？"
+            },
+            "children": []
+          },
+          {
+            "id": "mr-template8",
+            "title": {
+              "en": "MR template",
+              "zh": "MR模板"
+            },
+            "children": []
+          },
+          {
+            "id": "mr-template9",
+            "title": {
+              "en": "MR template",
+              "zh": "MR模板"
+            },
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "hellippulse-sequences",
+    "title": {
+      "en": "Pulse Sequences",
+      "zh": "脉冲序列"
+    },
+    "children": [
+      {
+        "id": "spin-echo",
+        "title": {
+          "en": "Spin Echo",
+          "zh": "自旋回波"
+        },
+        "children": [
+          {
+            "id": "se-vs-multi-se-vs-fse",
+            "title": {
+              "en": "SE vs Multi-SE vs FSE?",
+              "zh": "自旋回波、多回波自旋回波与快速自旋回波？"
+            },
+            "children": []
+          },
+          {
+            "id": "image-contrast-trte",
+            "title": {
+              "en": "Image contrast: TR/TE?",
+              "zh": "图像对比度：TR/TE？"
+            },
+            "children": []
+          },
+          {
+            "id": "opposite-effects-uarrt1-uarrt2",
+            "title": {
+              "en": "Opposite effects ↑T1 ↑T2?",
+              "zh": "T1与T2相反的影响？"
+            },
+            "children": []
+          },
+          {
+            "id": "meaning-of-weighting",
+            "title": {
+              "en": "Meaning of weighting?",
+              "zh": "加权含义？"
+            },
+            "children": []
+          },
+          {
+            "id": "does-se-correct-for-t2",
+            "title": {
+              "en": "Does SE correct for T2?",
+              "zh": "自旋回波是否校正T2？"
+            },
+            "children": []
+          },
+          {
+            "id": "effect-of-180deg-on-mz",
+            "title": {
+              "en": "Effect of 180° on Mz?",
+              "zh": "180°脉冲对Mz的影响？"
+            },
+            "children": []
+          },
+          {
+            "id": "direction-of-180deg-pulse",
+            "title": {
+              "en": "Direction of 180° pulse?",
+              "zh": "180°脉冲的方向？"
+            },
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "inversion-recovery",
+        "title": {
+          "en": "Inversion Recovery",
+          "zh": "反转恢复"
+        },
+        "children": [
+          {
+            "id": "what-is-ir",
+            "title": {
+              "en": "What is IR?",
+              "zh": "什么是IR？"
+            },
+            "children": []
+          },
+          {
+            "id": "why-use-ir",
+            "title": {
+              "en": "Why use IR?",
+              "zh": "为何使用IR？"
+            },
+            "children": []
+          },
+          {
+            "id": "phase-sensitive-ir",
+            "title": {
+              "en": "Phase-sensitive IR?",
+              "zh": "相位敏感IR？"
+            },
+            "children": []
+          },
+          {
+            "id": "why-not-psir-always",
+            "title": {
+              "en": "Why not PSIR always?",
+              "zh": "为何不总是使用PSIR？"
+            },
+            "children": []
+          },
+          {
+            "id": "choice-of-ir-parameters",
+            "title": {
+              "en": "Choice of IR parameters?",
+              "zh": "IR参数的选择？"
+            },
+            "children": []
+          },
+          {
+            "id": "ti-to-null-a-tissue",
+            "title": {
+              "en": "TI to null a tissue?",
+              "zh": "使某种组织信号为零的TI？"
+            },
+            "children": []
+          },
+          {
+            "id": "stir",
+            "title": {
+              "en": "STIR?",
+              "zh": "短TI反转恢复序列？"
+            },
+            "children": []
+          },
+          {
+            "id": "t1-flair",
+            "title": {
+              "en": "T1-FLAIR",
+              "zh": "T1-FLAIR？"
+            },
+            "children": []
+          },
+          {
+            "id": "t2-flair",
+            "title": {
+              "en": "T2-FLAIR?",
+              "zh": "T2-FLAIR？"
+            },
+            "children": []
+          },
+          {
+            "id": "ir-prepped-sequences",
+            "title": {
+              "en": "IR-prepped sequences?",
+              "zh": "IR预准备序列？"
+            },
+            "children": []
+          },
+          {
+            "id": "double-ir",
+            "title": {
+              "en": "Double IR?",
+              "zh": "双反转恢复？"
+            },
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "gradient-echo",
+        "title": {
+          "en": "Gradient Echo",
+          "zh": "梯度回波"
+        },
+        "children": [
+          {
+            "id": "gre-vs-se",
+            "title": {
+              "en": "GRE vs SE?",
+              "zh": "GRE与SE的区别？"
+            },
+            "children": []
+          },
+          {
+            "id": "multi-echo-gre",
+            "title": {
+              "en": "Multi-echo GRE?",
+              "zh": "多回波GRE？"
+            },
+            "children": []
+          },
+          {
+            "id": "types-of-gre-sequences",
+            "title": {
+              "en": "Types of GRE sequences?",
+              "zh": "GRE序列的类型？"
+            },
+            "children": []
+          },
+          {
+            "id": "commercial-acronyms",
+            "title": {
+              "en": "Commercial Acronyms?",
+              "zh": "商业名称缩写？"
+            },
+            "children": []
+          },
+          {
+            "id": "spoiling---what-and-how",
+            "title": {
+              "en": "Spoiling - what and how?",
+              "zh": "扰相 - 方式与原理？"
+            },
+            "children": []
+          },
+          {
+            "id": "spoiled-gre-parameters",
+            "title": {
+              "en": "Spoiled-GRE parameters?",
+              "zh": "扰相GRE参数？"
+            },
+            "children": []
+          },
+          {
+            "id": "spoiled-for-t1w-only",
+            "title": {
+              "en": "Spoiled for T1W only?",
+              "zh": "仅用于T1加权？"
+            },
+            "children": []
+          },
+          {
+            "id": "what-is-ssfp",
+            "title": {
+              "en": "What is SSFP?",
+              "zh": "什么是稳态自由进动？"
+            },
+            "children": []
+          },
+          {
+            "id": "grassfisp-how",
+            "title": {
+              "en": "GRASS/FISP: how?",
+              "zh": "GRASS/FISP：原理？"
+            },
+            "children": []
+          },
+          {
+            "id": "grassfisp-parameters",
+            "title": {
+              "en": "GRASS/FISP: parameters?",
+              "zh": "GRASS/FISP：参数？"
+            },
+            "children": []
+          },
+          {
+            "id": "grass-vs-mpgr",
+            "title": {
+              "en": "GRASS vs MPGR?",
+              "zh": "GRASS与MPGR的比较？"
+            },
+            "children": []
+          },
+          {
+            "id": "psif-vs-fisp",
+            "title": {
+              "en": "PSIF vs FISP?",
+              "zh": "PSIF与FISP的比较？"
+            },
+            "children": []
+          },
+          {
+            "id": "true-fispfiesta",
+            "title": {
+              "en": "True FISP/FIESTA?",
+              "zh": "真稳态自由进动/FIESTA？"
+            },
+            "children": []
+          },
+          {
+            "id": "fiesta-v-fiesta-c",
+            "title": {
+              "en": "FIESTA v FIESTA-C?",
+              "zh": "FIESTA与FIESTA-C的区别？"
+            },
+            "children": []
+          },
+          {
+            "id": "dess",
+            "title": {
+              "en": "DESS?",
+              "zh": "双回波稳态序列？"
+            },
+            "children": []
+          },
+          {
+            "id": "mergemedic",
+            "title": {
+              "en": "MERGE/MEDIC?",
+              "zh": "MERGE/MEDIC？"
+            },
+            "children": []
+          },
+          {
+            "id": "grase",
+            "title": {
+              "en": "GRASE?",
+              "zh": "梯度自旋回波？"
+            },
+            "children": []
+          },
+          {
+            "id": "mp-rage-v-mr2rage",
+            "title": {
+              "en": "MP-RAGE v MR2RAGE?",
+              "zh": "MP-RAGE与MR2RAGE的比较？"
+            },
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "susceptibility-imaging",
+        "title": {
+          "en": "Susceptibility Imaging",
+          "zh": "磁化率成像"
+        },
+        "children": [
+          {
+            "id": "what-is-susceptibility-chi",
+            "title": {
+              "en": "What is susceptibility (χ)?",
+              "zh": "什么是磁化率（χ）？"
+            },
+            "children": []
+          },
+          {
+            "id": "whats-wrong-with-gre",
+            "title": {
+              "en": "What's wrong with GRE?",
+              "zh": "GRE的问题？"
+            },
+            "children": []
+          },
+          {
+            "id": "making-an-sw-image",
+            "title": {
+              "en": "Making an SW image?",
+              "zh": "如何生成磁敏感加权图像？"
+            },
+            "children": []
+          },
+          {
+            "id": "phase-of-blood-v-ca",
+            "title": {
+              "en": "Phase of blood v Ca++?",
+              "zh": "血液与钙化在相位上的差异？"
+            },
+            "children": []
+          },
+          {
+            "id": "quantitative-susceptibility",
+            "title": {
+              "en": "Quantitative susceptibility?",
+              "zh": "定量磁化率？"
+            },
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "diffusion-basic",
+        "title": {
+          "en": "Diffusion: Basic",
+          "zh": "扩散：基础"
+        },
+        "children": [
+          {
+            "id": "what-is-diffusion",
+            "title": {
+              "en": "What is diffusion?",
+              "zh": "什么是扩散？"
+            },
+            "children": []
+          },
+          {
+            "id": "iso-anisotropic-diffusion",
+            "title": {
+              "en": "Iso-/Anisotropic diffusion?",
+              "zh": "各向同性/各向异性扩散？"
+            },
+            "children": []
+          },
+          {
+            "id": "apparent-diffusion",
+            "title": {
+              "en": "\"Apparent\" diffusion?",
+              "zh": "“表观”扩散？"
+            },
+            "children": []
+          },
+          {
+            "id": "making-a-dw-image",
+            "title": {
+              "en": "Making a DW image?",
+              "zh": "如何生成弥散加权图像？"
+            },
+            "children": []
+          },
+          {
+            "id": "what-is-the-b-value",
+            "title": {
+              "en": "What is the b-value?",
+              "zh": "什么是b值？"
+            },
+            "children": []
+          },
+          {
+            "id": "b0-vs-b50",
+            "title": {
+              "en": "b0 vs b50?",
+              "zh": "b0与b50的比较？"
+            },
+            "children": []
+          },
+          {
+            "id": "trace-vs-adc-map",
+            "title": {
+              "en": "Trace vs ADC map?",
+              "zh": "示踪图与表观弥散系数图的区别？"
+            },
+            "children": []
+          },
+          {
+            "id": "lightdark-reversal",
+            "title": {
+              "en": "Light/dark reversal?",
+              "zh": "亮暗反转？"
+            },
+            "children": []
+          },
+          {
+            "id": "t2-shine-through",
+            "title": {
+              "en": "T2 \"shine through\"?",
+              "zh": "T2“透过效应”？"
+            },
+            "children": []
+          },
+          {
+            "id": "exponential-adc",
+            "title": {
+              "en": "Exponential ADC?",
+              "zh": "指数表观弥散系数？"
+            },
+            "children": []
+          },
+          {
+            "id": "t2-black-out",
+            "title": {
+              "en": "T2 \"black-out\"?",
+              "zh": "T2“黑屏效应”？"
+            },
+            "children": []
+          },
+          {
+            "id": "dwi-bright-causes",
+            "title": {
+              "en": "DWI bright causes?",
+              "zh": "弥散加权成像高信号的成因？"
+            },
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "diffusion-advanced",
+        "title": {
+          "en": "Diffusion: Advanced",
+          "zh": "扩散：进阶"
+        },
+        "children": [
+          {
+            "id": "diffusion-tensor",
+            "title": {
+              "en": "Diffusion Tensor?",
+              "zh": "弥散张量？"
+            },
+            "children": []
+          },
+          {
+            "id": "dti-tensor-imaging",
+            "title": {
+              "en": "DTI (tensor imaging)?",
+              "zh": "弥散张量成像？"
+            },
+            "children": []
+          },
+          {
+            "id": "whole-body-dwi",
+            "title": {
+              "en": "Whole body DWI?",
+              "zh": "全身弥散加权成像？"
+            },
+            "children": []
+          },
+          {
+            "id": "readout-segmented-dwi",
+            "title": {
+              "en": "Readout-segmented DWI?",
+              "zh": "分段读出弥散加权成像？"
+            },
+            "children": []
+          },
+          {
+            "id": "small-fov-dwi",
+            "title": {
+              "en": "Small FOV DWI?",
+              "zh": "小视野弥散加权成像？"
+            },
+            "children": []
+          },
+          {
+            "id": "ivim",
+            "title": {
+              "en": "IVIM?",
+              "zh": "体素内不相干运动？"
+            },
+            "children": []
+          },
+          {
+            "id": "diffusion-kurtosis",
+            "title": {
+              "en": "Diffusion Kurtosis?",
+              "zh": "弥散峰度？"
+            },
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "fat-water-imaging",
+        "title": {
+          "en": "Fat-Water Imaging",
+          "zh": "水脂成像"
+        },
+        "children": [
+          {
+            "id": "fat--water-properties",
+            "title": {
+              "en": "Fat & Water properties?",
+              "zh": "脂肪与水的特性？"
+            },
+            "children": []
+          },
+          {
+            "id": "f-w-chemical-shift",
+            "title": {
+              "en": "F-W chemical shift?",
+              "zh": "水脂化学位移？"
+            },
+            "children": []
+          },
+          {
+            "id": "in-phaseout-of-phase",
+            "title": {
+              "en": "In-phase/out-of-phase?",
+              "zh": "同相位/反相位？"
+            },
+            "children": []
+          },
+          {
+            "id": "best-method",
+            "title": {
+              "en": "Best method?",
+              "zh": "最佳方法？"
+            },
+            "children": []
+          },
+          {
+            "id": "dixon-method",
+            "title": {
+              "en": "Dixon method?",
+              "zh": "迪克森方法？"
+            },
+            "children": []
+          },
+          {
+            "id": "fat-sat-pulses",
+            "title": {
+              "en": "\"Fat-sat\" pulses?",
+              "zh": "“脂肪饱和”脉冲？"
+            },
+            "children": []
+          },
+          {
+            "id": "water-excitation",
+            "title": {
+              "en": "Water excitation?",
+              "zh": "水激发？"
+            },
+            "children": []
+          },
+          {
+            "id": "stir1",
+            "title": {
+              "en": "STIR?",
+              "zh": "短TI反转恢复序列？"
+            },
+            "children": []
+          },
+          {
+            "id": "spir",
+            "title": {
+              "en": "SPIR?",
+              "zh": "频谱预饱和反转恢复序列？"
+            },
+            "children": []
+          },
+          {
+            "id": "spair-v-spir",
+            "title": {
+              "en": "SPAIR v SPIR?",
+              "zh": "SPAIR与SPIR的比较？"
+            },
+            "children": []
+          },
+          {
+            "id": "spirspair-v-stir",
+            "title": {
+              "en": "SPIR/SPAIR v STIR?",
+              "zh": "SPIR/SPAIR与STIR的比较？"
+            },
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "hellipk-space--rapid-imaging",
+    "title": {
+      "en": "K-space & Rapid Imaging",
+      "zh": "k空间与快速成像"
+    },
+    "children": [
+      {
+        "id": "k-space-basic",
+        "title": {
+          "en": "K-space (Basic)",
+          "zh": "k空间（基础）"
+        },
+        "children": [
+          {
+            "id": "what-is-k-space",
+            "title": {
+              "en": "What is k-space?",
+              "zh": "什么是k空间？"
+            },
+            "children": []
+          },
+          {
+            "id": "parts-of-k-space",
+            "title": {
+              "en": "Parts of k-space?",
+              "zh": "k空间的组成部分？"
+            },
+            "children": []
+          },
+          {
+            "id": "what-does-k-stand-for",
+            "title": {
+              "en": "What does \"k\" stand for?",
+              "zh": "“k”代表什么？"
+            },
+            "children": []
+          },
+          {
+            "id": "spatial-frequencies",
+            "title": {
+              "en": "Spatial frequencies?",
+              "zh": "空间频率？"
+            },
+            "children": []
+          },
+          {
+            "id": "locations-in-k-space",
+            "title": {
+              "en": "Locations in k-space?",
+              "zh": "k空间中的位置？"
+            },
+            "children": []
+          },
+          {
+            "id": "data-for-k-space",
+            "title": {
+              "en": "Data for k-space?",
+              "zh": "k空间的数据来源？"
+            },
+            "children": []
+          },
+          {
+            "id": "why-signal-harr-k-space",
+            "title": {
+              "en": "Why signal ↔ k-space?",
+              "zh": "信号↔k空间的关系？"
+            },
+            "children": []
+          },
+          {
+            "id": "spin-warp-imaging",
+            "title": {
+              "en": "Spin-warp imaging?",
+              "zh": "自旋翘曲成像？"
+            },
+            "children": []
+          },
+          {
+            "id": "big-spot-in-middle",
+            "title": {
+              "en": "Big spot in middle?",
+              "zh": "中间的大斑点？"
+            },
+            "children": []
+          },
+          {
+            "id": "k-space-trajectories",
+            "title": {
+              "en": "K-space trajectories?",
+              "zh": "k空间轨迹？"
+            },
+            "children": []
+          },
+          {
+            "id": "radial-sampling",
+            "title": {
+              "en": "Radial sampling?",
+              "zh": "放射状采样？"
+            },
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "k-space-advanced",
+        "title": {
+          "en": "K-space (Advanced)",
+          "zh": "k空间（进阶）"
+        },
+        "children": [
+          {
+            "id": "k-space-grid",
+            "title": {
+              "en": "K-space grid?",
+              "zh": "k空间网格？"
+            },
+            "children": []
+          },
+          {
+            "id": "negative-frequencies",
+            "title": {
+              "en": "Negative frequencies?",
+              "zh": "负频率？"
+            },
+            "children": []
+          },
+          {
+            "id": "field-of-view-fov",
+            "title": {
+              "en": "Field-of-view (FOV)",
+              "zh": "视野"
+            },
+            "children": []
+          },
+          {
+            "id": "rectangular-fov",
+            "title": {
+              "en": "Rectangular FOV?",
+              "zh": "矩形视野？"
+            },
+            "children": []
+          },
+          {
+            "id": "partial-fourier",
+            "title": {
+              "en": "Partial Fourier?",
+              "zh": "部分傅里叶？"
+            },
+            "children": []
+          },
+          {
+            "id": "phase-symmetry",
+            "title": {
+              "en": "Phase symmetry?",
+              "zh": "相位对称性？"
+            },
+            "children": []
+          },
+          {
+            "id": "read-symmetry",
+            "title": {
+              "en": "Read symmetry?",
+              "zh": "读出对称性？"
+            },
+            "children": []
+          },
+          {
+            "id": "why-not-use-both",
+            "title": {
+              "en": "Why not use both?",
+              "zh": "为何不两者兼用？"
+            },
+            "children": []
+          },
+          {
+            "id": "zip",
+            "title": {
+              "en": "ZIP?",
+              "zh": "零填充插值？"
+            },
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "rapid-imaging-fse-epi",
+        "title": {
+          "en": "Rapid Imaging (FSE &EPI)",
+          "zh": "快速成像（FSE与EPI）"
+        },
+        "children": [
+          {
+            "id": "what-is-fsetse",
+            "title": {
+              "en": "What is FSE/TSE?",
+              "zh": "什么是FSE/TSE？"
+            },
+            "children": []
+          },
+          {
+            "id": "fse-parameters",
+            "title": {
+              "en": "FSE parameters?",
+              "zh": "FSE参数？"
+            },
+            "children": []
+          },
+          {
+            "id": "bright-fat",
+            "title": {
+              "en": "Bright Fat?",
+              "zh": "脂肪高信号？"
+            },
+            "children": []
+          },
+          {
+            "id": "other-fse-differences",
+            "title": {
+              "en": "Other FSE differences?",
+              "zh": "FSE的其他差异？"
+            },
+            "children": []
+          },
+          {
+            "id": "dual-echo-fse",
+            "title": {
+              "en": "Dual-echo FSE?",
+              "zh": "双回波FSE？"
+            },
+            "children": []
+          },
+          {
+            "id": "driven-equilibrium",
+            "title": {
+              "en": "Driven equilibrium?",
+              "zh": "驱动平衡？"
+            },
+            "children": []
+          },
+          {
+            "id": "reduced-flip-angle-fse",
+            "title": {
+              "en": "Reduced flip angle FSE?",
+              "zh": "小翻转角FSE？"
+            },
+            "children": []
+          },
+          {
+            "id": "hyperechoes",
+            "title": {
+              "en": "Hyperechoes?",
+              "zh": "超回波？"
+            },
+            "children": []
+          },
+          {
+            "id": "spacecubevista",
+            "title": {
+              "en": "SPACE/CUBE/VISTA?",
+              "zh": "SPACE/CUBE/VISTA？"
+            },
+            "children": []
+          },
+          {
+            "id": "echo-planar-imaging",
+            "title": {
+              "en": "Echo-planar imaging?",
+              "zh": "平面回波成像？"
+            },
+            "children": []
+          },
+          {
+            "id": "hastess-fse",
+            "title": {
+              "en": "HASTE/SS-FSE?",
+              "zh": "HASTE/单次激发FSE？"
+            },
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "parallel-imaging-pi",
+        "title": {
+          "en": "Parallel Imaging (PI)",
+          "zh": "并行成像（PI）"
+        },
+        "children": [
+          {
+            "id": "what-is-pi",
+            "title": {
+              "en": "What is PI?",
+              "zh": "什么是PI？"
+            },
+            "children": []
+          },
+          {
+            "id": "how-is-pi-different",
+            "title": {
+              "en": "How is PI different?",
+              "zh": "PI的独特之处？"
+            },
+            "children": []
+          },
+          {
+            "id": "pi-coils-and-sequences",
+            "title": {
+              "en": "PI coils and sequences?",
+              "zh": "PI线圈与序列？"
+            },
+            "children": []
+          },
+          {
+            "id": "why-and-when-to-use",
+            "title": {
+              "en": "Why and when to use?",
+              "zh": "使用的原因与时机？"
+            },
+            "children": []
+          },
+          {
+            "id": "two-types-of-pi",
+            "title": {
+              "en": "Two types of PI?",
+              "zh": "PI的两种类型？"
+            },
+            "children": []
+          },
+          {
+            "id": "senseasset",
+            "title": {
+              "en": "SENSE/ASSET?",
+              "zh": "SENSE/ASSET？"
+            },
+            "children": []
+          },
+          {
+            "id": "grappaarc",
+            "title": {
+              "en": "GRAPPA/ARC?",
+              "zh": "GRAPPA/ARC？"
+            },
+            "children": []
+          },
+          {
+            "id": "caipirinha",
+            "title": {
+              "en": "CAIPIRINHA?",
+              "zh": "CAIPIRINHA？"
+            },
+            "children": []
+          },
+          {
+            "id": "compressed-sensing",
+            "title": {
+              "en": "Compressed sensing?",
+              "zh": "压缩感知？"
+            },
+            "children": []
+          },
+          {
+            "id": "noise-in-pi",
+            "title": {
+              "en": "Noise in PI?",
+              "zh": "PI中的噪声？"
+            },
+            "children": []
+          },
+          {
+            "id": "artifacts-in-pi",
+            "title": {
+              "en": "Artifacts in PI?",
+              "zh": "PI中的伪影？"
+            },
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "hellipcontrast-agents",
+    "title": {
+      "en": "Contrast Agents",
+      "zh": "对比剂"
+    },
+    "children": [
+      {
+        "id": "contrast-agents-physics",
+        "title": {
+          "en": "Contrast Agents: Physics",
+          "zh": "对比剂：物理"
+        },
+        "children": [
+          {
+            "id": "why-gadolinium",
+            "title": {
+              "en": "Why Gadolinium?",
+              "zh": "为何使用钆？"
+            },
+            "children": []
+          },
+          {
+            "id": "paramagnetic-relaxation",
+            "title": {
+              "en": "Paramagnetic relaxation?",
+              "zh": "顺磁弛豫？"
+            },
+            "children": []
+          },
+          {
+            "id": "what-is-relaxivity",
+            "title": {
+              "en": "What is relaxivity?",
+              "zh": "什么是弛豫率？"
+            },
+            "children": []
+          },
+          {
+            "id": "why-does-gd-shorten-t1",
+            "title": {
+              "en": "Why does Gd shorten T1?",
+              "zh": "钆为何缩短T1？"
+            },
+            "children": []
+          },
+          {
+            "id": "does-gd-affect-t2",
+            "title": {
+              "en": "Does Gd affect T2?",
+              "zh": "钆是否影响T2？"
+            },
+            "children": []
+          },
+          {
+            "id": "gd--field-strength",
+            "title": {
+              "en": "Gd & field strength?",
+              "zh": "钆与场强的关系？"
+            },
+            "children": []
+          },
+          {
+            "id": "best-t1-pulse-sequence",
+            "title": {
+              "en": "Best T1-pulse sequence?",
+              "zh": "最佳T1加权脉冲序列？"
+            },
+            "children": []
+          },
+          {
+            "id": "triple-dose-and-mt",
+            "title": {
+              "en": "Triple dose and MT?",
+              "zh": "三倍剂量与磁化传递？"
+            },
+            "children": []
+          },
+          {
+            "id": "dynamic-ce-imaging",
+            "title": {
+              "en": "Dynamic CE imaging?",
+              "zh": "动态对比增强成像？"
+            },
+            "children": []
+          },
+          {
+            "id": "gadolinium-on-ct",
+            "title": {
+              "en": "Gadolinium on CT?",
+              "zh": "CT中的钆？"
+            },
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "contrast-agents-clinical",
+        "title": {
+          "en": "Contrast Agents: Clinical",
+          "zh": "对比剂：临床"
+        },
+        "children": [
+          {
+            "id": "so-many-gd-agents",
+            "title": {
+              "en": "So many Gd agents!",
+              "zh": "众多的钆剂！"
+            },
+            "children": []
+          },
+          {
+            "id": "important-properties",
+            "title": {
+              "en": "Important properties?",
+              "zh": "重要特性？"
+            },
+            "children": []
+          },
+          {
+            "id": "ionic-v-non-ionic",
+            "title": {
+              "en": "Ionic v non-ionic?",
+              "zh": "离子型与非离子型？"
+            },
+            "children": []
+          },
+          {
+            "id": "intra-articularthecal-gd",
+            "title": {
+              "en": "Intra-articular/thecal Gd?",
+              "zh": "关节内/鞘内注射钆？"
+            },
+            "children": []
+          },
+          {
+            "id": "gd-liver-agents-eovist",
+            "title": {
+              "en": "Gd liver agents (Eovist)?",
+              "zh": "肝脏特异性钆剂（Eovist）？"
+            },
+            "children": []
+          },
+          {
+            "id": "mn-agents-teslascan",
+            "title": {
+              "en": "Mn agents (Teslascan)?",
+              "zh": "锰剂（Teslascan）？"
+            },
+            "children": []
+          },
+          {
+            "id": "blood-pool-ablavar",
+            "title": {
+              "en": "Blood pool (Ablavar)?",
+              "zh": "血池剂（Ablavar）？"
+            },
+            "children": []
+          },
+          {
+            "id": "iron-based-contrast",
+            "title": {
+              "en": "Iron-based contrast?",
+              "zh": "铁基对比剂？"
+            },
+            "children": []
+          },
+          {
+            "id": "lymph-node-agents",
+            "title": {
+              "en": "Lymph node agents?",
+              "zh": "淋巴结对比剂？"
+            },
+            "children": []
+          },
+          {
+            "id": "feridex--liver-agents",
+            "title": {
+              "en": "Feridex & Liver Agents?",
+              "zh": "菲立磁与肝脏对比剂？"
+            },
+            "children": []
+          },
+          {
+            "id": "ferumoxytol",
+            "title": {
+              "en": "Ferumoxytol?",
+              "zh": "费鲁莫托尔？"
+            },
+            "children": []
+          },
+          {
+            "id": "ferumoxytol-relaxivity",
+            "title": {
+              "en": "Ferumoxytol relaxivity?",
+              "zh": "费鲁莫托尔的弛豫率？"
+            },
+            "children": []
+          },
+          {
+            "id": "ferabrighttrade",
+            "title": {
+              "en": "Ferabright™?",
+              "zh": "Ferabright™？"
+            },
+            "children": []
+          },
+          {
+            "id": "bowel-contrast-agents",
+            "title": {
+              "en": "Bowel contrast agents?",
+              "zh": "肠道对比剂？"
+            },
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "contrast-agents-safety",
+        "title": {
+          "en": "Contrast Agents: Safety",
+          "zh": "对比剂：安全"
+        },
+        "children": [
+          {
+            "id": "ferumoxytol-safety",
+            "title": {
+              "en": "Ferumoxytol Safety?",
+              "zh": "费鲁莫托尔的安全性？"
+            },
+            "children": []
+          },
+          {
+            "id": "gadolinium-safety",
+            "title": {
+              "en": "Gadolinium safety?",
+              "zh": "钆的安全性？"
+            },
+            "children": []
+          },
+          {
+            "id": "allergic-reactions",
+            "title": {
+              "en": "Allergic reactions?",
+              "zh": "过敏反应？"
+            },
+            "children": []
+          },
+          {
+            "id": "renal-toxicity",
+            "title": {
+              "en": "Renal toxicity?",
+              "zh": "肾毒性？"
+            },
+            "children": []
+          },
+          {
+            "id": "what-is-nsf",
+            "title": {
+              "en": "What is NSF?",
+              "zh": "什么是肾源性系统性纤维化？"
+            },
+            "children": []
+          },
+          {
+            "id": "nsf-by-agent",
+            "title": {
+              "en": "NSF by agent?",
+              "zh": "不同钆剂的NSF风险？"
+            },
+            "children": []
+          },
+          {
+            "id": "informed-consent-for-gd",
+            "title": {
+              "en": "Informed consent for Gd?",
+              "zh": "钆剂知情同意？"
+            },
+            "children": []
+          },
+          {
+            "id": "gd-protocol",
+            "title": {
+              "en": "Gd protocol?",
+              "zh": "钆剂使用方案？"
+            },
+            "children": []
+          },
+          {
+            "id": "is-gd-safe-in-infants",
+            "title": {
+              "en": "Is Gd safe in infants?",
+              "zh": "钆剂在婴幼儿中是否安全？"
+            },
+            "children": []
+          },
+          {
+            "id": "reduced-dose-in-infants",
+            "title": {
+              "en": "Reduced dose in infants?",
+              "zh": "婴幼儿减量使用？"
+            },
+            "children": []
+          },
+          {
+            "id": "gd-in-breast-milk",
+            "title": {
+              "en": "Gd in breast milk?",
+              "zh": "母乳中的钆？"
+            },
+            "children": []
+          },
+          {
+            "id": "gd-in-pregnancy",
+            "title": {
+              "en": "Gd in pregnancy?",
+              "zh": "孕期使用钆？"
+            },
+            "children": []
+          },
+          {
+            "id": "gd-accumulation",
+            "title": {
+              "en": "Gd accumulation?",
+              "zh": "钆沉积？"
+            },
+            "children": []
+          },
+          {
+            "id": "gd-deposition-disease",
+            "title": {
+              "en": "Gd deposition disease?",
+              "zh": "钆沉积病？"
+            },
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "hellipcardiovascular-and-mra",
+    "title": {
+      "en": "Cardiovascular and MRA",
+      "zh": "心血管与MRA"
+    },
+    "children": [
+      {
+        "id": "flow-effects-in-mri",
+        "title": {
+          "en": "Flow effects in MRI",
+          "zh": "MRI中的血流效应"
+        },
+        "children": [
+          {
+            "id": "defining-flow",
+            "title": {
+              "en": "Defining flow?",
+              "zh": "血流的定义？"
+            },
+            "children": []
+          },
+          {
+            "id": "expected-velocities",
+            "title": {
+              "en": "Expected velocities?",
+              "zh": "预期流速？"
+            },
+            "children": []
+          },
+          {
+            "id": "laminar-v-turbulent",
+            "title": {
+              "en": "Laminar v turbulent?",
+              "zh": "层流与湍流？"
+            },
+            "children": []
+          },
+          {
+            "id": "predicting-mr-of-flow",
+            "title": {
+              "en": "Predicting MR of flow?",
+              "zh": "预测MRI中的血流表现？"
+            },
+            "children": []
+          },
+          {
+            "id": "time-of-flight-effects",
+            "title": {
+              "en": "Time-of-flight effects?",
+              "zh": "时间飞越效应？"
+            },
+            "children": []
+          },
+          {
+            "id": "spin-phase-effects",
+            "title": {
+              "en": "Spin phase effects?",
+              "zh": "自旋相位效应？"
+            },
+            "children": []
+          },
+          {
+            "id": "flow-void",
+            "title": {
+              "en": "Flow void?",
+              "zh": "流空效应？"
+            },
+            "children": []
+          },
+          {
+            "id": "why-gre-uarr-flow-signal",
+            "title": {
+              "en": "Why GRE ↑ flow signal?",
+              "zh": "梯度回波为何增强血流信号？"
+            },
+            "children": []
+          },
+          {
+            "id": "slow-flow-v-thrombus",
+            "title": {
+              "en": "Slow flow v thrombus?",
+              "zh": "慢血流与血栓的区别？"
+            },
+            "children": []
+          },
+          {
+            "id": "even-echo-rephasing",
+            "title": {
+              "en": "Even-echo rephasing?",
+              "zh": "偶回波相位重聚？"
+            },
+            "children": []
+          },
+          {
+            "id": "flow-compensation",
+            "title": {
+              "en": "Flow-compensation?",
+              "zh": "流动补偿？"
+            },
+            "children": []
+          },
+          {
+            "id": "flow-misregistration",
+            "title": {
+              "en": "Flow misregistration?",
+              "zh": "血流配准错误？"
+            },
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "mr-angiography---i",
+        "title": {
+          "en": "MR Angiography - I",
+          "zh": "MR血管成像 - I"
+        },
+        "children": [
+          {
+            "id": "mra-methods",
+            "title": {
+              "en": "MRA methods?",
+              "zh": "MRA方法？"
+            },
+            "children": []
+          },
+          {
+            "id": "dark-vs-bright-blood",
+            "title": {
+              "en": "Dark vs bright blood?",
+              "zh": "黑血与亮血？"
+            },
+            "children": []
+          },
+          {
+            "id": "time-of-flight-tof-mra",
+            "title": {
+              "en": "Time-of-Flight (TOF) MRA?",
+              "zh": "时间飞越法MRA？"
+            },
+            "children": []
+          },
+          {
+            "id": "2d-vs-3d-mra",
+            "title": {
+              "en": "2D vs 3D MRA?",
+              "zh": "2D与3D MRA的比较？"
+            },
+            "children": []
+          },
+          {
+            "id": "mra-parameters",
+            "title": {
+              "en": "MRA parameters?",
+              "zh": "MRA参数？"
+            },
+            "children": []
+          },
+          {
+            "id": "magnetization-transfer",
+            "title": {
+              "en": "Magnetization Transfer?",
+              "zh": "磁化传递？"
+            },
+            "children": []
+          },
+          {
+            "id": "ramped-flip-angle",
+            "title": {
+              "en": "Ramped flip angle?",
+              "zh": "斜坡翻转角？"
+            },
+            "children": []
+          },
+          {
+            "id": "motsa",
+            "title": {
+              "en": "MOTSA?",
+              "zh": "MOTSA？"
+            },
+            "children": []
+          },
+          {
+            "id": "fat-suppressed-mra",
+            "title": {
+              "en": "Fat-suppressed MRA?",
+              "zh": "脂肪抑制MRA？"
+            },
+            "children": []
+          },
+          {
+            "id": "tof-mra-artifacts",
+            "title": {
+              "en": "TOF MRA Artifacts?",
+              "zh": "TOF MRA伪影？"
+            },
+            "children": []
+          },
+          {
+            "id": "phase-contrast-mra",
+            "title": {
+              "en": "Phase-contrast MRA?",
+              "zh": "相位对比MRA？"
+            },
+            "children": []
+          },
+          {
+            "id": "what-is-venc",
+            "title": {
+              "en": "What is VENC?",
+              "zh": "什么是流速编码？"
+            },
+            "children": []
+          },
+          {
+            "id": "measuring-flow",
+            "title": {
+              "en": "Measuring flow?",
+              "zh": "流速测量？"
+            },
+            "children": []
+          },
+          {
+            "id": "4d-flow-imaging",
+            "title": {
+              "en": "4D Flow Imaging?",
+              "zh": "四维血流成像？"
+            },
+            "children": []
+          },
+          {
+            "id": "how-accurate",
+            "title": {
+              "en": "How accurate?",
+              "zh": "准确性？"
+            },
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "mr-angiography---ii",
+        "title": {
+          "en": "MR Angiography - II",
+          "zh": "MR血管成像 - II"
+        },
+        "children": [
+          {
+            "id": "gated-3d-fse-mra",
+            "title": {
+              "en": "Gated 3D FSE MRA?",
+              "zh": "门控三维快速自旋回波MRA？"
+            },
+            "children": []
+          },
+          {
+            "id": "3d-fse-mra-parameters",
+            "title": {
+              "en": "3D FSE MRA parameters?",
+              "zh": "三维快速自旋回波MRA参数？"
+            },
+            "children": []
+          },
+          {
+            "id": "ssfp-mra",
+            "title": {
+              "en": "SSFP MRA?",
+              "zh": "稳态自由进动MRA？"
+            },
+            "children": []
+          },
+          {
+            "id": "slab-selective-ir-mr",
+            "title": {
+              "en": "Slab-selective IR MR?",
+              "zh": "层面选择性反转恢复MR？"
+            },
+            "children": []
+          },
+          {
+            "id": "mra-with-asl",
+            "title": {
+              "en": "MRA with ASL?",
+              "zh": "动脉自旋标记MRA？"
+            },
+            "children": []
+          },
+          {
+            "id": "other-mra-methods",
+            "title": {
+              "en": "Other MRA methods?",
+              "zh": "其他MRA方法？"
+            },
+            "children": []
+          },
+          {
+            "id": "contrast-enhanced-mra",
+            "title": {
+              "en": "Contrast-enhanced MRA?",
+              "zh": "对比增强MRA？"
+            },
+            "children": []
+          },
+          {
+            "id": "timing-the-bolus",
+            "title": {
+              "en": "Timing the bolus?",
+              "zh": "团注时间把握？"
+            },
+            "children": []
+          },
+          {
+            "id": "view-ordering-in-mra",
+            "title": {
+              "en": "View ordering in MRA?",
+              "zh": "MRA中的视图排序？"
+            },
+            "children": []
+          },
+          {
+            "id": "bolus-chasing",
+            "title": {
+              "en": "Bolus chasing?",
+              "zh": "团注追踪？"
+            },
+            "children": []
+          },
+          {
+            "id": "tricks-or-twist",
+            "title": {
+              "en": "TRICKS or TWIST?",
+              "zh": "TRICKS或TWIST？"
+            },
+            "children": []
+          },
+          {
+            "id": "ce-mra-artifacts",
+            "title": {
+              "en": "CE-MRA artifacts?",
+              "zh": "对比增强MRA伪影？"
+            },
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "cardiac-i---introanatomy",
+        "title": {
+          "en": "Cardiac I - Intro/Anatomy",
+          "zh": "心脏I - 导论/解剖"
+        },
+        "children": [
+          {
+            "id": "cardiac-protocols",
+            "title": {
+              "en": "Cardiac protocols?",
+              "zh": "心脏扫描方案？"
+            },
+            "children": []
+          },
+          {
+            "id": "patient-prep",
+            "title": {
+              "en": "Patient prep?",
+              "zh": "患者准备？"
+            },
+            "children": []
+          },
+          {
+            "id": "ekg-problems",
+            "title": {
+              "en": "EKG problems?",
+              "zh": "心电图问题？"
+            },
+            "children": []
+          },
+          {
+            "id": "magnet-changes-ekg",
+            "title": {
+              "en": "Magnet changes EKG?",
+              "zh": "磁体对心电图的影响？"
+            },
+            "children": []
+          },
+          {
+            "id": "gating-v-triggering",
+            "title": {
+              "en": "Gating v triggering?",
+              "zh": "门控与触发？"
+            },
+            "children": []
+          },
+          {
+            "id": "gating-parameters",
+            "title": {
+              "en": "Gating parameters?",
+              "zh": "门控参数？"
+            },
+            "children": []
+          },
+          {
+            "id": "heart-navigators",
+            "title": {
+              "en": "Heart navigators?",
+              "zh": "心脏导航器？"
+            },
+            "children": []
+          },
+          {
+            "id": "remote-cardiac-gating",
+            "title": {
+              "en": "\"Remote\" cardiac gating?",
+              "zh": "“远程”心脏门控？"
+            },
+            "children": []
+          },
+          {
+            "id": "dark-blooddouble-ir",
+            "title": {
+              "en": "Dark blood/Double IR?",
+              "zh": "黑血/双反转恢复？"
+            },
+            "children": []
+          },
+          {
+            "id": "why-not-single-ir",
+            "title": {
+              "en": "Why not single IR?",
+              "zh": "为何不使用单反转恢复？"
+            },
+            "children": []
+          },
+          {
+            "id": "triple-ir",
+            "title": {
+              "en": "Triple IR?",
+              "zh": "三反转恢复？"
+            },
+            "children": []
+          },
+          {
+            "id": "polar-plots",
+            "title": {
+              "en": "Polar plots?",
+              "zh": "极坐标图？"
+            },
+            "children": []
+          },
+          {
+            "id": "coronary-artery-mra",
+            "title": {
+              "en": "Coronary artery MRA?",
+              "zh": "冠状动脉MRA？"
+            },
+            "children": []
+          },
+          {
+            "id": "cardiac-ai",
+            "title": {
+              "en": "Cardiac AI?",
+              "zh": "心脏人工智能？"
+            },
+            "children": []
+          },
+          {
+            "id": "cardiac-mr-artifacts",
+            "title": {
+              "en": "Cardiac MR artifacts?",
+              "zh": "心脏MR伪影？"
+            },
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "cardiac-ii---function",
+        "title": {
+          "en": "Cardiac II - Function",
+          "zh": "心脏II - 功能"
+        },
+        "children": [
+          {
+            "id": "beating-heart-movies",
+            "title": {
+              "en": "Beating heart movies?",
+              "zh": "跳动心脏电影？"
+            },
+            "children": []
+          },
+          {
+            "id": "cine-parameters",
+            "title": {
+              "en": "Cine parameters?",
+              "zh": "电影序列参数？"
+            },
+            "children": []
+          },
+          {
+            "id": "real-time-cine",
+            "title": {
+              "en": "Real-time cine?",
+              "zh": "实时电影？"
+            },
+            "children": []
+          },
+          {
+            "id": "ventricular-function",
+            "title": {
+              "en": "Ventricular function?",
+              "zh": "心室功能？"
+            },
+            "children": []
+          },
+          {
+            "id": "taggingspamm",
+            "title": {
+              "en": "Tagging/SPAMM?",
+              "zh": "标记/SPAMM？"
+            },
+            "children": []
+          },
+          {
+            "id": "perfusion-why-and-how",
+            "title": {
+              "en": "Perfusion: why and how?",
+              "zh": "灌注：原理与方法？"
+            },
+            "children": []
+          },
+          {
+            "id": "1st-pass-perfusion",
+            "title": {
+              "en": "1st pass perfusion?",
+              "zh": "首过灌注？"
+            },
+            "children": []
+          },
+          {
+            "id": "quantifying-perfusion",
+            "title": {
+              "en": "Quantifying perfusion?",
+              "zh": "灌注定量？"
+            },
+            "children": []
+          },
+          {
+            "id": "dark-rim-artifact",
+            "title": {
+              "en": "Dark rim artifact",
+              "zh": "暗边伪影"
+            },
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "cardiac-iii---viability",
+        "title": {
+          "en": "Cardiac III - Viability",
+          "zh": "心脏III - 活性"
+        },
+        "children": [
+          {
+            "id": "gd-enhancement",
+            "title": {
+              "en": "Gd enhancement?",
+              "zh": "钆强化？"
+            },
+            "children": []
+          },
+          {
+            "id": "ti-to-null-myocardium",
+            "title": {
+              "en": "TI to null myocardium?",
+              "zh": "使心肌信号为零的反转时间？"
+            },
+            "children": []
+          },
+          {
+            "id": "ps-phase-sensitive-ir",
+            "title": {
+              "en": "PS (phase-sensitive) IR?",
+              "zh": "相位敏感反转恢复？"
+            },
+            "children": []
+          },
+          {
+            "id": "wideband-lge",
+            "title": {
+              "en": "Wideband LGE?",
+              "zh": "宽频带晚期钆强化？"
+            },
+            "children": []
+          },
+          {
+            "id": "t1-mapping",
+            "title": {
+              "en": "T1 mapping?",
+              "zh": "T1 mapping？"
+            },
+            "children": []
+          },
+          {
+            "id": "iront2-mapping",
+            "title": {
+              "en": "Iron/T2*-mapping?",
+              "zh": "铁/T2* mapping？"
+            },
+            "children": []
+          },
+          {
+            "id": "edemat2-mapping",
+            "title": {
+              "en": "Edema/T2-mapping?",
+              "zh": "水肿/T2 mapping？"
+            },
+            "children": []
+          },
+          {
+            "id": "t1-rho-mapping",
+            "title": {
+              "en": "T1-rho mapping?",
+              "zh": "T1-rho mapping？"
+            },
+            "children": []
+          },
+          {
+            "id": "whyhow-stress-test",
+            "title": {
+              "en": "Why/how stress test?",
+              "zh": "为何/如何进行负荷试验？"
+            },
+            "children": []
+          },
+          {
+            "id": "stess-drugsagents",
+            "title": {
+              "en": "Stess drugs/agents?",
+              "zh": "负荷药物/试剂？"
+            },
+            "children": []
+          },
+          {
+            "id": "stress-consent-form",
+            "title": {
+              "en": "Stress consent form?",
+              "zh": "负荷试验知情同意书？"
+            },
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "hellipmr-artifacts",
+    "title": {
+      "en": "MR Artifacts",
+      "zh": "MR伪影"
+    },
+    "children": [
+      {
+        "id": "tissue-related-artifacts",
+        "title": {
+          "en": "Tissue-related artifacts",
+          "zh": "组织相关伪影"
+        },
+        "children": [
+          {
+            "id": "chemical-shift-artifact",
+            "title": {
+              "en": "Chemical shift artifact?",
+              "zh": "化学位移伪影？"
+            },
+            "children": []
+          },
+          {
+            "id": "chemical-shift-in-phase",
+            "title": {
+              "en": "Chemical shift in phase?",
+              "zh": "相位方向的化学位移？"
+            },
+            "children": []
+          },
+          {
+            "id": "reducing-chemical-shift",
+            "title": {
+              "en": "Reducing chemical shift?",
+              "zh": "减少化学位移伪影？"
+            },
+            "children": []
+          },
+          {
+            "id": "chemical-shift-2nd-kind",
+            "title": {
+              "en": "Chemical Shift 2nd Kind?",
+              "zh": "第二种化学位移？"
+            },
+            "children": []
+          },
+          {
+            "id": "in-phaseout-of-phase1",
+            "title": {
+              "en": "In-phase/out-of phase?",
+              "zh": "同相位/反相位？"
+            },
+            "children": []
+          },
+          {
+            "id": "ir-bounce-point",
+            "title": {
+              "en": "IR bounce point?",
+              "zh": "反转恢复弹回点？"
+            },
+            "children": []
+          },
+          {
+            "id": "susceptibility-artifact",
+            "title": {
+              "en": "Susceptibility artifact?",
+              "zh": "磁化率伪影？"
+            },
+            "children": []
+          },
+          {
+            "id": "metal-suppression",
+            "title": {
+              "en": "Metal suppression?",
+              "zh": "金属伪影抑制？"
+            },
+            "children": []
+          },
+          {
+            "id": "dielectric-effect",
+            "title": {
+              "en": "Dielectric effect?",
+              "zh": "介电效应？"
+            },
+            "children": []
+          },
+          {
+            "id": "dielectric-pads",
+            "title": {
+              "en": "Dielectric Pads?",
+              "zh": "介电垫？"
+            },
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "motion-related-artifacts",
+        "title": {
+          "en": "Motion-related artifacts",
+          "zh": "运动相关伪影"
+        },
+        "children": [
+          {
+            "id": "why-discrete-ghosts",
+            "title": {
+              "en": "Why discrete ghosts?",
+              "zh": "为何产生离散鬼影？"
+            },
+            "children": []
+          },
+          {
+            "id": "motion-artifact-direction",
+            "title": {
+              "en": "Motion artifact direction?",
+              "zh": "运动伪影方向？"
+            },
+            "children": []
+          },
+          {
+            "id": "reducing-motion-artifacts",
+            "title": {
+              "en": "Reducing motion artifacts?",
+              "zh": "减少运动伪影的方法？"
+            },
+            "children": []
+          },
+          {
+            "id": "saturation-pulses",
+            "title": {
+              "en": "Saturation pulses?",
+              "zh": "饱和脉冲？"
+            },
+            "children": []
+          },
+          {
+            "id": "gating-methods",
+            "title": {
+              "en": "Gating methods?",
+              "zh": "门控方法？"
+            },
+            "children": []
+          },
+          {
+            "id": "respiratory-comp",
+            "title": {
+              "en": "Respiratory comp?",
+              "zh": "呼吸补偿？"
+            },
+            "children": []
+          },
+          {
+            "id": "camera-based-systems",
+            "title": {
+              "en": "Camera-based systems?",
+              "zh": "摄像头系统？"
+            },
+            "children": []
+          },
+          {
+            "id": "navigator-echoes",
+            "title": {
+              "en": "Navigator echoes?",
+              "zh": "导航回波？"
+            },
+            "children": []
+          },
+          {
+            "id": "remote-respiratory-gating",
+            "title": {
+              "en": "Remote respiratory gating?",
+              "zh": "远程呼吸门控？"
+            },
+            "children": []
+          },
+          {
+            "id": "propellerblade",
+            "title": {
+              "en": "PROPELLER/BLADE?",
+              "zh": "PROPELLER/BLADE？"
+            },
+            "children": []
+          },
+          {
+            "id": "samer",
+            "title": {
+              "en": "SAMER?",
+              "zh": "SAMER？"
+            },
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "technique-related-artifacts",
+        "title": {
+          "en": "Technique-related artifacts",
+          "zh": "技术相关伪影"
+        },
+        "children": [
+          {
+            "id": "partial-volume-effects",
+            "title": {
+              "en": "Partial volume effects?",
+              "zh": "部分容积效应？"
+            },
+            "children": []
+          },
+          {
+            "id": "slice-overlap",
+            "title": {
+              "en": "Slice overlap?",
+              "zh": "层面重叠？"
+            },
+            "children": []
+          },
+          {
+            "id": "aliasing",
+            "title": {
+              "en": "Aliasing?",
+              "zh": "混叠？"
+            },
+            "children": []
+          },
+          {
+            "id": "wrap-around-artifact",
+            "title": {
+              "en": "Wrap-around artifact?",
+              "zh": "卷褶伪影？"
+            },
+            "children": []
+          },
+          {
+            "id": "eliminate-wrap-around",
+            "title": {
+              "en": "Eliminate wrap-around?",
+              "zh": "消除卷褶伪影？"
+            },
+            "children": []
+          },
+          {
+            "id": "phase-oversampling",
+            "title": {
+              "en": "Phase oversampling?",
+              "zh": "相位过采样？"
+            },
+            "children": []
+          },
+          {
+            "id": "frequency-wrap-around",
+            "title": {
+              "en": "Frequency wrap-around?",
+              "zh": "频率卷褶？"
+            },
+            "children": []
+          },
+          {
+            "id": "spiralradial-artifacts",
+            "title": {
+              "en": "Spiral/radial artifacts?",
+              "zh": "螺旋/放射状伪影？"
+            },
+            "children": []
+          },
+          {
+            "id": "gibbs-artifact",
+            "title": {
+              "en": "Gibbs artifact?",
+              "zh": "吉布斯伪影？"
+            },
+            "children": []
+          },
+          {
+            "id": "nyquist-n2-ghosts",
+            "title": {
+              "en": "Nyquist (N/2) ghosts?",
+              "zh": "奈奎斯特（N/2）鬼影？"
+            },
+            "children": []
+          },
+          {
+            "id": "zipper-artifact",
+            "title": {
+              "en": "Zipper artifact?",
+              "zh": "拉链伪影？"
+            },
+            "children": []
+          },
+          {
+            "id": "data-artifacts",
+            "title": {
+              "en": "Data artifacts?",
+              "zh": "数据伪影？"
+            },
+            "children": []
+          },
+          {
+            "id": "surface-coil-flare",
+            "title": {
+              "en": "Surface coil flare?",
+              "zh": "表面线圈亮斑？"
+            },
+            "children": []
+          },
+          {
+            "id": "mra-artifacts-tof",
+            "title": {
+              "en": "MRA Artifacts (TOF)?",
+              "zh": "MRA伪影（TOF）？"
+            },
+            "children": []
+          },
+          {
+            "id": "mra-artifacts-ce",
+            "title": {
+              "en": "MRA artifacts (CE)?",
+              "zh": "MRA伪影（对比增强）？"
+            },
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "hellipfunctional-imaging",
+    "title": {
+      "en": "Functional Imaging",
+      "zh": "功能成像"
+    },
+    "children": [
+      {
+        "id": "perfusion-i-intro--dsc",
+        "title": {
+          "en": "Perfusion I: Intro & DSC",
+          "zh": "灌注I：导论与DSC"
+        },
+        "children": [
+          {
+            "id": "measuring-perfusion",
+            "title": {
+              "en": "Measuring perfusion?",
+              "zh": "如何测量灌注？"
+            },
+            "children": []
+          },
+          {
+            "id": "meaning-of-cbf-mtt-etc",
+            "title": {
+              "en": "Meaning of CBF, MTT etc?",
+              "zh": "脑血流量、平均通过时间等含义？"
+            },
+            "children": []
+          },
+          {
+            "id": "dsc-v-dce-v-asl",
+            "title": {
+              "en": "DSC v DCE v ASL?",
+              "zh": "DSC、DCE与ASL的比较？"
+            },
+            "children": []
+          },
+          {
+            "id": "how-to-perform-dsc",
+            "title": {
+              "en": "How to perform DSC?",
+              "zh": "如何进行DSC？"
+            },
+            "children": []
+          },
+          {
+            "id": "bolus-gd-effect",
+            "title": {
+              "en": "Bolus Gd effect?",
+              "zh": "团注钆剂效应？"
+            },
+            "children": []
+          },
+          {
+            "id": "t1-effects-on-dsc",
+            "title": {
+              "en": "T1 effects on DSC?",
+              "zh": "T1对DSC的影响？"
+            },
+            "children": []
+          },
+          {
+            "id": "dsc-recirculation",
+            "title": {
+              "en": "DSC recirculation?",
+              "zh": "DSC再循环？"
+            },
+            "children": []
+          },
+          {
+            "id": "dsc-curve-analysis",
+            "title": {
+              "en": "DSC curve analysis?",
+              "zh": "DSC曲线分析？"
+            },
+            "children": []
+          },
+          {
+            "id": "dsc-signal-v-gd",
+            "title": {
+              "en": "DSC signal v [Gd]",
+              "zh": "DSC信号与[Gd]的关系？"
+            },
+            "children": []
+          },
+          {
+            "id": "arterial-input-aif",
+            "title": {
+              "en": "Arterial input (AIF)?",
+              "zh": "动脉输入函数？"
+            },
+            "children": []
+          },
+          {
+            "id": "quantitative-dsc",
+            "title": {
+              "en": "Quantitative DSC?",
+              "zh": "定量DSC？"
+            },
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "perfusion-ii-dce",
+        "title": {
+          "en": "Perfusion II: DCE",
+          "zh": "灌注II：DCE"
+        },
+        "children": [
+          {
+            "id": "what-is-dce",
+            "title": {
+              "en": "What is DCE?",
+              "zh": "什么是DCE？"
+            },
+            "children": []
+          },
+          {
+            "id": "how-is-dce-performed",
+            "title": {
+              "en": "How is DCE performed?",
+              "zh": "如何进行DCE？"
+            },
+            "children": []
+          },
+          {
+            "id": "how-is-dce-analyzed",
+            "title": {
+              "en": "How is DCE analyzed?",
+              "zh": "如何分析DCE？"
+            },
+            "children": []
+          },
+          {
+            "id": "breast-dce",
+            "title": {
+              "en": "Breast DCE?",
+              "zh": "乳腺DCE？"
+            },
+            "children": []
+          },
+          {
+            "id": "dce-signal-v-gd",
+            "title": {
+              "en": "DCE signal v [Gd]",
+              "zh": "DCE信号与[Gd]的关系？"
+            },
+            "children": []
+          },
+          {
+            "id": "dce-tissue-parmeters",
+            "title": {
+              "en": "DCE tissue parmeters?",
+              "zh": "DCE组织参数？"
+            },
+            "children": []
+          },
+          {
+            "id": "parameters-to-images",
+            "title": {
+              "en": "Parameters to images?",
+              "zh": "参数生成图像？"
+            },
+            "children": []
+          },
+          {
+            "id": "k-trans--permeability",
+            "title": {
+              "en": "K-trans = permeability?",
+              "zh": "K-trans = 通透性？"
+            },
+            "children": []
+          },
+          {
+            "id": "utility-of-dce",
+            "title": {
+              "en": "Utility of DCE?",
+              "zh": "DCE的临床应用？"
+            },
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "perfusion-iii-asl",
+        "title": {
+          "en": "Perfusion III: ASL",
+          "zh": "灌注III：ASL"
+        },
+        "children": [
+          {
+            "id": "what-is-asl",
+            "title": {
+              "en": "What is ASL?",
+              "zh": "什么是ASL？"
+            },
+            "children": []
+          },
+          {
+            "id": "asl-methods-overview",
+            "title": {
+              "en": "ASL methods overview?",
+              "zh": "ASL方法概述？"
+            },
+            "children": []
+          },
+          {
+            "id": "casl",
+            "title": {
+              "en": "CASL?",
+              "zh": "连续式ASL？"
+            },
+            "children": []
+          },
+          {
+            "id": "pasl",
+            "title": {
+              "en": "PASL?",
+              "zh": "脉冲式ASL？"
+            },
+            "children": []
+          },
+          {
+            "id": "pcasl",
+            "title": {
+              "en": "pCASL?",
+              "zh": "伪连续式ASL？"
+            },
+            "children": []
+          },
+          {
+            "id": "asl-parameters",
+            "title": {
+              "en": "ASL parameters?",
+              "zh": "ASL参数？"
+            },
+            "children": []
+          },
+          {
+            "id": "asl-artifacts",
+            "title": {
+              "en": "ASL artifacts?",
+              "zh": "ASL伪影？"
+            },
+            "children": []
+          },
+          {
+            "id": "gadolinium-and-asl",
+            "title": {
+              "en": "Gadolinium and ASL?",
+              "zh": "钆剂与ASL？"
+            },
+            "children": []
+          },
+          {
+            "id": "vascular-color-maps",
+            "title": {
+              "en": "Vascular color maps?",
+              "zh": "血管彩色图谱？"
+            },
+            "children": []
+          },
+          {
+            "id": "quantifying-flow",
+            "title": {
+              "en": "Quantifying flow?",
+              "zh": "血流定量？"
+            },
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "functional-mribold---i",
+        "title": {
+          "en": "Functional MRI/BOLD - I",
+          "zh": "功能MRI/BOLD - I"
+        },
+        "children": [
+          {
+            "id": "who-invented-fmri",
+            "title": {
+              "en": "Who invented fMRI?",
+              "zh": "fMRI是谁发明的？"
+            },
+            "children": []
+          },
+          {
+            "id": "how-does-fmri-work",
+            "title": {
+              "en": "How does fMRI work?",
+              "zh": "fMRI的工作原理？"
+            },
+            "children": []
+          },
+          {
+            "id": "bold-contrast",
+            "title": {
+              "en": "BOLD contrast?",
+              "zh": "血氧水平依赖对比？"
+            },
+            "children": []
+          },
+          {
+            "id": "why-does-bold-uarr-signal",
+            "title": {
+              "en": "Why does BOLD ↑ signal?",
+              "zh": "BOLD信号为何增强？"
+            },
+            "children": []
+          },
+          {
+            "id": "does-boldbrain-activity",
+            "title": {
+              "en": "Does BOLD=brain activity?",
+              "zh": "BOLD是否等于脑活动？"
+            },
+            "children": []
+          },
+          {
+            "id": "bold-pulse-sequences",
+            "title": {
+              "en": "BOLD pulse sequences?",
+              "zh": "BOLD脉冲序列？"
+            },
+            "children": []
+          },
+          {
+            "id": "fmri-paradigm-design",
+            "title": {
+              "en": "fMRI Paradigm design?",
+              "zh": "fMRI实验范式设计？"
+            },
+            "children": []
+          },
+          {
+            "id": "why-on-off-comparison",
+            "title": {
+              "en": "Why \"on-off\" comparison?",
+              "zh": "为何使用“开关”比较？"
+            },
+            "children": []
+          },
+          {
+            "id": "motor-paradigms",
+            "title": {
+              "en": "Motor paradigms?",
+              "zh": "运动范式？"
+            },
+            "children": []
+          },
+          {
+            "id": "visual",
+            "title": {
+              "en": "Visual?",
+              "zh": "视觉范式？"
+            },
+            "children": []
+          },
+          {
+            "id": "language",
+            "title": {
+              "en": "Language?",
+              "zh": "语言范式？"
+            },
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "functional-mribold---ii",
+        "title": {
+          "en": "Functional MRI/BOLD - II",
+          "zh": "功能MRI/BOLD - II"
+        },
+        "children": [
+          {
+            "id": "processanalyze-fmri",
+            "title": {
+              "en": "Process/analyze fMRI?",
+              "zh": "fMRI处理/分析？"
+            },
+            "children": []
+          },
+          {
+            "id": "best-fmri-software",
+            "title": {
+              "en": "Best fMRI software?",
+              "zh": "最佳fMRI软件？"
+            },
+            "children": []
+          },
+          {
+            "id": "data-pre-processing",
+            "title": {
+              "en": "Data pre-processing?",
+              "zh": "数据预处理？"
+            },
+            "children": []
+          },
+          {
+            "id": "registrationnormalization",
+            "title": {
+              "en": "Registration/normalization?",
+              "zh": "配准/标准化？"
+            },
+            "children": []
+          },
+          {
+            "id": "fmri-statistical-analysis",
+            "title": {
+              "en": "fMRI statistical analysis?",
+              "zh": "fMRI统计分析？"
+            },
+            "children": []
+          },
+          {
+            "id": "general-linear-model",
+            "title": {
+              "en": "General Linear Model?",
+              "zh": "广义线性模型？"
+            },
+            "children": []
+          },
+          {
+            "id": "activation-blobs",
+            "title": {
+              "en": "Activation \"blobs\"?",
+              "zh": "激活“团块”？"
+            },
+            "children": []
+          },
+          {
+            "id": "false-activation",
+            "title": {
+              "en": "False activation?",
+              "zh": "假激活？"
+            },
+            "children": []
+          },
+          {
+            "id": "resting-state-fmri",
+            "title": {
+              "en": "Resting state fMRI?",
+              "zh": "静息态fMRI？"
+            },
+            "children": []
+          },
+          {
+            "id": "analyze-rs-fmri",
+            "title": {
+              "en": "Analyze RS-fMRI?",
+              "zh": "分析静息态fMRI？"
+            },
+            "children": []
+          },
+          {
+            "id": "networkgraphs",
+            "title": {
+              "en": "Network/Graphs?",
+              "zh": "网络/图论？"
+            },
+            "children": []
+          },
+          {
+            "id": "fmri-at-7t",
+            "title": {
+              "en": "fMRI at 7T?",
+              "zh": "7T场强下的fMRI？"
+            },
+            "children": []
+          },
+          {
+            "id": "mind-readinglie-detector",
+            "title": {
+              "en": "Mind reading/Lie detector?",
+              "zh": "读心术/测谎仪？"
+            },
+            "children": []
+          },
+          {
+            "id": "fmri-critique",
+            "title": {
+              "en": "fMRI critique?",
+              "zh": "对fMRI的批判性思考？"
+            },
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "hellipmr-spectroscopy",
+    "title": {
+      "en": "MR Spectroscopy",
+      "zh": "磁共振波谱"
+    },
+    "children": [
+      {
+        "id": "mrs-i---basics",
+        "title": {
+          "en": "MRS I - Basics",
+          "zh": "MRS I - 基础"
+        },
+        "children": [
+          {
+            "id": "mri-vs-mrs",
+            "title": {
+              "en": "MRI vs MRS?",
+              "zh": "MRI与MRS的区别？"
+            },
+            "children": []
+          },
+          {
+            "id": "spectra-vs-images",
+            "title": {
+              "en": "Spectra vs images?",
+              "zh": "波谱与图像？"
+            },
+            "children": []
+          },
+          {
+            "id": "chemical-shift-delta",
+            "title": {
+              "en": "Chemical shift (δ)?",
+              "zh": "化学位移（δ）？"
+            },
+            "children": []
+          },
+          {
+            "id": "measuring-delta",
+            "title": {
+              "en": "Measuring δ?",
+              "zh": "如何测量δ？"
+            },
+            "children": []
+          },
+          {
+            "id": "backward-delta-scale",
+            "title": {
+              "en": "Backward δ scale?",
+              "zh": "δ标度的反向？"
+            },
+            "children": []
+          },
+          {
+            "id": "predicting-delta",
+            "title": {
+              "en": "Predicting δ?",
+              "zh": "如何预测δ？"
+            },
+            "children": []
+          },
+          {
+            "id": "sizeshapes-of-peaks",
+            "title": {
+              "en": "Size/shapes of peaks?",
+              "zh": "峰的大小与形状？"
+            },
+            "children": []
+          },
+          {
+            "id": "splitting-of-peaks",
+            "title": {
+              "en": "Splitting of peaks?",
+              "zh": "峰的裂分？"
+            },
+            "children": []
+          },
+          {
+            "id": "localization-methods",
+            "title": {
+              "en": "Localization methods?",
+              "zh": "定位方法？"
+            },
+            "children": []
+          },
+          {
+            "id": "single-v-multi-voxel",
+            "title": {
+              "en": "Single v multi-voxel?",
+              "zh": "单体素与多体素？"
+            },
+            "children": []
+          },
+          {
+            "id": "press",
+            "title": {
+              "en": "PRESS?",
+              "zh": "PRESS？"
+            },
+            "children": []
+          },
+          {
+            "id": "steam",
+            "title": {
+              "en": "STEAM?",
+              "zh": "STEAM？"
+            },
+            "children": []
+          },
+          {
+            "id": "isis",
+            "title": {
+              "en": "ISIS?",
+              "zh": "ISIS？"
+            },
+            "children": []
+          },
+          {
+            "id": "csi",
+            "title": {
+              "en": "CSI?",
+              "zh": "化学位移成像？"
+            },
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "mrs-ii---clinical-sup1h-mrs",
+        "title": {
+          "en": "MRS II - Clinical ¹H MRS",
+          "zh": "MRS II - 临床¹H MRS"
+        },
+        "children": [
+          {
+            "id": "how-to-brain-mrs",
+            "title": {
+              "en": "How-to: brain MRS?",
+              "zh": "如何进行：脑MRS？"
+            },
+            "children": []
+          },
+          {
+            "id": "water-suppression",
+            "title": {
+              "en": "Water suppression?",
+              "zh": "水抑制？"
+            },
+            "children": []
+          },
+          {
+            "id": "fat-suppression",
+            "title": {
+              "en": "Fat suppression?",
+              "zh": "脂肪抑制？"
+            },
+            "children": []
+          },
+          {
+            "id": "normal-brain-spectra",
+            "title": {
+              "en": "Normal brain spectra?",
+              "zh": "正常脑波谱？"
+            },
+            "children": []
+          },
+          {
+            "id": "choice-of-trteetc",
+            "title": {
+              "en": "Choice of TR/TE/etc?",
+              "zh": "如何选择TR/TE等参数？"
+            },
+            "children": []
+          },
+          {
+            "id": "hunters-angle",
+            "title": {
+              "en": "Hunter's angle?",
+              "zh": "亨特角？"
+            },
+            "children": []
+          },
+          {
+            "id": "lactate-inversion",
+            "title": {
+              "en": "Lactate inversion?",
+              "zh": "乳酸反转？"
+            },
+            "children": []
+          },
+          {
+            "id": "metabolite-mapping",
+            "title": {
+              "en": "Metabolite mapping?",
+              "zh": "代谢物分布图？"
+            },
+            "children": []
+          },
+          {
+            "id": "metabolite-quantitation",
+            "title": {
+              "en": "Metabolite quantitation?",
+              "zh": "代谢物定量？"
+            },
+            "children": []
+          },
+          {
+            "id": "breast-mrs",
+            "title": {
+              "en": "Breast MRS?",
+              "zh": "乳腺MRS？"
+            },
+            "children": []
+          },
+          {
+            "id": "gd-effect-on-mrs",
+            "title": {
+              "en": "Gd effect on MRS?",
+              "zh": "钆剂对MRS的影响？"
+            },
+            "children": []
+          },
+          {
+            "id": "how-to-prostate-mrs",
+            "title": {
+              "en": "How-to: prostate MRS?",
+              "zh": "如何进行：前列腺MRS？"
+            },
+            "children": []
+          },
+          {
+            "id": "prostate-spectra",
+            "title": {
+              "en": "Prostate spectra?",
+              "zh": "前列腺波谱？"
+            },
+            "children": []
+          },
+          {
+            "id": "muscle-sup1h-mrs",
+            "title": {
+              "en": "Muscle ¹H-MRS?",
+              "zh": "肌肉¹H-MRS？"
+            },
+            "children": []
+          },
+          {
+            "id": "liver-sup1h-mrs",
+            "title": {
+              "en": "Liver ¹H-MRS?",
+              "zh": "肝脏¹H-MRS？"
+            },
+            "children": []
+          },
+          {
+            "id": "mrs-artifacts",
+            "title": {
+              "en": "MRS artifacts?",
+              "zh": "MRS伪影？"
+            },
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "mrs-iii---multi-nuclear",
+        "title": {
+          "en": "MRS III - Multi-nuclear",
+          "zh": "MRS III - 多核"
+        },
+        "children": [
+          {
+            "id": "other-nuclei",
+            "title": {
+              "en": "Other nuclei?",
+              "zh": "其他原子核？"
+            },
+            "children": []
+          },
+          {
+            "id": "why-phosphorus",
+            "title": {
+              "en": "Why phosphorus?",
+              "zh": "为何使用磷？"
+            },
+            "children": []
+          },
+          {
+            "id": "how-to-sup3sup1p-mrs",
+            "title": {
+              "en": "How-to: ³¹P MRS",
+              "zh": "如何进行：³¹P MRS"
+            },
+            "children": []
+          },
+          {
+            "id": "normal-sup3sup1p-spectra",
+            "title": {
+              "en": "Normal ³¹P spectra?",
+              "zh": "正常³¹P波谱？"
+            },
+            "children": []
+          },
+          {
+            "id": "organ-differences",
+            "title": {
+              "en": "Organ differences?",
+              "zh": "器官间差异？"
+            },
+            "children": []
+          },
+          {
+            "id": "sup3sup1p-measurements",
+            "title": {
+              "en": "³¹P measurements?",
+              "zh": "³¹P测量？"
+            },
+            "children": []
+          },
+          {
+            "id": "decoupling",
+            "title": {
+              "en": "Decoupling?",
+              "zh": "去耦？"
+            },
+            "children": []
+          },
+          {
+            "id": "noe",
+            "title": {
+              "en": "NOE?",
+              "zh": "核奥弗豪森效应？"
+            },
+            "children": []
+          },
+          {
+            "id": "carbon-mrs",
+            "title": {
+              "en": "Carbon MRS?",
+              "zh": "碳MRS？"
+            },
+            "children": []
+          },
+          {
+            "id": "sodium-imaging",
+            "title": {
+              "en": "Sodium imaging?",
+              "zh": "钠成像？"
+            },
+            "children": []
+          },
+          {
+            "id": "xenon-imaging",
+            "title": {
+              "en": "Xenon imaging?",
+              "zh": "氙成像？"
+            },
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "artificial-intelligence",
+    "title": {
+      "en": "Artificial Intelligence",
+      "zh": "人工智能"
+    },
+    "children": [
+      {
+        "id": "ai-part-i-basics",
+        "title": {
+          "en": "AI Part I: Basics",
+          "zh": "AI 第一部分：基础"
+        },
+        "children": [
+          {
+            "id": "artificial-intelligence-ai",
+            "title": {
+              "en": "Artificial Intelligence (AI)?",
+              "zh": "人工智能（AI）？"
+            },
+            "children": []
+          },
+          {
+            "id": "what-is-a-neural-network",
+            "title": {
+              "en": "What is a neural network?",
+              "zh": "什么是神经网络？"
+            },
+            "children": []
+          },
+          {
+            "id": "machine-learning-ml",
+            "title": {
+              "en": "Machine Learning (ML)?",
+              "zh": "机器学习（ML）？"
+            },
+            "children": []
+          },
+          {
+            "id": "shallow-v-deep-ml",
+            "title": {
+              "en": "Shallow v Deep ML?",
+              "zh": "浅层与深度机器学习？"
+            },
+            "children": []
+          },
+          {
+            "id": "shallow-networks",
+            "title": {
+              "en": "Shallow networks?",
+              "zh": "浅层网络？"
+            },
+            "children": []
+          },
+          {
+            "id": "deep-network-types",
+            "title": {
+              "en": "Deep network types?",
+              "zh": "深度网络类型？"
+            },
+            "children": []
+          },
+          {
+            "id": "data-prep-and-fitting",
+            "title": {
+              "en": "Data prep and fitting?",
+              "zh": "数据准备与拟合？"
+            },
+            "children": []
+          },
+          {
+            "id": "back-propagation",
+            "title": {
+              "en": "Back-Propagation?",
+              "zh": "反向传播？"
+            },
+            "children": []
+          },
+          {
+            "id": "dl-playground",
+            "title": {
+              "en": "DL 'Playground'?",
+              "zh": "深度学习“游乐场”？"
+            },
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "ai-part-2-advanced",
+        "title": {
+          "en": "AI Part 2: Advanced",
+          "zh": "AI 第二部分：进阶"
+        },
+        "children": [
+          {
+            "id": "what-is-convolution",
+            "title": {
+              "en": "What is convolution?",
+              "zh": "什么是卷积？"
+            },
+            "children": []
+          },
+          {
+            "id": "convolutional-network",
+            "title": {
+              "en": "Convolutional Network?",
+              "zh": "卷积网络？"
+            },
+            "children": []
+          },
+          {
+            "id": "softmax",
+            "title": {
+              "en": "Softmax?",
+              "zh": "Softmax？"
+            },
+            "children": []
+          },
+          {
+            "id": "upsampling",
+            "title": {
+              "en": "Upsampling?",
+              "zh": "上采样？"
+            },
+            "children": []
+          },
+          {
+            "id": "limitationsproblems-of-ai",
+            "title": {
+              "en": "Limitations/Problems of AI?",
+              "zh": "AI的局限性与问题？"
+            },
+            "children": []
+          },
+          {
+            "id": "is-the-singularity-near",
+            "title": {
+              "en": "Is the Singularity near?",
+              "zh": "奇点临近了吗？"
+            },
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "ai-part-3-image-processing",
+        "title": {
+          "en": "AI Part 3: Image processing",
+          "zh": "AI 第三部分：图像处理"
+        },
+        "children": [
+          {
+            "id": "ai-in-clinical-mri",
+            "title": {
+              "en": "AI in clinical MRI?",
+              "zh": "AI在临床MRI中的应用？"
+            },
+            "children": []
+          },
+          {
+            "id": "super-resolution",
+            "title": {
+              "en": "Super-resolution?",
+              "zh": "超分辨率重建？"
+            },
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "tissue-properties-imaging",
+    "title": {
+      "en": "Tissue Properties Imaging",
+      "zh": "组织特性成像"
+    },
+    "children": [
+      {
+        "id": "mri-of-hemorrhage",
+        "title": {
+          "en": "MRI of Hemorrhage",
+          "zh": "出血的MRI表现"
+        },
+        "children": [
+          {
+            "id": "hematoma-overview",
+            "title": {
+              "en": "Hematoma overview?",
+              "zh": "血肿概述？"
+            },
+            "children": []
+          },
+          {
+            "id": "types-of-hemoglobin",
+            "title": {
+              "en": "Types of Hemoglobin?",
+              "zh": "血红蛋白类型？"
+            },
+            "children": []
+          },
+          {
+            "id": "hyperacuteoxy-hb",
+            "title": {
+              "en": "Hyperacute/Oxy-Hb?",
+              "zh": "超急性期/氧合血红蛋白？"
+            },
+            "children": []
+          },
+          {
+            "id": "acutedeoxy-hb",
+            "title": {
+              "en": "Acute/Deoxy-Hb?",
+              "zh": "急性期/脱氧血红蛋白？"
+            },
+            "children": []
+          },
+          {
+            "id": "subacutemet-hb",
+            "title": {
+              "en": "Subacute/Met-Hb?",
+              "zh": "亚急性期/正铁血红蛋白？"
+            },
+            "children": []
+          },
+          {
+            "id": "deoxy-hb-v-met-hb",
+            "title": {
+              "en": "Deoxy-Hb v Met-Hb?",
+              "zh": "脱氧血红蛋白与正铁血红蛋白的比较？"
+            },
+            "children": []
+          },
+          {
+            "id": "extracellular-met-hb",
+            "title": {
+              "en": "Extracellular met-Hb?",
+              "zh": "细胞外正铁血红蛋白？"
+            },
+            "children": []
+          },
+          {
+            "id": "chronic-hematomas",
+            "title": {
+              "en": "Chronic hematomas?",
+              "zh": "慢性血肿？"
+            },
+            "children": []
+          },
+          {
+            "id": "hemichromes",
+            "title": {
+              "en": "Hemichromes?",
+              "zh": "血色素？"
+            },
+            "children": []
+          },
+          {
+            "id": "ferritinhemosiderin",
+            "title": {
+              "en": "Ferritin/Hemosiderin?",
+              "zh": "铁蛋白/含铁血黄素？"
+            },
+            "children": []
+          },
+          {
+            "id": "subarachnoid-blood",
+            "title": {
+              "en": "Subarachnoid blood?",
+              "zh": "蛛网膜下腔出血？"
+            },
+            "children": []
+          },
+          {
+            "id": "blood-at-lower-fields",
+            "title": {
+              "en": "Blood at lower fields?",
+              "zh": "低场强下的血液表现？"
+            },
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "cartilage-mapping",
+        "title": {
+          "en": "Cartilage mapping?",
+          "zh": "软骨 mapping？"
+        },
+        "children": []
+      },
+      {
+        "id": "mr-elastography",
+        "title": {
+          "en": "MR Elastography?",
+          "zh": "磁共振弹性成像？"
+        },
+        "children": []
+      },
+      {
+        "id": "synthetic-mri",
+        "title": {
+          "en": "Synthetic MRI?",
+          "zh": "合成MRI？"
+        },
+        "children": []
+      },
+      {
+        "id": "amide-proton-transfer",
+        "title": {
+          "en": "Amide Proton Transfer?",
+          "zh": "酰胺质子转移？"
+        },
+        "children": []
+      },
+      {
+        "id": "mr-thermography",
+        "title": {
+          "en": "MR thermography?",
+          "zh": "磁共振热成像？"
+        },
+        "children": []
+      },
+      {
+        "id": "mr-fingerprinting",
+        "title": {
+          "en": "MR Fingerprinting?",
+          "zh": "磁共振指纹技术？"
+        },
+        "children": []
+      },
+      {
+        "id": "electric-properties-imaging",
+        "title": {
+          "en": "Electric Properties Imaging?",
+          "zh": "电特性成像？"
+        },
+        "children": []
+      }
+    ]
+  },
+  {
+    "id": "safety-and-screening",
+    "title": {
+      "en": "Safety and Screening",
+      "zh": "安全与筛查"
+    },
+    "children": [
+      {
+        "id": "overview",
+        "title": {
+          "en": "Overview",
+          "zh": "概述"
+        },
+        "children": [
+          {
+            "id": "status-of-the-5g-line",
+            "title": {
+              "en": "Status of the 5G line?",
+              "zh": "5G线路状态？"
+            },
+            "children": []
+          },
+          {
+            "id": "acr-safety-zones",
+            "title": {
+              "en": "ACR Safety Zones?",
+              "zh": "ACR安全区域？"
+            },
+            "children": []
+          },
+          {
+            "id": "mr-safety-screening",
+            "title": {
+              "en": "MR safety screening?",
+              "zh": "MR安全筛查？"
+            },
+            "children": []
+          },
+          {
+            "id": "incomplete-screening",
+            "title": {
+              "en": "Incomplete screening?",
+              "zh": "筛查不完整？"
+            },
+            "children": []
+          },
+          {
+            "id": "passiveactive-implants",
+            "title": {
+              "en": "Passive/active implants?",
+              "zh": "被动/主动植入物？"
+            },
+            "children": []
+          },
+          {
+            "id": "conditional-implants",
+            "title": {
+              "en": "Conditional implants?",
+              "zh": "条件性植入物？"
+            },
+            "children": []
+          },
+          {
+            "id": "common-safety-issues",
+            "title": {
+              "en": "Common safety issues?",
+              "zh": "常见安全问题？"
+            },
+            "children": []
+          },
+          {
+            "id": "projectiles",
+            "title": {
+              "en": "Projectiles?",
+              "zh": "投射物？"
+            },
+            "children": []
+          },
+          {
+            "id": "metal-detectors",
+            "title": {
+              "en": "Metal detectors?",
+              "zh": "金属探测器？"
+            },
+            "children": []
+          },
+          {
+            "id": "pregnant-patients",
+            "title": {
+              "en": "Pregnant patients?",
+              "zh": "孕妇患者？"
+            },
+            "children": []
+          },
+          {
+            "id": "postop-er--icu-patients",
+            "title": {
+              "en": "Postop, ER & ICU patients?",
+              "zh": "术后、急诊室及ICU患者？"
+            },
+            "children": []
+          },
+          {
+            "id": "temperature-monitoring",
+            "title": {
+              "en": "Temperature monitoring?",
+              "zh": "体温监测？"
+            },
+            "children": []
+          },
+          {
+            "id": "orbital-foreign-bodies",
+            "title": {
+              "en": "Orbital foreign bodies?",
+              "zh": "眶内异物？"
+            },
+            "children": []
+          },
+          {
+            "id": "bullets-and-shrapnel",
+            "title": {
+              "en": "Bullets and shrapnel?",
+              "zh": "子弹与弹片？"
+            },
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "static-fields",
+        "title": {
+          "en": "Static Fields",
+          "zh": "静磁场"
+        },
+        "children": [
+          {
+            "id": "dangerous-metals",
+            "title": {
+              "en": "\"Dangerous\" metals?",
+              "zh": "“危险”金属？"
+            },
+            "children": []
+          },
+          {
+            "id": "safe-metals",
+            "title": {
+              "en": "\"Safe\" metals?",
+              "zh": "“安全”金属？"
+            },
+            "children": []
+          },
+          {
+            "id": "magnetizing-metal",
+            "title": {
+              "en": "Magnetizing metal?",
+              "zh": "磁化金属？"
+            },
+            "children": []
+          },
+          {
+            "id": "object-shape",
+            "title": {
+              "en": "Object shape?",
+              "zh": "物体形状？"
+            },
+            "children": []
+          },
+          {
+            "id": "forces-on-metal",
+            "title": {
+              "en": "Forces on metal?",
+              "zh": "金属受力？"
+            },
+            "children": []
+          },
+          {
+            "id": "most-dangerous-place",
+            "title": {
+              "en": "Most dangerous place?",
+              "zh": "最危险的位置？"
+            },
+            "children": []
+          },
+          {
+            "id": "forcetorque-testing",
+            "title": {
+              "en": "Force/torque testing?",
+              "zh": "力/扭矩测试？"
+            },
+            "children": []
+          },
+          {
+            "id": "static-field-bioeffects",
+            "title": {
+              "en": "Static field bioeffects?",
+              "zh": "静磁场生物效应？"
+            },
+            "children": []
+          },
+          {
+            "id": "dizzinessvertigo",
+            "title": {
+              "en": "Dizziness/Vertigo?",
+              "zh": "头晕/眩晕？"
+            },
+            "children": []
+          },
+          {
+            "id": "flickering-lights",
+            "title": {
+              "en": "Flickering lights?",
+              "zh": "闪光感？"
+            },
+            "children": []
+          },
+          {
+            "id": "metallic-taste",
+            "title": {
+              "en": "Metallic taste?",
+              "zh": "金属味觉？"
+            },
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "rf-fields",
+        "title": {
+          "en": "RF Fields",
+          "zh": "射频场"
+        },
+        "children": [
+          {
+            "id": "rf-safety-overview",
+            "title": {
+              "en": "RF safety overview?",
+              "zh": "射频安全概述？"
+            },
+            "children": []
+          },
+          {
+            "id": "rf-biological-effects",
+            "title": {
+              "en": "RF biological effects?",
+              "zh": "射频生物效应？"
+            },
+            "children": []
+          },
+          {
+            "id": "what-is-sar",
+            "title": {
+              "en": "What is SAR?",
+              "zh": "什么是比吸收率？"
+            },
+            "children": []
+          },
+          {
+            "id": "sar-limits",
+            "title": {
+              "en": "SAR limits?",
+              "zh": "SAR限值？"
+            },
+            "children": []
+          },
+          {
+            "id": "how-mris-measure-sar",
+            "title": {
+              "en": "How MRIs measure SAR?",
+              "zh": "MRI如何测量SAR？"
+            },
+            "children": []
+          },
+          {
+            "id": "operating-modes",
+            "title": {
+              "en": "Operating modes?",
+              "zh": "操作模式？"
+            },
+            "children": []
+          },
+          {
+            "id": "how-to-reduce-sar",
+            "title": {
+              "en": "How to reduce SAR?",
+              "zh": "如何降低SAR？"
+            },
+            "children": []
+          },
+          {
+            "id": "rf-burns",
+            "title": {
+              "en": "RF burns?",
+              "zh": "射频灼伤？"
+            },
+            "children": []
+          },
+          {
+            "id": "estimate-implant-heating",
+            "title": {
+              "en": "Estimate implant heating?",
+              "zh": "估算植入物加热？"
+            },
+            "children": []
+          },
+          {
+            "id": "sed-vs-sar",
+            "title": {
+              "en": "SED vs SAR?",
+              "zh": "SED与SAR的比较？"
+            },
+            "children": []
+          },
+          {
+            "id": "b1rms-vs-sar",
+            "title": {
+              "en": "B1+rms vs SAR?",
+              "zh": "B1+rms与SAR的关系？"
+            },
+            "children": []
+          },
+          {
+            "id": "personnel-exposure",
+            "title": {
+              "en": "Personnel exposure?",
+              "zh": "人员暴露？"
+            },
+            "children": []
+          },
+          {
+            "id": "cell-phones",
+            "title": {
+              "en": "Cell phones?",
+              "zh": "手机？"
+            },
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "gradient-fields",
+        "title": {
+          "en": "Gradient Fields",
+          "zh": "梯度场"
+        },
+        "children": [
+          {
+            "id": "gradient-safety-overview",
+            "title": {
+              "en": "Gradient safety overview",
+              "zh": "梯度安全概述"
+            },
+            "children": []
+          },
+          {
+            "id": "acoustic-noise",
+            "title": {
+              "en": "Acoustic noise?",
+              "zh": "声学噪声？"
+            },
+            "children": []
+          },
+          {
+            "id": "nerve-stimulation",
+            "title": {
+              "en": "Nerve stimulation?",
+              "zh": "神经刺激？"
+            },
+            "children": []
+          },
+          {
+            "id": "gradient-vs-rf-heating",
+            "title": {
+              "en": "Gradient vs RF heating?",
+              "zh": "梯度加热与射频加热的比较？"
+            },
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "safety-neurological",
+        "title": {
+          "en": "Safety: Neurological",
+          "zh": "安全性：神经系统"
+        },
+        "children": [
+          {
+            "id": "aneurysm-coilsclips",
+            "title": {
+              "en": "Aneurysm coils/clips?",
+              "zh": "动脉瘤线圈/夹？"
+            },
+            "children": []
+          },
+          {
+            "id": "shuntsdrains",
+            "title": {
+              "en": "Shunts/drains?",
+              "zh": "分流管/引流管？"
+            },
+            "children": []
+          },
+          {
+            "id": "pressure-monitorsbolts",
+            "title": {
+              "en": "Pressure monitors/bolts?",
+              "zh": "压力监测器/固定螺栓？"
+            },
+            "children": []
+          },
+          {
+            "id": "deep-brain-stimulators",
+            "title": {
+              "en": "Deep brain stimulators?",
+              "zh": "脑深部刺激器？"
+            },
+            "children": []
+          },
+          {
+            "id": "spinal-cord-stimulators",
+            "title": {
+              "en": "Spinal cord stimulators?",
+              "zh": "脊髓刺激器？"
+            },
+            "children": []
+          },
+          {
+            "id": "vagal-nerve-stimulators",
+            "title": {
+              "en": "Vagal nerve stimulators?",
+              "zh": "迷走神经刺激器？"
+            },
+            "children": []
+          },
+          {
+            "id": "cranial-electrodes",
+            "title": {
+              "en": "Cranial electrodes?",
+              "zh": "颅内电极？"
+            },
+            "children": []
+          },
+          {
+            "id": "carotid-clamps",
+            "title": {
+              "en": "Carotid clamps?",
+              "zh": "颈动脉夹？"
+            },
+            "children": []
+          },
+          {
+            "id": "peripheral-stimulators",
+            "title": {
+              "en": "Peripheral stimulators?",
+              "zh": "外周刺激器？"
+            },
+            "children": []
+          },
+          {
+            "id": "epidural-catheters",
+            "title": {
+              "en": "Epidural catheters?",
+              "zh": "硬膜外导管？"
+            },
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "safety-head--neck",
+        "title": {
+          "en": "Safety: Head & Neck",
+          "zh": "安全性：头颈部"
+        },
+        "children": [
+          {
+            "id": "additional-orbit-safety",
+            "title": {
+              "en": "Additional orbit safety?",
+              "zh": "额外眼眶安全？"
+            },
+            "children": []
+          },
+          {
+            "id": "cochlear-implants",
+            "title": {
+              "en": "Cochlear Implants?",
+              "zh": "人工耳蜗？"
+            },
+            "children": []
+          },
+          {
+            "id": "bone-conduction-implants",
+            "title": {
+              "en": "Bone conduction implants?",
+              "zh": "骨传导植入物？"
+            },
+            "children": []
+          },
+          {
+            "id": "other-ear-implants",
+            "title": {
+              "en": "Other ear implants?",
+              "zh": "其他耳部植入物？"
+            },
+            "children": []
+          },
+          {
+            "id": "dentalfacial-implants",
+            "title": {
+              "en": "Dental/facial implants?",
+              "zh": "牙科/面部植入物？"
+            },
+            "children": []
+          },
+          {
+            "id": "et-tubes--airways",
+            "title": {
+              "en": "ET tubes & airways?",
+              "zh": "气管插管与气道装置？"
+            },
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "safety-chest--vascular",
+        "title": {
+          "en": "Safety: Chest & Vascular",
+          "zh": "安全性：胸部与血管"
+        },
+        "children": [
+          {
+            "id": "breast-tissue-expanders",
+            "title": {
+              "en": "Breast tissue expanders?",
+              "zh": "乳房组织扩张器？"
+            },
+            "children": []
+          },
+          {
+            "id": "breast-biopsy-markers",
+            "title": {
+              "en": "Breast biopsy markers?",
+              "zh": "乳腺活检标记夹？"
+            },
+            "children": []
+          },
+          {
+            "id": "airway-stentsvalvescoils",
+            "title": {
+              "en": "Airway stents/valves/coils?",
+              "zh": "气道支架/瓣膜/弹簧圈？"
+            },
+            "children": []
+          },
+          {
+            "id": "respiratory-stimulators",
+            "title": {
+              "en": "Respiratory stimulators?",
+              "zh": "呼吸刺激器？"
+            },
+            "children": []
+          },
+          {
+            "id": "portsvascular-access",
+            "title": {
+              "en": "Ports/vascular access?",
+              "zh": "输液港/血管通路？"
+            },
+            "children": []
+          },
+          {
+            "id": "swan-ganz-catheters",
+            "title": {
+              "en": "Swan-Ganz catheters?",
+              "zh": "Swan-Ganz导管？"
+            },
+            "children": []
+          },
+          {
+            "id": "ivc-filters",
+            "title": {
+              "en": "IVC filters?",
+              "zh": "下腔静脉滤器？"
+            },
+            "children": []
+          },
+          {
+            "id": "implanted-infusion-pumps",
+            "title": {
+              "en": "Implanted infusion pumps?",
+              "zh": "植入式输液泵？"
+            },
+            "children": []
+          },
+          {
+            "id": "insulin-pumps--cgms",
+            "title": {
+              "en": "Insulin pumps & CGMs?",
+              "zh": "胰岛素泵与连续血糖监测仪？"
+            },
+            "children": []
+          },
+          {
+            "id": "vascular-stentsgrafts",
+            "title": {
+              "en": "Vascular stents/grafts?",
+              "zh": "血管支架/移植物？"
+            },
+            "children": []
+          },
+          {
+            "id": "sternal-wiresimplants",
+            "title": {
+              "en": "Sternal wires/implants?",
+              "zh": "胸骨钢丝/植入物？"
+            },
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "safety-cardiac",
+        "title": {
+          "en": "Safety: Cardiac",
+          "zh": "安全性：心脏"
+        },
+        "children": [
+          {
+            "id": "pacemaker-dangers",
+            "title": {
+              "en": "Pacemaker dangers?",
+              "zh": "起搏器风险？"
+            },
+            "children": []
+          },
+          {
+            "id": "pacemaker-terminology",
+            "title": {
+              "en": "Pacemaker terminology?",
+              "zh": "起搏器术语？"
+            },
+            "children": []
+          },
+          {
+            "id": "newsafe-pacemakers",
+            "title": {
+              "en": "New/'Safe\" Pacemakers?",
+              "zh": "新型/“安全”起搏器？"
+            },
+            "children": []
+          },
+          {
+            "id": "oldlegacy-pacemakers",
+            "title": {
+              "en": "Old/Legacy Pacemakers?",
+              "zh": "旧款/传统起搏器？"
+            },
+            "children": []
+          },
+          {
+            "id": "violating-the-conditions",
+            "title": {
+              "en": "Violating the conditions?",
+              "zh": "违反条件？"
+            },
+            "children": []
+          },
+          {
+            "id": "prepconsent-for-cieds",
+            "title": {
+              "en": "Prep/Consent for CIEDs",
+              "zh": "心脏植入式电子设备的准备/知情同意"
+            },
+            "children": []
+          },
+          {
+            "id": "epicardial-pacersleads",
+            "title": {
+              "en": "Epicardial pacers/leads?",
+              "zh": "心外膜起搏器/导线？"
+            },
+            "children": []
+          },
+          {
+            "id": "cardiac-monitors",
+            "title": {
+              "en": "Cardiac monitors?",
+              "zh": "心脏监护仪？"
+            },
+            "children": []
+          },
+          {
+            "id": "heart-valves",
+            "title": {
+              "en": "Heart valves?",
+              "zh": "心脏瓣膜？"
+            },
+            "children": []
+          },
+          {
+            "id": "miscellaneous-cv-devices",
+            "title": {
+              "en": "Miscellaneous CV devices?",
+              "zh": "其他心血管装置？"
+            },
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "safety-abdominal",
+        "title": {
+          "en": "Safety: Abdominal",
+          "zh": "安全性：腹部"
+        },
+        "children": [
+          {
+            "id": "pillcam-and-capsules",
+            "title": {
+              "en": "PIllCam and capsules?",
+              "zh": "胶囊内镜？"
+            },
+            "children": []
+          },
+          {
+            "id": "gastric-pacemakers",
+            "title": {
+              "en": "Gastric pacemakers?",
+              "zh": "胃电刺激器？"
+            },
+            "children": []
+          },
+          {
+            "id": "other-gi-devices",
+            "title": {
+              "en": "Other GI devices?",
+              "zh": "其他胃肠装置？"
+            },
+            "children": []
+          },
+          {
+            "id": "contraceptive-devices",
+            "title": {
+              "en": "Contraceptive devices?",
+              "zh": "避孕装置？"
+            },
+            "children": []
+          },
+          {
+            "id": "foley-catheters",
+            "title": {
+              "en": "Foley catheters?",
+              "zh": "Foley导尿管？"
+            },
+            "children": []
+          },
+          {
+            "id": "incontinence-devices",
+            "title": {
+              "en": "Incontinence devices?",
+              "zh": "失禁装置？"
+            },
+            "children": []
+          },
+          {
+            "id": "penile-implants",
+            "title": {
+              "en": "Penile Implants?",
+              "zh": "阴茎植入物？"
+            },
+            "children": []
+          },
+          {
+            "id": "sacral-nerve-stimulators",
+            "title": {
+              "en": "Sacral nerve stimulators?",
+              "zh": "骶神经刺激器？"
+            },
+            "children": []
+          },
+          {
+            "id": "gu-stents-and-other",
+            "title": {
+              "en": "GU stents and other?",
+              "zh": "泌尿生殖系统支架等？"
+            },
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "safety-orthopedic",
+        "title": {
+          "en": "Safety: Orthopedic",
+          "zh": "安全性：骨科"
+        },
+        "children": [
+          {
+            "id": "orthopedic-hardware",
+            "title": {
+              "en": "Orthopedic hardware?",
+              "zh": "骨科内固定物？"
+            },
+            "children": []
+          },
+          {
+            "id": "external-fixators",
+            "title": {
+              "en": "External fixators?",
+              "zh": "外固定架？"
+            },
+            "children": []
+          },
+          {
+            "id": "traction-and-halos",
+            "title": {
+              "en": "Traction and halos?",
+              "zh": "牵引装置与头环？"
+            },
+            "children": []
+          },
+          {
+            "id": "bone-stimulators",
+            "title": {
+              "en": "Bone stimulators?",
+              "zh": "骨刺激器？"
+            },
+            "children": []
+          },
+          {
+            "id": "magnetic-rods",
+            "title": {
+              "en": "Magnetic rods?",
+              "zh": "磁力生长棒？"
+            },
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "copyrightlegal",
+    "title": {
+      "en": "Copyright/Legal",
+      "zh": "版权/法律"
+    },
+    "children": [
+      {
+        "id": "copyright-issues",
+        "title": {
+          "en": "Copyright Issues",
+          "zh": "版权问题"
+        },
+        "children": []
+      },
+      {
+        "id": "legal-disclaimers",
+        "title": {
+          "en": "Legal Disclaimers",
+          "zh": "法律免责声明"
+        },
+        "children": []
+      }
+    ]
+  },
+  {
+    "id": "forumsblogslinks",
+    "title": {
+      "en": "Forums/Blogs/Links",
+      "zh": "论坛/博客/链接"
+    },
+    "children": []
+  },
+  {
+    "id": "self-test-quizzes",
+    "title": {
+      "en": "Self-test Quizzes",
+      "zh": "自测题"
+    },
+    "children": [
+      {
+        "id": "magnets--scanners-quiz",
+        "title": {
+          "en": "Magnets & Scanners Quiz",
+          "zh": "磁体与扫描仪测验"
+        },
+        "children": []
+      },
+      {
+        "id": "safety--screening-quiz",
+        "title": {
+          "en": "Safety & Screening Quiz",
+          "zh": "安全与筛查测验"
+        },
+        "children": []
+      },
+      {
+        "id": "nmr-phenomenon-quiz",
+        "title": {
+          "en": "NMR Phenomenon Quiz",
+          "zh": "核磁共振现象测验"
+        },
+        "children": []
+      },
+      {
+        "id": "pulse-sequences-quiz",
+        "title": {
+          "en": "Pulse Sequences Quiz",
+          "zh": "脉冲序列测验"
+        },
+        "children": []
+      },
+      {
+        "id": "making-an-image-quiz",
+        "title": {
+          "en": "Making an Image Quiz",
+          "zh": "图像生成测验"
+        },
+        "children": []
+      },
+      {
+        "id": "k-space--rapid-quiz",
+        "title": {
+          "en": "K-space & Rapid Quiz",
+          "zh": "k空间与快速成像测验"
+        },
+        "children": []
+      },
+      {
+        "id": "contrast--blood-quiz",
+        "title": {
+          "en": "Contrast & Blood Quiz",
+          "zh": "对比剂与血流测验"
+        },
+        "children": []
+      },
+      {
+        "id": "cardiovascular--mra-quiz",
+        "title": {
+          "en": "Cardiovascular & MRA Quiz",
+          "zh": "心血管与MRA测验"
+        },
+        "children": []
+      }
+    ]
+  },
+  {
+    "id": "rf-pulses",
+    "title": {
+      "en": "RF pulses",
+      "zh": "射频脉冲"
+    },
+    "children": []
+  }
+]

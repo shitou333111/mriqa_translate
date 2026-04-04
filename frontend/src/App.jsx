@@ -7,6 +7,7 @@ import HtmlContent, { applyImageOverlays, extractOverlayText, clearOverlayCache 
 import Sidebar from "./components/Sidebar";
 import CompleteListOfQuestions from "./components/CompleteListOfQuestions";
 import ScreenshotButton from "./components/ScreenshotButton";
+import ArtalkComments from "./components/ArtalkComments";
 import SiteFooter from "./components/SiteFooter";
 import GuidePage from "./components/GuidePage";
 import * as searchService from "./search/searchService";
@@ -3893,6 +3894,8 @@ export default function App() {
               </div>
             </div>
           </main>
+
+          <ArtalkComments />
       </div>
 
       <SiteFooter />

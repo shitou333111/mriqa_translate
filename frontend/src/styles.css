@@ -1294,6 +1294,48 @@ button.primary {
   padding-bottom: 50px;
 }
 
+.comments-shell {
+  width: min(var(--legacy-main-width), calc(100% - 24px));
+  margin: 50px auto 0;
+  padding: 14px;
+}
+
+.comments-title {
+  margin: 0 0 10px;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--accent-strong);
+}
+
+.artalk-comments {
+  min-height: 220px;
+}
+
+.artalk-comments .artalk {
+  --at-color-main: var(--accent-strong);
+  --at-color-bg: #ffffff;
+  --at-color-bg-grey: color-mix(in srgb, var(--surface) 88%, #f4f7fa);
+  --at-color-border: color-mix(in srgb, var(--line) 75%, #d4dde8);
+  --at-color-font: color-mix(in srgb, var(--text) 92%, #0d1e2d);
+  --at-color-meta: color-mix(in srgb, var(--muted) 92%, #556070);
+}
+
+.artalk-comments .atk-main-editor > .atk-header .atk-email,
+.artalk-comments .atk-main-editor > .atk-header .atk-link {
+  display: none !important;
+}
+
+.artalk-comments .atk-main-editor > .atk-header .atk-name {
+  flex: 1 1 100%;
+  margin-right: 0 !important;
+}
+
+.comments-status {
+  margin: 10px 4px 0;
+  font-size: 13px;
+  color: #b34a28;
+}
+
 .guide-landing {
   padding: 28px;
   border-radius: 16px;

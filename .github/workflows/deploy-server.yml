@@ -36,6 +36,9 @@ jobs:
         run: npm run build
         env:
           BASE_URL: /
+          VITE_ARTALK_SERVER: ${{ vars.VITE_ARTALK_SERVER || 'http://39.102.96.105:23366' }}
+          VITE_ARTALK_SITE: ${{ vars.VITE_ARTALK_SITE || 'mriqa_translate' }}
+          VITE_ARTALK_LOCALE: ${{ vars.VITE_ARTALK_LOCALE || 'zh-CN' }}
 
       - name: Prepare deploy artifacts
         run: |

@@ -89,10 +89,7 @@ jobs:
           username: ${{ secrets.SSH_USER }}
           key: ${{ secrets.SSH_KEY }}
           port: ${{ secrets.SSH_PORT || 22 }}
-          source: |
-            server/index.js
-            server/package.json
-            server/package-lock.json
+          source: server/index.js,server/package.json,server/package-lock.json
           target: /tmp/mriqa_translate-server
           overwrite: true
           strip_components: 1

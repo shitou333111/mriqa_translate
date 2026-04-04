@@ -37,12 +37,38 @@ jobs:
         env:
           BASE_URL: /
 
-      - name: Copy static content for server deploy
+      - name: Prepare deploy artifacts
         run: |
-          mkdir -p frontend/dist/en frontend/dist/zh frontend/dist/baseline
-          cp -a en/. frontend/dist/en/
-          cp -a zh/. frontend/dist/zh/
-          cp -a baseline/. frontend/dist/baseline/
+          cat > frontend/dist/404.html <<EOF
+          <!doctype html>
+          <html>
+          <head>
+          <meta charset="utf-8">
+          <title>Redirecting...</title>
+          <script>
+          (function() {
+            var basePath = "";
+            var loc = window.location;
+            var path = loc.pathname;
+            if (basePath && path.indexOf(basePath) === 0) {
+              path = path.slice(basePath.length);
+            }
+            if (!path.startsWith("/")) {
+              path = "/" + path;
+            }
+            var query = loc.search ? loc.search.slice(1) : "";
+            var target = (basePath || "") + "/?p=" + encodeURIComponent(path);
+            if (query) {
+              target += "&q=" + encodeURIComponent(query);
+            }
+            target += loc.hash || "";
+            loc.replace(loc.protocol + "//" + loc.host + target);
+          })();
+          </script>
+          </head>
+          <body></body>
+          </html>
+          EOF
 
       - name: Upload dist to server tmp path
         uses: appleboy/scp-action@v0.1.7
@@ -68,9 +94,19 @@ jobs:
             TARGET_DIR="${{ secrets.SSH_TARGET_DIR }}"
             RELEASES_DIR="${TARGET_DIR}/.releases"
             RELEASE_DIR="${RELEASES_DIR}/release-${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}"
+            CURRENT_DIR="${TARGET_DIR}/current"
 
             mkdir -p "$RELEASE_DIR"
             cp -a /tmp/mriqa_translate-deploy/. "$RELEASE_DIR/"
+
+            # Keep server-side content for these folders unchanged across releases.
+            for dir in en zh baseline uploads; do
+              if [ -d "${CURRENT_DIR}/${dir}" ]; then
+                rm -rf "${RELEASE_DIR:?}/${dir}"
+                cp -a "${CURRENT_DIR}/${dir}" "${RELEASE_DIR}/${dir}"
+              fi
+            done
+
             ln -sfn "$RELEASE_DIR" "${TARGET_DIR}/current"
 
             ls -1dt "${RELEASES_DIR}"/release-* 2>/dev/null | tail -n +6 | xargs -r rm -rf

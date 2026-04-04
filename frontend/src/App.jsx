@@ -1611,11 +1611,11 @@ function useDualArticles(slug) {
             // fallback below
           }
 
-          if (IS_GITHUB_PAGES) {
-            return fetchStaticArticle(lang, slug);
+          try {
+            return await fetchStaticArticle(lang, slug);
+          } catch {
+            return null;
           }
-
-          return null;
         };
 
         const [zhArticle, enArticle] = await Promise.all([

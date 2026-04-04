@@ -16,6 +16,8 @@ const rootDir = path.resolve(__dirname, "..");
 const enDir = path.join(rootDir, "en");
 const zhDir = path.join(rootDir, "zh");
 const baselineDir = path.join(rootDir, "baseline");
+const frontendDistDir = path.join(rootDir, "frontend", "dist");
+const frontendIndexPath = path.join(frontendDistDir, "index.html");
 const menuFile = path.join(rootDir, "frontend", "src", "meta", "sidebar.json");
 const metaInfoFile = path.join(rootDir, "frontend", "src", "meta", "meta_info.json");
 const overlayMapFile = path.join(rootDir, "frontend", "src", "meta", "first_pic_texts_zh_map_basename.json");
@@ -34,7 +36,11 @@ app.use(helmet({ contentSecurityPolicy: false }));
 app.use(cors());
 app.use(express.json({ limit: "2mb" }));
 
-app.use(express.static(path.join(rootDir, "public")));
+app.use(express.static(frontendDistDir, { index: false }));
+app.use(express.static(path.join(rootDir, "public"), { index: false }));
+app.use("/en", express.static(enDir, { index: false }));
+app.use("/zh", express.static(zhDir, { index: false }));
+app.use("/baseline", express.static(baselineDir, { index: false }));
 
 function sha256(input) {
   return crypto.createHash("sha256").update(input).digest("hex");
@@ -695,6 +701,25 @@ app.get("/api/legacy-css/:name", async (req, res, next) => {
     res.type("text/css").send(css);
   } catch (error) {
     next(error);
+  }
+});
+
+app.get("*", async (req, res, next) => {
+  if (req.path.startsWith("/api/")) {
+    return next();
+  }
+
+  if (path.extname(req.path)) {
+    return next();
+  }
+
+  try {
+    await fs.access(frontendIndexPath);
+    return res.sendFile(frontendIndexPath);
+  } catch {
+    const error = new Error(`Cannot ${req.method} ${req.path}`);
+    error.status = 404;
+    return next(error);
   }
 });
 

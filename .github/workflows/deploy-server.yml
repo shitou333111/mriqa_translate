@@ -166,8 +166,17 @@ jobs:
               fi
               pm2 save || true
             else
-              pkill -f "node .*current/server/index.js" || true
+              PID_FILE="${TARGET_DIR}/server.pid"
+              if [ -f "${PID_FILE}" ]; then
+                OLD_PID="$(cat "${PID_FILE}" 2>/dev/null || true)"
+                if [ -n "${OLD_PID}" ] && kill -0 "${OLD_PID}" 2>/dev/null; then
+                  kill "${OLD_PID}" || true
+                fi
+                rm -f "${PID_FILE}"
+              fi
+
               HOST=127.0.0.1 PORT=3001 nohup node "${TARGET_DIR}/current/server/index.js" > "${TARGET_DIR}/server.log" 2>&1 &
+              echo $! > "${PID_FILE}"
             fi
 
             ls -1dt "${RELEASES_DIR}"/release-* 2>/dev/null | tail -n +6 | xargs -r rm -rf

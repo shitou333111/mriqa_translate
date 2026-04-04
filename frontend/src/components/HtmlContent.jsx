@@ -682,6 +682,18 @@ export default function HtmlContent({ html, className = "", advancedExpanded = f
 
   useEffect(() => {
     if (!containerRef.current || !renderedHtml) return;
+    let disposed = false;
+    const timerHandles = [];
+
+    const schedule = (callback, delay) => {
+      const id = window.setTimeout(() => {
+        if (!disposed) {
+          callback();
+        }
+      }, delay);
+      timerHandles.push(id);
+      return id;
+    };
     
     // 只在中文页面应用覆盖
     if (viewMode !== "zh") {
@@ -763,9 +775,7 @@ export default function HtmlContent({ html, className = "", advancedExpanded = f
     // 延迟添加 wsite-mejs-track 元素和其他样式
     const addWsiteMejsTracks = () => {
       try {
-        console.log('Adding wsite-mejs-track elements...');
         const audioElements = containerRef.current.querySelectorAll('audio');
-        console.log('Found audio elements for track addition:', audioElements.length);
         
         audioElements.forEach((audio, index) => {
           try {
@@ -883,25 +893,23 @@ export default function HtmlContent({ html, className = "", advancedExpanded = f
       }
     };
     
-    // 等待 jQuery 和其他脚本加载完成，并且 DOM 渲染完成
-    const checkAndInit = () => {
-      // 先初始化音频播放器
-      setTimeout(initAudioPlayers, 100);
-      
-      // 多次尝试添加 wsite-mejs-track 元素
-      setTimeout(addWsiteMejsTracks, 500);
-      setTimeout(addWsiteMejsTracks, 1000);
-      setTimeout(addWsiteMejsTracks, 2000);
-      
-      // 然后初始化 slideshow
+    // 等待脚本加载完成后初始化 slideshow，最多重试有限次数，避免无限循环。
+    const tryInitSlideshow = (attempt = 0) => {
       if (window.jQuery && window._W && window._W.Slideshow) {
-        setTimeout(initSlideshow, 300);
-      } else {
-        setTimeout(checkAndInit, 100);
+        schedule(initSlideshow, 300);
+        return;
+      }
+      if (attempt < 20) {
+        schedule(() => tryInitSlideshow(attempt + 1), 200);
       }
     };
-    
-    checkAndInit();
+
+    // 音频相关逻辑只调度一次，不做循环轮询。
+    schedule(initAudioPlayers, 100);
+    schedule(addWsiteMejsTracks, 500);
+    schedule(addWsiteMejsTracks, 1000);
+    schedule(addWsiteMejsTracks, 2000);
+    tryInitSlideshow();
     
     // 处理参考文献折叠功能
     const setupReferencesCollapsible = () => {
@@ -1032,8 +1040,13 @@ export default function HtmlContent({ html, className = "", advancedExpanded = f
     };
     
     // 延迟执行，确保 DOM 渲染完成
-    setTimeout(setupReferencesCollapsible, 100);
-    setTimeout(setupReferencesCollapsible, 500);
+    schedule(setupReferencesCollapsible, 100);
+    schedule(setupReferencesCollapsible, 500);
+
+    return () => {
+      disposed = true;
+      timerHandles.forEach((id) => window.clearTimeout(id));
+    };
   }, [renderedHtml, html, location.pathname, viewMode, pageSlug]);
 
   return (

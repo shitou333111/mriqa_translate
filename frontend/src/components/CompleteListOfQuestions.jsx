@@ -1,8 +1,16 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import sidebarData from "../meta/sidebar.json";
 
 const IS_GITHUB_PAGES = typeof window !== "undefined" && /github\.io$/i.test(window.location.hostname);
+
+async function fetchStaticSidebarMenu() {
+  const resp = await fetch("/meta/sidebar.json", { cache: "no-store" });
+  if (!resp.ok) {
+    throw new Error(`fetch /meta/sidebar.json status ${resp.status}`);
+  }
+  const data = await resp.json();
+  return Array.isArray(data) ? data : [];
+}
 
 export default function CompleteListOfQuestions() {
   const [menu, setMenu] = useState([]);
@@ -31,7 +39,7 @@ export default function CompleteListOfQuestions() {
         let statusData = {};
 
         if (IS_GITHUB_PAGES) {
-          menuData = Array.isArray(sidebarData) ? sidebarData : [];
+          menuData = await fetchStaticSidebarMenu();
         } else {
           const [menuResp, statusResp] = await Promise.all([
             fetch("/api/menu"),

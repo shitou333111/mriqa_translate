@@ -18,13 +18,10 @@ const zhDir = path.join(rootDir, "zh");
 const baselineDir = path.join(rootDir, "baseline");
 const frontendDistDir = path.join(rootDir, "frontend", "dist");
 const frontendIndexPath = path.join(frontendDistDir, "index.html");
-const menuFile = path.join(rootDir, "frontend", "src", "meta", "sidebar.json");
-const metaInfoFile = path.join(rootDir, "frontend", "src", "meta", "meta_info.json");
-const overlayMapFile = path.join(rootDir, "frontend", "src", "meta", "first_pic_texts_zh_map_basename.json");
-const overlayMapLegacyCandidates = [
-  path.join(rootDir, "frontend", "dist", "scripts", "first_pic_texts_zh_map_basename.json"),
-  path.join(rootDir, "public", "scripts", "first_pic_texts_zh_map_basename.json")
-];
+const publicMetaDir = path.join(rootDir, "public", "meta");
+const menuFile = path.join(publicMetaDir, "sidebar.json");
+const metaInfoFile = path.join(publicMetaDir, "meta_info.json");
+const overlayMapFile = path.join(publicMetaDir, "first_pic_texts_zh_map_basename.json");
 
 const app = express();
 const port = Number(process.env.PORT || 3001);
@@ -257,17 +254,13 @@ function escapeHtml(input) {
 }
 
 async function readOverlayMap() {
-  const candidates = [overlayMapFile, ...overlayMapLegacyCandidates];
-  for (const filePath of candidates) {
-    try {
-      const overlayData = await fs.readFile(filePath, "utf8");
-      const parsed = JSON.parse(overlayData);
-      return parsed.basename_map || parsed;
-    } catch {
-      // Try next candidate file.
-    }
+  try {
+    const overlayData = await fs.readFile(overlayMapFile, "utf8");
+    const parsed = JSON.parse(overlayData);
+    return parsed.basename_map || parsed;
+  } catch {
+    return {};
   }
-  return {};
 }
 
 async function writeOverlayMap(mapData) {

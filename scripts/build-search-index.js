@@ -80,7 +80,7 @@ function main() {
   // load sidebar title map to prefer canonical titles per language
   let sidebarMap = {};
   try {
-    const sidebar = JSON.parse(fs.readFileSync(path.join(root, 'frontend', 'src', 'meta', 'sidebar.json'), 'utf8'));
+    const sidebar = JSON.parse(fs.readFileSync(path.join(root, 'public', 'meta', 'sidebar.json'), 'utf8'));
     function walk(items) {
       for (const it of items || []) {
         if (it && it.id) {

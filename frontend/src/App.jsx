@@ -10,7 +10,6 @@ import ScreenshotButton from "./components/ScreenshotButton";
 import SiteFooter from "./components/SiteFooter";
 import GuidePage from "./components/GuidePage";
 import * as searchService from "./search/searchService";
-import sidebarData from "./meta/sidebar.json";
 
 
 // Modern tray-style segmented control with sliding animation
@@ -140,6 +139,16 @@ async function fetchStaticArticle(lang, routeId) {
     title: parsed.title,
     contentHtml: parsed.contentHtml
   };
+}
+
+async function fetchStaticSidebarMenu() {
+  const url = withBase("meta/sidebar.json");
+  const resp = await fetch(url, { cache: "no-store" });
+  if (!resp.ok) {
+    throw new Error(`fetch ${url} status ${resp.status}`);
+  }
+  const data = await resp.json();
+  return Array.isArray(data) ? data : [];
 }
 
 // 兼容旧版Quiz静态HTML中通过onclick调用的函数（比如 showAnswer/showAllAnswers/scoreAnswers）。
@@ -3340,8 +3349,9 @@ export default function App() {
   useEffect(() => {
     async function bootstrap() {
       if (IS_GITHUB_PAGES) {
-        setMenu(Array.isArray(sidebarData) ? sidebarData : []);
-        setSlugs(collectLeafIdsFromMenu(sidebarData));
+        const staticMenu = await fetchStaticSidebarMenu();
+        setMenu(staticMenu);
+        setSlugs(collectLeafIdsFromMenu(staticMenu));
         return;
       }
 
@@ -3354,8 +3364,9 @@ export default function App() {
         setMenu(menuData);
         setSlugs(slugData);
       } catch {
-        setMenu(Array.isArray(sidebarData) ? sidebarData : []);
-        setSlugs(collectLeafIdsFromMenu(sidebarData));
+        const staticMenu = await fetchStaticSidebarMenu();
+        setMenu(staticMenu);
+        setSlugs(collectLeafIdsFromMenu(staticMenu));
       }
     }
     bootstrap();

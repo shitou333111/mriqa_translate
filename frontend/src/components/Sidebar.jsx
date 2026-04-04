@@ -108,7 +108,7 @@ function SidebarNode({ node, lang, activeId, level = 1, onNavigate }) {
 }
 
 export default function Sidebar({ menu, lang, activeId, collapsed, open, onClose }) {
-  // menu 来自 /api/menu（后端读取 frontend/src/meta/sidebar.json 生成），
+  // menu 来自 /api/menu（后端读取 public/meta/sidebar.json 生成），
   // 每个节点最终映射到某个 slug，再由 App 去请求 zh/en HTML 内容。
   const nodes = useMemo(() => (Array.isArray(menu) ? menu : []), [menu]);
   const sidebarClass = `app-sidebar ${collapsed ? "collapsed" : ""} ${open ? "open" : ""}`.trim();

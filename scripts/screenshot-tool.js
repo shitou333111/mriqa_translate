@@ -26,7 +26,7 @@ async function ensureScreenshotDir() {
   }
 }
 
-const SIDEBAR_PATH = path.join(ROOT_DIR, 'frontend', 'src', 'meta', 'sidebar.json');
+const SIDEBAR_PATH = path.join(ROOT_DIR, 'public', 'meta', 'sidebar.json');
 
 // Build an ordered list of pages (leaf nodes) from sidebar.json with hierarchical numbering.
 async function buildOrderedPagesFromSidebar() {

@@ -1,10 +1,10 @@
 import { useMemo, useEffect, useRef } from "react";
 import { initLightbox } from "../lightbox";
 import { useNavigate, useLocation } from "react-router-dom";
-import overlayMapStatic from "../meta/first_pic_texts_zh_map_basename.json";
 
 const APP_BASE_URL = import.meta.env.BASE_URL || "/";
 const IS_GITHUB_PAGES = typeof window !== "undefined" && /github\.io$/i.test(window.location.hostname);
+const OVERLAY_MAP_STATIC_PATH = "meta/first_pic_texts_zh_map_basename.json";
 
 function withBase(path) {
   const base = APP_BASE_URL.startsWith("/") ? APP_BASE_URL : `/${APP_BASE_URL}`;
@@ -182,12 +182,26 @@ export function createOverlayForImage(img, text, editable = false) {
 }
 
 export let overlayMapCache = null;
+
+async function fetchOverlayMapFromStaticFile() {
+  const staticUrl = withBase(OVERLAY_MAP_STATIC_PATH);
+  const res = await fetch(staticUrl, { cache: 'no-store' });
+  if (!res.ok) throw new Error(`fetch ${staticUrl} failed ${res.status}`);
+  const data = await res.json();
+  return data && (data.basename_map || data) || {};
+}
+
 export async function fetchOverlayMap(forceRefresh = false) {
   if (overlayMapCache && !forceRefresh) return overlayMapCache;
 
   if (IS_GITHUB_PAGES) {
-    overlayMapCache = overlayMapStatic && (overlayMapStatic.basename_map || overlayMapStatic) || {};
-    return overlayMapCache;
+    try {
+      overlayMapCache = await fetchOverlayMapFromStaticFile();
+      return overlayMapCache;
+    } catch (err) {
+      console.error('Could not load basename map from static file', err);
+      return {};
+    }
   }
 
   try {
@@ -198,8 +212,14 @@ export async function fetchOverlayMap(forceRefresh = false) {
     console.log('Overlay map loaded:', overlayMapCache);
     return overlayMapCache;
   } catch (err) {
-    console.error('Could not load basename map', err);
-    return {};
+    console.error('Could not load basename map from API, fallback to static file', err);
+    try {
+      overlayMapCache = await fetchOverlayMapFromStaticFile();
+      return overlayMapCache;
+    } catch (fallbackErr) {
+      console.error('Could not load basename map from static file', fallbackErr);
+      return {};
+    }
   }
 }
 

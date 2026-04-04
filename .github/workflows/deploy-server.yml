@@ -82,6 +82,21 @@ jobs:
           overwrite: true
           strip_components: 2
 
+      - name: Upload server runtime files
+        uses: appleboy/scp-action@v0.1.7
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USER }}
+          key: ${{ secrets.SSH_KEY }}
+          port: ${{ secrets.SSH_PORT || 22 }}
+          source: |
+            server/index.js
+            server/package.json
+            server/package-lock.json
+          target: /tmp/mriqa_translate-server
+          overwrite: true
+          strip_components: 1
+
       - name: Atomic deploy on server
         uses: appleboy/ssh-action@v1.0.3
         with:
@@ -99,6 +114,9 @@ jobs:
             mkdir -p "$RELEASE_DIR"
             cp -a /tmp/mriqa_translate-deploy/. "$RELEASE_DIR/"
 
+            mkdir -p "$RELEASE_DIR/server"
+            cp -a /tmp/mriqa_translate-server/. "$RELEASE_DIR/server/"
+
             # Keep server-side content for these folders unchanged across releases.
             for dir in en zh baseline uploads; do
               if [ -d "${CURRENT_DIR}/${dir}" ]; then
@@ -108,5 +126,20 @@ jobs:
             done
 
             ln -sfn "$RELEASE_DIR" "${TARGET_DIR}/current"
+
+            cd "${TARGET_DIR}/current/server"
+            npm ci --omit=dev
+
+            if command -v pm2 >/dev/null 2>&1; then
+              if pm2 describe mriqa-api >/dev/null 2>&1; then
+                HOST=127.0.0.1 PORT=3001 pm2 restart mriqa-api --update-env
+              else
+                HOST=127.0.0.1 PORT=3001 pm2 start index.js --name mriqa-api
+              fi
+              pm2 save || true
+            else
+              pkill -f "node .*current/server/index.js" || true
+              HOST=127.0.0.1 PORT=3001 nohup node "${TARGET_DIR}/current/server/index.js" > "${TARGET_DIR}/server.log" 2>&1 &
+            fi
 
             ls -1dt "${RELEASES_DIR}"/release-* 2>/dev/null | tail -n +6 | xargs -r rm -rf

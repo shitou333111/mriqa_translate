@@ -1,0 +1,5302 @@
+{
+  "180deg-and-360deg-pulses.html": {
+    "image": "screenshot-2026-02-03-at-7-42-42-pm_orig.png",
+    "text": [
+      "• 当射频脉冲将自旋系统从 90° 旋转到 180° 时，M 被反转，磁势能达到最大值，所有横向相干性消失",
+      "• 从 180° 向 360° 旋转导致自旋系统将其存储的能量转移回射频场"
+    ]
+  },
+  "2d-vs-3d-mra.html": {
+    "image": "9421847_orig.png",
+    "text": [
+      "• 2D TOF 更适合长段成像",
+      "• 3D TOF 更适合需要更高空间分辨率的小区域"
+    ]
+  },
+  "2dft-reconstruction.html": {
+    "image": "9583828_orig.png",
+    "text": [
+      "• 需要两个连续的傅里叶变换来重建二维图像",
+      "• 1st FT：将 MR 信号转换为频率投影",
+      "• 2nd FT：将频率投影转换为 2D 图像"
+    ]
+  },
+  "3d-fse-mra-parameters.html": {
+    "image": "2902441_orig.png",
+    "text": [
+      "• 进行三维快速自旋回波 MRA 最关键的一步是设置收缩期和舒张期图像的时间延迟",
+      "• TR 通常设置为心动周期的 3-4 倍；翻转角通常在 120°-150° 范围内",
+      "• 脂肪抑制、流动散相或流动补偿梯度是可选的"
+    ]
+  },
+  "4-or-more-rf-pulses.html": {
+    "image": "8302249_orig.png",
+    "text": [
+      "• 4 个或更多脉冲产生一系列可能重叠/相互作用的 FID、SE 和 STE",
+      "• 实际效果取决于脉冲间隔",
+      "─ 长 TR：仅 FID",
+      "─ 中 TR：纵向稳态",
+      "─ 短 TR：纵向和横向稳态"
+    ]
+  },
+  "4d-flow-imaging.html": {
+    "image": "screenshot-2025-09-13-at-1-26-00-pm_orig.png",
+    "text": [
+      "• 4D 指 3 个空间维度加时间",
+      "• 检查通常是使用在 3 个方向进行相位编码梯度的 3D 受扰 GRE",
+      "• 复杂的处理允许可视化随时间变化的血流，并计算额外的先进指标，如壁剪切应力和动能"
+    ]
+  },
+  "90deg-90deg-hahn-echo.html": {
+    "image": "8446441_orig.png",
+    "text": [
+      "• ASE 可以由任意两个连续的射频脉冲产生，而不仅仅是经典的 90°-180° 对",
+      "• 通常称为“哈恩回波”",
+      "• 展示了一个 90°-90° 的例子"
+    ]
+  },
+  "acoustic-noise.html": {
+    "image": "screen-shot-2020-07-08-at-7-00-53-pm_orig.png",
+    "text": [
+      "• MRI 扫描仪产生的声学噪声水平可能导致暂时性或永久性听力损失",
+      "• 较高的噪声水平与较高的磁场强度和高占空比序列相关",
+      "• 应为所有患者提供听力保护"
+    ]
+  },
+  "acr-safety-zones.html": {
+    "image": "2675108_orig.png",
+    "text": [
+      "扫描仪环境中的四个区域，具有递增的磁场暴露"
+    ]
+  },
+  "activation-blobs.html": {
+    "image": "screen-shot-2016-09-18-at-11-16-41-am_orig.png",
+    "text": [
+      "• 基于个体体素统计创建“激活”区域的彩色叠加图称为统计参数图",
+      "• 必须做出许多任意决定，包括选择 p 值阈值、色阶、平滑度和聚类",
+      "• 谨慎看待！"
+    ]
+  },
+  "active-shield-confusion.html": {
+    "image": "7790535_orig.png",
+    "text": [
+      "• 主动屏蔽：减少主磁体边缘场",
+      "• 主动匀场：改善主磁体均匀性",
+      "• 主动屏蔽梯度：减少梯度产生的涡流"
+    ]
+  },
+  "active-shielded-gradients.html": {
+    "image": "7160621_orig.png",
+    "text": [
+      "• 一组额外的嵌套线圈，放置在梯度线圈和磁体之间",
+      "• 通过屏蔽线圈驱动相反方向的电流，最大限度地减少杂散梯度场"
+    ]
+  },
+  "active-shimming.html": {
+    "image": "8680906_orig.png",
+    "text": [
+      "• 校准电流通过专门的匀场线圈",
+      "• 超导匀场线圈：在低温恒温器内",
+      "• 常导匀场线圈：在低温恒温器外"
+    ]
+  },
+  "acutedeoxy-hb.html": {
+    "image": "3285833_orig.png",
+    "text": [
+      "• 急性期血肿包含凝结的红细胞，主要为顺磁性脱氧血红蛋白状态",
+      "• MR 成像特征",
+      "─ T1：等信号",
+      "─ T2/FLAIR：低信号",
+      "─ GRE/SWI：低信号",
+      "─ DWI/ADC：低信号"
+    ]
+  },
+  "additional-orbit-safety.html": {
+    "image": "screen-shot-2020-12-11-at-2-49-50-pm_orig.png",
+    "text": [
+      "需要特别考虑：睫毛膏、眼睑纹身、迷你望远镜镜片、眼睑重物、眼睑弹簧、EX-PRESS 青光眼设备、MEDPOR 磁耦合义眼、波士顿人工角膜、电子视网膜假体、西欧视网膜钉"
+    ]
+  },
+  "adiabatic-excitation.html": {
+    "image": "110463_orig.png",
+    "text": [
+      "• B₁ 以长连续波而非短脉冲的形式施加",
+      "• B₁ 的频率从低于共振缓慢斜升到高于共振",
+      "• M 将跟随 B₁，甚至可以反转"
+    ]
+  },
+  "adiabatic-pulses.html": {
+    "image": "5098967_orig.png",
+    "text": [
+      "• 一类特殊的脉冲，利用 B₁ 缓慢通过共振",
+      "• 优点/用途：",
+      "─ 对场不均匀性相对不敏感",
+      "─ 大体积效应，组织加热较低"
+    ]
+  },
+  "advantages-to-low-field.html": {
+    "image": "6661387_orig.png",
+    "text": [
+      "• 开放式设计",
+      "• 购买、屏蔽和操作成本更低",
+      "• 减少磁敏感性伪影",
+      "• 更低的能量沉积"
+    ]
+  },
+  "airway-stentsvalvescoils.html": {
+    "image": "screen-shot-2021-03-18-at-4-31-26-pm_orig.png",
+    "text": [
+      "• 大多数现代气道支架由硅胶或非铁磁性合金制成",
+      "• 少数较旧的不锈钢型号可能被认为是“MR 条件性”的，除了“MR 不安全”的波士顿科学动态支架",
+      "• 支气管内瓣膜和线圈由非铁磁性镍钛诺制成，是“MR 条件性”的"
+    ]
+  },
+  "aliasing.html": {
+    "image": "3716403_orig.png",
+    "text": [
+      "• 由于数字采样率过低导致的 MR 信号频率成分低估",
+      "• 导致卷折和其他伪影",
+      "• 奈奎斯特准则：采样率必须 ≥ 2倍 待检测的最高频率"
+    ]
+  },
+  "allergic-reactions.html": {
+    "image": "2813286_orig.png",
+    "text": [
+      "• 真性过敏反应：IgE 介导的肥大细胞释放血管活性和炎性物质；先前接触过过敏原或类似物",
+      "• 类过敏反应：非 IgE 介导；剂量依赖性",
+      "• 钆反应可能由任一种机制引起"
+    ]
+  },
+  "amide-proton-transfer.html": {
+    "image": "screen-shot-2019-06-10-at-10-21-33-am_orig.png",
+    "text": [
+      "• 移动蛋白质和肽中的酰胺可以通过施加离水共振约 3.5 ppm 的离共振射频脉冲来选择性地饱和",
+      "• 酰胺饱和效应通过化学交换和偶极相互作用二次抑制水信号",
+      "• 这种百分比信号抑制可以显示在彩色图上，可能有助于评估实体瘤和其他疾病"
+    ]
+  },
+  "analyze-rs-fmri.html": {
+    "image": "screen-shot-2016-10-16-at-6-03-16-pm_orig.png",
+    "text": [
+      "• 数据预处理与任务态 fMRI 相似，但需要额外关注生理运动",
+      "• 相关分析和独立成分分析是最常用的两种方法"
+    ]
+  },
+  "aneurysm-coilsclips.html": {
+    "image": "screen-shot-2021-05-09-at-3-42-02-pm_orig.png",
+    "text": [
+      "• 1985 年之前，少数脑动脉瘤夹是铁磁性的，是 MRI 的禁忌症",
+      "• 1993 年有一例因错误识别铁磁性夹而致死的病例报告",
+      "• 现代夹在高达 3.0T 时都是“MR 条件性”的",
+      "• 非手术装置也是如此 — 颅内支架、弹簧圈"
+    ]
+  },
+  "apparent-diffusion.html": {
+    "image": "7064363_orig.png",
+    "text": [
+      "• ADC 是从实验中获得测量的或观察到的扩散系数",
+      "• ADC 不仅反映真实扩散，还取决于空间取向、微循环灌注、组织整体运动和脉冲序列定时"
+    ]
+  },
+  "arent-gradients-coils.html": {
+    "image": "9753453_orig.png",
+    "text": [
+      "• 梯度线圈产生梯度场"
+    ]
+  },
+  "array-coils.html": {
+    "image": "screen-shot-2018-01-27-at-6-22-12-am_orig.png",
+    "text": [
+      "• 可切换阵列：仅激活某些线圈元件",
+      "• 相控阵：通常重叠的线圈组，连接到公共输出",
+      "• 并行阵列：为并行成像优化的去耦线圈组"
+    ]
+  },
+  "artifacts-in-pi.html": {
+    "image": "3989357_orig.png",
+    "text": [
+      "• 一些并行成像伪影与非并行成像伪影的外观不同",
+      "• SENSE 鬼影：图像中部的混叠弧",
+      "• 校准后的运动伪影",
+      "• 由 g 因子引起的非均匀噪声"
+    ]
+  },
+  "artificial-intelligence-ai.html": {
+    "image": "screen-shot-2022-01-10-at-2-56-46-pm_orig.png",
+    "text": [
+      "AI 是机器表现出类似人类的认知或行为，包括：",
+      "• 感知                            • 计算机视觉",
+      "• 自然语言处理              • 泛化",
+      "• 记忆                            • 推理",
+      "• 解决问题                     • 符号操作",
+      "• 从过去经验中学习       • 运动/操作"
+    ]
+  },
+  "asl-artifacts.html": {
+    "image": "9624156_orig.png",
+    "text": [
+      "常见的 ASL 伪影包括：",
+      "• 磁敏感性        • 下游信号丢失",
+      "• 线圈灵敏度    • 血管内信号",
+      "• 运动               • 背景抑制失败"
+    ]
+  },
+  "asl-methods-overview.html": {
+    "image": "7127732_orig.png",
+    "text": [
+      "• ASL 技术有 2 个部分：控制/标记模块和读出模块",
+      "• 控制/标记可以是连续的、脉冲式的或混合的",
+      "• 读出可以是 2D 或 3D 快速 GRE 或 FSE"
+    ]
+  },
+  "asl-parameters.html": {
+    "image": "19616_orig.png",
+    "text": [
+      "• 最佳参数基于经验，因 ASL 方法、2D vs 3D 采集以及患者年龄/状况而异",
+      "• 始终从制造商或脉冲序列设计者推荐的设置开始"
+    ]
+  },
+  "automatic-prescan.html": {
+    "image": "8642419_orig.png",
+    "text": [
+      "自动预扫描的六个步骤：",
+      "• 快速匀场           • 设置发射机增益",
+      "• 线圈调谐/匹配    • 设置接收机增益",
+      "• 设置中心频率     • 虚拟循环"
+    ]
+  },
+  "b0-vs-b50.html": {
+    "image": "1781951_orig.png",
+    "text": [
+      "• 当使用 b=0 时，肝静脉异常明亮，造成诊断图像混淆",
+      "• 将起始 b 值提高到 50-100 mm²/s 可消除此信号，产生更清晰的图像"
+    ]
+  },
+  "b1rms-vs-sar.html": {
+    "image": "screen-shot-2020-09-29-at-4-29-05-pm_orig.png",
+    "text": [
+      "• B₁+rms 是所施加射频场的时间加权平均值，该场在核进动方向上旋转",
+      "• 它通过测量实现特定翻转角所需施加的射频电压来计算",
+      "• 是 SAR 的替代指标，SAR 与 (B₁+rms)² 成正比",
+      "• 特别用于植入物的条件性标记"
+    ]
+  },
+  "back-propagation.html": {
+    "image": "screen-shot-2022-06-25-at-12-40-22-pm_orig.png",
+    "text": [
+      "• AI 机器使用损失或成本函数计算其训练每个阶段的错误率",
+      "• 在学习过程中，机器调整其内部网络权重和偏差以最小化损失函数",
+      "• 一种有效的方法是通过梯度下降，沿着给定点损失函数的最陡方向行进",
+      "• 一旦损失函数最小化，网络权重和偏差通过称为反向传播的过程进行更新"
+    ]
+  },
+  "backward-delta-scale.html": {
+    "image": "901404_orig.png",
+    "text": [
+      "• “反向” δ 标度是连续波 NMR 早期遗留的",
+      "• 磁场从低到高扫描，去屏蔽最强的质子首先被检测到"
+    ]
+  },
+  "beating-heart-movies.html": {
+    "image": "5871877_orig.png",
+    "text": [
+      "• 通常在单次屏气中获得稳态进动快速成像/TrueFISP 序列，回波间隔为 1-2 毫秒",
+      "• 通过回顾性门控将回波分组为心时相，然后重建并循环播放"
+    ]
+  },
+  "best-fmri-software.html": {
+    "image": "screen-shot-2016-09-21-at-7-34-00-am_orig.png",
+    "text": [
+      "流行的 fMRI 软件",
+      "• AFNI                       • FreeSurfer",
+      "• Brain Connectivity Toolbox • FSL",
+      "• BrainSuite              • matlab",
+      "• BrainVISA              • REST",
+      "• Brain Voyager        • SPM"
+    ]
+  },
+  "best-method.html": {
+    "image": "7762661_orig.png",
+    "text": [
+      "• 没有单一答案，取决于场强、解剖结构和临床情况",
+      "• 基于化学位移、短 T₁ 或混合的方法",
+      "• 脂肪饱和法和 STIR 使用最广泛",
+      "• Dixon 方法越来越受欢迎"
+    ]
+  },
+  "best-t1-pulse-sequence.html": {
+    "image": "8478212_orig.png",
+    "text": [
+      "• 没有单一的最佳序列 — 取决于遇到的病理和身体区域",
+      "• 对于脑转移瘤，较大病变的对比增强顺序为 T1-FLAIR > T1-SE > T1-GRE"
+    ]
+  },
+  "big-spot-in-middle.html": {
+    "image": "2579366_orig.png",
+    "text": [
+      "• k 空间中心位于 kₓ = kᵧ = 0",
+      "• 来自最强的回波/FID",
+      "• 恒定空间频率，对应于平均图像亮度"
+    ]
+  },
+  "bloch-equations.html": {
+    "image": "2879272_orig.png",
+    "text": [
+      "• 布洛赫著名核感应实验的数学模型",
+      "• 描述了净磁化强度的 x、y 和 z 分量如何随时间演变",
+      "• 定义了时间常数 T₁ 和 T₂"
+    ]
+  },
+  "blood-at-lower-fields.html": {
+    "image": "screen-shot-2021-10-06-at-6-41-12-pm_orig.png",
+    "text": [
+      "• 高场和低场之间血肿外观的两个主要差异",
+      "─ 细胞内脱氧血红蛋白和正铁血红蛋白在 T₂ 加权图像上不暗",
+      "─ 由于蛋白质和血液浓缩效应，在约 0.10 T 以下，急性血液在 T₁ 加权图像上明亮"
+    ]
+  },
+  "blood-pool-ablavar.html": {
+    "image": "screen-shot-2017-11-11-at-9-36-50-am_orig.png",
+    "text": [
+      "• Ablavar® 是一种基于钆的对比剂，具有高白蛋白结合力，专为血管内成像设计",
+      "• 由于销售不佳，制造商于 2017 年停产"
+    ]
+  },
+  "bo-effect-on-t1--t2.html": {
+    "image": "5535555_orig.png",
+    "text": [
+      "在临床 MRI 使用的场强范围内",
+      "─ T₁ 大约翻倍",
+      "─ T₂ 相对不变"
+    ]
+  },
+  "bold-contrast.html": {
+    "image": "4114370_orig.png",
+    "text": [
+      "• BOLD 中的图像对比度由脑局部脱氧血红蛋白和氧合血红蛋白的相对浓度响应神经元活动决定",
+      "• 脱氧血红蛋白是顺磁性的，会缩短 T₂ 和 T₂* 并降低信号",
+      "• 最终对比度取决于场强、脉冲序列和 TE"
+    ]
+  },
+  "bold-pulse-sequences.html": {
+    "image": "3783571_orig.png",
+    "text": [
+      "• 最常见的技术是平面回波、二维多层、T₂* 加权梯度回波序列",
+      "• 层厚和面内分辨率为 2-3 mm",
+      "• 对于 3.0T，中等 TE = 30-35 msec 是最佳选择",
+      "• 在超高场下，首选自旋回波序列"
+    ]
+  },
+  "bolus-chasing.html": {
+    "image": "7831360_orig.png",
+    "text": [
+      "• 移床团注方法最初是为外周 CE-MRA 开发的",
+      "• 涉及对比剂注射，然后移动床台，随着对比剂向远端推进，在 2-4 个站位进行成像"
+    ]
+  },
+  "bolus-gd-effect.html": {
+    "image": "8041016_orig.png",
+    "text": [
+      "• 在首次通过器官期间，钆对比剂在很大程度上仍局限于血管内空间",
+      "• 分隔化 Gd 的磁化率效应在血管周围引起磁场畸变，产生加速的 T₂* 信号衰减"
+    ]
+  },
+  "bone-conduction-implants.html": {
+    "image": "screen-shot-2020-12-20-at-2-23-53-pm_orig.png",
+    "text": [
+      "• 骨传导植入物用螺栓固定在颅骨上，大多数类型比人工耳蜗更安全",
+      "• 外部组件必须移除",
+      "• 所有都是“MR 条件性”的，因此仍必须遵循制造商的标准"
+    ]
+  },
+  "bone-stimulators.html": {
+    "image": "screen-shot-2021-07-23-at-3-27-37-pm_orig.png",
+    "text": [
+      "• 植入式骨刺激器由连接到直流发电机的 1-2 个电极组成，用于加速骨折愈合和骨融合",
+      "• 仅由一家公司生产",
+      "• 脊柱模型在 1.5T 下是 MR 条件性的；外周模型未评级"
+    ]
+  },
+  "bowel-contrast-agents.html": {
+    "image": "8274204_orig.png",
+    "text": [
+      "• 肠道对比剂可以是阳性或阴性的，取决于它们是增强还是抑制腔内信号",
+      "• 高渗剂将水吸入肠道；用于 MR 肠道造影",
+      "• 铁氧体剂由于强 T₂* 效应抑制肠内容物"
+    ]
+  },
+  "brands-of-scanners.html": {
+    "image": "screen-shot-2021-03-25-at-1-34-48-pm_orig.png",
+    "text": [
+      "• 许多公司且仍在增长",
+      "• 主要市场领导者是西门子、GE、飞利浦、佳能和日立"
+    ]
+  },
+  "breast-biopsy-markers.html": {
+    "image": "screen-shot-2021-01-24-at-3-11-40-pm_orig.png",
+    "text": [
+      "• 许多较旧的导线和标记物尚未经过 ASTM 测试以确定 MR 兼容性，但可能相对安全",
+      "• 幸运的是，现在有许多 MR 兼容的乳腺活检系统可用"
+    ]
+  },
+  "breast-dce.html": {
+    "image": "1355976_orig.png",
+    "text": [
+      "• 乳腺 DCE 需要专用的多通道乳腺线圈和并行成像",
+      "• 脂肪抑制是强制性的；运动抑制是推荐的",
+      "• 检测小病灶需要高空间分辨率，但时间分辨率要求不高"
+    ]
+  },
+  "breast-tissue-expanders.html": {
+    "image": "screen-shot-2021-01-22-at-2-41-35-pm_orig.png",
+    "text": [
+      "• 几乎所有乳腺组织扩张器都被认为是“MR 不安全”的，因为存在磁性端口，可能在 MRI 期间脱位",
+      "• 两种“MR 条件性”扩张器包括那些带有远程非磁性端口和那些带有 RFID 芯片的扩张器"
+    ]
+  },
+  "bright-fat.html": {
+    "image": "8177119_orig.png",
+    "text": [
+      "• CSE T₂ 加权图像上的脂肪信号通过相邻核之间的 J 耦合被抑制",
+      "• FSE 中的多个 180° 脉冲会破坏 J 耦合，使脂肪变亮"
+    ]
+  },
+  "bullets-and-shrapnel.html": {
+    "image": "screen-shot-2021-06-28-at-6-18-30-pm_orig.png",
+    "text": [
+      "• 子弹、弹丸和铁磁性弹片的小碎片在磁场中可能会发生显著位移，导致组织损伤",
+      "• 需要进行获益/风险分析",
+      "• 无论成分如何，小金属碎片的射频加热都不是问题",
+      "• 非铁磁性子弹和弹片在 MRI 中没有危险"
+    ]
+  },
+  "but-nuclei-arent-tops.html": {
+    "image": "screenshot-2026-01-27-at-9-16-24-am_orig.png",
+    "text": [
+      "• 核自旋的进动与陀螺仪的进动相似，但不完全相同",
+      "• 主要区别在于角动量矢量 I 的长度受量子限制固定",
+      "• 经典方程和量子力学方程相互镜像"
+    ]
+  },
+  "caipirinha.html": {
+    "image": "6923388_orig.png",
+    "text": [
+      "• CAIPIRINHA 是一种鸡尾酒，也是一种并行成像数据采样方法",
+      "• 允许高加速因子",
+      "• k 空间线以各种模式进行相位偏移"
+    ]
+  },
+  "camera-based-systems.html": {
+    "image": "screenshot-2025-10-26-at-3-18-55-pm_orig.png",
+    "text": [
+      "• VitalEye 是飞利浦 MRI 上可用的基于摄像头的呼吸门控系统",
+      "• 它使用视频监测胸部运动作为呼吸运动的替代",
+      "• 局限性包括任何阻挡胸部和摄像头之间直接视线的东西"
+    ]
+  },
+  "carbon-mrs.html": {
+    "image": "screen-shot-2017-01-11-at-2-12-07-pm_orig.png",
+    "text": [
+      "• 由于唯一 NMR 活性同位素 ¹³C 的自然丰度极低且信号微弱，难以执行",
+      "• 需要特殊设备、长成像时间和去耦技术，但在研究糖酵解和神经化学方面取得了一些成功"
+    ]
+  },
+  "cardiac-ai.html": {
+    "image": "screenshot-2025-09-15-at-7-24-04-pm_orig.png",
+    "text": [
+      "• AI 方法已迅速融入现代 CMR 工作流程，范围从图像采集到数据重建再到后处理",
+      "• 一个快速发展的领域，预计将彻底改变 CMR"
+    ]
+  },
+  "cardiac-monitors.html": {
+    "image": "screen-shot-2021-05-30-at-6-53-08-pm_orig.png",
+    "text": [
+      "• 循环记录仪在 1.5 和 3.0T 下是 MR 条件性的",
+      "• 磁场可能会损坏存储的数据并在 MRI 期间产生伪影",
+      "• 建议在 MRI 前下载记录的数据，并在之后清除内存",
+      "• AngelMed Guardian® 是一种不同类型的内部监视器，类似于起搏器，是 MR 不安全的"
+    ]
+  },
+  "cardiac-mr-artifacts.html": {
+    "image": "screenshot-2025-09-21-at-3-00-13-pm_orig.png",
+    "text": [
+      "• 心脏 MRI 检查可能显示非心脏研究中常见的所有伪影，尤其是与呼吸、血管和心脏运动相关的伪影",
+      "• 几种更独特的伪影包括由于起搏器引起的磁敏感条带、黑边伪影和血流相关的湍流或停滞"
+    ]
+  },
+  "cardiac-protocols.html": {
+    "image": "3374961_orig.png",
+    "text": [
+      "心脏 MRI 方案可分为三个主要组别：",
+      "─ 解剖/形态学",
+      "─ 功能/运动",
+      "─ 心肌活力/灌注"
+    ]
+  },
+  "carotid-clamps.html": {
+    "image": "screen-shot-2021-05-01-at-2-44-20-pm_orig.png",
+    "text": [
+      "• 永久性颈动脉夹已 30 多年未使用",
+      "• 如今很少遇到",
+      "• 如果遇到，可以认为是 MR 条件性的，无需担心"
+    ]
+  },
+  "cartilage-mapping.html": {
+    "image": "screen-shot-2017-04-26-at-3-34-47-pm_orig.png",
+    "text": [
+      "• 标准软骨映射软件使用多回波序列计算 T₂ 值",
+      "• 在软骨损伤、退变和炎症中，T₂ 延长",
+      "• 其他方法侧重于胶原蛋白和蛋白聚糖的状态"
+    ]
+  },
+  "casl.html": {
+    "image": "5136495_orig.png",
+    "text": [
+      "• 最古老的动脉自旋标记技术，连续动脉自旋标记使用连续射频照射和恒定梯度来产生自旋的绝热反转/标记",
+      "• 由于组织加热问题，现已基本被放弃，被脉冲式动脉自旋标记和伪连续动脉自旋标记方法取代"
+    ]
+  },
+  "causes-of-relaxation.html": {
+    "image": "6729004_orig.png",
+    "text": [
+      "• 至少存在 6 种主要的弛豫机制",
+      "• 对于 +H 原子核，最重要的是偶极-偶极相互作用"
+    ]
+  },
+  "ce-mra-artifacts.html": {
+    "image": "9022492_orig.png",
+    "text": [
+      "• 锁骨下假性狭窄伪影",
+      "• 扫描过早（静脉污染）",
+      "• 扫描过晚（Maki/振铃伪影）"
+    ]
+  },
+  "center-frequency.html": {
+    "image": "8551097_orig.png",
+    "text": [
+      "• MR 信号来自水和脂肪质子，它们的频率不同",
+      "• 扫描仪必须调谐到单一共振频率，以便正确定位层面和进行脂肪饱和"
+    ]
+  },
+  "chemical-exchange.html": {
+    "image": "1614859_orig.png",
+    "text": [
+      "• 原子核从一个分子转移到另一个分子",
+      "• 效果取决于反应速率和位点间的化学位移",
+      "─ 通常为 T₂ 量级"
+    ]
+  },
+  "chemical-shift-2nd-kind.html": {
+    "image": "3582283_orig.png",
+    "text": [
+      "• 又称“印度墨水”或“相位抵消”伪影",
+      "• 出现在同时包含水和脂肪的像素中",
+      "• 仅在梯度回波成像上可见",
+      "• 在相位和频率方向上均会发生"
+    ]
+  },
+  "chemical-shift-artifact.html": {
+    "image": "989884_orig.png",
+    "text": [
+      "• 水和脂肪由于其共振频率略有不同而产生的空间位移",
+      "• 在频率编码方向上，物体两侧出现白色和黑色条带"
+    ]
+  },
+  "chemical-shift-delta.html": {
+    "image": "6838663_orig.png",
+    "text": [
+      "• 化学位移是指由于局部磁场环境不同，两个原子核之间共振频率的差异",
+      "• 用符号 δ 表示，以百万分之一相对于参考化合物的频率测量"
+    ]
+  },
+  "chemical-shift-in-phase.html": {
+    "image": "3042442_orig.png",
+    "text": [
+      "• 化学位移确实会在脂肪和水之间产生相位差",
+      "• 在自旋回波或梯度回波成像中，这一点不会被注意到，因为相位差在每一步之间是恒定的",
+      "• 在平面回波成像中，相位差被放大，可能会出现化学位移伪影"
+    ]
+  },
+  "chemical-shift.html": {
+    "image": "screen-shot-2016-12-27-at-8-13-15-am_orig.png",
+    "text": [
+      "• 化学位移是由于局部分子环境不同，两个原子核共振频率的差异",
+      "• 以百万分之一为单位测量",
+      "• 频率偏移与 B₀ 成正比"
+    ]
+  },
+  "choice-of-ir-parameters.html": {
+    "image": "356982_orig.png",
+    "text": [
+      "• TI：设置为消除目标组织信号",
+      "• TE：用于所需的 T₂ 加权水平",
+      "• TR：足够长以获得足够的信号和切片数量"
+    ]
+  },
+  "choice-of-trteetc.html": {
+    "image": "screen-shot-2016-12-04-at-7-31-23-am_orig.png",
+    "text": [
+      "• SNR 与体素大小和 NEX 的平方根成正比",
+      "• 代谢物具有不同的 T1 和 T2，其谱权重由 TR 和 TE 控制",
+      "• 大多数脑 MRS 研究使用中等 TR 以及短和中 TE"
+    ]
+  },
+  "choosing-pefe-direction.html": {
+    "image": "7297351_orig.png",
+    "text": [
+      "• 基于减少伪影和成像时间选择 FE/PE 方向",
+      "• 最短解剖维度 > 相位编码",
+      "• 流动/运动伪影：在相位编码方向传播"
+    ]
+  },
+  "chronic-hematomas.html": {
+    "image": "9971290_orig.png",
+    "text": [
+      "• 陈旧性血肿中心通常呈水样，具有长 T₁、T₂ 和 ADC 值",
+      "• 陈旧性血肿周边含有铁蛋白和含铁血黄素，其磁化率效应导致 T₂* 散相，在 GRE/SWI 图像上信号极低"
+    ]
+  },
+  "cine-parameters.html": {
+    "image": "83517_orig.png",
+    "text": [
+      "• 平衡 SSFP 序列，使用非常短的 TE 和大翻转角",
+      "• 在心脏 MRI 中，TR 被认为是一个心脏帧的时间，而不是射频脉冲之间的时间"
+    ]
+  },
+  "cochlear-implants.html": {
+    "image": "screen-shot-2020-12-18-at-6-57-52-pm_orig.png",
+    "text": [
+      "• 过去 10-15 年植入的大多数人工耳蜗是“MR 条件性”的",
+      "• 条件非常严格，因型号而异，必须完全遵守",
+      "• 主要问题与皮下接收器模块中的永磁体有关 — 运动/疼痛、退磁和磁敏感性伪影"
+    ]
+  },
+  "coil-tuningmatching.html": {
+    "image": "608621_orig.png",
+    "text": [
+      "• 线圈调谐：将线圈电子器件调整到患者的精确共振频率",
+      "• 线圈匹配：改变线圈阻抗以最大化线圈和患者之间的能量传输"
+    ]
+  },
+  "commercial-acronyms.html": {
+    "image": "221741_orig.png",
+    "text": [
+      "祝你好运！参见下表"
+    ]
+  },
+  "compressed-sensing.html": {
+    "image": "screen-shot-2017-08-13-at-2-34-24-pm_orig.png",
+    "text": [
+      "• 压缩感知是一种用于高度加速 MRI 的相对较新的方法",
+      "• 特别有希望用于 MRA、3D/4D、DCE 和心脏 MRI",
+      "• 三个基本组成部分：非相干欠采样、稀疏变换和迭代重建"
+    ]
+  },
+  "conditional-implants.html": {
+    "image": "screen-shot-2020-11-19-at-2-09-46-pm_orig.png",
+    "text": [
+      "• ASTM 定义了 3 类植入物/设备：MR 安全、MR 不安全、MR 条件性",
+      "• 确定“条件”最可靠的单一来源是制造商的网站",
+      "• 其他资源包括 MRISafety.com 和 MagResource.com"
+    ]
+  },
+  "continuous-wave-nmr.html": {
+    "image": "screenshot-2026-03-13-at-8-01-56-pm_orig.png",
+    "text": [
+      "• 连续波 — 原始 NMR 技术，使用长持续时间扫频或扫场；产生 M 的稳态进动；需要 T1 弛豫；发生饱和",
+      "• 信号可以是吸收型或色散型或组合型",
+      "• 现在主要具有历史意义，有小众应用，仍在 EPR 中使用"
+    ]
+  },
+  "contraceptive-devices.html": {
+    "image": "screen-shot-2021-01-06-at-4-21-05-pm_orig.png",
+    "text": [
+      "• 所有宫内节育器、隔膜、输卵管夹和封堵器都是“MR 安全”或“MR 条件性”的",
+      "• 对 MRI 相关的移位和妊娠没有顾虑",
+      "• 唯一警告是“MR 不安全”的中国不锈钢环 IUD，直到 2000 年仍在植入"
+    ]
+  },
+  "contrast-enhanced-mra.html": {
+    "image": "5916197_orig.png",
+    "text": [
+      "• 静脉注射 15-20 cc 钆对比剂，对血管进行快速 3D GRE 成像",
+      "• 与 CTA 相似，血管信号主要取决于对比剂浓度",
+      "• 方法包括单相、时间分辨和移床团注追踪"
+    ]
+  },
+  "convolutional-network.html": {
+    "image": "screen-shot-2022-06-29-at-1-43-37-pm_orig.png",
+    "text": [
+      "简单 CNN 的操作通常包括：",
+      "─ 用数字滤波器对图像进行卷积以产生特征图",
+      "─ 对特征图进行池化",
+      "─ 重复前两个步骤几次",
+      "─ 输出通常被展平/矢量化并输入全连接网络以进行最终分类/识别"
+    ]
+  },
+  "coronary-artery-mra.html": {
+    "image": "620496_orig.png",
+    "text": [
+      "• 冠状动脉 MRA 很困难，但可用于评估近端冠状动脉的动脉瘤、异常走行或狭窄",
+      "• 需要心电图触发和导航回波",
+      "• 当前最流行的技术是使用 T2 准备和脂肪饱和的 3D b-SSFP 成像"
+    ]
+  },
+  "cranial-electrodes.html": {
+    "image": "screen-shot-2021-06-07-at-4-22-11-pm_orig.png",
+    "text": [
+      "• MR 条件性头皮、硬膜下和深部电极是市售的",
+      "• 仅限 1.5T 和 3.0T，头部发射-接收线圈，建议使用低 SAR 序列"
+    ]
+  },
+  "cross-talk.html": {
+    "image": "934893_orig.png",
+    "text": [
+      "• 串扰是由于不完美的层面轮廓导致层面之间的干扰",
+      "• 解决方案：间隙、层间交错"
+    ]
+  },
+  "csi.html": {
+    "image": "screen-shot-2016-12-02-at-2-09-11-pm_orig.png",
+    "text": [
+      "• 化学位移成像使用相位编码进行定位",
+      "• 优点：更大的空间覆盖范围和更小的体素尺寸",
+      "• 缺点：成像时间、波谱污染"
+    ]
+  },
+  "cw-v-pulsed-nmr.html": {
+    "image": "screenshot-2026-03-07-at-7-08-12-pm_orig.png",
+    "text": [
+      "• 两种射频激发方法：连续波和脉冲NMR",
+      "• 连续波 - 原始 NMR 技术；长持续时间激发；需要 T1 弛豫；现在很少使用",
+      "• 脉冲 NMR — 持续时间短；理想情况下不与晶格发生能量交换；几乎完全取代了连续波 NMR"
+    ]
+  },
+  "dangerous-metals.html": {
+    "image": "screen-shot-2020-10-14-at-3-35-17-pm_orig.png",
+    "text": [
+      "• 大多数“危险”金属是铁磁性的",
+      "• 通常由 Fe、Co 和/或 Ni 组成",
+      "• 当置于外部磁场中时会磁化，通常在 2.0T 以下"
+    ]
+  },
+  "dark-blooddouble-ir.html": {
+    "image": "8980850_orig.png",
+    "text": [
+      "• 黑血 DIR 序列：180° -180° -TI-采集",
+      "• 双反转脉冲使层内组织不受影响，但流入的血液被反转",
+      "• 选择接近血液零点值的 TI 产生所需对比度"
+    ]
+  },
+  "dark-rim-artifact.html": {
+    "image": "6872332_orig.png",
+    "text": [
+      "• 在钆团注通过左心室期间，心内膜下出现一过性暗带",
+      "• 被认为是吉布斯现象的一种表现",
+      "─ 由于有限的空间分辨率和傅里叶级数的截断"
+    ]
+  },
+  "dark-vs-bright-blood.html": {
+    "image": "2292915_orig.png",
+    "text": [
+      "• 黑血 MRA 技术主要用于显示血管壁",
+      "• 将黑血与其他低信号结构区分开来比较困难",
+      "• 与反转亮血 MRA 不同"
+    ]
+  },
+  "data-artifacts.html": {
+    "image": "7856431_orig.png",
+    "text": [
+      "• 中心点伪影",
+      "• 数据截断",
+      "• 数据错误"
+    ]
+  },
+  "data-for-k-space.html": {
+    "image": "2419962_orig.png",
+    "text": [
+      "• k 空间由来自数字化 MR 信号的原始数据填充",
+      "• 每个 k 空间点都是一个具有实部和虚部的复数"
+    ]
+  },
+  "data-pre-processing.html": {
+    "image": "screen-shot-2016-07-05-at-7-03-14-pm_orig.png",
+    "text": [
+      "质量保证          运动校正",
+      "畸变校正          时间滤波",
+      "层时校正          空间平滑"
+    ]
+  },
+  "data-prep-and-fitting.html": {
+    "image": "screen-shot-2023-03-31-at-4-14-27-pm_orig.png",
+    "text": [
+      "• 模型选择",
+      "• 数据归一化",
+      "• 参数初始化",
+      "• 网络训练和验证",
+      "• 损失函数",
+      "• 正则化"
+    ]
+  },
+  "dce-signal-v-gd.html": {
+    "image": "3440651_orig.png",
+    "text": [
+      "• 当对比剂通过系统时，钆浓度与 T₁ 弛豫率的变化成比例",
+      "• 必须知道对比剂注射前的血液和组织 T₁ 值，并校正钆的独占性血浆分布"
+    ]
+  },
+  "dce-tissue-parmeters.html": {
+    "image": "7776115_orig.png",
+    "text": [
+      "• Tofts 定量模型最常用",
+      "• 假设钆在血管和血管外细胞外空间之间被动扩散",
+      "• 可提取的参数包括前向和反向转运速率、血浆和 EES 体积分数"
+    ]
+  },
+  "decoupling.html": {
+    "image": "screen-shot-2017-01-26-at-7-04-15-am_orig.png",
+    "text": [
+      "• 一种双共振方法，通过破坏 ³¹P-¹H J 耦合来提高 ³¹P 谱的质量",
+      "• 在 ³¹P 信号采集期间，通过频率选择性射频脉冲选择性地照射 ¹H 原子核",
+      "• 最适用于脑和肝脏 MRS，因为去耦改善了 PME 和 PDE 的定义"
+    ]
+  },
+  "deep-brain-stimulators.html": {
+    "image": "screen-shot-2021-05-11-at-6-30-12-pm_orig.png",
+    "text": [
+      "• 所有现代生产的 DBS 系统都被评为“MR 条件性”，但一些遗留设备是“不安全的”",
+      "• 主要担忧是由于“天线效应”导致大脑中导线尖端加热",
+      "• 相对严格的条件适用于 MR 条件性设备，包括场强、SAR、B₁+rms、梯度场、爬升率和发射线圈类型的限制"
+    ]
+  },
+  "deep-network-types.html": {
+    "image": "screen-shot-2023-03-13-at-4-07-26-pm_orig.png",
+    "text": [
+      "• 卷积神经网络",
+      "• 编码器-解码器网络",
+      "• 生成对抗网络",
+      "• 循环神经网络",
+      "• Transformer"
+    ]
+  },
+  "defining-flow.html": {
+    "image": "8273165_orig.png",
+    "text": [
+      "• 整体血流量是在一段时间内通过某一点的血液量",
+      "• 整体流量与平均速度和横截面积相关，公式为 Q = A × V"
+    ]
+  },
+  "dentalfacial-implants.html": {
+    "image": "screen-shot-2020-12-25-at-7-20-52-am_orig.png",
+    "text": [
+      "• 绝大多数牙科植入物是 MR 安全或 MR 条件性的，尽管相对较少经过严格的 ASTM 测试",
+      "• 非磁性假牙无需移除",
+      "• 含有永磁体的器具可能是安全的，前提是将其移除并且患者体内没有残留磁铁"
+    ]
+  },
+  "deoxy-hb-v-met-hb.html": {
+    "image": "9313141_orig.png",
+    "text": [
+      "• 脱氧血红蛋白铁处于亚铁状态，其外层 3d 壳层具有一对配对电子和 4 个未配对电子",
+      "• 从配对集中失去一个电子导致正铁血红蛋白和三价铁状态，具有 5 个未配对电子"
+    ]
+  },
+  "dess.html": {
+    "image": "1001250_orig.png",
+    "text": [
+      "• DESS：双回波稳态",
+      "• SS-FID 和 SS-Echo 信号分别采集，然后合并",
+      "• 用于肌肉骨骼成像"
+    ]
+  },
+  "dielectric-effect.html": {
+    "image": "4847218_orig.png",
+    "text": [
+      "• 介电效应：物质与射频场电分量的相互作用",
+      "• 在场强 > 3T 时更重要",
+      "• 产生不均匀性伪影"
+    ]
+  },
+  "dielectric-pads.html": {
+    "image": "1577641_orig.png",
+    "text": [
+      "• 填充导电材料的薄垫可减少 B₁ 不均匀性伪影",
+      "• 我们很少使用；3T 下的双源发射射频已显著减少了伪影",
+      "• 在 7T 及更高场强下仍然需要"
+    ]
+  },
+  "diffusion-kurtosis.html": {
+    "image": "screen-shot-2017-04-18-at-4-07-35-pm_orig.png",
+    "text": [
+      "• 扩散峰度成像测量组织水分子的非高斯运动，这些运动比纯液体中的运动更受限",
+      "• 当使用高 b 值和更长的回波时间时，会注意到峰度效应",
+      "• 信号模型包括一个额外的项来解释峰度"
+    ]
+  },
+  "diffusion-tensor.html": {
+    "image": "4019059_orig.png",
+    "text": [
+      "• 扩散张量：一个 3x3 矩阵，反映不同方向的扩散率",
+      "• 张量可以旋转，形成仅具有 3 个对角分量的形式",
+      "• 可以表示为扩散椭球"
+    ]
+  },
+  "dipole-dipole-relaxation.html": {
+    "image": "3625204_orig.png",
+    "text": [
+      "• 生物组织中 *H 弛豫最重要的单一机制,偶极相互作用的强度取决于",
+      "─ 自旋类型",
+      "─ 距离",
+      "─ 角度",
+      "─ 相对运动"
+    ]
+  },
+  "direction-of-180deg-pulse.html": {
+    "image": "6846306_orig.png",
+    "text": [
+      "• 通过调整射频发射的相位，180° 翻转可以围绕任何轴进行",
+      "• 常见的 Carr-Purcell-Meiboom-Gill 相位交替模式"
+    ]
+  },
+  "direction-of-field.html": {
+    "image": "1160746_orig.png",
+    "text": [
+      "• 圆柱形扫描仪为水平方向",
+      "• 大多数开放式扫描仪为垂直方向"
+    ]
+  },
+  "disadvantages.html": {
+    "image": "2099018_orig.png",
+    "text": [
+      "• 较低的信噪比",
+      "• 较差的均匀性",
+      "• 对钙化、出血和钆的检测能力较差"
+    ]
+  },
+  "dixon-method.html": {
+    "image": "5624335_orig.png",
+    "text": [
+      "• 现代 Dixon 方法将在不同 TE 采集的 3 个回波组合起来，创建纯水和纯脂肪图像",
+      "• 对 B₀ 和 B₁ 不均匀性相对不敏感",
+      "• 在 3T 腹部成像中最有用"
+    ]
+  },
+  "dizzinessvertigo.html": {
+    "image": "screen-shot-2020-08-25-at-5-00-00-pm_orig.png",
+    "text": [
+      "• 高达 25% 的 7T 扫描患者会出现头晕和/或眩晕",
+      "• 可能是由于 B₀ 场与内淋巴中正常的 K⁺ 离子电流相互作用产生的洛伦兹力所致",
+      "• 可以通过将患者缓慢推入扫描仪或预先使用苯海拉明来减轻"
+    ]
+  },
+  "does-boldbrain-activity.html": {
+    "image": "3836262_orig.png",
+    "text": [
+      "• fMRI/BOLD 信号源于受神经元活动直接调节的血流变化",
+      "• 信号与来自区域神经网络局部场电位相关性最佳，而非单个神经元的放电",
+      "• 动态 BOLD 响应的特征在于血液动力学响应函数"
+    ]
+  },
+  "does-gd-affect-t2.html": {
+    "image": "4266868_orig.png",
+    "text": [
+      "• 钆的 T₂ 缩短效应仅在浓度高时才会出现",
+      "• 在膀胱中常见为假分层现象"
+    ]
+  },
+  "does-m-also-precess.html": {
+    "image": "2959519_orig.png",
+    "text": [
+      "• 净磁化强度可以通过一个以拉莫尔频率旋转的垂直射频场从与 B₀ 的初始对齐中倾斜出来",
+      "• 一旦倾斜，M 就会进动",
+      "• 这与振荡能量交换和共振的开始同时发生"
+    ]
+  },
+  "does-m-instantly-appear.html": {
+    "image": "4821661_orig.png",
+    "text": [
+      "• 净磁化强度不会瞬间出现",
+      "• 它在几秒钟内以指数时间常数 T₁ 发展"
+    ]
+  },
+  "does-precession--nmr.html": {
+    "image": "1278279_orig.png",
+    "text": [
+      "• 核进动与核磁共振不同",
+      "─ 单个原子核即使在地球磁场中也总是在进动",
+      "• 净磁化强度的进动是核磁共振",
+      "─ 只有当接近拉莫尔频率的能量被注入自旋系统时，净磁化强度才会进动"
+    ]
+  },
+  "does-se-correct-for-t2.html": {
+    "image": "7473958_orig.png",
+    "text": [
+      "• 真正的 T₂ 效应是随机的，发生在原子/分子水平",
+      "• 180° 脉冲只能补偿静态场不均匀性"
+    ]
+  },
+  "double-ir.html": {
+    "image": "7814204_orig.png",
+    "text": [
+      "• 使用两个 180° 反转脉冲的反转恢复技术",
+      "• 通过选择 TI₁ 和 TI₂，可以抑制来自两种不同组织的信号",
+      "• 用于心血管 MRI 的“黑血” DIR 变体"
+    ]
+  },
+  "driven-equilibrium.html": {
+    "image": "1998045_orig.png",
+    "text": [
+      "• 使用 -90° 脉冲将残余横向磁化强度翻转到 z 方向",
+      "• 为下一个 TR 间隔“启动”T₁ 弛豫",
+      "• 增强来自液体的信号"
+    ]
+  },
+  "dsc-curve-analysis.html": {
+    "image": "5135509_orig.png",
+    "text": [
+      "• 最常用且最容易提取的参数包括达峰时间和负性增强积分",
+      "• 血流量和血容量的量化需要复杂的数学处理"
+    ]
+  },
+  "dsc-recirculation.html": {
+    "image": "873392_orig.png",
+    "text": [
+      "• DSC 曲线由于钆的再循环而无法回到基线",
+      "• 可以通过将数据拟合到诸如伽马变量函数等曲线来去除/补偿再循环效应"
+    ]
+  },
+  "dsc-signal-v-gd.html": {
+    "image": "1689384_orig.png",
+    "text": [
+      "• 假设钆浓度与观察到的弛豫率变化呈线性比例",
+      "• 可以通过测量对比剂团注通过前后组织的信号强度来确定这些弛豫率变化"
+    ]
+  },
+  "dsc-v-dce-v-asl.html": {
+    "image": "2402275_orig.png",
+    "text": [
+      "• 动态磁敏感对比：使用最广泛；团注钆后快速 T₂* 成像",
+      "• 动态对比增强：团注钆后 T₁ 成像；测量血管通透性",
+      "• 动脉自旋标记：使用磁标记的内源性水作为示踪剂"
+    ]
+  },
+  "dti-tensor-imaging.html": {
+    "image": "5576049_orig.png",
+    "text": [
+      "• DTI 使用来自张量的特征值和特征向量创建图像",
+      "• 典型的 DTI 技术包括",
+      "─ 各向异性分数图",
+      "─ 主弥散方向图",
+      "─ 纤维示踪图"
+    ]
+  },
+  "dual-echo-fse.html": {
+    "image": "8062216_orig.png",
+    "text": [
+      "• 在短和长有效 TE 下施加零和低振幅相位编码步长，用于基本的 SD 和 T₂ 对比度",
+      "• 视图共享：高阶相位编码步长在集合间共享"
+    ]
+  },
+  "dummy-cycles.html": {
+    "image": "9336555_orig.png",
+    "text": [
+      "• 虚拟循环涉及在采集数据之前重复几次 MR 序列",
+      "• 这允许系统纵向和横向磁化强度达到稳态"
+    ]
+  },
+  "dwi-bright-causes.html": {
+    "image": "3648376_orig.png",
+    "text": [
+      "• 弥散加权像明亮 = 弥散受限 = 低 ADC",
+      "• 最重要：梗塞、脓肿、淋巴瘤、髓鞘内水肿"
+    ]
+  },
+  "dynamic-ce-imaging.html": {
+    "image": "4867505_orig.png",
+    "text": [
+      "• 动态对比增强成像的一种方法",
+      "• 反复采样 k 空间中心，并与 k 空间外围的数据合并"
+    ]
+  },
+  "echo-planar-imaging.html": {
+    "image": "5720410_orig.png",
+    "text": [
+      "• 一种快速梯度回波或自旋回波技术，在单次或少量激发中获取整个二维平面图像",
+      "• 具有高回波链长度的 FSE 序列可被视为“多次激发”EPI"
+    ]
+  },
+  "eddy-current-problems.html": {
+    "image": "1645985_orig.png",
+    "text": [
+      "• 快速变化的梯度和射频场感应的电流",
+      "• 产生的问题",
+      "─ 不希望的时变梯度",
+      "─ 主磁场的偏移"
+    ]
+  },
+  "edemat2-mapping.html": {
+    "image": "8188668_orig.png",
+    "text": [
+      "• T₂ 加权成像用于识别水肿区域，有助于心肌梗死的检测和预后判断",
+      "• 存在几种 T₂ 方法；T₂ 映射可能更一致且允许量化"
+    ]
+  },
+  "effect-of-180deg-on-mz.html": {
+    "image": "2398235_orig.png",
+    "text": [
+      "是的，尽管效应很小，但它确实影响稳态磁化强度"
+    ]
+  },
+  "effect-of-a-minus90deg-pulse.html": {
+    "image": "screenshot-2026-02-13-at-2-03-59-pm_orig.png",
+    "text": [
+      "• 理论上是的，因为初始射频脉冲已对系统做了相干功",
+      "• 自旋系统未被加热，熵也未改变",
+      "• 在实践中，一些能量确实可逆地转移回射频线圈"
+    ]
+  },
+  "ekg-problems.html": {
+    "image": "573083_orig.png",
+    "text": [
+      "• 起初花点时间获得好的心电图信号，可以在扫描后期节省更多时间！",
+      "• 提示包括干燥皮肤、让患者保持凉爽、剃毛、使用一次性电极、注意导联放置位置"
+    ]
+  },
+  "electric-properties-imaging.html": {
+    "image": "screen-shot-2021-03-23-at-12-43-47-pm_orig.png",
+    "text": [
+      "• MR-EPT 允许测量/映射组织的两种电特性：电导率和介电常数",
+      "• 两者在肿瘤和缺血性病变中都可能升高",
+      "• 分析需要测量复杂 B₁ 场的分量并求解亥姆霍兹方程以获得 σ 和 ε"
+    ]
+  },
+  "eliminate-wrap-around.html": {
+    "image": "3644473_orig.png",
+    "text": [
+      "减少卷折伪影的方法：",
+      "─ 增加视野",
+      "─ 交换相位和频率轴",
+      "─ 使用表面线圈 + 饱和带",
+      "─ 使用相位过采样技术"
+    ]
+  },
+  "emergency-stop-button.html": {
+    "image": "2301374_orig.png",
+    "text": [
+      "两种关机开关",
+      "• 紧急停机：导致受控失超",
+      "• 紧急关闭：仅关闭电源"
+    ]
+  },
+  "energy-for-precession.html": {
+    "image": "2568742_orig.png",
+    "text": [
+      "核进动发生时没有能量增益或损失"
+    ]
+  },
+  "epicardial-pacersleads.html": {
+    "image": "screen-shot-2021-04-19-at-9-08-11-am_orig.png",
+    "text": [
+      "• 罕见的心外膜永久起搏器应按照与非条件性血管内 CIED 相同的方案处理",
+      "• 暂时保留的心外膜导线可以毫无顾虑地扫描"
+    ]
+  },
+  "epidural-catheters.html": {
+    "image": "screen-shot-2021-06-12-at-1-51-48-pm_orig.png",
+    "text": [
+      "• 许多硬膜外和周围神经输注导管用中心金属弹簧或钢丝加强",
+      "• 有些被认为是 MR 不安全的，而另一些是 MR 条件性的"
+    ]
+  },
+  "estimate-implant-heating.html": {
+    "image": "screen-shot-2021-06-28-at-8-06-21-pm_orig.png",
+    "text": [
+      "植入物加热和测试方法由 3 个主要国际组织制定：",
+      "─ ASTM 标准 F2182",
+      "─ IEC 标准 60601-2-33",
+      "─ ISO/TS 标准 10974"
+    ]
+  },
+  "et-tubes--airways.html": {
+    "image": "screen-shot-2021-02-20-at-11-33-58-am_orig.png",
+    "text": [
+      "• 大多数气管插管主要是塑料的，与 MR 兼容，但导向阀中的小弹簧可能引起伪影",
+      "• 钢丝加强型气管插管被认为是“MR 不安全”或“条件性”的，具体取决于制造商；预计会有显著伪影",
+      "• 还讨论了其他上气道设备"
+    ]
+  },
+  "even-echo-rephasing.html": {
+    "image": "8942831_orig.png",
+    "text": [
+      "• 在采集多个对称回波的自旋回波序列上看到的现象",
+      "• 奇数回波上的血管信号减弱",
+      "• 偶数回波上的血管信号增强"
+    ]
+  },
+  "expected-velocities.html": {
+    "image": "1441669_orig.png",
+    "text": [
+      "• 参见下表",
+      "• 静脉流速通常 <10-20 cm/s",
+      "• 动脉流速则达数百 cm/s"
+    ]
+  },
+  "exponential-adc.html": {
+    "image": "2576324_orig.png",
+    "text": [
+      "• 作为 ADC 图的替代方案，指数图像消除了 DWI 图像中的 T₂ 穿透效应"
+    ]
+  },
+  "external-fixators.html": {
+    "image": "screen-shot-2021-07-22-at-11-44-47-am_orig.png",
+    "text": [
+      "• 外固定装置的潜在风险",
+      "─ 移动",
+      "─ 射频或梯度感应加热",
+      "• 有几家公司生产 MR 条件性框架",
+      "• 建议在允许进入 MR 室之前用手持磁铁检查所有组件"
+    ]
+  },
+  "extracellular-met-hb.html": {
+    "image": "6405615_orig.png",
+    "text": [
+      "• 正铁血红蛋白是唯一由于内层水弛豫而具有短 T₁ 的血红蛋白衍生物",
+      "• 细胞内正铁血红蛋白具有短 T₂/T₂*，由于局部磁化率引起的场畸变",
+      "• 细胞外正铁血红蛋白在红细胞溶解后不再被分隔，因此具有长 T₂"
+    ]
+  },
+  "f-w-chemical-shift.html": {
+    "image": "8701945_orig.png",
+    "text": [
+      "• 脂肪和水质子的共振频率略有不同，由下式给出",
+      "• 化学位移为 3.5 ppm",
+      "• Δf = 3.5 × 拉莫尔频率"
+    ]
+  },
+  "fall-to-lowest-state.html": {
+    "image": "3830812_orig.png",
+    "text": [
+      "• 自旋驻留在较低能态的自然趋势被热碰撞抵消，热碰撞倾向于使两个能态均等化",
+      "• 结果是玻尔兹曼分布预测的折衷方案",
+      "• 存在与外部磁场对齐的平衡净磁化强度"
+    ]
+  },
+  "fat--water-properties.html": {
+    "image": "5600013_orig.png",
+    "text": [
+      "• 脂肪：大分子，具有磁屏蔽的质子 > 短 T₁，较低共振频率",
+      "• 水：小分子，磁去屏蔽 > 长 T₁，较高共振频率"
+    ]
+  },
+  "fat-sat-pulses.html": {
+    "image": "60343_orig.png",
+    "text": [
+      "• 中心频率设置为仅刺激脂肪质子的短持续时间射频脉冲",
+      "• 刺激后，脂肪信号通过扰相梯度散相，只留下水信号",
+      "• 在中高场最流行的脂肪抑制方法"
+    ]
+  },
+  "fat-suppressed-mra.html": {
+    "image": "6446823_orig.png",
+    "text": [
+      "• 脂肪抑制和水激发方法已被用于改进 TOF MRA",
+      "• 然而，它们会产生自己的伪影，因此我不建议常规使用它们"
+    ]
+  },
+  "fat-suppression.html": {
+    "image": "screen-shot-2016-12-17-at-2-26-47-pm_orig.png",
+    "text": [
+      "• 外周体积抑制：在含脂肪区域放置饱和带",
+      "• 反转恢复方法：STIR/SPIR/SPAIR；在 MRS 序列之前执行",
+      "• BASING：在序列中间插入频率选择脂肪脉冲"
+    ]
+  },
+  "ferabrighttrade.html": {
+    "image": "screenshot-2025-11-21-at-7-29-54-pm_orig.png",
+    "text": [
+      "• Ferabright™ 和 Feraheme® 是静脉注射 ferumoxytol 的几乎相同的制剂",
+      "• FDA 批准 Ferabright™ 作为成人疑似脑肿瘤的 MR 对比剂",
+      "• 与 Gd 对比剂不同，Ferabright™ 的摄取在注射后 24 小时达到最大，并显示在巨噬细胞中摄取",
+      "• 使用 Ferabright™ 的病变大小与使用 Gd 对比剂相同或更大"
+    ]
+  },
+  "feridex--liver-agents.html": {
+    "image": "5705143_orig.png",
+    "text": [
+      "• Feridex® 是 20 世纪 90 年代开发的几种用于肝脏和网状内皮系统成像的超顺磁性氧化铁试剂之一",
+      "• 到 2000 年代末，由于副作用和缺乏证明的临床效用，所有这些试剂都已从市场上撤出"
+    ]
+  },
+  "ferritinhemosiderin.html": {
+    "image": "2362653_orig.png",
+    "text": [
+      "• 铁蛋白是一种蛋白质外壳，内包裹着数百至数千个铁颗粒",
+      "• 含铁血黄素是数百至数千个铁蛋白颗粒加上无定形蛋白质和脂质的聚集体",
+      "• 两者都是超顺磁性的，并被巨噬细胞/胶质细胞/单核吞噬细胞系统细胞收集"
+    ]
+  },
+  "ferumoxytol-relaxivity.html": {
+    "image": "screenshot-2025-11-25-at-3-57-55-pm_orig.png",
+    "text": [
+      "• 根据其浓度和组织位置，ferumoxytol 可以产生可用于成像的 T1 或 T2 缩短",
+      "• 与钆试剂相比，ferumoxytol 的 T1 弛豫率约高 3 倍，而其 T2 弛豫率高达 25 倍"
+    ]
+  },
+  "ferumoxytol-safety.html": {
+    "image": "screenshot-2025-11-26-at-12-21-29-pm_orig.png",
+    "text": [
+      "• Ferumoxytol 是一种主要用作贫血治疗的含氧化铁化合物，已被发现作为 MR 对比剂的标签外用途",
+      "• 它相当安全，中度和严重反应发生率 <2%",
+      "• 必须稀释并缓慢注射",
+      "• 外渗可能永久染色皮肤"
+    ]
+  },
+  "ferumoxytol.html": {
+    "image": "screenshot-2025-11-21-at-7-19-41-pm_orig.png",
+    "text": [
+      "• Ferumoxytol 是一种胃肠外铁制剂，由超小型超顺磁性氧化铁颗粒组成，可同时缩短 T1 和 T2/T2*",
+      "• 可作为 MRI 对比剂“标签外”使用",
+      "• 动脉期持续约 14 小时，适用于 MRA",
+      "• 后期被肝脏、脾脏、骨髓、脑膜和淋巴结摄取"
+    ]
+  },
+  "field-of-view-fov.html": {
+    "image": "9239262_orig.png",
+    "text": [
+      "k 空间中的采样间距和全范围与图像空间中的视野和像素宽度成反比：",
+      "Δk = 1/FOV，Δw = 1/k_range"
+    ]
+  },
+  "fiesta-v-fiesta-c.html": {
+    "image": "5419679_orig.gif",
+    "text": [
+      "• FIESTA/TrueFISP 的修改以减少带状伪影",
+      "• 同义词：CISS",
+      "• 两个带有和不带射频相位交替的 FIESTA 序列"
+    ]
+  },
+  "flow-compensation.html": {
+    "image": "5875666_orig.png",
+    "text": [
+      "• 成像梯度波形中添加额外叶瓣，以预先补偿运动引起的相位偏移",
+      "• 作为减少流动伪影的方法非常受欢迎"
+    ]
+  },
+  "flow-misregistration.html": {
+    "image": "1752239_orig.png",
+    "text": [
+      "• 最常见于具有流动补偿的梯度回波或自旋回波图像上的平面内血流",
+      "• 由于自旋在相位编码和频率编码梯度之间移动所致"
+    ]
+  },
+  "flow-void.html": {
+    "image": "2045462_orig.png",
+    "text": [
+      "• “流空”是指由于时间飞跃或自旋相位效应，在通畅的血管中信号丢失",
+      "• 我不喜欢这个术语，因为对外行来说，它暗示了完全相反的意思——没有血流"
+    ]
+  },
+  "fmri-critique.html": {
+    "image": "screen-shot-2016-10-16-at-4-11-37-pm_orig.png",
+    "text": [
+      "• 一些已发表的 fMRI 研究由于以下原因具有显著膨胀的假阳性率：",
+      "─ 多重比较问题",
+      "─ 聚类方法",
+      "─ 循环论证",
+      "• 许多研究也因统计功效低而具有非常高的假阴性率"
+    ]
+  },
+  "fmri-paradigm-design.html": {
+    "image": "4971479_orig.png",
+    "text": [
+      "• 组块设计",
+      "─ 任务期与休息期交替",
+      "─ 最高信噪比和效率",
+      "─ 最适合简单实验和手术定位",
+      "• 事件相关设计",
+      "─ 随机化、短持续时间的任务/事件",
+      "─ 更适合复杂的神经心理学实验",
+      "• 混合设计"
+    ]
+  },
+  "foley-catheters.html": {
+    "image": "screen-shot-2021-01-09-at-1-30-43-pm_orig.png",
+    "text": [
+      "• “标准” Foley 导尿管不含金属，是“MR 安全的”",
+      "• 注意 Foley 管外部或收集装置中使用的金属夹",
+      "• 大多数测温 Foley 导尿管是“MR 条件性”的"
+    ]
+  },
+  "forces-on-metal.html": {
+    "image": "screen-shot-2020-11-10-at-12-26-16-pm_orig.png",
+    "text": [
+      "• 平动与物体大小、形状、角度以及乘积成正比",
+      "─ 对于靠近扫描仪腔体开口的细长物体最大",
+      "• 扭矩与物体大小、形状、角度和 B₀² 成正比",
+      "─ 在扫描仪中心，对于与 B₀ 成 45° 角的物体影响最大"
+    ]
+  },
+  "forcetorque-testing.html": {
+    "image": "screen-shot-2020-11-19-at-7-11-40-pm_orig.png",
+    "text": [
+      "• ASTM 发布了测量植入物平动和扭矩的方案",
+      "• 力：用绳子悬挂的物体偏离垂直线的角度",
+      "• 扭矩：用扭簧测量悬挂在托盘上的物体的扭转"
+    ]
+  },
+  "fourier-transform-ft.html": {
+    "image": "2703816_orig.png",
+    "text": [
+      "一个数学过程，将时域信号 s(t) 转换为频域复数 S(ω)"
+    ]
+  },
+  "free-induction-decay-fid.html": {
+    "image": "5009068_1_orig.png",
+    "text": [
+      "自由感应衰减是当净磁化强度被倾斜到横平面时，在共振频率处记录的阻尼振荡"
+    ]
+  },
+  "free-induction-decay-fidl.html": {
+    "image": "5009068_1_orig.png",
+    "text": [
+      "自由感应衰减是当净磁化强度被倾斜到横平面时，在共振频率处记录的阻尼振荡"
+    ]
+  },
+  "frequency-encode-all.html": {
+    "image": "5164316_orig.png",
+    "text": [
+      "• 设计一个在每个体素具有唯一值的磁场是不可能的",
+      "• 敏感点方法近似于这一想法，但速度非常慢"
+    ]
+  },
+  "frequency-encoding.html": {
+    "image": "7849472_orig.png",
+    "text": [
+      "• 施加梯度以可预测的方式改变主磁场",
+      "• 共振频率随空间位置变化"
+    ]
+  },
+  "frequency-wrap-around.html": {
+    "image": "7941466_orig.png",
+    "text": [
+      "在现代 MRI 中，频率编码方向的卷折伪影通过两种方法有效消除：",
+      "• 信号过采样",
+      "• 带通滤波"
+    ]
+  },
+  "fse-parameters.html": {
+    "image": "2432613_orig.png",
+    "text": [
+      "• 回波链长度 = 回波数量，缩放图像采集时间",
+      "• 回波间距，尽可能短",
+      "• 有效 TE，在最低阶相位编码步骤获取，决定对比度"
+    ]
+  },
+  "gadolinium-on-ct.html": {
+    "image": "6259593_orig.png",
+    "text": [
+      "• 碘对比剂在 MRI 上不可见",
+      "• 高剂量钆对比剂在 CT 上可能可见"
+    ]
+  },
+  "gadolinium-safety.html": {
+    "image": "screen-shot-2018-03-11-at-9-22-07-am_orig.png",
+    "text": [
+      "• 急性安全性",
+      "─ 急性反应发生率非常低，大多轻微",
+      "─ 已报告少数严重反应",
+      "• 慢性安全性",
+      "─ 肾源性系统性纤维化是一种严重且常致命的疾病，可发生在肾功能不全的患者中",
+      "─ Gd 在组织中的积累可能导致 MRI 信号变化并可能引起症状"
+    ]
+  },
+  "gastric-pacemakers.html": {
+    "image": "screenshot-2025-05-01-at-9-28-18-am_orig.png",
+    "text": [
+      "• 胃“起搏器”，更准确地称为胃电刺激器，由皮下植入的脉冲发生器和刺激胃肌或区域迷走神经的电极组成",
+      "• 其中两种设备被认为是 MR 不安全的，而第三种被认为是 MR 条件性的"
+    ]
+  },
+  "gated-3d-fse-mra.html": {
+    "image": "9149442_orig.png",
+    "text": [
+      "• 一种基于心脏或脉冲门控 3D-FSE 序列的非对比增强 MRA 技术",
+      "• 减去收缩期和舒张期图像以产生动脉造影图",
+      "• 最适用于外周 MRA"
+    ]
+  },
+  "gating-methods.html": {
+    "image": "6102624_orig.png",
+    "text": [
+      "• 门控 - MR 信号采集与心脏或呼吸周期的同步",
+      "• 可以是前瞻性或回顾性的",
+      "• 心脏：心电图或外周脉搏触发",
+      "• 呼吸：腹带/风箱或导航回波"
+    ]
+  },
+  "gating-parameters.html": {
+    "image": "2985507_orig.png",
+    "text": [
+      "• 重复时间：必须设置为 R-R 间期的倍数",
+      "• 触发延迟：0-50 毫秒（收缩期成像），150-250 毫秒（舒张期成像）",
+      "• 触发窗：心动周期的 10-15%"
+    ]
+  },
+  "gating-v-triggering.html": {
+    "image": "_6102624_orig.png",
+    "text": [
+      "• 门控 - MR 信号采集与心脏或呼吸周期的同步",
+      "• 可以是前瞻性或回顾性的",
+      "• 心脏：心电图或外周脉搏触发",
+      "• 呼吸：腹带/风箱或导航回波"
+    ]
+  },
+  "gd--field-strength.html": {
+    "image": "445608_orig.png",
+    "text": [
+      "• 对比度增强随场强增加而增加",
+      "• 从中低场到高场时，这种效应最为明显",
+      "• 在较低场强下不要吝啬对比剂剂量！"
+    ]
+  },
+  "gd-accumulation.html": {
+    "image": "5320670_orig.png",
+    "text": [
+      "• 钆从其螯合位点被另一种阳离子置换后，确实会在组织中积累",
+      "• 在 T₁ 加权 MRI 上，可能在苍白球和齿状核中产生高信号"
+    ]
+  },
+  "gd-effect-on-mrs.html": {
+    "image": "screen-shot-2016-12-07-at-7-20-50-am_orig.png",
+    "text": [
+      "• 钆对比剂会导致所有峰的轻微谱线增宽和高度降低，但胆碱受影响最大",
+      "• 当使用带负电的螯合物时，乳腺成像中胆碱峰面积可能减少高达 40%"
+    ]
+  },
+  "gd-enhancement.html": {
+    "image": "6200671_orig.png",
+    "text": [
+      "• 钆对比剂积聚在正常和患病心肌的细胞外间隙",
+      "• 在心肌梗死和其他疾病中延迟洗出导致延迟对比增强",
+      "• 延迟强化并非心肌梗死所特有"
+    ]
+  },
+  "gd-in-breast-milk.html": {
+    "image": "3443149_orig.png",
+    "text": [
+      "• 钆会分泌到母乳中，婴儿通过哺乳会吸收母体剂量的一小部分",
+      "• 可能无需限制母乳喂养，但许多中心建议暂停 24 小时"
+    ]
+  },
+  "gd-in-pregnancy.html": {
+    "image": "screen-shot-2018-09-23-at-3-07-11-pm_orig.png",
+    "text": [
+      "• Gd 会穿过胎盘并再循环",
+      "• 怀孕期间使用 Gd 与死产、新生儿死亡以及一系列类似于 NSF 的风湿性和炎性皮肤病的发生率增加有关",
+      "• 因此，怀孕期间应尽可能避免使用 Gd 对比剂"
+    ]
+  },
+  "gd-liver-agents-eovist.html": {
+    "image": "9696212_orig.png",
+    "text": [
+      "• 钆塞酸是为肝胆成像设计的",
+      "• 50% 分布在血管/细胞外，50% 被肝细胞摄取",
+      "• 通常进行 3-4 期成像以表征局灶性肝病变"
+    ]
+  },
+  "gd-protocol.html": {
+    "image": "screen-shot-2023-04-07-at-7-30-08-pm_orig.png",
+    "text": [
+      "• 不要使用第 I 组药物",
+      "• 如果使用第 II 组药物，则不需要常规 eGFR，但当考虑使用第 III 组药物时应进行",
+      "• 在肾病患者中，考虑之后进行透析"
+    ]
+  },
+  "geometric-accuracy.html": {
+    "image": "screen-shot-2020-07-13-at-2-02-40-pm_orig.png",
+    "text": [
+      "• 模体的线性度测量是 MRI 质量保证中的基本程序",
+      "• 线性误差通常应 < 1-2%",
+      "• 几何误差的主要来源是成像梯度的错误校准"
+    ]
+  },
+  "ghosting.html": {
+    "image": "screen-shot-2020-07-22-at-9-37-44-am_orig.png",
+    "text": [
+      "• 鬼影是结构化噪声，其中主要成像对象的一部分被复制或涂抹到其他区域",
+      "• 由于患者/物体运动以及许多与机器相关的原因",
+      "• ACR 定义了信号鬼影百分比来量化"
+    ]
+  },
+  "gibbs-artifact.html": {
+    "image": "79370_orig.png",
+    "text": [
+      "• 平行于锐利组织界面的多条细线",
+      "• 由于傅里叶级数近似的截断/缩短"
+    ]
+  },
+  "gradient-coils.html": {
+    "image": "8004349_orig.png",
+    "text": [
+      "• 由绕在扫描仪腔体内的壳上的导线或箔蚀刻制成的导电回路",
+      "• 在 x、y 或 z 方向上产生主磁场的校准畸变"
+    ]
+  },
+  "gradient-echo1.html": {
+    "image": "2761726_orig.png",
+    "text": [
+      "• 梯度回波是使用双极梯度对自由感应衰减的操纵",
+      "• 第一个梯度叶瓣使自由感应衰减散相，而第二个梯度叶瓣在稍后时间使其重聚，产生梯度回波"
+    ]
+  },
+  "gradient-heating.html": {
+    "image": "1297920_orig.png",
+    "text": [
+      "• 峰值梯度功率可能超过 1 MW",
+      "• 需要对线圈和放大器进行主动冷却"
+    ]
+  },
+  "gradient-linearity.html": {
+    "image": "3912883_orig.png",
+    "text": [
+      "• 没有统一接受的系统",
+      "• 最常用的是“差分线性误差”"
+    ]
+  },
+  "gradient-safety-overview.html": {
+    "image": "screen-shot-2021-09-01-at-6-35-29-pm_orig.png",
+    "text": [
+      "• 梯度线圈的快速切换会产生可能影响安全性的 3 种主要物理效应",
+      "─ 声学噪声",
+      "─ 神经/心脏刺激",
+      "─ 植入物周围加热",
+      "• 最大影响在中心外，靠近扫描仪腔体壁"
+    ]
+  },
+  "gradient-specifications.html": {
+    "image": "5696599_orig.png",
+    "text": [
+      "最重要的单一指标是爬升率，定义为：峰值梯度强度 ÷ 上升时间"
+    ]
+  },
+  "gradient-vs-rf-heating.html": {
+    "image": "screen-shot-2020-11-22-at-7-55-39-am_orig.png",
+    "text": [
+      "• 加热是由变化的磁场感应的涡流产生的",
+      "• 射频加热是由植入物相关电场增强引起的附近组织中的电流产生的",
+      "• 梯度加热是由植入物本身的涡流引起的，并继发加热软组织"
+    ]
+  },
+  "grappaarc.html": {
+    "image": "36019_orig.png",
+    "text": [
+      "• 混叠在傅里叶变换之前在 k 空间中进行校正",
+      "• 使用自动校准信号来计算 k 空间线的权重",
+      "• 通过权重和来自邻近点的已知值估计缺失的线"
+    ]
+  },
+  "grase.html": {
+    "image": "722892_orig.png",
+    "text": [
+      "• GRASE = 梯度和自旋回波",
+      "• 一种混合技术，结合了来自一系列 GRE 和 SE 的信号",
+      "• 用于将一些 T₂ 效应添加回快速自旋回波序列中"
+    ]
+  },
+  "grass-vs-mpgr.html": {
+    "image": "2246240_orig.png",
+    "text": [
+      "• GRASS/FISP 序列中的对比度取决于采集模式",
+      "• 单层：理想化行为",
+      "• 多层：受扰行为",
+      "• 2D vs 3D：对比度和血流差异"
+    ]
+  },
+  "grassfisp-how.html": {
+    "image": "9389985_orig.png",
+    "text": [
+      "• GRASS/FISP/FFE 是稳态相干序列，具有“FID”的重聚焦",
+      "• 修改包括射频相位交替、额外梯度和相位重绕",
+      "• 通常用于 T₂* 加权图像"
+    ]
+  },
+  "grassfisp-parameters.html": {
+    "image": "3427731_orig.png",
+    "text": [
+      "• TE 控制 T₂* 权重",
+      "• 长 TR 或多层：受扰梯度回波行为",
+      "• 小翻转角：[H] 加权",
+      "• 大翻转角：加权"
+    ]
+  },
+  "gre-vs-se.html": {
+    "image": "6791274_orig.png",
+    "text": [
+      "• 自旋回波信号由 2 个射频脉冲产生",
+      "• 梯度回波信号由 1 个射频脉冲 + 梯度反转产生",
+      "• 自旋回波补偿场不均匀性，而梯度回波不补偿"
+    ]
+  },
+  "gu-stents-and-other.html": {
+    "image": "screen-shot-2021-01-19-at-4-15-50-pm_orig.png",
+    "text": [
+      "• 几乎所有肾造口管和支架都由聚氨酯或非铁磁性金属制成",
+      "• “MR 不安全”的例外是磁性 Black-Star 输尿管支架和未经测试的 Spanner 前列腺支架",
+      "• 前列腺粒子和转发器是“MR 条件性”的"
+    ]
+  },
+  "gyromagnetic-ratio-gamma.html": {
+    "image": "5566796_orig.png",
+    "text": [
+      "• 每个亚原子物种的常数，将自旋与磁矩联系起来",
+      "• μ = γ I",
+      "• γ 的常用单位是 MHz/T"
+    ]
+  },
+  "hastess-fse.html": {
+    "image": "4118556_orig.png",
+    "text": [
+      "• HASTE = 半傅里叶采集单次激发涡轮自旋回波 = 单次激发快速自旋回波",
+      "• 在单个 90° 激发脉冲后，通过包含 100 多个回波的单个序列遍历 k 空间",
+      "• 使用相位共轭对称性"
+    ]
+  },
+  "heart-navigators.html": {
+    "image": "8950247_orig.png",
+    "text": [
+      "• 用于将膈肌运动转换为各种心脏结构位移的经验校正因子",
+      "• 放置在心脏本身的导航回波在理论上更准确，但在实践中技术上很困难"
+    ]
+  },
+  "heart-valves.html": {
+    "image": "screen-shot-2021-04-19-at-1-59-53-pm_orig.png",
+    "text": [
+      "• 所有心脏瓣膜和瓣环成形术环都被认为在高达 3.0T 时是条件性安全的"
+    ]
+  },
+  "hematoma-overview.html": {
+    "image": "8677810_orig.png",
+    "text": [
+      "• 出血的表现是多因素的，取决于：",
+      "─ 微观结构",
+      "─ 血红蛋白化学状态",
+      "• 血红蛋白的磁性取决于未配对电子的数量"
+    ]
+  },
+  "hemichromes.html": {
+    "image": "1842290_orig.png",
+    "text": [
+      "• 正铁血红蛋白经氧化变性形成高铁血色原",
+      "• 高铁血色原呈弱抗磁性，对 MR 信号无显著影响",
+      "• 高铁血色原随后分解，释放出游离铁，被巨噬细胞清除并收集为铁蛋白/含铁血黄素"
+    ]
+  },
+  "how-accurate.html": {
+    "image": "8757135_orig.png",
+    "text": [
+      "• 相位对比 MR 的速度测量通常与多普勒值相差在 5% 以内",
+      "• 误差可能由以下原因引起：",
+      "─ 成像平面角度 > 15°",
+      "─ 时间或空间分辨率不足",
+      "─ 不规则或湍流",
+      "─ 磁场不均匀性"
+    ]
+  },
+  "how-do-z-gradients-work.html": {
+    "image": "9570134_orig.png",
+    "text": [
+      "基本设计是 Maxwell 线圈对 — 两个电流方向相反的线圈"
+    ]
+  },
+  "how-does-fmri-work.html": {
+    "image": "6573988_orig.png",
+    "text": [
+      "• fMRI 通过记录由于血流量增加引起的 T₂(*) 信号变化来显示脑激活",
+      "• BOLD 对比取决于氧合血红蛋白和脱氧血红蛋白的比例",
+      "• 在患者执行任务和休息时获取平面回波梯度回波序列，然后进行处理"
+    ]
+  },
+  "how-does-rf-tip-m.html": {
+    "image": "screenshot-2026-01-09-at-4-40-04-pm_orig.png",
+    "text": [
+      "• 进动是指 M 通过射频激发从与 B₀ 的对齐中位移出来",
+      "• 使用以拉莫尔频率旋转的参考系简化分析",
+      "• 在这里，进动被视为 M 垂直于 B₁ 场的非常缓慢的旋进"
+    ]
+  },
+  "how-is-dce-analyzed.html": {
+    "image": "225402_orig.png",
+    "text": [
+      "• 简单的视觉评估，包括摄取模式（进行性、平台期、峰值）",
+      "• 半定量评估，包括流入率和流出率以及峰值强化",
+      "• 全定量评估（需要建模）"
+    ]
+  },
+  "how-is-dce-performed.html": {
+    "image": "6242819_orig.png",
+    "text": [
+      "• 标准序列是 3D 受扰、T₁ 加权梯度回波，具有短 TR、短 TE 和低翻转角",
+      "• 时间分辨率取决于器官系统以及是否计划进行全面定量分析"
+    ]
+  },
+  "how-is-pi-different.html": {
+    "image": "5441047_orig.png",
+    "text": [
+      "• “常规”MRI：组合来自多个线圈的数据，然后重建",
+      "• 并行成像：数据来自独立处理的线圈；由于混叠和视野减小，在创建最终图像前需要额外的“展开”步骤"
+    ]
+  },
+  "how-is-signal-higher.html": {
+    "image": "8602447_orig.png",
+    "text": [
+      "最终的 MR 信号是以下两者之间的权衡：",
+      "─ 射频脉冲将 M_z 倾斜到横向平面的比例，以及",
+      "─ 稳态纵向磁化强度的值"
+    ]
+  },
+  "how-mris-measure-sar.html": {
+    "image": "screenshot-2026-02-10-at-11-27-07-pm_orig.png",
+    "text": [
+      "• MR 扫描仪无法直接测量 SAR",
+      "• 它们通过以下方式实时估计 SAR：",
+      "─ 监测前向和反射射频功率",
+      "─ 将患者体重与线圈位置和序列类型与模型模拟的复杂查找表进行匹配"
+    ]
+  },
+  "how-strong-is-30t.html": {
+    "image": "8239276_orig.png",
+    "text": [
+      "• 地球磁场：50 μT",
+      "• 冰箱磁铁：5 mT",
+      "• 废品场磁铁：1 T",
+      "• 实验室波谱仪：高达 23 T"
+    ]
+  },
+  "how-to-brain-mrs.html": {
+    "image": "screen-shot-2016-12-02-at-4-21-50-pm_orig.png",
+    "text": [
+      "• 选择技术：单 vs 多体素；TR/TE/FOV/NEX/体素尺寸",
+      "• 规定体素位置和饱和带",
+      "• 执行自动匀场",
+      "• 采集和处理数据"
+    ]
+  },
+  "how-to-levitate-a-frog.html": {
+    "image": "2172106_orig.png",
+    "text": [
+      "• 青蛙和大多数生物组织一样，是抗磁性的",
+      "• 重力和抗磁力相互抵消"
+    ]
+  },
+  "how-to-locate-signals.html": {
+    "image": "2795459_orig.png",
+    "text": [
+      "空间定位方法利用：",
+      "─ 频率差异",
+      "─ 相位差异",
+      "─ 时序差异",
+      "─ 与接收线圈的距离"
+    ]
+  },
+  "how-to-perform-dsc.html": {
+    "image": "8428067_orig.png",
+    "text": [
+      "• 总“标准”剂量钆",
+      "• % 剂量作为“预加载”给予，然后等待 5 分钟",
+      "• 剩余 % 剂量通过高压注射器给予",
+      "• 当团注通过目标器官时，进行快速 GRE 成像，由于 T₂* 效应导致信号丢失"
+    ]
+  },
+  "how-to-predict-t1--t2.html": {
+    "image": "1123815_orig.png",
+    "text": [
+      "组织预测困难，需要多隔室模型"
+    ]
+  },
+  "how-to-ramp.html": {
+    "image": "7829305_orig.png",
+    "text": [
+      "• 超导电路包含一个并联支路",
+      "• 支路中的电阻通过加热控制，允许受控电流输入"
+    ]
+  },
+  "how-to-reduce-fringe.html": {
+    "image": "1337973_orig.png",
+    "text": [
+      "• 磁屏蔽的目的是减少边缘磁场",
+      "• 可以是无源或主动的"
+    ]
+  },
+  "how-to-reduce-sar.html": {
+    "image": "screen-shot-2020-09-13-at-6-41-39-pm_orig.png",
+    "text": [
+      "• 避免 FSE、IR 和饱和脉冲",
+      "• 使用具有减小翻转角的 GRE",
+      "• 如果必须使用 FSE，减少回波数量",
+      "• 增加 TR 并减少层数",
+      "• 减少重聚焦脉冲的角度",
+      "• 使用低 SAR 或 VERSE 脉冲"
+    ]
+  },
+  "how-to-sup3sup1p-mrs.html": {
+    "image": "screen-shot-2017-01-18-at-7-31-05-pm_orig.png",
+    "text": [
+      "• ³¹P MRS 需要单独的射频前端和调谐到其较低共振频率的线圈",
+      "• 不同的成像/定位序列包括基于 FID 和 ISIS 的序列",
+      "• 辅助信号增强使用质子去耦和核欧沃豪斯效应刺激 ¹H"
+    ]
+  },
+  "hyperacuteoxy-hb.html": {
+    "image": "1731557_orig.png",
+    "text": [
+      "• 超急性期血肿（<12 小时）由凝结的红细胞组成，主要为氧合血红蛋白状态",
+      "• MR 成像特征：",
+      "─ T1：等信号",
+      "─ T2/FLAIR：轻度高信号",
+      "─ GRE/SWI：周边低信号环",
+      "─ DWI/ADC：弥散受限"
+    ]
+  },
+  "image-contrast-trte.html": {
+    "image": "4964038_orig.png",
+    "text": [
+      "• 长 TR 可最小化 T₁ 效应，因为所有组织在两次激发之间都有足够的时间完全恢复",
+      "• 短 TE 可最小化 T₂ 效应，因为没有足够的时间让 T₂ 衰减差异出现",
+      "• 自旋密度效应始终存在"
+    ]
+  },
+  "image-resolution.html": {
+    "image": "screen-shot-2020-07-16-at-3-03-36-pm_1.png",
+    "text": [
+      "• 使用包含楔形或斜坡的模体测量层厚和位置",
+      "• 请记住，层不具有完美的矩形轮廓，因此使用半高全宽值",
+      "• 通常预期公差在 ±10% 以内"
+    ]
+  },
+  "image-uniformity.html": {
+    "image": "screen-shot-2020-07-13-at-4-00-46-pm_orig.png",
+    "text": [
+      "• 图像均匀性在均匀模体中选择最大和最小强度区域进行测量",
+      "• 即使在运行良好的扫描仪中，也可能出现 10-15% 的变化"
+    ]
+  },
+  "implanted-infusion-pumps.html": {
+    "image": "screen-shot-2021-03-29-at-1-32-08-pm_orig.png",
+    "text": [
+      "• 植入式输液泵事故是 MR 相关死亡的主要原因",
+      "• 两种泵设计：推进剂驱动、电机驱动",
+      "• 所有当前制造的植入式输液泵都是“MR 条件性”的，但根据类型应用一些非常特殊的条件"
+    ]
+  },
+  "important-properties.html": {
+    "image": "2667455_orig.png",
+    "text": [
+      "• 应考虑几种物理性质，但最重要的是",
+      "─ 热力学稳定性：分子“抓住” Gd³⁺ 离子的牢固程度",
+      "─ T₁ 弛豫率：给定剂量下 T₁ 缩短的程度"
+    ]
+  },
+  "in-phaseout-of-phase.html": {
+    "image": "_1493888_orig.png",
+    "text": [
+      "• 同相位和反相位成像是指获取具有两个不同 TE 值的配对梯度回波图像",
+      "• 含有显微脂肪的组织在反相位图像上信号降低"
+    ]
+  },
+  "in-phaseout-of-phase1.html": {
+    "image": "1493888_orig.png",
+    "text": [
+      "• 同相位和反相位成像是指获取具有两个不同 TE 值的配对梯度回波图像",
+      "• 含有显微脂肪的组织（尤其是肾上腺腺瘤和肝脂肪变性）在反相位图像上信号降低"
+    ]
+  },
+  "incomplete-screening.html": {
+    "image": "screen-shot-2021-06-20-at-12-42-22-pm_orig.png",
+    "text": [
+      "• 来自知情家庭成员或医疗保健提供者的信息可能就足够了",
+      "• 建议获取/查看头部、胸部、腹部和骨盆的 X 光片，以确定金属异物和 MR 不安全植入物的存在/不存在"
+    ]
+  },
+  "incontinence-devices.html": {
+    "image": "screen-shot-2021-01-14-at-2-12-12-pm_orig.png",
+    "text": [
+      "• 大多数失禁装置是 MR 安全或条件性的",
+      "• 例外包括金属阴茎夹和金属子宫托，被视为 MR 不安全"
+    ]
+  },
+  "informed-consent-for-gd.html": {
+    "image": "screen-shot-2023-04-06-at-7-09-26-pm_orig.png",
+    "text": [
+      "• 美国 FDA 要求每位接受钆对比剂的患者获得一份说明风险的药物指南",
+      "• 许多站点还让患者签署或阅读单独的同意书",
+      "• 当使用 ACR II 组药物时，所有患者发生 NSF 的风险极低"
+    ]
+  },
+  "insertable-gradients.html": {
+    "image": "screenshot-2026-03-14-at-4-58-46-pm_orig.png",
+    "text": [
+      "• 可插入式梯度线圈刚刚开始商业化，大多局限于头部成像",
+      "• 峰值梯度强度 300 mT/m，爬升率 750 T/m/s 现已可用"
+    ]
+  },
+  "insulin-pumps--cgms.html": {
+    "image": "screenshot-2025-05-01-at-9-14-56-am_orig.png",
+    "text": [
+      "• 所有这些设备都是安全的，除了 Eversense 365 植入式传感器，它是 MR 条件性的"
+    ]
+  },
+  "intra-articularthecal-gd.html": {
+    "image": "7243709_orig.png",
+    "text": [
+      "• 钆对比剂仅被批准用于静脉注射，但可作为“标签外使用”进行关节内或鞘内注射",
+      "• 使用小剂量稀释对比剂",
+      "• 对于 MR 关节造影非常安全有用",
+      "• 数据有限，但对于 MR 脊髓造影中脑脊液漏的检查可能是安全有用的"
+    ]
+  },
+  "invisible-protons.html": {
+    "image": "screen-shot-2018-01-26-at-3-39-21-pm_orig.png",
+    "text": [
+      "• “暗”物质原子核具有非常短的 T₂*，其信号衰减很快",
+      "• 这些包括：",
+      "─ 与大分子紧密结合的水",
+      "─ 较大蛋白质和胶原蛋白的主链质子",
+      "─ 致密半固体脂质",
+      "─ 牙釉质和皮质骨"
+    ]
+  },
+  "ionic-v-non-ionic.html": {
+    "image": "2491741_orig.png",
+    "text": [
+      "• 需要考虑的可能影响",
+      "─ 外渗",
+      "─ 肾毒性",
+      "─ 全身渗透压超负荷",
+      "• 由于给药剂量小，可能没有临床显著差异"
+    ]
+  },
+  "ir-bounce-point.html": {
+    "image": "5438182_orig.png",
+    "text": [
+      "• 在反转恢复或预反转序列上看到的相位抵消效应",
+      "• 与化学位移不同",
+      "• 当选择中间反转时间时，发生在具有不同 T₁ 值的组织的边界像素中"
+    ]
+  },
+  "ir-prepped-sequences.html": {
+    "image": "7111115_orig.png",
+    "text": [
+      "• 脉冲序列有 3 个组成部分：准备模块、采集、恢复",
+      "• IR 序列的准备模块包含一个或多个 180° 反转脉冲",
+      "• “标准” IR 使用 SE/FSE 采集",
+      "• “预 IR”序列如 MP-RAGE 和 FGATIR 使用 3D-GRE 采集"
+    ]
+  },
+  "iron-based-contrast.html": {
+    "image": "screenshot-2025-11-25-at-1-14-38-pm_orig.png",
+    "text": [
+      "• 由磁铁矿核心和包被的多糖胶囊组成",
+      "• 表现出超顺磁性",
+      "• 超小型超顺磁性氧化铁是适合 T1 和 T2 弛豫的单域颗粒",
+      "• 较大的颗粒是多域的，最适合 T2/T2* 弛豫"
+    ]
+  },
+  "iront2-mapping.html": {
+    "image": "5757844_orig.png",
+    "text": [
+      "• T₂* 映射允许评估心脏和肝脏中的铁沉积",
+      "• 通过多回波梯度回波序列计算，拟合为一阶指数衰减曲线"
+    ]
+  },
+  "is-field-ever-turned-off.html": {
+    "image": "3643534_orig.png",
+    "text": [
+      "• 超导磁体永不关闭",
+      "• 常导磁体可在一天结束时关闭",
+      "• 永磁体无法关闭"
+    ]
+  },
+  "is-gd-safe-in-infants.html": {
+    "image": "1683632_orig.png",
+    "text": [
+      "• 婴幼儿对钆的反应风险似乎与成人相同，包括发生肾源性系统性纤维化",
+      "• 应谨慎使用钆对比剂",
+      "• 在婴幼儿中半衰期更长，尤其是早产儿"
+    ]
+  },
+  "iso-anisotropic-diffusion.html": {
+    "image": "8867368_orig.png",
+    "text": [
+      "• 各向同性材料：",
+      "─ 各方向扩散相同",
+      "─ 由单个扩散系数表征",
+      "• 各向异性材料：",
+      "─ 扩散随方向变化",
+      "─ 由 3x3 扩散张量表征"
+    ]
+  },
+  "ivc-filters.html": {
+    "image": "screen-shot-2021-03-21-at-3-33-52-pm_orig.png",
+    "text": [
+      "• 否",
+      "• 自发迁移率约为 1%",
+      "• 可以在放置后立即扫描所有类型的 IVC 滤器，最高可达 3T"
+    ]
+  },
+  "ivim.html": {
+    "image": "screen-shot-2017-04-17-at-3-35-58-pm_orig.png",
+    "text": [
+      "• 体素内不相干运动是指由于扩散和毛细血管灌注引起的水分子的微观运动",
+      "• 通过在多个低 b 值下采集数据，可以增强灌注效应，从而可以绘制伪扩散和灌注分数图"
+    ]
+  },
+  "k-space-grid.html": {
+    "image": "7985058_orig.png",
+    "text": [
+      "• k 空间是无限的，但必须在以网格或矩阵形式放置的离散点进行采样和数字处理",
+      "• 位于主轴上的点代表沿图像纯 x 和 y 方向的空间频率"
+    ]
+  },
+  "k-space-trajectories.html": {
+    "image": "8006302_orig.png",
+    "text": [
+      "• k 空间是一个空数组，等待来自数字化 MR 信号的数据填充",
+      "• 单元格可以按任何顺序填充",
+      "• 流行的方法包括笛卡尔、螺旋、径向和之字形"
+    ]
+  },
+  "k-trans--permeability.html": {
+    "image": "4882327_orig.png",
+    "text": [
+      "• • K^trans 不同于通透性",
+      "• K^trans 反映了血浆血流量、通透性和毛细血管表面积综合效应",
+      "• 通常无法分离通透性和表面积的贡献，因此我们使用通透性表面积乘积"
+    ]
+  },
+  "lactate-inversion.html": {
+    "image": "screen-shot-2016-11-02-at-7-48-18-am_orig.png",
+    "text": [
+      "• 乳酸双峰是由于 J 耦合，J = 7 Hz",
+      "• 两个峰每 1/J = 144 ms 翻转一次",
+      "• 乳酸是最容易看到的双峰，但 NAA 和其他物质的小次峰也是可能倒置的双峰"
+    ]
+  },
+  "laminar-v-turbulent.html": {
+    "image": "9877454_orig.png",
+    "text": [
+      "• 层流：慢速、有组织、平行于血管壁，抛物线轮廓",
+      "• 涡流：漩涡，常在分叉处和狭窄后出现逆流涡流",
+      "• 湍流：无序、随机，速度高"
+    ]
+  },
+  "language.html": {
+    "image": "1796695_orig.png",
+    "text": [
+      "• “经典”皮层语言模型已被“双流”模型所取代",
+      "• 音韵范式用于布罗卡区和背侧流",
+      "• 语义范式用于韦尼克区和腹侧流"
+    ]
+  },
+  "lightdark-reversal.html": {
+    "image": "3348304_orig.png",
+    "text": [
+      "• 中风具有弥散受限 = 低 ADC",
+      "• 当施加弥散敏感梯度时，DWI 显示 MR 信号的强度",
+      "─ 中风 = 散相少 = 明亮",
+      "ADC 图显示 ADC 值",
+      "─ 中风 = 低 ADC = 暗"
+    ]
+  },
+  "liquid-helium-use.html": {
+    "image": "8323364_orig.png",
+    "text": [
+      "• 大多数现代扫描仪使用高效的 Gifford-McMahon 制冷系统",
+      "• 这些系统具有零蒸发",
+      "• 液氦仅偶尔需要补充"
+    ]
+  },
+  "liver-sup1h-mrs.html": {
+    "image": "screen-shot-2016-12-21-at-7-22-10-am_orig.png",
+    "text": [
+      "• 肝脏 ¹H-MRS 的主要作用是量化非酒精性脂肪肝病中的脂肪分数",
+      "• 通常使用 STEAM、单波谱、屏气技术，采用长 TR 和短/多 TE",
+      "• 使用 T2 校正和建模的水峰和脂肪峰下面积计算脂肪分数"
+    ]
+  },
+  "locations-in-k-space.html": {
+    "image": "8885696_orig.png",
+    "text": [
+      "• k 空间中心：低频（形状 基本对比度）",
+      "• k 空间周边：高频（细节 边缘）",
+      "• kₓ 和 kᵧ 代表水平和垂直方向的波分量"
+    ]
+  },
+  "low-v-mid-v-high-field.html": {
+    "image": "8784596_orig.png",
+    "text": [
+      "• 任意区分，随时间变化",
+      "• 见下表我的建议"
+    ]
+  },
+  "lp-vs-cp-quadrature.html": {
+    "image": "9653759_orig.png",
+    "text": [
+      "• 线极化：较旧，效率低；许多表面线圈仍采用此设计",
+      "• 圆极化 = 正交：最常见的设计：鸟笼式和 TEM 线圈"
+    ]
+  },
+  "lymph-node-agents.html": {
+    "image": "9430778_orig.png",
+    "text": [
+      "• 淋巴结对比剂通常是超小型超顺磁性氧化铁颗粒",
+      "• 作为阴性对比剂，使正常淋巴结变暗"
+    ]
+  },
+  "macromolecule-effects.html": {
+    "image": "screen-shot-2018-01-26-at-3-35-14-pm_orig.png",
+    "text": [
+      "• 大分子中的 ¹H 原子核以及紧密结合的水质子具有非常短的 T₂ 值，可能无法通过常规 MR 技术看到",
+      "• 这些原子核与自由水和部分结合水相互作用，同时降低 T₁ 和 T₂"
+    ]
+  },
+  "magic-angle.html": {
+    "image": "screen-shot-2020-11-15-at-3-23-43-pm_orig.png",
+    "text": [
+      "• 偶极相互作用具有角度依赖性，对于胶原蛋白等高度结构化的分子很重要",
+      "• T₂ 弛豫时间延长，T₂ 信号在“魔角”处增加"
+    ]
+  },
+  "magnet-changes-ekg.html": {
+    "image": "1152009_orig.png",
+    "text": [
+      "• 磁流体动力学效应是由降主动脉中离子电流产生的小电压",
+      "• 产生无害的、与场强相关的心电图变化，尤其是 T 波抬高"
+    ]
+  },
+  "magnetic-dipoles.html": {
+    "image": "4793890_orig.png",
+    "text": [
+      "一个用于描述物体与外部磁场相互作用趋势的矢量"
+    ]
+  },
+  "magnetic-rods.html": {
+    "image": "screen-shot-2021-07-25-at-3-11-46-pm_orig.png",
+    "text": [
+      "• 磁控生长棒已被开发用于治疗儿童脊柱侧凸和腿部畸形",
+      "• 使用外部磁控制器延长装置",
+      "• 由单个供应商生产的商业型号",
+      "─ MAGEC® 用于脊柱：1.5T 下 MR 条件性",
+      "─ PRECICE® 用于四肢：MR 不安全？"
+    ]
+  },
+  "magnetic-shielding.html": {
+    "image": "6919438_orig.png",
+    "text": [
+      "• MR 扫描仪房间必须进行射频屏蔽，以阻挡杂散信号",
+      "• 外部移动金属物体的影响更难屏蔽"
+    ]
+  },
+  "magnetization-transfer.html": {
+    "image": "4741924_orig.png",
+    "text": [
+      "• MT 脉冲影响组织中“自由”和“结合”氢核之间的自旋扩散",
+      "• 又称“大分子饱和”脉冲",
+      "• 通过抑制背景组织，MT 可以更好地显示小血管"
+    ]
+  },
+  "magnetization-transfer1.html": {
+    "image": "4371535_orig.png",
+    "text": [
+      "磁化转移：一个过程，其中自旋在三个池之间转移吸收的能量：",
+      "─ 自由水",
+      "─ 结合水",
+      "─ 大分子"
+    ]
+  },
+  "magnetizing-metal.html": {
+    "image": "screen-shot-2021-08-15-at-3-40-55-pm_orig.png",
+    "text": [
+      "• 铁磁性材料置于外部磁场中时会产生内部磁化强度",
+      "• 当磁场增加时，M 达到最大饱和值，通常对应大于 2 Tesla 的值",
+      "• 达到饱和的路径取决于材料的磁历史，由磁滞回线描述"
+    ]
+  },
+  "making-a-dw-image.html": {
+    "image": "915672_orig.png",
+    "text": [
+      "• Stejskal 和 Tanner 的方法",
+      "• 配对脉冲梯度导致扩散自旋信号丢失",
+      "• 通常查看 Trace 和 ADC 图像"
+    ]
+  },
+  "making-an-sw-image.html": {
+    "image": "screen-shot-2017-03-28-at-12-22-14-pm_orig.png",
+    "text": [
+      "• 通常使用 3D GRE 序列，TR = 25-50，TE = 20-40，FA = 15-20°",
+      "• 创建幅度图像，但处理原始相位数据以产生滤波相位图像",
+      "• 幅度和相位掩模图像相乘以产生 SW 图像，通常以最小强度投影显示"
+    ]
+  },
+  "mandatory-accreditation.html": {
+    "image": "screen-shot-2020-07-15-at-12-22-35-pm_orig.png",
+    "text": [
+      "• 在美国，MRI 认证是获得医疗保险 B 部分付款的必要条件",
+      "• 许多私人保险公司已效仿，甚至施加了更多限制和范围",
+      "• 因此，如果您希望获得报酬，认证是强制性的！"
+    ]
+  },
+  "many-kinds-of-coils.html": {
+    "image": "4773074_orig.png",
+    "text": [
+      "• 主线圈：产生 B₀",
+      "• 匀场线圈：改善均匀性",
+      "• 梯度线圈：成像",
+      "• 射频线圈：发射 B₁ 场",
+      "• 患者线圈：接收 MR 信号"
+    ]
+  },
+  "meaning-of-cbf-mtt-etc.html": {
+    "image": "2265020_orig.png",
+    "text": [
+      "• 血流量、血容量和平均通过时间是描述组织或器官在简单单隔室模型中灌注的基本参数",
+      "• 通过中心容积定理相关联：平均通过时间 = 血容量 / 血流量",
+      "• 显示为参数图，可用于表征缺血和肿瘤"
+    ]
+  },
+  "meaning-of-weighting.html": {
+    "image": "2919250_orig.png",
+    "text": [
+      "• T₁ 加权和 T₂ 加权是不精确且易被误解的术语",
+      "• 几乎所有图像都有来自 T₁、T₂ 和 [H] 的混合贡献"
+    ]
+  },
+  "measuring-flow.html": {
+    "image": "3333215_orig.png",
+    "text": [
+      "• 通过施加双极梯度后的相位偏移响应来测量速度",
+      "• 可以显示为方向速度图或速度大小图",
+      "• 流量 = 平均速度 x 血管横截面积"
+    ]
+  },
+  "measuring-perfusion.html": {
+    "image": "4131569_orig.png",
+    "text": [
+      "• 灌注通常以每单位组织质量的血流量单位报告",
+      "• 测量需要使用血管内、细胞外或自由扩散的示踪分子或颗粒"
+    ]
+  },
+  "mergemedic.html": {
+    "image": "5699300_orig.png",
+    "text": [
+      "• MERGE (GE) = MEDIC (Siemens) = M-FFE (Phillips)",
+      "• 受扰、T₂* 加权序列，用于脊柱和肌肉骨骼 MR",
+      "• 每次射频脉冲后记录的几个梯度回波被合并成单个图像"
+    ]
+  },
+  "metabolite-mapping.html": {
+    "image": "screen-shot-2016-12-24-at-6-23-42-am_orig.png",
+    "text": [
+      "• 从 CSI 研究获得的代谢物近似浓度和比率可以作为彩色图叠加在解剖图像上",
+      "• 使用此类图时要小心，因为供应商提供的量化方法通常是初级的，色阶是任意的"
+    ]
+  },
+  "metabolite-quantitation.html": {
+    "image": "screen-shot-2017-02-09-at-9-56-13-am_orig.png",
+    "text": [
+      "• 谱峰下面积反映了每种代谢物 NMR 活性核的相对浓度",
+      "• 最流行的曲线拟合方法包括 LCModel 和 JMRUI 工具箱中的方法",
+      "• 使用外部或内部参考可以进行“绝对”定量，但准确性尚不完全清楚"
+    ]
+  },
+  "metal-suppression.html": {
+    "image": "9770165_orig.png",
+    "text": [
+      "减少金属伪影的方法：",
+      "• 使用尽可能低的场强",
+      "• 使用具有短回波间距、薄层、高带宽、并行成像的快速自旋回波",
+      "• 商业软件：VAT、SEMAC、MAVRIC"
+    ]
+  },
+  "metallic-taste.html": {
+    "image": "screen-shot-2020-08-23-at-2-11-08-pm_orig.png",
+    "text": [
+      "• 金属味觉是由头部在静态磁场中运动时在舌头中感应的电流产生的",
+      "• 不是由于填充物中的金属释放所致"
+    ]
+  },
+  "mind-readinglie-detector.html": {
+    "image": "screen-shot-2016-10-04-at-7-44-00-am_orig.png",
+    "text": [
+      "• 是的，在一定程度上有限但令人惊讶",
+      "• 使用 MVPA 和机器学习在视觉解码方面取得最大进展",
+      "• 商业应用应持怀疑态度"
+    ]
+  },
+  "miscellaneous-cv-devices.html": {
+    "image": "screen-shot-2021-05-08-at-4-25-31-pm_orig.png",
+    "text": [
+      "• 许多其他杂项心血管植入物是“MR 条件性”的，包括：",
+      "─ 冠状动脉支架",
+      "─ 封堵/封堵器装置",
+      "─ 房内分流器",
+      "─ 肺动脉压力传感器",
+      "─ 左心室重建装置",
+      "• 机械循环辅助装置是“MR 不安全”的"
+    ]
+  },
+  "misleading-diagrams.html": {
+    "image": "screenshot-2026-01-26-at-1-27-22-pm_orig.png",
+    "text": [
+      "是的...好吧，至少是不完整且有时非常误导"
+    ]
+  },
+  "mixing-of-slices.html": {
+    "image": "6244640_orig.png",
+    "text": [
+      "• “等待时间”或“死区时间”：回波采集与下一次射频脉冲重复之间的时间",
+      "• 交错采集多个层面可防止混合和频率相互作用"
+    ]
+  },
+  "mn-agents-teslascan.html": {
+    "image": "690120_orig.png",
+    "text": [
+      "• Teslascan® 是一种基于锰的对比剂，在 20 世纪 90 年代上市用于肝脏 MRI",
+      "• 由于销量不佳和对游离 Mn²⁺ 离子毒性的担忧，已停止生产"
+    ]
+  },
+  "most-dangerous-place.html": {
+    "image": "screen-shot-2021-08-29-at-4-15-16-pm_orig.png",
+    "text": [
+      "• 供应商提供的场图显示了 B₀、空间梯度和空间梯度乘积",
+      "• 平动在 SGP 最大处最大，在 dB/dz 接近零的扫描仪中心最小",
+      "• 扭矩在 B₀² 大的整个扫描仪腔体内都很高"
+    ]
+  },
+  "motion-artifact-direction.html": {
+    "image": "1373222_orig.png",
+    "text": [
+      "• 运动伪影在相位编码方向上最为突出，因为相位编码和频率编码的时间尺度不同",
+      "• 在二维傅里叶变换成像中，频率编码通常发生在几十毫秒内，而相位编码发生在几百或几千毫秒内（这是大多数宏观生理运动的时间尺度）"
+    ]
+  },
+  "motor-paradigms.html": {
+    "image": "6799337_orig.png",
+    "text": [
+      "• 通过 fMRI 识别初级运动皮层被广泛使用且相对容易",
+      "• 典型组块设计，患者在身体运动和休息期间交替"
+    ]
+  },
+  "motsa.html": {
+    "image": "6900770_orig.png",
+    "text": [
+      "• MOTSA：多层重叠薄块采集",
+      "• 2D 和 3D TOF 的混合，允许获得更大的 3D 体积",
+      "• 可能产生百叶窗伪影"
+    ]
+  },
+  "mr-elastography.html": {
+    "image": "screen-shot-2017-05-28-at-11-16-40-am_orig.png",
+    "text": [
+      "• MR 弹性成像通过检测响应周期性外部压缩的剪切波来表征组织",
+      "• 核心序列是具有双极运动编码梯度的短 TR/TE GRE，与外部压缩装置同步",
+      "• 最广泛用于量化肝纤维化"
+    ]
+  },
+  "mr-fingerprinting.html": {
+    "image": "screenshot-2025-11-03-at-11-07-54-am_orig.png",
+    "text": [
+      "• 一种有前景的技术，使用基于 GRE 的序列，具有随机化的 TR、翻转角、反转脉冲和暂停",
+      "• 每个体素的信号演变与模拟的组织“字典”进行比较和匹配",
+      "• 目标是原始数据中提取主要组织参数"
+    ]
+  },
+  "mr-phantoms.html": {
+    "image": "screen-shot-2020-07-13-at-11-15-34-am_orig.png",
+    "text": [
+      "• 通用模体通常是充满流体的塑料圆柱体，内含各种尺寸、形状和材料的物体",
+      "• 最广泛使用的两种是 ACR MRI 模体和 Eurospin II 测试系统"
+    ]
+  },
+  "mr-safety-screening.html": {
+    "image": "screen-shot-2020-12-02-at-4-11-01-pm_orig.png",
+    "text": [
+      "• 建议至少进行两个级别的筛查过程：",
+      "─ 在安排预约时",
+      "─ 在扫描前到场时",
+      "• 在允许进入 ACR III 区之前，应完成该过程"
+    ]
+  },
+  "mr-system-layout.html": {
+    "image": "7703152_orig.png",
+    "text": [
+      "• 磁体室",
+      "• 设备室",
+      "• 控制室"
+    ]
+  },
+  "mr-tech-qualifications.html": {
+    "image": "8490827_orig.png",
+    "text": [
+      "• 要求因国家/州/省而异",
+      "• 美国和加拿大的大多数机构要求：",
+      "─ 基本成像技术的培训/认证，外加",
+      "─ 6-12 个月的高级 MR 培训，外加",
+      "─ 继续教育"
+    ]
+  },
+  "mr-thermography.html": {
+    "image": "screen-shot-2020-12-01-at-2-43-39-pm_orig.png",
+    "text": [
+      "• MR 测温法是一种使用 MRI 无创绘制组织温度图的技术",
+      "• 使用最广泛的方法是质子共振频率测温法",
+      "• 基于水质子共振频率随温度的轻微偏移",
+      "• 其他方法：基于 T₁ 的、基于扩散的"
+    ]
+  },
+  "mr-vs-mri-vs-nmr.html": {
+    "image": "6992173_orig.png",
+    "text": [
+      "• 定义和使用上有细微差别，但大致相同",
+      "• 见下文讨论"
+    ]
+  },
+  "mra-artifacts-ce.html": {
+    "image": "screen-shot-2022-09-12-at-9-01-10-am_orig.png",
+    "text": [
+      "• 锁骨下假性狭窄伪影",
+      "• 扫描过早",
+      "• 扫描过晚"
+    ]
+  },
+  "mra-artifacts-tof.html": {
+    "image": "_2744322_orig.png",
+    "text": [
+      "• 阶梯伪影",
+      "• 面内饱和伪影",
+      "• 穿透伪影",
+      "• 血流反转伪影",
+      "• 百叶窗伪影",
+      "• 磁敏感伪影"
+    ]
+  },
+  "mra-methods.html": {
+    "image": "1975393_orig.png",
+    "text": [
+      "• MRA 方法分为黑血技术和亮血技术",
+      "• 亮血技术可以是非对比增强或对比增强的",
+      "• 这些方法利用时间飞跃效应、自旋相位效应或 T₁ 和 T₂ 特性"
+    ]
+  },
+  "mra-parameters.html": {
+    "image": "7239045_orig.png",
+    "text": [
+      "参数选择通常基于经验，但以下原则适用：",
+      "─ 保持 TE 尽可能短",
+      "─ 保持层厚尽可能薄",
+      "─ 适中的 TR 和翻转角选择"
+    ]
+  },
+  "mra-with-asl.html": {
+    "image": "8870697_orig.png",
+    "text": [
+      "• 流动的血液被射频脉冲“标记”，具有高磁化强度，而静止组织被抑制",
+      "• 被标记的血液在 3D b-SSFP 或 FSE 序列上发出高信号，产生 MRA"
+    ]
+  },
+  "mri-vs-mrs.html": {
+    "image": "screen-shot-2016-11-15-at-2-37-50-pm_orig.png",
+    "text": [
+      "• MRI 产生包含数千个体素的解剖图像，其信号反映组织的整体磁性",
+      "• MRS 在少量体素中产生波谱，反映通过其化学位移区分的少量代谢物分子"
+    ]
+  },
+  "mrs-artifacts.html": {
+    "image": "screen-shot-2017-02-03-at-1-49-09-pm_orig.png",
+    "text": [
+      "• 匀场差",
+      "• 水抑制不完全",
+      "• 相位错误",
+      "• 化学位移位移",
+      "• 多波谱谱污染"
+    ]
+  },
+  "mt-imagingcontrast.html": {
+    "image": "7531657_orig.png",
+    "text": [
+      "• 磁化转移成像是一种技术，在成像前施加离共振脉冲以部分饱和大分子池",
+      "• 这抑制了通过比率测量的水信号，并产生新的对比度"
+    ]
+  },
+  "multi-echo-gre.html": {
+    "image": "1591991_orig.png",
+    "text": [
+      "• 通过顺序梯度反转，可以在单个射频脉冲后产生多个回波",
+      "• 可实现“同相位/反相位”成像",
+      "• 可以将回波合并"
+    ]
+  },
+  "multi-transmit-rf.html": {
+    "image": "3512628_orig.png",
+    "text": [
+      "• 新技术，将射频发射线圈分成两个或多个独立段",
+      "• 优点包括减少阴影伪影和缩短成像时间"
+    ]
+  },
+  "muscle-sup1h-mrs.html": {
+    "image": "screen-shot-2016-12-20-at-7-59-48-am_orig.png",
+    "text": [
+      "• ¹H-MRS 不常用于肌肉",
+      "• 波谱由肌细胞内和肌细胞外脂质主导，可以区分",
+      "• 胆碱升高可能提示恶性肿瘤"
+    ]
+  },
+  "narrow-bandwidth.html": {
+    "image": "4759525_orig.png",
+    "text": [
+      "• 窄带技术利用延长采样时间来改善信噪比",
+      "• 典型的窄带带宽值：10-20 kHz",
+      "• 缺点：增加化学位移和磁敏感性伪影；缩短最小 TR 和 TE"
+    ]
+  },
+  "navigator-echoes.html": {
+    "image": "7808149_orig.png",
+    "text": [
+      "• 导航回波是用于检测生理运动的射频追踪脉冲",
+      "• 最常见的用途是监测膈肌位置，允许呼吸门控或补偿"
+    ]
+  },
+  "need-for-vibration-testing.html": {
+    "image": "6230467_orig.png",
+    "text": [
+      "许多现代 MR 扫描仪对环境振动高度敏感，需要进行场地测试"
+    ]
+  },
+  "negative-frequencies.html": {
+    "image": "1622572_orig.png",
+    "text": [
+      "• 信号的复傅里叶分解会产生正频率和负频率",
+      "• 负频率对应于净相位的减小，位于 k 空间表示的左侧和底部"
+    ]
+  },
+  "nerve-stimulation.html": {
+    "image": "screen-shot-2020-08-18-at-3-48-31-pm_orig.png",
+    "text": [
+      "• 周围神经刺激是由快速梯度切换引起的神经直接去极化，由强度-持续时间曲线描述",
+      "• 最常见于平面回波成像",
+      "• 不危险，但必须限制/控制，以避免疼痛甚至理论上的心脏影响"
+    ]
+  },
+  "net-magnetization-m.html": {
+    "image": "6865380_orig.png",
+    "text": [
+      "• 净磁化强度是样品中所有自旋的平均角动量",
+      "• 在热平衡状态下，M 与 B₀ 对齐",
+      "• 像单个自旋一样，M 可以倾斜到横平面并围绕 B₀ 进动"
+    ]
+  },
+  "netbulk-magnetization.html": {
+    "image": "6865380_1.png",
+    "text": [
+      "• 净磁化强度是样品中所有自旋的平均角动量",
+      "• 在热平衡状态下，M 与 B₀ 对齐",
+      "• 像单个自旋一样，M 可以倾斜到横平面并围绕 B₀ 进动"
+    ]
+  },
+  "networkgraphs.html": {
+    "image": "screen-shot-2016-09-29-at-7-24-22-am_orig.png",
+    "text": [
+      "• 大脑由节点连接链接来定义",
+      "• 指标反映了潜在的网络结构，并可能因疾病而改变"
+    ]
+  },
+  "newsafe-pacemakers.html": {
+    "image": "screen-shot-2021-04-19-at-10-27-24-am_orig.png",
+    "text": [
+      "• 新一代 CIED 在遵循广泛的条件清单下进行扫描是相当安全的",
+      "• 重要条件包括",
+      "─ 仅在 1.5T 或 3T 水平孔扫描仪中进行 ¹H 成像",
+      "─ 无断裂/废弃导线；导线电压和阻抗在规定范围内",
+      "─ RF 功率、爬升率、空间梯度场的限值",
+      "─ 使用禁用心律失常感知/治疗和 ICD 电击的“MRI 模式”",
+      "─ MRI 后重新检查起搏器编程和参数"
+    ]
+  },
+  "noe.html": {
+    "image": "screen-shot-2017-01-26-at-6-58-13-am_orig.png",
+    "text": [
+      "• 一种双共振方法，通过同时照射 ¹H 原子核来增加 ³¹P 信号",
+      "• 过程是热力学的，通过偶极 ³¹P-¹H 相互作用介导",
+      "• 理论上，某些 ³¹P 代谢物的信号可增加高达 120%"
+    ]
+  },
+  "noise-in-pi.html": {
+    "image": "9012357_orig.png",
+    "text": [
+      "• 并行成像序列的信噪比总是低于可比的非并行成像研究，由方程 SNR_parallel = SNR_non-parallel / (g √R) 关联",
+      "• 其中 R 是加速因子，g 是空间相关的几何因子"
+    ]
+  },
+  "normal-brain-spectra.html": {
+    "image": "screen-shot-2016-11-16-at-3-28-43-pm_orig.png",
+    "text": [
+      "• 主要的 ¹H 波谱脑峰包括 N-乙酰天冬氨酸、肌酸和胆碱",
+      "• 短 TE 谱显示额外的峰：肌醇、谷氨酰胺/谷氨酸、脂质、大分子，有时还有乳酸"
+    ]
+  },
+  "normal-sup3sup1p-spectra.html": {
+    "image": "screen-shot-2017-01-22-at-6-09-46-am_orig.png",
+    "text": [
+      "• 最大的中心峰是磷酸肌酸，指定化学位移为 0 ppm",
+      "• PCr 右侧是“能量峰”，包括 ATP 的 α、β 和 γ 磷酸盐",
+      "• 左侧是无机磷酸盐和磷酸单酯和磷酸二酯的“膜峰”"
+    ]
+  },
+  "not-radio-waves.html": {
+    "image": "8861734_orig.png",
+    "text": [
+      "• • RF 信号不是由于原子核发射无线电波",
+      "• 它是净磁化强度扫过接收线圈时感生的电流"
+    ]
+  },
+  "nsf-by-agent.html": {
+    "image": "screen-shot-2023-04-04-at-9-33-09-am_orig.png",
+    "text": [
+      "• ACR 将钆对比剂分为 3 组，基于 NSF 风险",
+      "• 第 I 组风险最高",
+      "• 然而，FDA 要求所有试剂都有黑框警告"
+    ]
+  },
+  "nyquist-n2-ghosts.html": {
+    "image": "2567680_orig.png",
+    "text": [
+      "• 奈奎斯特鬼影发生在使用之字形 k 空间轨迹的平面回波成像序列中",
+      "• 通常由涡流引起的交替行之间的相位偏移导致",
+      "• 结果是两个混叠图像在相位编码方向上偏移 N/2 像素"
+    ]
+  },
+  "object-shape.html": {
+    "image": "screen-shot-2020-11-04-at-8-03-25-pm_orig.png",
+    "text": [
+      "• 物体形状对于确定中等至强铁磁性材料上的力至关重要",
+      "• 这些材料被磁化并产生与 B₀ 对抗的内部退磁场",
+      "• 通过退磁因子 N 量化",
+      "• 物体的表观磁化率变得高度依赖于 D 而与 χ 无关"
+    ]
+  },
+  "off-resonance.html": {
+    "image": "1850891_orig.png",
+    "text": [
+      "• 当 B₁ 未精确施加在拉莫尔频率上时，净磁化强度会围绕 B_eff（一个与 B₀ 和 B₁ 都成斜角的“有效场”）进动",
+      "• 这导致了有趣的离共振效应，最好在旋转坐标系中分析"
+    ]
+  },
+  "oldlegacy-pacemakers.html": {
+    "image": "screen-shot-2021-04-17-at-6-54-32-pm_orig.png",
+    "text": [
+      "• 遗留 CIED 是未经认证为“MR 条件性”的较旧植入设备",
+      "• 它们可以在与新型/MR 条件性设备大致相同的条件下安全扫描",
+      "• 医疗保险有具体规定，包括扫描此类患者的清单"
+    ]
+  },
+  "open-scanner-gradients.html": {
+    "image": "9699458_orig.png",
+    "text": [
+      "• 开放式扫描仪的梯度必须是平面的",
+      "• Z 梯度仍为 Maxwell 线圈环路",
+      "• X 和 Y 梯度不可能采用 Golay 设计",
+      "─ 通常使用双平面指纹设计"
+    ]
+  },
+  "operating-modes.html": {
+    "image": "screen-shot-2020-07-09-at-3-58-53-pm_orig.png",
+    "text": [
+      "基于患者风险的三级系统：",
+      "─ 正常操作模式：“常规”，无/风险低",
+      "─ 第一级受控模式：有一定风险，需要医疗监督",
+      "─ 第二级受控模式：可能存在重大风险，仅在批准的研究方案下使用"
+    ]
+  },
+  "opposite-effects-uarrt1-uarrt2.html": {
+    "image": "2964105_orig.png",
+    "text": [
+      "• MR 信号取决于：",
+      "─ 射频脉冲前的纵向磁化强度",
+      "─ 射频脉冲后的横向磁化强度",
+      "• 长 T₁ 组织恢复缓慢，因此 M_z 被抑制，信号低",
+      "• 长 T₂ 组织散相缓慢，因此 M_xy 得以维持，信号高"
+    ]
+  },
+  "optimal-flip-angle.html": {
+    "image": "3933198_orig.png",
+    "text": [
+      "在受扰梯度回波序列中，使组织信号最大化的翻转角称为恩斯特角，由下式给出：a_E = arccos(e^{-TR/T1})"
+    ]
+  },
+  "organ-differences.html": {
+    "image": "screen-shot-2017-01-22-at-7-54-33-am_orig.png",
+    "text": [
+      "• 肌肉：非常大的 PCr 峰",
+      "• 大脑：婴儿期以 PMEs 为主",
+      "• 肝脏：以 PME 和 PDE 峰为主；几乎无 PCr；胆汁中的 PtdC 污染物",
+      "• 心脏：PDEs 和 PMEs 低；血液中 2,3-DPG",
+      "• 肾脏：几乎无 PCr；PtdC 主要峰；2 个 Pi 峰"
+    ]
+  },
+  "origin-of-mr-signal.html": {
+    "image": "6677795_orig.png",
+    "text": [
+      "MR 信号是由净磁化强度扫过接收线圈而感生的电流"
+    ]
+  },
+  "orthopedic-hardware.html": {
+    "image": "screen-shot-2021-07-15-at-4-34-34-pm_orig.png",
+    "text": [
+      "• 含有金属的骨科硬件患者，包括钢板、钉、U 形钉、螺钉、髓内杆和钉，可以在所有场强下安全扫描",
+      "• 全关节植入物和脊柱杆可能通过射频或梯度切换效应产生局部加热，但在高达 7.0T 时是条件性安全的"
+    ]
+  },
+  "other-ear-implants.html": {
+    "image": "screen-shot-2020-12-15-at-2-53-02-pm_orig.png",
+    "text": [
+      "• 鼓膜造孔管 = 全部安全或条件性，除了 Kurz Medical 的 4 种类型",
+      "• 听小骨植入物 = 全部安全或条件性，除了 1987 年生产的一批不安全的 McGee 镫骨假体",
+      "• 有源中耳植入物 = Maxum 和 Carina；Soundbridge 和 Esteem",
+      "• 内淋巴分流器 = 全部安全或条件性"
+    ]
+  },
+  "other-fse-differences.html": {
+    "image": "4457934_orig.png",
+    "text": [
+      "• 对磁敏感性的灵敏度降低",
+      "• 磁化转移效应增加",
+      "• 对图像对比度和锐度产生复杂影响"
+    ]
+  },
+  "other-gi-devices.html": {
+    "image": "screen-shot-2021-01-02-at-7-11-03-am_orig.png",
+    "text": [
+      "• 几乎所有的内窥镜夹、肠管和支架都被认为是“MR 安全”或“MR 条件性”的，仅有限制",
+      "• 少数食管支架和磁性括约肌装置需要特别考虑，它们可能是“MR 不安全”或有严格的相关条件"
+    ]
+  },
+  "other-mra-methods.html": {
+    "image": "6251054_orig.png",
+    "text": [
+      "额外的非对比增强 MRA 方法包括：",
+      "─ 流动敏感散相",
+      "─ 静止间隔单次激发",
+      "─ 门控时间飞跃法流入"
+    ]
+  },
+  "other-nuclei.html": {
+    "image": "screen-shot-2016-12-29-at-5-02-37-pm_orig.png",
+    "text": [
+      "• 使用非氢原子核进行 NMR 通常称为多核波谱",
+      "• 原子核的适用性取决于其自然丰度和 NMR 灵敏度",
+      "• 常用的 MNS 核包括 ³He、¹³C、²³Na、³¹P 和 ¹²⁹Xe"
+    ]
+  },
+  "pacemaker-dangers.html": {
+    "image": "screen-shot-2021-04-10-at-11-22-03-am_orig.png",
+    "text": [
+      "• 在 2000 年代初之前，起搏器通常被认为是 MRI 的绝对禁忌症",
+      "• 报告了十多例死亡和神经损伤病例",
+      "• 潜在风险包括暂时或永久性故障、感知和起搏不足、导线加热、重置、起搏模式改变",
+      "• 现在有新的 MRI 条件性起搏器可用，并且存在扫描遗留设备的方案"
+    ]
+  },
+  "pacemaker-terminology.html": {
+    "image": "screen-shot-2021-04-10-at-10-58-42-am_orig.png",
+    "text": [
+      "• 心脏植入式电子设备包括永久性起搏器和植入式心律转复除颤器",
+      "• 通常包括一个皮下植入的脉冲发生器和 1-3 根进入心脏的导线",
+      "• 存在用于各种起搏和除颤模式的字母代码",
+      "• 其他设备包括心外膜起搏器、无线起搏器和皮下 ICD"
+    ]
+  },
+  "paramagnetic-relaxation.html": {
+    "image": "7640846_orig.png",
+    "text": [
+      "• Gd 由于 7 个未配对的 4f 电子而具有强大的磁矩",
+      "• 通过偶极-偶极相互作用使附近的水弛豫",
+      "• 内层和外层弛豫"
+    ]
+  },
+  "parameters-to-images.html": {
+    "image": "534902_orig.png",
+    "text": [
+      "来自 Tofts 模型的 DCE 参数对应于时间-信号强度曲线的特征",
+      "• K^trans 与初始斜率相关",
+      "• v_e 与峰值高度和达峰时间相关",
+      "• k_ep 决定曲线形状",
+      "• v_p 高时：达峰时间更快，流出率更高"
+    ]
+  },
+  "partial-flip-angles.html": {
+    "image": "4080407_orig.png",
+    "text": [
+      "• 部分翻转角脉冲是小于 90° 的脉冲",
+      "• 主要优点是在短 TR 值下获得更高的信号"
+    ]
+  },
+  "partial-fourier.html": {
+    "image": "2100257_orig.png",
+    "text": [
+      "• 利用 k 空间的共轭对称性来估计缺失数据",
+      "• 两种主要方法",
+      "─ 相位共轭对称",
+      "─ 读出共轭对称"
+    ]
+  },
+  "partial-volume-effects.html": {
+    "image": "924183_orig.png",
+    "text": [
+      "• 部分容积伪影发生在当多个物体的一部分在同一个层面中被平均时",
+      "• 结果是空间分辨率受损和信号强度错误"
+    ]
+  },
+  "parts-of-k-space.html": {
+    "image": "8248619_orig.png",
+    "text": [
+      "• k 空间按空间频率组织",
+      "• 低频在中心附近",
+      "• 高频在周边"
+    ]
+  },
+  "pasl.html": {
+    "image": "735514_orig.png",
+    "text": [
+      "• 一系列技术，使用绝热脉冲而非连续射频照射进行标记",
+      "• 根据自旋相对于成像平面是对称标记还是非对称标记进行分类"
+    ]
+  },
+  "passive-shimming.html": {
+    "image": "8654384_orig.png",
+    "text": [
+      "• 服务工程师根据场图计算放置的小金属片",
+      "• 重复该过程，直到达到指定的均匀性"
+    ]
+  },
+  "passiveactive-implants.html": {
+    "image": "screen-shot-2020-11-15-at-3-30-31-pm_orig.png",
+    "text": [
+      "• 无源植入物不需要外部电源，而有源植入物需要",
+      "• 无源植入物容易受到 MRI 的位移、扭转、加热、振动和磁化影响",
+      "• 有源植入物具有所有这些风险，外加更多风险"
+    ]
+  },
+  "patient-prep.html": {
+    "image": "7843332_orig.png",
+    "text": [
+      "• 患者配合至关重要：指导和练习呼吸",
+      "• 如果计划进行钆增强负荷 MRI，需要检查 eGFR、肌钙蛋白水平、病史和药物史，以排除钆或腺苷的禁忌症"
+    ]
+  },
+  "pe-and-fe-together.html": {
+    "image": "6361523_orig.png",
+    "text": [
+      "• 第一次傅里叶变换分辨频率",
+      "• 第二次傅里叶变换分辨相位",
+      "• 展示了一个 6 像素的例子"
+    ]
+  },
+  "penile-implants.html": {
+    "image": "screen-shot-2021-01-15-at-12-42-35-pm_orig.png",
+    "text": [
+      "• 大多数可弯曲和充气式阴茎植入物含有少量金属，是“MR 条件性”的",
+      "• 唯一需要关注的 MR 注意事项是两种 1980 年代和 1990 年代的较旧型号 - DuraPhase 和 OmniPhase"
+    ]
+  },
+  "perfusion-why-and-how.html": {
+    "image": "1431857_orig.png",
+    "text": [
+      "• 心肌灌注 MRI 是在团注钆对比剂后进行的 T1 加权电影研究",
+      "• 通常与药物负荷（腺苷/多巴酚丁胺）结合进行",
+      "• 可评估冠状动脉（心肌）血流储备，即冠状动脉系统在最大扩张状态下增加血流的能力"
+    ]
+  },
+  "peripheral-stimulators.html": {
+    "image": "screen-shot-2021-06-10-at-4-09-59-pm_orig.png",
+    "text": [
+      "• 周围神经刺激器是从放置在皮肤上的外部发射器接收电力和刺激的小型植入物",
+      "• 例子包括 StimWave®、StimRouter®、Nalu® 和 RENOVA®",
+      "• 大多数是 MR 条件性的，限制直接扫描设备上方区域"
+    ]
+  },
+  "perpetual-motion.html": {
+    "image": "screen-shot-2021-02-22-at-9-51-14-am_orig.png",
+    "text": [
+      "• 这不是永动机，但维持电流不需要能量",
+      "• 在现实中，由于以下原因，电流会减慢：",
+      "─ 焊接点的电阻",
+      "─ 不完全的迈斯纳效应",
+      "─ 线材中的杂质"
+    ]
+  },
+  "personnel-exposure.html": {
+    "image": "screen-shot-2020-09-13-at-6-27-35-pm_orig.png",
+    "text": [
+      "• 没有科学证据表明工作人员在 MR 环境中的职业暴露有任何增加的健康风险",
+      "• 所有工作人员，尤其是孕妇，在扫描期间应避免进入磁体室，以避免射频暴露"
+    ]
+  },
+  "phase-coherence.html": {
+    "image": "screenshot-2026-03-06-at-3-51-23-pm_orig.png",
+    "text": [
+      "• 射频脉冲产生整个自旋集合的幺正旋转",
+      "• 所有自旋获得共同的横向相位并变得相位相干",
+      "• 横向相干性源自初始的纵向极化",
+      "• 对于 90° 脉冲，会产生一个等于原始 M₀ 的新横向磁化强度"
+    ]
+  },
+  "phase-contrast-mra.html": {
+    "image": "2128775_orig.png",
+    "text": [
+      "• 基于使用双极梯度，该梯度产生与自旋速度成比例的相位偏移",
+      "• 主要应用包括心血管流量测量、脑脊液电影流速研究、二维静脉造影和特定的三维应用"
+    ]
+  },
+  "phase-encoding-gradient.html": {
+    "image": "3265314_orig.png",
+    "text": [
+      "• 所有梯度对质子产生相同的影响，但使用方式不同",
+      "• 在施加期间，它们会引起频率和相位的暂时变化",
+      "• 当关闭时，频率恢复正常，但相位偏移仍然存在"
+    ]
+  },
+  "phase-of-blood-v-ca.html": {
+    "image": "screen-shot-2017-03-28-at-12-05-51-pm_orig.png",
+    "text": [
+      "• 顺磁性物质和抗磁性物质在 SWI 图像上都显示为暗色",
+      "• 它们在滤波相位图像上具有相反的信号强度",
+      "• 具体颜色取决于扫描仪品牌"
+    ]
+  },
+  "phase-oversampling.html": {
+    "image": "6844099_orig.png",
+    "text": [
+      "相位过采样方法使用 4 个步骤：",
+      "─ FOV 增加",
+      "─ 相位编码步数增加",
+      "─ 激发次数减少",
+      "─ 仅重建 FOV 的中心部分"
+    ]
+  },
+  "phase-sensitive-ir.html": {
+    "image": "2897772_orig.png",
+    "text": [
+      "两种反转恢复重建方法，基于是否考虑 M₂ 的极性：",
+      "─ 幅度重建：仅使用 |M₂|；背景黑色",
+      "─ 相位敏感重建：考虑 M₂ 的极性；背景灰色"
+    ]
+  },
+  "phase-symmetry.html": {
+    "image": "6773554_orig.png",
+    "text": [
+      "• 也称为“%4-NEX”或“半傅里叶”",
+      "• 采集 k 空间上半部分数据，估计下半部分",
+      "• 扫描时间显著减少"
+    ]
+  },
+  "pi-coils-and-sequences.html": {
+    "image": "5640189_orig.png",
+    "text": [
+      "• 并行成像是一种可以与几乎所有脉冲序列一起使用的图像重建技术",
+      "• 并行成像需要多个具有独立处理通道的接收线圈",
+      "• 并行成像允许的方向取决于线圈阵列的配置"
+    ]
+  },
+  "pillcam-and-capsules.html": {
+    "image": "screen-shot-2021-01-02-at-4-09-31-pm_orig.png",
+    "text": [
+      "• 视频内镜胶囊以 PillCam™ 为代表，在产品文献中被认为是“MR 不安全”的",
+      "• 尽管如此，仍有许多患者使用这些设备进行了扫描而未出现并发症",
+      "• 具有类似限制的其他 GI 胶囊包括温度、pH、压力、位置和药物输送设备"
+    ]
+  },
+  "polar-plots.html": {
+    "image": "2200510_orig.png",
+    "text": [
+      "• 极坐标、牛眼图或靶标图表示在三个短轴平面上堆叠的左心室心肌",
+      "• 基于美国心脏协会采用的 17 节段模型"
+    ]
+  },
+  "portsvascular-access.html": {
+    "image": "screen-shot-2021-03-20-at-12-47-39-pm_orig.png",
+    "text": [
+      "• 几乎所有市售的血管通路装置要么是非金属的，要么具有皮下植入的金属端口",
+      "• MR 条件性装置的限制很少，但可能在皮肤下轻微“拉动”",
+      "• ARROW® EZ-IO® 骨内血管通路系统被认为是“MR 不安全”的"
+    ]
+  },
+  "postop-er--icu-patients.html": {
+    "image": "screen-shot-2021-06-28-at-7-26-51-pm_orig.png",
+    "text": [
+      "• 许多手术室、ICU 和急诊科的患者监护设备及附件与 MR 不兼容",
+      "• 危重病人需要紧急扫描，需要加倍注意安全措施，以避免烧伤和投射物伤害"
+    ]
+  },
+  "predict-nuclear-spin-i.html": {
+    "image": "618605_orig.png",
+    "text": [
+      "• 质子数和中子数均为偶数：I = 0",
+      "• 质子数和中子数均为奇数：I = 整数",
+      "• 所有其他组合：I = 半整数"
+    ]
+  },
+  "predicting-delta.html": {
+    "image": "149258_orig.png",
+    "text": [
+      "• 化学位移取决于原子核被电子云屏蔽的程度",
+      "• 屏蔽越弱，化学位移越大",
+      "• 邻近的电负性原子和双键会导致更强的去屏蔽效应"
+    ]
+  },
+  "predicting-mr-of-flow.html": {
+    "image": "5526582_orig.png",
+    "text": [
+      "• 表现复杂，难以预测",
+      "• 快速或湍流血流 > 暗",
+      "• 慢速或层流血流，特别是使用钆时 > 亮"
+    ]
+  },
+  "pregnant-patients.html": {
+    "image": "screen-shot-2020-09-13-at-2-36-48-pm_orig.png",
+    "text": [
+      "• 没有确凿的证据表明孕妇接受 MRI 检查与先天性畸形、死产或新生儿死亡的风险增加有关",
+      "• 应获得个人知情同意",
+      "• 如果可能，应避免使用钆"
+    ]
+  },
+  "prepconsent-for-cieds.html": {
+    "image": "screenshot-2025-09-09-at-4-52-53-pm_orig.png",
+    "text": [
+      "• CIED 患者的 MRI 需要团队合作",
+      "• 由电生理学家在扫描前和可能后询问 CIED",
+      "• 建议额外知情同意"
+    ]
+  },
+  "press.html": {
+    "image": "screen-shot-2016-11-24-at-5-02-10-pm_orig.png",
+    "text": [
+      "• PRESS 是 ¹H MRS 的主要方法",
+      "• 由 3 个射频脉冲和 3 个正交梯度组成，在平面相交处产生自旋回波信号",
+      "• 其流行源于易用性和多功能性",
+      "• 主要缺点是 TE 不能小于 25 ms"
+    ]
+  },
+  "pressure-monitorsbolts.html": {
+    "image": "screen-shot-2021-06-04-at-11-45-47-am_orig.png",
+    "text": [
+      "• 电子 ICP 监测装置放置在脑实质、脑室或脑外间隙，有或无固定在颅骨上的螺栓",
+      "• 大多数装置是“MR 条件性”的，但具有 Camino 型光纤传感器的装置除外",
+      "• 需要特别考虑将多余的导管/电线在 MRI 期间盘绕在头部附近或头部上"
+    ]
+  },
+  "processanalyze-fmri.html": {
+    "image": "screen-shot-2016-08-08-at-8-44-49-am_orig.png",
+    "text": [
+      "• 预处理：校正数据的畸变、噪声和运动",
+      "• 统计分析：任务态 fMRI 典型使用一般线性模型；静息态 fMRI 使用相关方法",
+      "• 图：将具有统计显著性的结果叠加在解剖图像或网络图上",
+      "• 解释：取决于实验设计和统计功效"
+    ]
+  },
+  "projectiles.html": {
+    "image": "screen-shot-2020-10-06-at-6-40-03-pm_orig.png",
+    "text": [
+      "• 在维克森林大学 30 年来，我们很幸运从未发生过严重的 MR 抛射物伤及患者的事故",
+      "• 此类事件确实会发生，占 MR 报告伤害的 9%",
+      "• 这些通常是大型物品 — 患者转运设备、输液架、气瓶等"
+    ]
+  },
+  "propellerblade.html": {
+    "image": "267662_orig.png",
+    "text": [
+      "• 一种径向采样方法，使用由多条相位编码线组成的旋转叶片",
+      "• k 空间中心的过采样提供了数据冗余，可用于校正面内旋转和平移"
+    ]
+  },
+  "prostate-spectra.html": {
+    "image": "screen-shot-2016-12-26-at-2-52-11-pm_orig.png",
+    "text": [
+      "• 正常前列腺中的主要 MRS 峰是柠檬酸盐",
+      "• 还可见胆碱、肌酸和多胺的小峰",
+      "• 在癌症中，柠檬酸盐和多胺减少，而胆碱增加"
+    ]
+  },
+  "proton--nucleus--spin.html": {
+    "image": "8648714_orig.png",
+    "text": [
+      "• 细微差别，但基本等效的术语",
+      "• 见讨论"
+    ]
+  },
+  "ps-phase-sensitive-ir.html": {
+    "image": "8751234_orig.png",
+    "text": [
+      "• 对比增强后图像的重建方法：幅度和相位敏感",
+      "• 相位敏感重建保留了反转脉冲后组织磁化强度的极性，产生的图像对 TI 的选择较不敏感"
+    ]
+  },
+  "psif-vs-fisp.html": {
+    "image": "5246823_orig.png",
+    "text": [
+      "• FISP 的镜像",
+      "• 采集“回波”而非“FID”",
+      "• 重 T₂ 加权，但伪影多",
+      "• 现已基本被放弃"
+    ]
+  },
+  "quantifying-flow.html": {
+    "image": "5480047_orig.png",
+    "text": [
+      "从原始 ASL 数据进行血流量化包括 3 个步骤：",
+      "─ 图像处理和滤波",
+      "─ 获取校准图像以进行缩放",
+      "─ 将数据拟合到组织数学模型"
+    ]
+  },
+  "quantifying-perfusion.html": {
+    "image": "8670563_orig.png",
+    "text": [
+      "• 定量灌注成像是可能的，但技术上具有挑战性",
+      "• 基于具有不同数学假设的各种组织模型",
+      "• 最常用的是基于心肌信号强度“上升斜率”的半定量方法"
+    ]
+  },
+  "quantitative-dsc.html": {
+    "image": "235069_orig.png",
+    "text": [
+      "• 供血动脉中钆浓度的时间过程称为动脉输入函数",
+      "• 组织钆浓度被建模为对一组假设的瞬时动脉输入函数的响应",
+      "• 称为反卷积的数学过程可以提取生理参数，如血流量、血容量和平均通过时间"
+    ]
+  },
+  "quantitative-susceptibility.html": {
+    "image": "screen-shot-2017-03-28-at-4-29-31-pm_orig.png",
+    "text": [
+      "• 这被称为定量磁化率映射 — 正在研究中，但执行起来相当困难",
+      "• 有望用于评估组织中的铁和钙储存，以及用于顺磁性对比剂和小铁颗粒分子标记物"
+    ]
+  },
+  "quantum-reality.html": {
+    "image": "screenshot-2026-01-31-at-8-32-41-am_orig.png",
+    "text": [
+      "• 即使伟大的科学家也从未对量子世界感到完全舒适——它太奇怪了！波粒二象性是真实的",
+      "• 质子并非纯粹存在于自旋向上或自旋向下状态，而是两者的组合",
+      "• 我将它们视为模糊的“球”，通过薛定谔波方程演化，并在测量时揭示其隐藏的内在现实"
+    ]
+  },
+  "radial-sampling.html": {
+    "image": "screen-shot-2017-08-04-at-3-05-25-pm_orig.png",
+    "text": [
+      "• 径向采样的主要优点是降低运动敏感性和减少混叠伪影",
+      "• 缺点是数据采集不均匀，需要在进行处理前将样本映射到矩形网格上",
+      "• PROPELLER/BLADE 是最常见的实现方式"
+    ]
+  },
+  "radiofrequency-waves.html": {
+    "image": "screenshot-2026-01-06-at-7-32-55-pm_orig.png",
+    "text": [
+      "• 一种动态的、自传播的、垂直方向的电场和磁场链，通过空间携带动量和辐射能",
+      "• NMR 谱涵盖 10-300 MHz，用于射频通信的频段"
+    ]
+  },
+  "radiofrequency-waves1.html": {
+    "image": "9188221.png",
+    "text": [
+      "• MR 频率位于频谱的射频区域",
+      "• “射频前端”包括用于发射 B₁ 场和接收 MR 信号的组件链"
+    ]
+  },
+  "ramped-flip-angle.html": {
+    "image": "1564750_orig.png",
+    "text": [
+      "• 在三维时间飞跃法血管造影中，由于饱和效应，板层深处的血管会失去信号",
+      "• 斜坡脉冲可在板层更深区域内产生更高的翻转角，从而增强对背景的抑制，并使血管更清晰"
+    ]
+  },
+  "read-symmetry.html": {
+    "image": "7563983_orig.png",
+    "text": [
+      "• 同义词：部分、分数、半回波成像",
+      "• 频率编码方向的对称性",
+      "• 允许极短的 TE",
+      "• 对 EPI 和 MRA 特别有用"
+    ]
+  },
+  "readout-segmented-dwi.html": {
+    "image": "screen-shot-2017-04-19-at-9-59-06-am_orig.png",
+    "text": [
+      "• 读出分段弥散成像将图像采集分解为 4-6 个块",
+      "• 以增加成像时间为代价，提高分辨率并减少磁敏感性伪影",
+      "• 径向采样 FSE 方法也有类似的好处"
+    ]
+  },
+  "real-v-imaginary.html": {
+    "image": "8022875_orig.png",
+    "text": [
+      "• 在正交检测中，MR 信号从两个正交方向检测",
+      "• 这些通道称为 I 和 Q",
+      "• 没有哪个比哪个更真实"
+    ]
+  },
+  "receive-only-coils.html": {
+    "image": "1168499_orig.png",
+    "text": [
+      "• 现代扫描仪设计已将发射和接收射频线圈功能大大分离",
+      "• 接收线圈通常直接放置在患者身上，可能是线极化或圆极化，并常组合成阵列"
+    ]
+  },
+  "receiver-bandwidth.html": {
+    "image": "3063776_orig.png",
+    "text": [
+      "• 带宽可以指 MR 信号的发射或接收",
+      "• 接收器带宽是图像或像素在频率编码方向上的频率范围",
+      "• 带宽 = 1 / t_s，其中 t_s 是数字化采样的驻留时间或间隔"
+    ]
+  },
+  "receiver-gain.html": {
+    "image": "2146291_orig.png",
+    "text": [
+      "• 需要正确设置接收增益，以优化信号数字化",
+      "• 增益过高 > 数据截断",
+      "• 增益过低 > 图像噪声大"
+    ]
+  },
+  "rectangular-fov.html": {
+    "image": "6819383_orig.png",
+    "text": [
+      "• 通过沿 k 空间的一个方向欠采样数据产生的矩形 FOV",
+      "• 适用于脊柱和四肢成像",
+      "• 缺点：相位卷折和信噪比降低"
+    ]
+  },
+  "reduced-dose-in-infants.html": {
+    "image": "323308_orig.png",
+    "text": [
+      "• 婴幼儿应按每公斤体重接受成人剂量",
+      "• 这是因为他们的细胞外空间比例比成人大得多"
+    ]
+  },
+  "reduced-flip-angle-fse.html": {
+    "image": "1531600_orig.png",
+    "text": [
+      "• 使用减小的翻转角来降低快速自旋回波序列的高能量沉积",
+      "• 可以通过改变翻转角来调制信号强度，并获得良好的信噪比"
+    ]
+  },
+  "reducing-chemical-shift.html": {
+    "image": "6647287_orig.png",
+    "text": [
+      "• 容忍/读取周围",
+      "• 交换相位和频率方向",
+      "• 避免窄带",
+      "• 使用脂肪抑制技术"
+    ]
+  },
+  "reducing-motion-artifacts.html": {
+    "image": "5325023_orig.png",
+    "text": [
+      "减少运动伪影的方法：",
+      "─ 尽量减少运动程度",
+      "─ 抑制运动组织的信号",
+      "─ 调整成像序列和参数",
+      "─ 检测并补偿运动"
+    ]
+  },
+  "registrationnormalization.html": {
+    "image": "screen-shot-2016-07-12-at-6-29-04-pm_orig.png",
+    "text": [
+      "• 配准：将单个患者的 fMRI 数据与其自身的独立解剖成像研究对齐/叠加",
+      "• 归一化：将多个患者的 fMRI 数据对齐/叠加到通用解剖模板上"
+    ]
+  },
+  "relaxation-rate-vs-time.html": {
+    "image": "8777679_orig.png",
+    "text": [
+      "它们是简单的倒数：R1 = 1/T1，R2 = 1/T2"
+    ]
+  },
+  "remote-cardiac-gating.html": {
+    "image": "screenshot-2025-09-12-at-2-37-07-pm_1.png",
+    "text": [
+      "• 方法涉及测量连续射频导频音的幅度调制",
+      "• PT 由单独的发射线圈以与主成像频带偏移约 100 kHz 的频率提供",
+      "• PT 信号从 k 空间中提取并处理"
+    ]
+  },
+  "remote-respiratory-gating.html": {
+    "image": "screenshot-2025-09-12-at-2-37-07-pm_orig.png",
+    "text": [
+      "• 方法涉及测量连续射频导频音的幅度调制",
+      "• PT 由单独的发射线圈以与主成像频带偏移约 100 kHz 的频率提供",
+      "• PT 信号从 k 空间中提取并处理"
+    ]
+  },
+  "renal-toxicity.html": {
+    "image": "screen-shot-2023-04-03-at-3-58-38-pm_orig.png",
+    "text": [
+      "• 钆对比剂在非常高剂量下肯定是肾毒性的，但即使在肾功能不全的患者中，在常规剂量下可能也没有临床显著影响",
+      "• 尽管如此，一些亚临床损伤可能会发生，表现为尿液中肾损伤标志物排泄增加",
+      "• 在我们机构，无论肾功能如何，我们都不会因钆而减少剂量或检查 GFR"
+    ]
+  },
+  "respiratory-comp.html": {
+    "image": "4492525_orig.png",
+    "text": [
+      "• 呼吸门控在呼气期间触发数据采集",
+      "• 呼吸补偿连续采集 MR 数据并根据呼吸阶段进行排序"
+    ]
+  },
+  "respiratory-stimulators.html": {
+    "image": "screen-shot-2021-03-16-at-6-33-57-am_orig.png",
+    "text": [
+      "• 呼吸植入物包括那些刺激膈肌的植入物和那些刺激上气道/舌头的植入物",
+      "• 所有当前的膈肌刺激器都是“MR 不安全”的",
+      "• 两种用于阻塞性睡眠呼吸暂停的舌下神经刺激器是“MR 条件性”的"
+    ]
+  },
+  "resting-state-fmri.html": {
+    "image": "screen-shot-2016-10-16-at-6-36-53-pm_orig.png",
+    "text": [
+      "• 受试者躺在扫描仪中，不执行任务",
+      "• 记录激活的低频波动",
+      "• 发现了静息态网络",
+      "• 巨大的未来潜力"
+    ]
+  },
+  "rf-biological-effects.html": {
+    "image": "screen-shot-2020-09-06-at-3-27-16-pm_orig.png",
+    "text": [
+      "• 非热效应：有争议且大多未经证实",
+      "• 热效应：许多",
+      "─ 由于共存的电场，而非磁场",
+      "─ 电阻加热：由于感应的离子电流",
+      "─ 介电加热：由于极性水分子的振动"
+    ]
+  },
+  "rf-burns.html": {
+    "image": "screen-shot-2020-09-19-at-5-20-02-pm_orig.png",
+    "text": [
+      "• 与 MRI 相关的热灼伤是一个重要的健康考虑因素",
+      "• 机制包括感应加热和天线效应",
+      "• 最常见的情况：患者接触扫描仪腔体或局部线圈、患者接触异物金属物体、皮肤与皮肤接触"
+    ]
+  },
+  "rf-coil-functions.html": {
+    "image": "7043111_orig.png",
+    "text": [
+      "• 射频线圈可以是发射器、接收器或两者兼有",
+      "• 如今，射频发射主要局限于单个体线圈",
+      "• 一些发射/接收线圈仍可用"
+    ]
+  },
+  "rf-energy-absorption.html": {
+    "image": "screenshot-2026-02-03-at-10-04-41-am_orig.png",
+    "text": [
+      "• 短持续时间射频脉冲不会改变原始的玻尔兹曼布居比",
+      "• 射频能量可逆地存储在自旋系统中",
+      "• 给出了密度矩阵描述"
+    ]
+  },
+  "rf-energy-release.html": {
+    "image": "screenshot-2026-02-13-at-4-14-12-pm_orig.png",
+    "text": [
+      "• 来自原子系统的能量发射可以是自发的或受激的",
+      "• 在 NMR 频率下，自发发射基本不存在",
+      "• 所有 NMR 发射都是受激的 — 由拉莫尔频率波动的横向场激发",
+      "• 自旋能量通过 T1 弛豫转化为热量并分散到晶格中"
+    ]
+  },
+  "rf-pulses.html": {
+    "image": "screenshot-2026-01-01-at-2-55-12-pm_1.png",
+    "text": [
+      "• 射频脉冲是来自发射线圈的短暂能量爆发，扰动自旋系统",
+      "• 具有接近拉莫尔频率的载波频率，并进行调幅或调频",
+      "• 三种用途：激发、反转和重聚焦"
+    ]
+  },
+  "rf-safety-overview.html": {
+    "image": "screen-shot-2021-09-04-at-10-43-12-am_orig.png",
+    "text": [
+      "• 射频照射的主要物理效应是热效应，风险包括：",
+      "─ 皮肤灼伤",
+      "─ 全身发热",
+      "─ 植入物周围加热",
+      "• 射频“热点”存在于中心外，靠近扫描仪腔体壁"
+    ]
+  },
+  "rf-transmit-coils.html": {
+    "image": "1450783_orig.png",
+    "text": [
+      "• 发射线圈产生称为 B₁ 的射频场",
+      "─ B₁ 以共振频率旋转/振荡",
+      "─ B₁ 垂直于 B₀",
+      "• 射频线圈可以是线极化或圆极化的"
+    ]
+  },
+  "room-temp-supercon.html": {
+    "image": "3792012_orig.png",
+    "text": [
+      "• 是的！活跃的研究领域",
+      "• 二硼化镁已用于商业用途"
+    ]
+  },
+  "rotating-frame.html": {
+    "image": "5867647_orig.png",
+    "text": [
+      "• 一种变换后的坐标系，使观察者以拉莫尔频率与自旋一起旋转",
+      "• 围绕 B₀ 的进动运动被“冻结”",
+      "• 简化了 NMR 现象的分析"
+    ]
+  },
+  "routine-quality-control.html": {
+    "image": "screen-shot-2020-07-19-at-2-21-02-pm_orig.png",
+    "text": [
+      "• 每日质量控制：检查扫描仪硬件、安全设备、图像质量、伪影",
+      "• 每周：床位置、中心频率、图像均匀性、发射机增益、几何精度、空间分辨率、信噪比",
+      "• 每季度/每半年：均匀性、层厚和位置、空间分辨率"
+    ]
+  },
+  "routine-shimming.html": {
+    "image": "4727153_orig.png",
+    "text": [
+      "• 快速匀场是可选的，但只需几秒钟，强烈推荐",
+      "• 波谱、某些脂肪抑制以及高度不均匀区域的成像需要额外的手动匀场"
+    ]
+  },
+  "sacral-nerve-stimulators.html": {
+    "image": "screen-shot-2021-01-17-at-5-54-47-am_orig.png",
+    "text": [
+      "• 所有现代骶神经调节器都是“MR 条件性”的，但一些较旧的型号可能不安全",
+      "• 一些“条件”相当严格",
+      "• 设备应关闭或置于 MRI 模式",
+      "• 外部相关设备不得带入 MR 环境"
+    ]
+  },
+  "safe-metals.html": {
+    "image": "screen-shot-2021-08-24-at-3-55-10-pm_orig.png",
+    "text": [
+      "• 现代植入物中使用的几乎所有金属和合金要么是抗磁性的，要么是顺磁性的",
+      "• 所有都具有约 10⁻⁵ 或更小的磁化率，因此在外部场中没有显著的扭矩或平动"
+    ]
+  },
+  "samer.html": {
+    "image": "screenshot-2025-12-29-at-9-00-41-am_orig.png",
+    "text": [
+      "• Scout Accelerated Motion Estimation and Reduction 是西门子的回顾性运动校正技术",
+      "• 使用低分辨率 scout 图像和引导线来跟踪和补偿每个 TR 间隔内的旋转和位移变化"
+    ]
+  },
+  "sar-limits.html": {
+    "image": "screen-shot-2020-09-11-at-2-01-34-pm_orig.png",
+    "text": [
+      "• 国际电工委员会已建立了国际公认的比吸收率限值",
+      "• 限值因操作模式、环境温度、发射射频线圈类型和成像的身体部位而异"
+    ]
+  },
+  "saturation-pulses.html": {
+    "image": "7894146_orig.png",
+    "text": [
+      "3 种抑制运动组织 MR 信号的饱和脉冲：",
+      "─ 空间饱和脉冲",
+      "─ 流动饱和脉冲",
+      "─ 频谱饱和脉冲"
+    ]
+  },
+  "se-vs-multi-se-vs-fse.html": {
+    "image": "36773_orig.png",
+    "text": [
+      "• 所有三种自旋回波变体形式均为 90°- {180°-回波}……重复",
+      "• 除了回波数量外，主要区别在于快速自旋回波为每个回波使用单独的相位编码，从而允许加速成像"
+    ]
+  },
+  "sed-vs-sar.html": {
+    "image": "screen-shot-2020-09-19-at-9-13-50-pm_orig.png",
+    "text": [
+      "• SAR = 比吸收率 = 能量吸收率",
+      "• SED = 比能量剂量 = 在 MR 检查期间患者吸收的总能量 - 可能是更好的身体加热指标",
+      "• SED = SAR × 总序列采集时间"
+    ]
+  },
+  "senseasset.html": {
+    "image": "3365555_orig.png",
+    "text": [
+      "• 在预扫描期间计算线圈灵敏度",
+      "• 重建混叠的单个线圈图像",
+      "• 在图像空间中进行“展开”，结合线圈数据创建全视野图像"
+    ]
+  },
+  "shallow-networks.html": {
+    "image": "screen-shot-2023-04-02-at-3-31-17-pm_orig.png",
+    "text": [
+      "• 浅层神经网络仅包含少量隐藏层",
+      "• 它们适用于数据拟合、分类和模式识别等简单任务",
+      "• 允许使用较少参数进行快速训练",
+      "• 示例包括逻辑回归、支持向量机、随机森林和聚类分析"
+    ]
+  },
+  "shallow-v-deep-ml.html": {
+    "image": "screen-shot-2023-04-02-at-9-33-47-am_orig.png",
+    "text": [
+      "浅层 ML",
+      "─ 结构相对简单，仅几层",
+      "─ 最适合分类和数据拟合等简单任务",
+      "─ 示例：回归、SVM、随机森林、聚类分析",
+      "深度 ML",
+      "─ 具有许多隐藏层的复杂架构",
+      "─ 适合复杂任务，但训练时间长",
+      "─ 示例：CNN、GAN、RNN、Transformer"
+    ]
+  },
+  "shuntsdrains.html": {
+    "image": "screen-shot-2021-05-30-at-11-07-39-am_orig.png",
+    "text": [
+      "• 许多固定压力分流阀和非阀储液系统不含金属 = “MR 安全”",
+      "• 可编程分流阀系统都包含小磁体，会产生中等成像伪影，以及磁场可能无意中改变压力设置的风险",
+      "• 虽然在高达 3.0T 时是“MR 条件性”的，但所有可编程分流的压力设置应在成像后 4 小时内检查/重新编程"
+    ]
+  },
+  "signal-squiggles.html": {
+    "image": "5001406_orig.png",
+    "text": [
+      "• MR 信号由以下组成：",
+      "─ 高频载波",
+      "─ 调制载波的低频空间/频谱信息",
+      "• 信号处理过程中去除载波称为解调"
+    ]
+  },
+  "signal-to-noise.html": {
+    "image": "screen-shot-2020-07-28-at-3-32-12-pm_orig.png",
+    "text": [
+      "• MRI 中的随机噪声主要是热噪声，由受试者和射频链中的损耗产生",
+      "• 噪声本质上是“白色”和高斯的，但当测量幅度图像时，统计分布变为莱斯分布",
+      "• NEMA 有几种在模体中测量 SNR 的方法"
+    ]
+  },
+  "simultaneous-multi-slice.html": {
+    "image": "screen-shot-2017-07-28-at-4-13-51-pm_orig.png",
+    "text": [
+      "• 多频带，也称为同步多层成像，使用复杂的射频脉冲结合并行成像来同时激发多个层面",
+      "• 目前可用的加速因子为 2-4，信噪比损失很小或没有损失",
+      "• 最流行的方法是 blipped-CAIPI"
+    ]
+  },
+  "single-pe-step.html": {
+    "image": "9148451_orig.png",
+    "text": [
+      "• 相同频率但不同相位的正弦波相加会产生另一个正弦波，其相位是分量的平均",
+      "• 无法从组合信号中确定单个相位的贡献"
+    ]
+  },
+  "single-v-multi-voxel.html": {
+    "image": "screen-shot-2016-11-23-at-2-58-25-pm_orig.png",
+    "text": [
+      "• 单波谱：使用最广泛、快速简单，但适用于大或不均匀病变的应用有限",
+      "• 多波谱化学位移成像：更耗时，但能更好地评估整个较大病变，并为较小器官和病变提供空间分辨率"
+    ]
+  },
+  "sizeshapes-of-peaks.html": {
+    "image": "screen-shot-2016-12-23-at-6-17-20-am_orig.png",
+    "text": [
+      "• 峰位置取决于化学位移",
+      "• 峰的大小和形状取决于：",
+      "─ 活性核的浓度",
+      "─ T1 和 T2 效应",
+      "─ 不均匀性效应",
+      "─ 隐藏/重叠的峰",
+      "─ J 耦合分裂"
+    ]
+  },
+  "slab-selective-ir-mr.html": {
+    "image": "6073667_orig.png",
+    "text": [
+      "• 180° 选择性反转脉冲与平衡 SSFP MRA 结合，用于：",
+      "─ 抑制静脉流入",
+      "─ 进一步抑制静止组织",
+      "• 同时也使用额外的脂肪抑制方法"
+    ]
+  },
+  "slice-overlap.html": {
+    "image": "6021105_orig.png",
+    "text": [
+      "• 暗带是由于多个重叠的斜切面造成的",
+      "• 多次射频激发使这些区域的质子饱和，降低了它们的信号"
+    ]
+  },
+  "slice-parameters.html": {
+    "image": "screen-shot-2020-07-16-at-3-03-36-pm_orig.png",
+    "text": [
+      "• 使用包含楔形或斜坡的模体测量层厚和位置",
+      "• 请记住，层不具有完美的矩形轮廓，因此使用半高全宽值",
+      "• 通常预期公差在 ±10% 以内"
+    ]
+  },
+  "slice-selective-excitation.html": {
+    "image": "3923800_orig.png",
+    "text": [
+      "• 层面选择梯度定义了给定层面的中心频率和频率范围",
+      "• 特定频率的射频脉冲仅刺激该层面"
+    ]
+  },
+  "slow-flow-v-thrombus.html": {
+    "image": "4424061_orig.png",
+    "text": [
+      "• 一个常见问题，通常可以通过仔细分析现有图像来解决，而无需诉诸特殊或非 MRI 技术",
+      "• 线索包括随脉冲序列、成像平面或钆而变化的表观"
+    ]
+  },
+  "small-fov-dwi.html": {
+    "image": "screen-shot-2017-04-20-at-2-27-19-pm_orig.png",
+    "text": [
+      "• 小视野成像对于成像深部小器官特别有用",
+      "• 通常使用在 SS 和 PE 方向上具有空间选择性的 2D 射频激发，结合 EPI 读出"
+    ]
+  },
+  "so-many-gd-agents.html": {
+    "image": "screen-shot-2022-10-13-at-7-25-05-pm_orig.png",
+    "text": [
+      "• 目前有 8 种钆对比剂可供使用",
+      "• 所有均分布于细胞外空间",
+      "• 一种具有显著的肝脏摄取",
+      "• 按配体结构分类：",
+      "─ 离子型 vs 非离子型",
+      "─ 线性 vs 大环状"
+    ]
+  },
+  "sodium-imaging.html": {
+    "image": "screen-shot-2016-12-28-at-9-00-36-pm_orig.png",
+    "text": [
+      "• ²³Na 是 NMR 活性的，共振频率约为 ¹H 的 ¼",
+      "• 没有自然的化学位移色散，因此不适用于 MRS，但可用于 MRI",
+      "• 四极弛豫在组织中产生非常短的 T₂ 值"
+    ]
+  },
+  "softmax.html": {
+    "image": "screen-shot-2023-01-19-at-4-20-46-pm_orig.png",
+    "text": [
+      "• Softmax 函数用于调整 CNN 的输出，使其和为 1",
+      "• 输出向量中元素 z_i 的 softmax 值是该元素的指数除以所有元素指数之和",
+      "• Softmax 值可以看作网络预测的每个类别的概率"
+    ]
+  },
+  "spacecubevista.html": {
+    "image": "6802947_orig.png",
+    "text": [
+      "所有这些都是各向同性的 3D 快速自旋回波序列，针对半傅里叶并行成像进行了优化，具有长回波链、低翻转角和低比吸收率"
+    ]
+  },
+  "spair-v-spir.html": {
+    "image": "8627094_orig.png",
+    "text": [
+      "• SPAIR 与 SPIR 相同，不同之处在于 SPAIR 使用完整的 180° 绝热反转脉冲",
+      "• 绝热脉冲对 B₁ 不均匀性较不敏感",
+      "• SPAIR 提供比 SPIR 或 CHESS 更好的脂肪抑制，但耗时更长"
+    ]
+  },
+  "spatial-frequencies.html": {
+    "image": "9413903_orig.png",
+    "text": [
+      "• 图像可以分解为在幅度、频率、相位和方向上变化的平面波",
+      "• 空间频率是每单位距离的波周期数"
+    ]
+  },
+  "spin-echo1.html": {
+    "image": "9479264_orig.png",
+    "text": [
+      "• SE 由两个连续的射频脉冲产生，通常是 90°-180° 对",
+      "• 第二个脉冲重聚焦由于静态场不均匀性而散相的自旋"
+    ]
+  },
+  "spin-phase-effects.html": {
+    "image": "774550_orig.png",
+    "text": [
+      "• 质子在梯度内的运动会改变其相对于静止组织的相位",
+      "• 相位偏移与速度、梯度强度以及其在梯度内移动时间的平方成正比"
+    ]
+  },
+  "spin-spin-interactions.html": {
+    "image": "3890271_orig.png",
+    "text": [
+      "两个自旋之间的相互作用可能导致 T₁ 和 T₂ 弛豫同时发生，或仅发生 T₂ 弛豫"
+    ]
+  },
+  "spin-vs-spin-state.html": {
+    "image": "screen-shot-2020-12-09-at-6-50-46-am_orig.png",
+    "text": [
+      "• 自旋是反映粒子内禀角动量的量子属性",
+      "• 对于 ¹H 质子，纯自旋态有两个可能的值：“自旋向上”或“自旋向下”",
+      "• 通过测量它们的“特征值”，这些状态在物理上变得可证明"
+    ]
+  },
+  "spin-warp-imaging.html": {
+    "image": "4266023_orig.png",
+    "text": [
+      "• 自旋翘曲 MRI 是空间定位最常用的方法",
+      "• 使用顺序的频率和相位编码步骤，并结合傅里叶变换重建",
+      "• 逐行填充 k 空间"
+    ]
+  },
+  "spinal-cord-stimulators.html": {
+    "image": "screen-shot-2021-05-30-at-1-06-23-pm_orig.png",
+    "text": [
+      "• 许多遗留 SCS 系统是“MR 不安全”的",
+      "• 存在几种较新的“MR 条件性”系统，其中一些具有相对严格的限制，包括场强、区域 SAR 和成像区域"
+    ]
+  },
+  "spir.html": {
+    "image": "7841588_orig.png",
+    "text": [
+      "• SPIR 是一种混合脂肪抑制技术，结合了 CHESS 和 STIR 的特点：",
+      "─ 选择性射频饱和脂肪，以及",
+      "─ 通过反转延迟消除残留脂肪",
+      "• 对 B₀ 和 B₁ 不均匀性敏感"
+    ]
+  },
+  "spiralradial-artifacts.html": {
+    "image": "6154853_orig.png",
+    "text": [
+      "• 在螺旋/径向/螺旋桨序列中，混叠会发生，但基本上是不连贯/分散的",
+      "• 通常表现为多条细线"
+    ]
+  },
+  "spirspair-v-stir.html": {
+    "image": "669890_orig.png",
+    "text": [
+      "• SPAIR/SPIR 选择性地抑制脂肪，但 STIR 抑制所有短 T₁ 物质，且不能在钆给药后使用",
+      "• STIR 在不均匀场中表现更好",
+      "• STIR 只能提供类似 T₂ 的对比度"
+    ]
+  },
+  "splitting-of-peaks.html": {
+    "image": "screen-shot-2016-11-05-at-9-49-18-am_orig.png",
+    "text": [
+      "• 谱线分裂是由于 J 耦合",
+      "• J 耦合是由键合电子介导的同一分子上一个原子核到另一个原子核的极化转移产生的",
+      "• 许多代谢物，不仅仅是乳酸，都有分裂的谱线，尽管乳酸最容易看到"
+    ]
+  },
+  "spoiled-for-t1w-only.html": {
+    "image": "4193421_orig.png",
+    "text": [
+      "尽管通常用于 T₁ 加权成像，但受扰梯度回波序列可以设置为具有 [H] 和/或 T₂* 对比度"
+    ]
+  },
+  "spoiled-gre-parameters.html": {
+    "image": "2439493_orig.png",
+    "text": [
+      "• TE 控制 T₂* 权重",
+      "• TR 控制 T₁ 权重",
+      "• 翻转角控制 T₁ 权重",
+      "• 自旋密度效应始终存在"
+    ]
+  },
+  "spoiling---what-and-how.html": {
+    "image": "9410617_orig.png",
+    "text": [
+      "• 破坏是破坏周期间的横向相干性",
+      "• 三种方法",
+      "─ 长 TR 破坏",
+      "─ 梯度破坏",
+      "─ 射频破坏"
+    ]
+  },
+  "ss-gradient-lobes.html": {
+    "image": "3843108_orig.png",
+    "text": [
+      "• 向下叶瓣用于层面重聚",
+      "• 目的：校正由原始层面选择梯度引起的横向磁化强度的相位色散"
+    ]
+  },
+  "ssfp-mra.html": {
+    "image": "7937303_orig.png",
+    "text": [
+      "• 基于 TrueFISP/FIESTA 的平衡稳态进动 MRA",
+      "• 图像对比度主要基于血液的高 T2/T1 比值",
+      "• 主要用途：心脏和主动脉成像"
+    ]
+  },
+  "static-field-bioeffects.html": {
+    "image": "screen-shot-2020-10-28-at-3-15-52-pm_orig.png",
+    "text": [
+      "• 除了短暂的感觉障碍外，暴露于 MRI 扫描仪的静态场不被认为构成显著的健康风险",
+      "• 静态场相关的感觉障碍包括：",
+      "─ 磁光幻视/闪光",
+      "─ 头晕/眩晕",
+      "─ 金属味",
+      "物理机制包括洛伦兹力、法拉第电流和磁化率诱导力"
+    ]
+  },
+  "status-of-the-5g-line.html": {
+    "image": "screenshot-2025-12-27-at-2-22-30-pm_orig.png",
+    "text": [
+      "• 使用了 40 年的传统 5 高斯边缘场暴露限值已被取消",
+      "• 新限值为 9 高斯，由国际电工委员会标准 IEC 60601-2-33:2022 规定"
+    ]
+  },
+  "steam.html": {
+    "image": "screen-shot-2016-11-24-at-6-44-14-pm_orig.png",
+    "text": [
+      "• STEAM 由 3 个选择性 90° 脉冲和正交梯度组成，在平面相交处产生受激回波信号",
+      "• 主要优点是能够使用短 TE",
+      "• 由于信号只有 PRESS 的 50%，STEAM 已基本失宠"
+    ]
+  },
+  "sternal-wiresimplants.html": {
+    "image": "screen-shot-2021-03-31-at-3-23-33-pm_orig.png",
+    "text": [
+      "• 胸骨钢丝和其他闭合装置在高达 3.0T 时都是“MR 条件性”的",
+      "• 由于装置牢固地固定在胸骨/胸部，无需担心移动",
+      "• 由于天线效应和皮下位置，存在加热的理论担忧，因此考虑避免高 SAR 序列"
+    ]
+  },
+  "stes-for-imaging.html": {
+    "image": "8576943_orig.png",
+    "text": [
+      "• STE 仅偶尔直接用于成像",
+      "• 它们确实对快速 SE 和 GRE 序列中产生的信号有显著贡献",
+      "• STE 也会产生伪影"
+    ]
+  },
+  "stess-drugsagents.html": {
+    "image": "6645817_orig.png",
+    "text": [
+      "• 腺苷：使用最广泛；血管扩张剂；连续静脉输注；半衰期极短；可能引起心律失常和支气管痉挛",
+      "• 瑞加德松：选择性 A₂A 血管扩张剂；对哮喘/COPD 患者有用；单次静脉注射剂量",
+      "• 多巴酚丁胺：刺激 β₁ 受体，增加心肌收缩力；低剂量方案用于评估心肌活力"
+    ]
+  },
+  "stimulated-echoes.html": {
+    "image": "677247_orig.png",
+    "text": [
+      "• 受激回波由一系列 3 个或更多射频脉冲产生",
+      "• 它们是由先前脉冲沿 z 轴“储存”的磁化强度倾斜产生的"
+    ]
+  },
+  "stir.html": {
+    "image": "5026348_orig.png",
+    "text": [
+      "• 一种使用短 TI 值来抑制脂肪信号的反转恢复技术",
+      "• 适用于低场或非均匀场的最佳脂肪抑制方法",
+      "• 不能在钆给药后使用"
+    ]
+  },
+  "stir1.html": {
+    "image": "_5026348_orig.png",
+    "text": [
+      "• 一种使用短 TI 值来抑制脂肪信号的反转恢复技术",
+      "• 适用于低场或非均匀场的最佳脂肪抑制方法",
+      "• 不能在钆给药后使用"
+    ]
+  },
+  "stress-consent-form.html": {
+    "image": "9117843_orig.png",
+    "text": [
+      "• 患者应就进行负荷试验的原因、所用药物和替代方案提供知情同意",
+      "• 应了解常见的轻微副作用，也应了解严重并发症"
+    ]
+  },
+  "subacutemet-hb.html": {
+    "image": "8685415_orig.png",
+    "text": [
+      "• 正铁血红蛋白是强顺磁性的，具有 5 个未配对电子",
+      "• 球蛋白亚基的构象变化使 H₂O 分子能够接近血红素中心，允许内层弛豫",
+      "• 正铁血红蛋白是唯一具有短 T₁ 的血液产物"
+    ]
+  },
+  "subarachnoid-blood.html": {
+    "image": "3006709_orig.png",
+    "text": [
+      "• 蛛网膜下腔出血差异：与脑脊液混合；高环境氧水平；微血栓早期消散",
+      "• FLAIR、DWI 和 SWI 是最佳序列；在亚急性期甚至优于 CT",
+      "• 正铁血红蛋白形成直到发作后近一周才出现",
+      "• 反复 SAH 导致浅表铁质沉着症"
+    ]
+  },
+  "sup3sup1p-measurements.html": {
+    "image": "screen-shot-2017-01-22-at-12-42-58-pm_orig.png",
+    "text": [
+      "• 组织 pH 值可以通过 PCr 和 Pi 之间的化学位移差估算",
+      "• PCr、Pi 和 ATP 的动态变化可以使用快速采集 MRS 记录",
+      "• 饱和转移方法可以研究各种含磷代谢物的相互作用"
+    ]
+  },
+  "superconductive-design.html": {
+    "image": "5980823_orig.png",
+    "text": [
+      "• 超导线通常由铌钛合金制成",
+      "• 绕在骨架（线圈架）上，并悬浮在充满液氦的杜瓦（低温恒温器）中",
+      "• 像保温瓶一样有多层真空和屏蔽层"
+    ]
+  },
+  "superconductivity.html": {
+    "image": "6192862_orig.png",
+    "text": [
+      "• 在导电材料中，当温度低于临界温度时发生的现象：",
+      "─ 电阻降为零",
+      "─ 磁场被排出",
+      "• 部分由 BCS 理论解释"
+    ]
+  },
+  "superparamagnetism.html": {
+    "image": "8956133_orig.png",
+    "text": [
+      "• 磁化率介于顺磁性和铁磁性之间",
+      "• 例如：铁蛋白"
+    ]
+  },
+  "surface-coil-flare.html": {
+    "image": "3046393_orig.png",
+    "text": [
+      "• 表面线圈在靠近体表处具有最高灵敏度，在图像上产生过亮的信号“耀斑”",
+      "• 校正方法",
+      "─ 采集前灵敏度映射：PURE/CLEAR",
+      "─ 采集后滤波：SCIC"
+    ]
+  },
+  "susceptibility-artifact.html": {
+    "image": "5213849_orig.png",
+    "text": [
+      "• 由于组织/材料的磁化率差异而产生的伪影",
+      "• 尤其在金属植入物周围以及空气-组织或空气-骨界面处可见",
+      "• 特征为几何变形、极暗和极亮区域"
+    ]
+  },
+  "swan-ganz-catheters.html": {
+    "image": "screen-shot-2021-05-08-at-1-20-37-pm_orig.png",
+    "text": [
+      "• 大多数 Swan-Ganz 型热稀释肺动脉导管被认为是“MR 不安全”的",
+      "• 例外是 ICU Medical 生产的那些，它们在 1.5 T 下是“MR 条件性”的",
+      "• 越来越多的研究表明，其中一些限制将来可能会放宽"
+    ]
+  },
+  "synthetic-mri.html": {
+    "image": "screen-shot-2017-08-15-at-11-43-23-am_orig.png",
+    "text": [
+      "• 用于在任意 TR、TE 和 TI 值下生成合成 SE 和 IR 图像的信号强度方程",
+      "• 必须首先知道固有的 T1、T2 和 PD 值，通常从多回波、多延迟初级采集序列获得"
+    ]
+  },
+  "t1-bright---calcifications.html": {
+    "image": "1383428_orig.png",
+    "text": [
+      "成簇的微钙化具有可捕获水分子的缝隙，使其旋转减慢至接近拉莫尔频率，从而缩短 T1"
+    ]
+  },
+  "t1-bright---cholesterol.html": {
+    "image": "1344957_orig.png",
+    "text": [
+      "胆固醇在临床 MRI 上导致的肉眼可见 T1 缩短值得怀疑"
+    ]
+  },
+  "t1-bright---fat.html": {
+    "image": "5243316_orig.png",
+    "text": [
+      "甘油三酯脂肪族侧链中的 -CH₂- 基团以接近拉莫尔频率的频率旋转，促进 T₁ 弛豫"
+    ]
+  },
+  "t1-bright---meconium.html": {
+    "image": "6071718_orig.png",
+    "text": [
+      "胎粪含有大量的顺磁性矿物质，可缩短其 T₁"
+    ]
+  },
+  "t1-bright---melanin.html": {
+    "image": "7715350_orig.png",
+    "text": [
+      "• 黑色素对顺磁性离子有高亲和力，可缩短其 T₁",
+      "• 黑色素瘤也易出血"
+    ]
+  },
+  "t1-bright---myelin.html": {
+    "image": "9954125_orig.png",
+    "text": [
+      "• 髓鞘化大脑的信号来自 +H₂O，而非鞘磷脂",
+      "• 短 T₁ 源于水-大分子相互作用"
+    ]
+  },
+  "t1-bright---other-oils.html": {
+    "image": "2182886_orig.png",
+    "text": [
+      "• 鱼油/沐浴油珠标记物",
+      "• 胃肠道对比剂（油乳剂）",
+      "• 碘苯酯"
+    ]
+  },
+  "t1-bright---proteinmucin.html": {
+    "image": "3015172_orig.png",
+    "text": [
+      "• 对于粘蛋白，短 T₁ 源于寡糖侧链中受限的 +H 运动",
+      "• 对于胶体/凝胶，短 T₁ 源于结合在蛋白质界面上的水",
+      "• T₁ 缩短与浓度成正比"
+    ]
+  },
+  "t1-effects-on-dsc.html": {
+    "image": "4612212_orig.png",
+    "text": [
+      "• 由于血脑屏障破坏导致的钆外渗导致 T₁ 缩短",
+      "• 这会影响动态磁敏感对比成像，削弱来自钆团注的 T₂* 信号损失并增加稳态信号",
+      "• 使用钆预加载和减小翻转角可以减轻这些影响"
+    ]
+  },
+  "t1-flair.html": {
+    "image": "6834128_orig.png",
+    "text": [
+      "• FLAIR = “液体衰减反转恢复”",
+      "• 选择 TI 以抑制来自液体的信号",
+      "• 图像的其余部分为 T₂ 加权"
+    ]
+  },
+  "t1-mapping.html": {
+    "image": "7056852_orig.png",
+    "text": [
+      "• T₁ 映射有助于表征弥漫性/浸润性心肌疾病，包括心肌病、心肌炎、淀粉样变性",
+      "• 流行的方法包括改良的 Look-Locker 和饱和恢复"
+    ]
+  },
+  "t2-black-out.html": {
+    "image": "7767689_orig.png",
+    "text": [
+      "• T₂ 黑化效应与 T₂ 穿透效应相反",
+      "• 具有极短 T₂* 的病变会降低 DWI 信号",
+      "• ADC 计算可能出错"
+    ]
+  },
+  "t2-flair.html": {
+    "image": "9082011_orig.png",
+    "text": [
+      "• FLAIR = “液体衰减反转恢复”",
+      "• 选择 TI 以抑制来自液体的信号",
+      "• 图像的其余部分为 T₂ 加权"
+    ]
+  },
+  "t2-shine-through.html": {
+    "image": "1901499_orig.png",
+    "text": [
+      "• 弥散加权图像同时具有 T₂ 和弥散加权",
+      "• 长 T₂ 病变可增加 DWI 信号，模拟弥散受限",
+      "• 通过查看 ADC 图像可以澄清"
+    ]
+  },
+  "t2-vs-t2.html": {
+    "image": "9782955_orig.png",
+    "text": [
+      "• T₂ = “真实” T₂，由原子/分子相互作用引起",
+      "• T₂* = “观察到的” T₂，反映真实 T₂ 以及磁场不均匀性",
+      "• 1/T₂* = 1/T₂_true + 1/T₂_inhom"
+    ]
+  },
+  "taggingspamm.html": {
+    "image": "1563465_orig.png",
+    "text": [
+      "• SPAMM = 空间磁化调制",
+      "• 一种标记方法，其中饱和带或网格可以跟踪复杂运动，例如心肌收缩",
+      "• 通常以电影格式显示"
+    ]
+  },
+  "temperature-monitoring.html": {
+    "image": "screen-shot-2021-02-14-at-7-13-15-pm_orig.png",
+    "text": [
+      "• 在麻醉、危重、老年和儿科患者的 MRI 期间，温度监测至关重要",
+      "• MR 兼容的温度监测仪可用于皮肤/表层和深层/核心温度测量",
+      "• 光纤监测仪是首选"
+    ]
+  },
+  "ti-to-null-a-tissue.html": {
+    "image": "6613559_orig.png",
+    "text": [
+      "当 TR >> T₁ 时，可以使用以下方程估算消除组织信号所需的 TI：TI_null = 0.69 × T₁_tissue"
+    ]
+  },
+  "ti-to-null-myocardium.html": {
+    "image": "5808505_orig.png",
+    "text": [
+      "• 反转恢复技术用于显示异常的心肌强化",
+      "• 必须选择反转时间来抑制正常心肌，但最佳反转时间会随着钆从组织中洗出而改变",
+      "• 反转时间 scout 序列生成一组不同反转时间的图像，以便选择最佳值"
+    ]
+  },
+  "time-of-flight-effects.html": {
+    "image": "6448203_orig.png",
+    "text": [
+      "• TOF 现象是由于成像体积内外的流动所致",
+      "• 两种类型：",
+      "─ 流动相关增强",
+      "─ 高速信号丢失"
+    ]
+  },
+  "time-of-flight-tof-mra.html": {
+    "image": "7529974_orig.png",
+    "text": [
+      "• TOF MRA 基于流动相关增强的原理，当未饱和的血液进入背景被多个射频脉冲抑制的区域时发生",
+      "• 可以使用 2D 和 3D 采集模式"
+    ]
+  },
+  "timing-the-bolus.html": {
+    "image": "1046219_orig.png",
+    "text": [
+      "确定 MR 对比剂到达时间的三种方法",
+      "─ 测试团注计时法",
+      "─ 透视触发法",
+      "─ 时间分辨成像"
+    ]
+  },
+  "tof-mra-artifacts.html": {
+    "image": "2744322_orig.png",
+    "text": [
+      "• 阶梯伪影（仅限 2D）",
+      "• 面内饱和伪影",
+      "• 穿透伪影",
+      "• 血流反转伪影",
+      "• 百叶窗伪影（仅限 MOTSA）",
+      "• 磁敏感伪影"
+    ]
+  },
+  "trace-vs-adc-map.html": {
+    "image": "9505620_orig.png",
+    "text": [
+      "• Trace DWI：通过对对不同方向扩散敏感的源图像进行平均而创建的一组图像",
+      "• ADC 图：从已去除 T₂ 效应的 Trace DWI 导出的一组图像"
+    ]
+  },
+  "traction-and-halos.html": {
+    "image": "screen-shot-2021-07-22-at-11-37-13-am_orig.png",
+    "text": [
+      "• 除非专门制造为 MR 兼容，否则大多数骨骼牵引装置是 MR 不安全的",
+      "• 即使是“沙袋”重物也已知含有铁颗粒",
+      "• 许多 Halo 架和背心现在是 MR 条件性的，由非铁质和非导电材料制成"
+    ]
+  },
+  "transmitter-gain.html": {
+    "image": "6709302_orig.png",
+    "text": [
+      "需要调整发射机增益/衰减，以正确校准每个患者的射频翻转角"
+    ]
+  },
+  "tricks-or-twist.html": {
+    "image": "5168604_orig.png",
+    "text": [
+      "• TRICKS 和 TWIST 是时间分辨 MRA 技术，使用视图共享和欠采样 k 空间外围",
+      "• 允许在对比剂团注通过期间快速采集多个图像"
+    ]
+  },
+  "triple-dose-and-mt.html": {
+    "image": "4773342_orig.png",
+    "text": [
+      "• 三倍剂量对比剂可增强病变的强化和显眼度，但由于 NSF 风险，不再实用",
+      "• 磁化转移可显著改善强化，但会降低其他结构的信噪比"
+    ]
+  },
+  "triple-ir.html": {
+    "image": "5315982_orig.png",
+    "text": [
+      "• 三重反转恢复序列使用额外的反转脉冲来抑制脂肪和血液",
+      "• 可以看作是 DIR + STIR",
+      "• 必须指定两个反转时间",
+      "─ TI_血：在 1.5T 下通常为 1200 毫秒",
+      "─ TI_脂肪：在 1.5T 下通常为 160 毫秒"
+    ]
+  },
+  "true-fispfiesta.html": {
+    "image": "4819889_orig.gif",
+    "text": [
+      "• 真稳态进动快速成像使用平衡梯度",
+      "• 同义词：FIESTA，T2-FFE",
+      "• 单回波 = FID+SE",
+      "• T2/T1 图像对比度"
+    ]
+  },
+  "two-slices-at-once.html": {
+    "image": "4227760_orig.gif",
+    "text": [
+      "• 多层激发是大多数扫描仪上的一个选项",
+      "• 复合射频脉冲刺激多个层面，这些层面在重建过程中被解混叠"
+    ]
+  },
+  "two-types-of-pi.html": {
+    "image": "2882704_orig.png",
+    "text": [
+      "• 基于图像和基于 k 空间的技术在很大程度上可以互换",
+      "• 当加速因子 >2 时，基于图像的技术可能提供稍高的信噪比",
+      "• 基于 k 空间的技术可能在不均匀区域和小视野应用中更具优势"
+    ]
+  },
+  "types-of-gre-sequences.html": {
+    "image": "7415739_orig.png",
+    "text": [
+      "• 一系列等间距的射频脉冲产生：",
+      "─ 每个脉冲后的 FID 型信号，和",
+      "─ 每个脉冲前的 SE/STE 型信号",
+      "• GRE 序列根据采样这些信号中的哪一种以及是否保持或“破坏”周期间的相干性进行分类"
+    ]
+  },
+  "types-of-hemoglobin.html": {
+    "image": "7855196_orig.png",
+    "text": [
+      "• 血红蛋白包含 4 个可逆结合 O₂、H₂O 和其他小分子的铁原子",
+      "• 具有不同磁性的血红蛋白衍生物",
+      "─ 氧合血红蛋白和高铁血色原：抗磁性",
+      "─ 脱氧血红蛋白和正铁血红蛋白：顺磁性",
+      "─ 铁蛋白和含铁血黄素：超顺磁性"
+    ]
+  },
+  "types-of-magnets.html": {
+    "image": "3063875_orig.png",
+    "text": [
+      "三种基本 MR 扫描仪配置",
+      "─ 封闭式磁体",
+      "─ 开放式磁体",
+      "─ 开放式磁体"
+    ]
+  },
+  "upsampling.html": {
+    "image": "screen-shot-2023-04-11-at-8-05-12-pm_orig.png",
+    "text": [
+      "• 上采样，也称为解码、反池化或升尺度，是一种增加已被 CNN 卷积减小的特征图大小的数学过程",
+      "• 方法包括插值和转置卷积"
+    ]
+  },
+  "utility-of-dce.html": {
+    "image": "3776793_orig.png",
+    "text": [
+      "• DCE 在区分肿瘤和评估治疗方面的潜力",
+      "• 恶性肿瘤有新生血管和坏死",
+      "• 疾病组之间以及方法学上的困难仍存在显著重叠",
+      "─ 我尚未成为其信徒"
+    ]
+  },
+  "vagal-nerve-stimulators.html": {
+    "image": "screen-shot-2021-06-01-at-10-09-36-am_orig.png",
+    "text": [
+      "• 迷走神经刺激器用于调节神经和心血管疾病",
+      "• 用于神经系统的主要植入物是 VNS Therapy® 系统，MR 条件性，限制对胸部区域进行直接射频刺激",
+      "• CardioFit™ 系统，MR 不安全，直接刺激迷走神经以治疗高血压/心力衰竭",
+      "• Barostim Neo™，MR 条件性，刺激交感神经系统"
+    ]
+  },
+  "vascular-color-maps.html": {
+    "image": "1882654_orig.png",
+    "text": [
+      "• 该方法称为“区域选择性动脉自旋标记”",
+      "• 反转脉冲在空间上限制于特定动脉，从而可以绘制不同血管区域的灌注图"
+    ]
+  },
+  "vascular-stentsgrafts.html": {
+    "image": "screen-shot-2021-03-30-at-7-01-33-pm_orig.png",
+    "text": [
+      "• 尽管过去存在担忧和禁令，但当前所有植入的支架和支架移植物在 1.5T 和/或 3.0T 下都是“MR 条件性”的",
+      "• 尽管一些专家不同意，但有证据表明支架在放置后无需等待 4-8 周即可立即进行扫描",
+      "• 只要满足“MR 条件”，即使对于大或重叠的支架，加热也不是问题"
+    ]
+  },
+  "ventricular-function.html": {
+    "image": "3899007_orig.png",
+    "text": [
+      "• 射血分数和其他心室功能测量值是根据心动周期中获得的一组 8-12 个位置的短轴图像计算得出的",
+      "• 半自动软件提供心室壁的边缘检测"
+    ]
+  },
+  "violating-the-conditions.html": {
+    "image": "screen-shot-2021-04-17-at-6-58-06-pm_orig.png",
+    "text": [
+      "• 如果临床获益超过增加的风险，对于扫描 CIED 患者，以下限制可能会放宽：",
+      "─ 6 周等待期",
+      "─ 断裂或废弃的导线",
+      "─ 更高的 SAR 限值",
+      "─ 不同的场强或磁体配置"
+    ]
+  },
+  "visual.html": {
+    "image": "141968_orig.png",
+    "text": [
+      "• 视觉皮层映射用于外科目的较少，但对神经生理学家和知觉心理学家意义重大",
+      "• 范式包括观看旋转或扩展的棋盘格图案"
+    ]
+  },
+  "water-excitation.html": {
+    "image": "813806_orig.png",
+    "text": [
+      "• WE 是一种基于化学位移的方法，与“脂肪饱和法”不同",
+      "• 选择性激发水质子，脂肪质子保持不变",
+      "• 使用复合脉冲"
+    ]
+  },
+  "water-suppression.html": {
+    "image": "screen-shot-2016-12-14-at-7-14-25-pm_orig.png",
+    "text": [
+      "• 必须抑制大的水峰以显示低浓度代谢物",
+      "• 最常用的方法是在波谱定位序列之前，使用一组调谐到水共振的 CHESS 脉冲"
+    ]
+  },
+  "wave-properties.html": {
+    "image": "screenshot-2026-01-06-at-7-42-47-pm_orig.png",
+    "text": [
+      "• 基本波属性包括：速度、频率、相位和波长",
+      "• 正则频率和角频率之间的区别",
+      "• 波长在组织中的缩短"
+    ]
+  },
+  "what-are-2d---3d-fts.html": {
+    "image": "8284535_orig.png",
+    "text": [
+      "• 一维信号可以分解为简单线性波的和",
+      "• 类似地，二维图像可以分解为具有不同空间频率和方向的平面波的和"
+    ]
+  },
+  "what-are-fringe-fields.html": {
+    "image": "3100263_orig.png",
+    "text": [
+      "• 边缘场是磁体核心外部的周边磁场",
+      "• 可对包括心脏起搏器在内的电子设备造成干扰"
+    ]
+  },
+  "what-are-the-steps.html": {
+    "image": "6695920_orig.png",
+    "text": [
+      "十个步骤",
+      "• 患者筛查  • 层面定位",
+      "• 患者摆位  • 自动预扫描",
+      "• 协议选择  • 图像采集",
+      "• 定位扫描  • 后处理",
+      "• 校准扫描  • 数据归档"
+    ]
+  },
+  "what-causes-magnetism.html": {
+    "image": "3660184_orig.png",
+    "text": [
+      "• 静态场由以下因素产生：",
+      "─ 电子自旋和轨道角动量",
+      "─ 原子核自旋贡献极小",
+      "• 动态场由以下因素产生：",
+      "─ 电流（安培定律和法拉第定律）"
+    ]
+  },
+  "what-does-k-stand-for.html": {
+    "image": "4029621_orig.png",
+    "text": [
+      "• k 称为波数，定义为波长的倒数，k = 1/λ",
+      "• 表示每单位长度的波周期数"
+    ]
+  },
+  "what-is-a-gauss.html": {
+    "image": "6589857_orig.png",
+    "text": [
+      "• 高斯：磁场强度的 CGS 单位",
+      "• 特斯拉：SI 单位",
+      "• 1 特斯拉 = 10,000 高斯"
+    ]
+  },
+  "what-is-a-gradient.html": {
+    "image": "467463_orig.png",
+    "text": [
+      "• 梯度定义为场变化与距离变化之比",
+      "• G = ΔB / Δs",
+      "• 单位：T/m 或 G/cm"
+    ]
+  },
+  "what-is-a-neural-network.html": {
+    "image": "screen-shot-2023-04-02-at-3-10-04-pm_orig.png",
+    "text": [
+      "• 人工神经网络是一种受人类大脑启发的机器学习模型",
+      "• 其基本构建模块是人工神经元",
+      "• 神经元相互连接并组织成层",
+      "• 每个节点的输出是来自先前节点的输入的加权和，通过非线性激活函数修改"
+    ]
+  },
+  "what-is-a-quench.html": {
+    "image": "3545529_orig.png",
+    "text": [
+      "磁体失去超导性，氦气突然沸腾蒸发"
+    ]
+  },
+  "what-is-a-tesla.html": {
+    "image": "829446_orig.png",
+    "text": [
+      "• 磁场强度的 SI 单位",
+      "• 由作用在载流导线上的单位长度力定义",
+      "• 1 特斯拉 = 1 牛顿/安培·米"
+    ]
+  },
+  "what-is-asl.html": {
+    "image": "9325976_orig.png",
+    "text": [
+      "• ASL 是一种无需注射对比剂的无创 MR 灌注成像方法",
+      "• 流入的血液被近端反转脉冲磁标记，当它流入成像区域时其信号降低",
+      "• 从对照数据中减去标记数据得到灌注加权图像"
+    ]
+  },
+  "what-is-convolution.html": {
+    "image": "screen-shot-2022-06-25-at-3-21-27-pm_orig.png",
+    "text": [
+      "• 卷积涉及通过称为核或滤波器的小数组对图像中的区域数据点进行滑动乘法和加法",
+      "• 每个核都旨在强调图像的一个特征，如边缘、角点或形状"
+    ]
+  },
+  "what-is-dce.html": {
+    "image": "8984630_orig.png",
+    "text": [
+      "• 动态对比增强 MR 成像记录钆团注后 T₁ 的变化",
+      "─ DSC 测量 T₂* 变化",
+      "• 可以提取与血流量和血管通透性相关的参数，并用于监测治疗"
+    ]
+  },
+  "what-is-diffusion.html": {
+    "image": "4991082_orig.png",
+    "text": [
+      "• 扩散 = 布朗运动",
+      "• 由于热碰撞，水和分子的随机运动",
+      "• 由扩散系数 D 表征"
+    ]
+  },
+  "what-is-ferromagnetism.html": {
+    "image": "6837578_orig.png",
+    "text": [
+      "• 少数金属允许被永久磁化的特性",
+      "• 由于交换耦合和磁畴形成"
+    ]
+  },
+  "what-is-flip-angle.html": {
+    "image": "6646847_orig.png",
+    "text": [
+      "• 施加 B₁ 时 M 的旋转量",
+      "• 对于硬矩形脉冲，翻转角与 B₁ 强度 × 脉冲持续时间成正比"
+    ]
+  },
+  "what-is-fsetse.html": {
+    "image": "954024_orig.png",
+    "text": [
+      "• FSE 是对传统 SE 的修改，使用具有不同相位编码梯度的多个 180° 脉冲",
+      "• 在每个 TR 间隔内对 k 空间的多条线进行采样",
+      "• 显著减少扫描时间"
+    ]
+  },
+  "what-is-homogeneity.html": {
+    "image": "4638118_orig.png",
+    "text": [
+      "• 均匀性 = 磁场的均匀程度",
+      "• 在球形体积直径上以百万分之一测量"
+    ]
+  },
+  "what-is-ir.html": {
+    "image": "785212_orig.png",
+    "text": [
+      "• 一种成像技术，其中平衡纵向磁化强度首先被 180° 脉冲反转",
+      "• 经过一段 TI 时间后，进行信号生成，通常通过 SE 或 FSE 采集"
+    ]
+  },
+  "what-is-k-space.html": {
+    "image": "1001270_orig.gif",
+    "text": [
+      "• k空间是原始数据的网格，形式为 (kₓ, kᵧ)，直接从 MR 信号中获得",
+      "• 这些值对应于 MR 图像的空间频率"
+    ]
+  },
+  "what-is-nsf.html": {
+    "image": "7861679_orig.png",
+    "text": [
+      "• 由 Gd 在组织中沉积及相关纤维化反应引起的医源性疾病",
+      "• 特征为皮肤增厚/纤维化伴关节挛缩",
+      "• 心/肺/肝受累常致命"
+    ]
+  },
+  "what-is-phase-encoding.html": {
+    "image": "5531681_orig.png",
+    "text": [
+      "• 频率可以通过傅里叶变换在 MR 信号中被唯一地分辨出来",
+      "• 相位关系需要多个信号，每个信号都有不同的相位编码步骤",
+      "• 展示了一个 2 像素的例子"
+    ]
+  },
+  "what-is-pi.html": {
+    "image": "4277800_orig.png",
+    "text": [
+      "• 并行成像利用多个接收线圈已知的位置和灵敏度来辅助空间定位",
+      "• 允许减少相位编码步骤的数量"
+    ]
+  },
+  "what-is-pre-emphasis.html": {
+    "image": "819481_orig.png",
+    "text": [
+      "• 故意扭曲梯度输入波形",
+      "• 抵消涡流的影响，以达到所需的梯度输出"
+    ]
+  },
+  "what-is-relaxivity.html": {
+    "image": "5185060_orig.png",
+    "text": [
+      "• 弛豫率：r₁ 和 r₂ 反映了 T₁ 和 T₂ 弛豫率随对比剂浓度变化的情况",
+      "• 单位：L/mmol·s"
+    ]
+  },
+  "what-is-sar.html": {
+    "image": "screen-shot-2020-09-12-at-11-46-11-am_orig.png",
+    "text": [
+      "• SAR = 比吸收率 = 射频辐射沉积在组织中的能量除以单位质量，单位为 W/kg",
+      "• SAR 与以下因素成正比：",
+      "─ 组织电导率",
+      "─ 身体尺寸",
+      "─ B₀² 和 B₁²",
+      "─ 射频翻转角²",
+      "─ 序列的占空比"
+    ]
+  },
+  "what-is-spin.html": {
+    "image": "936165_orig.png",
+    "text": [
+      "• 原子和亚原子粒子的基本属性，代表内禀角动量",
+      "• 自旋被限制在量子化值：0、1/2、1 等"
+    ]
+  },
+  "what-is-ssfp.html": {
+    "image": "4763423_orig.png",
+    "text": [
+      "• 稳态进动快速成像发生在来自一系列射频脉冲的横向磁化强度在脉冲之间保持非零状态时",
+      "• SSFP 信号来自两个分量，一个类似 FID，另一个类似回波",
+      "• 这产生了 4 种基本的梯度回波序列"
+    ]
+  },
+  "what-is-susceptibility-chi.html": {
+    "image": "8913833_1_orig.png",
+    "text": [
+      "• 磁化率 = 内部磁化强度",
+      "─ 抗磁性：反对施加的场",
+      "─ 顺磁性：增强施加的场",
+      "─ 超顺磁性和铁磁性：>> 0",
+      "• 大多数生物组织是弱抗磁性的"
+    ]
+  },
+  "what-is-susceptibility.html": {
+    "image": "8913833_orig.png",
+    "text": [
+      "• 磁化率 = 内部磁化强度",
+      "─ 抗磁性：反对施加的场",
+      "─ 顺磁性：增强施加的场",
+      "─ 超顺磁性和铁磁性：>> 0",
+      "• 大多数生物组织是弱抗磁性的"
+    ]
+  },
+  "what-is-t1.html": {
+    "image": "4604751_orig.png",
+    "text": [
+      "• 射频脉冲后纵向磁化强度再生长的时间常数",
+      "• 同义词：自旋-晶格弛豫、纵向弛豫、热弛豫"
+    ]
+  },
+  "what-is-t2.html": {
+    "image": "8037873_orig.png",
+    "text": [
+      "• 射频脉冲后横向磁化强度衰减的时间常数",
+      "• 同义词：自旋-自旋弛豫、横向弛豫"
+    ]
+  },
+  "what-is-the-b-value.html": {
+    "image": "6402165_orig.png",
+    "text": [
+      "• 操作者选择的参数，定义梯度强度和持续时间",
+      "• 它决定了弥散加权的程度",
+      "• 没有最佳值，通常为 0-1000 s/mm²"
+    ]
+  },
+  "what-is-venc.html": {
+    "image": "2936097_orig.png",
+    "text": [
+      "• VENC = “速度编码”，用于相位对比 MRI/MRA 的一个预设参数，以反映预期的最大流速",
+      "• VENC 设置过低：混叠",
+      "• VENC 设置过高：噪声大，无法检测小流速差异"
+    ]
+  },
+  "whats-that-noise.html": {
+    "image": "5121386_orig.png",
+    "text": [
+      "• 梯度振动产生高强度声学噪声",
+      "• 患者需要听力保护",
+      "• 可通过机械和脉冲序列修改来降低噪声"
+    ]
+  },
+  "whats-wrong-with-gre.html": {
+    "image": "screen-shot-2017-03-13-at-6-58-31-am_orig.png",
+    "text": [
+      "• 抱歉，但您确实需要购买和使用 SWI，而不是坚持使用“老派”GRE",
+      "• 现代 SWI 序列对疾病的敏感度高得多，并利用相位信息将铁/血液制品与钙化区分开来"
+    ]
+  },
+  "where-is-energy-stored.html": {
+    "image": "screenshot-2026-03-06-at-4-32-17-pm_orig.png",
+    "text": [
+      "• 理想射频脉冲添加的能量产生自旋极化的非热再分布，将布居差异转化为相位相干的横向磁化强度",
+      "• 两个主要的能量储存库：塞曼有序和横向相干性，其相对贡献取决于翻转角",
+      "• 最终能量释放需要 T1 弛豫"
+    ]
+  },
+  "wheres-my-data.html": {
+    "image": "245443_orig.png",
+    "text": [
+      "• MR 数据以 DICOM 格式传输并存储到图像存档与通信系统中",
+      "• DICOM 对于许多新的/复杂的数据集（如 fMRI）没有标准格式",
+      "• 可能需要为复杂数据单独存储系统"
+    ]
+  },
+  "which-hs-produce-signal.html": {
+    "image": "screen-shot-2018-03-11-at-8-23-41-am_orig.png",
+    "text": [
+      "• MR 信号的主要来源",
+      "─ 自由和松散结合的 ¹H 水质子",
+      "─ 脂肪/含脂肪组织中的甘油三酯 ¹H 质子",
+      "在短 TE 下贡献最小",
+      "─ 流动的磷脂",
+      "─ 低分子量蛋白质",
+      "仅在超短 TE 下直接可见",
+      "─ 紧密结合的 ¹H 水质子",
+      "─ 大分子的主链质子",
+      "─ 髓鞘和膜磷脂"
+    ]
+  },
+  "which-is-the-north-pole.html": {
+    "image": "9704006_orig.png",
+    "text": [
+      "• 任意选择，因安装而异",
+      "• 通常圆柱形扫描仪远端为北极"
+    ]
+  },
+  "who-accredits.html": {
+    "image": "screen-shot-2020-07-12-at-2-45-41-pm_orig.png",
+    "text": [
+      "• 美国放射学院",
+      "• 美国超声心动图学会",
+      "• 联合委员会",
+      "• RadSite"
+    ]
+  },
+  "who-discovered-nmr.html": {
+    "image": "2989460_orig.png",
+    "text": [
+      "• 伊西多·拉比：在分子束中检测到核磁共振吸收",
+      "• 爱德华·珀塞尔：在石蜡中检测到核磁共振吸收",
+      "• 费利克斯·布洛赫：在水中检测到核感应信号"
+    ]
+  },
+  "who-invented-fmri.html": {
+    "image": "7532596_orig.png",
+    "text": [
+      "• Belliveau 等人使用钆团注引起的磁化率变化来显示在光刺激期间人视觉皮层血容量的增加",
+      "• Ogawa 等人使用 BOLD MRI 证明了相同的现象，不需要外源性对比剂给药"
+    ]
+  },
+  "who-invented-mri.html": {
+    "image": "2040003_orig.png",
+    "text": [
+      "• 2003 年诺贝尔奖授予",
+      "─ 保罗·劳特伯",
+      "─ 彼得·曼斯菲尔德",
+      "• 雷蒙德·达马迪安因其在推动全身人体磁共振成像发展方面的作用而值得认可"
+    ]
+  },
+  "who-regulates-mri.html": {
+    "image": "screen-shot-2020-07-08-at-12-55-18-pm_orig.png",
+    "text": [
+      "• 主要的国际组织包括 NEMA、IEC、ICNIRP 和 ASTM",
+      "• 国家/地区组织包括",
+      "─ 美国：FDA、ACR",
+      "─ 欧盟：指令/法规",
+      "─ 加拿大：Health Canada、CAR",
+      "─ 英国：MHRA、HSE"
+    ]
+  },
+  "who-was-larmor.html": {
+    "image": "5713307_orig.png",
+    "text": [
+      "• 约瑟夫·拉莫尔爵士是剑桥大学的数学物理学教授",
+      "• 他著名的 1897 年方程是为了解释由于电子轨道运动引起的光谱塞曼分裂，而非核磁共振"
+    ]
+  },
+  "who-was-tesla.html": {
+    "image": "2953388_orig.png",
+    "text": [
+      "• 尼古拉·特斯拉（1856-1943）",
+      "• 塞尔维亚裔美国发明家",
+      "• 交流电的倡导者"
+    ]
+  },
+  "whole-body-dwi.html": {
+    "image": "screen-shot-2022-11-30-at-6-53-32-am_orig.png",
+    "text": [
+      "• 技术也称为 DWIBS",
+      "• 全身在 6-7 个块中扫描，数字拼接在一起",
+      "• 最广泛用于癌症分期"
+    ]
+  },
+  "why-and-when-to-use.html": {
+    "image": "4595421_orig.png",
+    "text": [
+      "• 并行成像优势：减少成像时间；减少磁敏感性伪影",
+      "• 并行成像劣势：降低信噪比；增加伪影"
+    ]
+  },
+  "why-are-veins-blue.html": {
+    "image": "5689207_orig.png",
+    "text": [
+      "• 血液的颜色由血红素卟啉环的光学性质决定，而不是由其内部的铁原子决定",
+      "• 静脉呈蓝色是因为白皙皮肤对红光的差异吸收"
+    ]
+  },
+  "why-discrete-ghosts.html": {
+    "image": "9775139_orig.png",
+    "text": [
+      "• 流动/运动产生弥散伪影，因为 MR 信号的宽调制",
+      "• 当运动是周期性时，由于窄边带调制形成离散鬼影"
+    ]
+  },
+  "why-does-bold-uarr-signal.html": {
+    "image": "65414_orig.png",
+    "text": [
+      "• 脑激活导致区域血流量增加 48%，超过大脑的代谢需求",
+      "• 氧合血红蛋白与脱氧血红蛋白的比例增加，导致 BOLD 信号增加"
+    ]
+  },
+  "why-does-gd-shorten-t1.html": {
+    "image": "4316718_orig.png",
+    "text": [
+      "• • 钆确实会同时缩短 T₁ 和 T₂",
+      "• 在组织中标准的细胞外浓度下，T₁ 效应占主导地位",
+      "• T₂ 缩短仅在存在高浓度时才会出现"
+    ]
+  },
+  "why-gadolinium.html": {
+    "image": "1006864_orig.png",
+    "text": [
+      "• 钆具有强顺磁性，因为其 4f 壳层中有 7 个未配对电子",
+      "• 这些电子不参与成键，因此即使在分子络合物中也能保持顺磁性"
+    ]
+  },
+  "why-gre-uarr-flow-signal.html": {
+    "image": "2509005_orig.png",
+    "text": [
+      "• 在顺序模式采集中，每个梯度回波层都表现为“流入层”，并表现出流动相关增强",
+      "• 梯度回波重聚焦机制的非选择性",
+      "• 相对较短的 TE 最大限度地减少了散相"
+    ]
+  },
+  "why-homogeneity.html": {
+    "image": "8054543_orig.png",
+    "text": [
+      "• 非常重要！",
+      "• 均匀性差会导致伪影"
+    ]
+  },
+  "why-i--frac12-1-etc.html": {
+    "image": "3622990_orig.png",
+    "text": [
+      "• 量子世界的一个特征，你必须接受并与之共存",
+      "• 群理论的解释出现在“高级讨论”中"
+    ]
+  },
+  "why-is-rf-input-needed.html": {
+    "image": "3567760_orig.png",
+    "text": [
+      "• 当 B₁ 以接近拉莫尔频率旋转时，它与构成净磁化强度的进动自旋同步",
+      "• 结果是共振条件，能量交换，并将净磁化强度倾斜到横平面"
+    ]
+  },
+  "why-is-t1-ge-t2.html": {
+    "image": "4655994_orig.png",
+    "text": [
+      "• 所有引起 T₁ 弛豫的过程也会引起 T₂ 弛豫",
+      "• 但有些 T₂ 过程是“长期的”，不涉及 T₁",
+      "• 因此 T₂ ≤ T₁"
+    ]
+  },
+  "why-larmor-frequency.html": {
+    "image": "4433062_orig.png",
+    "text": [
+      "• 当 B₁ 以接近拉莫尔频率旋转时，它与构成净磁化强度的进动自旋同步",
+      "• 这是 B₁ 与自旋系统之间能量传递的最有效/匹配频率"
+    ]
+  },
+  "why-not-psir-always.html": {
+    "image": "8418051_orig.png",
+    "text": [
+      "• 不能使用相位敏感反转恢复进行选择性组织抑制",
+      "• 成像时间稍长",
+      "• 更多伪影"
+    ]
+  },
+  "why-not-single-ir.html": {
+    "image": "5970019_orig.png",
+    "text": [
+      "• 黑血成像可以使用单个 TI 830 毫秒进行",
+      "• 该方法未被使用，因为它也抑制了许多正常组织的信号，包括心肌"
+    ]
+  },
+  "why-not-use-both.html": {
+    "image": "372522_orig.png",
+    "text": [
+      "• k 空间的共轭对称性本质上是关于对角线的",
+      "• 仅采样一个象限只能预测其镜像象限，而不是整个 k 空间"
+    ]
+  },
+  "why-on-off-comparison.html": {
+    "image": "6489585_orig.png",
+    "text": [
+      "• 激活期间的 BOLD 信号是相对值，而非绝对值",
+      "• 它受到许多技术和患者相关因素的影响"
+    ]
+  },
+  "why-phosphorus.html": {
+    "image": "screen-shot-2017-01-11-at-2-29-03-pm_orig.png",
+    "text": [
+      "• ³¹P 同位素具有 100% 的自然丰度，产生虽小但可观的 MR 信号",
+      "• 与 ¹H 相比，峰相对较少且分离更宽",
+      "• ³¹P MRS 提供有关细胞膜、生物能量学和 pH 的信息"
+    ]
+  },
+  "why-precession.html": {
+    "image": "2171290_orig.png",
+    "text": [
+      "• 原子核和陀螺都具有角动量",
+      "• 磁场产生与角动量方向垂直的扭矩或“扭转力”",
+      "• 这导致了进动"
+    ]
+  },
+  "why-rf-shielding.html": {
+    "image": "8651193_orig.png",
+    "text": [
+      "• 目的：防止干扰射频波进入或离开扫描仪房间",
+      "• 房间是屏蔽的"
+    ]
+  },
+  "why-shimming.html": {
+    "image": "303854_orig.png",
+    "text": [
+      "• 进行匀场是为了改善主磁场的均匀性",
+      "• 可以是无源或主动的"
+    ]
+  },
+  "why-signal-harr-k-space.html": {
+    "image": "9635542_orig.png",
+    "text": [
+      "• MR 信号的顺序数据点暴露于成像梯度的时间不断增加",
+      "• 随着信号的演变，相位逐渐累积，连续的时间点反映增加的空间频率"
+    ]
+  },
+  "why-use-ir.html": {
+    "image": "3152752_orig.png",
+    "text": [
+      "反转恢复的优点：",
+      "─ 可选择性地抑制组织",
+      "─ 对 T₁ 差异的敏感度加倍",
+      "─ 可叠加 T₁ 和 T₂ 对比度",
+      "反转恢复的缺点：",
+      "─ 成像时间更长",
+      "─ 更高的能量沉积"
+    ]
+  },
+  "whyhow-stress-test.html": {
+    "image": "8027165_orig.png",
+    "text": [
+      "• 使用药理剂的 CMR 可用于显示仅在负荷下才出现缺血的心肌区域",
+      "• 典型方案包括负荷和静息灌注、电影左心室功能模块，以及延迟钆增强成像"
+    ]
+  },
+  "wideband-lge.html": {
+    "image": "screen-shot-2022-12-06-at-3-55-19-pm_orig.png",
+    "text": [
+      "• 金属 CIED 会在心肌水中引起 2-6 kHz 的离共振中心频率偏移，导致高强度伪影",
+      "• 通过将 IR 反转脉冲的带宽从 1 kHz 增加到 4 kHz，可以更有效地实现心肌信号抑制，以检测延迟钆强化"
+    ]
+  },
+  "wirestubes-thru-wall.html": {
+    "image": "1850139_orig.png",
+    "text": [
+      "导线、管道和管子通过穿透面板进入，该面板包含：",
+      "─ 带阻滤波器",
+      "─ 波导管"
+    ]
+  },
+  "wrap-around-artifact.html": {
+    "image": "6129701_orig.png",
+    "text": [
+      "• 当物体在相位编码方向上的尺寸超过定义的 FOV 时发生",
+      "• 一种混叠类型，其中物体外围的大相位偏移被错误地映射到中心附近的较小相位偏移"
+    ]
+  },
+  "x--and-y--gradients.html": {
+    "image": "783781_orig.png",
+    "text": [
+      "• 最简单的设计是 Golay 设计的双鞍形线圈",
+      "• 现在常使用更复杂的“指纹”线圈"
+    ]
+  },
+  "xenon-imaging.html": {
+    "image": "screen-shot-2017-01-29-at-6-52-04-pm_orig.png",
+    "text": [
+      "• ¹²⁹Xe 和 ³He 具有自旋 1/2，用作吸入式 MR 对比剂",
+      "• 它们固有的微弱信号可以在给药前通过超极化刺激显著增强，将基线磁化水平提高 100,000 倍"
+    ]
+  },
+  "zeeman-splitting.html": {
+    "image": "583873_orig.png",
+    "text": [
+      "• 自旋向上和自旋向下状态放置在外部磁场中时可以分离",
+      "• 这些状态被离散的能隙和相应的频率 f 分开，其中 f = γ B₀"
+    ]
+  },
+  "zip.html": {
+    "image": "14101_orig.png",
+    "text": [
+      "• ZIP = “零填充插值”",
+      "• 将零插入傅里叶变换矩阵中以填补缺失数据",
+      "• 通过平滑和减少部分容积伪影来提高图像质量",
+      "• 与 *.zip 文件压缩无关"
+    ]
+  },
+  "zipper-artifact.html": {
+    "image": "9777154_orig.png",
+    "text": [
+      "• 拉链伪影通常是由于扫描仪房间内或附近的电子设备引起的射频干扰",
+      "• 尖点伪影类似，是由于视野外受激回波被阵列线圈拾取所致"
+    ]
+  },
+  "dl-playground.html": {
+    "image": "screen-shot-2022-07-29-at-3-03-43-pm_orig.png",
+    "text": [
+      "• 复杂/困难的任务最好留给专业人士！",
+      "• 对于那些对自学感兴趣的人，有各种免费的教育资源可用，例如 https://ai.google/education"
+    ]
+  },
+  "tr-and-te.html": {
+    "image": "76475548d3b.png",
+    "text": [
+      "操作者选择的脉冲序列参数",
+      "• TR（重复时间）：相邻重复周期对应点之间的时间",
+      "• TE（回波时间）：从首个脉冲中心到回波中心的时间"
+    ]
+  },
+  "t1-rho.html": {
+    "image": "screenshot-2025-09-10-at-4-44-11-pm_orig.png",
+    "text": [
+      "• T1-rho 是衡量在施加连续低频、低幅 RF 脉冲期间横向磁化矢量弛豫的指标",
+      "• 它对水与大分子之间的慢分子相互作用敏感",
+      "• 常用于检测软骨退变、纤维化或 pH 值变化"
+    ]
+  },
+  "view-ordering-in-mra.html": {
+    "image": "57142_orig.png",
+    "text": [
+      "• CE-MRA 通常采用笛卡尔网格上的 3D-GRE 序列采集，具有 1 个 FE 和 2 个 PE 方向",
+      "• k 空间填充顺序可以是线性或径向",
+      "• 椭圆中心填充法应用最广，其 k 空间中心对应于对比剂团注到达时刻"
+    ]
+  },
+  "gadolinium-and-asl.html": {
+    "image": "4515284_orig.png",
+    "text": [
+      "• 否",
+      "• 钆对比剂会缩短血液 T1，导致反转标签的持续时间不足以进行 ASL 成像"
+    ]
+  },
+  "localization-methods.html": {
+    "image": "screen-shot-2016-11-21-at-3-42-06-pm.png",
+    "text": [
+      "• 单体素波谱 (SVS) —— 使用带有正交梯度的层面选择 RF 脉冲",
+      "• 多体素化学位移成像 (CSI) —— 使用相位编码梯度",
+      "• 表面线圈法 —— 利用局部线圈的接收和/或发射几何结构"
+    ]
+  },
+  "fmri-at-7t.html": {
+    "image": "screen-shot-2016-10-05-at-4-39-24-pm_orig.png",
+    "text": [
+      "• 7T 的优势包括更高的 SNR 和更好的分辨率，以及由于 BOLD 信号与毛细血管（而非静脉）血流结合更紧密而带来的更优空间特异性",
+      "• 劣势包括增加的磁化率伪影和不均匀性伪影，以及 SAR 值的升高"
+    ]
+  },
+  "false-activation.html": {
+    "image": "screen-shot-2016-10-13-at-8-14-43-am_orig.png",
+    "text": [
+      "• 大多数虚假激活区域是由患者运动或大脑、血管、CSF 的生理性（呼吸/心跳）搏动引起的",
+      "• 这些可以通过其位置进行识别，并通过预处理或后处理进行补偿",
+      "• 某些是由于统计方法处理不当而产生的随机噪声产生的亮区"
+    ]
+  },
+  "general-linear-model.html": {
+    "image": "screen-shot-2016-07-14-at-8-13-02-amad13.png",
+    "text": [
+      "• 最常用的分析方法基于一般线性模型 (GLM)：Y=Xβ + ε，其中 Y = 获取的 fMRI 数据，X = 设计矩阵，β = 计算得到的权重系数，ε = 误差",
+      "• GLM 是简单线性回归的扩展",
+      "• 允许对各种成分进行统计检验并生成参数化激活图"
+    ]
+  },
+  "fmri-statistical-analysis.html": {
+    "image": "screen-shot-2016-09-14-at-6-23-09-pm46ba.png",
+    "text": [
+      "• 相关分析",
+      "• 一般线性模型 (GLM)",
+      "• 独立成分分析 (ICA)",
+      "• 多体素模式分析 (MVPA)"
+    ]
+  },
+  "zlocalization-methodsipper.html": {
+    "image": "screen-shot-2016-11-21-at-3-42-06-pm.png",
+    "text": [
+      "• 单体素波谱 (SVS) —— 使用带有正交梯度的层面选择 RF 脉冲",
+      "• 多体素化学位移成像 (CSI) —— 使用相位编码梯度",
+      "• 表面线圈法 —— 利用局部线圈的接收和/或发射几何结构"
+    ]
+  },
+  "machine-learning-ml.html": {
+    "image": "screen-shot-2022-01-10-at-3-02-44-pm_orig.png",
+    "text": [
+      "• 机器学习是人工智能的一个子集，利用大数据、经验和自修改算法随时间提高其性能",
+      "• 学习方式可分为监督式、无监督式、半监督式或强化学习"
+    ]
+  },
+  "how-to-prostate-mrs.html": {
+    "image": "screen-shot-2016-12-26-at-3-49-06-pm_orig.png",
+    "text": [
+      "• 前列腺 MRS 需要直肠线圈；额外的盆腔阵列线圈也很有用",
+      "• 标准技术是 3D-PRESS CSI，体素大小在 0.25 - 1.0 cm³ 范围内",
+      "• 必须进行外周体积脂肪抑制和精确匀场"
+    ]
+  },
+  "breast-mrs.html": {
+    "image": "screen-shot-2016-12-10-at-10-43-54-am_orig.png",
+    "text": [
+      "• 乳腺 MRS 通常使用表面线圈和 SVS 技术，配合脂肪抑制及中长 TE 值",
+      "• 癌症的主要特征峰是位于 δ=3.2 ppm 处的胆碱 (tCho)"
+    ]
+  },
+  "isis.html": {
+    "image": "screen-shot-2016-11-27-at-7-16-23-am.png",
+    "text": [
+      "• 图像选择性体内波谱 (ISIS) 最适合配合 T/R 表面线圈使用，以记录 ³¹P 的短 T2 代谢物",
+      "• 8 个周期的层面选择 180° 脉冲加上非选择性 90° 读取脉冲产生 FID，必须通过加减运算实现定位"
+    ]
+  },
+  "common-safety-issues.html": {
+    "image": "screen-shot-2021-06-23-at-10-50-13-am_orig.png",
+    "text": [
+      "• 参阅下方列表，其中包含针对数十种常见 MRI 安全问题的通用建议，以及通往具有更深入讨论和参考文献的专题问答链接"
+    ]
+  },
+  "flickering-lights.html": {
+    "image": "screen-shot-2020-08-22-at-3-11-02-pm_orig.png",
+    "text": [
+      "• 磁致闪光是在静态磁场中运动时诱发的视网膜短暂闪光感",
+      "• 最常发生在患者进出扫描仪的过程中",
+      "• 在高场强（~7T）下更为常见"
+    ]
+  },
+  "real-time-cine.html": {
+    "image": "8770762_orig.png",
+    "text": [
+      "• 这是“实时”心脏电影成像的适应证",
+      "• 单次激发回波平面采集每帧图像的时间小于1毫秒，无需屏气",
+      "• 空间分辨率低于FISP电影成像"
+    ]
+  },
+  "arterial-input-aif.html": {
+    "image": "9274759_orig.png",
+    "text": [
+      "• 描述动脉对比剂向组织输送的时间过程",
+      "• 组织内测得的对比剂浓度时间过程Ctissue(t)取决于动脉输入函数的形态",
+      "• 动脉输入函数可实现更精确的组织灌注参数定量",
+      "• 动脉输入函数(AIF)=a(t)"
+    ]
+  },
+  "spectra-vs-images.html": {
+    "image": "screen-shot-2016-11-02-at-2-12-36-pm_orig.png",
+    "text": [
+      "• 磁共振波谱在数据采集期间不使用读出梯度，而磁共振成像则使用",
+      "• 时域磁共振波谱信号的傅里叶变换转换为频谱",
+      "• 由于频率数据无法用于空间编码，磁共振波谱依赖其他方法（如相位编码、选择性激发）"
+    ]
+  },
+  "air-coils.html": {
+    "image": "screen-shot-2019-06-07-at-9-37-53-am4c6f.png",
+    "text": [
+      "• 新一代轻量化柔性阵列线圈正在研发中",
+      "• GE AIR线圈由硅胶管内的液态导体构成，该硅胶管与嵌入毯状结构中的本地前置放大器/调谐器相连"
+    ]
+  },
+  "mp-rage-v-mr2rage.html": {
+    "image": "screen-shot-2019-08-13-at-2-40-18-pm_orig.png",
+    "text": [
+      "• MP-RAGE和MP2RAGE均为采用反转脉冲的3DFT快速扰相梯度回波序列，广泛用于脑部成像",
+      "• MP2RAGE为每个反转脉冲采集两组梯度回波信号，从而改善T1对比度"
+    ]
+  },
+  "metal-detectors.html": {
+    "image": "screen-shot-2020-10-01-at-7-04-36-pmbb90.png",
+    "text": [
+      "• 多家医疗机构强烈推荐或要求使用铁磁检测系统",
+      "• 有立柱式或手持式版本可供选择",
+      "• 能够可靠检测出可能成为“抛射物”的外部铁磁物体",
+      "• 存在的问题包括“警报疲劳”以及无法检测可能导致灼伤的其他金属"
+    ]
+  },
+  "orbital-foreign-bodies.html": {
+    "image": "screen-shot-2020-12-07-at-11-25-58-am_orig.png",
+    "text": [
+      "• 1985年曾有因金属异物导致失明的著名案例，但此后仅报告4例轻伤",
+      "• 我们认为仅职业暴露史不足以构成磁共振检查前的筛查指征",
+      "• 当患者无法确定异物是否已被取出时，我们选择X线平片（而非CT）进行检查"
+    ]
+  },
+  "susceptibility-causes.html": {
+    "image": "screenshot-2026-01-18-at-1-29-28-pm_orig.png",
+    "text": [
+      "• 物质的磁化率主要由电子引起（原子核贡献较小）",
+      "• 充满电子的轨道产生（弱）抗磁性",
+      "• 未配对电子产生顺磁性",
+      "• 交换耦合与磁畴产生强铁磁性"
+    ]
+  },
+  "pcasl.html": {
+    "image": "221064_orig.png",
+    "text": [
+      "• 一种结合连续动脉自旋标记与脉冲动脉自旋标记的混合技术",
+      "• 使用一长串极短射频脉冲对窄带内的自旋进行标记",
+      "• 与脉冲动脉自旋标记相比信噪比更高",
+      "• 这是我们目前首选的动脉自旋标记方法"
+    ]
+  },
+  "measuring-delta.html": {
+    "image": "2709821-1-orig_orig.png",
+    "text": [
+      "• 化学位移(δ)以百万分之一(ppm)=1/1,000,000或1×10⁻⁶为单位进行测量",
+      "• 参考点δ=0.0为四甲基硅烷(TMS)，其化学式为Si(CH₃)₄"
+    ]
+  },
+  "hyperechoes.html": {
+    "image": "4771630_orig.png",
+    "text": [
+      "• 快速自旋回波/涡轮自旋回波序列中产生的高幅度受激回波",
+      "• 由围绕180°脉冲呈反对称排列的一系列射频脉冲产生"
+    ]
+  },
+  "hunters-angle.html": {
+    "image": "7613092_orig.png",
+    "text": [
+      "• 一种快速目测评估三种脑代谢物峰值（Cho、Cr和NAA）的方法",
+      "• 各峰通常沿一条45°上升斜线排列",
+      "• 除有限条件外，异常的Hunter角并非可靠的病理学征象"
+    ]
+  },
+  "1st-pass-perfusion.html": {
+    "image": "8529742_orig.png",
+    "text": [
+      "• 首过灌注序列由准备模块与图像采集模块构成",
+      "• 准备模块通常采用90°饱和恢复脉冲（非选择性或选择性/切趾型）以抑制非强化组织",
+      "• 采集模块采用快速梯度回波、b-SSFE或混合回波平面成像"
+    ]
+  },
+  "test.html": {
+    "image": "screen-shot-2016-07-05-at-7-03-14-pm_orig.png",
+    "text": [
+      "质量保证？          运动校正",
+      "畸变校正          时间滤波",
+      "层时校正          空间平滑"
+    ]
+  }
+}

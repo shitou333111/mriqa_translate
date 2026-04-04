@@ -115,24 +115,29 @@ jobs:
             RELEASES_DIR="${TARGET_DIR}/.releases"
             RELEASE_DIR="${RELEASES_DIR}/release-${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}"
             CURRENT_DIR="${TARGET_DIR}/current"
-            PRESERVE_SOURCE=""
+            PRESERVE_DIR="${TARGET_DIR}/preserved"
+            LAST_RELEASE="$(ls -1dt "${RELEASES_DIR}"/release-* 2>/dev/null | head -n 1 || true)"
 
-            if [ -d "${CURRENT_DIR}" ]; then
-              PRESERVE_SOURCE="${CURRENT_DIR}"
-            else
-              PRESERVE_SOURCE="$(ls -1dt "${RELEASES_DIR}"/release-* 2>/dev/null | head -n 1 || true)"
-            fi
+            mkdir -p "${PRESERVE_DIR}"
 
-            if [ -z "${PRESERVE_SOURCE}" ] || [ ! -d "${PRESERVE_SOURCE}" ]; then
-              echo "ERROR: no existing release/current found for preserving en/zh/baseline/uploads"
-              exit 1
-            fi
-
+            # Bootstrap preserved folders once from current or latest release.
             for dir in en zh baseline uploads; do
-              if [ ! -d "${PRESERVE_SOURCE}/${dir}" ]; then
-                echo "ERROR: missing preserved directory: ${PRESERVE_SOURCE}/${dir}"
-                exit 1
+              if [ -d "${PRESERVE_DIR}/${dir}" ]; then
+                continue
               fi
+
+              if [ -d "${CURRENT_DIR}/${dir}" ]; then
+                cp -a "${CURRENT_DIR}/${dir}" "${PRESERVE_DIR}/${dir}"
+                continue
+              fi
+
+              if [ -n "${LAST_RELEASE}" ] && [ -d "${LAST_RELEASE}/${dir}" ]; then
+                cp -a "${LAST_RELEASE}/${dir}" "${PRESERVE_DIR}/${dir}"
+                continue
+              fi
+
+              echo "ERROR: missing preserved directory and no bootstrap source for ${dir}"
+              exit 1
             done
 
             mkdir -p "$RELEASE_DIR"
@@ -144,7 +149,7 @@ jobs:
             # Keep server-side content for these folders unchanged across releases.
             for dir in en zh baseline uploads; do
               rm -rf "${RELEASE_DIR:?}/${dir}"
-              cp -a "${PRESERVE_SOURCE}/${dir}" "${RELEASE_DIR}/${dir}"
+              cp -a "${PRESERVE_DIR}/${dir}" "${RELEASE_DIR}/${dir}"
             done
 
             ln -sfn "$RELEASE_DIR" "${TARGET_DIR}/current"

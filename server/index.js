@@ -19,9 +19,21 @@ const baselineDir = path.join(rootDir, "baseline");
 const frontendDistDir = path.join(rootDir, "frontend", "dist");
 const frontendIndexPath = path.join(frontendDistDir, "index.html");
 const publicMetaDir = path.join(rootDir, "public", "meta");
+const rootMetaDir = path.join(rootDir, "meta");
+const legacySrcMetaDir = path.join(rootDir, "frontend", "src", "meta");
 const menuFile = path.join(publicMetaDir, "sidebar.json");
 const metaInfoFile = path.join(publicMetaDir, "meta_info.json");
 const overlayMapFile = path.join(publicMetaDir, "first_pic_texts_zh_map_basename.json");
+const menuFileCandidates = [
+  menuFile,
+  path.join(rootMetaDir, "sidebar.json"),
+  path.join(legacySrcMetaDir, "sidebar.json")
+];
+const metaInfoFileCandidates = [
+  metaInfoFile,
+  path.join(rootMetaDir, "meta_info.json"),
+  path.join(legacySrcMetaDir, "meta_info.json")
+];
 
 const app = express();
 const port = Number(process.env.PORT || 3001);
@@ -253,14 +265,33 @@ function escapeHtml(input) {
     .replaceAll("'", "&#39;");
 }
 
-async function readOverlayMap() {
-  try {
-    const overlayData = await fs.readFile(overlayMapFile, "utf8");
-    const parsed = JSON.parse(overlayData);
-    return parsed.basename_map || parsed;
-  } catch {
+async function readJsonFromCandidates(candidates, fallbackValue) {
+  for (const filePath of candidates) {
+    try {
+      const raw = await fs.readFile(filePath, "utf8");
+      return JSON.parse(raw);
+    } catch {
+      // Try next candidate file.
+    }
+  }
+  return fallbackValue;
+}
+
+async function readMetaInfoJson() {
+  const data = await readJsonFromCandidates(metaInfoFileCandidates, {});
+  if (!data || typeof data !== "object" || Array.isArray(data)) {
     return {};
   }
+  return data;
+}
+
+async function readOverlayMap() {
+  const raw = await fs.readFile(overlayMapFile, "utf8");
+  const parsed = JSON.parse(raw);
+  if (!parsed || typeof parsed !== "object" || Array.isArray(parsed)) {
+    return {};
+  }
+  return parsed.basename_map || parsed;
 }
 
 async function writeOverlayMap(mapData) {
@@ -304,8 +335,8 @@ function rateLimit(req, res, next) {
 
 app.get("/api/menu", async (_req, res, next) => {
   try {
-    const raw = await fs.readFile(menuFile, "utf8");
-    res.json(JSON.parse(raw));
+    const menuData = await readJsonFromCandidates(menuFileCandidates, []);
+    res.json(Array.isArray(menuData) ? menuData : []);
   } catch (error) {
     next(error);
   }
@@ -340,8 +371,7 @@ app.get("/api/article/meta", async (req, res, next) => {
     }
     let authors = [];
     try {
-      const metaData = await fs.readFile(metaInfoFile, "utf8");
-      const metaJson = JSON.parse(metaData);
+      const metaJson = await readMetaInfoJson();
       const metaEntry = metaJson[slug] || {};
       authors = metaEntry.author || metaEntry.authors || [];
       if (!Array.isArray(authors)) authors = [authors];
@@ -433,11 +463,7 @@ app.post("/api/article/save", rateLimit, async (req, res, next) => {
     const result = parseArticle(updatedFullHtml);
 
     try {
-      let metaJson = {};
-      try {
-        const metaData = await fs.readFile(metaInfoFile, "utf8");
-        metaJson = JSON.parse(metaData);
-      } catch (e) {} // fine if not exists or empty
+      let metaJson = await readMetaInfoJson();
 
       if (!metaJson[slug]) {
         metaJson[slug] = {};

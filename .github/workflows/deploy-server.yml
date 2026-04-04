@@ -78,6 +78,13 @@ jobs:
             --exclude 'uploads/' \
             frontend/dist/ deploy-dist/
 
+          # Keep metadata JSON available for both API reads and static fallback.
+          mkdir -p deploy-dist/meta deploy-dist/public/meta
+          if [ -d public/meta ]; then
+            rsync -a public/meta/ deploy-dist/meta/
+            rsync -a public/meta/ deploy-dist/public/meta/
+          fi
+
       - name: Upload dist to server tmp path
         uses: appleboy/scp-action@v0.1.7
         with:

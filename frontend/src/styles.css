@@ -18,17 +18,17 @@
 }
 
 :root[data-theme="dark"] {
-  --bg: #0f141b;
-  --surface: #171d26;
-  --surface-soft: #212a35;
-  --text: #edf3ff;
-  --muted: #b7c4d6;
-  --line: #334152;
-  --accent: #53a8ff;
-  --accent-strong: #78bbff;
-  --success: #67d499;
-  --sidebar-start: #141b25;
-  --sidebar-end: #1b2430;
+  --bg: #0b1220;
+  --surface: #121b2a;
+  --surface-soft: #1a2638;
+  --text: #e6edf7;
+  --muted: #9eb0c7;
+  --line: #2b3b52;
+  --accent: #5aa9ff;
+  --accent-strong: #7cbcff;
+  --success: #5fd3a0;
+  --sidebar-start: #0f1a2a;
+  --sidebar-end: #152236;
 }
 
 * {
@@ -46,7 +46,7 @@ html, body {
   height: auto;
   margin: 0;
   padding: 0;
-  background: #f6f0e7;
+  background: var(--bg);
   color: var(--text);
   font-family: "SF Pro Text", "SF Pro Display", "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
   -webkit-text-size-adjust: 100%;
@@ -92,7 +92,6 @@ i {
   padding: 10px 18px;
   border-bottom: 1px solid color-mix(in srgb, var(--line) 85%, transparent);
   background: color-mix(in srgb, var(--surface) 96%, transparent);
-  background: #F9FAFB;
   /* backdrop-filter: blur(8px); */
   box-shadow: 0 1px 0 rgba(255, 255, 255, 0.42) inset;
   flex-wrap: nowrap;
@@ -689,9 +688,9 @@ i {
 .theme-group {
   display: inline-flex;
   align-items: center;
-  border: 0.5px solid #cfd8e3;
+  border: 0.5px solid color-mix(in srgb, var(--line) 85%, transparent);
   border-radius: 999px;
-  background: #ffffff;
+  background: color-mix(in srgb, var(--surface) 98%, transparent);
   box-shadow: 0 1px 0 rgba(255, 255, 255, 0.85) inset;
   overflow: hidden;
   flex: 0 0 auto;
@@ -763,14 +762,14 @@ i {
   flex: 0 0 auto;
   height: 30px;
   border: 0;
-  border-right: 1px solid #d9e0ea;
+  border-right: 1px solid color-mix(in srgb, var(--line) 88%, transparent);
   border-radius: 0;
   box-shadow: none;
   margin: 0;
   padding: 0 12px;
   font-size: 12px;
   font-weight: 600;
-  color: #6b7785;
+  color: var(--muted);
   line-height: 1;
   white-space: nowrap;
   display: inline-flex;
@@ -784,13 +783,13 @@ i {
 
 .mode-btn.active,
 .theme-btn.active {
-  background: #f2f6fb;
-  color: #111827;
+  background: color-mix(in srgb, var(--accent) 18%, var(--surface));
+  color: var(--text);
 }
 
 .mode-btn:hover {
-  background: #f8fbff;
-  color: #344255;
+  background: color-mix(in srgb, var(--surface-soft) 88%, transparent);
+  color: var(--text);
 }
 
 .theme-group {
@@ -1314,20 +1313,30 @@ button.primary {
 .artalk-comments .artalk {
   --at-color-main: var(--accent-strong);
   --at-color-bg: #ffffff;
+  --at-color-bg-transl: rgba(255, 255, 255, 0.95);
   --at-color-bg-grey: color-mix(in srgb, var(--surface) 88%, #f4f7fa);
+  --at-color-bg-grey-transl: rgba(244, 247, 250, 0.82);
   --at-color-border: color-mix(in srgb, var(--line) 75%, #d4dde8);
   --at-color-font: color-mix(in srgb, var(--text) 92%, #0d1e2d);
   --at-color-meta: color-mix(in srgb, var(--muted) 92%, #556070);
 }
 
-.artalk-comments .atk-main-editor > .atk-header .atk-email,
-.artalk-comments .atk-main-editor > .atk-header .atk-link {
-  display: none !important;
+:root[data-theme="dark"] .artalk-comments .artalk,
+:root[data-theme="dark"] .artalk-comments .artalk.atk-dark-mode {
+  --at-color-main: var(--accent-strong);
+  --at-color-bg: color-mix(in srgb, var(--surface) 96%, #0f1826);
+  --at-color-bg-transl: color-mix(in srgb, var(--surface) 92%, rgba(15, 24, 38, 0.95));
+  --at-color-bg-grey: color-mix(in srgb, var(--surface-soft) 88%, #152338);
+  --at-color-bg-grey-transl: color-mix(in srgb, var(--surface-soft) 84%, rgba(21, 35, 56, 0.9));
+  --at-color-border: color-mix(in srgb, var(--line) 90%, #2b3b52);
+  --at-color-font: var(--text);
+  --at-color-deep: color-mix(in srgb, var(--text) 94%, #f2f7ff);
+  --at-color-sub: var(--muted);
+  --at-color-meta: color-mix(in srgb, var(--muted) 96%, #c1cfdf);
 }
 
-.artalk-comments .atk-main-editor > .atk-header .atk-name {
-  flex: 1 1 100%;
-  margin-right: 0 !important;
+.artalk-comments .atk-main-editor > .atk-header .atk-link {
+  display: none !important;
 }
 
 .comments-status {
@@ -2504,6 +2513,62 @@ button.primary {
   background: #101a24;
 }
 
+:root[data-theme="dark"] body {
+  background:
+    radial-gradient(1100px 520px at 10% -6%, rgba(90, 169, 255, 0.12), transparent 60%),
+    radial-gradient(900px 480px at 90% -8%, rgba(34, 211, 238, 0.09), transparent 58%),
+    var(--bg);
+}
+
+:root[data-theme="dark"] .topbar {
+  background: color-mix(in srgb, var(--surface) 92%, #0c131e);
+  border-bottom-color: color-mix(in srgb, var(--line) 88%, transparent);
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.03) inset, 0 10px 22px rgba(3, 8, 16, 0.46);
+}
+
+:root[data-theme="dark"] .mode-group,
+:root[data-theme="dark"] .theme-group,
+:root[data-theme="dark"] .toolbar-btn,
+:root[data-theme="dark"] .theme-switch,
+:root[data-theme="dark"] .overflow-toggle {
+  background: color-mix(in srgb, var(--surface) 90%, #0d1724);
+  border-color: color-mix(in srgb, var(--line) 86%, transparent);
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.04) inset;
+}
+
+:root[data-theme="dark"] .mode-btn.active,
+:root[data-theme="dark"] .theme-btn.active {
+  background: color-mix(in srgb, var(--accent) 22%, var(--surface));
+  color: var(--text);
+}
+
+:root[data-theme="dark"] .guide-landing,
+:root[data-theme="dark"] .guide-panel {
+  border-color: color-mix(in srgb, var(--line) 90%, transparent);
+  background: linear-gradient(180deg, color-mix(in srgb, var(--surface) 92%, #0e1b2a), color-mix(in srgb, var(--surface-soft) 86%, #111f31));
+  box-shadow: 0 10px 24px rgba(2, 6, 14, 0.42);
+}
+
+:root[data-theme="dark"] .guide-panel h3,
+:root[data-theme="dark"] .guide-panel p,
+:root[data-theme="dark"] .guide-todo-list li,
+:root[data-theme="dark"] .guide-hero h2,
+:root[data-theme="dark"] .guide-summary {
+  color: var(--text);
+}
+
+:root[data-theme="dark"] .guide-panel-link,
+:root[data-theme="dark"] .guide-link-btn,
+:root[data-theme="dark"] .guide-qcode-image {
+  background: color-mix(in srgb, var(--surface) 90%, #0e1826);
+  border-color: color-mix(in srgb, var(--line) 86%, transparent);
+  color: var(--text) !important;
+}
+
+:root[data-theme="dark"] .comments-status {
+  color: #f2b27e;
+}
+
 /* Complete List of Questions Page Styles */
 body.complete-list-page .content-stage {
   width: 100% !important;
@@ -2762,6 +2827,78 @@ body.complete-list-page .content-scale {
   gap: 12px;
   align-items: flex-start;
   justify-content: flex-start;
+}
+
+:root[data-theme="dark"] .complete-list-sidebar {
+  background: color-mix(in srgb, var(--surface-soft) 84%, #0f1b2a);
+  border-right-color: color-mix(in srgb, var(--line) 90%, transparent);
+}
+
+:root[data-theme="dark"] .nav-level-1:hover {
+  background: color-mix(in srgb, var(--surface) 84%, #18273a);
+  color: var(--accent-strong);
+}
+
+:root[data-theme="dark"] .nav-level-1.active {
+  background: color-mix(in srgb, var(--accent) 18%, var(--surface));
+  color: var(--accent-strong);
+}
+
+:root[data-theme="dark"] .level2-card {
+  background: color-mix(in srgb, var(--surface) 92%, #0d1724);
+  border-color: color-mix(in srgb, var(--line) 84%, transparent);
+  box-shadow: 0 8px 18px rgba(2, 7, 16, 0.34);
+}
+
+:root[data-theme="dark"] .level2-card:hover {
+  border-color: color-mix(in srgb, var(--accent) 50%, var(--line));
+  box-shadow: 0 12px 24px rgba(2, 7, 16, 0.5);
+}
+
+:root[data-theme="dark"] .level2-card-header {
+  background: color-mix(in srgb, var(--surface-soft) 82%, #111f2f);
+  border-bottom-color: color-mix(in srgb, var(--line) 88%, transparent);
+}
+
+:root[data-theme="dark"] .level2-card-title,
+:root[data-theme="dark"] .level3-card,
+:root[data-theme="dark"] .level3-card-title {
+  color: var(--text);
+}
+
+:root[data-theme="dark"] .level3-card {
+  background: color-mix(in srgb, var(--surface-soft) 82%, #0f1e2f);
+  border-color: color-mix(in srgb, var(--line) 86%, transparent);
+}
+
+:root[data-theme="dark"] .level3-card:hover {
+  background: color-mix(in srgb, var(--surface) 84%, #152840);
+  border-color: color-mix(in srgb, var(--accent) 64%, var(--line));
+  color: var(--accent-strong);
+}
+
+:root[data-theme="dark"] .level3-card:active {
+  background: color-mix(in srgb, var(--surface) 88%, #132134);
+  border-color: color-mix(in srgb, var(--accent) 78%, var(--line));
+  color: #a3d3ff;
+}
+
+:root[data-theme="dark"] .nav-level-1.nav-pending {
+  background-color: rgba(235, 179, 76, 0.2);
+  border-color: rgba(235, 179, 76, 0.45);
+  color: #ffd48a;
+}
+
+:root[data-theme="dark"] .nav-level-1.nav-pending:hover {
+  background-color: rgba(235, 179, 76, 0.27);
+  border-color: rgba(235, 179, 76, 0.58);
+  color: #ffe2b1;
+}
+
+:root[data-theme="dark"] .nav-level-1.nav-pending.active {
+  background-color: rgba(255, 200, 99, 0.32);
+  border-color: rgba(255, 200, 99, 0.68);
+  color: #fff0d0;
 }
 
 @media (max-width: 1400px) {

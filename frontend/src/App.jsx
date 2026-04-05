@@ -8,6 +8,7 @@ import Sidebar from "./components/Sidebar";
 import CompleteListOfQuestions from "./components/CompleteListOfQuestions";
 import ScreenshotButton from "./components/ScreenshotButton";
 import ArtalkComments from "./components/ArtalkComments";
+import AppflowChatWidget from "./components/AppflowChatWidget";
 import SiteFooter from "./components/SiteFooter";
 import GuidePage from "./components/GuidePage";
 import * as searchService from "./search/searchService";
@@ -2970,6 +2971,7 @@ export default function App() {
   const navigate = useNavigate();
   const location = useLocation();
   const isGuideMode = location.pathname === "/" || location.pathname === "/guide" || location.pathname === "/complete-list-of-questions";
+  const isGuideLandingPage = location.pathname === "/" || location.pathname === "/guide";
   const handleTopbarHeightChange = useCallback((height) => {
     const next = Math.max(0, Math.ceil(Number(height) || 0));
     if (!next) {
@@ -3107,7 +3109,7 @@ export default function App() {
 
   const isEditing = location.pathname.startsWith("/edit/");
   const isReviewing = location.pathname.startsWith("/review/");
-  const layoutMode = (viewMode === "bi" || isEditing || isReviewing) ? "bi" : "single";
+  const layoutMode = (!isGuideLandingPage && (viewMode === "bi" || isEditing || isReviewing)) ? "bi" : "single";
   const baseWidth = layoutMode === "bi" ? 1434 : 710;
   const appShellTopPaddingPx = topbarHeightPx + (viewportWidth <= 720 ? 0 : 10);
 
@@ -3740,7 +3742,7 @@ export default function App() {
             window.alert(reviewDisabledReason || "当前版本就是基版，无需审核");
             return;
           }
-          const entered = window.prompt("⚠️请输入审核密码⚠️\n(审核是将当前翻译版本设置为基版baseline，主要用作版本备份，为了数据安全设置了密码。如果只是想改进本页翻译，请点击<改进翻译>，每次的改进提交后是立即生效的。如果你确定想参与审核，请发送邮件到 songbenshen@126.com 索要密码，欢迎！)");
+          const entered = window.prompt("⚠️请输入审核密码⚠️\n(审核是将当前翻译版本设置为基版baseline，主要用作版本备份，为了数据安全设置了密码。如果只是想改进本页翻译，请点击<改进翻译>，每次的改进提交后是立即生效的。如果你确定想参与审核，请添加微信 guo_da_lu 索要密码，欢迎！)");
           if (entered === null) {
             return;
           }
@@ -3899,6 +3901,7 @@ export default function App() {
       </div>
 
       <SiteFooter />
+      <AppflowChatWidget />
     </div>
   );
 }

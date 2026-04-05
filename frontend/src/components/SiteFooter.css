@@ -1,7 +1,7 @@
 ﻿/* global site footer reset */
 .global-site-footer {
     position: relative; /* 1. 锟斤拷要锟教讹拷 */
-    background: #F8FAFC;
+    background: color-mix(in srgb, var(--surface) 96%, #f8fafc);
     border-top: 1px solid color-mix(in srgb, var(--line) 75%, transparent);
     z-index: 100;
     box-sizing: border-box;
@@ -26,7 +26,7 @@
 .footer-divider {
     width: 2px;
     height: 80px;
-    background: #bbbbbb;
+    background: color-mix(in srgb, var(--line) 90%, #bbbbbb);
     flex-shrink: 0;
 }
 
@@ -101,7 +101,7 @@
     line-height: 1.3;
 }
 .footer-half .paragraph a {
-    color: #2980b9;
+    color: var(--accent-strong);
     text-decoration: none;
 }
 .footer-half .paragraph a:hover {
@@ -173,5 +173,30 @@ html .page-root.sidebar-collapsed .global-site-footer {
     align-items: center;
     justify-content: center;
     box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+}
+
+:root[data-theme="dark"] .global-site-footer {
+    background: color-mix(in srgb, var(--surface) 92%, #0f1826);
+    border-top-color: color-mix(in srgb, var(--line) 88%, transparent);
+}
+
+:root[data-theme="dark"] .footer-divider {
+    background: color-mix(in srgb, var(--line) 84%, transparent);
+}
+
+:root[data-theme="dark"] .global-site-footer .paragraph,
+:root[data-theme="dark"] .global-site-footer .paragraph font,
+:root[data-theme="dark"] .global-site-footer .paragraph a {
+    color: var(--text) !important;
+}
+
+:root[data-theme="dark"] .footer-half .wcustomhtml a[href*="donorbox.org"] {
+    background-color: color-mix(in srgb, var(--accent) 76%, #1a64a5) !important;
+}
+
+:root[data-theme="dark"] .sponsor-modal-close {
+    background: color-mix(in srgb, var(--surface) 88%, #132034);
+    color: var(--text);
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.62);
 }
 

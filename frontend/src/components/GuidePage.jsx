@@ -53,9 +53,7 @@ export default function GuidePage({ onStartGuideTour }) {
         <article className="guide-panel">
           <h3>建议与反馈</h3>
           <p>
-            欢迎大家在页面下方的评论区提交网站建议，每个页面的评论区讨论内容翻译建议。你的反馈可以帮助本站持续改进。有比较私密的建议也可以直接发邮件给我。
-          </p>
-          <a href="mailto:songbenshen@126.com" className="guide-panel-link">发送邮件反馈</a>
+            欢迎大家在页面下方的评论区提交网站建议，每个页面的评论区讨论内容翻译建议。你的反馈可以帮助本站持续改进。有比较私密的建议也可以加我微信 <strong>MRI_QA</strong></p>
         </article>
 
         <article className="guide-panel guide-panel-todo">

@@ -7,6 +7,7 @@ const DEFAULT_SERVER_PORT = "23366";
 const DEFAULT_SERVER_HOST = "39.102.96.105";
 const DEV_SERVER_PROXY = "/artalk-api";
 const ANONYMOUS_EMAIL = "fake@email.com";
+const OPTIONAL_EMAIL_PLACEHOLDER = "邮箱（可选）";
 
 function stripTrailingSlashes(value) {
   return value.replace(/\/+$/, "");
@@ -69,6 +70,31 @@ function normalizePageKey(pathname) {
   return normalized;
 }
 
+function resolveSiteDarkMode() {
+  if (typeof document !== "undefined") {
+    const theme = document.documentElement?.dataset?.theme;
+    if (theme === "dark") {
+      return true;
+    }
+    if (theme === "light") {
+      return false;
+    }
+  }
+
+  if (typeof window !== "undefined" && typeof window.matchMedia === "function") {
+    return window.matchMedia("(prefers-color-scheme: dark)").matches;
+  }
+
+  return false;
+}
+
+function syncArtalkDarkMode(instance) {
+  if (!instance || typeof instance.setDarkMode !== "function") {
+    return;
+  }
+  instance.setDarkMode(resolveSiteDarkMode());
+}
+
 function setInputValue(input, value) {
   if (!input) {
     return;
@@ -81,17 +107,17 @@ function setInputValue(input, value) {
   }
 }
 
-function fillAnonymousIdentity(editor) {
+function applyIdentityInputPolicy(editor) {
   if (!editor || typeof editor.getHeaderInputEls !== "function") {
-    return;
+    return null;
   }
 
   const { email, link } = editor.getHeaderInputEls();
   if (email) {
     email.required = false;
-    email.readOnly = true;
-    email.tabIndex = -1;
-    setInputValue(email, ANONYMOUS_EMAIL);
+    email.readOnly = false;
+    email.tabIndex = 0;
+    email.placeholder = OPTIONAL_EMAIL_PLACEHOLDER;
   }
 
   if (link) {
@@ -99,6 +125,51 @@ function fillAnonymousIdentity(editor) {
     link.tabIndex = -1;
     setInputValue(link, "");
   }
+
+  return { email };
+}
+
+function applyIdentityInputPolicyByDom(root) {
+  if (!root) {
+    return;
+  }
+
+  const email = root.querySelector(".atk-main-editor > .atk-header .atk-email");
+  if (email) {
+    email.required = false;
+    email.readOnly = false;
+    email.tabIndex = 0;
+    if (email.placeholder !== OPTIONAL_EMAIL_PLACEHOLDER) {
+      email.placeholder = OPTIONAL_EMAIL_PLACEHOLDER;
+    }
+  }
+
+  const link = root.querySelector(".atk-main-editor > .atk-header .atk-link");
+  if (link) {
+    link.readOnly = true;
+    link.tabIndex = -1;
+    setInputValue(link, "");
+  }
+}
+
+function prepareIdentityForSubmit(editor) {
+  const inputs = applyIdentityInputPolicy(editor);
+  if (!inputs || !inputs.email) {
+    return null;
+  }
+
+  const emailValue = String(inputs.email.value || "").trim();
+  if (emailValue) {
+    if (emailValue !== inputs.email.value) {
+      setInputValue(inputs.email, emailValue);
+    }
+    return null;
+  }
+
+  setInputValue(inputs.email, ANONYMOUS_EMAIL);
+  return () => {
+    setInputValue(inputs.email, "");
+  };
 }
 
 export default function ArtalkComments() {
@@ -117,6 +188,13 @@ export default function ArtalkComments() {
 
     const controller = new AbortController();
     let instance;
+    let syncTimerA;
+    let syncTimerB;
+    let syncByEvent;
+    let syncDarkModeByTheme;
+    let themeObserver;
+    let darkMediaQuery;
+    let handleDarkMediaQueryChange;
 
     if (!serverUrl) {
       setStatusMessage("评论服务地址无效，请检查 VITE_ARTALK_SERVER 配置。");
@@ -142,14 +220,58 @@ export default function ArtalkComments() {
           site: String(import.meta.env.VITE_ARTALK_SITE || DEFAULT_SITE_NAME),
           locale: String(import.meta.env.VITE_ARTALK_LOCALE || "zh-CN"),
           beforeSubmit: (editor, next) => {
-            fillAnonymousIdentity(editor);
+            const rollback = prepareIdentityForSubmit(editor);
             next();
+            if (rollback) {
+              window.setTimeout(rollback, 0);
+            }
           }
         });
 
-        // Ensure initial user state is populated even before first submit.
-        const editor = instance?.ctx?.get?.("editor");
-        fillAnonymousIdentity(editor);
+        // Keep Artalk built-in dark mode in sync with site theme.
+        syncDarkModeByTheme = () => {
+          syncArtalkDarkMode(instance);
+        };
+
+        syncDarkModeByTheme();
+
+        if (typeof MutationObserver !== "undefined" && typeof document !== "undefined") {
+          themeObserver = new MutationObserver((mutations) => {
+            if (mutations.some((item) => item.attributeName === "data-theme")) {
+              syncDarkModeByTheme();
+            }
+          });
+          themeObserver.observe(document.documentElement, {
+            attributes: true,
+            attributeFilter: ["data-theme"]
+          });
+        }
+
+        if (typeof window !== "undefined" && typeof window.matchMedia === "function") {
+          darkMediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
+          handleDarkMediaQueryChange = () => {
+            syncDarkModeByTheme();
+          };
+
+          if (typeof darkMediaQuery.addEventListener === "function") {
+            darkMediaQuery.addEventListener("change", handleDarkMediaQueryChange);
+          } else if (typeof darkMediaQuery.addListener === "function") {
+            darkMediaQuery.addListener(handleDarkMediaQueryChange);
+          }
+        }
+
+        // Artalk may rewrite placeholders during mount, so re-apply policy after mount/update.
+        syncByEvent = () => {
+          const editor = instance?.ctx?.get?.("editor");
+          applyIdentityInputPolicy(editor);
+          applyIdentityInputPolicyByDom(container);
+        };
+
+        syncByEvent();
+        syncTimerA = window.setTimeout(syncByEvent, 0);
+        syncTimerB = window.setTimeout(syncByEvent, 160);
+        instance.on("mounted", syncByEvent);
+        instance.on("updated", syncByEvent);
 
         instance.on("list-failed", (error) => {
           const reason = error?.msg ? `，原因：${error.msg}` : "";
@@ -171,6 +293,26 @@ export default function ArtalkComments() {
 
     return () => {
       controller.abort();
+      if (syncTimerA) {
+        window.clearTimeout(syncTimerA);
+      }
+      if (syncTimerB) {
+        window.clearTimeout(syncTimerB);
+      }
+      if (instance && syncByEvent) {
+        instance.off("mounted", syncByEvent);
+        instance.off("updated", syncByEvent);
+      }
+      if (themeObserver) {
+        themeObserver.disconnect();
+      }
+      if (darkMediaQuery && handleDarkMediaQueryChange) {
+        if (typeof darkMediaQuery.removeEventListener === "function") {
+          darkMediaQuery.removeEventListener("change", handleDarkMediaQueryChange);
+        } else if (typeof darkMediaQuery.removeListener === "function") {
+          darkMediaQuery.removeListener(handleDarkMediaQueryChange);
+        }
+      }
       if (instance && typeof instance.destroy === "function") {
         instance.destroy();
       }

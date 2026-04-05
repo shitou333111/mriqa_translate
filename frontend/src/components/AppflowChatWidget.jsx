@@ -5,7 +5,6 @@ const DEFAULT_INTEGRATE_ID = "cit-d60911f5127b4bd7a0fb";
 const DEFAULT_REQUEST_DOMAIN = "https://1558140883750619.appflow.aliyunnest.com";
 const INIT_FLAG_KEY = "__MRIQA_APPFLOW_CHAT_INIT__";
 const LOAD_ABORTED_FLAG_KEY = "__MRIQA_APPFLOW_CHAT_LOAD_ABORTED__";
-const LOAD_ABORTED_STORAGE_KEY = "mriqa_appflow_chat_load_aborted";
 const APPFLOW_CONTAINER_ID = "appflow-chat-container";
 const APPFLOW_OVERRIDE_STYLE_ID = "appflow-chat-widget-overrides";
 const APPFLOW_LAYER_BASE_Z_INDEX = 1250;
@@ -25,15 +24,7 @@ function isAppflowLoadAborted() {
     return false;
   }
 
-  if (window[LOAD_ABORTED_FLAG_KEY]) {
-    return true;
-  }
-
-  try {
-    return window.sessionStorage.getItem(LOAD_ABORTED_STORAGE_KEY) === "1";
-  } catch {
-    return false;
-  }
+  return Boolean(window[LOAD_ABORTED_FLAG_KEY]);
 }
 
 function markAppflowLoadAborted() {
@@ -42,12 +33,36 @@ function markAppflowLoadAborted() {
   }
 
   window[LOAD_ABORTED_FLAG_KEY] = true;
+}
 
-  try {
-    window.sessionStorage.setItem(LOAD_ABORTED_STORAGE_KEY, "1");
-  } catch {
-    // Ignore storage exceptions in restricted browser modes.
+function ensurePreconnectHint(urlText) {
+  if (typeof document === "undefined" || !urlText) {
+    return;
   }
+
+  let url;
+  try {
+    url = new URL(urlText);
+  } catch {
+    return;
+  }
+
+  const href = `${url.protocol}//${url.host}`;
+  const selector = `link[rel="preconnect"][href="${href}"]`;
+  if (document.head.querySelector(selector)) {
+    return;
+  }
+
+  const preconnect = document.createElement("link");
+  preconnect.rel = "preconnect";
+  preconnect.href = href;
+  preconnect.crossOrigin = "anonymous";
+  document.head.appendChild(preconnect);
+}
+
+function ensureAppflowPreconnectHints() {
+  ensurePreconnectHint(APPFLOW_SDK_SRC);
+  ensurePreconnectHint(getRequestDomain());
 }
 
 function ensureAppflowOverrideStyle() {
@@ -140,17 +155,24 @@ function initializeAppflowChat() {
   const integrateId = getIntegrateId();
   const requestDomain = getRequestDomain();
   if (!integrateId || !requestDomain) {
+    console.warn("Appflow Chat 初始化跳过：integrateId 或 requestDomain 为空。");
     return;
   }
 
-  sdk.init({
-    integrateConfig: {
-      integrateId,
-      domain: {
-        requestDomain
+  try {
+    sdk.init({
+      integrateConfig: {
+        integrateId,
+        domain: {
+          requestDomain
+        }
       }
-    }
-  });
+    });
+  } catch (error) {
+    markAppflowLoadAborted();
+    console.error("Appflow Chat 初始化失败。", error);
+    return;
+  }
 
   window[INIT_FLAG_KEY] = true;
 
@@ -171,6 +193,7 @@ export default function AppflowChatWidget() {
     }
 
     ensureAppflowOverrideStyle();
+    ensureAppflowPreconnectHints();
 
     let frameId = 0;
     let containerObserver;
@@ -250,7 +273,7 @@ export default function AppflowChatWidget() {
       }
 
       markAppflowLoadAborted();
-      console.warn("Appflow Chat SDK 加载失败，请检查网络或域名配置。");
+      console.warn("Appflow Chat SDK 加载失败，已停止本页后续加载。请检查 CSP、网络连通性与域名配置。");
     };
 
     if (window.APPFLOW_CHAT_SDK) {
@@ -276,9 +299,12 @@ export default function AppflowChatWidget() {
         if (scriptEl) {
           scriptEl.removeEventListener("load", handleLoad);
           scriptEl.removeEventListener("error", handleError);
+          scriptEl.remove();
         }
 
-        console.warn(`Appflow Chat SDK 超过 ${APPFLOW_LOAD_TIMEOUT_MS}ms 未加载完成，已停止后续加载。`);
+        console.warn(
+          `Appflow Chat SDK 超过 ${APPFLOW_LOAD_TIMEOUT_MS}ms 未加载完成，已停止本页后续加载。请检查 o.alicdn.com 连通性或放宽超时时间。`
+        );
       }, APPFLOW_LOAD_TIMEOUT_MS);
     }
 

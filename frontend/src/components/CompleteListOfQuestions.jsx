@@ -50,7 +50,11 @@ export default function CompleteListOfQuestions() {
             throw new Error("加载数据失败");
           }
 
-          [menuData, statusData] = await Promise.all([menuResp.json(), statusResp.json()]);
+          try {
+            [menuData, statusData] = await Promise.all([menuResp.json(), statusResp.json()]);
+          } catch (parseErr) {
+            throw new Error("API 返回了非 JSON 数据，请检查服务器 nginx 是否正确代理 /api/ 路由到 Node.js 后端");
+          }
         }
         
         if (ignore) {

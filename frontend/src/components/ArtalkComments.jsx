@@ -38,16 +38,7 @@ function normalizeServerUrl(value) {
 }
 
 function getConfiguredServerUrl() {
-  if (import.meta.env.DEV) {
-    return DEV_SERVER_PROXY;
-  }
-
-  const envServer = normalizeServerUrl(import.meta.env.VITE_ARTALK_SERVER);
-  if (envServer) {
-    return envServer;
-  }
-
-  return normalizeServerUrl(`${DEFAULT_SERVER_HOST}:${DEFAULT_SERVER_PORT}`);
+  return DEV_SERVER_PROXY;
 }
 
 function normalizePageKey(pathname) {

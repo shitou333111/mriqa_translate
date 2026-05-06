@@ -207,12 +207,16 @@ export async function fetchOverlayMap(forceRefresh = false) {
   try {
     const res = await fetch('/api/overlay-map', { cache: 'no-store' });
     if (!res.ok) throw new Error('fetch failed ' + res.status);
+    const contentType = res.headers.get('content-type') || '';
+    if (!contentType.includes('application/json')) {
+      throw new Error('API 返回了非 JSON 数据（content-type: ' + contentType + '），请检查服务器 nginx 是否正确代理 /api/ 路由');
+    }
     const data = await res.json();
     overlayMapCache = data && (data.basename_map || data) || {};
     console.log('Overlay map loaded:', overlayMapCache);
     return overlayMapCache;
   } catch (err) {
-    console.error('Could not load basename map from API, fallback to static file', err);
+    console.error('Could not load basename map from API, fallback to static file:', err.message);
     try {
       overlayMapCache = await fetchOverlayMapFromStaticFile();
       return overlayMapCache;

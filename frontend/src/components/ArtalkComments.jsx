@@ -38,7 +38,16 @@ function normalizeServerUrl(value) {
 }
 
 function getConfiguredServerUrl() {
-  return DEV_SERVER_PROXY;
+  const configuredServer = normalizeServerUrl(import.meta.env.VITE_ARTALK_SERVER);
+  if (configuredServer) {
+    return configuredServer;
+  }
+
+  if (import.meta.env.DEV) {
+    return DEV_SERVER_PROXY;
+  }
+
+  return "";
 }
 
 function normalizePageKey(pathname) {

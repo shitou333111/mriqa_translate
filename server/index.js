@@ -1,6 +1,5 @@
 import crypto from "node:crypto";
 import fs from "node:fs/promises";
-import http from "node:http";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 
@@ -51,34 +50,6 @@ app.use(express.static(path.join(rootDir, "public"), { index: false }));
 app.use("/en", express.static(enDir, { index: false }));
 app.use("/zh", express.static(zhDir, { index: false }));
 app.use("/baseline", express.static(baselineDir, { index: false }));
-
-const ARTALK_TARGET_HOST = process.env.ARTALK_PROXY_TARGET || "39.102.96.105";
-const ARTALK_TARGET_PORT = Number(process.env.ARTALK_PROXY_PORT || 23366);
-
-app.use("/artalk-api", (req, res) => {
-  const options = {
-    hostname: ARTALK_TARGET_HOST,
-    port: ARTALK_TARGET_PORT,
-    path: req.url,
-    method: req.method,
-    headers: { ...req.headers, host: `${ARTALK_TARGET_HOST}:${ARTALK_TARGET_PORT}` }
-  };
-
-  delete options.headers["content-length"];
-
-  const proxyReq = http.request(options, (proxyRes) => {
-    res.writeHead(proxyRes.statusCode, proxyRes.headers);
-    proxyRes.pipe(res);
-  });
-
-  proxyReq.on("error", () => {
-    if (!res.headersSent) {
-      res.status(502).json({ message: "Artalk proxy error" });
-    }
-  });
-
-  req.pipe(proxyReq);
-});
 
 function sha256(input) {
   return crypto.createHash("sha256").update(input).digest("hex");

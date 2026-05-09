@@ -36,7 +36,7 @@ jobs:
         run: npm run build
         env:
           BASE_URL: /
-          VITE_ARTALK_SERVER: ${{ vars.VITE_ARTALK_SERVER || 'http://39.102.96.105:23366' }}
+          VITE_ARTALK_SERVER: ${{ vars.VITE_ARTALK_SERVER || 'https://artalk.mriquestions.cn' }}
           VITE_ARTALK_SITE: ${{ vars.VITE_ARTALK_SITE || 'mriqa_translate' }}
           VITE_ARTALK_LOCALE: ${{ vars.VITE_ARTALK_LOCALE || 'zh-CN' }}
 
@@ -86,6 +86,11 @@ jobs:
           if [ -d public/meta ]; then
             rsync -a public/meta/ deploy-dist/meta/
             rsync -a public/meta/ deploy-dist/public/meta/
+          fi
+          
+          # Copy favicon to root
+          if [ -f favicon.ico ]; then
+            cp -f favicon.ico deploy-dist/favicon.ico
           fi
 
       - name: Upload dist to server tmp path

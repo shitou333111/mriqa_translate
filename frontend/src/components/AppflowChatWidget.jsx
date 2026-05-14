@@ -2,7 +2,7 @@ import { useEffect } from "react";
 
 const APPFLOW_SDK_SRC = "https://o.alicdn.com/appflow/chatbot/v1/AppflowChatSDK.js";
 const DEFAULT_INTEGRATE_ID = "cit-d60911f5127b4bd7a0fb";
-const DEFAULT_REQUEST_DOMAIN = "https://1558140883750619.appflow.aliyunnest.com";
+const DEFAULT_REQUEST_DOMAIN = "https://appflow.mriquestions.cn";
 const INIT_FLAG_KEY = "__MRIQA_APPFLOW_CHAT_INIT__";
 const LOAD_ABORTED_FLAG_KEY = "__MRIQA_APPFLOW_CHAT_LOAD_ABORTED__";
 const APPFLOW_CONTAINER_ID = "appflow-chat-container";
